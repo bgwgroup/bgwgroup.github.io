@@ -32,6 +32,15 @@
   .my-favourites-container .delete-fav-button:hover {
     text-decoration: inherit !important; }
 
+.my-favourites-container #listSelect .table-body {
+  max-height: 700px;
+  overflow: hidden;
+  overflow-y: auto; }
+  .my-favourites-container #listSelect .table-body::-webkit-scrollbar {
+    width: 10px; }
+  .my-favourites-container #listSelect .table-body::-webkit-scrollbar-thumb {
+    background: #C00; }
+
 @media (max-width: 1399px) {
   .manage-my-favourites-container .fav-prodname-pricing .fav-prodImage {
     width: 20%; }

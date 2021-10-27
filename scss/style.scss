@@ -40,6 +40,19 @@
         font-weight: bold !important;
         &:hover{ text-decoration: inherit !important; }
     }
+    #listSelect{
+        .table-body{
+            max-height: 700px;
+            overflow: hidden;
+            overflow-y: auto;
+            &::-webkit-scrollbar{ 
+                width: 10px; 
+            }
+            &::-webkit-scrollbar-thumb{
+                background: #C00;
+            }
+        }
+    }
 }
 @media (max-width: 1399px){
     .manage-my-favourites-container{

@@ -33,6 +33,13 @@
         border: 1px dashed #C00;
         background-color: #FFF;
     }
+    .delete-fav-button{
+        text-decoration: none;
+        color: #C00 !important;
+        font-size: 16px;
+        font-weight: bold;
+        &:hover{ text-decoration: inherit; }
+    }
 }
 @media (max-width: 1399px){
     .manage-my-favourites-container{

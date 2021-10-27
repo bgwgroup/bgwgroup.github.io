@@ -20,6 +20,10 @@
   min-width: max-content !important;
   max-width: max-content !important; }
 
+.my-favourites-container .ui-sortable-helper {
+  border: 1px dashed #C00;
+  background-color: #FFF; }
+
 @media (max-width: 1399px) {
   .manage-my-favourites-container .fav-prodname-pricing .fav-prodImage {
     width: 20%; }

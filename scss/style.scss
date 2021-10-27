@@ -29,6 +29,10 @@
             max-width: max-content !important;
         }
     }
+    .ui-sortable-helper{
+        border: 1px dashed #C00;
+        background-color: #FFF;
+    }
 }
 @media (max-width: 1399px){
     .manage-my-favourites-container{

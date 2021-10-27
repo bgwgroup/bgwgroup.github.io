@@ -32,7 +32,27 @@
   .my-favourites-container .delete-fav-button:hover {
     text-decoration: inherit !important; }
 
+.my-favourites-container .select-fav-list-loading-screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 1.5 rem;
+  background-color: #FFF;
+  z-index: 1000; }
+  .my-favourites-container .select-fav-list-loading-screen p {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    height: 100%; }
+    .my-favourites-container .select-fav-list-loading-screen p span {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center; }
+
 .my-favourites-container #listSelect .table-body {
+  position: relative;
   max-height: 700px;
   overflow: hidden;
   overflow-y: auto; }

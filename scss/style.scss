@@ -1,3 +1,10 @@
+#samBody{
+    .my-favourites-container{
+        .cust-wishlist{
+            align-items: unset !important;
+        }
+    }
+}
 .my-favourites-container{
     #createWish,
     #changeWish{

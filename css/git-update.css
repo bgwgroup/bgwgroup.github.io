@@ -1,2 +1,33 @@
-* {
-  display: none; }
+.my-favourites-container #createWish .control,
+.my-favourites-container #changeWish .control {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 97%; }
+
+.my-favourites-container .newDefaultwishlistName {
+  margin-right: unset; }
+
+.my-favourites-container button[disabled] {
+  cursor: not-allowed;
+  opacity: 0.75;
+  color: #222 !important;
+  background-color: #EEE; }
+
+.my-favourites-container .grid-add-basket input {
+  min-width: max-content !important;
+  max-width: max-content !important; }
+
+@media (max-width: 1399px) {
+  .manage-my-favourites-container .fav-prodname-pricing .fav-prodImage {
+    width: 20%; }
+  .manage-my-favourites-container .fav-prodname-pricing .fav-prodData {
+    width: 80%; }
+  .manage-my-favourites-container .fav-prodname-pricing .cust-wishlist {
+    width: 100%; } }
+
+@media (max-width: 767px) {
+  .manage-my-favourites-container #listSelect #destWishlistName {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 95%;
+    display: block; } }

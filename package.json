@@ -1,0 +1,24 @@
+{
+  "name": "hybris-css-update",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch scss/style.scss css/git-update.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bgwgroup/hybris-css-update.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bgwgroup/hybris-css-update/issues"
+  },
+  "homepage": "https://github.com/bgwgroup/hybris-css-update#readme",
+  "dependencies": {
+    "node-sass": "^6.0.1"
+  }
+}

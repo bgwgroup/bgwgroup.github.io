@@ -85,6 +85,8 @@
     }
     .table-body{
         .list__Header{
+            border-bottom: 1px solid #EEE;
+            box-shadow: 0 4px 2px -2px #EEE;
             background-color: #FFF !important;
             position: -webkit-sticky;
             position: sticky;

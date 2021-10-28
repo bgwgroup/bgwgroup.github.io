@@ -1,6 +1,8 @@
+/*=== My Account | Samios Favourites Patch CSS ===*/
 #samBody .my-favourites-container .cust-wishlist {
   align-items: unset !important; }
 
+/*=== My Account | Favourites Patch CSS ===*/
 .my-favourites-container #createWish .control,
 .my-favourites-container #changeWish .control {
   margin: 0 auto;
@@ -69,6 +71,8 @@
   z-index: 100; }
 
 .my-favourites-container .table-body .list__Header {
+  border-bottom: 1px solid #EEE;
+  box-shadow: 0 4px 2px -2px #EEE;
   background-color: #FFF !important;
   position: -webkit-sticky;
   position: sticky;
@@ -92,3 +96,8 @@
     margin: 0 auto;
     max-width: 95%;
     display: block; } }
+
+/*=== My Account | Invoice Patch CSS ===*/
+.module-search-split .module-search-split-left form .form-group {
+  min-width: max-content;
+  max-width: max-content; }

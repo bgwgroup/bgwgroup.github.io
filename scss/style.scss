@@ -1,3 +1,4 @@
+/*=== My Account | Samios Favourites Patch CSS ===*/
 #samBody{
     .my-favourites-container{
         .cust-wishlist{
@@ -5,6 +6,7 @@
         }
     }
 }
+/*=== My Account | Favourites Patch CSS ===*/
 .my-favourites-container{
     #createWish,
     #changeWish{
@@ -119,3 +121,14 @@
         }
     }
 } 
+/*=== My Account | Invoice Patch CSS ===*/
+.module-search-split{
+    .module-search-split-left{
+        form{
+            .form-group{
+                min-width: max-content;
+                max-width: max-content;
+            }
+        }
+    }
+}

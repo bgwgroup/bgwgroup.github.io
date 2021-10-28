@@ -1,3 +1,14 @@
+/*=== Global Page Template Fixes ===*/
+.cust-inner-wrapper{
+    .container{
+        .row{
+            > div{ width: 100%; }
+        }   
+    }
+}
+
+
+
 /*=== My Account | Samios Favourites Patch CSS ===*/
 #samBody{
     .my-favourites-container{

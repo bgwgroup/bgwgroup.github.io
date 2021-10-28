@@ -123,7 +123,7 @@
   min-width: max-content;
   max-width: max-content; }
 
-.viewpay-invoices-container .module-search #searchInvoiceNumber {
+.viewpay-invoices-container .module-search #searchInvoices {
   display: none; }
 
 /*=== My Account | Historical Invoice Patch CSS ===*/

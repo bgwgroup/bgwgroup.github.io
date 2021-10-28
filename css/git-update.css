@@ -101,3 +101,12 @@
 .module-search-split .module-search-split-left form .form-group {
   min-width: max-content;
   max-width: max-content; }
+
+/*=== My Account | Historical Invoice Patch CSS ===*/
+.historical-invoices-container .module-half {
+  max-width: 100% !important; }
+  @media (min-width: 767px) {
+    .historical-invoices-container .module-half {
+      max-width: 650px !important; } }
+  .historical-invoices-container .module-half input[type="text"] {
+    width: 100%; }

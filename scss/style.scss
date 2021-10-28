@@ -132,3 +132,15 @@
         }
     }
 }
+/*=== My Account | Historical Invoice Patch CSS ===*/
+.historical-invoices-container{
+    .module-half{
+        max-width: 100% !important;
+        @media (min-width: 767px){
+            max-width: 650px !important;
+        }
+        input[type="text"]{
+            width: 100%;
+        }
+    }
+}

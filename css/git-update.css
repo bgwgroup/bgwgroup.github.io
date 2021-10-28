@@ -51,15 +51,32 @@
       vertical-align: middle;
       text-align: center; }
 
-.my-favourites-container #listSelect .table-body {
-  position: relative;
-  max-height: 700px;
-  overflow: hidden;
-  overflow-y: auto; }
-  .my-favourites-container #listSelect .table-body::-webkit-scrollbar {
-    width: 10px; }
-  .my-favourites-container #listSelect .table-body::-webkit-scrollbar-thumb {
-    background: #C00; }
+@media (min-width: 1025px) {
+  .my-favourites-container #listSelect .table-body {
+    position: relative;
+    max-height: 700px;
+    overflow: hidden;
+    overflow-y: scroll; }
+    .my-favourites-container #listSelect .table-body::-webkit-scrollbar {
+      width: 5px; }
+    .my-favourites-container #listSelect .table-body::-webkit-scrollbar-thumb {
+      background: #C00; } }
+
+.my-favourites-container #listSelect .fav-list-search-filter {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 100; }
+
+.my-favourites-container .table-body .list__Header {
+  background-color: #FFF !important;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 100; }
+
+.my-favourites-container .table-body .move-to-list {
+  display: none; }
 
 @media (max-width: 1399px) {
   .manage-my-favourites-container .fav-prodname-pricing .fav-prodImage {

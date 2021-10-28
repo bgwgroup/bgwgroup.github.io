@@ -165,6 +165,11 @@
         }
     }
 }
+.viewpay-invoices-container{
+    .module-search{
+        #searchInvoiceNumber{ display:none; }
+    }
+}
 /*=== My Account | Historical Invoice Patch CSS ===*/
 .historical-invoices-container{
     .module-half{

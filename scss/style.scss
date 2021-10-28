@@ -84,6 +84,14 @@
             top: 0;
             z-index: 100;
         }
+        .grid-remove-button{
+            button{
+                svg{
+                    display: block;
+                    margin: 0 auto; 
+                }
+            }
+        }
     }
     .table-body{
         .list__Header{
@@ -104,6 +112,24 @@
             }
         }
     } 
+    @media (max-width: 767px){
+        .cust-wishlist{
+            margin-left: unset !important;
+            margin-right: unset !important;
+            padding: 0 0.85rem;
+        }
+        .my-fav-pricing{
+            .grid-add-basket{
+                flex-wrap: wrap;
+                input[type="number"],
+                button{
+                    flex: 1 0 auto;
+                    width: 100%;
+                    margin-bottom: 15px;
+                }
+            }   
+        }
+    }
 }
 @media (max-width: 1399px){
     .manage-my-favourites-container{

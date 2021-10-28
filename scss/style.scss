@@ -97,6 +97,13 @@
         }
         .move-to-list{ display: none; }
     }
+    @media (max-width: 1024px){
+        .fav-grid-container{
+            .listProdDetails{
+                padding: 1.5rem;
+            }
+        }
+    } 
 }
 @media (max-width: 1399px){
     .manage-my-favourites-container{

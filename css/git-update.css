@@ -369,7 +369,7 @@
     bottom: -45%;
     right: 0;
     color: #FFF;
-    background-size: contain;
+    background-size: contain !important;
     z-index: 100; }
     .coloring-competition .coloring-major-prize-draw .entries-close-content p {
       position: relative;

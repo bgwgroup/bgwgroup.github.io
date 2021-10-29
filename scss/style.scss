@@ -201,7 +201,7 @@
         .entries-close-content{
             background: url('https://shop.cnw.com.au/medias/entries-close.png?context=bWFzdGVyfGltYWdlc3w2OTQ2N3xpbWFnZS9wbmd8aDcwL2gxMS85Njc2MzA3MTY5MzEwL2VudHJpZXMtY2xvc2UucG5nfGExYmRkMzYxOGMyZmNlMzQ3ZDc5MmY1MjExOTdkNTUwZGIzMDY3YWY3YmIwNWYwNTljNmYwODU1ZjU4MWRkY2E') no-repeat center;
         }
-    } 
+    }  
 }
 #samBody{
     .coloring-competition{
@@ -489,7 +489,7 @@
             bottom: -45%;
             right: 0;
             color: #FFF;   
-            background-size: contain;   
+            background-size: contain !important;   
             z-index: 100;
             p{
                 position: relative;

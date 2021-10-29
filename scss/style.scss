@@ -494,12 +494,13 @@
             height: 200px;
             padding-top: 3rem;
             position: absolute;
-            bottom: -45%;
+            bottom: -65%;
             right: 0;
             color: #FFF;   
             background-size: contain !important;   
             z-index: 100;
             p{
+                font-size: 70%;
                 position: relative;
                 line-height: 2.25rem;
                 &:before{

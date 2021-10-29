@@ -144,6 +144,8 @@
   --baseColorComp: #C00; }
   #cnwBody .coloring-competition .coloring-sub-header span {
     color: var(--baseColorComp); }
+  #cnwBody .coloring-competition .entries-close-content {
+    background: url("/medias/entries-close.png?context=bWFzdGVyfGltYWdlc3w2OTQ2N3xpbWFnZS9wbmd8aDcwL2gxMS85Njc2MzA3MTY5MzEwL2VudHJpZXMtY2xvc2UucG5nfGExYmRkMzYxOGMyZmNlMzQ3ZDc5MmY1MjExOTdkNTUwZGIzMDY3YWY3YmIwNWYwNTljNmYwODU1ZjU4MWRkY2E") no-repeat center; }
 
 #samBody .coloring-competition {
   --baseColorComp: #EE2E34; }
@@ -367,7 +369,6 @@
     bottom: -45%;
     right: 0;
     color: #FFF;
-    background: url("/medias/entries-close.png?context=bWFzdGVyfGltYWdlc3w2OTQ2N3xpbWFnZS9wbmd8aW1hZ2VzL2gyOS9oZjEvODc5OTA5OTE5MTMyNi5wbmd8NGE0NDZmMmM0NGMxMGJkN2E2MmZhMTRmN2IwZWQxNzNjYzU3OTE2N2IyZTBmNTE5ZmNhZGQ3YTllOWM4NDAzZA") no-repeat center;
     background-size: contain;
     z-index: 100; }
     .coloring-competition .coloring-major-prize-draw .entries-close-content p {

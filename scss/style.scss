@@ -247,8 +247,10 @@
         margin: 0 2px;
     }
     li{
-        margin-bottom: 15px;
+        list-style: none; 
+        list-style-type: none;
         line-height: 30px; 
+        margin-bottom: 15px;
     }
     a{ 
         color: #C00; 

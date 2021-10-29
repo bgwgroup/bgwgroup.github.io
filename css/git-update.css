@@ -182,8 +182,10 @@
     top: -10px;
     margin: 0 2px; }
   .coloring-competition li {
-    margin-bottom: 15px;
-    line-height: 30px; }
+    list-style: none;
+    list-style-type: none;
+    line-height: 30px;
+    margin-bottom: 15px; }
   .coloring-competition a {
     color: #C00;
     text-decoration: none; }

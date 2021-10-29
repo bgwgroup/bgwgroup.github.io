@@ -157,6 +157,9 @@
 #sheBody .coloring-competition {
   --baseColorComp: #FED104; }
 
+#sheBody .entries-close-content {
+  background: url("/medias/entries-close.png?context=bWFzdGVyfGltYWdlc3w2OTQ2N3xpbWFnZS9wbmd8aDM5L2gwNC85Njc2MzA3NTI5NzU4L2VudHJpZXMtY2xvc2UucG5nfGNkOGYyMmM1ZjI4M2RlYzc4OTdmZTQyMmNkZDg1NzRlODZhMmFkYjBjOGIwNjhiMjMzYTZmMTQ0YmFiZjZhMWQ") no-repeat center; }
+
 .coloring-competition {
   --ccblue: #34568B;
   --cccoral: #FF6F61;

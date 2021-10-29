@@ -218,6 +218,9 @@
     .coloring-competition{
         --baseColorComp: #FED104;
     }
+    .entries-close-content{
+        background: url('/medias/entries-close.png?context=bWFzdGVyfGltYWdlc3w2OTQ2N3xpbWFnZS9wbmd8aDM5L2gwNC85Njc2MzA3NTI5NzU4L2VudHJpZXMtY2xvc2UucG5nfGNkOGYyMmM1ZjI4M2RlYzc4OTdmZTQyMmNkZDg1NzRlODZhMmFkYjBjOGIwNjhiMjMzYTZmMTQ0YmFiZjZhMWQ') no-repeat center;
+    }
 }
 .coloring-competition{
 
@@ -228,7 +231,7 @@
     --ccaqua: #7FCDCD;
     --ccbuttercream: #EFE1CE;
     --ccgold: #D4AF37;
-    --ccsilver: #D3D3D3;
+    --ccsilver: #D3D3D3; 
     --ccbronze: #CD7F32;
 
     display: -ms-flex; 

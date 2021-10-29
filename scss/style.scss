@@ -205,9 +205,12 @@
 }
 #samBody{
     .coloring-competition{
-        --baseColorComp: #EE2E34;
+        --baseColorComp: #EE2E34; 
         .coloring-sub-header{
             span{ color: var(--baseColorComp); }
+        }
+        .entries-close-content{
+            background: url('https://shop.samios.net.au/medias/entries-close.png?context=bWFzdGVyfGltYWdlc3w2OTQ2N3xpbWFnZS9wbmd8aGY2L2gwYS85Njc2MzA3MzMzMTUwL2VudHJpZXMtY2xvc2UucG5nfDk1YzE3ZDc3MDQwOGU2OWRhNzNkNTNiYmNhOGQ1NzNhZTI0MmZiN2VkOTU3MGVkMzgxNTA4ZDc1OGZkNTNmYzc') no-repeat center;
         }
     }
 }

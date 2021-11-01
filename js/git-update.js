@@ -1,8 +1,10 @@
-window.addEventListener('DOMContentLoaded', () => {
-    try{
-        colouringCompetitionYear();
-        favouriteSearchFilter();
-    }catch(error){}
+['DOMContentLoaded','load'].forEach((event) => {
+    window.addEventListener(event, () => {
+        try{
+            colouringCompetitionYear();
+            favouriteSearchFilter();
+        }catch(error){}
+    });
 });
 
 window.addEventListener('scroll', () => {
@@ -10,15 +12,22 @@ window.addEventListener('scroll', () => {
 });
 
 
+/**
+ * Add year object dynamically to CC
+ */
 function colouringCompetitionYear(){
     let coloringCompTableSpan = document.querySelector('.coloring-competition .coloring-table-row:nth-child(1) > span:nth-child(2)');
     coloringCompTableSpan.innerHTML = coloringCompTableSpan.innerHTML + " " + new Date().getFullYear();
 }
+
+/**
+ * Search filter for wishlists
+ */
 function favouriteSearchFilter(){
     let favSeachForm = document.querySelector('.fav-list-search-filter #favListSearchFilter');
     let favGridItem = document.querySelectorAll('#favourite_list .fav_grid');
 
-    document.body.addEventListener('keyup', () => {
+    favSeachForm.addEventListener('keyup', () => {
         let favSearchFormValue = favSeachForm.value.toUpperCase();
         for(let i = 0; i < favGridItem.length; i++){
             let textValue = favGridItem[i].textContent || favGridItem[i].innerText[i];

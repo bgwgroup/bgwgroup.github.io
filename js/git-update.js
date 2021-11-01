@@ -18,7 +18,7 @@ function favouriteSearchFilter(){
     let favSeachForm = document.querySelector('.fav-list-search-filter #favListSearchFilter');
     let favGridItem = document.querySelectorAll('#favourite_list .fav_grid');
 
-    favSeachForm.addEventListener('keyup', () => {
+    document.body.addEventListener('keyup', () => {
         let favSearchFormValue = favSeachForm.value.toUpperCase();
         for(let i = 0; i < favGridItem.length; i++){
             let textValue = favGridItem[i].textContent || favGridItem[i].innerText[i];

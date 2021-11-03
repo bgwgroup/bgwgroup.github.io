@@ -542,6 +542,7 @@
     $shopButtonBlue: #0099FF;
     $shopButtonBlack: #222222;
     $facetLightGrey: #F5F5F5;
+    $facetMediumGrey: #EEEEEE;
     $facetDarkGrey: #CCCCCC;
     $facetRed: #C00000;
 
@@ -585,7 +586,7 @@
             .shop-by-button{ display: none !important; }
         }
 
-        .facet__link{
+        .facet_link{
             outline: none;
             border: 0;
             cursor: pointer;
@@ -616,6 +617,7 @@
             display: flex;
             justify-content: space-between;
             width: 100%;
+            border-bottom: 1px solid rgba($facetMediumGrey, 0.2);
             a,
             .facet__value__count{
                 -ms-flex: 1 0 auto;
@@ -627,8 +629,8 @@
             a{ 
                 width: 90%; 
                 text-indent: 0;
-                -webkit-transition: 0.4 ease;
-                transition: 0.4 ease;
+                -webkit-transition: 0.8 ease;
+                transition: 0.8 ease;
                 &:hover{
                     color: $facetRed;
                     text-indent: 5px;
@@ -638,6 +640,7 @@
                 width: 10%;
                 text-align: right;
                 font-size: 75%;
+                font-weight: 800;
                 color: $facetRed;
             }
         }

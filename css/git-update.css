@@ -457,7 +457,7 @@
   position: relative;
   margin-bottom: 2rem; }
 
-@media (min-width: 767px) {
+@media (max-width: 767px) {
   .pdppage .product__facet .facet-wrapper {
     display: none; } }
 

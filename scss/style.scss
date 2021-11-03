@@ -629,8 +629,8 @@
             a{ 
                 width: 90%; 
                 text-indent: 0;
-                -webkit-transition: 0.8 ease;
-                transition: 0.8 ease;
+                -webkit-transition: 0.25s ease;
+                transition: 0.25s ease;
                 &:hover{
                     color: $facetRed;
                     text-indent: 5px;

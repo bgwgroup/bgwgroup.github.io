@@ -478,8 +478,8 @@
   .pdppage .product__facet .facet__text a {
     width: 90%;
     text-indent: 0;
-    -webkit-transition: 0.8 ease;
-    transition: 0.8 ease; }
+    -webkit-transition: 0.25s ease;
+    transition: 0.25s ease; }
     .pdppage .product__facet .facet__text a:hover {
       color: #C00000;
       text-indent: 5px; }

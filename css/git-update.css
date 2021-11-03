@@ -437,7 +437,7 @@
   .pdppage .product__facet .shop-by-button {
     display: none !important; } }
 
-.pdppage .product__facet .facet_link {
+.pdppage .product__facet span.facet_link {
   outline: none;
   border: 0;
   cursor: pointer;
@@ -449,7 +449,7 @@
   letter-spacing: 0.75px;
   background-color: rgba(245, 245, 245, 0.75);
   border-bottom: 1px solid #CCCCCC; }
-  .pdppage .product__facet .facet_link::after {
+  .pdppage .product__facet span.facet_link::after {
     content: '\002B';
     position: absolute;
     top: 0;

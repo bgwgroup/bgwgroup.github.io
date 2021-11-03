@@ -3,8 +3,8 @@
         try{
             colouringCompetitionYear();
             favouriteSearchFilter();
-            shopByToggleFacets();
         }catch(error){}
+        shopByToggleFacets();
     });
 });
 

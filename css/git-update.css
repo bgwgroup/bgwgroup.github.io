@@ -524,6 +524,12 @@
     font-weight: 800;
     color: #C00000; }
 
+.pdppage .product__facet .applied-facets .facet__name {
+  font-size: 1.25rem;
+  padding: 10px 0;
+  margin-bottom: 0.5rem;
+  background-color: #F5F5F5; }
+
 @media (min-width: 1200px) {
   .pdppage .product__facet {
     max-width: 95%; } }

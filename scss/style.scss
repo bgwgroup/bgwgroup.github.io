@@ -696,6 +696,15 @@
                 color: $facetRed;
             }
         }
+
+        .applied-facets{
+            .facet__name {
+                font-size: 1.25rem;
+                padding: 10px 0;
+                margin-bottom: 0.5rem;
+                background-color: $facetLightGrey;
+            }
+        }
     }
 
     @media (min-width: $min-desktop-width){

@@ -47,6 +47,7 @@ function favouriteSearchFilter(){
 function shopByToggleFacets(){
     let shopByButton = document.querySelector('.shop-by-button');
     shopByButton.addEventListener('click', () => {
+        console.log(this);
         let facetWrapper = shopByButton.nextElementSibling;
         if(facetWrapper.style.maxHeight){
             facetWrapper.style.maxHeight = null;

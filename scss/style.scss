@@ -629,6 +629,7 @@
                 -webkit-transition: max-height 0.2s ease-out;        
                 transition: max-height 0.2s ease-out;                 
             }
+            .collapse{ display: block !important; }
         }
         span.facet_link{
             outline: none;

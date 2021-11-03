@@ -4,6 +4,7 @@
             colouringCompetitionYear();
             favouriteSearchFilter();
         }catch(error){}
+
         shopByToggleFacets();
     });
 });
@@ -45,14 +46,16 @@ function favouriteSearchFilter(){
  * Facet Toggle Accordion
  */
 function shopByToggleFacets(){
+    
     let shopByButton = document.querySelector('.shop-by-button');
-    shopByButton.addEventListener('click', () => {
-        console.log(this);
-        let facetWrapper = shopByButton.nextElementSibling;
-        if(facetWrapper.style.maxHeight){
-            facetWrapper.style.maxHeight = null;
-        }else{
-            facetWrapper.style.maxHeight = facetWrapper.scrollHeight + "px";
-        }
-    });
+    if(shopByButton != null){
+        shopByButton.addEventListener('click', () => {
+            let facetWrapper = shopByButton.nextElementSibling;
+            if(facetWrapper.style.maxHeight){
+                facetWrapper.style.maxHeight = null;
+            }else{
+                facetWrapper.style.maxHeight = facetWrapper.scrollHeight + "px";
+            }
+        });
+    }
 }

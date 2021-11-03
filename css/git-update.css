@@ -464,7 +464,9 @@
     max-height: 0;
     overflow: hidden;
     -webkit-transition: max-height 0.2s ease-out;
-    transition: max-height 0.2s ease-out; } }
+    transition: max-height 0.2s ease-out; }
+  .pdppage .product__facet .collapse {
+    display: block !important; } }
 
 .pdppage .product__facet span.facet_link {
   outline: none;

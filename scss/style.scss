@@ -596,9 +596,11 @@
             .shop-by-button{ display: none !important; }
         }
         .facet-wrapper{
-            display: none;
             position: relative;
             margin-bottom: 2rem;            
+        }
+        @media (min-width: $max-tablet-width){
+            .facet-wrapper{ display: none; }
         }
         span.facet_link{
             outline: none;

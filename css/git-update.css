@@ -446,6 +446,7 @@
     display: none !important; } }
 
 .pdppage .product__facet .facet-wrapper {
+  display: none;
   position: relative;
   margin-bottom: 2rem; }
 
@@ -473,6 +474,9 @@
     font-size: 1.5rem;
     padding: 0 0.85rem;
     color: #CCCCCC; }
+
+.pdppage .product__facet span.facet_link.slide-down::after {
+  content: '\02212'; }
 
 .pdppage .product__facet .facet__text {
   display: -ms-flex;

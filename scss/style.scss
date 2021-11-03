@@ -547,17 +547,22 @@
 }
 
 /*=== Product Facets | Refinement | Global Styles ===*/
-#sheBody,
-#samBody{
+#sheBody{
     .pdppage{
-        .shop-by-button{
+        .shop-by-button,
+        span.facet_link{
             &::after{
                 line-height: 3rem;
             }
         }
+    }
+}
+#samBody{
+    .pdppage{
+        .shop-by-button,
         span.facet_link{
             &::after{
-                line-height: 3rem;
+                line-height: 3.5rem;
             }
         }
     }

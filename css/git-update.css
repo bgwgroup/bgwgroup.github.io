@@ -489,6 +489,10 @@
 .pdppage .product__facet span.facet_link.slide-down::after {
   content: '\02212'; }
 
+@media (max-width: 1024px) {
+  .pdppage .product__facet .facet__list li {
+    margin-bottom: 1.25rem; } }
+
 .pdppage .product__facet .facet__text {
   display: -ms-flex;
   display: flex;

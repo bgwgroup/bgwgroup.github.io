@@ -577,6 +577,7 @@
     $facetRed: #C00000;
 
     $max-tablet-width: 767px;
+    $max-table-width-1024: 1024px;
     $min-desktop-width: 1200px;
 
     .product__facet{
@@ -651,6 +652,11 @@
         span.facet_link.slide-down{
             &::after{
                 content: '\02212';
+            }
+        }
+        .facet__list{
+            @media (max-width: $max-table-width-1024){
+                li{ margin-bottom: 1.25rem; }
             }
         }
         .facet__text {

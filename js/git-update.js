@@ -1,4 +1,4 @@
-['DOMContentLoaded','load'].forEach((event) => {
+['DOMContentLoaded'].forEach((event) => {
     window.addEventListener(event, () => {
         try{
             colouringCompetitionYear();

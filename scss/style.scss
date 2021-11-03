@@ -535,3 +535,29 @@
         }
     }
 }
+
+/*=== Product Facets | Refinement | Global Styles ===*/
+.pdppage{
+    --shopButtonWhite: #FFFFFF;
+    --shopButtonBlue: #0099FF;
+    --shopButtonBlack: #222222;
+    span[role="button"]{
+        cursor: pointer;
+        outline: none;
+        border: 0;
+        display: inline-block;
+        padding: 0.8rem 1rem;
+        color: var(--shopButtonWhite);
+        background-color: var(--shopButtonBlue);
+        width: 100%;
+        border-radius: 5px;
+        text-align: center;
+        margin: 20px 0;
+        text-transform: uppercase;
+        position: relative;
+        z-index: 1;
+    }
+    @media (min-width: 767px){
+        span{ display: none; }
+    }
+}

@@ -622,7 +622,6 @@
         }
         @media (max-width: $max-tablet-width){
             .facet-wrapper{ 
-                display: none; 
                 max-height: 0;
                 overflow: hidden;
                 -webkit-transition: max-height 0.2s ease-out;        

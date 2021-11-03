@@ -46,12 +46,12 @@ function favouriteSearchFilter(){
  */
 function shopByToggleFacets(){
     let shopByButton = document.querySelector('.shop-by-button');
-    let facetWrapper = document.querySelector('.facet-wrapper');
     shopByButton.addEventListener('click', () => {
+        let facetWrapper = shopByButton.nextElementSibling;
         if(facetWrapper.style.maxHeight){
             facetWrapper.style.maxHeight = null;
         }else{
-            facetWrapper.style.maxHeight = facetWrapper.scrollHeight + 'px';
+            facetWrapper.style.maxHeight = facetWrapper.scrollHeight + "px";
         }
     });
 }

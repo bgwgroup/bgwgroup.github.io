@@ -547,6 +547,21 @@
 }
 
 /*=== Product Facets | Refinement | Global Styles ===*/
+#sheBody,
+#samBody{
+    .pdppage{
+        .shop-by-button{
+            &::after{
+                line-height: 3rem;
+            }
+        }
+        span.facet_link{
+            &::after{
+                line-height: 3rem;
+            }
+        }
+    }
+}
 .pdppage{
     $shopButtonWhite: #FFFFFF;
     $shopButtonBlue: #0099FF;

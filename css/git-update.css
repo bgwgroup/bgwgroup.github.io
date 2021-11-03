@@ -411,6 +411,14 @@
       transform: translateY(-50%); } }
 
 /*=== Product Facets | Refinement | Global Styles ===*/
+#sheBody .pdppage .shop-by-button::after,
+#samBody .pdppage .shop-by-button::after {
+  line-height: 3rem; }
+
+#sheBody .pdppage span.facet_link::after,
+#samBody .pdppage span.facet_link::after {
+  line-height: 3rem; }
+
 .pdppage .product__facet .shop-by-button {
   cursor: pointer;
   outline: none;

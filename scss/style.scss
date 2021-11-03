@@ -538,9 +538,16 @@
 
 /*=== Product Facets | Refinement | Global Styles ===*/
 .pdppage{
-    --shopButtonWhite: #FFFFFF;
-    --shopButtonBlue: #0099FF;
-    --shopButtonBlack: #222222;
+    $shopButtonWhite: #FFFFFF;
+    $shopButtonBlue: #0099FF;
+    $shopButtonBlack: #222222;
+    $facetLightGrey: #EEEEEE;
+    $facetDarkGrey: #CCCCCC;
+    $facetRed: #C00000;
+
+    $max-tablet-width: 767px;
+    $min-desktop-width: 1200px;
+
     .product__facet{
         .shop-by-button{
             cursor: pointer;
@@ -548,8 +555,8 @@
             border: 0;
             display: inline-block;
             padding: 0.8rem 1rem;
-            color: var(--shopButtonWhite);
-            background-color: var(--shopButtonBlue);
+            color: $shopButtonWhite;
+            background-color: $shopButtonBlue;
             width: 100%;
             border-radius: 5px;
             text-align: center;
@@ -571,11 +578,55 @@
                 padding: 0 0.85rem;
             }
             &:hover{
-                background-color: var(--shopButtonBlack);
+                background-color: $shopButtonBlack;
             }
         }
-        @media (min-width: 767px){
+        @media (min-width: $max-tablet-width){
             .shop-by-button{ display: none !important; }
         }
+
+        .facet__link{
+            outline: none;
+            border: 0;
+            cursor: pointer;
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            width: 100%;
+            background-color: rgba($facetLightGrey, 0.75);
+            border-bottom: 1px solid $facetDarkGrey;
+        }
+        .facet__text {
+            display: -ms-flex;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            a,
+            .facet__value__count{
+                -ms-flex: 1 0 auto;
+                flex: 1 0 auto;
+                height: 1.85rem;
+                padding: 0.5rem 0.45rem;
+            }
+            a{ 
+                width: 90%; 
+                text-indent: 0;
+                -webkit-transition: 0.4 ease;
+                transition: 0.4 ease;
+                &:hover{
+                    color: $facetRed;
+                    text-indent: 5px;
+                }
+            }
+            .facet__value__count{
+                width: 10%;
+                text-align: right;
+                font-size: 75%;
+                color: $facetRed;
+            }
+        }
+    }
+
+    @media (min-width: $min-desktop-width){
+        .product__facet{ max-width: 95%; }
     }
 }

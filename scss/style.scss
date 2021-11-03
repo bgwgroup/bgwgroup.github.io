@@ -595,7 +595,10 @@
         @media (min-width: $max-tablet-width){
             .shop-by-button{ display: none !important; }
         }
-
+        .facet-wrapper{
+            position: relative;
+            margin-bottom: 2rem;            
+        }
         span.facet_link{
             outline: none;
             border: 0;

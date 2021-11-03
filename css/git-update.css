@@ -445,6 +445,10 @@
   .pdppage .product__facet .shop-by-button {
     display: none !important; } }
 
+.pdppage .product__facet .facet-wrapper {
+  position: relative;
+  margin-bottom: 2rem; }
+
 .pdppage .product__facet span.facet_link {
   outline: none;
   border: 0;

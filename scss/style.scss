@@ -16,6 +16,12 @@
         }
     }
 }
+.pagination-account{
+    display: -ms-flex;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: unset !important;
+}
 /*=== My Account | Samios Favourites Patch CSS ===*/
 #samBody{
     .my-favourites-container{

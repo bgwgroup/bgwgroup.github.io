@@ -455,7 +455,11 @@
 
 .pdppage .product__facet .facet-wrapper {
   position: relative;
-  margin-bottom: 2rem; }
+  margin-bottom: 2rem;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.2s ease-out;
+  transition: max-height 0.2s ease-out; }
 
 @media (max-width: 767px) {
   .pdppage .product__facet .facet-wrapper {

@@ -3,6 +3,7 @@
         try{
             colouringCompetitionYear();
             favouriteSearchFilter();
+            shopByToggleFacets();
         }catch(error){}
     });
 });
@@ -37,5 +38,20 @@ function favouriteSearchFilter(){
                 favGridItem[i].style.display = "none";
             }
         } 
+    });
+}
+
+/**
+ * Facet Toggle Accordion
+ */
+function shopByToggleFacets(){
+    let shopByButton = document.querySelector('.shop-by-button');
+    let facetWrapper = document.querySelector('.facet-wrapper');
+    shopByButton.addEventListener('click', () => {
+        if(facetWrapper.style.maxHeight){
+            facetWrapper.style.maxHeight = null;
+        }else{
+            facetWrapper.style.maxHeight = facetWrapper.scrollHeight + 'px';
+        }
     });
 }

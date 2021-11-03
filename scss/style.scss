@@ -618,10 +618,16 @@
         }
         .facet-wrapper{
             position: relative;
-            margin-bottom: 2rem;            
+            margin-bottom: 2rem;    
+            max-height: 0;
+            overflow: hidden;
+            -webkit-transition: max-height 0.2s ease-out;        
+            transition: max-height 0.2s ease-out;        
         }
         @media (max-width: $max-tablet-width){
-            .facet-wrapper{ display: none; }
+            .facet-wrapper{ 
+                display: none; 
+            }
         }
         span.facet_link{
             outline: none;

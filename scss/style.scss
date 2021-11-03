@@ -541,7 +541,7 @@
     $shopButtonWhite: #FFFFFF;
     $shopButtonBlue: #0099FF;
     $shopButtonBlack: #222222;
-    $facetLightGrey: #EEEEEE;
+    $facetLightGrey: #F5F5F5;
     $facetDarkGrey: #CCCCCC;
     $facetRed: #C00000;
 
@@ -592,8 +592,24 @@
             display: inline-block;
             padding: 0.8rem 1.5rem;
             width: 100%;
+            position: relative;
+            font-size: 1.1rem;
+            letter-spacing: 0.75px;
             background-color: rgba($facetLightGrey, 0.75);
             border-bottom: 1px solid $facetDarkGrey;
+            &::after{
+                content: '\002B';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                text-align: right;
+                line-height: 2.6rem;
+                font-size: 1.5rem;
+                padding: 0 0.85rem;
+                color: $facetDarkGrey;                
+            }
         }
         .facet__text {
             display: -ms-flex;
@@ -606,6 +622,7 @@
                 flex: 1 0 auto;
                 height: 1.85rem;
                 padding: 0.5rem 0.45rem;
+                user-select: none;
             }
             a{ 
                 width: 90%; 

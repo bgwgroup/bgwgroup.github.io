@@ -424,7 +424,18 @@
     position: relative;
     z-index: 1; }
     .pdppage .product__facet .shop-by-button::after {
-      content: ''; }
+      content: '\002B';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      text-align: right;
+      line-height: 2.6rem;
+      font-size: 1.5rem;
+      padding: 0 0.85rem; }
+    .pdppage .product__facet .shop-by-button:hover {
+      background-color: var(--shopButtonBlack); }
   @media (min-width: 767px) {
-    .pdppage .shop-by-button {
-      display: none; } }
+    .pdppage .product__facet .shop-by-button {
+      display: none !important; } }

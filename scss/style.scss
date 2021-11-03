@@ -543,27 +543,39 @@
     --shopButtonBlack: #222222;
     .product__facet{
         .shop-by-button{
-                cursor: pointer;
-                outline: none;
-                border: 0;
-                display: inline-block;
-                padding: 0.8rem 1rem;
-                color: var(--shopButtonWhite);
-                background-color: var(--shopButtonBlue);
+            cursor: pointer;
+            outline: none;
+            border: 0;
+            display: inline-block;
+            padding: 0.8rem 1rem;
+            color: var(--shopButtonWhite);
+            background-color: var(--shopButtonBlue);
+            width: 100%;
+            border-radius: 5px;
+            text-align: center;
+            margin: 20px 0;
+            text-transform: uppercase;
+            text-decoration: none;
+            position: relative;
+            z-index: 1;
+            &::after{
+                content: '\002B';
+                position: absolute;
+                top: 0;
+                left: 0;
                 width: 100%;
-                border-radius: 5px;
-                text-align: center;
-                margin: 20px 0;
-                text-transform: uppercase;
-                text-decoration: none;
-                position: relative;
-                z-index: 1;
-                &::after{
-                    content: '';
-                }
+                height: 100%;
+                text-align: right;
+                line-height: 2.6rem;
+                font-size: 1.5rem;
+                padding: 0 0.85rem;
             }
-    }
-    @media (min-width: 767px){
-        .shop-by-button{ display: none; }
+            &:hover{
+                background-color: var(--shopButtonBlack);
+            }
+        }
+        @media (min-width: 767px){
+            .shop-by-button{ display: none !important; }
+        }
     }
 }

@@ -6,6 +6,18 @@
         }   
     }
 }
+.breadcrumb{
+    li{
+        width: 100%;
+        margin: 5px 0;
+        font-size: 1.25rem;        
+    }
+    @media (max-width: 767px){
+        li{
+            &::before{ content: unset; }
+        }
+    }
+}
 /*=== My Account | Samios Favourites Patch CSS ===*/
 #samBody{
     .my-favourites-container{

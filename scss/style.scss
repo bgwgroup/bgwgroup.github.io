@@ -12,7 +12,7 @@
             width: 100%;
             margin: 5px 0;
             font-size: 1.25rem;   
-            &::before{ content: unset; }
+            &::before{ content: unset !important; }
         }
     }
 }

@@ -8,7 +8,7 @@
     margin: 5px 0;
     font-size: 1.25rem; }
     .breadcrumb li::before {
-      content: unset; } }
+      content: unset !important; } }
 
 /*=== My Account | Samios Favourites Patch CSS ===*/
 #samBody .my-favourites-container .cust-wishlist {

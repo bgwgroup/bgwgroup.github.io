@@ -15,42 +15,10 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: unset !important; }
-  .pagination-account .pagination-bar-results,
-  .pagination-account .pagination-bar {
-    flex: 1 0 auto;
-    width: 100%; }
-  .pagination-account .pagination-bar-results {
-    text-align: center;
-    padding: 10px;
-    font-weight: 800;
-    border-bottom: 1px solid #EEE; }
-  .pagination-account .sort-refine-bar {
-    display: unset !important;
-    flex-direction: unset !important;
-    padding-left: 0 !important; }
-  .pagination-account .search-pagination {
-    display: -ms-flex;
-    display: flex;
-    flex-wrap: wrap; }
-    .pagination-account .search-pagination .cust-print,
-    .pagination-account .search-pagination .cust-sortby {
-      -ms-flex: 1 0 auto;
-      flex: 1 0 auto;
-      width: 100%; }
-    .pagination-account .search-pagination .cust-print {
-      display: none; }
-    .pagination-account .search-pagination .cust-sortby {
-      display: -ms-flex;
-      display: flex;
-      flex-wrap: wrap; }
-      .pagination-account .search-pagination .cust-sortby > .form-group,
-      .pagination-account .search-pagination .cust-sortby .pagination-wrap {
-        -ms-flex: 1 0 auto;
-        flex: 1 0 auto; }
-      .pagination-account .search-pagination .cust-sortby > .form-group {
-        width: 50%; }
-      .pagination-account .search-pagination .cust-sortby .pagination-wrap {
-        width: 100%; }
+
+.pagination-bar {
+  margin: 0 auto;
+  max-width: 700px; }
 
 /*=== My Account | Samios Favourites Patch CSS ===*/
 #samBody .my-favourites-container .cust-wishlist {
@@ -541,6 +509,7 @@
     display: block; } }
 
 .pdppage .product__facet span.facet_link {
+  color: #444444;
   display: inline-block;
   width: 100%;
   position: relative;
@@ -556,7 +525,7 @@
     line-height: 2.6rem;
     font-size: 1.5rem;
     padding: 0 0.85rem;
-    color: #CCCCCC; }
+    color: #444444; }
 
 .pdppage .product__facet span.facet_link.slide-down::after {
   content: '\02212'; }

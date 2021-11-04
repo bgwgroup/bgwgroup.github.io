@@ -21,48 +21,10 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: unset !important;
-    .pagination-bar-results,
-    .pagination-bar{
-        flex: 1 0 auto;
-        width: 100%;
-    }
-    .pagination-bar-results {
-        text-align: center;
-        padding: 10px;
-        font-weight: 800;
-        border-bottom: 1px solid #EEE;
-    }    
-    .sort-refine-bar{
-        display: unset !important;
-        flex-direction: unset !important;
-        padding-left: 0 !important
-    }
-    .search-pagination{
-        display: -ms-flex;
-        display: flex;
-        flex-wrap: wrap;
-        .cust-print,
-        .cust-sortby{
-            -ms-flex: 1 0 auto;
-            flex: 1 0 auto;
-            width: 100%;
-        }
-        .cust-print{ display: none; }
-        .cust-sortby{
-            display: -ms-flex;
-            display: flex;
-            flex-wrap: wrap;
-
-            > .form-group,
-            .pagination-wrap{
-                -ms-flex: 1 0 auto;
-                flex: 1 0 auto;
-            }
-
-            > .form-group{ width: 50%; }
-            .pagination-wrap{ width: 100%; }
-        }
-    }
+}
+.pagination-bar {
+    margin: 0 auto;
+    max-width: 700px;
 }
 /*=== My Account | Samios Favourites Patch CSS ===*/
 #samBody{
@@ -641,6 +603,7 @@
     $facetMediumGrey: #EEEEEE;
     $facetDarkGrey: #CCCCCC;
     $facetRed: #C00000;
+    $facetLightBlack: #444444;
 
     $max-tablet-width: 767px;
     $max-table-width-1024: 1024px;
@@ -708,6 +671,7 @@
             .collapse{ display: block; }
         }
         span.facet_link{
+            color: $facetLightBlack;
             display: inline-block;
             width: 100%;
             position: relative;
@@ -723,7 +687,7 @@
                 line-height: 2.6rem;
                 font-size: 1.5rem;
                 padding: 0 0.85rem;
-                color: $facetDarkGrey;              
+                color: $facetLightBlack;              
             }
         }
         span.facet_link.slide-down{

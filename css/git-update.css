@@ -66,6 +66,56 @@
   margin: 0 auto;
   max-width: 800px; }
 
+.pagination {
+  justify-content: center !important; }
+
+.dropdown-menuser {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative; }
+  .dropdown-menuser .counts {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    padding: 3px 15px;
+    font-size: 18px;
+    line-height: 1.4em;
+    font-weight: normal;
+    transition: box-shadow 400ms, color 400ms, background-color 400ms;
+    border: 1px solid #dedede;
+    min-width: 240px;
+    -webkit-appearance: none; }
+  .dropdown-menuser .dropdown-number {
+    display: -ms-flex;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-align: center;
+    border-left: 1px solid #EEE;
+    border-right: 1px solid #EEE;
+    background-color: #FFF;
+    box-shadow: 0 0 3px #eee;
+    position: absolute;
+    width: 100%;
+    z-index: 100; }
+    .dropdown-menuser .dropdown-number a {
+      color: #333;
+      font-weight: 400;
+      display: none;
+      -ms-flex: 1;
+      flex: 1;
+      width: 100%;
+      padding: 5px;
+      font-size: 18px;
+      text-decoration: none;
+      border-bottom: 1px solid #EEE; }
+      .dropdown-menuser .dropdown-number a:hover {
+        color: #C00 !important;
+        text-decoration: inherit;
+        background-color: #EEE; }
+
 /*=== My Account | Samios Favourites Patch CSS ===*/
 #samBody .my-favourites-container .cust-wishlist {
   align-items: unset !important; }

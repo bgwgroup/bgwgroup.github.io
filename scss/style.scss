@@ -85,6 +85,13 @@
 .search-pagination{
     margin: 0 auto;
     max-width: 800px;
+    select{
+        border: 1px solid #CCC;
+        display: inline-block;
+        padding: 6px 15px;
+        width: 100%;
+        outline: none;
+    }
 }
 .pagination{
     justify-content: center !important;

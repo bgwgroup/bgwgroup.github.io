@@ -60,6 +60,11 @@
     display: unset !important;
     flex-direction: unset !important;
     padding-left: unset !important;
+    .form-group{
+        flex: unset !important;
+        display: unset !important;
+        flex-direction: unset !important;
+    }
 }
 /*=== My Account | Samios Favourites Patch CSS ===*/
 #samBody{

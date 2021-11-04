@@ -47,6 +47,11 @@
         > .form-group{ width: 46%; }
     }
 }
+.sort-refine-bar{
+    display: unset !important;
+    flex-direction: unset !important;
+    padding-left: unset !important;
+}
 /*=== My Account | Samios Favourites Patch CSS ===*/
 #samBody{
     .my-favourites-container{

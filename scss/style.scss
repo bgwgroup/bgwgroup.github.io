@@ -21,6 +21,48 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: unset !important;
+    .pagination-bar-results,
+    .pagination-bar{
+        flex: 1 0 auto;
+        width: 100%;
+    }
+    .pagination-bar-results {
+        text-align: center;
+        padding: 10px;
+        font-weight: 800;
+        border-bottom: 1px solid #EEE;
+    }    
+    .sort-refine-bar{
+        display: unset !important;
+        flex-direction: unset !important;
+        padding-left: 0 !important
+    }
+    .search-pagination{
+        display: -ms-flex;
+        display: flex;
+        flex-wrap: wrap;
+        .cust-print,
+        .cust-sortby{
+            -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
+            width: 100%;
+        }
+        .cust-print{ display: none; }
+        .cust-sortby{
+            display: -ms-flex;
+            display: flex;
+            flex-wrap: wrap;
+
+            > .form-group,
+            .pagination-wrap{
+                -ms-flex: 1 0 auto;
+                flex: 1 0 auto;
+            }
+
+            > .form-group{ width: 50%; }
+            .pagination-wrap{ width: 100%; }
+        }
+    }
 }
 /*=== My Account | Samios Favourites Patch CSS ===*/
 #samBody{
@@ -549,6 +591,21 @@
                 transform: translateY(-50%);
             }
         }
+    }
+}
+
+/*=== Product Grid | Search Page ===*/
+.cust-plp-grid{
+    flex-direction: unset !important;
+    flex: unset !important;
+    .plp-grid-left,
+    .plp-grid-right{
+        -ms-flex: 1 0 auto;
+        flex: 1 0 auto;
+    }
+    @media (min-width: 767px){
+        .plp-grid-left{ width: 25%; }
+        .plp-grid-right{ width: 75%; }
     }
 }
 

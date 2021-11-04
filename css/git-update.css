@@ -15,6 +15,42 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: unset !important; }
+  .pagination-account .pagination-bar-results,
+  .pagination-account .pagination-bar {
+    flex: 1 0 auto;
+    width: 100%; }
+  .pagination-account .pagination-bar-results {
+    text-align: center;
+    padding: 10px;
+    font-weight: 800;
+    border-bottom: 1px solid #EEE; }
+  .pagination-account .sort-refine-bar {
+    display: unset !important;
+    flex-direction: unset !important;
+    padding-left: 0 !important; }
+  .pagination-account .search-pagination {
+    display: -ms-flex;
+    display: flex;
+    flex-wrap: wrap; }
+    .pagination-account .search-pagination .cust-print,
+    .pagination-account .search-pagination .cust-sortby {
+      -ms-flex: 1 0 auto;
+      flex: 1 0 auto;
+      width: 100%; }
+    .pagination-account .search-pagination .cust-print {
+      display: none; }
+    .pagination-account .search-pagination .cust-sortby {
+      display: -ms-flex;
+      display: flex;
+      flex-wrap: wrap; }
+      .pagination-account .search-pagination .cust-sortby > .form-group,
+      .pagination-account .search-pagination .cust-sortby .pagination-wrap {
+        -ms-flex: 1 0 auto;
+        flex: 1 0 auto; }
+      .pagination-account .search-pagination .cust-sortby > .form-group {
+        width: 50%; }
+      .pagination-account .search-pagination .cust-sortby .pagination-wrap {
+        width: 100%; }
 
 /*=== My Account | Samios Favourites Patch CSS ===*/
 #samBody .my-favourites-container .cust-wishlist {
@@ -415,6 +451,20 @@
       top: 50%;
       -webkit-transform: translateY(-50%);
       transform: translateY(-50%); } }
+
+/*=== Product Grid | Search Page ===*/
+.cust-plp-grid {
+  flex-direction: unset !important;
+  flex: unset !important; }
+  .cust-plp-grid .plp-grid-left,
+  .cust-plp-grid .plp-grid-right {
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto; }
+  @media (min-width: 767px) {
+    .cust-plp-grid .plp-grid-left {
+      width: 25%; }
+    .cust-plp-grid .plp-grid-right {
+      width: 75%; } }
 
 /*=== Product Facets | Refinement | Global Styles ===*/
 #sheBody .pdppage .shop-by-button::after,

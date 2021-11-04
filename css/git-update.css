@@ -677,11 +677,22 @@
     font-weight: 800;
     color: #C00000; }
 
-.pdppage .product__facet .applied-facets .facet__name {
-  font-size: 1.25rem;
-  padding: 10px 0;
-  margin-bottom: 0.5rem;
-  background-color: #F5F5F5; }
+.pdppage .product__facet .applied-facets {
+  margin-bottom: 3rem; }
+  .pdppage .product__facet .applied-facets .facet__name {
+    padding: 10px 15px;
+    margin-bottom: 0.5rem;
+    background-color: #F5F5F5; }
+  .pdppage .product__facet .applied-facets .facet__list {
+    padding-left: 1.25rem; }
+
+.pdppage .product__facet .headline {
+  display: inline-block;
+  color: #444;
+  width: 100%;
+  position: relative;
+  padding: 10px 15px;
+  background-color: #F2F3F4; }
 
 @media (min-width: 1200px) {
   .pdppage .product__facet {

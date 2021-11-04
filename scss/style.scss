@@ -856,12 +856,22 @@
         }
 
         .applied-facets{
+            margin-bottom: 3rem;
             .facet__name {
-                font-size: 1.25rem;
-                padding: 10px 0;
+                padding: 10px 15px;
                 margin-bottom: 0.5rem;
                 background-color: $facetLightGrey;
             }
+            .facet__list{ padding-left: 1.25rem; }
+        }
+
+        .headline{
+            display: inline-block;
+            color: #444;
+            width: 100%;
+            position: relative;
+            padding: 10px 15px;
+            background-color: #F2F3F4;            
         }
     }
 

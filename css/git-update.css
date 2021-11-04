@@ -30,6 +30,9 @@
   max-width: 700px;
   overflow: unset !important; }
 
+.cust-print {
+  display: none; }
+
 .cust-sortby {
   display: -ms-flex;
   display: flex;

@@ -695,17 +695,6 @@
             .collapse{ display: block !important; }
         }
         span.facet_link{
-            outline: none;
-            border: 0;
-            cursor: pointer;
-            display: inline-block;
-            padding: 0.8rem 1.5rem;
-            width: 100%;
-            position: relative;
-            font-size: 1.1rem;
-            letter-spacing: 0.75px;
-            background-color: rgba($facetLightGrey, 0.75);
-            border-bottom: 1px solid $facetDarkGrey;
             &::after{
                 content: '\002B';
                 position: absolute;

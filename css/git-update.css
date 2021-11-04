@@ -20,6 +20,29 @@
   margin: 0 auto;
   max-width: 700px; }
 
+.cust-sortby {
+  display: -ms-flex;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; }
+  .cust-sortby > div {
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+    margin: 2%;
+    margin-bottom: 2rem; }
+    .cust-sortby > div:nth-child(1) {
+      order: 1; }
+    .cust-sortby > div:nth-child(2) {
+      order: 2; }
+    .cust-sortby > div:nth-child(3) {
+      order: 3; }
+  @media (min-width: 320px) {
+    .cust-sortby > div {
+      width: 100%; } }
+  @media (min-width: 767px) {
+    .cust-sortby > .form-group {
+      width: 46%; } }
+
 /*=== My Account | Samios Favourites Patch CSS ===*/
 #samBody .my-favourites-container .cust-wishlist {
   align-items: unset !important; }

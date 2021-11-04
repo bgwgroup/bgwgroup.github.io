@@ -628,7 +628,8 @@
   display: inline-block;
   width: 100%;
   position: relative;
-  padding: 10px 15px; }
+  padding: 10px 15px;
+  word-wrap: break-word; }
   .pdppage .product__facet span.facet_link::after {
     content: '\002B';
     position: absolute;

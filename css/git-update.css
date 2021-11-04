@@ -466,6 +466,10 @@
     .cust-plp-grid .plp-grid-right {
       width: 75%; } }
 
+@media (max-width: 767px) {
+  .cust-plp-grid {
+    padding: 10px; } }
+
 /*=== Product Facets | Refinement | Global Styles ===*/
 #sheBody .pdppage .shop-by-button::after,
 #sheBody .pdppage span.facet_link::after {

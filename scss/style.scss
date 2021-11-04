@@ -608,6 +608,9 @@
         .plp-grid-right{ width: 75%; }
     }
 }
+@media (max-width: 767px){
+    .cust-plp-grid{ padding: 10px; }
+}
 
 /*=== Product Facets | Refinement | Global Styles ===*/
 #sheBody{

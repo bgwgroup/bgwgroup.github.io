@@ -645,6 +645,15 @@
 
     .product__facet{
         .facet{ border-bottom: unset !important; }
+        .facet__name{
+            font-size: 18px;
+            text-transform: capitalize;
+            color: #444;
+            margin: 1px;
+            background-color: #F2F3F4 !important;
+            position: relative;
+            z-index: 1;
+        }
         .shop-by-button{
             user-select: none;
             cursor: pointer;
@@ -696,6 +705,10 @@
             .collapse{ display: block !important; }
         }
         span.facet_link{
+            display: inline-block;
+            width: 100%;
+            position: relative;
+            padding: 10px 15px;            
             &::after{
                 content: '\002B';
                 position: absolute;
@@ -707,7 +720,7 @@
                 line-height: 2.6rem;
                 font-size: 1.5rem;
                 padding: 0 0.85rem;
-                color: $facetDarkGrey;                
+                color: $facetDarkGrey;              
             }
         }
         span.facet_link.slide-down{

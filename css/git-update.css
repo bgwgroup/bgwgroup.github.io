@@ -478,6 +478,15 @@
 .pdppage .product__facet .facet {
   border-bottom: unset !important; }
 
+.pdppage .product__facet .facet__name {
+  font-size: 18px;
+  text-transform: capitalize;
+  color: #444;
+  margin: 1px;
+  background-color: #F2F3F4 !important;
+  position: relative;
+  z-index: 1; }
+
 .pdppage .product__facet .shop-by-button {
   user-select: none;
   cursor: pointer;
@@ -527,18 +536,23 @@
   .pdppage .product__facet .collapse {
     display: block !important; } }
 
-.pdppage .product__facet span.facet_link::after {
-  content: '\002B';
-  position: absolute;
-  top: 0;
-  left: 0;
+.pdppage .product__facet span.facet_link {
+  display: inline-block;
   width: 100%;
-  height: 100%;
-  text-align: right;
-  line-height: 2.6rem;
-  font-size: 1.5rem;
-  padding: 0 0.85rem;
-  color: #CCCCCC; }
+  position: relative;
+  padding: 10px 15px; }
+  .pdppage .product__facet span.facet_link::after {
+    content: '\002B';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: right;
+    line-height: 2.6rem;
+    font-size: 1.5rem;
+    padding: 0 0.85rem;
+    color: #CCCCCC; }
 
 .pdppage .product__facet span.facet_link.slide-down::after {
   content: '\02212'; }

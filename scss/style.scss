@@ -57,6 +57,16 @@
     @media (min-width: 767px){
         > .form-group{ width: 46%; }
     }
+    .form-group{
+        .control-label{
+            max-width: unset !important;
+        }
+        label{
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 0.9rem;            
+        }
+    }
 }
 .sort-refine-bar{
     display: unset !important;

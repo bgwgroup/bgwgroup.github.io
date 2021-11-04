@@ -55,6 +55,12 @@
   @media (min-width: 767px) {
     .cust-sortby > .form-group {
       width: 46%; } }
+  .cust-sortby .form-group .control-label {
+    max-width: unset !important; }
+  .cust-sortby .form-group label {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.9rem; }
 
 .sort-refine-bar {
   display: unset !important;

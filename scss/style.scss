@@ -705,7 +705,7 @@
                 -webkit-transition: max-height 0.2s ease-out;        
                 transition: max-height 0.2s ease-out;                 
             }
-            .collapse{ display: block !important; }
+            .collapse{ display: block; }
         }
         span.facet_link{
             display: inline-block;

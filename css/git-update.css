@@ -538,7 +538,7 @@
     -webkit-transition: max-height 0.2s ease-out;
     transition: max-height 0.2s ease-out; }
   .pdppage .product__facet .collapse {
-    display: block !important; } }
+    display: block; } }
 
 .pdppage .product__facet span.facet_link {
   display: inline-block;

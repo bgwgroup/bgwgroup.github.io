@@ -475,6 +475,9 @@
 #samBody .pdppage span.facet_link::after {
   line-height: 3.5rem; }
 
+.pdppage .product__facet .facet {
+  border-bottom: unset !important; }
+
 .pdppage .product__facet .shop-by-button {
   user-select: none;
   cursor: pointer;

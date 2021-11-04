@@ -644,6 +644,7 @@
     $min-desktop-width: 1200px;
 
     .product__facet{
+        .facet{ border-bottom: unset !important; }
         .shop-by-button{
             user-select: none;
             cursor: pointer;

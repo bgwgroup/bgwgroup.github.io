@@ -34,6 +34,7 @@
 .pagination-bar {
     margin: 0 auto;
     max-width: 700px;
+    overflow: unset !important;
 }
 .cust-sortby {
     display: -ms-flex;

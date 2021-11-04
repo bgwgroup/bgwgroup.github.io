@@ -77,6 +77,10 @@
         display: unset !important;
         flex-direction: unset !important;
     }
+    form{
+        max-width: unset !important;
+        float: none !important;
+    }
 }
 .search-pagination{
     margin: 0 auto;

@@ -66,6 +66,10 @@
         flex-direction: unset !important;
     }
 }
+.search-pagination{
+    margin: 0 auto;
+    max-width: 800px;
+}
 /*=== My Account | Samios Favourites Patch CSS ===*/
 #samBody{
     .my-favourites-container{

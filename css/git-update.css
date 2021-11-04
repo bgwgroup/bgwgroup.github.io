@@ -134,6 +134,8 @@
         color: #C00 !important;
         text-decoration: inherit;
         background-color: #EEE; }
+    .dropdown-menuser .dropdown-number a.open {
+      display: inline-block; }
 
 /*=== My Account | Samios Favourites Patch CSS ===*/
 #samBody .my-favourites-container .cust-wishlist {

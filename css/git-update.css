@@ -87,6 +87,27 @@
 
 .pagination {
   justify-content: center !important; }
+  .pagination li.first a::before {
+    content: "\00AB"; }
+  .pagination li.prev a::before {
+    content: "\2039"; }
+  .pagination li.next a::before {
+    content: "\203A"; }
+  .pagination li.last a::before {
+    content: "\00BB"; }
+  .pagination li strong {
+    color: #222;
+    display: inline-block;
+    width: 38px;
+    height: 38px;
+    line-height: 2.5rem;
+    border-radius: 10px;
+    border: 1px solid #CCC;
+    text-align: center;
+    background-color: #EEE; }
+
+ul.pagination {
+  margin: 10px 0 !important; }
 
 .dropdown-menuser {
   -webkit-user-select: none;

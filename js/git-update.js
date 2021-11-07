@@ -6,11 +6,18 @@
         }catch(error){}
 
         shopByToggleFacets();
+        renderBgImage('.news-promotions .top__news');
+        renderBgImage('.news-promotions .other__news .news__card');
     });
 });
 
 window.addEventListener('scroll', () => {
+    // scratch and win
     new ParallaxEffect('.scratch-and-win .horizontal-line');
+
+    // Sherriff News and Promotion
+    new ParallaxEffect('.news-promotions .top__news__content');
+    new ParallaxEffect('.news-promotions .other__news__row .news__card');
 });
 
 
@@ -57,5 +64,18 @@ function shopByToggleFacets(){
                 facetWrapper.style.maxHeight = facetWrapper.scrollHeight + "px";
             }
         });
+    }
+}
+
+/**
+ * Sherriff News and Promotions
+ */
+function renderBgImage(selector){
+    let elem = document.querySelectorAll(selector);
+    if(elem){
+        for(let i = 0; i < elem.length; i++){
+            let src = elem[i].getAttribute('data-image-src');
+            elem[i].style.backgroundImage = "url('" + src + "')";
+        }
     }
 }

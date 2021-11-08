@@ -705,6 +705,7 @@ ul.pagination{ margin: 10px 0 !important; }
     }
 }
 .news__cards-wrapper{
+    float: none !important;
     max-width: 100% !important;
     overflow-x: auto !important;
     &::-webkit-scrollbar{ width: 3px; }

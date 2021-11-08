@@ -326,6 +326,6 @@ function sherriffHomepageNews(){
 /**
  * Update news wrapper width
  */
-$(window).on('change', function(){
+$(window).on('change resize', function(){
     homepagePromotions();
 })

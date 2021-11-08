@@ -28,12 +28,6 @@
     });
 });
 
-['load','change','resize'].forEach((event) => {
-    window.addEventListener(event, () => {
-        sherriffHomepageNewsWrapper();
-    });
-});
-
 /**
  * Add year object dynamically to CC
  */
@@ -265,37 +259,18 @@ function cnwHomepageNews(){
             for(let i = 0; i < cnwNews.length; i++){
                 let gridItem = document.createElement("li");
                 gridItem.className = "grid-item";
-
-                let gridItemLink = document.createElement("a");
-                gridItemLink.className = "grid-item-link";
-                gridItemLink.setAttribute("href", cnwNews[i]['link']);
-
-                let gridItemImage = document.createElement("img");
-                gridItemImage.className = "grid-item-img";
-                gridItemImage.src = cnwNews[i]["image"];
-
-                gridItemLink.appendChild(gridItemImage);
-                gridItem.appendChild(gridItemLink);
-
-                let gridItemContent = document.createElement("div");
-                gridItemContent.className = "grid-item-content";
-
-                let gridItemTitle = document.createElement("h3");
-                gridItemTitle.className = "grid-item-title";
-                if(cnwNews[i]['external'] == 'true'){
-                    gridItemTitle.innerHTML = "<a href="+cnwNews[i]['link']+" target='_blank'>"+cnwNews[i]['title']+"</a>";
-                }else{
-                    gridItemTitle.innerHTML = "<a href="+cnwNews[i]['link']+">"+cnwNews[i]['title']+"</a>";
-                }
-
-                let gridItemParagraph = document.createElement("p");
-                gridItemParagraph.className = "grid-item-paragraph";
-                gridItemParagraph.innerHTML = cnwNews[i]['description'];
-
-                gridItemContent.appendChild(gridItemTitle);
-                gridItemContent.appendChild(gridItemParagraph);
-
-                gridItem.appendChild(gridItemContent);
+                gridItem.innerHTML = 
+                `
+                    <a class="grid-item-link" href="${cnwNews[i]['link']}">
+                        <img class="grid-item-img" src="${cnwNews[i]['image']}">
+                    </a>
+                    <div class="grid-item-content">
+                        <h3 class="grid-item-title">
+                            <a href="${cnwNews[i]['link']}">${cnwNews[i]['title']}</a>
+                        </h3>
+                        <p class="grid-item-paragraph">${cnwNews[i]['description']}</p>
+                    </div>
+                `;
 
                 rightGridContent.appendChild(gridItem);
             }
@@ -328,7 +303,4 @@ function sherriffHomepageNews(){
         })
         .catch((error) => {});
     }
-}
-function sherriffHomepageNewsWrapper(){
-    let newsCard = document.querySelectorAll('.news__card');
 }

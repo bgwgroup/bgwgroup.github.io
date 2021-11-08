@@ -1,90 +1,87 @@
-{
-    "news": 
-            [
-                {
-                    "image": "/medias/scratch-and-win-slider.jpg?context=bWFzdGVyfGltYWdlc3w1Nzk4MzZ8aW1hZ2UvanBlZ3xoMTgvaDcyLzk2NzcyNDE5NDIwNDYvc2NyYXRjaC1hbmQtd2luLXNsaWRlci5qcGd8Y2VjY2ZiMjhjY2EyMTY2Mzg3MjFmODdmMDAxYzUxNmYwN2E1YjUwNTZjY2I1NjlhZDYzNDBkZGM0MjY3MTAxNQ",
-                    "title": "Scratch and Win",
-                    "description": "Simply spend and receive a Hager Scratch & Win card",
-                    "link": "/scratch-and-win",
-                    "active": "yes"
-                },
-                {
-                    "image": "/medias/sherriff-colour-comp-banner.jpg?context=bWFzdGVyfGltYWdlc3w0OTY1NDF8aW1hZ2UvanBlZ3xoNmYvaDI3Lzk2NzcyNDIwMDc1ODIvc2hlcnJpZmYtY29sb3VyLWNvbXAtYmFubmVyLmpwZ3wzYTI5ODY5OTBhMzI0ZDM4OTcxMjliNWZlNzE3ZGQxYmNhZjBmNDg5NWZlN2UzYWNkMDY0NGY4ZjU5MmIwMmIw",
-                    "title": "Colouring Competition",
-                    "description": "2021 Colouring Competition has begun",
-                    "link": "/colouring-competition",
-                    "active": "yes"
-                },
-                {
-                    "image": "/mhi-card.jpg?context=bWFzdGVyfGltYWdlc3w1MDg5MTF8aW1hZ2UvanBlZ3xoMzUvaGFmLzk1MDk2MDM0NDI3MTgvbWhpLWNhcmQuanBnfGI2YmMyNjNjMzJlNzkzZDkzZTY4NmJkNjFmOTUxNzdhYzM5N2YzMjUzMGU3ZmQ1YjM1NDY0MWE0MjM5MmNkNjM",
-                    "title": "For the installers",
-                    "description": "It pays to be onboard",
-                    "link": "/mhi-powerplus-installers-promo",
-                    "active": "yes"
-                },
-                {
-                    "image": "/medias/iq-lighting-banner.jpg?context=bWFzdGVyfGltYWdlc3wzNDUzOTV8aW1hZ2UvanBlZ3xoMGUvaGVjLzkzNzY2NzcyOTgyMDYvaXEtbGlnaHRpbmctYmFubmVyLmpwZ3w1OWFhOTNmNDRlMGViZDQ3MGY4ZGNlZDYwZWJjNzIxMzBmMGVmODQxZmM4NWE4YTJkODRhZGY1MjEyOGI5ZWUz",
-                    "title": "iQ Lighting",
-                    "description": "Providing a premium range of lighting products",
-                    "link": "/iq-lighting",
-                    "active": "yes"
-                },
-                {
-                    "image": "/medias/ila-halo-portable.png?context=bWFzdGVyfGltYWdlc3w2MzIyNDh8aW1hZ2UvcG5nfGg3Ni9oMDMvOTQ0MTU4ODAxOTIzMC9pbGEtaGFsby1wb3J0YWJsZS5wbmd8ZjgxMmFkZTAyNzNlZTk1MTA4MTU1NjgzZjQxMDRiZjhhMWUyZmFkOTRkYWQwN2JjMjVlNDMzNGU4NzFjMTE5Yw",
-                    "title": "ILA Halo Portable",
-                    "description": "Ground-breaking innovation by HALO in portable lighting",
-                    "link": "/halo-portable/",
-                    "active": "yes"
-                },
-                {
-                    "image": "/medias/clearance-stock-banner.png?context=bWFzdGVyfHJvb3R8NDk2ODR8aW1hZ2UvcG5nfGg0OC9oNDgvOTMzNzYxODIwMjY1NC9jbGVhcmFuY2Utc3RvY2stYmFubmVyLnBuZ3w3YWI5NzlmYzJkNzk5ODU1MzkxODU0ZWFhODE0MDJkMzA5ZGVmMzYxY2YxZTM1NGM4ZTNlZGE2NzE4OGRjNzdkg",
-                    "title": "Stock Clearance",
-                    "description": "Check out our Stock Clearance",
-                    "link": "/she/en/AUD/All-Categories/Stock-Clearance/c/STOCKCLEARANCE",
-                    "active": "yes"
-                },
-                {
-                    "image": "/medias/sip-card.jpg?context=bWFzdGVyfGltYWdlc3wzMjcxOTl8aW1hZ2UvanBlZ3xoNzEvaGFlLzkzNzY2NzgxMTc0MDYvc2lwLWNhcmQuanBnfGMxNGU3ZDA3Y2I5NTVhYTNiYTk1YzU2ZmM0YThjMmJiZWMxN2I3MTg0N2YyYTZmZTliNjE0YTMwMDBiNzBjMjQ",
-                    "title": "Sherriff Innovative Products",
-                    "description": "Solutions for the mining, govt and heavy industry sectors",
-                    "link": "/sip",
-                    "active": "yes"
-                },
-                {
-                    "image": "/_ui/responsive/theme-newshe/images/news-promotions/price-notification.jpg",
-                    "title": "Supplier Price Change Notification",
-                    "description": "Stay informed of all the pricing changes that are taking place",
-                    "link": "/supplier-price-notifications",
-                    "active": "yes"
-                },
-                {
-                    "image": "/_ui/responsive/theme-newshe/images/news-promotions/payid.jpg",
-                    "title": "PayID",
-                    "description": "Simple as",
-                    "link": "https://payid.com.au/",
-                    "external": "yes",
-                    "active": "yes"
-                },
-                {
-                    "image": "/_ui/responsive/theme-newshe/images/news-promotions/simpro.jpg",
-                    "title": "SimPRO Integration",
-                    "description": "Save time with automated invoice importing",
-                    "link": "/simpro",
-                    "active": "yes"
-                },
-                {
-                    "image": "/_ui/responsive/theme-newshe/images/news-promotions/link4.png",
-                    "title": "Link4 Integration",
-                    "description": "Seamless invoice delivery",
-                    "link": "/sherriff-link4",
-                    "active": "yes"
-                },
-                {
-                    "image": "/_ui/responsive/theme-newshe/images/news-promotions/supplier-audit.png",
-                    "title": "Supplier Audit",
-                    "description": "Quality, Reliability, Safety",
-                    "link": "/audit",
-                    "active": "yes"
-                }
-            ]
-}
+[
+    {
+        "image": "/medias/scratch-and-win-slider.jpg?context=bWFzdGVyfGltYWdlc3w1Nzk4MzZ8aW1hZ2UvanBlZ3xoMTgvaDcyLzk2NzcyNDE5NDIwNDYvc2NyYXRjaC1hbmQtd2luLXNsaWRlci5qcGd8Y2VjY2ZiMjhjY2EyMTY2Mzg3MjFmODdmMDAxYzUxNmYwN2E1YjUwNTZjY2I1NjlhZDYzNDBkZGM0MjY3MTAxNQ",
+        "title": "Scratch and Win",
+        "description": "Simply spend and receive a Hager Scratch & Win card",
+        "link": "/scratch-and-win",
+        "active": "yes"
+    },
+    {
+        "image": "/medias/sherriff-colour-comp-banner.jpg?context=bWFzdGVyfGltYWdlc3w0OTY1NDF8aW1hZ2UvanBlZ3xoNmYvaDI3Lzk2NzcyNDIwMDc1ODIvc2hlcnJpZmYtY29sb3VyLWNvbXAtYmFubmVyLmpwZ3wzYTI5ODY5OTBhMzI0ZDM4OTcxMjliNWZlNzE3ZGQxYmNhZjBmNDg5NWZlN2UzYWNkMDY0NGY4ZjU5MmIwMmIw",
+        "title": "Colouring Competition",
+        "description": "2021 Colouring Competition has begun",
+        "link": "/colouring-competition",
+        "active": "yes"
+    },
+    {
+        "image": "/mhi-card.jpg?context=bWFzdGVyfGltYWdlc3w1MDg5MTF8aW1hZ2UvanBlZ3xoMzUvaGFmLzk1MDk2MDM0NDI3MTgvbWhpLWNhcmQuanBnfGI2YmMyNjNjMzJlNzkzZDkzZTY4NmJkNjFmOTUxNzdhYzM5N2YzMjUzMGU3ZmQ1YjM1NDY0MWE0MjM5MmNkNjM",
+        "title": "For the installers",
+        "description": "It pays to be onboard",
+        "link": "/mhi-powerplus-installers-promo",
+        "active": "yes"
+    },
+    {
+        "image": "/medias/iq-lighting-banner.jpg?context=bWFzdGVyfGltYWdlc3wzNDUzOTV8aW1hZ2UvanBlZ3xoMGUvaGVjLzkzNzY2NzcyOTgyMDYvaXEtbGlnaHRpbmctYmFubmVyLmpwZ3w1OWFhOTNmNDRlMGViZDQ3MGY4ZGNlZDYwZWJjNzIxMzBmMGVmODQxZmM4NWE4YTJkODRhZGY1MjEyOGI5ZWUz",
+        "title": "iQ Lighting",
+        "description": "Providing a premium range of lighting products",
+        "link": "/iq-lighting",
+        "active": "yes"
+    },
+    {
+        "image": "/medias/ila-halo-portable.png?context=bWFzdGVyfGltYWdlc3w2MzIyNDh8aW1hZ2UvcG5nfGg3Ni9oMDMvOTQ0MTU4ODAxOTIzMC9pbGEtaGFsby1wb3J0YWJsZS5wbmd8ZjgxMmFkZTAyNzNlZTk1MTA4MTU1NjgzZjQxMDRiZjhhMWUyZmFkOTRkYWQwN2JjMjVlNDMzNGU4NzFjMTE5Yw",
+        "title": "ILA Halo Portable",
+        "description": "Ground-breaking innovation by HALO in portable lighting",
+        "link": "/halo-portable/",
+        "active": "yes"
+    },
+    {
+        "image": "/medias/clearance-stock-banner.png?context=bWFzdGVyfHJvb3R8NDk2ODR8aW1hZ2UvcG5nfGg0OC9oNDgvOTMzNzYxODIwMjY1NC9jbGVhcmFuY2Utc3RvY2stYmFubmVyLnBuZ3w3YWI5NzlmYzJkNzk5ODU1MzkxODU0ZWFhODE0MDJkMzA5ZGVmMzYxY2YxZTM1NGM4ZTNlZGE2NzE4OGRjNzdkg",
+        "title": "Stock Clearance",
+        "description": "Check out our Stock Clearance",
+        "link": "/she/en/AUD/All-Categories/Stock-Clearance/c/STOCKCLEARANCE",
+        "active": "yes"
+    },
+    {
+        "image": "/medias/sip-card.jpg?context=bWFzdGVyfGltYWdlc3wzMjcxOTl8aW1hZ2UvanBlZ3xoNzEvaGFlLzkzNzY2NzgxMTc0MDYvc2lwLWNhcmQuanBnfGMxNGU3ZDA3Y2I5NTVhYTNiYTk1YzU2ZmM0YThjMmJiZWMxN2I3MTg0N2YyYTZmZTliNjE0YTMwMDBiNzBjMjQ",
+        "title": "Sherriff Innovative Products",
+        "description": "Solutions for the mining, govt and heavy industry sectors",
+        "link": "/sip",
+        "active": "yes"
+    },
+    {
+        "image": "/_ui/responsive/theme-newshe/images/news-promotions/price-notification.jpg",
+        "title": "Supplier Price Change Notification",
+        "description": "Stay informed of all the pricing changes that are taking place",
+        "link": "/supplier-price-notifications",
+        "active": "yes"
+    },
+    {
+        "image": "/_ui/responsive/theme-newshe/images/news-promotions/payid.jpg",
+        "title": "PayID",
+        "description": "Simple as",
+        "link": "https://payid.com.au/",
+        "external": "yes",
+        "active": "yes"
+    },
+    {
+        "image": "/_ui/responsive/theme-newshe/images/news-promotions/simpro.jpg",
+        "title": "SimPRO Integration",
+        "description": "Save time with automated invoice importing",
+        "link": "/simpro",
+        "active": "yes"
+    },
+    {
+        "image": "/_ui/responsive/theme-newshe/images/news-promotions/link4.png",
+        "title": "Link4 Integration",
+        "description": "Seamless invoice delivery",
+        "link": "/sherriff-link4",
+        "active": "yes"
+    },
+    {
+        "image": "/_ui/responsive/theme-newshe/images/news-promotions/supplier-audit.png",
+        "title": "Supplier Audit",
+        "description": "Quality, Reliability, Safety",
+        "link": "/audit",
+        "active": "yes"
+    }
+]

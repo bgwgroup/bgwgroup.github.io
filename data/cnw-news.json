@@ -1,61 +1,58 @@
-{
-    "news":
-            [
-                {
-                    "image": "/medias/mobile-hero.jpg?context=bWFzdGVyfGltYWdlc3w0MTY0MjB8aW1hZ2UvanBlZ3xoY2YvaGQyLzk1MjgzMjY4ODEzMTAvbW9iaWxlLWhlcm8uanBnfDk3Zjc3N2Q5MDExYmI5ZGM5YmM2ZDNlMDgyZTM0MjU1NWQwYTFmNWUxYTg2ZTk2MjYxZTZjMDk5MmZmNmYzMWM",
-                    "title": "Big One",
-                    "description": "It's back and even bigger",
-                    "link": "/the-big-one-2",
-                    "active": "yes"
-                },
-                {
-                    "image": "/mhi-card.jpg?context=bWFzdGVyfGltYWdlc3w0MDI3MDl8aW1hZ2UvanBlZ3xoY2UvaGEwLzk1MDk0MTIyNzQyMDYvbWhpLWNhcmQuanBnfDY0NTAxNTZiMmJkYWMxZDFkNDdhYjBjY2RlMGIwNjZkOWY2YjMyOTczM2I2YTViNWQ2MTVjMDU4MmViNTVkZmU",
-                    "title": "For the installers!",
-                    "description": "Cash Rewards",
-                    "link": "/mhi-powerplus-installers-promo",
-                    "active": "yes"
-                },
-                {
-                    "image": "/_ui/responsive/theme-newcnw/images/promotions/Pref-range.jpg",
-                    "title": "Preferred Range",
-                    "description": "Choosing the Preferred Range at CNW guarantees we can deliver trusted brands straight to you at a consistent price no matter where you are in Australia",
-                    "link": "/preferred-range",
-                    "active": "yes"
-                },
-                {
-                    "image": "/_ui/responsive/theme-newcnw/images/promotions/Simpro.jpg",
-                    "title": "SimPRO",
-                    "description": "Automatically receive the latest catalogue prices and supplier invoices directly through SimPRO",
-                    "link": "/simpro",
-                    "active": "yes"
-                },
-                {
-                    "image": "/_ui/responsive/theme-newcnw/images/promotions/Link4.jpg",
-                    "title": "Link4",
-                    "description": "Introducing Seemless Invoice Delivery at CNW. You can now receive your CNW Electrical Invoices directly into your accounting software, at no additional cost!",
-                    "link": "/cnw-link4/",
-                    "active": "yes"
-                },
-                {
-                    "image": "/_ui/responsive/theme-newcnw/images/promotions/supplier-price-notifications.png",
-                    "title": "Supplier Price Change Notification",
-                    "description": "Check out the latest supplier notifications",
-                    "link": "/supplier-price-notifications",
-                    "active": "yes"
-                },
-                {
-                    "image": "/_ui/responsive/theme-newcnw/images/promotions/buy-local-support-local.png",
-                    "title": "Buy Local, Support Local",
-                    "description": "In these trying times, it's important to buy local and support local Australian businesses. CNW is 100% proudly owned & operated",
-                    "link": "#",
-                    "active": "yes"
-                },
-                {
-                    "image": "/_ui/responsive/theme-newcnw/images/promotions/trusted-partner.png",
-                    "title": "Your Trusted Partner Is Ready For Action",
-                    "description": "We are of course in uncharted territory, and we must all adapt accordingly. However please rest assured that this will not affect our promise to continue to service your everyday needs",
-                    "link": "/cnw/en/AUD/search/?text=preferred+range",
-                    "active": "yes"
-                }
-            ]
-}
+[
+    {
+        "image": "/medias/mobile-hero.jpg?context=bWFzdGVyfGltYWdlc3w0MTY0MjB8aW1hZ2UvanBlZ3xoY2YvaGQyLzk1MjgzMjY4ODEzMTAvbW9iaWxlLWhlcm8uanBnfDk3Zjc3N2Q5MDExYmI5ZGM5YmM2ZDNlMDgyZTM0MjU1NWQwYTFmNWUxYTg2ZTk2MjYxZTZjMDk5MmZmNmYzMWM",
+        "title": "Big One",
+        "description": "It's back and even bigger",
+        "link": "/the-big-one-2",
+        "active": "yes"
+    },
+    {
+        "image": "/mhi-card.jpg?context=bWFzdGVyfGltYWdlc3w0MDI3MDl8aW1hZ2UvanBlZ3xoY2UvaGEwLzk1MDk0MTIyNzQyMDYvbWhpLWNhcmQuanBnfDY0NTAxNTZiMmJkYWMxZDFkNDdhYjBjY2RlMGIwNjZkOWY2YjMyOTczM2I2YTViNWQ2MTVjMDU4MmViNTVkZmU",
+        "title": "For the installers!",
+        "description": "Cash Rewards",
+        "link": "/mhi-powerplus-installers-promo",
+        "active": "yes"
+    },
+    {
+        "image": "/_ui/responsive/theme-newcnw/images/promotions/Pref-range.jpg",
+        "title": "Preferred Range",
+        "description": "Choosing the Preferred Range at CNW guarantees we can deliver trusted brands straight to you at a consistent price no matter where you are in Australia",
+        "link": "/preferred-range",
+        "active": "yes"
+    },
+    {
+        "image": "/_ui/responsive/theme-newcnw/images/promotions/Simpro.jpg",
+        "title": "SimPRO",
+        "description": "Automatically receive the latest catalogue prices and supplier invoices directly through SimPRO",
+        "link": "/simpro",
+        "active": "yes"
+    },
+    {
+        "image": "/_ui/responsive/theme-newcnw/images/promotions/Link4.jpg",
+        "title": "Link4",
+        "description": "Introducing Seemless Invoice Delivery at CNW. You can now receive your CNW Electrical Invoices directly into your accounting software, at no additional cost!",
+        "link": "/cnw-link4/",
+        "active": "yes"
+    },
+    {
+        "image": "/_ui/responsive/theme-newcnw/images/promotions/supplier-price-notifications.png",
+        "title": "Supplier Price Change Notification",
+        "description": "Check out the latest supplier notifications",
+        "link": "/supplier-price-notifications",
+        "active": "yes"
+    },
+    {
+        "image": "/_ui/responsive/theme-newcnw/images/promotions/buy-local-support-local.png",
+        "title": "Buy Local, Support Local",
+        "description": "In these trying times, it's important to buy local and support local Australian businesses. CNW is 100% proudly owned & operated",
+        "link": "#",
+        "active": "yes"
+    },
+    {
+        "image": "/_ui/responsive/theme-newcnw/images/promotions/trusted-partner.png",
+        "title": "Your Trusted Partner Is Ready For Action",
+        "description": "We are of course in uncharted territory, and we must all adapt accordingly. However please rest assured that this will not affect our promise to continue to service your everyday needs",
+        "link": "/cnw/en/AUD/search/?text=preferred+range",
+        "active": "yes"
+    }
+]

@@ -251,12 +251,20 @@ NewsAndPromotions.prototype.sherriffNews = () => {
  */
 function cnwHomepageNews(){
     let rightGridContent = document.querySelector('#news-promotion .right-grid-content');
+    let targetBlank = '';
 
     if(typeof(rightGridContent) != undefined && rightGridContent != null){
         fetch(NewsData.cnwNews)
         .then((response) => { return response.json(); })
         .then((cnwNews) => {
             for(let i = 0; i < cnwNews.length; i++){
+                
+                if(cnwNews[i]['external'] == 'true'){
+                    targetBlank = 'target="_blank"';
+                }else{
+                    targetBlank = '';
+                }
+
                 let gridItem = document.createElement("li");
                 gridItem.className = "grid-item";
                 gridItem.innerHTML = 
@@ -266,7 +274,7 @@ function cnwHomepageNews(){
                     </a>
                     <div class="grid-item-content">
                         <h3 class="grid-item-title">
-                            <a href="${cnwNews[i]['link']}">${cnwNews[i]['title']}</a>
+                            <a href="${cnwNews[i]['link']}" ${targetBlank}>${cnwNews[i]['title']}</a>
                         </h3>
                         <p class="grid-item-paragraph">${cnwNews[i]['description']}</p>
                     </div>

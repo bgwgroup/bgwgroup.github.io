@@ -6,10 +6,13 @@
         }catch(error){}
 
         shopByToggleFacets();
+
         renderBgImage('.news-promotions .top__news');
         renderBgImage('.news-promotions .other__news .news__card');
         
         new NewsAndPromotions();
+
+        cnwHomepageNews();
     });
 });
 
@@ -82,6 +85,9 @@ function renderBgImage(selector){
     }
 }
 
+/**
+ * News and Promotion Landing Page 
+ */
 let NewsData = {
     cnwNews: 'https://bgwgroup.github.io/data/cnw-news.json',
     samiosNews: 'https://bgwgroup.github.io/data/sam-news.json',
@@ -237,3 +243,49 @@ NewsAndPromotions.prototype.sherriffNews = () => {
     })
     .catch((error) => {})
 };
+
+/**
+ * News and Promotions section on CNW Homepage
+ */
+function cnwHomepageNews(){
+    let rightGridContent = document.querySelector('#news-promotion .right-grid-content');
+
+    if(typeof(rightGridContent) != undefined && rightGridContent != null){
+        fetch(NewsData.cnwNews)
+        .then((response) => { return response.json(); })
+        .then((cnwNews) => {
+            for(let i = 0; i < cnwNews.length; i++){
+                let gridItem = document.createElement("li");
+                gridItem.className = "grid-item";
+
+                let gridItemLink = document.createElement("a");
+                gridItemLink.className = "grid-item-link";
+                gridItemLink.setAttribute("href", cnwNews[i]['link']);
+
+                let gridItemImage = document.createElement("img");
+                gridItemImage.className = "grid-item-img";
+                gridItemImage.src = cnwNews[i]["image"];
+
+                gridItemLink.appendChild(gridItemImage);
+                gridItem.appendChild(gridItemLink);
+
+                let gridItemContent = document.createElement("div");
+                gridItemContent.className = "grid-item-content";
+
+                let gridItemTitle = document.createElement("h3");
+                gridItemTitle.className = "grid-item-title";
+                gridItemTitle.innerHTML = "<a href="+cnwNews[i]['link']+">"+cnwNews[i]['title']+"</a>";
+
+                let gridItemParagraph = document.createElement("p");
+                gridItemParagraph.className = "grid-item-paragraph";
+                gridItemParagraph.innerHTML = cnwNews[i]['description'];
+
+                gridItemContent.appendChild(gridItemTitle);
+                gridItemContent.appendChild(gridItemParagraph);
+
+                gridItem.appendChild(gridItemContent);
+            }
+        })
+        .catch((error) => {});
+    }
+}

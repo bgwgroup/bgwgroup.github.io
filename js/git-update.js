@@ -138,8 +138,6 @@ NewsAndPromotions.prototype.cnwNews = () => {
                 newsCard.appendChild(newsCardContent);
 
                 newsPromo.appendChild(newsCard);
-
-                console.log(newsCard);
             }
         }        
     })
@@ -187,8 +185,6 @@ NewsAndPromotions.prototype.samiosNews = () => {
                 newsCard.appendChild(newsCardContent);
 
                 newsPromo.appendChild(newsCard);
-
-                console.log(newsCard);
             }
         }        
     })
@@ -236,8 +232,6 @@ NewsAndPromotions.prototype.sherriffNews = () => {
                 newsCard.appendChild(newsCardContent);
 
                 newsPromo.appendChild(newsCard);
-
-                console.log(newsCard);
             }
         }        
     })

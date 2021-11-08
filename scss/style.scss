@@ -1027,3 +1027,16 @@ ul.pagination{ margin: 10px 0 !important; }
         }
     }
 }
+
+#samBody{
+    [class*="-news-promo"]{
+        .news-card{
+            &:nth-child(n+3){
+                img{
+                    object-fit: cover;
+                    max-height: 130px;                    
+                }
+            }
+        }
+    }
+}

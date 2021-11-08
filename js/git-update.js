@@ -95,7 +95,7 @@ NewsAndPromotions.prototype.init = () => {
     NewsAndPromotions.prototype.cnwNews();
 };
 NewsAndPromotions.prototype.cnwNews = () => {
-    fetch()
+    fetch(NewsData.cnwNews)
     .then((response) => { response.json(); } )
     .then((news) => {
         console.log(news);

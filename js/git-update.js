@@ -322,3 +322,10 @@ function sherriffHomepageNews(){
         .catch((error) => {});
     }
 }
+
+/**
+ * Update news wrapper width
+ */
+$(window).on('change', function(){
+    homepagePromotions();
+})

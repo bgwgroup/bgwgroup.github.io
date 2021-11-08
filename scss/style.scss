@@ -961,6 +961,7 @@ ul.pagination{ margin: 10px 0 !important; }
             margin: 10px;
             padding: 20px;
             border: 1px solid $newsLightGrey;
+            background-color: $newsWhite;
             box-shadow: 0 0 30px -10px $newsMediumGrey;
             transform-style: preserve-3d;
             -webkit-transform: scale(1);
@@ -1008,7 +1009,11 @@ ul.pagination{ margin: 10px 0 !important; }
             border-radius: 40px;
             color: $newsWhite;
             font-size: 1.25rem;
+            text-decoration: none;
             background-color: $newsRed;
+            &:hover{
+                text-decoration: inherit;
+            }
         }
         @media (min-width: 767px){
             a{ width: auto; }

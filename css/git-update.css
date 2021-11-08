@@ -559,9 +559,8 @@ ul.pagination {
       transform: translateY(-50%); } }
 
 .news__cards-wrapper {
-  max-width: 100%;
-  overflow: unset !important;
-  overflow-x: auto; }
+  max-width: 100% !important;
+  overflow-x: auto !important; }
   .news__cards-wrapper::-webkit-scrollbar {
     width: 3px; }
   .news__cards-wrapper::-webkit-scrollbar-thumb {

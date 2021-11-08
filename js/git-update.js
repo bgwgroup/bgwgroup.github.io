@@ -93,12 +93,153 @@ function NewsAndPromotions(){
 }
 NewsAndPromotions.prototype.init = () => {
     NewsAndPromotions.prototype.cnwNews();
+    NewsAndPromotions.prototype.samiosNews();
+    NewsAndPromotions.prototype.sherriffNews();
 };
 NewsAndPromotions.prototype.cnwNews = () => {
+    let newsPromo = document.querySelector('.news-promo');
+
     fetch(NewsData.cnwNews)
-    .then((response) => { response.json(); } )
+    .then((response) => { 
+        return response.json(); 
+    })
     .then((news) => {
-        console.log(news);
+        for(let i = 0; i < news.length; i++){
+
+            if(news[i]['active'] == 'yes'){
+
+                let newsCard = document.createElement('div');
+                newsCard.className = 'news-card';
+
+                let newsCardImage = document.createElement('img');
+                newsCardImage.src = news[i]['image'];
+
+                let newsCardContent = document.createElement('div');
+                newsCardContent.className = 'news-card-content';
+
+                let newsCardContentTitle = document.createElement('span');
+                newsCardContentTitle.innerHTML = news[i]['title'];
+
+                let newsCardContentDescription = document.createElement('p');
+                newsCardContentDescription.innerHTML = news[i]['description'];
+
+                let newsCardLink = document.createElement('a');
+                newsCardLink.setAttribute('href', news[i]['link']);
+                if(news[i]['external'] == 'yes'){
+                    newsCardLink.setAttribute('target', '_blank');
+                }
+                newsCardLink.innerHTML = "Learn More";
+
+                newsCardContent.appendChild(newsCardContentTitle);
+                newsCardContent.appendChild(newsCardContentDescription);
+                newsCardContent.appendChild(newsCardLink);
+
+                newsCard.appendChild(newsCardImage);
+                newsCard.appendChild(newsCardContent);
+
+                newsPromo.appendChild(newsCard);
+
+                console.log(newsCard);
+            }
+        }        
+    })
+    .catch((error) => {})
+};
+NewsAndPromotions.prototype.samiosNews = () => {
+    let newsPromo = document.querySelector('.news-promo');
+
+    fetch(NewsData.samiosNews)
+    .then((response) => { 
+        return response.json(); 
+    })
+    .then((news) => {
+        for(let i = 0; i < news.length; i++){
+
+            if(news[i]['active'] == 'yes'){
+
+                let newsCard = document.createElement('div');
+                newsCard.className = 'news-card';
+
+                let newsCardImage = document.createElement('img');
+                newsCardImage.src = news[i]['image'];
+
+                let newsCardContent = document.createElement('div');
+                newsCardContent.className = 'news-card-content';
+
+                let newsCardContentTitle = document.createElement('span');
+                newsCardContentTitle.innerHTML = news[i]['title'];
+
+                let newsCardContentDescription = document.createElement('p');
+                newsCardContentDescription.innerHTML = news[i]['description'];
+
+                let newsCardLink = document.createElement('a');
+                newsCardLink.setAttribute('href', news[i]['link']);
+                if(news[i]['external'] == 'yes'){
+                    newsCardLink.setAttribute('target', '_blank');
+                }
+                newsCardLink.innerHTML = "Learn More";
+
+                newsCardContent.appendChild(newsCardContentTitle);
+                newsCardContent.appendChild(newsCardContentDescription);
+                newsCardContent.appendChild(newsCardLink);
+
+                newsCard.appendChild(newsCardImage);
+                newsCard.appendChild(newsCardContent);
+
+                newsPromo.appendChild(newsCard);
+
+                console.log(newsCard);
+            }
+        }        
+    })
+    .catch((error) => {})
+};
+NewsAndPromotions.prototype.sherriffNews = () => {
+    let newsPromo = document.querySelector('.news-promo');
+
+    fetch(NewsData.sherriffNews)
+    .then((response) => { 
+        return response.json(); 
+    })
+    .then((news) => {
+        for(let i = 0; i < news.length; i++){
+
+            if(news[i]['active'] == 'yes'){
+
+                let newsCard = document.createElement('div');
+                newsCard.className = 'news-card';
+
+                let newsCardImage = document.createElement('img');
+                newsCardImage.src = news[i]['image'];
+
+                let newsCardContent = document.createElement('div');
+                newsCardContent.className = 'news-card-content';
+
+                let newsCardContentTitle = document.createElement('span');
+                newsCardContentTitle.innerHTML = news[i]['title'];
+
+                let newsCardContentDescription = document.createElement('p');
+                newsCardContentDescription.innerHTML = news[i]['description'];
+
+                let newsCardLink = document.createElement('a');
+                newsCardLink.setAttribute('href', news[i]['link']);
+                if(news[i]['external'] == 'yes'){
+                    newsCardLink.setAttribute('target', '_blank');
+                }
+                newsCardLink.innerHTML = "Learn More";
+
+                newsCardContent.appendChild(newsCardContentTitle);
+                newsCardContent.appendChild(newsCardContentDescription);
+                newsCardContent.appendChild(newsCardLink);
+
+                newsCard.appendChild(newsCardImage);
+                newsCard.appendChild(newsCardContent);
+
+                newsPromo.appendChild(newsCard);
+
+                console.log(newsCard);
+            }
+        }        
     })
     .catch((error) => {})
 };

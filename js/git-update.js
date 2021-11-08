@@ -97,7 +97,7 @@ NewsAndPromotions.prototype.init = () => {
     NewsAndPromotions.prototype.sherriffNews();
 };
 NewsAndPromotions.prototype.cnwNews = () => {
-    let newsPromo = document.querySelector('.news-promo');
+    let newsPromo = document.querySelector('.cnw-news-promo');
 
     fetch(NewsData.cnwNews)
     .then((response) => { 
@@ -146,7 +146,7 @@ NewsAndPromotions.prototype.cnwNews = () => {
     .catch((error) => {})
 };
 NewsAndPromotions.prototype.samiosNews = () => {
-    let newsPromo = document.querySelector('.news-promo');
+    let newsPromo = document.querySelector('.samios-news-promo');
 
     fetch(NewsData.samiosNews)
     .then((response) => { 
@@ -195,7 +195,7 @@ NewsAndPromotions.prototype.samiosNews = () => {
     .catch((error) => {})
 };
 NewsAndPromotions.prototype.sherriffNews = () => {
-    let newsPromo = document.querySelector('.news-promo');
+    let newsPromo = document.querySelector('.she-news-promo');
 
     fetch(NewsData.sherriffNews)
     .then((response) => { 

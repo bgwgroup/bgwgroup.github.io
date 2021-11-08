@@ -14,7 +14,23 @@
         "active": "yes"
     },
     {
-        "image": "/mhi-card.jpg?context=bWFzdGVyfGltYWdlc3w1MDg5MTF8aW1hZ2UvanBlZ3xoMzUvaGFmLzk1MDk2MDM0NDI3MTgvbWhpLWNhcmQuanBnfGI2YmMyNjNjMzJlNzkzZDkzZTY4NmJkNjFmOTUxNzdhYzM5N2YzMjUzMGU3ZmQ1YjM1NDY0MWE0MjM5MmNkNjM",
+        "image": "/medias/nhp-iso.jpg?context=bWFzdGVyfGltYWdlc3wxMzQxNTd8aW1hZ2UvanBlZ3xoYmQvaGJlLzk2ODA2MTQ1ODg0NDYvbmhwLWlzby5qcGd8YjgzYjYzZGJjOTgyN2MyN2U5MTYzNTM5NDNmYmNhNmFhYzRjMDViYjhmMjI1ZDc5MTQ5ZTgzNTdmMGJmNjBmOQ",
+        "title": "Industrial Strength",
+        "description": "Be the fastest sparky in Aus and win $5000! Spend $200 or more on any NHP ISO product to play and win!",
+        "link": "https://www.nhpcompetitions.com.au/",
+        "external": "yes",
+        "active": "yes"
+    },
+    {
+        "image": "/medias/clipsal-summer.jpg?context=bWFzdGVyfGltYWdlc3w2MTMwMHxpbWFnZS9qcGVnfGhjZS9oYzEvOTY4MDYxNDY1Mzk4Mi9jbGlwc2FsLXN1bW1lci5qcGd8ZTkxZDMwNzRkNDM3Yjc5Y2M5ODU4YWMzM2RkNjM3YmMxYThjZWMwMjc2ZGI1ZTUwMzIyMjMxMTIzNGUwNDRkYw",
+        "title": "Win Summer Your Way",
+        "description": "Clipsal is giving away five $1000 gift cards every day in November. Simply purchase $300 on participating Clipsal products for your chance to win",
+        "link": "https://www.clipsal.com/summer",
+        "external": "yes",
+        "active": "yes"
+    },
+    {
+        "image": "/medias/mhi-card.jpg?context=bWFzdGVyfGltYWdlc3w1MDg5MTF8aW1hZ2UvanBlZ3xoMzUvaGFmLzk1MDk2MDM0NDI3MTgvbWhpLWNhcmQuanBnfGI2YmMyNjNjMzJlNzkzZDkzZTY4NmJkNjFmOTUxNzdhYzM5N2YzMjUzMGU3ZmQ1YjM1NDY0MWE0MjM5MmNkNjM",
         "title": "For the installers",
         "description": "It pays to be onboard",
         "link": "/mhi-powerplus-installers-promo",
@@ -31,7 +47,7 @@
         "image": "/medias/ila-halo-portable.png?context=bWFzdGVyfGltYWdlc3w2MzIyNDh8aW1hZ2UvcG5nfGg3Ni9oMDMvOTQ0MTU4ODAxOTIzMC9pbGEtaGFsby1wb3J0YWJsZS5wbmd8ZjgxMmFkZTAyNzNlZTk1MTA4MTU1NjgzZjQxMDRiZjhhMWUyZmFkOTRkYWQwN2JjMjVlNDMzNGU4NzFjMTE5Yw",
         "title": "ILA Halo Portable",
         "description": "Ground-breaking innovation by HALO in portable lighting",
-        "link": "/halo-portable/",
+        "link": "https://www.innovativelighting.com.au/halo-portable/",
         "active": "yes"
     },
     {

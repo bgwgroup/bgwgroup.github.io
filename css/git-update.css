@@ -734,6 +734,10 @@ ul.pagination {
   [class*="-news-promo"] .news-card {
     -ms-flex: 1 0 auto;
     flex: 1 0 auto; }
+    [class*="-news-promo"] .news-card img {
+      display: block;
+      margin: 0 auto;
+      width: 100%; }
     [class*="-news-promo"] .news-card:nth-of-type(1), [class*="-news-promo"] .news-card:nth-of-type(2) {
       width: 50%;
       background-color: #222222; }

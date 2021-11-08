@@ -274,7 +274,11 @@ function cnwHomepageNews(){
 
                 let gridItemTitle = document.createElement("h3");
                 gridItemTitle.className = "grid-item-title";
-                gridItemTitle.innerHTML = "<a href="+cnwNews[i]['link']+">"+cnwNews[i]['title']+"</a>";
+                if(cnwNews[i]['external'] == 'true'){
+                    gridItemTitle.innerHTML = "<a href="+cnwNews[i]['link']+" target='_blank'>"+cnwNews[i]['title']+"</a>";
+                }else{
+                    gridItemTitle.innerHTML = "<a href="+cnwNews[i]['link']+">"+cnwNews[i]['title']+"</a>";
+                }
 
                 let gridItemParagraph = document.createElement("p");
                 gridItemParagraph.className = "grid-item-paragraph";
@@ -291,3 +295,7 @@ function cnwHomepageNews(){
         .catch((error) => {});
     }
 }
+
+/**
+ * News and Promotions section on Sherriff Homepage
+ */

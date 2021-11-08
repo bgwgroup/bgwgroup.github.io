@@ -315,6 +315,8 @@ function sherriffHomepageNews(){
                 }else{
                     newsCard.innerHTML = "<a href="+sheNews[i]['link']+"><img alt='Promo' src="+sheNews[i]['image']+"><span>"+sheNews[i]['title']+"</span></a>";
                 }
+
+                newsCardInnerWrapper.appendChild(newsCard);
             }
         })
         .catch((error) => {});

@@ -1,4 +1,4 @@
-['DOMContentLoaded'].forEach((event) => {
+['DOMContentLoaded',].forEach((event) => {
     window.addEventListener(event, () => {
         try{
             colouringCompetitionYear();
@@ -17,15 +17,22 @@
     });
 });
 
-window.addEventListener('scroll', () => {
-    // scratch and win
-    new ParallaxEffect('.scratch-and-win .horizontal-line');
+['scroll'].forEach((event) => {
+    window.addEventListener(event, () => {
+        // scratch and win
+        new ParallaxEffect('.scratch-and-win .horizontal-line');
 
-    // Sherriff News and Promotion
-    new ParallaxEffect('.news-promotions .top__news__content');
-    new ParallaxEffect('.news-promotions .other__news__row .news__card');
+        // Sherriff News and Promotion
+        new ParallaxEffect('.news-promotions .top__news__content');
+        new ParallaxEffect('.news-promotions .other__news__row .news__card');        
+    });
 });
 
+['load','change','resize'].forEach((event) => {
+    window.addEventListener(event, () => {
+        sherriffHomepageNewsWrapper();
+    });
+});
 
 /**
  * Add year object dynamically to CC
@@ -321,4 +328,7 @@ function sherriffHomepageNews(){
         })
         .catch((error) => {});
     }
+}
+function sherriffHomepageNewsWrapper(){
+    let newsCard = document.querySelectorAll('.news__card');
 }

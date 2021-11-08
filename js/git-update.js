@@ -191,7 +191,7 @@ NewsAndPromotions.prototype.samiosNews = () => {
     .catch((error) => {})
 };
 NewsAndPromotions.prototype.sherriffNews = () => {
-    let newsPromo = document.querySelector('.she-news-promo');
+    let newsPromo = document.querySelector('.sherriff-news-promo');
 
     fetch(NewsData.sherriffNews)
     .then((response) => { 

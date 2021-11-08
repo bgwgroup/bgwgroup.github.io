@@ -8,6 +8,8 @@
         shopByToggleFacets();
         renderBgImage('.news-promotions .top__news');
         renderBgImage('.news-promotions .other__news .news__card');
+        
+        new NewsAndPromotions();
     });
 });
 
@@ -79,3 +81,24 @@ function renderBgImage(selector){
         }
     }
 }
+
+let NewsData = {
+    cnwNews: 'https://bgwgroup.github.io/data/cnw-news.json',
+    samiosNews: 'https://bgwgroup.github.io/data/sam-news.json',
+    sherriffNews: 'https://bgwgroup.github.io/data/she-news.json'
+};
+
+function NewsAndPromotions(){
+    NewsAndPromotions.prototype.init();
+}
+NewsAndPromotions.prototype.init = () => {
+    NewsAndPromotions.prototype.cnwNews();
+};
+NewsAndPromotions.prototype.cnwNews = () => {
+    fetch()
+    .then((response) => { response.json(); } )
+    .then((news) => {
+        console.log(news);
+    })
+    .catch((error) => {})
+};

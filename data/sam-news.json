@@ -1,0 +1,68 @@
+{
+    "news": 
+            [
+                {
+                    "image": "/medias/sam-colouring-competition-banner.jpg?context=bWFzdGVyfGltYWdlc3wyNzQ5MjR8aW1hZ2UvanBlZ3xoY2YvaDNmLzkzOTU5MjEwNTk4NzAvc2FtLWNvbG91cmluZy1jb21wZXRpdGlvbi1iYW5uZXIuanBnfDc4Y2MzNGU1OTY5MjAyZjBjNTkyMmMxNTQ3NGM5YmY5NTlmMDFhNzE0ZDk2OWI3MjA0MzkzZDBjMTU4ZjMzNDI",
+                    "title": "Colouring Competition",
+                    "description": "2021 Colouring Competition has begun",
+                    "link": "/colouring-competition",
+                    "active": "yes"
+                },
+                {
+                    "image": "/medias/samios-rigid-banner.jpg?context=bWFzdGVyfGltYWdlc3w2NjczMXxpbWFnZS9qcGVnfGgwZi9oOWYvOTY2NDQ1NTQwOTY5NC9zYW1pb3MtcmlnaWQtYmFubmVyLmpwZ3xhNzkyMzNmMzVhNzJiYTdiNzdkNzVhNjBlMjY2MWQ4YTM1NmJkZDczNDQzZmJjMDg5MGFlNjJjMDNiMjMwMzBl",
+                    "title": "RIDGID",
+                    "description": "Spring Tool Deals",
+                    "link": "/sam/en/AUD/search/?text=RIGID",
+                    "active": "yes"
+                },
+                {
+                    "image": "/_ui/responsive/theme-newsam/images/samios-enware-promo-2021.jpg",
+                    "title": "Samios x Enware",
+                    "description": "Win Gift cards worth up to $2,500",
+                    "link": "/sam/en/AUD/search/?text=RIGID",
+                    "active": "yes"
+                },
+                {
+                    "image": "/medias/rheem-promo-banner-sept-2021.jpg?context=bWFzdGVyfGltYWdlc3wyNjA2NTl8aW1hZ2UvanBlZ3xoODYvaGI4Lzk1NDA3MTMxMTk3NzQvcmhlZW0tcHJvbW8tYmFubmVyLXNlcHQtMjAyMS5qcGd8NTMyOWMyZDFjYjY4OGIyMDEyNTczMzhmYTVhOTkwN2NkNzJkYTYxMTljNGM5NzI2ZmM1ZDFhZGM4OTE4ZDAyMg",
+                    "title": "Sammy's Shout",
+                    "description": "Get some cold ones with your hotties",
+                    "link": "/sam/en/AUD/All-Categories/Hot-Water/Continuous-Flow-%26-Boiling/c/CONTINUOSFLOWBOILING?q=%3Arelevance%3Asam_brands%3ARheem&text=#",
+                    "active": "yes"
+                },
+                {
+                    "image": "/medias/samios-price-notification.jpg?context=bWFzdGVyfGltYWdlc3wzNTk5NDB8aW1hZ2UvanBlZ3xoMjMvaGFjLzkzMTI4MTE2NDcwMDYvc2FtaW9zLXByaWNlLW5vdGlmaWNhdGlvbi5qcGd8ZjBkNGNiZWNmYjMyMTM1ZWIzMzk5NzY5Njc5M2Y2ZGQyODUyYmE0Y2MxYjJkNmFmOTQ4OGM3ZDQwYzNmNmM1OQ",
+                    "title": "Supplier Price Change Notifications",
+                    "description": "Samios suppliers and partners provide information regarding price change notifications",
+                    "link": "/supplier-price-notifications",
+                    "active": "yes"
+                },
+                {
+                    "image": "/great-double-dip-banner.jpg?context=bWFzdGVyfGltYWdlc3w0MjU1MjB8aW1hZ2UvanBlZ3xoN2YvaDRhLzk0NjYwNzQ4OTAyNzAvZ3JlYXQtZG91YmxlLWRpcC1iYW5uZXIuanBnfGU0ZTVhNTIxMGIzOThkNDA1MTczMTY0MDE5NWRlYjhjMDdkYzM2NzdlYzAwYjEyMzQyMWZmZDAyOTZmZDhhMWM",
+                    "title": "The Great Double Dip",
+                    "description": "Buy, Redeem and Redeem again",
+                    "link": "/the-great-double-dip",
+                    "active": "no"
+                },
+                {
+                    "image": "/medias/samios-simpro.jpg?context=bWFzdGVyfGltYWdlc3wxNjAwMTV8aW1hZ2UvanBlZ3xoOGQvaGJjLzkzMDY1MjA3ODA4MzAvc2FtaW9zLXNpbXByby5qcGd8ODczNzM3MjQ4N2ZlYTIwNjEyYjIyNzg5OTAyYmFhZDNmMzFkZGM1MmVhNmI4NzQ0MjZiZmM1NTZjMzU5NmZjYQ",
+                    "title": "SimPRO Integration",
+                    "description": "Samios and SimPRO have partnered up to make invoicing and catalogue imports easier for you. Sign Up today and enjoy the benefits",
+                    "link": "/simpro",
+                    "active": "yes"
+                },
+                {
+                    "image": "/medias/samios-link4.png?context=bWFzdGVyfGltYWdlc3w3MzkwN3xpbWFnZS9wbmd8aDhjL2hiZi85MzA2NTIwODQ2MzY2L3NhbWlvcy1saW5rNC5wbmd8NDg4NzFhODBkODNjMTZjYjgzNjNmMmY4ZDNiODFjOGQ3NGI4NzUxZmNkNDEyMGYxMmI4ZGNkNDkzNTM0YzRhYw",
+                    "title": "Link4 Integration",
+                    "description": "Samios and Link4 have (linked) up, so you can now receive invoices straight into your accounting software",
+                    "link": "/samios-link4",
+                    "active": "yes"
+                },
+                {
+                    "image": "/medias/samios-pressalit.png?context=bWFzdGVyfGltYWdlc3wxODgxMTR8aW1hZ2UvcG5nfGg5Yy9oYzIvOTMwNjUyMDkxMTkwMi9zYW1pb3MtcHJlc3NhbGl0LnBuZ3wzOGQ3NzhiZDRiMjk4MTZkZWYwMTllNTU2MGU1ZDhjY2U4MzEzZWYxYTBmMDVjZGJhNjQ2Y2JjY2IzNTgwMDhh",
+                    "title": "Pressalit",
+                    "description": "Made with durable materials and quality stainless steel hinges, they’re built to last but are also incredibly functional and stylish",
+                    "link": "/pressalit",
+                    "active": "yes"
+                }
+            ]
+}

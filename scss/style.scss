@@ -936,6 +936,24 @@ ul.pagination{ margin: 10px 0 !important; }
         &:nth-of-type(2){
             width: 50%;
             background-color: $newsBlack;
+            .news-card-content{
+                width: 100%;
+                max-width: 95%;
+                margin: 0 auto;
+                position: relative;
+                top: -2rem;
+                padding: 20px;
+                border: 1px solid $newsLightGrey;
+                background-color: $newsBlack;
+                *{ color: $newsWhite; }
+                span{
+                    display: inline-block;
+                    font-size: 1.25rem;
+                    line-height: 2rem;
+                    margin-bottom: 20px;
+                    text-transform: uppercase;                    
+                }
+            }
         }
         &:nth-child(n+3){
             width: 33.33%;
@@ -951,8 +969,8 @@ ul.pagination{ margin: 10px 0 !important; }
             transition: transform 0.65s ease;
             @media (min-width: 1200px){
                 &:hover{
-                    -webkit-transform: scale(0.98);
-                    transform: scale(0.98);
+                    -webkit-transform: scale(0.99);
+                    transform: scale(0.99);
                 }
             }
             .news-card-content{
@@ -974,21 +992,21 @@ ul.pagination{ margin: 10px 0 !important; }
                     line-height: 1.75rem;
                     min-height: 110px;
                 }
-                a{
-                    display: inline-block;
-                    width: 100%;
-                    text-align: center;
-                    padding: 10px 15px;
-                    border-radius: 40px;
-                    color: $newsWhite;
-                    font-size: 1.25rem;
-                    background-color: $newsRed;
-                }
-                @media (min-width: 767px){
-                    a{ width: auto; }
-                }
             }
         }
+        a{
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+            padding: 10px 15px;
+            border-radius: 40px;
+            color: $newsWhite;
+            font-size: 1.25rem;
+            background-color: $newsRed;
+        }
+        @media (min-width: 767px){
+            a{ width: auto; }
+        }        
     }
     @media (max-width: 767px){
         .news-card{

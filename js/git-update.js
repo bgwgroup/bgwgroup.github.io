@@ -13,6 +13,7 @@
         new NewsAndPromotions();
 
         cnwHomepageNews();
+        sherriffHomepageNews();
     });
 });
 
@@ -299,3 +300,23 @@ function cnwHomepageNews(){
 /**
  * News and Promotions section on Sherriff Homepage
  */
+function sherriffHomepageNews(){
+    let newsCardInnerWrapper = document.querySelector('.news__cards__inner__wrapper');
+
+    if(typeof(newsCardInnerWrapper) != undefined && newsCardInnerWrapper != null){
+        fetch(NewsData.sherriffNews)
+        .then((response) => { return response.json(); })
+        .then((sheNews) => {
+            for(let i = 0; i < sheNews.length; i++){
+                let newsCard = document.createElement("div");
+                newsCard.className = "news__card";
+                if(sheNews[i]['external'] == 'true'){
+                    newsCard.innerHTML = "<a href="+sheNews[i]['link']+" target='_blank'><img alt='Promo' src="+sheNews[i]['image']+"><span>"+sheNews[i]['title']+"</span></a>";
+                }else{
+                    newsCard.innerHTML = "<a href="+sheNews[i]['link']+"><img alt='Promo' src="+sheNews[i]['image']+"><span>"+sheNews[i]['title']+"</span></a>";
+                }
+            }
+        })
+        .catch((error) => {});
+    }
+}

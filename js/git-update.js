@@ -131,7 +131,7 @@ NewsAndPromotions.prototype.cnwNews = () => {
 
                 let newsCardLink = document.createElement('a');
                 newsCardLink.setAttribute('href', news[i]['link']);
-                if(news[i]['external'] == 'yes'){
+                if(news[i]['external'] == 'true'){
                     newsCardLink.setAttribute('target', '_blank');
                 }
                 newsCardLink.innerHTML = "Learn More";
@@ -178,7 +178,7 @@ NewsAndPromotions.prototype.samiosNews = () => {
 
                 let newsCardLink = document.createElement('a');
                 newsCardLink.setAttribute('href', news[i]['link']);
-                if(news[i]['external'] == 'yes'){
+                if(news[i]['external'] == 'true'){
                     newsCardLink.setAttribute('target', '_blank');
                 }
                 newsCardLink.innerHTML = "Learn More";
@@ -225,7 +225,7 @@ NewsAndPromotions.prototype.sherriffNews = () => {
 
                 let newsCardLink = document.createElement('a');
                 newsCardLink.setAttribute('href', news[i]['link']);
-                if(news[i]['external'] == 'yes'){
+                if(news[i]['external'] == 'true'){
                     newsCardLink.setAttribute('target', '_blank');
                 }
                 newsCardLink.innerHTML = "Learn More";

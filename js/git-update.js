@@ -284,6 +284,8 @@ function cnwHomepageNews(){
                 gridItemContent.appendChild(gridItemParagraph);
 
                 gridItem.appendChild(gridItemContent);
+
+                rightGridContent.appendChild(gridItem);
             }
         })
         .catch((error) => {});

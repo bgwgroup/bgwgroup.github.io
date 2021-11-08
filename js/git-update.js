@@ -292,19 +292,29 @@ function cnwHomepageNews(){
  */
 function sherriffHomepageNews(){
     let newsCardInnerWrapper = document.querySelector('.news__cards__inner__wrapper');
+    let targetBlank = '';
 
     if(typeof(newsCardInnerWrapper) != undefined && newsCardInnerWrapper != null){
         fetch(NewsData.sherriffNews)
         .then((response) => { return response.json(); })
         .then((sheNews) => {
             for(let i = 0; i < sheNews.length; i++){
+
+                if(sheNews[i]['external'] == 'true'){
+                    targetBlank = 'target="_blank"';
+                }else{
+                    targetBlank = '';
+                }
+
                 let newsCard = document.createElement("div");
                 newsCard.className = "news__card";
-                if(sheNews[i]['external'] == 'true'){
-                    newsCard.innerHTML = "<a href="+sheNews[i]['link']+" target='_blank'><img alt='Promo' src="+sheNews[i]['image']+"><span>"+sheNews[i]['title']+"</span></a>";
-                }else{
-                    newsCard.innerHTML = "<a href="+sheNews[i]['link']+"><img alt='Promo' src="+sheNews[i]['image']+"><span>"+sheNews[i]['title']+"</span></a>";
-                }
+                newsCard.innerHTML = 
+                `
+                    <a href="${sheNews[i]['link']}" ${targetBlank}>
+                        <img alt="Promo" src="${$sheNews[i]['image']}">
+                        <span>${sheNews[i]['title']}</span>
+                    </a>
+                `;
 
                 newsCardInnerWrapper.appendChild(newsCard);
             }

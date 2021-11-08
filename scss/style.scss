@@ -907,3 +907,88 @@ ul.pagination{ margin: 10px 0 !important; }
         .product__facet{ max-width: 95%; }
     }
 }
+
+/*==== News and Promotion Storefront and styles ====*/
+[class*="-news-promo"]{
+    $newsWhite: #FFFFFF;
+    $newsRed: #CC0000;
+    $newsBlack: #222222;
+    $newsGrey: #EEEEEE;
+    $newsLightGrey: #F5F5F5;
+    $newsMediumGrey: #CCCCCC;
+
+    width: 100%;
+    display: -ms-flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    .news-card{
+        -ms-flex: 1 0 auto;
+        flex: 1 0 auto;
+        &:nth-of-type(1),
+        &:nth-of-type(2){
+            width: 50%;
+            background-color: $newsBlack;
+        }
+        &:nth-child(n+3){
+            width: 33.33%;
+            max-width: 450px;
+            margin: 10px;
+            padding: 20px;
+            border: 1px solid $newsLightGrey;
+            box-shadow: 0 0 30px -10px $newsMediumGrey;
+            transform-style: preserve-3d;
+            -webkit-transform: scale(1);
+            transform: scale(1);
+            -webkit-transition: transform 0.65s ease;
+            transition: transform 0.65s ease;
+            @media (min-width: 1200px){
+                &:hover{
+                    -webkit-transform: scale(0.98);
+                    transform: scale(0.98);
+                }
+            }
+            .news-card-content{
+                position: relative;
+                span{
+                    display: inline-block;
+                    width: 100%;
+                    min-height: 70px;
+                    font-size: 1.25rem;
+                    line-height: 2rem;
+                    padding: 5px 0;
+                    margin-bottom: 20px;
+                    text-transform: uppercase;
+                    color: $newsRed;
+                    border-bottom: 1px solid $newsGrey;
+                }
+                p{
+                    font-size: 1.2rem;
+                    line-height: 1.75rem;
+                    min-height: 110px;
+                }
+                a{
+                    display: inline-block;
+                    width: 100%;
+                    text-align: center;
+                    padding: 10px 15px;
+                    border-radius: 40px;
+                    color: $newsWhite;
+                    font-size: 1.25rem;
+                    background-color: $newsRed;
+                }
+                @media (min-width: 767px){
+                    a{ width: auto; }
+                }
+            }
+        }
+    }
+    @media (max-width: 767px){
+        .news-card{
+            width: 100% !important;
+            max-width: 100% !important;
+        }
+    }
+}

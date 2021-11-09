@@ -311,7 +311,7 @@ function sherriffHomepageNews(){
                 newsCard.innerHTML = 
                 `
                     <a href="${sheNews[i]['link']}" ${targetBlank}>
-                        <img alt="Promo" src="${$sheNews[i]['image']}">
+                        <img alt="Promo" src="${sheNews[i]['image']}">
                         <span>${sheNews[i]['title']}</span>
                     </a>
                 `;

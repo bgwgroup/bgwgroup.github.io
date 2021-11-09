@@ -114,7 +114,7 @@ NewsAndPromotions.prototype.cnwNews = () => {
         return response.json(); 
     })
     .then((news) => {
-        NewsAndPromotions.prototype.renderData(news);
+        NewsAndPromotions.prototype.renderData(news, newsPromo);
     })
     .catch((error) => {})
 };
@@ -126,7 +126,7 @@ NewsAndPromotions.prototype.samiosNews = () => {
         return response.json(); 
     })
     .then((news) => {
-        NewsAndPromotions.prototype.renderData(news);
+        NewsAndPromotions.prototype.renderData(news, newsPromo);
     })
     .catch((error) => {})
 };
@@ -138,11 +138,11 @@ NewsAndPromotions.prototype.sherriffNews = () => {
         return response.json(); 
     })
     .then((news) => {   
-        NewsAndPromotions.prototype.renderData(news); 
+        NewsAndPromotions.prototype.renderData(news, newsPromo); 
     })
     .catch((error) => {})
 };
-NewsAndPromotions.prototype.renderData = (data) => {
+NewsAndPromotions.prototype.renderData = (data, container) => {
     let targetBlank = '';
 
     for(let i = 0; i < data.length; i++){

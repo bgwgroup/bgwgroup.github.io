@@ -276,16 +276,17 @@ SherriffCareers.prototype.animateImages = () => {
     if(typeof(elem) != undefined || elem != null){
         let elemAnimate = 'animate-bg-image';
         try { 
-            elem[0].classList.add(elemAnimate); } 
-        catch (err) { } 
+            elem[0].classList.add(elemAnimate); 
 
-        if (index >= elem.length || index <= -1) { 
-          index = 0; 
+            if (index >= elem.length || index <= -1) { 
+                index = 0; 
+              } 
+              for (var i = 0; i < elem.length; i++) { 
+                elem[i].classList.remove(elemAnimate); 
+              } 
+              index += 1; 
+              elem[index - 1].classList.add(elemAnimate);              
         } 
-        for (var i = 0; i < elem.length; i++) { 
-          elem[i].classList.remove(elemAnimate); 
-        } 
-        index += 1; 
-        elem[index - 1].classList.add(elemAnimate);        
+        catch (err) { }       
     }
 };

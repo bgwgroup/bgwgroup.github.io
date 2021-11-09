@@ -14,6 +14,8 @@
 
         cnwHomepageNews();
         sherriffHomepageNews();
+
+        new SherriffCareers();
     });
 });
 
@@ -322,3 +324,42 @@ function sherriffHomepageNews(){
         .catch((error) => {});
     }
 }
+
+/**
+ * Sherriff Careers Page
+ */
+let index = 0;
+function SherriffCareers(){
+    this.init();
+}
+SherriffCareers.prototype.init = () => {
+    SherriffCareers.prototype.renderBgImage('.careers-container .careers-bg-image');
+    setInterval(SherriffCareers.prototype.animateImages.bind(this), 5000);
+};
+SherriffCareers.prototype.renderBgImage = (selector) => {
+    let elem = document.querySelectorAll(selector);
+    if(typeof(elem) != undefined || elem != null){
+        for(let i = 0; i < elem.length; i++){
+            let src = elem[i].getAttribute('data-image-src');
+            elem[i].style.backgroundImage = `url("${src}")`;
+        }
+    }
+};
+SherriffCareers.prototype.animateImages = () => {
+    let elem = document.querySelectorAll('.careers-container .slideshow .careers-bg-image');
+    let elemAnimate = 'animate-bg-image';
+    if(elem){
+        try { 
+            elem[0].classList.add(elemAnimate); } 
+        catch (err) { } 
+
+        if (index >= elem.length || index <= -1) { 
+          index = 0; 
+        } 
+        for (var i = 0; i < elem.length; i++) { 
+          elem[i].classList.remove(elemAnimate); 
+        } 
+        index += 1; 
+        elem[index - 1].classList.add(elemAnimate); 
+    }
+};

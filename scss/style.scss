@@ -1059,7 +1059,10 @@ ul.pagination{ margin: 10px 0 !important; }
         margin-bottom: 20px;
         line-height: 30px;
     }
-    li{ margin-bottom: 20px; }
+    ul{margin-left: 1rem;}
+    li{ 
+        margin-bottom: 20px; 
+    }
     a{
         display: inline-block;
         width: 100%;
@@ -1076,6 +1079,7 @@ ul.pagination{ margin: 10px 0 !important; }
         width: 100%;
         max-width: 1400px;
         padding-bottom: 5rem;
+        ul{ margin-left: 1.25rem; }
         a{ 
             max-width: 200px;
             &:hover{

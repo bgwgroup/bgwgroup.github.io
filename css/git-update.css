@@ -840,6 +840,8 @@ ul.pagination {
   .job p {
     margin-bottom: 20px;
     line-height: 30px; }
+  .job ul {
+    margin-left: 1rem; }
   .job li {
     margin-bottom: 20px; }
   .job a {
@@ -857,6 +859,8 @@ ul.pagination {
     width: 100%;
     max-width: 1400px;
     padding-bottom: 5rem; }
+    .job ul {
+      margin-left: 1.25rem; }
     .job a {
       max-width: 200px; }
       .job a:hover {

@@ -114,42 +114,7 @@ NewsAndPromotions.prototype.cnwNews = () => {
         return response.json(); 
     })
     .then((news) => {
-        for(let i = 0; i < news.length; i++){
-
-            if(news[i]['active'] == 'yes'){
-
-                let newsCard = document.createElement('div');
-                newsCard.className = 'news-card';
-
-                let newsCardImage = document.createElement('img');
-                newsCardImage.src = news[i]['image'];
-
-                let newsCardContent = document.createElement('div');
-                newsCardContent.className = 'news-card-content';
-
-                let newsCardContentTitle = document.createElement('span');
-                newsCardContentTitle.innerHTML = news[i]['title'];
-
-                let newsCardContentDescription = document.createElement('p');
-                newsCardContentDescription.innerHTML = news[i]['description'];
-
-                let newsCardLink = document.createElement('a');
-                newsCardLink.setAttribute('href', news[i]['link']);
-                if(news[i]['external'] == 'true'){
-                    newsCardLink.setAttribute('target', '_blank');
-                }
-                newsCardLink.innerHTML = "Learn More";
-
-                newsCardContent.appendChild(newsCardContentTitle);
-                newsCardContent.appendChild(newsCardContentDescription);
-                newsCardContent.appendChild(newsCardLink);
-
-                newsCard.appendChild(newsCardImage);
-                newsCard.appendChild(newsCardContent);
-
-                newsPromo.appendChild(newsCard);
-            }
-        }        
+        NewsAndPromotions.prototype.renderData(news);
     })
     .catch((error) => {})
 };
@@ -161,42 +126,7 @@ NewsAndPromotions.prototype.samiosNews = () => {
         return response.json(); 
     })
     .then((news) => {
-        for(let i = 0; i < news.length; i++){
-
-            if(news[i]['active'] == 'yes'){
-
-                let newsCard = document.createElement('div');
-                newsCard.className = 'news-card';
-
-                let newsCardImage = document.createElement('img');
-                newsCardImage.src = news[i]['image'];
-
-                let newsCardContent = document.createElement('div');
-                newsCardContent.className = 'news-card-content';
-
-                let newsCardContentTitle = document.createElement('span');
-                newsCardContentTitle.innerHTML = news[i]['title'];
-
-                let newsCardContentDescription = document.createElement('p');
-                newsCardContentDescription.innerHTML = news[i]['description'];
-
-                let newsCardLink = document.createElement('a');
-                newsCardLink.setAttribute('href', news[i]['link']);
-                if(news[i]['external'] == 'true'){
-                    newsCardLink.setAttribute('target', '_blank');
-                }
-                newsCardLink.innerHTML = "Learn More";
-
-                newsCardContent.appendChild(newsCardContentTitle);
-                newsCardContent.appendChild(newsCardContentDescription);
-                newsCardContent.appendChild(newsCardLink);
-
-                newsCard.appendChild(newsCardImage);
-                newsCard.appendChild(newsCardContent);
-
-                newsPromo.appendChild(newsCard);
-            }
-        }        
+        NewsAndPromotions.prototype.renderData(news);
     })
     .catch((error) => {})
 };
@@ -207,45 +137,38 @@ NewsAndPromotions.prototype.sherriffNews = () => {
     .then((response) => { 
         return response.json(); 
     })
-    .then((news) => {
-        for(let i = 0; i < news.length; i++){
-
-            if(news[i]['active'] == 'yes'){
-
-                let newsCard = document.createElement('div');
-                newsCard.className = 'news-card';
-
-                let newsCardImage = document.createElement('img');
-                newsCardImage.src = news[i]['image'];
-
-                let newsCardContent = document.createElement('div');
-                newsCardContent.className = 'news-card-content';
-
-                let newsCardContentTitle = document.createElement('span');
-                newsCardContentTitle.innerHTML = news[i]['title'];
-
-                let newsCardContentDescription = document.createElement('p');
-                newsCardContentDescription.innerHTML = news[i]['description'];
-
-                let newsCardLink = document.createElement('a');
-                newsCardLink.setAttribute('href', news[i]['link']);
-                if(news[i]['external'] == 'true'){
-                    newsCardLink.setAttribute('target', '_blank');
-                }
-                newsCardLink.innerHTML = "Learn More";
-
-                newsCardContent.appendChild(newsCardContentTitle);
-                newsCardContent.appendChild(newsCardContentDescription);
-                newsCardContent.appendChild(newsCardLink);
-
-                newsCard.appendChild(newsCardImage);
-                newsCard.appendChild(newsCardContent);
-
-                newsPromo.appendChild(newsCard);
-            }
-        }        
+    .then((news) => {   
+        NewsAndPromotions.prototype.renderData(news); 
     })
     .catch((error) => {})
+};
+NewsAndPromotions.prototype.renderData = (data) => {
+    let targetBlank = '';
+
+    for(let i = 0; i < data.length; i++){
+        if(data[i]['active'] == 'yes'){
+
+            if(data[i]['external'] == 'true'){
+                targetBlank = 'target="_blank"';
+            }else{
+                targetBlank = '';
+            }
+
+            let newsCard = document.createElement('div');
+            newsCard.className = 'news-card';
+
+            newsCard.innerHTML = 
+            `
+                <img alt="${data[i]['title']}" src="${data[i]['image']}" title="${data[i]['title']}">
+                <div class="news-card-content">
+                    <span>${data[i]['title']}</span>
+                    <p>${data[i]['description']}</p>
+                    <a href="${data[i]['link']}" ${targetBlank}>Learn More</a>
+                </div>
+            `;
+            
+        }
+    }
 };
 
 /**
@@ -260,29 +183,30 @@ function cnwHomepageNews(){
         .then((response) => { return response.json(); })
         .then((cnwNews) => {
             for(let i = 0; i < cnwNews.length; i++){
-                
-                if(cnwNews[i]['external'] == 'true'){
-                    targetBlank = 'target="_blank"';
-                }else{
-                    targetBlank = '';
+                if(cnwNews[i]['active'] == 'yes'){
+                    if(cnwNews[i]['external'] == 'true'){
+                        targetBlank = 'target="_blank"';
+                    }else{
+                        targetBlank = '';
+                    }
+    
+                    let gridItem = document.createElement("li");
+                    gridItem.className = "grid-item";
+                    gridItem.innerHTML = 
+                    `
+                        <a class="grid-item-link" href="${cnwNews[i]['link']}">
+                            <img class="grid-item-img" src="${cnwNews[i]['image']}">
+                        </a>
+                        <div class="grid-item-content">
+                            <h3 class="grid-item-title">
+                                <a href="${cnwNews[i]['link']}" ${targetBlank}>${cnwNews[i]['title']}</a>
+                            </h3>
+                            <p class="grid-item-paragraph">${cnwNews[i]['description']}</p>
+                        </div>
+                    `;
+    
+                    rightGridContent.appendChild(gridItem);                    
                 }
-
-                let gridItem = document.createElement("li");
-                gridItem.className = "grid-item";
-                gridItem.innerHTML = 
-                `
-                    <a class="grid-item-link" href="${cnwNews[i]['link']}">
-                        <img class="grid-item-img" src="${cnwNews[i]['image']}">
-                    </a>
-                    <div class="grid-item-content">
-                        <h3 class="grid-item-title">
-                            <a href="${cnwNews[i]['link']}" ${targetBlank}>${cnwNews[i]['title']}</a>
-                        </h3>
-                        <p class="grid-item-paragraph">${cnwNews[i]['description']}</p>
-                    </div>
-                `;
-
-                rightGridContent.appendChild(gridItem);
             }
         })
         .catch((error) => {});
@@ -302,23 +226,25 @@ function sherriffHomepageNews(){
         .then((sheNews) => {
             for(let i = 0; i < sheNews.length; i++){
 
-                if(sheNews[i]['external'] == 'true'){
-                    targetBlank = 'target="_blank"';
-                }else{
-                    targetBlank = '';
+                if(sheNews[i]['active'] == 'yes'){
+                    if(sheNews[i]['external'] == 'true'){
+                        targetBlank = 'target="_blank"';
+                    }else{
+                        targetBlank = '';
+                    }
+    
+                    let newsCard = document.createElement("div");
+                    newsCard.className = "news__card";
+                    newsCard.innerHTML = 
+                    `
+                        <a href="${sheNews[i]['link']}" ${targetBlank}>
+                            <img alt="Promo" src="${sheNews[i]['image']}">
+                            <span>${sheNews[i]['title']}</span>
+                        </a>
+                    `;
+    
+                    newsCardInnerWrapper.appendChild(newsCard);                    
                 }
-
-                let newsCard = document.createElement("div");
-                newsCard.className = "news__card";
-                newsCard.innerHTML = 
-                `
-                    <a href="${sheNews[i]['link']}" ${targetBlank}>
-                        <img alt="Promo" src="${sheNews[i]['image']}">
-                        <span>${sheNews[i]['title']}</span>
-                    </a>
-                `;
-
-                newsCardInnerWrapper.appendChild(newsCard);
             }
         })
         .catch((error) => {});
@@ -347,8 +273,8 @@ SherriffCareers.prototype.renderBgImage = (selector) => {
 };
 SherriffCareers.prototype.animateImages = () => {
     let elem = document.querySelectorAll('.careers-container .slideshow .careers-bg-image');
-    let elemAnimate = 'animate-bg-image';
-    if(elem){
+    if(typeof(elem) != undefined || elem != null){
+        let elemAnimate = 'animate-bg-image';
         try { 
             elem[0].classList.add(elemAnimate); } 
         catch (err) { } 
@@ -360,6 +286,6 @@ SherriffCareers.prototype.animateImages = () => {
           elem[i].classList.remove(elemAnimate); 
         } 
         index += 1; 
-        elem[index - 1].classList.add(elemAnimate); 
+        elem[index - 1].classList.add(elemAnimate);        
     }
 };

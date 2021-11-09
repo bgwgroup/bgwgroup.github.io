@@ -167,6 +167,7 @@ NewsAndPromotions.prototype.renderData = (data, container) => {
                 </div>
             `;
             
+            container.appendChild(newsCard);
         }
     }
 };

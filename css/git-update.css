@@ -843,6 +843,8 @@ ul.pagination {
   .job ul {
     margin-left: 1rem; }
   .job li {
+    list-style: disc;
+    list-style-type: disc;
     margin-bottom: 20px; }
   .job a {
     display: inline-block;

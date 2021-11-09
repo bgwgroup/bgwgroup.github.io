@@ -830,3 +830,35 @@ ul.pagination {
 #samBody [class*="-news-promo"] .news-card:nth-child(n+3) img {
   object-fit: cover;
   max-height: 130px; }
+
+/*==== Sherriff Job Landing Page CSS Styles ====*/
+.job {
+  padding: 20px; }
+  .job h1 {
+    text-align: center;
+    margin-bottom: 40px; }
+  .job p {
+    margin-bottom: 20px;
+    line-height: 30px; }
+  .job li {
+    margin-bottom: 20px; }
+  .job a {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 10px 20px;
+    color: #222;
+    background-color: #FED105;
+    text-decoration: none; }
+
+@media (min-width: 768px) {
+  .job {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1400px;
+    padding-bottom: 5rem; }
+    .job a {
+      max-width: 200px; }
+      .job a:hover {
+        color: #FFF;
+        background-color: #222222; } }

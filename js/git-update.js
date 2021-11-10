@@ -19,7 +19,7 @@
 
         loadExternalScripts();
 
-        plumbingPCN();
+        new PlumbingPCN();
     });
 });
 
@@ -362,7 +362,7 @@ PlumbingPCN.prototype.searchFilterData = () => {
             let searchValue = priceSearch.value.toLowerCase();
 
             for(let i = 0; i < priceTableRow.length; i++){
-                
+
                 let row = priceTableRow[i];
                 let rowData = row.innerHTML.toLowerCase();
 

@@ -382,6 +382,7 @@ PlumbingPCN.prototype.searchFilterData = () => {
  */
 function ElectricalPCN(){
     let december2021 = document.querySelector('.pcn-december2021');
+    this.init();
 }
 ElectricalPCN.prototype.init = () => {
     ElectricalPCN.prototype.fetchData();

@@ -359,7 +359,7 @@ PlumbingPCN.prototype.searchFilterData = () => {
 
         if(priceSearch != null && priceTableRow != null){
 
-            let searchValue = priceSearch.value.toLowerCase();
+            let searchValue = e.srcElement.value.toLowerCase();
 
             for(let i = 0; i < priceTableRow.length; i++){
 

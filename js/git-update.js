@@ -20,6 +20,7 @@
         loadExternalScripts();
 
         new PlumbingPCN();
+        new ElectricalPCN();
     });
 });
 
@@ -375,3 +376,23 @@ PlumbingPCN.prototype.searchFilterData = () => {
         }
     });
 };
+
+/**
+ * CNW | Sherriff PCN Data
+ */
+function ElectricalPCN(){
+    let december2021 = document.querySelector('.pcn-december2021');
+}
+ElectricalPCN.prototype.init = () => {
+    ElectricalPCN.prototype.fetchData();
+    ElectricalPCN.prototype.renderData();
+};
+ElectricalPCN.prototype.fetchData = () => {
+    fetch('https://bgwgroup.com.au/notifications/get-file-data.php')
+    .then((response) => { return response.json(); })
+    .then((pcn) => {
+        console.log(this.december2021);
+    })
+    .catch((error) => {});
+};
+ElectricalPCN.prototype.renderData = () => {};

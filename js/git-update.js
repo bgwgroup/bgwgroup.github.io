@@ -392,7 +392,8 @@ let ElectricalPCNWrappers = {
     april2021: document.querySelector('.pcn-april2021'),
     march2021: document.querySelector('.pcn-march2021'),
     february2021: document.querySelector('.pcn-february2021'),
-    january2021: document.querySelector('.pcn-january2021')
+    january2021: document.querySelector('.pcn-january2021'),
+    pcnContent: document.createElement('div')
 };
 function ElectricalPCN(){
     this.init();
@@ -416,5 +417,10 @@ ElectricalPCN.prototype.fetchData = () => {
 ElectricalPCN.prototype.renderData = (data, wrapper, filter) => {
     if(data['file_name'].includes(filter)){
         console.log(data['file_name']);
+        ElectricalPCNWrappers.pcnContent.innerHTML = 
+        `
+            <a href="${data["file_location"]}" title="${data["file_name"]}">${data["file_name"]}</a>
+        `;
+        wrapper.appendChild(ElectricalPCNWrappers.pcnContent);
     }
 };

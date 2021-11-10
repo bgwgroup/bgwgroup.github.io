@@ -416,11 +416,13 @@ ElectricalPCN.prototype.fetchData = () => {
 };
 ElectricalPCN.prototype.renderData = (data, wrapper, filter) => {
     if(data['file_name'].includes(filter)){
-        console.log(data['file_name']);
-        ElectricalPCNWrappers.pcnContent.innerHTML = 
-        `
-            <a href="${data["file_location"]}" title="${data["file_name"]}">${data["file_name"]}</a>
-        `;
+        // console.log(data['file_name']);
+        let a = document.createElement('a');
+        a.setAttribute('href', data['file_location']);
+        a.setAttribute('title', data['file_name']);
+        a.innerHTML = data['file_name'];
+        console.log(a);
+        ElectricalPCNWrappers.pcnContent.appendChild(a);
         wrapper.appendChild(ElectricalPCNWrappers.pcnContent);
     }
 };

@@ -421,7 +421,6 @@ ElectricalPCN.prototype.renderData = (data, wrapper, filter) => {
             a.setAttribute('href', data['file_location']);
             a.setAttribute('title', data['file_name']);
             a.innerHTML = data['file_name'];
-            console.log(a);
             ElectricalPCNWrappers.pcnContent.appendChild(a);
             wrapper.appendChild(ElectricalPCNWrappers.pcnContent);
         }        

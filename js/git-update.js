@@ -319,7 +319,7 @@ function PlumbingPCN(){
 }
 PlumbingPCN.prototype.init = () => {
     PlumbingPCN.prototype.fetchData();
-    PlumbingPCN.prototype.searchFilterData();
+    setTimeout(PlumbingPCN.prototype.searchFilterData.bind(this), 1000);
 };
 PlumbingPCN.prototype.fetchData = () => {
 

@@ -18,6 +18,8 @@
         new SherriffCareers();
 
         loadExternalScripts();
+
+        plumbingPCN();
     });
 });
 
@@ -307,4 +309,35 @@ function loadExternalScripts(){
     if(widgetSection != null && widgetSectionHeader != null){
         widgetSection.insertBefore(snapWidgetJS, widgetSectionHeader);
     }
+}
+
+/**
+ * Samios PCN Data
+ */
+function plumbingPCN(){
+    let priceTableBody = document.querySelector('.price-table-body');
+
+    fetch('https://bgwgroup.com.au/samios_notifications/get-supplier-data.php')
+    .then((response) => { return response.json(); })
+    .then((pcn) => {
+
+        for(let i = 0; i < pcn.length; i++){
+
+            if(pcn[i]['archived'] == 'no'){
+                let priceTableRow = document.createElement('div');
+                priceTableRow.className = 'price-table-row';
+                priceTableRow.innerHTML = 
+                `
+                    <span>${pcn[i]['supplier']}</span>
+                    <span>${pcn[i]['month']}</span>
+                    <span>${pcn[i]['price_rise']}</span>
+                `;
+
+                if(priceTableBody != null){
+                    priceTableBody.appendChild(priceTableRow);
+                }
+            }
+        }
+    })
+    .catch((error) => {});
 }

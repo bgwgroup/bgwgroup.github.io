@@ -1048,6 +1048,19 @@ ul.pagination{ margin: 10px 0 !important; }
     }
 }
 
+// cnw homepage news promo
+#news-promotion{
+    .grid-item-link{
+        .grid-item-img{
+            margin: 0 auto;
+            width: 210px;         
+            height: 210px;
+            object-fit: contain;
+            object-position: center;
+        }
+    }
+}
+
 /*==== Sherriff Job Landing Page CSS Styles ====*/
 .job{
     padding: 20px;

@@ -409,6 +409,17 @@ ElectricalPCN.prototype.fetchData = () => {
         for(let i = 0; i < pcn.length; i++){
             if(pcn[i]['status'] == 'visible'){
                 ElectricalPCN.prototype.renderData(pcn[i],ElectricalPCNWrappers.december2021,"December-2021");
+                ElectricalPCN.prototype.renderData(pcn[i],ElectricalPCNWrappers.november2021,"November-2021");
+                ElectricalPCN.prototype.renderData(pcn[i],ElectricalPCNWrappers.october2021,"October-2021");
+                ElectricalPCN.prototype.renderData(pcn[i],ElectricalPCNWrappers.september2021,"September-2021");
+                ElectricalPCN.prototype.renderData(pcn[i],ElectricalPCNWrappers.august2021,"August-2021");
+                ElectricalPCN.prototype.renderData(pcn[i],ElectricalPCNWrappers.july2021,"July-2021");
+                ElectricalPCN.prototype.renderData(pcn[i],ElectricalPCNWrappers.june2021,"June-2021");
+                ElectricalPCN.prototype.renderData(pcn[i],ElectricalPCNWrappers.may2021,"May-2021");
+                ElectricalPCN.prototype.renderData(pcn[i],ElectricalPCNWrappers.april2021,"April-2021");
+                ElectricalPCN.prototype.renderData(pcn[i],ElectricalPCNWrappers.march2021,"March-2021");
+                ElectricalPCN.prototype.renderData(pcn[i],ElectricalPCNWrappers.february2021,"February-2021");
+                ElectricalPCN.prototype.renderData(pcn[i],ElectricalPCNWrappers.january2021,"January-2021");
             }
         }
     })

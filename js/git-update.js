@@ -380,8 +380,21 @@ PlumbingPCN.prototype.searchFilterData = () => {
 /**
  * CNW | Sherriff PCN Data
  */
+let ElectricalPCNWrappers = {
+    december2021: document.querySelector('.pcn-december2021'),
+    november2021: document.querySelector('.pcn-november2021'),
+    october2021: document.querySelector('.pcn-october2021'),
+    september2021: document.querySelector('.pcn-september2021'),
+    august2021: document.querySelector('.pcn-august2021'),
+    july2021: document.querySelector('.pcn-july2021'),
+    june2021: document.querySelector('.pcn-june2021'),
+    may2021: document.querySelector('.pcn-may2021'),
+    april2021: document.querySelector('.pcn-april2021'),
+    march2021: document.querySelector('.pcn-march2021'),
+    february2021: document.querySelector('.pcn-february2021'),
+    january2021: document.querySelector('.pcn-january2021')
+};
 function ElectricalPCN(){
-    let december2021 = document.querySelector('.pcn-december2021');
     this.init();
 }
 ElectricalPCN.prototype.init = () => {
@@ -392,9 +405,16 @@ ElectricalPCN.prototype.fetchData = () => {
     fetch('https://bgwgroup.com.au/notifications/get-file-data.php')
     .then((response) => { return response.json(); })
     .then((pcn) => {
-        console.log(pcn)
-        console.log(ElectricalPCN.december2021);
+        for(let i = 0; i < pcn.length; i++){
+            if(pcn[i]['status'] == 'visible'){
+                ElectricalPCN.prototype.renderData(pcn[i],ElectricalPCNWrappers.december2021,"December-2021");
+            }
+        }
     })
     .catch((error) => {});
 };
-ElectricalPCN.prototype.renderData = () => {};
+ElectricalPCN.prototype.renderData = (data, wrapper, filter) => {
+    if(data['month'].includes(filter)){
+        console.log(data['file_name']);
+    }
+};

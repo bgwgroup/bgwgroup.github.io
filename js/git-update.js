@@ -16,6 +16,8 @@
         sherriffHomepageNews();
 
         new SherriffCareers();
+
+        loadExternalScripts();
     });
 });
 
@@ -291,3 +293,18 @@ SherriffCareers.prototype.animateImages = () => {
         catch (err) { }       
     }
 };
+
+/**
+ * Dynamically load external JS Scripts into HTML
+ */
+function loadExternalScripts(){
+    // snapWidget
+    let snapWidgetJS = document.createElement('script');
+    snapWidgetJS.src = 'https://snapwidget.com/js/snapwidget.js';
+
+    let widgetSection = document.querySelector('.home__section.widget-section');
+    let widgetSectionHeader = document.querySelector('.home__section.widget-section h2');
+    if(widgetSection != null && widgetSectionHeader != null){
+        widgetSection.insertBefore(snapWidgetJS, widgetSectionHeader);
+    }
+}

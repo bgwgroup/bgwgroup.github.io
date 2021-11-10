@@ -391,7 +391,8 @@ ElectricalPCN.prototype.fetchData = () => {
     fetch('https://bgwgroup.com.au/notifications/get-file-data.php')
     .then((response) => { return response.json(); })
     .then((pcn) => {
-        console.log(this.december2021);
+        console.log(pcn)
+        console.log(ElectricalPCN.december2021);
     })
     .catch((error) => {});
 };

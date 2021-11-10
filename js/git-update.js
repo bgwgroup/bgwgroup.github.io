@@ -314,30 +314,64 @@ function loadExternalScripts(){
 /**
  * Samios PCN Data
  */
-function plumbingPCN(){
+function PlumbingPCN(){
+    this.init();
+}
+PlumbingPCN.prototype.init = () => {
+    PlumbingPCN.prototype.fetchData();
+    PlumbingPCN.prototype.searchFilterData();
+};
+PlumbingPCN.prototype.fetchData = () => {
+
     let priceTableBody = document.querySelector('.price-table-body');
 
-    fetch('https://bgwgroup.com.au/samios_notifications/get-supplier-data.php')
-    .then((response) => { return response.json(); })
-    .then((pcn) => {
-
-        for(let i = 0; i < pcn.length; i++){
-
-            if(pcn[i]['archived'] == 'no'){
-                let priceTableRow = document.createElement('div');
-                priceTableRow.className = 'price-table-row';
-                priceTableRow.innerHTML = 
-                `
-                    <span>${pcn[i]['supplier']}</span>
-                    <span>${pcn[i]['month']}</span>
-                    <span>${pcn[i]['price_rise']}</span>
-                `;
-
-                if(priceTableBody != null){
+    if(priceTableBody != null){
+        fetch('https://bgwgroup.com.au/samios_notifications/get-supplier-data.php')
+        .then((response) => { return response.json(); })
+        .then((pcn) => {
+    
+            for(let i = 0; i < pcn.length; i++){
+    
+                if(pcn[i]['archived'] == 'no'){
+                    let priceTableRow = document.createElement('div');
+                    priceTableRow.className = 'price-table-row';
+                    priceTableRow.innerHTML = 
+                    `
+                        <span>${pcn[i]['supplier']}</span>
+                        <span>${pcn[i]['month']}</span>
+                        <span>${pcn[i]['price_rise']}</span>
+                    `;
+    
                     priceTableBody.appendChild(priceTableRow);
                 }
             }
+        })
+        .catch((error) => {});
+    }
+
+};
+PlumbingPCN.prototype.searchFilterData = () => {
+
+    let priceSearch = document.querySelector('.price-notifications-search input');
+    let priceTableRow = document.querySelectorAll('.price-table-row');
+
+    document.addEventListener('keyup', (e) => {
+
+        if(priceSearch != null && priceTableRow != null){
+
+            let searchValue = priceSearch.value.toLowerCase();
+
+            for(let i = 0; i < priceTableRow.length; i++){
+                
+                let row = priceTableRow[i];
+                let rowData = row.innerHTML.toLowerCase();
+
+                if(rowData.indexOf(searchValue) > -1){
+                    row.style.display = "";
+                }else{
+                    row.style.display = "none";
+                }
+            }
         }
-    })
-    .catch((error) => {});
-}
+    });
+};

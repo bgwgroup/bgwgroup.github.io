@@ -355,6 +355,8 @@ PlumbingPCN.prototype.searchFilterData = () => {
     let priceSearch = document.querySelector('.price-notifications-search input');
     let priceTableRow = document.querySelectorAll('.price-table-row');
 
+    console.log(priceTableRow);
+
     document.addEventListener('keyup', (e) => {
 
         if(priceSearch != null && priceTableRow != null){

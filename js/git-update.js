@@ -414,7 +414,7 @@ ElectricalPCN.prototype.fetchData = () => {
     .catch((error) => {});
 };
 ElectricalPCN.prototype.renderData = (data, wrapper, filter) => {
-    if(data['month'].includes(filter)){
+    if(data['file_name'].includes(filter)){
         console.log(data['file_name']);
     }
 };

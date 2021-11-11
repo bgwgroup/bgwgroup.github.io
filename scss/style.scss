@@ -125,6 +125,10 @@
 .addressList{
     .addressEntry{ flex-wrap: wrap; }
 }
+.checkout-delivery-date-error{
+    display: block;
+    color: #C00;
+}
 ul.pagination{ margin: 10px 0 !important; }
 .dropdown-menuser{
     -webkit-user-select: none;

@@ -380,7 +380,7 @@ PlumbingPCN.prototype.searchFilterData = () => {
 /**
  * CNW | Sherriff PCN Data
  */
-let ElectricalPCNWrappers = {
+ let ElectricalPCNWrappers = {
     december2021: document.querySelector('.pcn-december2021'),
     november2021: document.querySelector('.pcn-november2021'),
     october2021: document.querySelector('.pcn-october2021'),
@@ -403,6 +403,7 @@ ElectricalPCN.prototype.init = () => {
     ElectricalPCN.prototype.renderData();
 };
 ElectricalPCN.prototype.fetchData = () => {
+
     fetch('https://bgwgroup.com.au/notifications/get-file-data.php')
     .then((response) => { return response.json(); })
     .then((pcn) => {
@@ -425,15 +426,18 @@ ElectricalPCN.prototype.fetchData = () => {
     })
     .catch((error) => {});
 };
-ElectricalPCN.prototype.renderData = (data, wrapper, filter) => {
+ElectricalPCN.prototype.renderData = (data, wrapper,filter) => {
     if(data != undefined || data != null){
         if(data['file_name'].includes(filter)){
+
             let a = document.createElement('a');
-            // a.setAttribute('href', data['file_location']);
-            // a.setAttribute('title', data['file_name']);
-            // a.innerHTML = data['file_name'];
-            // ElectricalPCNWrappers.pcnContent.appendChild(a);
-            // wrapper.appendChild(ElectricalPCNWrappers.pcnContent);
+            a.setAttribute('href', data['file_location']);
+            a.setAttribute('title', data['file_name']);
+            a.innerHTML = data['file_name'];
+
+			try{
+				wrapper.children[1].appendChild(a);
+			}catch(error){}
         }        
     }
 };

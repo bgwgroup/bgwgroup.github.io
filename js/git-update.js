@@ -429,11 +429,11 @@ ElectricalPCN.prototype.renderData = (data, wrapper, filter) => {
     if(data != undefined || data != null){
         if(data['file_name'].includes(filter)){
             let a = document.createElement('a');
-            a.setAttribute('href', data['file_location']);
-            a.setAttribute('title', data['file_name']);
-            a.innerHTML = data['file_name'];
-            ElectricalPCNWrappers.pcnContent.appendChild(a);
-            wrapper.appendChild(ElectricalPCNWrappers.pcnContent);
+            // a.setAttribute('href', data['file_location']);
+            // a.setAttribute('title', data['file_name']);
+            // a.innerHTML = data['file_name'];
+            // ElectricalPCNWrappers.pcnContent.appendChild(a);
+            // wrapper.appendChild(ElectricalPCNWrappers.pcnContent);
         }        
     }
 };

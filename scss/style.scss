@@ -122,6 +122,9 @@
         }
     }
 }
+.addressList{
+    .addressEntry{ flex-wrap: wrap; }
+}
 ul.pagination{ margin: 10px 0 !important; }
 .dropdown-menuser{
     -webkit-user-select: none;

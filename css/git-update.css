@@ -106,6 +106,9 @@
     text-align: center;
     background-color: #EEE; }
 
+.addressList .addressEntry {
+  flex-wrap: wrap; }
+
 ul.pagination {
   margin: 10px 0 !important; }
 
@@ -830,6 +833,13 @@ ul.pagination {
 #samBody [class*="-news-promo"] .news-card:nth-child(n+3) img {
   object-fit: cover;
   max-height: 130px; }
+
+#news-promotion .grid-item-link .grid-item-img {
+  margin: 0 auto;
+  width: 210px;
+  height: 210px;
+  object-fit: contain;
+  object-position: center; }
 
 /*==== Sherriff Job Landing Page CSS Styles ====*/
 .job {

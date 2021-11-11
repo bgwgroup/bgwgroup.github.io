@@ -113,6 +113,11 @@
   display: block;
   color: #C00; }
 
+.page-singleStepCheckoutSummaryPage button.disabled {
+  pointer-events: none;
+  background-color: #EEE !important;
+  opacity: 0.5; }
+
 ul.pagination {
   margin: 10px 0 !important; }
 

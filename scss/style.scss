@@ -129,6 +129,13 @@
     display: block;
     color: #C00;
 }
+.page-singleStepCheckoutSummaryPage{
+    button.disabled{
+        pointer-events: none;
+        background-color: #EEE !important;
+        opacity: 0.5; 
+    }
+}
 ul.pagination{ margin: 10px 0 !important; }
 .dropdown-menuser{
     -webkit-user-select: none;
@@ -365,7 +372,7 @@ ul.pagination{ margin: 10px 0 !important; }
             width: 100%;
         }
     }
-} 
+}  
 
 /*=== Colouring Competition CSS Styles ===*/
 #cnwBody{

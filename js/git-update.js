@@ -401,6 +401,7 @@ function ElectricalPCN(){
 ElectricalPCN.prototype.init = () => {
     ElectricalPCN.prototype.fetchData();
     ElectricalPCN.prototype.renderData();
+    ElectricalPCN.prototype.getCurrentYear();
 };
 ElectricalPCN.prototype.fetchData = () => {
 
@@ -439,5 +440,11 @@ ElectricalPCN.prototype.renderData = (data, wrapper,filter) => {
 				wrapper.children[1].appendChild(a);
 			}catch(error){}
         }        
+    }
+};
+ElectricalPCN.prototype.getCurrentYear = () => {
+    let pcnYear = document.querySelector('.pcn-content .pcn-year');
+    if(pcnYear != undefined){
+        pcnYear.innerHTML = new Date().getFullYear();
     }
 };

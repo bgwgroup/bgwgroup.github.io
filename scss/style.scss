@@ -1168,3 +1168,136 @@ ul.pagination{ margin: 10px 0 !important; }
         }
     }
 }
+
+/*==== CNW Ventair 2021 Promo Terms Conditions ====*/
+.page-ventairpage{
+    .terms-conditions{
+        width: 100%;
+        margin: 0 auto;
+        max-width: 1300px;
+        padding: 30px;
+        padding-bottom: 5rem;
+    }
+    .terms-conditions-header,
+    .terms-conditions-sub-header{
+        span{
+            display: inline-block;
+            margin: 2rem 0;
+            width: 100%;
+            text-align: center;
+            text-transform: uppercase;
+        }
+    }
+    .terms-conditions-header{
+        span{ font-size: 2rem; line-height: 3.5rem; }
+    }
+    .terms-conditions-sub-header{
+        span{ font-size: 1.5rem; line-height: 2.5rem; text-decoration: underline; }
+    }
+    strong{ font-weight: 500; }
+    li{
+        margin-bottom: 20px;
+        font-size: 1.25rem;
+        font-weight: 300;
+        line-height: 2rem;
+    }
+    ol{
+        > li{
+            list-style: decimal;
+            list-style-type: decimal;
+            padding-left: 10px;
+        }
+    }
+    .terms-conditions-inner-content { 
+        margin: 1.85rem 0; 
+        ul{
+            > li {
+                list-style: disc;
+                list-style-type: disc;
+                margin-left: 3rem;
+            }
+        }
+        a{
+            color: #C00;
+            word-break: break-word;
+            text-decoration: underline;
+        }
+    }
+    .terms-content-draw-table{
+        display: flex;
+        flex-wrap: wrap;
+        > div {
+            flex: 1 0 auto;
+            display: flex;
+        }
+        .terms-content-draw-table-row{
+            &:nth-of-type(1){ background-color: #EEE; }
+            span{
+                flex: 1 0 auto;
+                padding: 2px 5px;
+                border: 1px solid #EEE;
+            }
+        }
+    }
+    @media (max-width: 767px){
+        .terms-content-draw-table{ 
+            max-width: 400px;
+            > div { 
+                width: 50%;
+                flex-direction: column; 
+            } 
+        }
+    }
+    @media (min-width: 767px){
+        .terms-content-draw-table-row{
+            width: 100%;
+            span{ width: 20%; }
+        }
+    }
+    .terms-conditions-state-table{
+        .terms-conditions-state-table-row{
+            &:nth-of-type(1){ 
+                background-color: #EEE; 
+                border: 1px solid #EEE;
+            }
+            &:nth-of-type(odd){
+                background-color: rgba(#EEE, 0.35);
+            }
+            display: flex;
+            > span{
+                flex: 1 0 auto;
+                width: 33.33%;
+                padding: 2px 5px;
+            }
+        }        
+    }
+    @media (min-width: 767px){
+        .terms-conditions-state-table{ max-width: 767px; }
+    }
+    .terms-conditions-download{
+        a{
+            outline: none;
+            border: 0;
+            cursor: pointer;
+            display: inline-block;
+            padding: 15px 20px;
+            color: #FFF;
+            background-color: #C00;
+            font-size: 1.25rem;
+            line-height: 2rem;
+            text-align: center;
+            width: 100%;
+        }
+        @media (min-width: 767px){
+            a{
+                width: auto;
+                border-radius: 40px;
+            }
+        }       
+        @media (min-width: 1200px){
+            a{
+                &:hover{ background-color: #222; }
+            }
+        } 
+    }
+}

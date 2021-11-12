@@ -31,7 +31,14 @@
 
         // Sherriff News and Promotion
         new ParallaxEffect('.news-promotions .top__news__content');
-        new ParallaxEffect('.news-promotions .other__news__row .news__card');        
+        new ParallaxEffect('.news-promotions .other__news__row .news__card'); 
+        
+        // Sherruff SIP
+        new ParallaxEffect('.sip__container .vertical-line');
+        new ParallaxEffect('.sip__container .horizontal-line');
+
+        // Sherriff iQ Lighting
+        new ParallaxEffect('.iq__lighting .horizontal-line');
     });
 });
 

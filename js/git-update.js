@@ -460,7 +460,15 @@ ElectricalPCN.prototype.collapsePCNContent = () => {
     if(pcnTitle != null){
         for(let i = 0; i < pcnTitle.length; i++){
             pcnTitle[i].addEventListener('click', () => {
+
                 pcnTitle[i].classList.toggle('pcn-collapsed');
+                let pcnContent = pcnTitle[i].nextElementSibling;
+                
+                if(pcnContent.style.maxHeight){
+                    pcnContent.style.maxHeight = null;
+                }else{
+                    pcnContent.style.maxHeight = panel.scrollHeight + "px";
+                }
             });
         }
     }

@@ -1179,6 +1179,7 @@ ul.pagination{ margin: 10px 0 !important; }
             > div {
                 margin: 10px 0;
                 > span {
+                    user-select: none;
                     display: inline-block;
                     width: 100%;
                     padding: 10px 30px;

@@ -939,6 +939,7 @@ ul.pagination {
     .pcn .pcn-content-wrapper .pcn-data > div {
       margin: 10px 0; }
       .pcn .pcn-content-wrapper .pcn-data > div > span {
+        user-select: none;
         display: inline-block;
         width: 100%;
         padding: 10px 30px;

@@ -1168,6 +1168,9 @@ ul.pagination{ margin: 10px 0 !important; }
         padding: 20px;
         max-width: 1300px;
         > div { 
+            -webkit-column-break-inside: avoid;
+            break-inside: avoid;
+            page-break-inside: avoid;
             padding: 30px; 
             margin-bottom: 25px;
             border-radius: 10px;
@@ -1254,6 +1257,8 @@ ul.pagination{ margin: 10px 0 !important; }
     }
     @media (min-width: 767px){
         .pcn-content-wrapper{
+            -webkit-columns: 2;
+            -moz-columns: 2;
             columns: 2;
             column-gap: 20px;
         }

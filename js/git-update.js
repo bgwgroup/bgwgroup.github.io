@@ -441,6 +441,7 @@ ElectricalPCN.prototype.renderData = (data, wrapper,filter) => {
             let a = document.createElement('a');
             a.setAttribute('href', data['file_location']);
             a.setAttribute('title', data['file_name']);
+            a.setAttribute('target', '_blank');
             a.innerHTML = data['file_name'];
 
 			try{
@@ -463,7 +464,7 @@ ElectricalPCN.prototype.collapsePCNContent = () => {
 
                 pcnTitle[i].classList.toggle('pcn-collapsed');
                 let pcnContent = pcnTitle[i].nextElementSibling;
-                
+
                 if(pcnContent.style.maxHeight){
                     pcnContent.style.maxHeight = null;
                 }else{

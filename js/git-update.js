@@ -457,7 +457,7 @@ ElectricalPCN.prototype.getCurrentYear = () => {
 };
 ElectricalPCN.prototype.collapsePCNContent = () => {
     let pcnTitle = document.querySelectorAll('.pcn .pcn-content-wrapper .pcn-data > div > span');
-    if(pcnTitle != null && pcnContent != null){
+    if(pcnTitle != null){
         for(let i = 0; i < pcnTitle.length; i++){
             pcnTitle[i].addEventListener('click', () => {
                 pcnTitle[i].classList.toggle('pcn-collapsed');

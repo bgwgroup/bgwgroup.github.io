@@ -408,6 +408,7 @@ ElectricalPCN.prototype.init = () => {
     ElectricalPCN.prototype.fetchData();
     ElectricalPCN.prototype.renderData();
     ElectricalPCN.prototype.getCurrentYear();
+    ElectricalPCN.prototype.collapsePCNContent();
 };
 ElectricalPCN.prototype.fetchData = () => {
 
@@ -452,5 +453,15 @@ ElectricalPCN.prototype.getCurrentYear = () => {
     let pcnYear = document.querySelector('.pcn-content .pcn-year');
     if(pcnYear != undefined){
         pcnYear.innerHTML = new Date().getFullYear();
+    }
+};
+ElectricalPCN.prototype.collapsePCNContent = () => {
+    let pcnTitle = document.querySelectorAll('.pcn .pcn-content-wrapper .pcn-data > div > span');
+    if(pcnTitle != null && pcnContent != null){
+        for(let i = 0; i < pcnTitle.length; i++){
+            pcnTitle[i].addEventListener('click', () => {
+                pcnTitle[i].classList.toggle('pcn-collapsed');
+            });
+        }
     }
 };

@@ -570,15 +570,22 @@ ul.pagination {
       -webkit-transform: translateY(-50%);
       transform: translateY(-50%); } }
 
-.news__cards-wrapper {
-  position: unset !important;
-  float: none !important;
-  max-width: 100% !important;
-  overflow-x: auto !important;
-  z-index: unset !important; }
-  .news__cards-wrapper::-webkit-scrollbar {
+.she__home-container .news-section {
+  display: table;
+  height: 40vh;
+  background-color: #EEEEEE; }
+  .she__home-container .news-section::before, .she__home-container .news-section::after {
+    content: unset !important; }
+
+.she__home-container .news__cards-wrapper {
+  position: relative;
+  overflow-x: auto;
+  display: table-cell;
+  vertical-align: middle;
+  z-index: 1; }
+  .she__home-container .news__cards-wrapper::-webkit-scrollbar {
     width: 2px; }
-  .news__cards-wrapper::-webkit-scrollbar-thumb {
+  .she__home-container .news__cards-wrapper::-webkit-scrollbar-thumb {
     background-color: #FED105; }
 
 /*=== Product Grid | Search Page ===*/

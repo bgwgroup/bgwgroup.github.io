@@ -719,13 +719,15 @@ ul.pagination{ margin: 10px 0 !important; }
     }
 }
 .news__cards-wrapper{
+    position: unset !important;
     float: none !important;
     max-width: 100% !important;
     overflow-x: auto !important;
+    z-index: unset !important;
     &::-webkit-scrollbar{ width: 2px; }
     &::-webkit-scrollbar-thumb{ background-color: #FED105; }
 }
-
+ 
 /*=== Product Grid | Search Page ===*/
 .cust-plp-grid{
     flex-direction: unset !important;

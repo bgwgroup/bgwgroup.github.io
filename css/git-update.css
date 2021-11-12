@@ -571,9 +571,11 @@ ul.pagination {
       transform: translateY(-50%); } }
 
 .news__cards-wrapper {
+  position: unset !important;
   float: none !important;
   max-width: 100% !important;
-  overflow-x: auto !important; }
+  overflow-x: auto !important;
+  z-index: unset !important; }
   .news__cards-wrapper::-webkit-scrollbar {
     width: 2px; }
   .news__cards-wrapper::-webkit-scrollbar-thumb {

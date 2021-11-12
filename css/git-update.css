@@ -920,6 +920,7 @@ ul.pagination {
       width: 100%;
       height: 100%;
       background-color: red;
+      background-image: linear-gradient(rgba(255, 195, 113, 0.5), rgba(0, 0, 0, 0.2)), url("../img/price-increase.jpg");
       transform: skewY(5deg) scale(1.25) scale(2);
       z-index: -1; }
   .pcn .pcn-content-wrapper {
@@ -939,6 +940,7 @@ ul.pagination {
     .pcn .pcn-content-wrapper .pcn-data > div {
       margin: 10px 0; }
       .pcn .pcn-content-wrapper .pcn-data > div > span {
+        cursor: pointer;
         user-select: none;
         display: inline-block;
         width: 100%;
@@ -952,14 +954,22 @@ ul.pagination {
           content: "\02014";
           position: absolute;
           right: calc(2rem - 10px); }
+        .pcn .pcn-content-wrapper .pcn-data > div > span:hover {
+          background-image: linear-gradient(45deg, #C00, #222); }
       .pcn .pcn-content-wrapper .pcn-data > div > span.pcn-collapsed::after {
         content: "\002B"; }
+      .pcn .pcn-content-wrapper .pcn-data > div > span.pcn-collapsed + .pcn-content {
+        max-height: 0;
+        transition: max-height 0.8s ease-in-out; }
     .pcn .pcn-content-wrapper .pcn-graph img {
       display: block;
       margin: 0 auto;
       width: 100%; }
     .pcn .pcn-content-wrapper .pcn-content {
-      counter-reset: pcn-list; }
+      counter-reset: pcn-list;
+      max-height: initial;
+      overflow: hidden;
+      transition: max-height 0.2s ease-in-out; }
       .pcn .pcn-content-wrapper .pcn-content a {
         display: inline-block;
         color: #C00;

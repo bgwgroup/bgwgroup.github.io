@@ -451,7 +451,7 @@ ElectricalPCN.prototype.renderData = (data, wrapper,filter) => {
     }
 };
 ElectricalPCN.prototype.getCurrentYear = () => {
-    let pcnYear = document.querySelector('.pcn-content .pcn-year');
+    let pcnYear = document.querySelector('.pcn .pcn-year');
     if(pcnYear != undefined){
         pcnYear.innerHTML = new Date().getFullYear();
     }

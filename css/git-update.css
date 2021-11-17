@@ -170,6 +170,11 @@ ul.pagination {
     .dropdown-menuser .dropdown-number a.open {
       display: inline-block; }
 
+.branding-mobile,
+.skiptocontent,
+.skiptonavigation {
+  display: none; }
+
 /*=== My Account | Samios Favourites Patch CSS ===*/
 #samBody .my-favourites-container .cust-wishlist {
   align-items: unset !important; }

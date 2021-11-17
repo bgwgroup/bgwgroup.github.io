@@ -189,6 +189,9 @@ ul.pagination{ margin: 10px 0 !important; }
         a.open{ display: inline-block; }
     }
 }
+.branding-mobile,
+.skiptocontent, 
+.skiptonavigation{ display: none; }
 /*=== My Account | Samios Favourites Patch CSS ===*/
 #samBody{
     .my-favourites-container{

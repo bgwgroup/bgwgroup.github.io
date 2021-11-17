@@ -356,6 +356,9 @@ ul.pagination{ margin: 10px 0 !important; }
         }
     }
 }
+.page-myInvoices{
+    .module-search{ max-width: 800px; } 
+}
 /*=== My Account | Historical Invoice Patch CSS ===*/
 .historical-invoices-container{
     .module-half{

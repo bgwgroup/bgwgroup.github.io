@@ -295,6 +295,9 @@ ul.pagination {
   min-width: max-content;
   max-width: max-content; }
 
+.page-myInvoices .module-search {
+  max-width: 800px; }
+
 /*=== My Account | Historical Invoice Patch CSS ===*/
 .historical-invoices-container .module-half {
   max-width: 100% !important; }

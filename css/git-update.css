@@ -295,9 +295,6 @@ ul.pagination {
   min-width: max-content;
   max-width: max-content; }
 
-.viewpay-invoices-container .module-search #searchInvoices {
-  display: none; }
-
 /*=== My Account | Historical Invoice Patch CSS ===*/
 .historical-invoices-container .module-half {
   max-width: 100% !important; }

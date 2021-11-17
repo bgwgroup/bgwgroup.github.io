@@ -192,6 +192,13 @@ ul.pagination{ margin: 10px 0 !important; }
 .branding-mobile,
 .skiptocontent, 
 .skiptonavigation{ display: none; }
+.page-storefinderPage{
+    .store__finder--navigation{
+        input:checked + .js-select-store-label{
+            span{ color: #FFF; }
+        }
+    }
+}
 /*=== My Account | Samios Favourites Patch CSS ===*/
 #samBody{
     .my-favourites-container{

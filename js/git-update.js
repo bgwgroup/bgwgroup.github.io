@@ -430,7 +430,6 @@ ElectricalPCN.prototype.fetchData = () => {
         for(let i = 0; i < pcn.length; i++){
             if(pcn[i]['status'] == 'visible'){
                 ElectricalPCN.prototype.renderData(pcn[i],ElectricalPCNWrappers.december2022,"December-2022");
-                ElectricalPCN.prototype.renderData(pcn[i],ElectricalPCNWrappers.december2022,"December-2022");
                 ElectricalPCN.prototype.renderData(pcn[i],ElectricalPCNWrappers.november2022,"November-2022");
                 ElectricalPCN.prototype.renderData(pcn[i],ElectricalPCNWrappers.october2022,"October-2022");
                 ElectricalPCN.prototype.renderData(pcn[i],ElectricalPCNWrappers.september2022,"September-2022");
@@ -443,7 +442,6 @@ ElectricalPCN.prototype.fetchData = () => {
                 ElectricalPCN.prototype.renderData(pcn[i],ElectricalPCNWrappers.february2022,"February-2022");
                 ElectricalPCN.prototype.renderData(pcn[i],ElectricalPCNWrappers.january2022,"January-2022");
 
-                ElectricalPCN.prototype.renderData(pcn[i],ElectricalPCNWrappers.december2021,"December-2021");
                 ElectricalPCN.prototype.renderData(pcn[i],ElectricalPCNWrappers.december2021,"December-2021");
                 ElectricalPCN.prototype.renderData(pcn[i],ElectricalPCNWrappers.november2021,"November-2021");
                 ElectricalPCN.prototype.renderData(pcn[i],ElectricalPCNWrappers.october2021,"October-2021");

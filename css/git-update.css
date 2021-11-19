@@ -183,8 +183,8 @@ ul.pagination {
   top: 0.25rem;
   display: inline-block;
   width: 100%;
-  padding: 0  2.85rem;
-  font-size: 0.7rem;
+  padding: 0  2.75rem;
+  font-size: 0.8rem !important;
   color: rgba(204, 0, 0, 0.5); }
 
 /*=== My Account | Samios Favourites Patch CSS ===*/

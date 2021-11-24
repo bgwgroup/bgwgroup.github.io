@@ -1167,3 +1167,159 @@ ul.pagination {
 @media (min-width: 1200px) {
   .page-ventairpage .terms-conditions-download a:hover {
     background-color: #222; } }
+
+/*=== Product Description Page ===*/
+/*=== Samios Autocomplete Styles ===*/
+#samBody .ui-autocomplete {
+  border: unset !important;
+  position: fixed;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100vh;
+  padding-top: 200px;
+  padding-left: 4rem;
+  background: rgba(0, 0, 0, 0.9);
+  overflow: auto;
+  z-index: 11000; }
+
+@media (max-width: 767px) {
+  #samBody .ui-autocomplete {
+    padding-left: 2rem; } }
+
+#samBody .ui-autocomplete * {
+  border: unset !important; }
+
+#samBody .ui-autocomplete a {
+  font-weight: 500;
+  background: unset !important;
+  background-color: unset !important;
+  border: unset; }
+
+#samBody .ui-autocomplete .ui-menu span {
+  font-weight: 700;
+  color: #EE3224; }
+
+#samBody .ui-autocomplete a::before,
+#samBody .ui-autocomplete a::after {
+  content: unset; }
+
+#samBody .ui-autocomplete span.sugg.ui-menu-item {
+  display: block;
+  color: #EE2E34;
+  font-weight: bold; }
+
+#samBody .ui-autocomplete span.categories.ui-menu-item {
+  display: block;
+  margin-top: 3rem; }
+
+#samBody .ui-autocomplete span.relatedProds.ui-menu-item {
+  display: block;
+  margin: 3rem 0;
+  color: #EE2E34;
+  font-weight: bold; }
+
+#samBody .ui-autocomplete li.ui-menu-item {
+  display: inline-block;
+  padding: 0;
+  position: relative; }
+
+#samBody .ui-autocomplete li.ui-menu-item a {
+  padding-left: unset; }
+
+#samBody .ui-autocomplete li.ui-menu-item:hover a.ui-state-active {
+  border: unset !important; }
+
+#samBody .ui-autocomplete li.ui-menu-item:hover a .name {
+  color: #ccc; }
+
+#samBody .ui-autocomplete li.ui-menu-item::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  border-bottom: 2px solid #EE3224;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease; }
+
+#samBody .ui-autocomplete li.ui-menu-item:hover:after {
+  width: 100%; }
+
+#samBody .ui-autocomplete li a .name {
+  font-size: 0.9rem; }
+
+#samBody .ui-autocomplete .relProds.ui-menu-item {
+  display: -ms-flex;
+  display: flex;
+  overflow: hidden;
+  overflow-x: auto;
+  padding-bottom: 2rem; }
+
+#samBody .ui-autocomplete .relProds.ui-menu-item li {
+  margin-right: 1.2rem;
+  min-height: 80px;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  background: #211e1e !important;
+  background-color: #211e1e !important;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+  position: relative; }
+
+#samBody .ui-autocomplete .relProds.ui-menu-item li::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  border-bottom: 3px solid #EE3224;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease; }
+
+#samBody .ui-autocomplete .relProds.ui-menu-item li:hover:after {
+  width: 100%; }
+
+#samBody .ui-autocomplete .relProds.ui-menu-item li:hover {
+  background: #3e3838 !important;
+  background-color: #3e3838 !important; }
+
+#samBody .ui-autocomplete .relProds.ui-menu-item li.ui-state-active {
+  border: unset; }
+
+#samBody .ui-autocomplete .relProds.ui-menu-item .ui-menu-item-wrapper a::before, #samBody .relProds.ui-menu-item .ui-menu-item-wrapper a::after {
+  content: '';
+  display: table;
+  clear: both; }
+
+#samBody .ui-autocomplete .relProds.ui-menu-item a::before,
+#samBody .ui-autocomplete .relProds.ui-menu-item a::after {
+  content: unset !important; }
+
+#samBody .ui-autocomplete .relProds.ui-menu-item .ui-menu-item-wrapper a {
+  display: flex;
+  flex-direction: row; }
+
+#samBody .ui-autocomplete .relProds.ui-menu-item .ui-menu-item-wrapper a > div {
+  width: 100%;
+  flex: 1; }
+
+#samBody .ui-autocomplete .relProds.ui-menu-item .ui-menu-item-wrapper a .thumb {
+  max-width: 25%;
+  margin-right: 2%;
+  overflow: hidden; }
+
+#samBody .ui-autocomplete .relProds.ui-menu-item .ui-menu-item-wrapper a .thumb img {
+  width: 100%;
+  height: 100%;
+  max-width: 75px;
+  max-height: 75px;
+  object-fit: contain;
+  object-position: center; }
+
+#samBody .ui-autocomplete .relProds.ui-menu-item .ui-menu-item-wrapper a .name {
+  max-width: 73%; }
+
+@media (max-width: 767px) {
+  #samBody .ui-autocomplete li.ui-menu-item {
+    width: 100%; } }

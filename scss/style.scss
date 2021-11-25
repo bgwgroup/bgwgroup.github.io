@@ -1466,6 +1466,7 @@ ul.pagination{ margin: 10px 0 !important; }
         -ms-flex: 1 0 auto;
         flex: 1 0 auto;
         width: 100%;
+        position: relative;
     }
     @media (min-width: $width-800){
         > div {
@@ -1757,7 +1758,6 @@ ul.pagination{ margin: 10px 0 !important; }
     }
     @media (min-width: $width-800){
         .pdp-proddetails-reviews{
-            position: relative;
             top: -30vh; 
         }  
     }

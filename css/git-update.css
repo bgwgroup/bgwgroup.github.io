@@ -1179,7 +1179,8 @@ ul.pagination {
   .pdp-wrapper > div {
     -ms-flex: 1 0 auto;
     flex: 1 0 auto;
-    width: 100%; }
+    width: 100%;
+    position: relative; }
   @media (min-width: 800px) {
     .pdp-wrapper > div {
       width: 100%;
@@ -1433,7 +1434,6 @@ ul.pagination {
         width: 50%; } }
   @media (min-width: 800px) {
     .pdp-wrapper .pdp-proddetails-reviews {
-      position: relative;
       top: -30vh; } }
 
 /*=== Samios Autocomplete Styles ===*/

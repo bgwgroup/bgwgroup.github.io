@@ -1444,6 +1444,14 @@ ul.pagination{ margin: 10px 0 !important; }
 
 /*=== Product Description Page ===*/
 .pdp-wrapper{
+    $pdpWhite: #FFF;
+    $pdpLightGrey: #EEE;
+    $pdpMediumGrey: #CCC;
+    $pdpRed: #C00;
+    $pdpPoaRed: #DF2719;
+    $pdpMediumBlack: #222;
+    $pdpBlue: #0F52BA;
+
     $width-600: 600px;
     $width-767: 767px;
     $width-800: 800px;
@@ -1467,7 +1475,7 @@ ul.pagination{ margin: 10px 0 !important; }
         }
         .pdp-product-info {
             padding: 20px;
-            border-left: 1px solid #EEE;
+            border-left: 1px solid $pdpLightGrey;
         }
     }
     .pdp-gallery{
@@ -1484,9 +1492,9 @@ ul.pagination{ margin: 10px 0 !important; }
                 line-height: 50px;
                 text-align: center;
                 font-size: 1.5rem;
-                color: #C00;
-                background-color: #FFF;
-                border: 1px solid #CCC;
+                color: $pdpRed;
+                background-color: $pdpWhite;
+                border: 1px solid $pdpMediumGrey;
                 z-index: 10;
             }
         }
@@ -1504,7 +1512,7 @@ ul.pagination{ margin: 10px 0 !important; }
             }
         }
         .productImagePrimaryLink{
-            .lazyOwl { display: none; }
+            .lazyOwl { display: none !important; }
         }
         .cust-verticalAlign{ margin: 0.5rem 0; }
         .zoomImg{
@@ -1530,7 +1538,7 @@ ul.pagination{ margin: 10px 0 !important; }
     }
     .pdp-product-info{
         .pdp-titledescription{
-            border-bottom: 1px solid #EEE;
+            border-bottom: 1px solid $pdpLightGrey;
             span{
                 display: inline-block;
                 font-size: 1.5rem;
@@ -1550,19 +1558,23 @@ ul.pagination{ margin: 10px 0 !important; }
                 -ms-flex: 1 0 auto;
                 flex: 1 0 auto;
                 width: 100%;
-                max-width: 50%;
                 padding: 20px 0;
                 font-weight: 400;
                 font-size: 1.25rem;
                 display: -ms-flex;
                 display: flex;
-                justify-content: center;
                 a{ 
-                    color: #222;
+                    color: $pdpMediumBlack;
                     text-decoration: none;
                     &:hover{
                         text-decoration: inherit;
                     }
+                }
+            }
+            @media (min-width: $width-600){
+                > div { 
+                    max-width: 50%; 
+                    justify-content: center;
                 }
             }
             svg{
@@ -1573,7 +1585,7 @@ ul.pagination{ margin: 10px 0 !important; }
                 margin-right: 0.5rem;
                 object-fit: contain;
             }
-            .pdp-code{ color: #C00; }
+            .pdp-code{ color: $pdpRed; }
             .add-to-wishlist-icon{
                 display: -ms-flex;
                 display: flex;
@@ -1581,10 +1593,12 @@ ul.pagination{ margin: 10px 0 !important; }
             }
             .a2a_kit{ 
                 .a2a_dd{
+                    color: $pdpBlue;
                     float: none;
                     display: -ms-flex;
                     display: flex;
                     align-items: center;
+                    svg { fill: $pdpBlue; }
                 }
             }
         }
@@ -1596,16 +1610,16 @@ ul.pagination{ margin: 10px 0 !important; }
                 display: -ms-flex !important;
                 display: flex !important;
                 flex-wrap: wrap;
-                border-bottom: 1px solid #EEE;
+                border-bottom: 1px solid $pdpLightGrey;
                 > span {
                     -ms-flex: 1 0 auto;
                     flex: 1 0 auto;
                     padding: 0.5rem;
                     width: 50%;
-                    &:nth-child(1){ background-color: #FFF; }
+                    &:nth-child(1){ background-color: $pdpWhite; }
                 }
             }
-            .productDet-price{ color: #DF2719; }
+            .productDet-price{ color: $pdpPoaRed; }
             .store-label-select{
                 margin: 1.5rem 0;
                 display: -ms-flex;
@@ -1616,12 +1630,17 @@ ul.pagination{ margin: 10px 0 !important; }
                 select{
                     -ms-flex: 1 0 auto;
                     flex: 1 0 auto;
-                    width: 50%;
+                    width: 100%;
+                    margin: 0.9rem 0;
                 }
                 select{
                     padding: 0.25rem;
-                    border: 1px solid #EEE;
+                    border: 1px solid $pdpLightGrey;
                     border-radius: 5px;
+                }
+                @media (min-width: $width-600){
+                    label,
+                    select{ width: 50%; }
                 }
             }
             form[method="GET"],
@@ -1636,11 +1655,19 @@ ul.pagination{ margin: 10px 0 !important; }
                     border: 0;
                     padding: 10px 20px;
                     border-radius: 5px;
-                    color: #FFF;
-                    background-color: #0F52BA;
+                    color: $pdpWhite;
+                    background-color: $pdpBlue;
                     &:hover{
-                        background-color: #222;
+                        background-color: $pdpMediumBlack;
                     }
+                }
+                button[disabled="disabled"],
+                button:disabled{
+                    cursor: not-allowed;
+                    color: #222;
+                    background-color: $pdpLightGrey;
+                    opacity: 0.5;
+                    &:hover{ background-color: $pdpLightGrey; }
                 }
                 @media (max-width: $width-767){
                     button{ width: 100%; }
@@ -1656,6 +1683,7 @@ ul.pagination{ margin: 10px 0 !important; }
                     -ms-flex: 1 0 auto;
                     flex: 1 0 auto;
                     width: 100%;
+                    margin: 0.9rem 0;
                 }
                 .pdp-product-quantity{
                     display: -ms-flex;
@@ -1670,7 +1698,7 @@ ul.pagination{ margin: 10px 0 !important; }
                     a{
                         width: 20%;
                         cursor: pointer;
-                        color: #222;
+                        color: $pdpMediumBlack;
                         text-decoration: none;
                         font-size: 1.75rem;
                         -webkit-user-select: none;
@@ -1680,11 +1708,19 @@ ul.pagination{ margin: 10px 0 !important; }
                             text-decoration: inherit;
                         }
                     }
-                    a.dec{ background-color: #EEE; }
-                    a.inc{ background-color: #CCC; }
+                    a.dec{ 
+                        background-color: $pdpLightGrey;
+                        border-top-left-radius: 20px;
+                        border-bottom-left-radius: 20px; 
+                    }
+                    a.inc{ 
+                        background-color: $pdpMediumGrey; 
+                        border-top-right-radius: 20px;
+                        border-bottom-right-radius: 20px;
+                    }
                     input{
                         width: 60%;
-                        border: 1px solid #EEE;
+                        border: 1px solid $pdpLightGrey;
                         border-radius: 3px;
                     }
                 }
@@ -1695,9 +1731,29 @@ ul.pagination{ margin: 10px 0 !important; }
                     }
                 }
             }
+            .last { text-align: right; }
         }
     }
     .pdp-proddetails-reviews{
+        table{
+            tbody{
+                tr{
+                    display: -ms-flex;
+                    display: flex;
+                    flex-wrap: wrap;
+                    td{
+                        -ms-flex: 1 0 auto;
+                        flex: 1 0 auto;
+                        width: 100%;
+                        padding: 0.85rem;
+                        &:nth-child(1){ background-color: $pdpLightGrey; }
+                    }
+                    @media (min-width: $width-600){
+                        td{ width: 50%; }
+                    }
+                }
+            }
+        }
     }
     @media (min-width: $width-800){
         .pdp-proddetails-reviews{

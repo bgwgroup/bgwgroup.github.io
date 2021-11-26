@@ -1432,9 +1432,6 @@ ul.pagination {
     @media (min-width: 600px) {
       .pdp-wrapper .pdp-proddetails-reviews table tbody tr td {
         width: 50%; } }
-  @media (min-width: 800px) {
-    .pdp-wrapper .pdp-proddetails-reviews {
-      top: -30vh; } }
 
 /*=== Samios Autocomplete Styles ===*/
 #samBody .ui-autocomplete {

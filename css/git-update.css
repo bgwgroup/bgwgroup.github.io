@@ -213,7 +213,9 @@ ul.pagination {
   width: 100%;
   padding: 0  2.75rem;
   font-size: 0.8rem !important;
-  color: rgba(204, 0, 0, 0.5); }
+  color: rgba(204, 0, 0, 0.5);
+  background: orange;
+}
 
 /*=== My Account | Samios Favourites Patch CSS ===*/
 #samBody .my-favourites-container .cust-wishlist {

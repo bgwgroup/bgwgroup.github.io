@@ -516,10 +516,11 @@ if ($(".page-search")[0]){
 	console.log('loaded .page-search - git hack js');
 	if ($(".product__grid")[0]){
 		console.log('no .product__grid - git hack js');
-		$(".pagination-wrap").clone().insertAfter("#resultsList");
+		
+		$(".pagination-wrap").clone().insertAfter(".product__grid");
 	} else {
 		console.log('yes .product__grid - git hack js');
-		$(".pagination-wrap").clone().insertAfter(".product__grid");
+		$(".pagination-wrap").clone().insertAfter("#resultsList");
 	}
 } else {
     console.log('failed.. git js hack');

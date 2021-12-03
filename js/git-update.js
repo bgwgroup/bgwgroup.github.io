@@ -508,20 +508,12 @@ ElectricalPCN.prototype.collapsePCNContent = () => {
 if ($(".page-productGrid")[0]){
 	console.log('loaded .page-productGrid - git hack js');
 	$(".pagination-wrap").clone().insertAfter("#resultsList");
-} else {
-    console.log('failed.. git js hack');
 }
 
 if ($(".page-search")[0]){
-	console.log('loaded .page-search - git hack js');
 	if ($(".product__grid")[0]){
-		console.log('no .product__grid - git hack js');
-		
-		$(".pagination-wrap").clone().insertAfter(".product__grid");
-	} else {
-		console.log('yes .product__grid - git hack js');
 		$(".pagination-wrap").clone().insertAfter("#resultsList");
+	} else {
+		$(".pagination-wrap").clone().insertAfter(".product__grid");
 	}
-} else {
-    console.log('failed.. git js hack');
 }

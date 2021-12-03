@@ -499,3 +499,16 @@ ElectricalPCN.prototype.collapsePCNContent = () => {
         }
     }
 };
+
+
+/**
+ * Pagination clone - temp hack
+ */
+
+if ($(".page-productGrid")[0]){
+    // Do something if class exists
+	console.log('success.. git js hack');
+	$(".pagination-wrap").clone().insertAfter("#resultsList");
+} else {
+    console.log('failed.. git js hack');
+}

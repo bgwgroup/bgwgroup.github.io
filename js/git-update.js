@@ -506,7 +506,13 @@ ElectricalPCN.prototype.collapsePCNContent = () => {
  */
 
 if ($(".page-productGrid")[0]){
-    // Do something if class exists
+	console.log('success.. git js hack');
+	$(".pagination-wrap").clone().insertAfter("#resultsList");
+} else {
+    console.log('failed.. git js hack');
+}
+
+if ($(".page-search")[0]){
 	console.log('success.. git js hack');
 	$(".pagination-wrap").clone().insertAfter("#resultsList");
 } else {

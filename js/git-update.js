@@ -1,5 +1,7 @@
-['DOMContentLoaded',].forEach((event) => {
+['DOMContentLoaded'].forEach((event) => {
     window.addEventListener(event, () => {
+        addToFavouritesSelector();
+
         try{
             colouringCompetitionYear();
             favouriteSearchFilter();
@@ -41,6 +43,16 @@
         new ParallaxEffect('.iq__lighting .horizontal-line');
     });
 });
+
+/**
+ * add favorites selector to add to favourites button before page load
+ */
+function addToFavouritesSelector(){
+    let addToWishlistIcon = document.querySelector('.add-to-wishlist-icon');
+    if(addToWishlistIcon != undefined){
+        addToWishlistIcon.classList.add('favorites');
+    }
+}
 
 /**
  * Add year object dynamically to CC

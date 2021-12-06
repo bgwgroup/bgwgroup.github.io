@@ -1905,3 +1905,10 @@ ul.pagination{ margin: 10px 0 !important; }
         .ui-autocomplete li.ui-menu-item{ width: 100%; }
     }
 }
+
+/*=== Sherriff PDP add to favourites notification message ===*/
+#sheBody{
+    #globalMessages{
+        z-index: 999999;
+    }
+}

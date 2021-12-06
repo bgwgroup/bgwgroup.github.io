@@ -206,6 +206,15 @@ ul.pagination {
 .page-storefinderPage .store__finder--navigation input:checked + .js-select-store-label span {
   color: #FFF; }
 
+.user-account-number span {
+  position: relative;
+  top: 0.25rem;
+  display: inline-block;
+  width: 100%;
+  padding: 0  2.75rem;
+  font-size: 0.8rem !important;
+  color: rgba(204, 0, 0, 0.5); }
+
 /*=== My Account | Samios Favourites Patch CSS ===*/
 #samBody .my-favourites-container .cust-wishlist {
   align-items: unset !important; }
@@ -1578,3 +1587,7 @@ ul.pagination {
 @media (max-width: 767px) {
   #samBody .ui-autocomplete li.ui-menu-item {
     width: 100%; } }
+
+/*=== Sherriff PDP add to favourites notification message ===*/
+#sheBody #globalMessages {
+  z-index: 999999; }

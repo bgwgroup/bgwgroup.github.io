@@ -511,3 +511,23 @@ ElectricalPCN.prototype.collapsePCNContent = () => {
         }
     }
 };
+
+
+/**
+ * Pagination clone - temp hack
+ */
+
+if ($(".page-productGrid")[0]){
+	console.log('pagination hack bottom - git hack js');
+	$(".pagination-wrap").clone().insertAfter("#resultsList");
+}
+
+if ($(".page-search")[0]){
+	if ($(".product__grid")[0]){
+		console.log('pagination hack bottom - git hack js');
+		$(".pagination-wrap").clone().insertAfter(".product__grid");
+	} else {
+		console.log('pagination hack bottom - git hack js');
+		$(".pagination-wrap").clone().insertAfter("#resultsList");
+	}
+}

@@ -1,4 +1,16 @@
-if(document.readyState === "complete") {
+while (selectDeliveryStandard.checked == null) {
+  if ($("body").hasClass("page-singleStepCheckoutSummaryPage")) {
+    console.log("test");
+    with (ACC.checkoutB2B) {
+      defaultDeliveryMode();
+      deliveryMode();
+      deliveryAddress();
+    }
+  }
+}
+
+
+/*if(document.readyState === "complete") {
     console.log("1");
 }
 else if(document.readyState === "interactive") {
@@ -37,7 +49,7 @@ else {
 	    
 	    
     });
-}
+}*/
 
 
 ['DOMContentLoaded'].forEach((event) => {

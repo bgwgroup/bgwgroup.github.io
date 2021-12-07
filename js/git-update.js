@@ -1,6 +1,6 @@
 const selectDeliveryStandard = document.getElementById("free-standard-shipping");
 
-while (selectDeliveryStandard.checked == null) {
+while (selectDeliveryStandard) {
 //   if ($("body").hasClass("page-singleStepCheckoutSummaryPage")) {
 //     console.log("test");
 //     with (ACC.checkoutB2B) {

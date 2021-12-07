@@ -4,6 +4,10 @@
     width: 100%;
 }
 
+table.tableCheckoutCart tbody td.table-productUpdate form .update_section a svg{
+ fill: #555 !important;   
+}
+
 .cust-inner-wrapper .container .row > div {
   width: 100%; }
 

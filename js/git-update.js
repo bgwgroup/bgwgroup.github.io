@@ -16,21 +16,27 @@ else {
 	    if (document.getElementById("sheBody")) {
 		  if ($("body").hasClass("page-singleStepCheckoutSummaryPage")) {
 		    console.log("6");
-		    with (ACC.checkoutB2B) {
+			  setTimeout(function(){
+			  with (ACC.checkoutB2B) {
 		      defaultDeliveryMode();
 		      deliveryMode();
 		      deliveryAddress();
 		    }
+			  }, 2000);
+		    
 		  }
 		}
 	    if (document.getElementById("samBody")) {
 		  if ($("body").hasClass("page-singleStepCheckoutSummaryPage")) {
 		    console.log("7");
-		    with (ACC.checkoutB2B) {
+			  setTimeout(function(){
+			  with (ACC.checkoutB2B) {
 		      defaultDeliveryMode();
 		      deliveryMode();
 		      deliveryAddress();
 		    }
+			  }, 2000);
+		
 		  }
 		}
 	    

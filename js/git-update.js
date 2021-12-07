@@ -1,3 +1,4 @@
+const selectDeliveryStandard = document.getElementById("free-standard-shipping");
 while (selectDeliveryStandard.checked == null) {
 //   if ($("body").hasClass("page-singleStepCheckoutSummaryPage")) {
 //     console.log("test");

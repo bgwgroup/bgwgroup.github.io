@@ -1,12 +1,13 @@
 while (selectDeliveryStandard.checked == null) {
-  if ($("body").hasClass("page-singleStepCheckoutSummaryPage")) {
-    console.log("test");
-    with (ACC.checkoutB2B) {
-      defaultDeliveryMode();
-      deliveryMode();
-      deliveryAddress();
-    }
-  }
+//   if ($("body").hasClass("page-singleStepCheckoutSummaryPage")) {
+//     console.log("test");
+//     with (ACC.checkoutB2B) {
+//       defaultDeliveryMode();
+//       deliveryMode();
+//       deliveryAddress();
+//     }
+//   }
+	console.log("tesssst");
 }
 
 

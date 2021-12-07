@@ -13,13 +13,29 @@ else {
 
     window.addEventListener("load", () => {
         console.log("5");
-	    if ($("body").hasClass("page-singleStepCheckoutSummaryPage")) {
-    with (ACC.checkoutB2B) {
-      defaultDeliveryMode();
-      deliveryMode();
-      deliveryAddress();
-    }
-  }
+	    if (document.getElementById("sheBody")) {
+		  if ($("body").hasClass("page-singleStepCheckoutSummaryPage")) {
+		    console.log("6");
+		    with (ACC.checkoutB2B) {
+		      defaultDeliveryMode();
+		      deliveryMode();
+		      deliveryAddress();
+		    }
+		  }
+		}
+	    if (document.getElementById("samBody")) {
+		  if ($("body").hasClass("page-singleStepCheckoutSummaryPage")) {
+		    console.log("6");
+		    with (ACC.checkoutB2B) {
+		      defaultDeliveryMode();
+		      deliveryMode();
+		      deliveryAddress();
+		    }
+		  }
+		}
+	    
+	    
+	    
     });
 }
 

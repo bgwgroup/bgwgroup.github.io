@@ -531,3 +531,26 @@ if ($(".page-search")[0]){
 		$(".pagination-wrap").clone().insertAfter("#resultsList");
 	}
 }
+
+
+/**
+ * Load Async checkout delivery
+ */
+document.addEventListener("DOMContentLoaded", function() {
+  if ($("body").hasClass("page-singleStepCheckoutSummaryPage")) {
+    with (ACC.checkoutB2B) {
+      refresh();
+      PaymentType();
+      costCenter();
+      defaultDeliveryMode();
+      payment();
+      deliveryMode();
+      deliveryAddress();
+      scheduleReplenishment();
+      negotiateQuote();
+      placeOrder();
+      bindTermsAndConditionsLink();
+    }
+  }
+console.log("run async hack");
+});

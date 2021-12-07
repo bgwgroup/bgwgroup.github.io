@@ -1,49 +1,49 @@
-if(document.readyState === "complete") {
-    console.log("1");
-}
-else if(document.readyState === "interactive") {
-    console.log("2");
-}
-else {
-    console.log("3");
+// if(document.readyState === "complete") {
+//     console.log("1");
+// }
+// else if(document.readyState === "interactive") {
+//     console.log("2");
+// }
+// else {
+//     console.log("3");
 
-    window.addEventListener("DOMContentLoaded", () => {
-        console.log("4");
-    });
+//     window.addEventListener("DOMContentLoaded", () => {
+//         console.log("4");
+//     });
 
-    window.addEventListener("load", () => {
-        console.log("5");
-	    if (document.getElementById("sheBody")) {
-		  if ($("body").hasClass("page-singleStepCheckoutSummaryPage")) {
-		    console.log("6");
-			  setTimeout(function(){
-			  with (ACC.checkoutB2B) {
-		      defaultDeliveryMode();
-		      deliveryMode();
-		      deliveryAddress();
-		    }
-			  }, 2000);
+//     window.addEventListener("load", () => {
+//         console.log("5");
+// 	    if (document.getElementById("sheBody")) {
+// 		  if ($("body").hasClass("page-singleStepCheckoutSummaryPage")) {
+// 		    console.log("6");
+// 			  setTimeout(function(){
+// 			  with (ACC.checkoutB2B) {
+// 		      defaultDeliveryMode();
+// 		      deliveryMode();
+// 		      deliveryAddress();
+// 		    }
+// 			  }, 2000);
 		    
-		  }
-		}
-	    if (document.getElementById("samBody")) {
-		  if ($("body").hasClass("page-singleStepCheckoutSummaryPage")) {
-		    console.log("7");
-			  setTimeout(function(){
-			  with (ACC.checkoutB2B) {
-		      defaultDeliveryMode();
-		      deliveryMode();
-		      deliveryAddress();
-		    }
-			  }, 2000);
+// 		  }
+// 		}
+// 	    if (document.getElementById("samBody")) {
+// 		  if ($("body").hasClass("page-singleStepCheckoutSummaryPage")) {
+// 		    console.log("7");
+// 			  setTimeout(function(){
+// 			  with (ACC.checkoutB2B) {
+// 		      defaultDeliveryMode();
+// 		      deliveryMode();
+// 		      deliveryAddress();
+// 		    }
+// 			  }, 2000);
 		
-		  }
-		}
+// 		  }
+// 		}
 	    
 	    
 	    
-    });
-}
+//     });
+// }
 
 
 ['DOMContentLoaded'].forEach((event) => {

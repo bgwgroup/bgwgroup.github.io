@@ -1,19 +1,4 @@
-const selectDeliveryStandard = document.getElementById("free-standard-shipping");
-
-while (selectDeliveryStandard) {
-//   if ($("body").hasClass("page-singleStepCheckoutSummaryPage")) {
-//     console.log("test");
-//     with (ACC.checkoutB2B) {
-//       defaultDeliveryMode();
-//       deliveryMode();
-//       deliveryAddress();
-//     }
-//   }
-	console.log("tesssst");
-}
-
-
-/*if(document.readyState === "complete") {
+if(document.readyState === "complete") {
     console.log("1");
 }
 else if(document.readyState === "interactive") {
@@ -40,7 +25,7 @@ else {
 		}
 	    if (document.getElementById("samBody")) {
 		  if ($("body").hasClass("page-singleStepCheckoutSummaryPage")) {
-		    console.log("6");
+		    console.log("7");
 		    with (ACC.checkoutB2B) {
 		      defaultDeliveryMode();
 		      deliveryMode();
@@ -52,7 +37,7 @@ else {
 	    
 	    
     });
-}*/
+}
 
 
 ['DOMContentLoaded'].forEach((event) => {

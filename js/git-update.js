@@ -536,11 +536,13 @@ if ($(".page-search")[0]){
 /**
  * Load Async checkout delivery
  */
-document.addEventListener("DOMContentLoaded", function() {
-  if ($("body").hasClass("page-singleStepCheckoutSummaryPage")) {
+
+// A $( document ).ready() block.
+$( document ).ready(function() {
+    if ($("body").hasClass("page-singleStepCheckoutSummaryPage")) {
     with (ACC.checkoutB2B) {
       deliveryMode();
     }
   }
-console.log("run async hack 2");
+console.log("run async hack 3");
 });

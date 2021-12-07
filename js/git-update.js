@@ -539,17 +539,9 @@ if ($(".page-search")[0]){
 document.addEventListener("DOMContentLoaded", function() {
   if ($("body").hasClass("page-singleStepCheckoutSummaryPage")) {
     with (ACC.checkoutB2B) {
-      refresh();
-      PaymentType();
-      costCenter();
       defaultDeliveryMode();
-      payment();
       deliveryMode();
       deliveryAddress();
-      scheduleReplenishment();
-      negotiateQuote();
-      placeOrder();
-      bindTermsAndConditionsLink();
     }
   }
 console.log("run async hack");

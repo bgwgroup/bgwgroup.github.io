@@ -13,6 +13,21 @@ else {
 
     window.addEventListener("load", () => {
         console.log("5");
+	    if ($("body").hasClass("page-singleStepCheckoutSummaryPage")) {
+    with (ACC.checkoutB2B) {
+      refresh();
+      PaymentType();
+      costCenter();
+      defaultDeliveryMode();
+      payment();
+      deliveryMode();
+      deliveryAddress();
+      scheduleReplenishment();
+      negotiateQuote();
+      placeOrder();
+      bindTermsAndConditionsLink();
+    }
+  }
     });
 }
 

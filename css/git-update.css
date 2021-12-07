@@ -1,6 +1,6 @@
 /*=== Global Page Template Fixes ===*/
 
-#checkoutContentPanel .summarySection {
+/* #checkoutContentPanel .summarySection {
     width: 100%;
 }
 
@@ -12,7 +12,7 @@
 }
 .update_section a svg path{
  fill: #555 !important;   
-}
+} */
 
 .cust-inner-wrapper .container .row > div {
   width: 100%; }

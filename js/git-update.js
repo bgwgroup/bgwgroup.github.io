@@ -1,3 +1,22 @@
+if(document.readyState === "complete") {
+    console.log("1");
+}
+else if(document.readyState === "interactive") {
+    console.log("2");
+}
+else {
+    console.log("3");
+
+    window.addEventListener("DOMContentLoaded", () => {
+        console.log("4");
+    });
+
+    window.addEventListener("load", () => {
+        console.log("5");
+    });
+}
+
+
 ['DOMContentLoaded'].forEach((event) => {
     window.addEventListener(event, () => {
         addToFavouritesSelector();

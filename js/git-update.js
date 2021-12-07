@@ -531,18 +531,3 @@ if ($(".page-search")[0]){
 		$(".pagination-wrap").clone().insertAfter("#resultsList");
 	}
 }
-
-
-/**
- * Load Async checkout delivery
- */
-
-// A $( document ).ready() block.
-$( document ).ready(function() {
-    if ($("body").hasClass("page-singleStepCheckoutSummaryPage")) {
-    with (ACC.checkoutB2B) {
-      deliveryMode();
-    }
-  }
-console.log("run async hack 3");
-});

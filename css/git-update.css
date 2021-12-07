@@ -1,4 +1,9 @@
 /*=== Global Page Template Fixes ===*/
+
+#checkoutContentPanel .summarySection {
+    width: 100%;
+}
+
 .cust-inner-wrapper .container .row > div {
   width: 100%; }
 

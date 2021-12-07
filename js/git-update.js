@@ -539,10 +539,8 @@ if ($(".page-search")[0]){
 document.addEventListener("DOMContentLoaded", function() {
   if ($("body").hasClass("page-singleStepCheckoutSummaryPage")) {
     with (ACC.checkoutB2B) {
-      defaultDeliveryMode();
       deliveryMode();
-      deliveryAddress();
     }
   }
-console.log("run async hack");
+console.log("run async hack 2");
 });

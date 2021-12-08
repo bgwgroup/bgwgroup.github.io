@@ -1,4 +1,19 @@
 /*=== Global Page Template Fixes ===*/
+
+/* #checkoutContentPanel .summarySection {
+    width: 100%;
+}
+
+.update_section a svg{
+ fill: #555 !important;   
+}
+.update_section a svg g{
+ fill: #555 !important;   
+}
+.update_section a svg path{
+ fill: #555 !important;   
+} */
+
 .cust-inner-wrapper .container .row > div {
   width: 100%; }
 

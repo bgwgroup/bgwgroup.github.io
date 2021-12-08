@@ -4,14 +4,14 @@
         "title": "Big One",
         "description": "It's back and even bigger",
         "link": "/the-big-one-2",
-        "active": "yes"
+        "active": "no"
     },
     {
         "image": "/medias/mhi-card.jpg?context=bWFzdGVyfGltYWdlc3w0MDI3MDl8aW1hZ2UvanBlZ3xoY2UvaGEwLzk1MDk0MTIyNzQyMDYvbWhpLWNhcmQuanBnfDY0NTAxNTZiMmJkYWMxZDFkNDdhYjBjY2RlMGIwNjZkOWY2YjMyOTczM2I2YTViNWQ2MTVjMDU4MmViNTVkZmU",
         "title": "For the installers!",
         "description": "Cash Rewards",
         "link": "/mhi-powerplus-installers-promo",
-        "active": "yes"
+        "active": "no"
     },
     {
         "image": "/medias/nhp-iso.jpg?context=bWFzdGVyfGltYWdlc3wxMzQxNTd8aW1hZ2UvanBlZ3xoNjUvaDU0Lzk2ODA2MTM1Mzk4NzAvbmhwLWlzby5qcGd8YzhhNWI3MDliY2NiYzZiMGNiYzQ0OTE3NDk0ZTJkZDNmMGY3M2UwMzVkYzA0MDUwNWE3NjA3ZDU3MDVmYjRkNA",
@@ -19,7 +19,7 @@
         "description": "Be the fastest sparky in Aus and win $5000! Spend $200 or more on any NHP ISO product to play and win!",
         "link": "https://www.nhpcompetitions.com.au/",
         "external": "true",
-        "active": "yes"
+        "active": "no"
     },
     {
         "image": "/medias/clipsal-summer.jpg?context=bWFzdGVyfGltYWdlc3w2MTMwMHxpbWFnZS9qcGVnfGg3Ni9oNTcvOTY4MDYxMzYwNTQwNi9jbGlwc2FsLXN1bW1lci5qcGd8ODc3MjQzNDY5YTFhYjJmN2JhNjFmNTEyZjQ5YWE2NzViOGQyZjg4NzcwY2EzMjljN2Y1NDVjMzJlNDUxZGUxNQ",

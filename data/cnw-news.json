@@ -11,7 +11,7 @@
         "title": "For the installers!",
         "description": "Cash Rewards",
         "link": "/mhi-powerplus-installers-promo",
-        "active": "no"
+        "active": "yes"
     },
     {
         "image": "/medias/nhp-iso.jpg?context=bWFzdGVyfGltYWdlc3wxMzQxNTd8aW1hZ2UvanBlZ3xoNjUvaDU0Lzk2ODA2MTM1Mzk4NzAvbmhwLWlzby5qcGd8YzhhNWI3MDliY2NiYzZiMGNiYzQ0OTE3NDk0ZTJkZDNmMGY3M2UwMzVkYzA0MDUwNWE3NjA3ZDU3MDVmYjRkNA",
@@ -27,7 +27,7 @@
         "description": "Clipsal is giving away five $1000 gift cards every day in November. Simply purchase $300 on participating Clipsal products for your chance to win.",
         "link": "https://www.clipsal.com/summer",
         "external": "true",
-        "active": "yes"
+        "active": "no"
     },
     {
         "image": "/_ui/responsive/theme-newcnw/images/promotions/Pref-range.jpg",

@@ -1912,3 +1912,15 @@ ul.pagination{ margin: 10px 0 !important; }
         z-index: 999999;
     }
 }
+/*=== BGWT PDP image scaling ===*/
+.pdpwrap{
+    .gallery__images{
+        .owl-wrapper{
+            img{
+                display: block;
+                margin: 0 auto;
+                width: 100%; 
+            }
+        }
+    }
+}

@@ -1,19 +1,4 @@
 /*=== Global Page Template Fixes ===*/
-
-/* #checkoutContentPanel .summarySection {
-    width: 100%;
-}
-
-.update_section a svg{
- fill: #555 !important;   
-}
-.update_section a svg g{
- fill: #555 !important;   
-}
-.update_section a svg path{
- fill: #555 !important;   
-} */
-
 .cust-inner-wrapper .container .row > div {
   width: 100%; }
 
@@ -1606,3 +1591,9 @@ ul.pagination {
 /*=== Sherriff PDP add to favourites notification message ===*/
 #sheBody #globalMessages {
   z-index: 999999; }
+
+/*=== BGWT PDP image scaling ===*/
+.pdpwrap .gallery__images .owl-wrapper img {
+  display: block;
+  margin: 0 auto;
+  width: 100%; }

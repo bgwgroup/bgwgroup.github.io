@@ -1597,3 +1597,23 @@ ul.pagination {
   display: block;
   margin: 0 auto;
   width: 100%; }
+
+
+
+/*=== Temp Samios ===*/
+.homehalf-loggedin{
+ display:flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%
+  align-items: stretch;
+}
+.page-homepage .right-half{
+    display: flex !important;
+    height: 100%;
+    width: 100%;
+    align-items: stretch;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}

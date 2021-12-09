@@ -1608,10 +1608,11 @@ ul.pagination {
   width: 100%
   align-items: stretch;
 }
-.page-homepage .right-half{
+.page-homepage .right-half,
+.page-homepage .left-half{
     display: flex !important;
     height: 100%;
-    width: 100%;
+    flex:1;
     align-items: stretch;
     align-items: center;
     justify-content: center;

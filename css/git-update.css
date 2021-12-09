@@ -1620,10 +1620,18 @@ ul.pagination {
 }
 @media (max-width: 992px) {
   .homehalf-loggedin{
-  flex-direction: column;
+    flex-direction: column;
   }
   .page-homepage .right-half,
-.page-homepage .left-half{
-    min-height: 50vh;
+  .page-homepage .left-half{
+      min-height: 50vh;
+    width: 100%;
+  }
 }
+@media (max-width: 768px) {
+  .page-homepage .right-half,
+  .page-homepage .left-half{
+      min-height: 30vh;
+    max-height: 30vh;
+  }
 }

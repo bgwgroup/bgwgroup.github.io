@@ -1597,3 +1597,116 @@ ul.pagination {
   display: block;
   margin: 0 auto;
   width: 100%; }
+
+
+
+
+
+
+
+/*=== TEMP SAMIOS ===*/
+.left-half,
+.right-half {
+  display: none;
+  cursor: pointer;
+}
+
+.left-half a,
+.right-half a {
+  font-weight: 400;
+  font-size: 30px;
+  /* padding-top: 120px; */
+  background-size: 100px;
+  background-repeat: no-repeat;
+  background-position: center top;
+  cursor: pointer;
+  min-width: 120px;
+  /* Animation */
+  padding-top: 0px;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.left-half.in-view a,
+.right-half.in-view a {
+  transition: transform 200ms, padding 800ms;
+  padding-top: 110px;
+  opacity: 1;
+  z-index: 1;
+}
+
+.left-half:hover a,
+.right-half:hover a {
+  padding-top: 130px;
+  text-decoration: none;
+  transition: padding 200ms;
+}
+
+.left-half span,
+.right-half span {
+  font-weight: 900;
+}
+
+.page-homepage .left-half {
+  display: block;
+  background-color: #4c4c4c;
+  width: 50vw;
+  height: 100vh;
+  background-image: url(../images/left-bg.jpg);
+  background-position: -90px center;
+  text-align: center;
+  display: table-cell;
+  border-right: solid 1px white;
+  background-size: cover;
+}
+
+.homehalf-account-box .left-half.in-view:hover,
+.homehalf-loggedin .left-half.in-view:hover {
+  transition: background 150ms;
+  background-image: linear-gradient(
+      rgba(195, 233, 255, 0.35),
+      rgba(255, 133, 133, 0.1)
+    ),
+    url(../images/left-bg.jpg);
+}
+
+.page-homepage .right-half {
+  display: block;
+  background-color: #4c4c4c;
+  width: 50vw;
+  height: 100vh;
+  text-align: center;
+  display: table-cell;
+  /* background-image: url(../images/right-bg.jpg); */
+  background-image: linear-gradient(
+      to bottom,
+      rgba(34, 34, 34, 0.5),
+      transparent
+    ),
+    url(../images/bgwstills_90.png);
+  background-position: -180px center;
+  background-size: cover;
+  border-left: solid 1px white;
+}
+
+.page-homepage .left-half::after,
+.page-homepage .right-half::after {
+  /* content: ''; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(34, 34, 34, 0.35);
+}
+
+.homehalf-account-box .right-half.in-view:hover,
+.homehalf-loggedin .right-half.in-view:hover {
+  transition: background 150ms;
+  /* background-image: linear-gradient(rgba(195, 233, 255, 0.35), rgba(255, 133, 133, 0.1)), url(../images/right-bg.jpg); */
+  background-image: linear-gradient(
+      rgba(195, 233, 255, 0.35),
+      rgba(255, 133, 133, 0.1)
+    ),
+    url(../images/bgwstills_90.png);
+}

@@ -1634,7 +1634,7 @@ ul.pagination {
   }
 }
 @media (max-width: 768px) {
-  #samBody .page-singleStepCheckoutSummaryPage .main__inner-wrapper{
+  #samBody.page-singleStepCheckoutSummaryPage .main__inner-wrapper{
   padding: 0 !important;
   }
   .page-homepage .right-half,

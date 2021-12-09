@@ -1601,6 +1601,11 @@ ul.pagination {
 
 
 /*=== Temp Samios ===*/
+
+
+
+
+
 .homehalf-loggedin{
  display:flex;
   flex-direction: row;
@@ -1629,6 +1634,9 @@ ul.pagination {
   }
 }
 @media (max-width: 768px) {
+  #samBody .page-singleStepCheckoutSummaryPage .main__inner-wrapper{
+  padding: 0 !important;
+  }
   .page-homepage .right-half,
   .page-homepage .left-half{
       min-height: 30vh;

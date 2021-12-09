@@ -1632,7 +1632,7 @@ ul.pagination {
 @media (max-width: 992px) {
   .homehalf,
   .homehalf-sector,
-  .homehalf-loggedin,{
+  .homehalf-loggedin{
     flex-direction: column;
   }
   .page-homepage .right-half,

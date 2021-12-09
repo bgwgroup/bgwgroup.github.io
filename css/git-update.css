@@ -1629,6 +1629,10 @@ ul.pagination {
     justify-content: center;
     min-height: 100vh;
 }
+.mini-cart-container{
+  z-index: 99999999;
+}
+
 @media (max-width: 992px) {
   .homehalf,
   .homehalf-sector,

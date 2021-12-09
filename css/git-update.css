@@ -1618,3 +1618,12 @@ ul.pagination {
     justify-content: center;
     min-height: 100vh;
 }
+@media (max-width: 992px) {
+  .homehalf-loggedin{
+  flex-direction: column;
+  }
+  .page-homepage .right-half,
+.page-homepage .left-half{
+    min-height: 50vh;
+}
+}

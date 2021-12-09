@@ -1647,7 +1647,7 @@ ul.pagination {
   .homehalf-sector .right-half,
   .page-homepage .left-half,
   .homehalf-sector .left-half{
-      min-height: 30vh;
-    max-height: 30vh;
+      min-height: 40vh;
+    max-height: 40vh;
   }
 }

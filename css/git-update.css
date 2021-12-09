@@ -1606,7 +1606,7 @@ ul.pagination {
 
 
 
-.homehalf-loggedin,
+.homehalf,
 .homehalf-sector{
  display:flex;
   flex-direction: row;
@@ -1615,7 +1615,9 @@ ul.pagination {
   align-items: stretch;
 }
 .page-homepage .right-half,
-.page-homepage .left-half{
+.homehalf-sector .right-half,
+.page-homepage .left-half,
+.homehalf-sector .left-half{
     display: flex !important;
     height: 100%;
     flex:1;
@@ -1625,13 +1627,16 @@ ul.pagination {
     min-height: 100vh;
 }
 @media (max-width: 992px) {
-  .homehalf-loggedin{
+  .homehalf,
+  .homehalf-sector{
     flex-direction: column;
   }
   .page-homepage .right-half,
-  .page-homepage .left-half{
+  .homehalf-sector .right-half,
+  .page-homepage .left-half,
+  .homehalf-sector .left-half{
       min-height: 50vh;
-    width: 100%;
+      width: 100%;
   }
 }
 @media (max-width: 768px) {
@@ -1639,7 +1644,9 @@ ul.pagination {
   padding: 0 !important;
   }
   .page-homepage .right-half,
-  .page-homepage .left-half{
+  .homehalf-sector .right-half,
+  .page-homepage .left-half,
+  .homehalf-sector .left-half{
       min-height: 30vh;
     max-height: 30vh;
   }

@@ -1663,3 +1663,15 @@ ul.pagination {
     max-height: 40vh;
   }
 }
+
+.homehalf,
+.homehalf-sector,
+.homehalf-loggedin{
+ display: none; 
+}
+
+.page-homepage .homehalf,
+.page-homepage .homehalf-sector,
+.page-homepage .homehalf-loggedin{
+ display: flex !important; 
+}

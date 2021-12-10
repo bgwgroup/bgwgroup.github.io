@@ -565,13 +565,6 @@ ElectricalPCN.prototype.collapsePCNContent = () => {
  * Pagination clone - temp hack
  */
 
-
-
-
-
-
-$('#samBody .product__list--wrapper > .pagination-wrap').css("display", "none");
-
 $('#samBody .search-grid-page-result-grid-component').addClass('pagination-account');
 
 if ($(".page-productGrid")[0]){

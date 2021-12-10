@@ -575,7 +575,7 @@ if ($(".page-productGrid")[0]){
 if ($(".page-search")[0]){
 	if ($(".product__grid")[0]){
 		console.log('pagination hack bottom - git hack js');
-		$(".pagination-wrap").clone().insertAfter(".product__grid");
+		//$(".pagination-wrap").clone().insertAfter(".product__grid");
 	} else {
 		console.log('pagination hack bottom - git hack js');
 		$(".pagination-wrap").clone().insertAfter("#resultsList");

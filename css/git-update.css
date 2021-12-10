@@ -1,5 +1,8 @@
 /*=== Global Page Template Fixes ===*/
 
+#samBody + product__list--wrapper + .pagination-wrap{
+    display:none !important;
+}
 
 .pagination-wrap {
     padding: 0 !important;

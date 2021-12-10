@@ -1,9 +1,5 @@
 /*=== Global Page Template Fixes ===*/
 
-#samBody .main__inner-wrapper .cust-plp-grid .plp-grid-right .product__list--wrapper .pagination-wrap{
-    display:none !important;
-}
-
 .pagination-wrap {
     padding: 0 !important;
     padding-right: $layout_gutter_half !important;

@@ -567,6 +567,7 @@ ElectricalPCN.prototype.collapsePCNContent = () => {
 
 $('#samBody .search-grid-page-result-grid-component').addClass('pagination-account');
 
+/*
 if ($(".page-productGrid")[0]){
 	console.log('pagination hack bottom - git hack js');
 	$(".pagination-wrap").clone().insertAfter("#resultsList");
@@ -581,3 +582,4 @@ if ($(".page-search")[0]){
 		$(".pagination-wrap").clone().insertAfter("#resultsList");
 	}
 }
+*/

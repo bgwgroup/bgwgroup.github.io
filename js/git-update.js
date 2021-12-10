@@ -565,6 +565,10 @@ ElectricalPCN.prototype.collapsePCNContent = () => {
  * Pagination clone - temp hack
  */
 
+
+
+$('#samBody .search-grid-page-result-grid-component').addClass('pagination-account');
+
 if ($(".page-productGrid")[0]){
 	console.log('pagination hack bottom - git hack js');
 	$(".pagination-wrap").clone().insertAfter("#resultsList");

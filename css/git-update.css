@@ -1,6 +1,6 @@
 /*=== Global Page Template Fixes ===*/
 
-#samBody + product__list--wrapper + .pagination-wrap{
+#samBody + .product__list--wrapper + .pagination-wrap{
     display:none !important;
 }
 

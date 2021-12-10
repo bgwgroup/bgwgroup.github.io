@@ -568,8 +568,10 @@ ElectricalPCN.prototype.collapsePCNContent = () => {
 
 
 
+
+
 $('#samBody .product__list--wrapper .pagination-wrap').css("display", "none");
-$('#samBody .product__list--wrapper .cust-sortby .pagination-wrap').css("display", "block");
+$('#samBody .cust-sortby .pagination-wrap').css("display", "block");
 
 $('#samBody .search-grid-page-result-grid-component').addClass('pagination-account');
 

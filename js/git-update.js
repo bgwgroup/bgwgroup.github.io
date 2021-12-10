@@ -570,8 +570,7 @@ ElectricalPCN.prototype.collapsePCNContent = () => {
 
 
 
-$('#samBody .product__list--wrapper + .pagination-wrap').css("display", "none");
-$('#samBody .cust-sortby .pagination-wrap').css("display", "block");
+$('#samBody .product__list--wrapper > .pagination-wrap').css("display", "none");
 
 $('#samBody .search-grid-page-result-grid-component').addClass('pagination-account');
 

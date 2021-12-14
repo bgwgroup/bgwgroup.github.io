@@ -1752,8 +1752,8 @@ ul.pagination {
  display: flex !important; 
 }
 
-.homehalf-account-box{
-    display: flex;
+.homehalf-account-box .acct-box-visible{
+    display: flex !important;
 }
 
 

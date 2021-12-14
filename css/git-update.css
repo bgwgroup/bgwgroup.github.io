@@ -1683,8 +1683,7 @@ ul.pagination {
 
 .homehalf,
 .homehalf-sector,
-.homehalf-loggedin,
-.call-register{
+.homehalf-loggedin{
  display:flex;
   flex-direction: row;
   height: 100%;
@@ -1696,9 +1695,7 @@ ul.pagination {
 .page-homepage .left-half,
 .homehalf-sector .left-half,
 .homehalf-loggedin .right-half,
-.homehalf-loggedin .left-half,
-.call-register .left-half,
-.call-register .right-half{
+.homehalf-loggedin .left-half{
     display: flex !important;
     height: 100%;
     flex:1;
@@ -1723,9 +1720,7 @@ ul.pagination {
 .page-homepage .left-half,
 .homehalf-sector .left-half,
 .homehalf-loggedin .right-half,
-.homehalf-loggedin .left-half,
-.call-register .left-half,
-.call-register .right-half{
+.homehalf-loggedin .left-half{
       min-height: 50vh;
       width: 100%;
   }
@@ -1739,9 +1734,7 @@ ul.pagination {
 .page-homepage .left-half,
 .homehalf-sector .left-half,
 .homehalf-loggedin .right-half,
-.homehalf-loggedin .left-half,
-.call-register .left-half,
-.call-register .right-half{
+.homehalf-loggedin .left-half{
       min-height: 40vh;
     max-height: 40vh;
   }

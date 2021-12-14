@@ -1755,6 +1755,10 @@ ul.pagination {
 .homehalf-account-box.acct-box-visible{
     display: flex !important;
 }
-
+@media (max-width: 768px) {
+     .homehalf-account-box.acct-box-visible{
+        flex-direction: column;
+    }
+}
 
 

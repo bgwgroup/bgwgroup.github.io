@@ -1752,7 +1752,7 @@ ul.pagination {
  display: flex !important; 
 }
 
-.homehalf-account-box .acct-box-visible{
+.homehalf-account-box.acct-box-visible{
     display: flex !important;
 }
 

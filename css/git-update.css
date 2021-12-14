@@ -1752,6 +1752,9 @@ ul.pagination {
  display: flex !important; 
 }
 
+.homehalf-account-box{
+    display: flex;
+}
 
 
 

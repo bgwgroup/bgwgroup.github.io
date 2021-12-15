@@ -1,3 +1,9 @@
+/* temp fixes */
+.plpwrapper #breadcrumb{
+    height:auto !important;
+}
+
+
 /*=== Global Page Template Fixes ===*/
 
 .pagination-wrap {

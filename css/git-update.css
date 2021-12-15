@@ -1598,8 +1598,8 @@ ul.pagination {
   margin: 0 auto;
   width: 100%; }
 
-/*=== CNW StoreFinder Fix ===*/
-#cnwBody #storelocator-query:focus, #cnwBody #storelocator-query:active {
+/*=== Storefinder Search Form Fix ===*/
+#storelocator-query:focus, #storelocator-query:active {
   color: #FFF !important;
   background: #000000 !important;
   background-color: #000000 !important; }

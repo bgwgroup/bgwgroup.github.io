@@ -1924,14 +1924,12 @@ ul.pagination{ margin: 10px 0 !important; }
         }
     }
 }
-/*=== CNW StoreFinder Fix ===*/
-#cnwBody{
-    #storelocator-query{
-        &:focus,
-        &:active{
-            color: #FFF !important;
-            background: #000000 !important;
-            background-color: #000000 !important;
-        }
+/*=== Storefinder Search Form Fix ===*/
+#storelocator-query{
+    &:focus,
+    &:active{
+        color: #FFF !important;
+        background: #000000 !important;
+        background-color: #000000 !important;
     }
 }

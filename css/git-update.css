@@ -1608,4 +1608,4 @@ html {
   overflow-x: hidden; }
 
 html, body {
-  overflow-x: unset !important; }
+  overflow-x: unset; }

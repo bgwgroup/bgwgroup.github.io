@@ -76,6 +76,7 @@
 
 ['scroll'].forEach((event) => {
     window.addEventListener(event, () => {
+        console.log('Window scrolling?');
         // scratch and win
         new ParallaxEffect('.scratch-and-win .horizontal-line');
 

@@ -1603,3 +1603,9 @@ ul.pagination {
   color: #FFF !important;
   background: #000000 !important;
   background-color: #000000 !important; }
+
+html {
+  overflow-x: hidden; }
+
+html, body {
+  overflow-x: unset !important; }

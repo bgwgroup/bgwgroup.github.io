@@ -1609,3 +1609,74 @@ html, body {
 
 html {
   overflow-x: hidden; }
+
+/*=== Temp Samios ===*/
+.homehalf,
+.homehalf-sector,
+.homehalf-loggedin {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+  align-items: stretch; }
+
+.page-homepage .right-half,
+.homehalf-sector .right-half,
+.page-homepage .left-half,
+.homehalf-sector .left-half,
+.homehalf-loggedin .right-half,
+.homehalf-loggedin .left-half {
+  display: flex !important;
+  height: 100%;
+  flex: 1;
+  align-items: stretch;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; }
+
+.mini-cart-container {
+  z-index: 99999999; }
+
+@media (max-width: 992px) {
+  .homehalf,
+  .homehalf-sector,
+  .homehalf-loggedin,
+  .call-register {
+    flex-direction: column; }
+  .page-homepage .right-half,
+  .homehalf-sector .right-half,
+  .page-homepage .left-half,
+  .homehalf-sector .left-half,
+  .homehalf-loggedin .right-half,
+  .homehalf-loggedin .left-half {
+    min-height: 50vh;
+    width: 100%; } }
+
+@media (max-width: 768px) {
+  #samBody.page-singleStepCheckoutSummaryPage .main__inner-wrapper {
+    padding: 0 !important; }
+  .page-homepage .right-half,
+  .homehalf-sector .right-half,
+  .page-homepage .left-half,
+  .homehalf-sector .left-half,
+  .homehalf-loggedin .right-half,
+  .homehalf-loggedin .left-half {
+    min-height: 40vh;
+    max-height: 40vh; } }
+
+.homehalf,
+.homehalf-sector,
+.homehalf-loggedin {
+  display: none; }
+
+.page-homepage .homehalf,
+.page-homepage .homehalf-sector,
+.page-homepage .homehalf-loggedin {
+  display: flex !important; }
+
+.homehalf-account-box.acct-box-visible {
+  display: flex !important; }
+
+@media (max-width: 992px) {
+  .homehalf-account-box.acct-box-visible {
+    flex-direction: column; } }

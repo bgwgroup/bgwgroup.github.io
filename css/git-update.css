@@ -13,6 +13,10 @@
     width: 100%;
     height: 100%;
 }
+.page-erpintegrationpage .container {
+    min-width: 100%;
+    max-width: 100%;
+}
 
 .cust-inner-wrapper .container .row > div {
   width: 100%; }

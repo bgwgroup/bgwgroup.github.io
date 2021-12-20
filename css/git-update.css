@@ -6,6 +6,7 @@
     padding-top: 25px;
     height: 0;
 }
+
 .iframeWrapper iframe {
     position: absolute;
     top: 0;
@@ -22,10 +23,7 @@
 
 @media (max-width: 767px) {
     .iframeWrapper {
-        position: relative;
-        padding-bottom: 80%;
-        padding-top: 25px;
-        height: 0;
+       min-height: 50vh;
     }
 }
 

@@ -2020,3 +2020,41 @@ html{ overflow-x: hidden; }
         flex-direction: column;
     }
 } 
+
+/*=== ERP Iframe Fixes ===*/
+.iframeWrapper{
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+    iframe{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+    }
+}
+.page-erpintegrationpage{
+    .container{
+        min-width: 100%;
+        max-width: 100%;
+    }
+}
+@media (max-width: 767px){
+    .iframeWrapper{ min-width: 50vh; }
+} 
+
+/*===  CNW PDP Return to Search button CSS fix ===*/
+#cnwBody{
+    .product-info-wrapper.pdpwrap{
+        .product__info__row{
+            .gallery__images{
+                .btn-return-to-search-container{
+                    top: calc(5% + 0.25rem) !important;
+                }
+            }
+        }
+    }
+}

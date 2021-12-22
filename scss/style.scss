@@ -235,6 +235,14 @@ ul.pagination{ margin: 10px 0 !important; }
         color: rgba(#C00, 0.5);
     }
 }
+#samBody{
+    .userLogin{
+        #j_username,
+        #j_password{
+            color: #222 !important;
+        }
+    }
+}
 /*=== My Account | Samios Favourites Patch CSS ===*/
 #samBody{
     .my-favourites-container{

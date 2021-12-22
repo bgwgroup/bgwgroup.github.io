@@ -1707,3 +1707,54 @@ html {
 /*===  CNW PDP Return to Search button CSS fix ===*/
 #cnwBody .product-info-wrapper.pdpwrap .product__info__row .gallery__images .btn-return-to-search-container {
   top: calc(5% + 0.25rem) !important; }
+
+/*=== Legrand Rewards 2020 ===*/
+.page-legrandrewards2020page .legrand-rewards {
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 4rem; }
+
+.page-legrandrewards2020page .legrand-image-content img {
+  display: block;
+  margin: 0 auto;
+  width: 100%; }
+
+.page-legrandrewards2020page .legrand-poster-download {
+  display: -ms-flex;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  padding: 0.65rem;
+  margin: 0 auto;
+  max-width: 1300px; }
+  .page-legrandrewards2020page .legrand-poster-download > div {
+    -ms-flex: 1;
+    flex: 1;
+    text-align: center;
+    margin-bottom: 2rem; }
+  @media (max-width: 767px) {
+    .page-legrandrewards2020page .legrand-poster-download > div {
+      -ms-flex: 1 0 auto;
+      flex: 1 0 auto; } }
+  .page-legrandrewards2020page .legrand-poster-download .legrand-download-row a {
+    outline: none;
+    border: 0;
+    width: 100%;
+    padding: 0.8rem 1.25rem;
+    border-radius: 40px;
+    font-size: 1.25rem;
+    text-decoration: none;
+    color: #FFF;
+    background-color: #C00; }
+    .page-legrandrewards2020page .legrand-poster-download .legrand-download-row a:hover {
+      text-decoration: inherit;
+      background-color: #222; }
+  .page-legrandrewards2020page .legrand-poster-download .legrand-download-row img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 300px; }
+  @media (max-width: 767px) {
+    .page-legrandrewards2020page .legrand-poster-download .legrand-download-row a {
+      display: inline-block; } }

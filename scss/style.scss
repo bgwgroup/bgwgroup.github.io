@@ -2058,3 +2058,67 @@ html{ overflow-x: hidden; }
         }
     }
 }
+
+/*=== Legrand Rewards 2020 ===*/
+.page-legrandrewards2020page{
+    .legrand-rewards {
+        width: 100%;
+        margin: 0 auto;
+        padding-bottom: 4rem;
+    } 
+    .legrand-image-content {
+        img{
+            display: block;
+            margin: 0 auto;
+            width: 100%; 
+        }
+    }
+    .legrand-poster-download{
+        display: -ms-flex;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        width: 100%;
+        padding: 0.65rem;
+        margin: 0 auto;
+        max-width: 1300px;
+        > div {
+            -ms-flex: 1;
+            flex: 1;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        @media (max-width: 767px){
+            > div {
+                -ms-flex: 1 0 auto;
+                flex: 1 0 auto;
+            }
+        }
+        .legrand-download-row{
+            a{
+                outline: none;
+                border: 0;
+                width: 100%;
+                padding: 0.8rem 1.25rem;
+                border-radius: 40px;
+                font-size: 1.25rem;
+                text-decoration: none;
+                color: #FFF;
+                background-color: #C00;
+                &:hover{
+                    text-decoration: inherit;
+                    background-color: #222;
+                }
+            }
+            img{
+                display: block;
+                margin: 0 auto;
+                width: 100%;
+                max-width: 300px;
+            }
+            @media (max-width: 767px){
+                a{ display: inline-block; }
+            }
+        }
+    }
+}

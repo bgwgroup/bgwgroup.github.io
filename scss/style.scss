@@ -238,8 +238,9 @@ ul.pagination{ margin: 10px 0 !important; }
 #samBody{
     .userLogin{
         #j_username,
-        #j_password{
+        #j_password{ 
             color: #222 !important;
+            background-color: #FFF !important;
         }
     }
 }

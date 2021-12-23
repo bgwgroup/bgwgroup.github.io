@@ -217,7 +217,8 @@ ul.pagination {
 
 #samBody .userLogin #j_username,
 #samBody .userLogin #j_password {
-  color: #222 !important; }
+  color: #222 !important;
+  background-color: #FFF !important; }
 
 /*=== My Account | Samios Favourites Patch CSS ===*/
 #samBody .my-favourites-container .cust-wishlist {

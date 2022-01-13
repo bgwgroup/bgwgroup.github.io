@@ -211,7 +211,7 @@ ul.pagination {
   top: 0.25rem;
   display: inline-block;
   width: 100%;
-  padding: 0  2.75rem;
+  padding: 0 2.75rem;
   font-size: 0.8rem !important;
   color: rgba(204, 0, 0, 0.5); }
 
@@ -339,6 +339,9 @@ ul.pagination {
     margin: 0 auto;
     max-width: 95%;
     display: block; } }
+
+.manage-my-favourites-container #listSelect .grid-add-basket {
+  width: auto !important; }
 
 /*=== My Account | Invoice Patch CSS ===*/
 .module-search-split .module-search-split-left form .form-group {
@@ -1556,7 +1559,8 @@ ul.pagination {
 #samBody .ui-autocomplete .relProds.ui-menu-item li.ui-state-active {
   border: unset; }
 
-#samBody .ui-autocomplete .relProds.ui-menu-item .ui-menu-item-wrapper a::before, #samBody .relProds.ui-menu-item .ui-menu-item-wrapper a::after {
+#samBody .ui-autocomplete .relProds.ui-menu-item .ui-menu-item-wrapper a::before,
+#samBody .relProds.ui-menu-item .ui-menu-item-wrapper a::after {
   content: '';
   display: table;
   clear: both; }
@@ -1609,7 +1613,8 @@ ul.pagination {
   background: #000000 !important;
   background-color: #000000 !important; }
 
-html, body {
+html,
+body {
   overflow-x: unset; }
 
 html {

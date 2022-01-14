@@ -2434,3 +2434,26 @@ html {
         }
     }
 }
+
+.career.positions {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.career-positions-title {
+    span {
+        display: inline-block;
+        font-size: 1.55rem;
+        border-bottom: 2px solid #C00;
+        padding-bottom: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+    li {
+        color: #C00;
+        font-size: 1.25rem;
+        line-height: 2rem;
+        margin-bottom: 0.35rem;
+    }
+}

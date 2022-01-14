@@ -1805,3 +1805,22 @@ html {
     .careers-job article ul li {
       list-style: disc;
       list-style-type: disc; }
+
+.career.positions {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 600px;
+  text-align: center; }
+
+.career-positions-title span {
+  display: inline-block;
+  font-size: 1.55rem;
+  border-bottom: 2px solid #C00;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem; }
+
+.career-positions-title li {
+  color: #C00;
+  font-size: 1.25rem;
+  line-height: 2rem;
+  margin-bottom: 0.35rem; }

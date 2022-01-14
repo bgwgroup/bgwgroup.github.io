@@ -2385,3 +2385,52 @@ html {
         }
     }
 }
+
+
+/*==== Careers Posting CSS Styles ====*/
+
+.careers-job {
+    position: relative;
+    padding: 1.25rem;
+    margin: 0 auto;
+    max-width: 1300px;
+    z-index: 1;
+    * {
+        font-size: 1.25rem;
+        line-height: 2rem;
+    }
+}
+
+.careers-job-title {
+    text-align: center;
+    margin-bottom: 1.25rem;
+    border-bottom: 1px solid rgba(#EEE, 0.45);
+    span {
+        display: inline-block;
+        font-size: 2rem;
+        line-height: 3.5rem;
+    }
+}
+
+.careers-job article {
+    margin: 0.85rem 0;
+    strong {
+        font-weight: bold;
+        display: inline-block;
+        margin-bottom: 0.45rem;
+    }
+    p {
+        margin-bottom: 0.85rem;
+        a {
+            color: #C00;
+            text-decoration: underline;
+        }
+    }
+    ul {
+        padding-left: 1.35rem;
+        li {
+            list-style: disc;
+            list-style-type: disc;
+        }
+    }
+}

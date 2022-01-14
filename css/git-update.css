@@ -1768,3 +1768,40 @@ html {
   @media (max-width: 767px) {
     .page-legrandrewards2020page .legrand-poster-download .legrand-download-row a {
       display: inline-block; } }
+
+/*==== Careers Posting CSS Styles ====*/
+.careers-job {
+  position: relative;
+  padding: 1.25rem;
+  margin: 0 auto;
+  max-width: 1300px;
+  z-index: 1; }
+  .careers-job * {
+    font-size: 1.25rem;
+    line-height: 2rem; }
+
+.careers-job-title {
+  text-align: center;
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid rgba(238, 238, 238, 0.45); }
+  .careers-job-title span {
+    display: inline-block;
+    font-size: 2rem;
+    line-height: 3.5rem; }
+
+.careers-job article {
+  margin: 0.85rem 0; }
+  .careers-job article strong {
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 0.45rem; }
+  .careers-job article p {
+    margin-bottom: 0.85rem; }
+    .careers-job article p a {
+      color: #C00;
+      text-decoration: underline; }
+  .careers-job article ul {
+    padding-left: 1.35rem; }
+    .careers-job article ul li {
+      list-style: disc;
+      list-style-type: disc; }

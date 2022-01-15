@@ -1826,14 +1826,14 @@ html {
   margin-bottom: 0.35rem; }
 
 /*==== My Account - Change Store CSS Styles  ====*/
-.new-pagination {
+.change-store-container .new-pagination {
   display: -ms-flex;
   display: flex;
   align-items: center;
   width: 100%;
   margin: 0 auto !important;
   max-width: 200px; }
-  .new-pagination li {
+  .change-store-container .new-pagination li {
     -ms-flex: 1 0 auto;
     flex: 1 0 auto;
     width: 100%;
@@ -1847,17 +1847,17 @@ html {
     border: 1px solid rgba(204, 204, 204, 0.5);
     -webkit-transition: 0.25s ease-in-out;
     transition: 0.25s ease-in-out; }
-    .new-pagination li:hover {
+    .change-store-container .new-pagination li:hover {
       box-shadow: 0 0 5px #CCC; }
-    .new-pagination li a {
+    .change-store-container .new-pagination li a {
       display: inline-block;
       width: 100%; }
-  .new-pagination li.active {
+  .change-store-container .new-pagination li.active {
     background-color: rgba(204, 204, 204, 0.5); }
-    .new-pagination li.active .bg-secondary {
+    .change-store-container .new-pagination li.active .bg-secondary {
       background: transparent !important;
       background-color: transparent !important; }
-  .new-pagination svg {
+  .change-store-container .new-pagination svg {
     width: 100%;
     position: relative;
     top: -1.1rem;

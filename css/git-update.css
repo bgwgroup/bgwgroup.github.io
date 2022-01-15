@@ -1824,3 +1824,44 @@ html {
   font-size: 1.25rem;
   line-height: 2rem;
   margin-bottom: 0.35rem; }
+
+/*==== My Account - Change Store CSS Styles  ====*/
+.new-pagination {
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto !important;
+  max-width: 200px; }
+  .new-pagination li {
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+    width: 100%;
+    height: 100%;
+    max-width: 35px;
+    max-height: 35px;
+    text-align: center;
+    line-height: 35px;
+    margin: 2px;
+    border-radius: 10px;
+    border: 1px solid rgba(204, 204, 204, 0.5);
+    -webkit-transition: 0.25s ease-in-out;
+    transition: 0.25s ease-in-out; }
+    .new-pagination li:hover {
+      box-shadow: 0 0 5px #CCC; }
+    .new-pagination li a {
+      display: inline-block;
+      width: 100%; }
+  .new-pagination li.active {
+    background-color: rgba(204, 204, 204, 0.5); }
+    .new-pagination li.active .bg-secondary {
+      background: transparent !important;
+      background-color: transparent !important; }
+  .new-pagination svg {
+    width: 100%;
+    position: relative;
+    top: -1.1rem;
+    left: 0.15rem;
+    -webkit-transform: scale(0.25);
+    -ms-transform: scale(0.25);
+    transform: scale(0.25); }

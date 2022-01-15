@@ -1865,3 +1865,37 @@ html {
     -webkit-transform: scale(0.25);
     -ms-transform: scale(0.25);
     transform: scale(0.25); }
+
+/*==== CNW PDP Page - Quantity Input Number ====*/
+#cnwBody .Empty_qty .quantity_label {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 1.25rem; }
+
+#cnwBody .Empty_qty::before, #cnwBody .Empty_qty::after {
+  content: unset; }
+
+#cnwBody .pdp-product-quantity {
+  display: -ms-flex;
+  display: flex;
+  align-items: center; }
+  #cnwBody .pdp-product-quantity a,
+  #cnwBody .pdp-product-quantity input {
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+    margin: 0.25rem;
+    width: 100%; }
+  #cnwBody .pdp-product-quantity a {
+    outline: none;
+    border: 0;
+    user-select: none;
+    max-width: 20%;
+    padding: 1.2rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    text-align: center; }
+    #cnwBody .pdp-product-quantity a::before, #cnwBody .pdp-product-quantity a::after {
+      content: unset; }
+  #cnwBody .pdp-product-quantity input {
+    max-width: 53% !important; }

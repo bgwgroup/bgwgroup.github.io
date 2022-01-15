@@ -2509,3 +2509,50 @@ html {
         }
     }
 }
+
+
+/*==== CNW PDP Page - Quantity Input Number ====*/
+
+#cnwBody {
+    .Empty_qty {
+        .quantity_label {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 1.25rem;
+        }
+        &::before,
+        &::after {
+            content: unset;
+        }
+    }
+    .pdp-product-quantity {
+        display: -ms-flex;
+        display: flex;
+        align-items: center;
+        a,
+        input {
+            -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
+            margin: 0.25rem;
+            width: 100%;
+        }
+        a {
+            &::before,
+            &::after {
+                content: unset;
+            }
+            outline: none;
+            border: 0;
+            user-select: none;
+            max-width: 20%;
+            padding: 1.2rem;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            text-align: center;
+        }
+        input {
+            max-width: 53% !important;
+        }
+    }
+}

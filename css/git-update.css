@@ -220,6 +220,15 @@ ul.pagination {
   color: #222 !important;
   background-color: #FFF !important; }
 
+.profile-menu form .form-group {
+  margin: 0.45rem 0; }
+  .profile-menu form .form-group label {
+    display: inline-block;
+    margin: 0.5rem 0; }
+  .profile-menu form .form-group input[type="text"],
+  .profile-menu form .form-group input[type="password"] {
+    width: 100%; }
+
 /*=== My Account | Samios Favourites Patch CSS ===*/
 #samBody .my-favourites-container .cust-wishlist {
   align-items: unset !important; }

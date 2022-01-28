@@ -310,6 +310,22 @@ ul.pagination {
     }
 }
 
+.profile-menu {
+    form {
+        .form-group {
+            margin: 0.45rem 0;
+            label {
+                display: inline-block;
+                margin: 0.5rem 0;
+            }
+            input[type="text"],
+            input[type="password"] {
+                width: 100%;
+            }
+        }
+    }
+}
+
 
 /*=== My Account | Samios Favourites Patch CSS ===*/
 

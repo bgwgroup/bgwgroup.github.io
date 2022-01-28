@@ -1,4 +1,6 @@
-$("form#command .cust-loginregbtn").removeClass("cust-loginregbtn");
+try {
+    $("form#command .cust-loginregbtn").removeClass("cust-loginregbtn");
+} catch (err) {}
 
 // if(document.readyState === "complete") {
 //     console.log("1");
@@ -25,7 +27,7 @@ $("form#command .cust-loginregbtn").removeClass("cust-loginregbtn");
 // 		      deliveryAddress();
 // 		    }
 // 			  }, 2000);
-		    
+
 // 		  }
 // 		}
 // 	    if (document.getElementById("samBody")) {
@@ -38,12 +40,12 @@ $("form#command .cust-loginregbtn").removeClass("cust-loginregbtn");
 // 		      deliveryAddress();
 // 		    }
 // 			  }, 2000);
-		
+
 // 		  }
 // 		}
-	    
-	    
-	    
+
+
+
 //     });
 // }
 
@@ -52,16 +54,16 @@ $("form#command .cust-loginregbtn").removeClass("cust-loginregbtn");
     window.addEventListener(event, () => {
         addToFavouritesSelector();
 
-        try{
+        try {
             colouringCompetitionYear();
             favouriteSearchFilter();
-        }catch(error){}
+        } catch (error) {}
 
         shopByToggleFacets();
 
         renderBgImage('.news-promotions .top__news');
         renderBgImage('.news-promotions .other__news .news__card');
-        
+
         new NewsAndPromotions();
 
         cnwHomepageNews();
@@ -83,8 +85,8 @@ $("form#command .cust-loginregbtn").removeClass("cust-loginregbtn");
 
         // Sherriff News and Promotion
         new ParallaxEffect('.news-promotions .top__news__content');
-        new ParallaxEffect('.news-promotions .other__news__row .news__card'); 
-        
+        new ParallaxEffect('.news-promotions .other__news__row .news__card');
+
         // Sherriff SIP
         new ParallaxEffect('.sip__container .vertical-line');
         new ParallaxEffect('.sip__container .horizontal-line');
@@ -97,9 +99,9 @@ $("form#command .cust-loginregbtn").removeClass("cust-loginregbtn");
 /**
  * add favorites selector to add to favourites button before page load
  */
-function addToFavouritesSelector(){
+function addToFavouritesSelector() {
     let addToWishlistIcon = document.querySelector('.add-to-wishlist-icon');
-    if(addToWishlistIcon != undefined){
+    if (addToWishlistIcon != undefined) {
         addToWishlistIcon.classList.add('favorites');
     }
 }
@@ -107,7 +109,7 @@ function addToFavouritesSelector(){
 /**
  * Add year object dynamically to CC
  */
-function colouringCompetitionYear(){
+function colouringCompetitionYear() {
     let coloringCompTableSpan = document.querySelector('.coloring-competition .coloring-table-row:nth-child(1) > span:nth-child(2)');
     coloringCompTableSpan.innerHTML = coloringCompTableSpan.innerHTML + " " + new Date().getFullYear();
 }
@@ -115,35 +117,35 @@ function colouringCompetitionYear(){
 /**
  * Search filter for wishlists
  */
-function favouriteSearchFilter(){
+function favouriteSearchFilter() {
     let favSeachForm = document.querySelector('.fav-list-search-filter #favListSearchFilter');
     let favGridItem = document.querySelectorAll('#favourite_list .fav_grid');
 
     favSeachForm.addEventListener('keyup', () => {
         let favSearchFormValue = favSeachForm.value.toUpperCase();
-        for(let i = 0; i < favGridItem.length; i++){
+        for (let i = 0; i < favGridItem.length; i++) {
             let textValue = favGridItem[i].textContent || favGridItem[i].innerText[i];
-            if(textValue.toUpperCase().indexOf(favSearchFormValue) > -1){
+            if (textValue.toUpperCase().indexOf(favSearchFormValue) > -1) {
                 favGridItem[i].style.display = "";
-            }else{
+            } else {
                 favGridItem[i].style.display = "none";
             }
-        } 
+        }
     });
 }
 
 /**
  * Facet Toggle Accordion
  */
-function shopByToggleFacets(){
-    
+function shopByToggleFacets() {
+
     let shopByButton = document.querySelector('.shop-by-button');
-    if(shopByButton != null){
+    if (shopByButton != null) {
         shopByButton.addEventListener('click', () => {
             let facetWrapper = shopByButton.nextElementSibling;
-            if(facetWrapper.style.maxHeight){
+            if (facetWrapper.style.maxHeight) {
                 facetWrapper.style.maxHeight = null;
-            }else{
+            } else {
                 facetWrapper.style.maxHeight = facetWrapper.scrollHeight + "px";
             }
         });
@@ -153,10 +155,10 @@ function shopByToggleFacets(){
 /**
  * Sherriff News and Promotions
  */
-function renderBgImage(selector){
+function renderBgImage(selector) {
     let elem = document.querySelectorAll(selector);
-    if(elem){
-        for(let i = 0; i < elem.length; i++){
+    if (elem) {
+        for (let i = 0; i < elem.length; i++) {
             let src = elem[i].getAttribute('data-image-src');
             elem[i].style.backgroundImage = "url('" + src + "')";
         }
@@ -167,7 +169,7 @@ function renderBgImage(selector){
  * ======================= PARALLAX EFFECT FUNCTIONS  =======================
  */
 
- var ParallaxEffect = function (selector) {
+var ParallaxEffect = function(selector) {
     var element = document.querySelectorAll(selector);
     if (element) {
         this.elemSelector = element;
@@ -175,7 +177,7 @@ function renderBgImage(selector){
     this.winScroll = window.pageYOffset || document.documentElement.scrollTop;
     this.init();
 };
-ParallaxEffect.prototype.init = function () {
+ParallaxEffect.prototype.init = function() {
     if (this.elemSelector) {
         for (var i = 0; i < this.elemSelector.length; i++) {
             var currentElement = this.elemSelector[i];
@@ -190,13 +192,13 @@ ParallaxEffect.prototype.init = function () {
             var isElementInView = this.checkViewport(currentElement);
             if (isElementInView) {
                 this.applyParallax(currentElement, elemDirection, rateX, rateY);
-            }else{
+            } else {
                 this.applyParallax(currentElement, elemDirection, 0, 0);
             }
         }
     }
 };
-ParallaxEffect.prototype.elemAttribute = function (element, attribute) {
+ParallaxEffect.prototype.elemAttribute = function(element, attribute) {
     if (element.getAttribute(attribute) !== null) {
         var elemAttribute = element.getAttribute(attribute);
         return elemAttribute;
@@ -204,7 +206,7 @@ ParallaxEffect.prototype.elemAttribute = function (element, attribute) {
         return "0";
     }
 };
-ParallaxEffect.prototype.checkViewport = function (element) {
+ParallaxEffect.prototype.checkViewport = function(element) {
     var bounds = element.getBoundingClientRect();
     var elemTop = bounds.top;
     var elemBottom = bounds.bottom;
@@ -214,23 +216,23 @@ ParallaxEffect.prototype.checkViewport = function (element) {
         return true;
     }
 };
-ParallaxEffect.prototype.applyParallax = function (nodeElement, direction, rateX, rateY) {
+ParallaxEffect.prototype.applyParallax = function(nodeElement, direction, rateX, rateY) {
     if (direction === 'vertical') {
-        nodeElement.style.setProperty('-webkit-transform', 'translate3d('+rateX+'px,'+rateY+'px,0)');
-        nodeElement.style.setProperty('-ms-transform', 'translate3d('+rateX+'px,'+rateY+'px,0)');
-        nodeElement.style.setProperty('-moz-transform', 'translate3d('+rateX+'px,'+rateY+'px,0)');
-        nodeElement.style.setProperty('transform', 'translate3d('+rateX+'px,'+rateY+'px,0)');
-        nodeElement.style.setProperty('-webkit-transition','all 0.5s linear');
-        nodeElement.style.setProperty('transition','all 0.5s linear');
+        nodeElement.style.setProperty('-webkit-transform', 'translate3d(' + rateX + 'px,' + rateY + 'px,0)');
+        nodeElement.style.setProperty('-ms-transform', 'translate3d(' + rateX + 'px,' + rateY + 'px,0)');
+        nodeElement.style.setProperty('-moz-transform', 'translate3d(' + rateX + 'px,' + rateY + 'px,0)');
+        nodeElement.style.setProperty('transform', 'translate3d(' + rateX + 'px,' + rateY + 'px,0)');
+        nodeElement.style.setProperty('-webkit-transition', 'all 0.5s linear');
+        nodeElement.style.setProperty('transition', 'all 0.5s linear');
     }
 
     if (direction === 'horizontal') {
-        nodeElement.style.setProperty('-webkit-transform', 'translate3d('+rateX+'px,'+rateY+'px,0)');
-        nodeElement.style.setProperty('-ms-transform', 'translate3d('+rateX+'px,'+rateY+'px,0)');
-        nodeElement.style.setProperty('-moz-transform', 'translate3d('+rateX+'px,'+rateY+'px,0)');
-        nodeElement.style.setProperty('transform', 'translate3d('+rateX+'px,'+rateY+'px,0)');
-        nodeElement.style.setProperty('-webkit-transition','all 0.5s linear');
-        nodeElement.style.setProperty('transition','all 0.5s linear');
+        nodeElement.style.setProperty('-webkit-transform', 'translate3d(' + rateX + 'px,' + rateY + 'px,0)');
+        nodeElement.style.setProperty('-ms-transform', 'translate3d(' + rateX + 'px,' + rateY + 'px,0)');
+        nodeElement.style.setProperty('-moz-transform', 'translate3d(' + rateX + 'px,' + rateY + 'px,0)');
+        nodeElement.style.setProperty('transform', 'translate3d(' + rateX + 'px,' + rateY + 'px,0)');
+        nodeElement.style.setProperty('-webkit-transition', 'all 0.5s linear');
+        nodeElement.style.setProperty('transition', 'all 0.5s linear');
     }
 };
 
@@ -243,7 +245,7 @@ let NewsData = {
     sherriffNews: 'https://bgwgroup.github.io/data/she-news.json'
 };
 
-function NewsAndPromotions(){
+function NewsAndPromotions() {
     NewsAndPromotions.prototype.init();
 }
 NewsAndPromotions.prototype.init = () => {
@@ -255,55 +257,55 @@ NewsAndPromotions.prototype.cnwNews = () => {
     let newsPromo = document.querySelector('.cnw-news-promo');
 
     fetch(NewsData.cnwNews)
-    .then((response) => { 
-        return response.json(); 
-    })
-    .then((news) => {
-        NewsAndPromotions.prototype.renderData(news, newsPromo);
-    })
-    .catch((error) => {})
+        .then((response) => {
+            return response.json();
+        })
+        .then((news) => {
+            NewsAndPromotions.prototype.renderData(news, newsPromo);
+        })
+        .catch((error) => {})
 };
 NewsAndPromotions.prototype.samiosNews = () => {
     let newsPromo = document.querySelector('.samios-news-promo');
 
     fetch(NewsData.samiosNews)
-    .then((response) => { 
-        return response.json(); 
-    })
-    .then((news) => {
-        NewsAndPromotions.prototype.renderData(news, newsPromo);
-    })
-    .catch((error) => {})
+        .then((response) => {
+            return response.json();
+        })
+        .then((news) => {
+            NewsAndPromotions.prototype.renderData(news, newsPromo);
+        })
+        .catch((error) => {})
 };
 NewsAndPromotions.prototype.sherriffNews = () => {
     let newsPromo = document.querySelector('.sherriff-news-promo');
 
     fetch(NewsData.sherriffNews)
-    .then((response) => { 
-        return response.json(); 
-    })
-    .then((news) => {   
-        NewsAndPromotions.prototype.renderData(news, newsPromo); 
-    })
-    .catch((error) => {})
+        .then((response) => {
+            return response.json();
+        })
+        .then((news) => {
+            NewsAndPromotions.prototype.renderData(news, newsPromo);
+        })
+        .catch((error) => {})
 };
 NewsAndPromotions.prototype.renderData = (data, container) => {
     let targetBlank = '';
 
-    for(let i = 0; i < data.length; i++){
-        if(data[i]['active'] == 'yes'){
+    for (let i = 0; i < data.length; i++) {
+        if (data[i]['active'] == 'yes') {
 
-            if(data[i]['external'] == 'true'){
+            if (data[i]['external'] == 'true') {
                 targetBlank = 'target="_blank"';
-            }else{
+            } else {
                 targetBlank = '';
             }
 
             let newsCard = document.createElement('div');
             newsCard.className = 'news-card';
 
-            newsCard.innerHTML = 
-            `
+            newsCard.innerHTML =
+                `
                 <img alt="${data[i]['title']}" src="${data[i]['image']}" title="${data[i]['title']}">
                 <div class="news-card-content">
                     <span>${data[i]['title']}</span>
@@ -311,7 +313,7 @@ NewsAndPromotions.prototype.renderData = (data, container) => {
                     <a href="${data[i]['link']}" ${targetBlank}>Learn More</a>
                 </div>
             `;
-            
+
             container.appendChild(newsCard);
         }
     }
@@ -320,26 +322,26 @@ NewsAndPromotions.prototype.renderData = (data, container) => {
 /**
  * News and Promotions section on CNW Homepage
  */
-function cnwHomepageNews(){
+function cnwHomepageNews() {
     let rightGridContent = document.querySelector('#news-promotion .right-grid-content');
     let targetBlank = '';
 
-    if(typeof(rightGridContent) != undefined && rightGridContent != null){
+    if (typeof(rightGridContent) != undefined && rightGridContent != null) {
         fetch(NewsData.cnwNews)
-        .then((response) => { return response.json(); })
-        .then((cnwNews) => {
-            for(let i = 0; i < cnwNews.length; i++){
-                if(cnwNews[i]['active'] == 'yes'){
-                    if(cnwNews[i]['external'] == 'true'){
-                        targetBlank = 'target="_blank"';
-                    }else{
-                        targetBlank = '';
-                    }
-    
-                    let gridItem = document.createElement("li");
-                    gridItem.className = "grid-item";
-                    gridItem.innerHTML = 
-                    `
+            .then((response) => { return response.json(); })
+            .then((cnwNews) => {
+                for (let i = 0; i < cnwNews.length; i++) {
+                    if (cnwNews[i]['active'] == 'yes') {
+                        if (cnwNews[i]['external'] == 'true') {
+                            targetBlank = 'target="_blank"';
+                        } else {
+                            targetBlank = '';
+                        }
+
+                        let gridItem = document.createElement("li");
+                        gridItem.className = "grid-item";
+                        gridItem.innerHTML =
+                            `
                         <a class="grid-item-link" href="${cnwNews[i]['link']}">
                             <img class="grid-item-img" src="${cnwNews[i]['image']}">
                         </a>
@@ -350,50 +352,50 @@ function cnwHomepageNews(){
                             <p class="grid-item-paragraph">${cnwNews[i]['description']}</p>
                         </div>
                     `;
-    
-                    rightGridContent.appendChild(gridItem);                    
+
+                        rightGridContent.appendChild(gridItem);
+                    }
                 }
-            }
-        })
-        .catch((error) => {});
+            })
+            .catch((error) => {});
     }
 }
 
 /**
  * News and Promotions section on Sherriff Homepage
  */
-function sherriffHomepageNews(){
+function sherriffHomepageNews() {
     let newsCardInnerWrapper = document.querySelector('.news__cards__inner__wrapper');
     let targetBlank = '';
 
-    if(typeof(newsCardInnerWrapper) != undefined && newsCardInnerWrapper != null){
+    if (typeof(newsCardInnerWrapper) != undefined && newsCardInnerWrapper != null) {
         fetch(NewsData.sherriffNews)
-        .then((response) => { return response.json(); })
-        .then((sheNews) => {
-            for(let i = 0; i < sheNews.length; i++){
+            .then((response) => { return response.json(); })
+            .then((sheNews) => {
+                for (let i = 0; i < sheNews.length; i++) {
 
-                if(sheNews[i]['active'] == 'yes'){
-                    if(sheNews[i]['external'] == 'true'){
-                        targetBlank = 'target="_blank"';
-                    }else{
-                        targetBlank = '';
-                    }
-    
-                    let newsCard = document.createElement("div");
-                    newsCard.className = "news__card";
-                    newsCard.innerHTML = 
-                    `
+                    if (sheNews[i]['active'] == 'yes') {
+                        if (sheNews[i]['external'] == 'true') {
+                            targetBlank = 'target="_blank"';
+                        } else {
+                            targetBlank = '';
+                        }
+
+                        let newsCard = document.createElement("div");
+                        newsCard.className = "news__card";
+                        newsCard.innerHTML =
+                            `
                         <a href="${sheNews[i]['link']}" ${targetBlank}>
                             <img alt="Promo" src="${sheNews[i]['image']}">
                             <span>${sheNews[i]['title']}</span>
                         </a>
                     `;
-    
-                    newsCardInnerWrapper.appendChild(newsCard);                    
+
+                        newsCardInnerWrapper.appendChild(newsCard);
+                    }
                 }
-            }
-        })
-        .catch((error) => {});
+            })
+            .catch((error) => {});
     }
 }
 
@@ -401,7 +403,8 @@ function sherriffHomepageNews(){
  * Sherriff Careers Page
  */
 let index = 0;
-function SherriffCareers(){
+
+function SherriffCareers() {
     this.init();
 }
 SherriffCareers.prototype.init = () => {
@@ -410,8 +413,8 @@ SherriffCareers.prototype.init = () => {
 };
 SherriffCareers.prototype.renderBgImage = (selector) => {
     let elem = document.querySelectorAll(selector);
-    if(typeof(elem) != undefined || elem != null){
-        for(let i = 0; i < elem.length; i++){
+    if (typeof(elem) != undefined || elem != null) {
+        for (let i = 0; i < elem.length; i++) {
             let src = elem[i].getAttribute('data-image-src');
             elem[i].style.backgroundImage = `url("${src}")`;
         }
@@ -419,35 +422,34 @@ SherriffCareers.prototype.renderBgImage = (selector) => {
 };
 SherriffCareers.prototype.animateImages = () => {
     let elem = document.querySelectorAll('.careers-container .slideshow .careers-bg-image');
-    if(typeof(elem) != undefined || elem != null){
+    if (typeof(elem) != undefined || elem != null) {
         let elemAnimate = 'animate-bg-image';
-        try { 
-            elem[0].classList.add(elemAnimate); 
+        try {
+            elem[0].classList.add(elemAnimate);
 
-            if (index >= elem.length || index <= -1) { 
-                index = 0; 
-              } 
-              for (var i = 0; i < elem.length; i++) { 
-                elem[i].classList.remove(elemAnimate); 
-              } 
-              index += 1; 
-              elem[index - 1].classList.add(elemAnimate);              
-        } 
-        catch (err) { }       
+            if (index >= elem.length || index <= -1) {
+                index = 0;
+            }
+            for (var i = 0; i < elem.length; i++) {
+                elem[i].classList.remove(elemAnimate);
+            }
+            index += 1;
+            elem[index - 1].classList.add(elemAnimate);
+        } catch (err) {}
     }
 };
 
 /**
  * Dynamically load external JS Scripts into HTML
  */
-function loadExternalScripts(){
+function loadExternalScripts() {
     // snapWidget
     let snapWidgetJS = document.createElement('script');
     snapWidgetJS.src = 'https://snapwidget.com/js/snapwidget.js';
 
     let widgetSection = document.querySelector('.home__section.widget-section');
     let widgetSectionHeader = document.querySelector('.home__section.widget-section h2');
-    if(widgetSection != null && widgetSectionHeader != null){
+    if (widgetSection != null && widgetSectionHeader != null) {
         widgetSection.insertBefore(snapWidgetJS, widgetSectionHeader);
     }
 }
@@ -455,7 +457,7 @@ function loadExternalScripts(){
 /**
  * Samios PCN Data
  */
-function PlumbingPCN(){
+function PlumbingPCN() {
     this.init();
 }
 PlumbingPCN.prototype.init = () => {
@@ -466,28 +468,28 @@ PlumbingPCN.prototype.fetchData = () => {
 
     let priceTableBody = document.querySelector('.price-table-body');
 
-    if(priceTableBody != null){
+    if (priceTableBody != null) {
         fetch('https://bgwgroup.com.au/samios_notifications/get-supplier-data.php')
-        .then((response) => { return response.json(); })
-        .then((pcn) => {
-    
-            for(let i = 0; i < pcn.length; i++){
-    
-                if(pcn[i]['archived'] == 'no'){
-                    let priceTableRow = document.createElement('div');
-                    priceTableRow.className = 'price-table-row';
-                    priceTableRow.innerHTML = 
-                    `
+            .then((response) => { return response.json(); })
+            .then((pcn) => {
+
+                for (let i = 0; i < pcn.length; i++) {
+
+                    if (pcn[i]['archived'] == 'no') {
+                        let priceTableRow = document.createElement('div');
+                        priceTableRow.className = 'price-table-row';
+                        priceTableRow.innerHTML =
+                            `
                         <span>${pcn[i]['supplier']}</span>
                         <span>${pcn[i]['month']}</span>
                         <span>${pcn[i]['price_rise']}</span>
                     `;
-    
-                    priceTableBody.appendChild(priceTableRow);
+
+                        priceTableBody.appendChild(priceTableRow);
+                    }
                 }
-            }
-        })
-        .catch((error) => {});
+            })
+            .catch((error) => {});
     }
 
 };
@@ -498,18 +500,18 @@ PlumbingPCN.prototype.searchFilterData = () => {
 
     document.addEventListener('keyup', (e) => {
 
-        if(priceSearch != null && priceTableRow != null){
+        if (priceSearch != null && priceTableRow != null) {
 
             let searchValue = e.srcElement.value.toLowerCase();
 
-            for(let i = 0; i < priceTableRow.length; i++){
+            for (let i = 0; i < priceTableRow.length; i++) {
 
                 let row = priceTableRow[i];
                 let rowData = row.innerHTML.toLowerCase();
 
-                if(rowData.indexOf(searchValue) > -1){
+                if (rowData.indexOf(searchValue) > -1) {
                     row.style.display = "";
-                }else{
+                } else {
                     row.style.display = "none";
                 }
             }
@@ -520,7 +522,7 @@ PlumbingPCN.prototype.searchFilterData = () => {
 /**
  * CNW | Sherriff PCN Data
  */
- let ElectricalPCNWrappers = {
+let ElectricalPCNWrappers = {
     december2022: document.querySelector('.pcn-december2022'),
     november2022: document.querySelector('.pcn-november2022'),
     october2022: document.querySelector('.pcn-october2022'),
@@ -546,7 +548,8 @@ PlumbingPCN.prototype.searchFilterData = () => {
     february2021: document.querySelector('.pcn-february2021'),
     january2021: document.querySelector('.pcn-january2021'),
 };
-function ElectricalPCN(){
+
+function ElectricalPCN() {
     this.init();
 }
 ElectricalPCN.prototype.init = () => {
@@ -558,43 +561,43 @@ ElectricalPCN.prototype.init = () => {
 ElectricalPCN.prototype.fetchData = () => {
 
     fetch('https://bgwgroup.com.au/notifications/get-file-data.php')
-    .then((response) => { return response.json(); })
-    .then((pcn) => {
-        for(let i = 0; i < pcn.length; i++){
-            if(pcn[i]['status'] == 'visible'){
-                ElectricalPCN.prototype.renderData(pcn[i],ElectricalPCNWrappers.december2022,"December-2022");
-                ElectricalPCN.prototype.renderData(pcn[i],ElectricalPCNWrappers.november2022,"November-2022");
-                ElectricalPCN.prototype.renderData(pcn[i],ElectricalPCNWrappers.october2022,"October-2022");
-                ElectricalPCN.prototype.renderData(pcn[i],ElectricalPCNWrappers.september2022,"September-2022");
-                ElectricalPCN.prototype.renderData(pcn[i],ElectricalPCNWrappers.august2022,"August-2022");
-                ElectricalPCN.prototype.renderData(pcn[i],ElectricalPCNWrappers.july2022,"July-2022");
-                ElectricalPCN.prototype.renderData(pcn[i],ElectricalPCNWrappers.june2022,"June-2022");
-                ElectricalPCN.prototype.renderData(pcn[i],ElectricalPCNWrappers.may2022,"May-2022");
-                ElectricalPCN.prototype.renderData(pcn[i],ElectricalPCNWrappers.april2022,"April-2022");
-                ElectricalPCN.prototype.renderData(pcn[i],ElectricalPCNWrappers.march2022,"March-2022");
-                ElectricalPCN.prototype.renderData(pcn[i],ElectricalPCNWrappers.february2022,"February-2022");
-                ElectricalPCN.prototype.renderData(pcn[i],ElectricalPCNWrappers.january2022,"January-2022");
+        .then((response) => { return response.json(); })
+        .then((pcn) => {
+            for (let i = 0; i < pcn.length; i++) {
+                if (pcn[i]['status'] == 'visible') {
+                    ElectricalPCN.prototype.renderData(pcn[i], ElectricalPCNWrappers.december2022, "December-2022");
+                    ElectricalPCN.prototype.renderData(pcn[i], ElectricalPCNWrappers.november2022, "November-2022");
+                    ElectricalPCN.prototype.renderData(pcn[i], ElectricalPCNWrappers.october2022, "October-2022");
+                    ElectricalPCN.prototype.renderData(pcn[i], ElectricalPCNWrappers.september2022, "September-2022");
+                    ElectricalPCN.prototype.renderData(pcn[i], ElectricalPCNWrappers.august2022, "August-2022");
+                    ElectricalPCN.prototype.renderData(pcn[i], ElectricalPCNWrappers.july2022, "July-2022");
+                    ElectricalPCN.prototype.renderData(pcn[i], ElectricalPCNWrappers.june2022, "June-2022");
+                    ElectricalPCN.prototype.renderData(pcn[i], ElectricalPCNWrappers.may2022, "May-2022");
+                    ElectricalPCN.prototype.renderData(pcn[i], ElectricalPCNWrappers.april2022, "April-2022");
+                    ElectricalPCN.prototype.renderData(pcn[i], ElectricalPCNWrappers.march2022, "March-2022");
+                    ElectricalPCN.prototype.renderData(pcn[i], ElectricalPCNWrappers.february2022, "February-2022");
+                    ElectricalPCN.prototype.renderData(pcn[i], ElectricalPCNWrappers.january2022, "January-2022");
 
-                ElectricalPCN.prototype.renderData(pcn[i],ElectricalPCNWrappers.december2021,"December-2021");
-                ElectricalPCN.prototype.renderData(pcn[i],ElectricalPCNWrappers.november2021,"November-2021");
-                ElectricalPCN.prototype.renderData(pcn[i],ElectricalPCNWrappers.october2021,"October-2021");
-                ElectricalPCN.prototype.renderData(pcn[i],ElectricalPCNWrappers.september2021,"September-2021");
-                ElectricalPCN.prototype.renderData(pcn[i],ElectricalPCNWrappers.august2021,"August-2021");
-                ElectricalPCN.prototype.renderData(pcn[i],ElectricalPCNWrappers.july2021,"July-2021");
-                ElectricalPCN.prototype.renderData(pcn[i],ElectricalPCNWrappers.june2021,"June-2021");
-                ElectricalPCN.prototype.renderData(pcn[i],ElectricalPCNWrappers.may2021,"May-2021");
-                ElectricalPCN.prototype.renderData(pcn[i],ElectricalPCNWrappers.april2021,"April-2021");
-                ElectricalPCN.prototype.renderData(pcn[i],ElectricalPCNWrappers.march2021,"March-2021");
-                ElectricalPCN.prototype.renderData(pcn[i],ElectricalPCNWrappers.february2021,"February-2021");
-                ElectricalPCN.prototype.renderData(pcn[i],ElectricalPCNWrappers.january2021,"January-2021");
+                    ElectricalPCN.prototype.renderData(pcn[i], ElectricalPCNWrappers.december2021, "December-2021");
+                    ElectricalPCN.prototype.renderData(pcn[i], ElectricalPCNWrappers.november2021, "November-2021");
+                    ElectricalPCN.prototype.renderData(pcn[i], ElectricalPCNWrappers.october2021, "October-2021");
+                    ElectricalPCN.prototype.renderData(pcn[i], ElectricalPCNWrappers.september2021, "September-2021");
+                    ElectricalPCN.prototype.renderData(pcn[i], ElectricalPCNWrappers.august2021, "August-2021");
+                    ElectricalPCN.prototype.renderData(pcn[i], ElectricalPCNWrappers.july2021, "July-2021");
+                    ElectricalPCN.prototype.renderData(pcn[i], ElectricalPCNWrappers.june2021, "June-2021");
+                    ElectricalPCN.prototype.renderData(pcn[i], ElectricalPCNWrappers.may2021, "May-2021");
+                    ElectricalPCN.prototype.renderData(pcn[i], ElectricalPCNWrappers.april2021, "April-2021");
+                    ElectricalPCN.prototype.renderData(pcn[i], ElectricalPCNWrappers.march2021, "March-2021");
+                    ElectricalPCN.prototype.renderData(pcn[i], ElectricalPCNWrappers.february2021, "February-2021");
+                    ElectricalPCN.prototype.renderData(pcn[i], ElectricalPCNWrappers.january2021, "January-2021");
+                }
             }
-        }
-    })
-    .catch((error) => {});
+        })
+        .catch((error) => {});
 };
-ElectricalPCN.prototype.renderData = (data, wrapper,filter) => {
-    if(data != undefined || data != null){
-        if(data['file_name'].includes(filter)){
+ElectricalPCN.prototype.renderData = (data, wrapper, filter) => {
+    if (data != undefined || data != null) {
+        if (data['file_name'].includes(filter)) {
 
             let a = document.createElement('a');
             a.setAttribute('href', data['file_location']);
@@ -602,30 +605,30 @@ ElectricalPCN.prototype.renderData = (data, wrapper,filter) => {
             a.setAttribute('target', '_blank');
             a.innerHTML = data['file_name'];
 
-			try{
-				wrapper.children[1].appendChild(a);
-			}catch(error){}
-        }        
+            try {
+                wrapper.children[1].appendChild(a);
+            } catch (error) {}
+        }
     }
 };
 ElectricalPCN.prototype.getCurrentYear = () => {
     let pcnYear = document.querySelector('.pcn .pcn-year');
-    if(pcnYear != undefined){
+    if (pcnYear != undefined) {
         pcnYear.innerHTML = new Date().getFullYear();
     }
 };
 ElectricalPCN.prototype.collapsePCNContent = () => {
     let pcnTitle = document.querySelectorAll('.pcn .pcn-content-wrapper .pcn-data > div > span');
-    if(pcnTitle != null){
-        for(let i = 0; i < pcnTitle.length; i++){
+    if (pcnTitle != null) {
+        for (let i = 0; i < pcnTitle.length; i++) {
             pcnTitle[i].addEventListener('click', () => {
 
                 pcnTitle[i].classList.toggle('pcn-collapsed');
                 let pcnContent = pcnTitle[i].nextElementSibling;
 
-                if(pcnContent.style.maxHeight){
+                if (pcnContent.style.maxHeight) {
                     pcnContent.style.maxHeight = null;
-                }else{
+                } else {
                     pcnContent.style.maxHeight = panel.scrollHeight + "px";
                 }
             });
@@ -640,21 +643,21 @@ ElectricalPCN.prototype.collapsePCNContent = () => {
 
 
 
-if ($("#samBody")[0]){
-	$('#samBody .search-grid-page-result-grid-component').addClass('pagination-account');
-} else{
-	if ($(".page-productGrid")[0]){
-		console.log('pagination hack bottom - git hack js');
-		$(".pagination-bar").clone().insertAfter("#resultsList");
-	}
+if ($("#samBody")[0]) {
+    $('#samBody .search-grid-page-result-grid-component').addClass('pagination-account');
+} else {
+    if ($(".page-productGrid")[0]) {
+        console.log('pagination hack bottom - git hack js');
+        $(".pagination-bar").clone().insertAfter("#resultsList");
+    }
 
-	if ($(".page-search")[0]){
-		if ($(".product__grid")[0]){
-			console.log('pagination hack bottom - git hack js');
-			$(".pagination-bar").clone().insertAfter(".product__grid");
-		} else {
-			console.log('pagination hack bottom - git hack js');
-			$(".pagination-bar").clone().insertAfter("#resultsList");
-		}
-	}
+    if ($(".page-search")[0]) {
+        if ($(".product__grid")[0]) {
+            console.log('pagination hack bottom - git hack js');
+            $(".pagination-bar").clone().insertAfter(".product__grid");
+        } else {
+            console.log('pagination hack bottom - git hack js');
+            $(".pagination-bar").clone().insertAfter("#resultsList");
+        }
+    }
 }

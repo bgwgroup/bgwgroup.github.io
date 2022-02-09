@@ -1906,3 +1906,12 @@ html {
       content: unset; }
   #cnwBody .pdp-product-quantity input {
     max-width: 53% !important; }
+
+/*=== PLP Promo Banner Properties ===*/
+.plp-promo-banner-container {
+  margin: 0.25rem 0;
+  margin-bottom: 3rem; }
+  .plp-promo-banner-container img {
+    display: block;
+    margin: 0 auto;
+    width: 100%; }

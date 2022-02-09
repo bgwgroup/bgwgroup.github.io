@@ -66,12 +66,15 @@ let ThreeMCategories = {
 
 function ThreeMPromoBanner(args) {
 
+    console.log(args);
+
     let plpgridright = document.querySelector('.plp-grid-right');
     let productGridRightResultSlot = document.querySelector('.product-grid-right-result-slot');
 
     let threeMCategory = checkPLPPromoBannerURL(args.cat, args.cat);
 
     if (threeMCategory) {
+        console.log(threeMCategory);
         let promoBannerContainer = document.createElement('div');
         promoBannerContainer.className = 'plp-promo-banner-container';
 

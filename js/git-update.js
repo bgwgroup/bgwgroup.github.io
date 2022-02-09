@@ -75,6 +75,8 @@ if ($('form#command .cust-loginregbtn').length > 0) {
 
         new PlumbingPCN();
         new ElectricalPCN();
+
+        ThreeMPromoBanner(ThreeMCategories);
     });
 });
 
@@ -647,17 +649,49 @@ if ($("#samBody")[0]) {
     $('#samBody .search-grid-page-result-grid-component').addClass('pagination-account');
 } else {
     if ($(".page-productGrid")[0]) {
-        console.log('pagination hack bottom - git hack js');
         $(".pagination-bar").clone().insertAfter("#resultsList");
     }
 
     if ($(".page-search")[0]) {
         if ($(".product__grid")[0]) {
-            console.log('pagination hack bottom - git hack js');
             $(".pagination-bar").clone().insertAfter(".product__grid");
         } else {
-            console.log('pagination hack bottom - git hack js');
             $(".pagination-bar").clone().insertAfter("#resultsList");
         }
     }
+}
+
+/**
+ * PLP Page Slider Display
+ */
+
+function checkPLPPromoBannerURL(urlOne = '', urlTwo = '') {
+    if (urlOne != undefined || urlTwo != undefined) {
+        return (location.href.match(urlOne) || location.href.match(urlTwo)) ? true : false;
+    }
+}
+
+let ThreeMCategories = {
+    cat: /search?q=3m+tape%3Arelevance%3Acnw_brands%3A3M/,
+    img: ''
+};
+
+function ThreeMPromoBanner(args) {
+
+    let plpgridright = document.querySelector('.plp-grid-right');
+    let productGridRightResultSlot = document.querySelector('.product-grid-right-result-slot');
+
+    let threeMCategory = checkPLPPromoBannerURL(args.cat);
+
+    if (threeMCategory) {
+        let promoBannerContainer = document.createElement('div');
+        promoBannerContainer.className = 'plp-promo-banner-container';
+
+        let promoBannerImg = document.createElement('img');
+        promoBannerImg.src = args.img;
+        promoBannerContainer.appendChild(promoBannerImg);
+
+        plpgridright.insertBefore(promoBannerContainer, productGridRightResultSlot);
+    }
+
 }

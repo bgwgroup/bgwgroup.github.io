@@ -673,7 +673,7 @@ function checkPLPPromoBannerURL(urlOne = '', urlTwo = '') {
 
 let ThreeMCategories = {
     cat: /search?q=3m+tape%3Arelevance%3Acnw_brands%3A3M/,
-    img: ''
+    img: '/medias/ME-CNW-3M-Kayak-Competition-2022-WebHeroSlide2.jpg?context=bWFzdGVyfGltYWdlc3wyOTcxODV8aW1hZ2UvanBlZ3xoYzgvaDJhLzk4MDU4MDI5NjI5NzQvTUUgX0NOV18zTSBLYXlhayBDb21wZXRpdGlvbl8yMDIyX1dlYkhlcm9TbGlkZTIuanBnfDJlY2Y1OGFhYmJjMWUwMzE2ZmM0ZTJjMTNiOGZhYzBmMjM3MTVkYmFjMjc1YzE0NDYzYTlmZjhkMDU4YTc4OTA'
 };
 
 function ThreeMPromoBanner(args) {
@@ -681,7 +681,7 @@ function ThreeMPromoBanner(args) {
     let plpgridright = document.querySelector('.plp-grid-right');
     let productGridRightResultSlot = document.querySelector('.product-grid-right-result-slot');
 
-    let threeMCategory = checkPLPPromoBannerURL(args.cat);
+    let threeMCategory = checkPLPPromoBannerURL(args.cat, args.cat);
 
     if (threeMCategory) {
         let promoBannerContainer = document.createElement('div');

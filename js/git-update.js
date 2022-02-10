@@ -123,7 +123,6 @@ let SHEMajorTechCategories = {
 
         OneCategoryBanner(ThreeMCategories);
         OneCategoryBanner(CNWMajorTechCategories);
-        OneCategoryBanner(SHEMajorTechCategories);
     });
 });
 

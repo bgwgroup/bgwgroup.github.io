@@ -85,14 +85,9 @@ let ThreeMCategories = {
     img: '/medias/plp-banner.jpg?context=bWFzdGVyfGltYWdlc3w0OTc4NDR8aW1hZ2UvanBlZ3xoYzEvaGY0Lzk4MDU4MDU3MTU0ODYvcGxwLWJhbm5lci5qcGd8NDVlZjM2M2NmYjJhOGRiNzYwYmZlMDAzOTA2NzE1ODZmYzQ5OGYyZGQ3OTU3NWQwNjVlZTc3YmY0YmE0ZmE3Mg'
 };
 
-let CNWMajorTechCategories = {
+let MajorTechCategories = {
     cat: /major\+tech/gi,
     img: '/medias/Major-Tech-CNW-Hero-Slider.jpg?context=bWFzdGVyfGltYWdlc3w4NzA1MDh8aW1hZ2UvanBlZ3xoOTYvaDEwLzk4MDcyMTg1MDc4MDYvTWFqb3IgVGVjaCAtIENOVyAtIEhlcm8gU2xpZGVyLmpwZ3wxYzc3NTJlNjU1OGFkNWExYzk3YWZiNDY5MjVjZDhjMTcxNjcxOTY5MmRlY2FiNjU2ZGZlZjJlMzJkYmY1NTcx'
-};
-
-let SHEMajorTechCategories = {
-    cat: /major\+tech/gi,
-    img: '/medias/Major-Tech-CNW-Hero-Slider.jpg?context=bWFzdGVyfGltYWdlc3w4NzA1MDh8aW1hZ2UvanBlZ3xoMTgvaDA5Lzk4MDcyMTg3Njk5NTAvTWFqb3IgVGVjaCAtIENOVyAtIEhlcm8gU2xpZGVyLmpwZ3wxZTZhYmFjYTAwMjg1NTdhZDMyOTVlZDhiOGU5NjQzNTBhN2VlZTAyMzIyMTYwYjcwODg0NzViNjMwMTAyMGIz'
 };
 
 ['DOMContentLoaded'].forEach((event) => {
@@ -122,7 +117,7 @@ let SHEMajorTechCategories = {
         new ElectricalPCN();
 
         OneCategoryBanner(ThreeMCategories);
-        OneCategoryBanner(CNWMajorTechCategories);
+        OneCategoryBanner(MajorTechCategories);
     });
 });
 

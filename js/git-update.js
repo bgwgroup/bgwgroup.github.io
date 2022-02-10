@@ -61,7 +61,7 @@ function checkPLPPromoBannerURL(urlOne = '', urlTwo = '') {
 
 let ThreeMCategories = {
     cat: /%3Acnw_brands%3A3M/gi,
-    img: '/medias/ME-CNW-3M-Kayak-Competition-2022-WebHeroSlide2.jpg?context=bWFzdGVyfGltYWdlc3wyOTcxODV8aW1hZ2UvanBlZ3xoYzgvaDJhLzk4MDU4MDI5NjI5NzQvTUUgX0NOV18zTSBLYXlhayBDb21wZXRpdGlvbl8yMDIyX1dlYkhlcm9TbGlkZTIuanBnfDJlY2Y1OGFhYmJjMWUwMzE2ZmM0ZTJjMTNiOGZhYzBmMjM3MTVkYmFjMjc1YzE0NDYzYTlmZjhkMDU4YTc4OTA'
+    img: '/medias/plp-banner.jpg?context=bWFzdGVyfGltYWdlc3w3Nzk4NnxpbWFnZS9qcGVnfGhlZC9oOWUvOTgwNTgwNDY5OTY3OC9wbHAtYmFubmVyLmpwZ3xmOTZjODI5NjQ4Y2FkYjlhOGYzZTAxMWNkNDc2N2Q5MDBmNjRhYTU5NzkwZTdjZjAyODJiOTc4YTg5OTI4OWM2'
 };
 
 function ThreeMPromoBanner(args) {

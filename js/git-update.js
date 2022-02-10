@@ -59,19 +59,14 @@ function checkPLPPromoBannerURL(urlOne = '', urlTwo = '') {
     }
 }
 
-let ThreeMCategories = {
-    cat: /%3Acnw_brands%3A3M/gi,
-    img: '/medias/plp-banner.jpg?context=bWFzdGVyfGltYWdlc3w0OTc4NDR8aW1hZ2UvanBlZ3xoYzEvaGY0Lzk4MDU4MDU3MTU0ODYvcGxwLWJhbm5lci5qcGd8NDVlZjM2M2NmYjJhOGRiNzYwYmZlMDAzOTA2NzE1ODZmYzQ5OGYyZGQ3OTU3NWQwNjVlZTc3YmY0YmE0ZmE3Mg'
-};
-
-function ThreeMPromoBanner(args) {
+function OneCategoryBanner(args) {
 
     let plpgridright = document.querySelector('.plp-grid-right');
     let productGridRightResultSlot = document.querySelector('.product-grid-right-result-slot');
 
-    let threeMCategory = checkPLPPromoBannerURL(args.cat, args.cat);
+    let oneCategory = checkPLPPromoBannerURL(args.cat, args.cat);
 
-    if (threeMCategory) {
+    if (oneCategory) {
 
         let promoBannerContainer = document.createElement('div');
         promoBannerContainer.className = 'plp-promo-banner-container';
@@ -85,6 +80,20 @@ function ThreeMPromoBanner(args) {
 
 }
 
+let ThreeMCategories = {
+    cat: /%3Acnw_brands%3A3M/gi,
+    img: '/medias/plp-banner.jpg?context=bWFzdGVyfGltYWdlc3w0OTc4NDR8aW1hZ2UvanBlZ3xoYzEvaGY0Lzk4MDU4MDU3MTU0ODYvcGxwLWJhbm5lci5qcGd8NDVlZjM2M2NmYjJhOGRiNzYwYmZlMDAzOTA2NzE1ODZmYzQ5OGYyZGQ3OTU3NWQwNjVlZTc3YmY0YmE0ZmE3Mg'
+};
+
+let CNWMajorTechCategories = {
+    cat: /major\+tech/gi,
+    img: '/medias/Major-Tech-CNW-Hero-Slider.jpg?context=bWFzdGVyfGltYWdlc3w4NzA1MDh8aW1hZ2UvanBlZ3xoOTYvaDEwLzk4MDcyMTg1MDc4MDYvTWFqb3IgVGVjaCAtIENOVyAtIEhlcm8gU2xpZGVyLmpwZ3wxYzc3NTJlNjU1OGFkNWExYzk3YWZiNDY5MjVjZDhjMTcxNjcxOTY5MmRlY2FiNjU2ZGZlZjJlMzJkYmY1NTcx'
+};
+
+let SHEMajorTechCategories = {
+    cat: /major\+tech/gi,
+    img: '/medias/Major-Tech-CNW-Hero-Slider.jpg?context=bWFzdGVyfGltYWdlc3w4NzA1MDh8aW1hZ2UvanBlZ3xoMTgvaDA5Lzk4MDcyMTg3Njk5NTAvTWFqb3IgVGVjaCAtIENOVyAtIEhlcm8gU2xpZGVyLmpwZ3wxZTZhYmFjYTAwMjg1NTdhZDMyOTVlZDhiOGU5NjQzNTBhN2VlZTAyMzIyMTYwYjcwODg0NzViNjMwMTAyMGIz'
+}
 
 ['DOMContentLoaded'].forEach((event) => {
     window.addEventListener(event, () => {
@@ -112,7 +121,9 @@ function ThreeMPromoBanner(args) {
         new PlumbingPCN();
         new ElectricalPCN();
 
-        ThreeMPromoBanner(ThreeMCategories);
+        OneCategoryBanner(ThreeMCategories);
+        OneCategoryBanner(CNWMajorTechCategories);
+        OneCategoryBanner(SHEMajorTechCategories);
     });
 });
 

@@ -61,7 +61,7 @@ function checkPLPPromoBannerURL(urlOne = '', urlTwo = '') {
 
 let ThreeMCategories = {
     cat: /%3Acnw_brands%3A3M/gi,
-    img: '/medias/plp-banner.jpg?context=bWFzdGVyfGltYWdlc3w3Nzk4NnxpbWFnZS9qcGVnfGhlZC9oOWUvOTgwNTgwNDY5OTY3OC9wbHAtYmFubmVyLmpwZ3xmOTZjODI5NjQ4Y2FkYjlhOGYzZTAxMWNkNDc2N2Q5MDBmNjRhYTU5NzkwZTdjZjAyODJiOTc4YTg5OTI4OWM2'
+    img: '/medias/plp-banner.jpg?context=bWFzdGVyfGltYWdlc3w0OTc4NDR8aW1hZ2UvanBlZ3xoYzEvaGY0Lzk4MDU4MDU3MTU0ODYvcGxwLWJhbm5lci5qcGd8NDVlZjM2M2NmYjJhOGRiNzYwYmZlMDAzOTA2NzE1ODZmYzQ5OGYyZGQ3OTU3NWQwNjVlZTc3YmY0YmE0ZmE3Mg'
 };
 
 function ThreeMPromoBanner(args) {

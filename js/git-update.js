@@ -93,7 +93,7 @@ let CNWMajorTechCategories = {
 let SHEMajorTechCategories = {
     cat: /major\+tech/gi,
     img: '/medias/Major-Tech-CNW-Hero-Slider.jpg?context=bWFzdGVyfGltYWdlc3w4NzA1MDh8aW1hZ2UvanBlZ3xoMTgvaDA5Lzk4MDcyMTg3Njk5NTAvTWFqb3IgVGVjaCAtIENOVyAtIEhlcm8gU2xpZGVyLmpwZ3wxZTZhYmFjYTAwMjg1NTdhZDMyOTVlZDhiOGU5NjQzNTBhN2VlZTAyMzIyMTYwYjcwODg0NzViNjMwMTAyMGIz'
-}
+};
 
 ['DOMContentLoaded'].forEach((event) => {
     window.addEventListener(event, () => {

@@ -1907,6 +1907,11 @@ html {
   #cnwBody .pdp-product-quantity input {
     max-width: 53% !important; }
 
+/*==== CNW PDP Page - Breadcrumb fix ====*/
+#cnwBody .page-productDetails .plpwrapper #breadcrumb{
+  position: relative;
+}
+
 /*=== PLP Promo Banner Properties ===*/
 .plp-promo-banner-container {
   margin: 0.25rem 0;

@@ -1908,7 +1908,7 @@ html {
     max-width: 53% !important; }
 
 /*==== CNW PDP Page - Breadcrumb fix ====*/
-#cnwBody .page-productDetails .plpwrapper #breadcrumb{
+#cnwBody.page-productDetails .plpwrapper #breadcrumb{
   position: relative;
 }
 

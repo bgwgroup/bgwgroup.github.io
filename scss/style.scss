@@ -2569,6 +2569,21 @@ html {
     }
 }
 
+#cnwBody.page-productDetails {
+    .plpwrapper {
+        #breadrumb {
+            position: relative;
+            .breadcrumb {
+                li {
+                    a {
+                        padding: 14px 1.2rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
 
 /*=== PLP Promo Banner Properties ===*/
 

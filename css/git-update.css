@@ -1920,3 +1920,104 @@ html {
     display: block;
     margin: 0 auto;
     width: 100%; }
+
+/*=== Footy Tipping ===*/
+:root {
+  --footyWhite: #FFFFFF;
+  --footyBlack: #222222;
+  --footyRed: #CC0000; }
+
+.footy-tipping-wrapper {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding-bottom: 4rem;
+  color: var(--footyWhite);
+  background-color: var(--footyBlack);
+  z-index: 1; }
+  .footy-tipping-wrapper .footy-title {
+    text-align: center;
+    padding: 4rem;
+    -webkit-perspective: 80px;
+    perspective: 80px; }
+    .footy-tipping-wrapper .footy-title span {
+      font-size: 3rem;
+      font-weight: 900;
+      margin: 0.85rem;
+      display: inline-block;
+      text-transform: uppercase;
+      -webkit-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+      background: linear-gradient(to top, var(--footyBlack), var(--footyRed));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent; }
+      .footy-tipping-wrapper .footy-title span:nth-of-type(1) {
+        transform: rotateY(30deg) rotateX(10deg); }
+      .footy-tipping-wrapper .footy-title span:nth-of-type(2) {
+        transform: rotateY(-30deg) rotateX(10deg); }
+  .footy-tipping-wrapper .footy-sponsored {
+    display: -ms-flex;
+    display: flex;
+    flex-wrap: wrap; }
+    .footy-tipping-wrapper .footy-sponsored img {
+      -ms-flex: 1 0 auto;
+      flex: 1 0 auto;
+      width: 100%;
+      margin: 0 auto;
+      max-width: 250px; }
+  .footy-tipping-wrapper .footy-cash-prize {
+    margin: 2rem auto; }
+    .footy-tipping-wrapper .footy-cash-prize .footy-cash-prize-card {
+      max-width: 400px;
+      margin: 0 auto; }
+    .footy-tipping-wrapper .footy-cash-prize .prize-pool {
+      display: table;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background-color: var(--footyWhite);
+      box-shadow: 0 0 20px var(--footyRed);
+      position: relative; }
+      .footy-tipping-wrapper .footy-cash-prize .prize-pool::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background: linear-gradient(45deg, var(--footyBlack), var(--footyRed));
+        transform: scale(1.05);
+        z-index: -1; }
+      .footy-tipping-wrapper .footy-cash-prize .prize-pool > div {
+        display: table-cell;
+        vertical-align: middle;
+        color: var(--footyBlack); }
+      .footy-tipping-wrapper .footy-cash-prize .prize-pool .prize-pool-info span {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        font-size: 1.3rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin: 0.25rem 0; }
+        .footy-tipping-wrapper .footy-cash-prize .prize-pool .prize-pool-info span:nth-of-type(2) {
+          font-size: 4rem;
+          background: linear-gradient(45deg, var(--footyBlack), var(--footyRed));
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent; }
+      .footy-tipping-wrapper .footy-cash-prize .prize-pool .prize-pool-info sup {
+        font-size: 10px;
+        position: relative;
+        left: 0.3rem; }
+    .footy-tipping-wrapper .footy-cash-prize .footy-prize-icon {
+      position: relative;
+      top: -7rem;
+      left: calc(3rem + 10px); }
+      .footy-tipping-wrapper .footy-cash-prize .footy-prize-icon span {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        font-size: 3rem; }
+      .footy-tipping-wrapper .footy-cash-prize .footy-prize-icon img {
+        width: 100%; }

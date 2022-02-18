@@ -2103,7 +2103,7 @@ html {
       top: 2px; }
 
 #cnwBody .footy-tipping-wrapper {
-  background-image: linear-gradient(to top, var(--footyBlack), transparent), url("/medias/steel-background.jpg?context=bWFzdGVyfGltYWdlc3w0MTYyNTl8aW1hZ2UvanBlZ3xoMTAvaDJhLzk4MDk5MjY0ODgwOTQvc3RlZWwtYmFja2dyb3VuZC5qcGd8ZjhjZjFhNTAwYjJmMmQxNDk1YWRiYzAwZGNkZWI3NDUzY2ZhMGUyMjRmNWIyZjQwNGYwMGM3ZmI3YmVjNjJkMw");
+  background-image: linear-gradient(to top, var(--footyBlack), transparent), url("https://shop.cnw.com.au/medias/steel-background.jpg?context=bWFzdGVyfGltYWdlc3w0MTYyNTl8aW1hZ2UvanBlZ3xoMmYvaDIwLzk4MDk5MjY3NTAyMzgvc3RlZWwtYmFja2dyb3VuZC5qcGd8MjNlMGE3MDIyMTE0YjdmNzcyNTlmMmJlNDgyOWY5NTBhZjcxYjc1NTQ3MzY3YTUyNTQ3NmMzNjVjZmE4YTgwNw");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center; }

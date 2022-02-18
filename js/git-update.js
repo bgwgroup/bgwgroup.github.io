@@ -137,6 +137,9 @@ let MajorTechCategories = {
         // Sherriff iQ Lighting
         new ParallaxEffect('.iq__lighting .horizontal-line');
 
+        // Footy Tipping
+        new ParallaxEffect('.footy-parallax');
+
         isElementInViewOnScroll('.animate-in-view');
     });
 });

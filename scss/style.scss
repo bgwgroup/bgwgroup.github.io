@@ -2751,7 +2751,6 @@ html {
         @media (min-width: 767px) {
             >div {
                 margin: 0.75rem;
-                max-width: 47%;
             }
         }
         .footy-bottom-title {
@@ -2789,6 +2788,11 @@ html {
                 color: var(--footyWhite);
                 background-color: var(--footyRed);
                 border: 2px solid var(--footyRed);
+            }
+        }
+        @media (min-width: 900px) {
+            a {
+                width: auto;
             }
         }
     }

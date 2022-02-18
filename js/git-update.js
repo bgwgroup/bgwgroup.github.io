@@ -715,11 +715,10 @@ function isElementInViewOnScroll(selector) {
 
             let bounds = elementList[i].getBoundingClientRect();
             let elemTop = bounds.top;
-            let elemBottom = bounds.bottom;
 
             let pageTop = elemTop + (window.innerHeight * (50 / 100));
 
-            if ((pageTop >= 0) && (elemBottom <= window.innerHeight)) {
+            if (pageTop >= 0) {
                 elementList[i].classList.add(animateSelector);
             } else {
                 elementList[i].classList.remove(animateSelector);

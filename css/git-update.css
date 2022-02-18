@@ -1925,16 +1925,21 @@ html {
 :root {
   --footyWhite: #FFFFFF;
   --footyBlack: #222222;
+  --footyGrey: #EEEEEE;
   --footyRed: #CC0000; }
 
 .footy-tipping-wrapper {
   position: relative;
   margin: 0 auto;
-  max-width: 1200px;
   padding-bottom: 4rem;
   color: var(--footyWhite);
   background-color: var(--footyBlack);
   z-index: 1; }
+  .footy-tipping-wrapper .footy-tipping-inner-wrapper {
+    width: 100%;
+    padding: 0.95rem;
+    margin: 0 auto;
+    max-width: 1200px; }
   .footy-tipping-wrapper .footy-title {
     text-align: center;
     padding: 4rem;
@@ -1963,7 +1968,7 @@ html {
       -ms-flex: 1 0 auto;
       flex: 1 0 auto;
       width: 100%;
-      margin: 0 auto;
+      margin: 2.5rem auto;
       max-width: 250px; }
   .footy-tipping-wrapper .footy-cash-prize {
     margin: 2rem auto; }
@@ -2021,3 +2026,82 @@ html {
         font-size: 3rem; }
       .footy-tipping-wrapper .footy-cash-prize .footy-prize-icon img {
         width: 100%; }
+  .footy-tipping-wrapper .footy-bottom-section {
+    display: -ms-flex;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+    align-items: center; }
+    .footy-tipping-wrapper .footy-bottom-section > div {
+      -ms-flex: 1 0 auto;
+      flex: 1 0 auto;
+      padding: 0.5rem;
+      width: 100%; }
+      .footy-tipping-wrapper .footy-bottom-section > div p {
+        text-align: center;
+        font-size: 1.5rem;
+        margin: 2.75rem 0; }
+      .footy-tipping-wrapper .footy-bottom-section > div sup {
+        font-size: 1rem;
+        position: relative;
+        top: 2px; }
+    @media (min-width: 767px) {
+      .footy-tipping-wrapper .footy-bottom-section > div {
+        margin: 0.75rem;
+        max-width: 47%; } }
+    .footy-tipping-wrapper .footy-bottom-section .footy-bottom-title {
+      font-size: 2.5rem;
+      font-weight: 100;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+      background: linear-gradient(45deg, var(--footyWhite), var(--footyRed));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      position: relative;
+      text-align: center; }
+      .footy-tipping-wrapper .footy-bottom-section .footy-bottom-title::before {
+        content: '';
+        position: absolute;
+        bottom: calc(-20% - 5px);
+        left: 20%;
+        width: 100%;
+        height: 2px;
+        max-width: 10%;
+        background: linear-gradient(45deg, var(--footyRed), var(--footyWhite));
+        border-radius: 40px;
+        opacity: 0.5; }
+    .footy-tipping-wrapper .footy-bottom-section a {
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 40px;
+      width: 100%;
+      border: 2px solid var(--footyWhite);
+      color: var(--footyWhite);
+      transition: 0.4s ease; }
+      .footy-tipping-wrapper .footy-bottom-section a:hover {
+        color: var(--footyWhite);
+        background-color: var(--footyRed);
+        border: 2px solid var(--footyRed); }
+  .footy-tipping-wrapper .footy-terms-conditions {
+    border: 1px solid rgba(238, 238, 238, 0.2);
+    margin: 0 auto;
+    max-width: 600px;
+    text-align: center;
+    padding: 0.75rem; }
+    .footy-tipping-wrapper .footy-terms-conditions small,
+    .footy-tipping-wrapper .footy-terms-conditions a {
+      display: inline-block; }
+    .footy-tipping-wrapper .footy-terms-conditions small {
+      width: 100%;
+      margin: 0.75rem; }
+    .footy-tipping-wrapper .footy-terms-conditions sup {
+      font-size: 1rem;
+      position: relative;
+      top: 2px; }
+
+#cnwBody .footy-tipping-wrapper {
+  background-image: linear-gradient(to top, var(--footyBlack), transparent), url("/medias/steel-background.jpg?context=bWFzdGVyfGltYWdlc3w0MTYyNTl8aW1hZ2UvanBlZ3xoMTAvaDJhLzk4MDk5MjY0ODgwOTQvc3RlZWwtYmFja2dyb3VuZC5qcGd8ZjhjZjFhNTAwYjJmMmQxNDk1YWRiYzAwZGNkZWI3NDUzY2ZhMGUyMjRmNWIyZjQwNGYwMGM3ZmI3YmVjNjJkMw");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; }

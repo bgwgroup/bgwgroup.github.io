@@ -136,6 +136,8 @@ let MajorTechCategories = {
 
         // Sherriff iQ Lighting
         new ParallaxEffect('.iq__lighting .horizontal-line');
+
+        isElementInViewOnScroll('.animate-in-view');
     });
 });
 
@@ -698,6 +700,30 @@ if ($("#samBody")[0]) {
             $(".pagination-bar").clone().insertAfter(".product__grid");
         } else {
             $(".pagination-bar").clone().insertAfter("#resultsList");
+        }
+    }
+}
+
+/**
+ * Element in View function
+ */
+function isElementInViewOnScroll(selector) {
+    let animateSelector = 'scroll-in-view';
+    let elementList = document.querySelectorAll(selector);
+    if (elementList != undefined) {
+        for (let i = 0; i < elementList.length; i++) {
+
+            let bounds = elementList[i].getBoundingClientRect();
+            let elemTop = bounds.top;
+            let elemBottom = bounds.bottom;
+
+            let pageTop = elemTop + (window.innerHeight * (50 / 100));
+
+            if ((pageTop >= 0) && (elemBottom <= window.innerHeight)) {
+                elementList[i].classList.add(animateSelector);
+            } else {
+                elementList[i].classList.remove(animateSelector);
+            }
         }
     }
 }

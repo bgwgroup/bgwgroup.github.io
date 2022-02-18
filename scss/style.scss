@@ -507,6 +507,23 @@ ul.pagination {
 }
 
 
+/*=== Sherriff PLP Grid Patch ===*/
+
+#sheBody {
+    .pdppage {
+        #resultsList {
+            .productGridItem {
+                .priceContainer {
+                    span {
+                        display: inline-block !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
 /*=== My Account | Invoice Patch CSS ===*/
 
 .module-search-split {

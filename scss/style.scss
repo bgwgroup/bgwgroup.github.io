@@ -2603,6 +2603,7 @@ html {
 :root {
     --footyWhite: #FFFFFF;
     --footyBlack: #222222;
+    --footyDarkBlack: #000000;
     --footyGrey: #EEEEEE;
     --footyRed: #CC0000;
 }
@@ -2820,7 +2821,7 @@ html {
 
 #cnwBody {
     .footy-tipping-wrapper {
-        background-image: linear-gradient(to top, var(--footyBlack) 10%, transparent), linear-gradient(to bottom, var(--footyBlack) 10%, transparent), url('https://shop.cnw.com.au/medias/steel-background.jpg?context=bWFzdGVyfGltYWdlc3w0MTYyNTl8aW1hZ2UvanBlZ3xoMmYvaDIwLzk4MDk5MjY3NTAyMzgvc3RlZWwtYmFja2dyb3VuZC5qcGd8MjNlMGE3MDIyMTE0YjdmNzcyNTlmMmJlNDgyOWY5NTBhZjcxYjc1NTQ3MzY3YTUyNTQ3NmMzNjVjZmE4YTgwNw');
+        background-image: linear-gradient(to top, var(--footyDarkBlack) 10%, transparent), linear-gradient(to bottom, var(--footyDarkBlack) 10%, transparent), url('https://shop.cnw.com.au/medias/steel-background.jpg?context=bWFzdGVyfGltYWdlc3w0MTYyNTl8aW1hZ2UvanBlZ3xoMmYvaDIwLzk4MDk5MjY3NTAyMzgvc3RlZWwtYmFja2dyb3VuZC5qcGd8MjNlMGE3MDIyMTE0YjdmNzcyNTlmMmJlNDgyOWY5NTBhZjcxYjc1NTQ3MzY3YTUyNTQ3NmMzNjVjZmE4YTgwNw');
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;

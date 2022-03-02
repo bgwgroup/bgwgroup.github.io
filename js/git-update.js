@@ -90,6 +90,11 @@ let MajorTechCategories = {
     img: '/medias/Major-Tech-CNW-Hero-Slider.jpg?context=bWFzdGVyfGltYWdlc3w4NzA1MDh8aW1hZ2UvanBlZ3xoOTYvaDEwLzk4MDcyMTg1MDc4MDYvTWFqb3IgVGVjaCAtIENOVyAtIEhlcm8gU2xpZGVyLmpwZ3wxYzc3NTJlNjU1OGFkNWExYzk3YWZiNDY5MjVjZDhjMTcxNjcxOTY5MmRlY2FiNjU2ZGZlZjJlMzJkYmY1NTcx'
 };
 
+let NHPSwitchOnOff = {
+    cat: /text=nhp/gi,
+    img: '/medias/557330-NHP-CNW-March-Promotion-728x90-Leaderboard-FA.gif?context=bWFzdGVyfGltYWdlc3w1MjE0NHxpbWFnZS9naWZ8aGJmL2hkMS85ODEzMDY4MzQ5NDcwLzU1NzMzMCBOSFAgQ05XIE1hcmNoIFByb21vdGlvbl83Mjh4OTBfTGVhZGVyYm9hcmRfRkEuZ2lmfDM1YmJlMzYxYzIxOTJkMGI2MjRhZWNiNTM4MzEzMGFiZDRmMzlmMzFiMDU0OWFkNzg3YjY2ZWMwOWMzNWM2OTY'
+};
+
 ['DOMContentLoaded'].forEach((event) => {
     window.addEventListener(event, () => {
         addToFavouritesSelector();
@@ -118,6 +123,7 @@ let MajorTechCategories = {
 
         OneCategoryBanner(ThreeMCategories);
         OneCategoryBanner(MajorTechCategories);
+        OneCategoryBanner(NHPSwitchOnOff);
     });
 });
 

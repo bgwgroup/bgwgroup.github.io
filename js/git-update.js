@@ -1,6 +1,6 @@
-// if ($('form#command .cust-loginregbtn').length > 0) {
-//     $("form#command .cust-loginregbtn").removeClass("cust-loginregbtn");
-// }
+if ($('form#command .cust-loginregbtn').length > 0) {
+    $("form#command .cust-loginregbtn").removeClass("cust-loginregbtn");
+}
 
 // if(document.readyState === "complete") {
 //     console.log("1");

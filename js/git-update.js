@@ -98,8 +98,6 @@ let NHPSwitchOnOff = {
 ['DOMContentLoaded'].forEach((event) => {
     window.addEventListener(event, () => {
 
-        removeBrandsClassCategoryFacets();
-
         addToFavouritesSelector();
 
         try {
@@ -127,6 +125,8 @@ let NHPSwitchOnOff = {
         OneCategoryBanner(ThreeMCategories);
         OneCategoryBanner(MajorTechCategories);
         OneCategoryBanner(NHPSwitchOnOff);
+
+        removeBrandsClassCategoryFacets();
     });
 });
 
@@ -134,6 +134,23 @@ let NHPSwitchOnOff = {
     window.addEventListener('scroll', () => {
 
         isElementInViewOnScroll('.animate-in-view');
+
+        // scratch and win
+        new ParallaxEffect('.scratch-and-win .horizontal-line');
+
+        // Sherriff News and Promotion
+        new ParallaxEffect('.news-promotions .top__news__content');
+        new ParallaxEffect('.news-promotions .other__news__row .news__card');
+
+        // Sherriff SIP
+        new ParallaxEffect('.sip__container .vertical-line');
+        new ParallaxEffect('.sip__container .horizontal-line');
+
+        // Sherriff iQ Lighting
+        new ParallaxEffect('.iq__lighting .horizontal-line');
+
+        // Footy Tipping
+        new ParallaxEffect('.footy-parallax');
 
     });
 });
@@ -657,7 +674,6 @@ function isElementInViewOnScroll(selector) {
  * JS hack that will delete the random BrandsClassCategory on page load
  */
 function removeBrandsClassCategoryFacets() {
-    console.log('Loaded? removeBrandClassCategory?');
     let facetWrapper = document.querySelector('.facet-wrapper');
     let facetLinks = document.querySelectorAll('.facet-wrapper .facet_link');
     for (let i = 0; i < facetLinks.length; i++) {

@@ -97,6 +97,9 @@ let NHPSwitchOnOff = {
 
 ['DOMContentLoaded'].forEach((event) => {
     window.addEventListener(event, () => {
+
+        removeBrandsClassCategoryFacets();
+
         addToFavouritesSelector();
 
         try {
@@ -124,8 +127,6 @@ let NHPSwitchOnOff = {
         OneCategoryBanner(ThreeMCategories);
         OneCategoryBanner(MajorTechCategories);
         OneCategoryBanner(NHPSwitchOnOff);
-
-        removeBrandsClassCategoryFacets();
     });
 });
 

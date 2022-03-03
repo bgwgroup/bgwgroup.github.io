@@ -124,6 +124,8 @@ let NHPSwitchOnOff = {
         OneCategoryBanner(ThreeMCategories);
         OneCategoryBanner(MajorTechCategories);
         OneCategoryBanner(NHPSwitchOnOff);
+
+        removeBrandsClassCategoryFacets();
     });
 });
 
@@ -732,6 +734,20 @@ function isElementInViewOnScroll(selector) {
             } else {
                 elementList[i].classList.remove(animateSelector);
             }
+        }
+    }
+}
+
+/**
+ * JS hack that will delete the random BrandsClassCategory on page load
+ */
+function removeBrandsClassCategoryFacets() {
+    let facetWrapper = document.querySelector('.facet-wrapper');
+    let facetLinks = document.querySelectorAll('.facet-wrapper .facet_link');
+    for (let i = 0; i < facetLinks.length; i++) {
+        if (facetLinks[i].innerHTML === "Brands") {
+            // delete node that contains rogue BrandsClassCategory
+            facetWrapper.removeChild(facetLinks[i].parentElement.parentElement);
         }
     }
 }

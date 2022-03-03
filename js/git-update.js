@@ -742,6 +742,7 @@ function isElementInViewOnScroll(selector) {
  * JS hack that will delete the random BrandsClassCategory on page load
  */
 function removeBrandsClassCategoryFacets() {
+    console.log('Loaded? removeBrandClassCategory?');
     let facetWrapper = document.querySelector('.facet-wrapper');
     let facetLinks = document.querySelectorAll('.facet-wrapper .facet_link');
     for (let i = 0; i < facetLinks.length; i++) {

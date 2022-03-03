@@ -131,6 +131,8 @@ let NHPSwitchOnOff = {
 
 ['scroll'].forEach((event) => {
     window.addEventListener('scroll', () => {
+        /*
+        
         // scratch and win
         new ParallaxEffect('.scratch-and-win .horizontal-line');
 
@@ -147,6 +149,8 @@ let NHPSwitchOnOff = {
 
         // Footy Tipping
         new ParallaxEffect('.footy-parallax');
+
+        */
 
         isElementInViewOnScroll('.animate-in-view');
     });

@@ -1,4 +1,10 @@
-[
+[{
+        "image": "/medias/Samios-950x298.png?context=bWFzdGVyfGltYWdlc3wyMTA1NzB8aW1hZ2UvcG5nfGg1Yy9oNjkvOTgxNzYyMzAzNTkzNC9TYW1pb3MgOTUweDI5OC5wbmd8YmIzMDQxZmE2YjFjNDdmNzBkNzM3YWE5YWQwYjdiOTlhZmQ1ZGUyMTk5ZmRlZjQ3ZDVmMjQ0NTA3YTU4ZGJmYg",
+        "title": "ERP Integration",
+        "description": "Never worry about outdated invoices and price files again",
+        "link": "/erp-integration",
+        "active": "no"
+    },
     {
         "image": "/medias/sam-colouring-competition-banner.jpg?context=bWFzdGVyfGltYWdlc3wyNzQ5MjR8aW1hZ2UvanBlZ3xoY2YvaDNmLzkzOTU5MjEwNTk4NzAvc2FtLWNvbG91cmluZy1jb21wZXRpdGlvbi1iYW5uZXIuanBnfDc4Y2MzNGU1OTY5MjAyZjBjNTkyMmMxNTQ3NGM5YmY5NTlmMDFhNzE0ZDk2OWI3MjA0MzkzZDBjMTU4ZjMzNDI",
         "title": "Colouring Competition",

@@ -1,4 +1,11 @@
 [{
+        "image": "/medias/CNW-679x679.png?context=bWFzdGVyfGltYWdlc3wyMzAyMDl8aW1hZ2UvcG5nfGhiMy9oMWUvOTgxNzYyMjk3MDM5OC9DTlcgNjc5eDY3OS5wbmd8NDMzNjgyMWJiMWQ0NGEwNmMwYTIyNzZhYjQ4ODVhYjlkNTgyMzU3MzFkZTAxMGY1MTA0ZGQ1ODAzNzk0YzEwNg",
+        "title": "ERP Integration",
+        "description": "Never worry about outdated invoices or price files again",
+        "link": "/erp-integration",
+        "active": "yes"
+    },
+    {
         "image": "/medias/557330-NHP-CNW-March-Promotion-679x679-WebNews-FA.jpg?context=bWFzdGVyfGltYWdlc3wyMTIyODl8aW1hZ2UvanBlZ3xoZWQvaGNkLzk4MTMwNjg0ODA1NDIvNTU3MzMwIE5IUCBDTlcgTWFyY2ggUHJvbW90aW9uXzY3OXg2NzlfV2ViTmV3c19GQS5qcGd8YTViNThhMTVlYTdmMjE5MzQ2NWIzZWQ4NmU4MWIyZWFkMWQ0ODM3NjM5ZTYzYWEyNDhjZGQxMTM2MGQ1ZTk2MQ",
         "title": "NHP Switch On Switch Off",
         "description": "Take your pick",

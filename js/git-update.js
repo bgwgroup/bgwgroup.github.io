@@ -187,10 +187,12 @@ function favouriteSearchFilter() {
 
     favSeachForm.addEventListener('keyup', () => {
         let favSearchFormValue = favSeachForm.value.toUpperCase();
+        console.log('favSearchFormValue: ', favSearchFormValue);
         for (let i = 0; i < favGridItem.length; i++) {
             let textValue = favGridItem[i].textContent || favGridItem[i].innerText[i];
             if (textValue.toUpperCase().indexOf(favSearchFormValue) > -1) {
                 favGridItem[i].style.display = "";
+                console.log('favGridItem: ', favGridItem[i]);
             } else {
                 favGridItem[i].style.display = "none";
             }

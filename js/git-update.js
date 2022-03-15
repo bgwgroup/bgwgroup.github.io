@@ -154,11 +154,12 @@ let NHPSwitchOnOff = {
 
     });
 });
-// ['change'].forEach((event) => {
-//     window.add.addEventListener(event, () => {
 
-//     });
-// });
+['change'].forEach((event) => {
+    window.add.addEventListener(event, () => {
+        favouriteSearchFilter();
+    });
+});
 
 /**
  * add favorites selector to add to favourites button before page load

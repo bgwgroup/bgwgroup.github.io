@@ -156,7 +156,7 @@ let NHPSwitchOnOff = {
 });
 
 ['change'].forEach((event) => {
-    window.add.addEventListener(event, () => {
+    window.addEventListener(event, () => {
         favouriteSearchFilter();
     });
 });

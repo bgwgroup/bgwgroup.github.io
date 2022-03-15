@@ -102,8 +102,8 @@ let NHPSwitchOnOff = {
 
         try {
             colouringCompetitionYear();
-            favouriteSearchFilter();
         } catch (error) {}
+        favouriteSearchFilter();
 
         shopByToggleFacets();
 
@@ -151,6 +151,11 @@ let NHPSwitchOnOff = {
 
         // Footy Tipping
         new ParallaxEffect('.footy-parallax');
+
+    });
+});
+['change'].forEach((event) => {
+    window.add.addEventListener(event, () => {
 
     });
 });

@@ -102,8 +102,8 @@ let NHPSwitchOnOff = {
 
         try {
             colouringCompetitionYear();
+            favouriteSearchFilter();
         } catch (error) {}
-        favouriteSearchFilter();
 
         shopByToggleFacets();
 

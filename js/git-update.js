@@ -624,12 +624,16 @@ function removeBrandsClassCategoryFacets() {
 $(document).ready(function() {
     // temporary code until code change is deployed to P1
     var favouritesSearchForm = $('.fav-list-search-filter #favListSearchFilter');
-    var favGridItem = $('#favourite_list .fav_grid');
 
-    favouritesSearchForm.on('keyup', function() {
-        var formValue = $(this).val().toLowerCase();
-        favGridItem.filter(function() {
-            $(this).toggle($(this).text().toLowerCase().indexOf(formValue) > -1);
+    $('body').on('keyup', function() {
+        var formValue = favouritesSearchForm.val().toLowerCase();
+        console.log(formValue);
+
+        $('#favourite_list .fav_grid').each(function() {
+
+            $(this).filter(function() {
+                $(this).toggle($(this).text().toLowerCase().indexOf(formValue) > -1);
+            });
         });
     });
 });

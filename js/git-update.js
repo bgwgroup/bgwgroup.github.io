@@ -635,9 +635,9 @@ $(document).ready(function() {
         var formValue = $(this).val().toLowerCase();
         $('#favourite_list .fav_grid').each(function() {
             if ($(this).text().search(formValue) > -1) {
-                $(this).show();
+                $(this).css('display', '');
             } else {
-                $(this).hide();
+                $(this).css('display', 'none');
             }
         });
     });

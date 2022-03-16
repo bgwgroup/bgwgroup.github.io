@@ -2,53 +2,6 @@ if ($('form#command .cust-loginregbtn').length > 0) {
     $("form#command .cust-loginregbtn").removeClass("cust-loginregbtn");
 }
 
-// if(document.readyState === "complete") {
-//     console.log("1");
-// }
-// else if(document.readyState === "interactive") {
-//     console.log("2");
-// }
-// else {
-//     console.log("3");
-
-//     window.addEventListener("DOMContentLoaded", () => {
-//         console.log("4");
-//     });
-
-//     window.addEventListener("load", () => {
-//         console.log("5");
-// 	    if (document.getElementById("sheBody")) {
-// 		  if ($("body").hasClass("page-singleStepCheckoutSummaryPage")) {
-// 		    console.log("6");
-// 			  setTimeout(function(){
-// 			  with (ACC.checkoutB2B) {
-// 		      defaultDeliveryMode();
-// 		      deliveryMode();
-// 		      deliveryAddress();
-// 		    }
-// 			  }, 2000);
-
-// 		  }
-// 		}
-// 	    if (document.getElementById("samBody")) {
-// 		  if ($("body").hasClass("page-singleStepCheckoutSummaryPage")) {
-// 		    console.log("7");
-// 			  setTimeout(function(){
-// 			  with (ACC.checkoutB2B) {
-// 		      defaultDeliveryMode();
-// 		      deliveryMode();
-// 		      deliveryAddress();
-// 		    }
-// 			  }, 2000);
-
-// 		  }
-// 		}
-
-
-
-//     });
-// }
-
 /**
  * PLP Page Slider Display
  */
@@ -102,7 +55,6 @@ let NHPSwitchOnOff = {
 
         try {
             colouringCompetitionYear();
-            //favouriteSearchFilter();
         } catch (error) {}
 
         shopByToggleFacets();
@@ -179,27 +131,6 @@ function colouringCompetitionYear() {
     coloringCompTableSpan.innerHTML = coloringCompTableSpan.innerHTML + " " + new Date().getFullYear();
 }
 
-/**
- * Search filter for wishlists
- */
-function favouriteSearchFilter() {
-    let favSeachForm = document.querySelector('.fav-list-search-filter #favListSearchFilter');
-    let favGridItem = document.querySelectorAll('#favourite_list .fav_grid');
-
-    favSeachForm.addEventListener('keyup', () => {
-        let favSearchFormValue = favSeachForm.value.toUpperCase();
-        console.log('favSearchFormValue: ', favSearchFormValue);
-        for (let i = 0; i < favGridItem.length; i++) {
-            let textValue = favGridItem[i].textContent || favGridItem[i].innerText[i];
-            if (textValue.toUpperCase().indexOf(favSearchFormValue) > -1) {
-                favGridItem[i].style.display = "";
-                console.log('favGridItem: ', favGridItem[i]);
-            } else {
-                favGridItem[i].style.display = "none";
-            }
-        }
-    });
-}
 
 /**
  * Facet Toggle Accordion
@@ -691,3 +622,23 @@ function removeBrandsClassCategoryFacets() {
         }
     }
 }
+
+/**
+ * Search filter for wishlists
+ */
+
+$(document).ready(function() {
+    // temporary code until code change is deployed to P1
+    var favouritesSearchForm = $('.fav-list-search-filter #favListSearchFilter');
+
+    favouritesSearchForm.on('keyup', function() {
+        var formValue = $(this).val().toLowerCase();
+        $('#favourite_list .fav_grid').each(function() {
+            if ($(this).text().search(formValue) > -1) {
+                $(this).show();
+            } else {
+                $(this).hide();
+            }
+        });
+    });
+});

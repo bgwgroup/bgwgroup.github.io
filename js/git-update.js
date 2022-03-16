@@ -102,7 +102,7 @@ let NHPSwitchOnOff = {
 
         try {
             colouringCompetitionYear();
-            favouriteSearchFilter();
+            //favouriteSearchFilter();
         } catch (error) {}
 
         shopByToggleFacets();

@@ -627,7 +627,6 @@ $(document).ready(function() {
 
     $('body').on('keyup', function() {
         var formValue = favouritesSearchForm.val().toLowerCase();
-        console.log(formValue);
 
         $('#favourite_list .fav_grid').each(function() {
 

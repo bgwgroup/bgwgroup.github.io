@@ -2114,8 +2114,8 @@ html {
   background-position: center; }
 
 /*==== Login Page CSS Format Fix ====*/
-#bgwt .cust-login {
+#bgwtBody .cust-login {
   flex-wrap: wrap; }
-  #bgwt .cust-login > div {
+  #bgwtBody .cust-login > div {
     -ms-flex: 1 0 auto;
     flex: 1 0 auto; }

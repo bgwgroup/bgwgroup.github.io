@@ -2854,6 +2854,22 @@ html {
         >div {
             -ms-flex: 1 0 auto;
             flex: 1 0 auto;
+            width: 100%;
+        }
+        div:nth-of-type(3),
+        div:nth-of-type(4) {
+            max-width: 50%;
+        }
+        input#Remember {
+            width: auto;
+            height: auto;
+            min-height: unset;
+            margin-right: 0.55rem;
+            position: relative;
+            bottom: -0.02rem;
+        }
+        .forgotten-password {
+            margin-top: 0.95rem;
         }
     }
 }

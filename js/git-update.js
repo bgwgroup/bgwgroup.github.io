@@ -79,6 +79,8 @@ let NHPSwitchOnOff = {
         OneCategoryBanner(NHPSwitchOnOff);
 
         removeBrandsClassCategoryFacets();
+
+        rerouteBGWTLoginButton();
     });
 });
 
@@ -614,6 +616,14 @@ function removeBrandsClassCategoryFacets() {
             // delete node that contains rogue BrandsClassCategory
             facetWrapper.removeChild(facetLinks[i].parentElement.parentElement);
         }
+    }
+}
+
+function rerouteBGWTLoginButton() {
+    let bgwtProfileButton = document.querySelector('.bgwt-profile');
+    if (bgwtProfileButton) {
+        event.preventDefault()
+        window.location.href = '/login';
     }
 }
 

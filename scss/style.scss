@@ -2844,3 +2844,16 @@ html {
         background-position: center;
     }
 }
+
+
+/*==== Login Page CSS Format Fix ====*/
+
+#bgwt {
+    .cust-login {
+        flex-wrap: wrap;
+        >div {
+            -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
+        }
+    }
+}

@@ -622,8 +622,10 @@ function removeBrandsClassCategoryFacets() {
 function rerouteBGWTLoginButton() {
     let bgwtProfileButton = document.querySelector('.bgwt-profile');
     if (bgwtProfileButton) {
-        event.preventDefault()
-        window.location.href = '/login';
+        bgwtProfileButton.addEventListener('click', () => {
+            event.preventDefault()
+            window.location.href = '/login';
+        });
     }
 }
 

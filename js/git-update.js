@@ -626,13 +626,15 @@ $(document).ready(function() {
     var favouritesSearchForm = $('.fav-list-search-filter #favListSearchFilter');
 
     $('body').on('keyup', function() {
-        var formValue = favouritesSearchForm.val().toLowerCase();
+        try {
+            var formValue = favouritesSearchForm.val().toLowerCase();
 
-        $('#favourite_list .fav_grid').each(function() {
+            $('#favourite_list .fav_grid').each(function() {
 
-            $(this).filter(function() {
-                $(this).toggle($(this).text().toLowerCase().indexOf(formValue) > -1);
+                $(this).filter(function() {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(formValue) > -1);
+                });
             });
-        });
+        } catch (error) {}
     });
 });

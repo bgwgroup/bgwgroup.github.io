@@ -2132,3 +2132,6 @@ html {
     bottom: -0.02rem; }
   #bgwtBody .cust-login .forgotten-password {
     margin-top: 0.95rem; }
+
+#bgwtBody.page-login .main__container .main__inner-wrapper {
+  flex-grow: unset !important; }

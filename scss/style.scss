@@ -2873,3 +2873,9 @@ html {
         }
     }
 }
+
+#bgwtBody.page-login {
+    .main__container .main__inner-wrapper {
+        flex-grow: unset !important;
+    }
+}

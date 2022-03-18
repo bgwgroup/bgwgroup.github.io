@@ -2133,5 +2133,12 @@ html {
   #bgwtBody .cust-login .forgotten-password {
     margin-top: 0.95rem; }
 
+#bgwtBody .cust-login.logged-in-user div:nth-of-type(3),
+#bgwtBody .cust-login.logged-in-user div:nth-of-type(4) {
+  max-width: 100%; }
+
+#bgwtBody .cust-login.logged-in-user div:nth-of-type(4) {
+  display: none; }
+
 #bgwtBody.page-login .main__container .main__inner-wrapper {
   flex-grow: unset !important; }

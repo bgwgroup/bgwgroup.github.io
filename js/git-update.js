@@ -678,7 +678,8 @@ $(document).ready(function() {
         });
 
         // BGWT log out page event handle
-        $('#bgwt .account-actions a[href="/bgwt/en/AUD/logout"]').on('click', function() {
+        $('#bgwt .account-actions a[href="/bgwt/en/AUD/logout"]').on('click', function(e) {
+            e.preventDefault();
             window.location.href = window.location.origin;
         });
     } catch (error) {}

@@ -680,22 +680,7 @@ $(document).ready(function() {
         // BGWT log out page event handle
         $('#bgwt .account-actions a[href="/bgwt/en/AUD/logout"]').on('click', function(e) {
             e.preventDefault();
-
-            $.ajax({
-                url: '/logout',
-                type: 'POST',
-                data: {
-                    j_username: userID + $(formID + ' input#j_username').val(),
-                    j_password: $(formID + ' input#j_password').val()
-                },
-                async: false,
-                success: function(response) {
-                    window.location.href = window.location.origin;
-                },
-                error: function(jqXHR, textStatus, errorThrown) {
-                    console.log(`${jqXHR}\n${textStatus}\n${errorThrown}`);
-                }
-            });
+            window.location.href = window.location.origin;
         });
     } catch (error) {}
 

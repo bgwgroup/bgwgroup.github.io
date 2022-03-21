@@ -652,12 +652,14 @@ $(document).ready(function() {
 
     try {
         // stop login form from submitting
-        $('#loginForm').submit(function(e) {
+        $('#bgwt #loginForm').submit(function(e) {
             e.preventDefault();
         });
 
         // hide logged in default page
         $('#bgwt .login-section button[type="submit"]').on('click', function(e) {
+            e.preventDefault();
+
             $.ajax({
                 url: '/j_spring_security_check',
                 type: 'POST',

@@ -650,38 +650,4 @@ $(document).ready(function() {
         } catch (error) {}
     });
 
-    try {
-        // stop login form from submitting
-        $('#bgwt #loginForm').submit(function(e) {
-            e.preventDefault();
-        });
-
-        // hide logged in default page
-        $('#bgwt .login-section button[type="submit"]').on('click', function(e) {
-            e.preventDefault();
-
-            $.ajax({
-                url: '/j_spring_security_check',
-                type: 'POST',
-                data: {
-                    j_username: userID + $(formID + ' input#j_username').val(),
-                    j_password: $(formID + ' input#j_password').val()
-                },
-                async: false,
-                success: function(response) {
-                    window.location.href = window.location.origin;
-                },
-                error: function(jqXHR, textStatus, errorThrown) {
-                    console.log(`${jqXHR}\n${textStatus}\n${errorThrown}`);
-                }
-            });
-        });
-
-        // BGWT log out page event handle
-        $('#bgwt .account-actions a[href="/bgwt/en/AUD/logout"]').on('click', function(e) {
-            e.preventDefault();
-            window.location.href = window.location.origin;
-        });
-    } catch (error) {}
-
 });

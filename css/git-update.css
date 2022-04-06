@@ -2142,3 +2142,14 @@ html {
 
 #bgwtBody.page-login .main__container .main__inner-wrapper {
   flex-grow: unset !important; }
+
+.double-dip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 50px;
+  max-height: 50px;
+  background: url("https://shop.samios.net.au/medias/great-double-dip-2.svg?context=bWFzdGVyfGltYWdlc3wxNDI3NDh8aW1hZ2Uvc3ZnK3htbHxoNmUvaDg4Lzk4MjgwMzExNjg1NDIvZ3JlYXQtZG91YmxlLWRpcC0yLnN2Z3w1N2U3YmMwMjVjNGYzNzU0NDVkNzI0YWI1ZWE0MDA3ZTMyNWJjNTNmM2E1N2Y2MDU4YzFiNDE2MDU3MzMxMmIy") no-repeat center;
+  background-size: contain; }

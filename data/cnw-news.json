@@ -1,4 +1,18 @@
 [{
+        "image": "/medias/557330-NHP-CNW-March-Promotion-679x679-WebNews-FA.jpg?context=bWFzdGVyfGltYWdlc3wyMTIyODl8aW1hZ2UvanBlZ3xoZWQvaGNkLzk4MTMwNjg0ODA1NDIvNTU3MzMwIE5IUCBDTlcgTWFyY2ggUHJvbW90aW9uXzY3OXg2NzlfV2ViTmV3c19GQS5qcGd8YTViNThhMTVlYTdmMjE5MzQ2NWIzZWQ4NmU4MWIyZWFkMWQ0ODM3NjM5ZTYzYWEyNDhjZGQxMTM2MGQ1ZTk2MQ",
+        "title": "NHP Switch On Switch Off",
+        "description": "Take your pick",
+        "link": "/NHPSwitchOn_SwitchOff2022",
+        "active": "yes"
+    },
+    {
+        "image": "/medias/CNW-679x679.png?context=bWFzdGVyfGltYWdlc3wyMzAyMDl8aW1hZ2UvcG5nfGhiMy9oMWUvOTgxNzYyMjk3MDM5OC9DTlcgNjc5eDY3OS5wbmd8NDMzNjgyMWJiMWQ0NGEwNmMwYTIyNzZhYjQ4ODVhYjlkNTgyMzU3MzFkZTAxMGY1MTA0ZGQ1ODAzNzk0YzEwNg",
+        "title": "ERP Integration",
+        "description": "Never worry about outdated invoices or price files again",
+        "link": "/erp-integration",
+        "active": "yes"
+    },
+    {
         "image": "/medias/WHPH-2022-Banner-Website-N-P.jpg?context=bWFzdGVyfGltYWdlc3wxNTg0MjZ8aW1hZ2UvanBlZ3xoZGQvaGEyLzk4MDU4MDYwMTAzOTgvV0hQSCAyMDIyIEJhbm5lcl9XZWJzaXRlX04mUC5qcGd8NjM2NDYxODY2YWE3ODM4NWViMTY5YWJmNTczNGVkMzkwZTEyOTUxMWFlYzE4Mzg5YjdlNDI3MDc0ZjdlZjgzZA",
         "title": "Work Hard Play Hard",
         "description": "50 cool prizes for choose from!",
@@ -10,7 +24,7 @@
         "title": "3M Kayak Competition",
         "description": "Win 1 of 5 Kings Fishing Kayaks",
         "link": "/cnw/en/AUD/search?q=3m+tape%3Arelevance%3Acnw_brands%3A3M",
-        "active": "no"
+        "active": "yes"
     },
     {
         "image": "/medias/cnw-major-tech-promo.jpg?context=bWFzdGVyfGltYWdlc3wyMTk5NjR8aW1hZ2UvanBlZ3xoZjMvaDRmLzk4MDcyMTkyOTQyMzgvY253LW1ham9yLXRlY2gtcHJvbW8uanBnfGI0YzM5MjY1YWI2NjU1NzNmYTE0YzI1Yjk1MWYxNjg1MjI5NTY0YWM3ODZlMzJlZjVjNDUzMWEwNjQ3ZmJjYTQ",

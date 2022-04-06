@@ -2,53 +2,6 @@ if ($('form#command .cust-loginregbtn').length > 0) {
     $("form#command .cust-loginregbtn").removeClass("cust-loginregbtn");
 }
 
-// if(document.readyState === "complete") {
-//     console.log("1");
-// }
-// else if(document.readyState === "interactive") {
-//     console.log("2");
-// }
-// else {
-//     console.log("3");
-
-//     window.addEventListener("DOMContentLoaded", () => {
-//         console.log("4");
-//     });
-
-//     window.addEventListener("load", () => {
-//         console.log("5");
-// 	    if (document.getElementById("sheBody")) {
-// 		  if ($("body").hasClass("page-singleStepCheckoutSummaryPage")) {
-// 		    console.log("6");
-// 			  setTimeout(function(){
-// 			  with (ACC.checkoutB2B) {
-// 		      defaultDeliveryMode();
-// 		      deliveryMode();
-// 		      deliveryAddress();
-// 		    }
-// 			  }, 2000);
-
-// 		  }
-// 		}
-// 	    if (document.getElementById("samBody")) {
-// 		  if ($("body").hasClass("page-singleStepCheckoutSummaryPage")) {
-// 		    console.log("7");
-// 			  setTimeout(function(){
-// 			  with (ACC.checkoutB2B) {
-// 		      defaultDeliveryMode();
-// 		      deliveryMode();
-// 		      deliveryAddress();
-// 		    }
-// 			  }, 2000);
-
-// 		  }
-// 		}
-
-
-
-//     });
-// }
-
 /**
  * PLP Page Slider Display
  */
@@ -90,13 +43,18 @@ let MajorTechCategories = {
     img: '/medias/Major-Tech-CNW-Hero-Slider.jpg?context=bWFzdGVyfGltYWdlc3w4NzA1MDh8aW1hZ2UvanBlZ3xoOTYvaDEwLzk4MDcyMTg1MDc4MDYvTWFqb3IgVGVjaCAtIENOVyAtIEhlcm8gU2xpZGVyLmpwZ3wxYzc3NTJlNjU1OGFkNWExYzk3YWZiNDY5MjVjZDhjMTcxNjcxOTY5MmRlY2FiNjU2ZGZlZjJlMzJkYmY1NTcx'
 };
 
+let NHPSwitchOnOff = {
+    cat: /=nhp/gi,
+    img: '/medias/557330-NHP-CNW-March-Promotion-728x90-Leaderboard-FA.gif?context=bWFzdGVyfGltYWdlc3w1MjE0NHxpbWFnZS9naWZ8aGJmL2hkMS85ODEzMDY4MzQ5NDcwLzU1NzMzMCBOSFAgQ05XIE1hcmNoIFByb21vdGlvbl83Mjh4OTBfTGVhZGVyYm9hcmRfRkEuZ2lmfDM1YmJlMzYxYzIxOTJkMGI2MjRhZWNiNTM4MzEzMGFiZDRmMzlmMzFiMDU0OWFkNzg3YjY2ZWMwOWMzNWM2OTY'
+};
+
 ['DOMContentLoaded'].forEach((event) => {
     window.addEventListener(event, () => {
+
         addToFavouritesSelector();
 
         try {
             colouringCompetitionYear();
-            favouriteSearchFilter();
         } catch (error) {}
 
         shopByToggleFacets();
@@ -118,11 +76,17 @@ let MajorTechCategories = {
 
         OneCategoryBanner(ThreeMCategories);
         OneCategoryBanner(MajorTechCategories);
+        OneCategoryBanner(NHPSwitchOnOff);
+
+        removeBrandsClassCategoryFacets();
     });
 });
 
 ['scroll'].forEach((event) => {
     window.addEventListener('scroll', () => {
+
+        isElementInViewOnScroll('.animate-in-view');
+
         // scratch and win
         new ParallaxEffect('.scratch-and-win .horizontal-line');
 
@@ -140,7 +104,6 @@ let MajorTechCategories = {
         // Footy Tipping
         new ParallaxEffect('.footy-parallax');
 
-        isElementInViewOnScroll('.animate-in-view');
     });
 });
 
@@ -162,25 +125,6 @@ function colouringCompetitionYear() {
     coloringCompTableSpan.innerHTML = coloringCompTableSpan.innerHTML + " " + new Date().getFullYear();
 }
 
-/**
- * Search filter for wishlists
- */
-function favouriteSearchFilter() {
-    let favSeachForm = document.querySelector('.fav-list-search-filter #favListSearchFilter');
-    let favGridItem = document.querySelectorAll('#favourite_list .fav_grid');
-
-    favSeachForm.addEventListener('keyup', () => {
-        let favSearchFormValue = favSeachForm.value.toUpperCase();
-        for (let i = 0; i < favGridItem.length; i++) {
-            let textValue = favGridItem[i].textContent || favGridItem[i].innerText[i];
-            if (textValue.toUpperCase().indexOf(favSearchFormValue) > -1) {
-                favGridItem[i].style.display = "";
-            } else {
-                favGridItem[i].style.display = "none";
-            }
-        }
-    });
-}
 
 /**
  * Facet Toggle Accordion
@@ -212,77 +156,6 @@ function renderBgImage(selector) {
         }
     }
 }
-
-/**
- * ======================= PARALLAX EFFECT FUNCTIONS  =======================
- */
-
-var ParallaxEffect = function(selector) {
-    var element = document.querySelectorAll(selector);
-    if (element) {
-        this.elemSelector = element;
-    }
-    this.winScroll = window.pageYOffset || document.documentElement.scrollTop;
-    this.init();
-};
-ParallaxEffect.prototype.init = function() {
-    if (this.elemSelector) {
-        for (var i = 0; i < this.elemSelector.length; i++) {
-            var currentElement = this.elemSelector[i];
-
-            var elemRateX = this.elemAttribute(currentElement, 'data-rateX');
-            var elemRateY = this.elemAttribute(currentElement, 'data-rateY');
-            var elemDirection = this.elemAttribute(currentElement, 'data-direction');
-
-            var rateX = this.winScroll * elemRateX;
-            var rateY = this.winScroll * elemRateY;
-
-            var isElementInView = this.checkViewport(currentElement);
-            if (isElementInView) {
-                this.applyParallax(currentElement, elemDirection, rateX, rateY);
-            } else {
-                this.applyParallax(currentElement, elemDirection, 0, 0);
-            }
-        }
-    }
-};
-ParallaxEffect.prototype.elemAttribute = function(element, attribute) {
-    if (element.getAttribute(attribute) !== null) {
-        var elemAttribute = element.getAttribute(attribute);
-        return elemAttribute;
-    } else {
-        return "0";
-    }
-};
-ParallaxEffect.prototype.checkViewport = function(element) {
-    var bounds = element.getBoundingClientRect();
-    var elemTop = bounds.top;
-    var elemBottom = bounds.bottom;
-
-    var pageTop = elemTop + (window.innerHeight * (50 / 100));
-    if ((pageTop >= 0) && (elemBottom <= window.innerHeight)) {
-        return true;
-    }
-};
-ParallaxEffect.prototype.applyParallax = function(nodeElement, direction, rateX, rateY) {
-    if (direction === 'vertical') {
-        nodeElement.style.setProperty('-webkit-transform', 'translate3d(' + rateX + 'px,' + rateY + 'px,0)');
-        nodeElement.style.setProperty('-ms-transform', 'translate3d(' + rateX + 'px,' + rateY + 'px,0)');
-        nodeElement.style.setProperty('-moz-transform', 'translate3d(' + rateX + 'px,' + rateY + 'px,0)');
-        nodeElement.style.setProperty('transform', 'translate3d(' + rateX + 'px,' + rateY + 'px,0)');
-        nodeElement.style.setProperty('-webkit-transition', 'all 0.5s linear');
-        nodeElement.style.setProperty('transition', 'all 0.5s linear');
-    }
-
-    if (direction === 'horizontal') {
-        nodeElement.style.setProperty('-webkit-transform', 'translate3d(' + rateX + 'px,' + rateY + 'px,0)');
-        nodeElement.style.setProperty('-ms-transform', 'translate3d(' + rateX + 'px,' + rateY + 'px,0)');
-        nodeElement.style.setProperty('-moz-transform', 'translate3d(' + rateX + 'px,' + rateY + 'px,0)');
-        nodeElement.style.setProperty('transform', 'translate3d(' + rateX + 'px,' + rateY + 'px,0)');
-        nodeElement.style.setProperty('-webkit-transition', 'all 0.5s linear');
-        nodeElement.style.setProperty('transition', 'all 0.5s linear');
-    }
-};
 
 /**
  * News and Promotion Landing Page 
@@ -729,3 +602,40 @@ function isElementInViewOnScroll(selector) {
         }
     }
 }
+
+/**
+ * JS hack that will delete the random BrandsClassCategory on page load
+ */
+function removeBrandsClassCategoryFacets() {
+    let facetWrapper = document.querySelector('#bgwtBody .facet-wrapper');
+    let facetLinks = document.querySelectorAll('#bgwtBody .facet-wrapper .facet_link');
+    for (let i = 0; i < facetLinks.length; i++) {
+        if (facetLinks[i].innerHTML === "Brands") {
+            // delete node that contains rogue BrandsClassCategory
+            facetWrapper.removeChild(facetLinks[i].parentElement.parentElement);
+        }
+    }
+}
+
+/**
+ * Search filter for wishlists
+ */
+
+$(document).ready(function() {
+    // temporary code until code change is deployed to P1
+    var favouritesSearchForm = $('.fav-list-search-filter #favListSearchFilter');
+
+    $('body').on('keyup', function() {
+        try {
+            var formValue = favouritesSearchForm.val().toLowerCase();
+
+            $('#favourite_list .fav_grid').each(function() {
+
+                $(this).filter(function() {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(formValue) > -1);
+                });
+            });
+        } catch (error) {}
+    });
+
+});

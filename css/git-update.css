@@ -2143,7 +2143,7 @@ html {
 #bgwtBody.page-login .main__container .main__inner-wrapper {
   flex-grow: unset !important; }
 
-.double-dip {
+.thumb .double-dip {
   position: absolute;
   top: 0;
   left: 0;

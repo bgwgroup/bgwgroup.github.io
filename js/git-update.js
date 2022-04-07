@@ -79,6 +79,8 @@ let NHPSwitchOnOff = {
         OneCategoryBanner(NHPSwitchOnOff);
 
         removeBrandsClassCategoryFacets();
+
+        searchAccountPoints();
     });
 });
 
@@ -639,3 +641,55 @@ $(document).ready(function() {
     });
 
 });
+
+
+/**
+ * Samios Double Dip Points Search
+ */
+function searchAccountPoints() {
+    let pointSearch = document.querySelector('.dip-points-search input');
+    let pointResults = document.querySelector('.dip-points-search-results');
+    let loadingSpin = document.querySelector('.dip-search-loader');
+
+    let nameSpan = document.createElement('span');
+    let pointSpan = document.createElement('span');
+    var data = undefined;
+
+    pointSearch.addEventListener('keyup', function() {
+        if (this.value.length >= 2) {
+            loadingSpin.style.display = 'block';
+            if (window.XMLHttpRequest) {
+                let xhr = new XMLHttpRequest();
+                xhr.onreadystatechange = function() {
+                    if (xhr.readyState == 4 && xhr.status == 200) {
+                        loadingSpin.style.display = 'none';
+                        try {
+                            data = JSON.parse(this.responseText);
+                            for (let i = 0; i < data.length; i++) {
+                                nameSpan.innerHTML = data[i]['name'];
+                                pointSpan.innerHTML = '<strong>' + data[i]['total_points'] + '</strong> points';
+                            }
+                        } catch (jsonError) {}
+
+
+                        if (pointResults.children.length === 0) {
+                            setTimeout(function() {
+                                pointResults.appendChild(nameSpan);
+                                pointResults.appendChild(pointSpan);
+                            }, 800);
+                        }
+                    }
+                };
+                xhr.open('GET', 'https://bgwgroup.com.au/rheem-avg-points/get-rheem-points.php?account=' + this.value, true);
+                xhr.send();
+            }
+        } else {
+            try {
+                loadingSpin.style.display = 'none';
+                pointResults.removeChild(nameSpan);
+                pointResults.removeChild(pointSpan);
+                pointResults.innerHTML = "";
+            } catch (err) {}
+        }
+    });
+}

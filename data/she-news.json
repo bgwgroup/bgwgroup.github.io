@@ -25,7 +25,7 @@
         "description": "Be the fastest sparky in Aus and win $5000! Spend $200 or more on any NHP ISO product to play and win!",
         "link": "https://www.nhpcompetitions.com.au/",
         "external": "yes",
-        "active": "yes"
+        "active": "no"
     },
     {
         "image": "/medias/clipsal-summer.jpg?context=bWFzdGVyfGltYWdlc3w2MTMwMHxpbWFnZS9qcGVnfGhjZS9oYzEvOTY4MDYxNDY1Mzk4Mi9jbGlwc2FsLXN1bW1lci5qcGd8ZTkxZDMwNzRkNDM3Yjc5Y2M5ODU4YWMzM2RkNjM3YmMxYThjZWMwMjc2ZGI1ZTUwMzIyMjMxMTIzNGUwNDRkYw",
@@ -33,14 +33,14 @@
         "description": "Clipsal is giving away five $1000 gift cards every day in November. Simply purchase $300 on participating Clipsal products for your chance to win",
         "link": "https://www.clipsal.com/summer",
         "external": "yes",
-        "active": "yes"
+        "active": "no"
     },
     {
         "image": "/medias/mhi-card.jpg?context=bWFzdGVyfGltYWdlc3w1MDg5MTF8aW1hZ2UvanBlZ3xoMzUvaGFmLzk1MDk2MDM0NDI3MTgvbWhpLWNhcmQuanBnfGI2YmMyNjNjMzJlNzkzZDkzZTY4NmJkNjFmOTUxNzdhYzM5N2YzMjUzMGU3ZmQ1YjM1NDY0MWE0MjM5MmNkNjM",
         "title": "For the installers",
         "description": "It pays to be onboard",
         "link": "/mhi-powerplus-installers-promo",
-        "active": "yes"
+        "active": "no"
     },
     {
         "image": "/medias/iq-lighting-banner.jpg?context=bWFzdGVyfGltYWdlc3wzNTAwNTR8aW1hZ2UvanBlZ3xoMTEvaGE5Lzk3ODM0NDkxNTc2NjIvaXEtbGlnaHRpbmctYmFubmVyLmpwZ3xmZGVkMWZkZTNiYWZlNzNlMDNkYTdiMjAwNDFiODVmNGFhNjVjMWZlNmJmZTA5MmE5ZWYxNTI5NjZiMDUwYmRl",

@@ -639,3 +639,51 @@ $(document).ready(function() {
     });
 
 });
+
+/**
+ * Samios Double Dip Point Search API
+ */
+window.addEventListener('DOMContentLoaded', () => {
+    console.log('Double Dip Loaded');
+
+    let pointSearch = document.querySelector('.dip-points-search input');
+    let pointResults = document.querySelector('.dip-points-search-results');
+    let loadingSpin = document.querySelector('.dip-search-loader');
+
+    let nameSpan = document.createElement('span');
+    let pointSpan = document.createElement('span');
+
+    if (pointSearch != undefined) {
+        pointSearch.addEventListener('keyup', () => {
+            let accountNumber = pointSearch.value;
+            if (accountNumber.length >= 2) {
+                fetch('https://bgwgroup.com.au/rheem-avg-points/get-rheem-points.php?account=' + accountNumber)
+                    .then((response) => {
+                        return response.json();
+                    })
+                    .then((points) => {
+
+                        for (let i = 0; i < points.length; i++) {
+                            nameSpan.innerHTML = points[i]['name'];
+                            pointSpan.innerHTML = '<strong>' + points[i]['total_points'] + '</strong> points';
+                        }
+
+                        if (pointResults.children.length === 0) {
+                            setTimeout(function() {
+                                pointResults.appendChild(nameSpan);
+                                pointResults.appendChild(pointSpan);
+                            }, 800);
+                        }
+                    })
+                    .catch((error) => {});
+            } else {
+                try {
+                    loadingSpin.style.display = 'none';
+                    pointResults.removeChild(nameSpan);
+                    pointResults.removeChild(pointSpan);
+                    pointResults.innerHTML = "";
+                } catch (err) {}
+            }
+        });
+    }
+});

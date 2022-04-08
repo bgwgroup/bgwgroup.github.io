@@ -55,6 +55,7 @@ let NHPSwitchOnOff = {
 
         try {
             colouringCompetitionYear();
+            searchAccountPoints();
         } catch (error) {}
 
         shopByToggleFacets();
@@ -79,8 +80,6 @@ let NHPSwitchOnOff = {
         OneCategoryBanner(NHPSwitchOnOff);
 
         removeBrandsClassCategoryFacets();
-
-        searchAccountPoints();
     });
 });
 

@@ -20,55 +20,11 @@
         "active": "yes"
     },
     {
-        "image": "/medias/ME-CNW-3M-Kayak-Competition-2022-WebNews.jpg?context=bWFzdGVyfGltYWdlc3w0OTA5NHxpbWFnZS9qcGVnfGhlMS9oMWYvOTgwNTgwMzAyODUxMC9NRSBfQ05XXzNNIEtheWFrIENvbXBldGl0aW9uXzIwMjJfV2ViTmV3cy5qcGd8MTRiYWNmYzJiYTE3N2Y5ZjNhNzdiZWFlYTI0MWE5Y2IxOWFhZTM2YmQ2YzgxNGU0NzMyZGY0MjZiMDNiNzQzNQ",
-        "title": "3M Kayak Competition",
-        "description": "Win 1 of 5 Kings Fishing Kayaks",
-        "link": "/cnw/en/AUD/search?q=3m+tape%3Arelevance%3Acnw_brands%3A3M",
-        "active": "no"
-    },
-    {
         "image": "/medias/cnw-major-tech-promo.jpg?context=bWFzdGVyfGltYWdlc3wyMTk5NjR8aW1hZ2UvanBlZ3xoZjMvaDRmLzk4MDcyMTkyOTQyMzgvY253LW1ham9yLXRlY2gtcHJvbW8uanBnfGI0YzM5MjY1YWI2NjU1NzNmYTE0YzI1Yjk1MWYxNjg1MjI5NTY0YWM3ODZlMzJlZjVjNDUzMWEwNjQ3ZmJjYTQ",
         "title": "Major Tech",
         "description": "Proud Stockists of Major Tech!",
         "link": "/cnw/en/AUD/search/?text=major+tech",
         "active": "yes"
-    },
-    {
-        "image": "/medias/legrand-gemcell-2022-small.jpg?context=bWFzdGVyfGltYWdlc3wxODU2ODV8aW1hZ2UvanBlZ3xoMDYvaDMxLzk3ODY3MzE2MjY1MjYvbGVncmFuZC1nZW1jZWxsLTIwMjItc21hbGwuanBnfGM4MzQxYWY5NWYzMDU0ODdlMzM5MmMzZWMzNTBhYjhmZjJlMTZkYzEwZTk3ODkxNTVjOWQwMWI3ZTdmOTllNzA",
-        "title": "Legrand Rewards 2022",
-        "description": "Live Xtra Large",
-        "link": "/legrand-rewards-2022",
-        "active": "no"
-    },
-    {
-        "image": "/medias/mobile-hero.jpg?context=bWFzdGVyfGltYWdlc3w0MTY0MjB8aW1hZ2UvanBlZ3xoY2YvaGQyLzk1MjgzMjY4ODEzMTAvbW9iaWxlLWhlcm8uanBnfDk3Zjc3N2Q5MDExYmI5ZGM5YmM2ZDNlMDgyZTM0MjU1NWQwYTFmNWUxYTg2ZTk2MjYxZTZjMDk5MmZmNmYzMWM",
-        "title": "Big One",
-        "description": "It's back and even bigger",
-        "link": "/the-big-one-2",
-        "active": "no"
-    },
-    {
-        "image": "/medias/mhi-card.jpg?context=bWFzdGVyfGltYWdlc3w0MDI3MDl8aW1hZ2UvanBlZ3xoY2UvaGEwLzk1MDk0MTIyNzQyMDYvbWhpLWNhcmQuanBnfDY0NTAxNTZiMmJkYWMxZDFkNDdhYjBjY2RlMGIwNjZkOWY2YjMyOTczM2I2YTViNWQ2MTVjMDU4MmViNTVkZmU",
-        "title": "For the installers!",
-        "description": "Cash Rewards",
-        "link": "/mhi-powerplus-installers-promo",
-        "active": "no"
-    },
-    {
-        "image": "/medias/nhp-iso.jpg?context=bWFzdGVyfGltYWdlc3wxMzQxNTd8aW1hZ2UvanBlZ3xoNjUvaDU0Lzk2ODA2MTM1Mzk4NzAvbmhwLWlzby5qcGd8YzhhNWI3MDliY2NiYzZiMGNiYzQ0OTE3NDk0ZTJkZDNmMGY3M2UwMzVkYzA0MDUwNWE3NjA3ZDU3MDVmYjRkNA",
-        "title": "Industrial Strength",
-        "description": "Be the fastest sparky in Aus and win $5000! Spend $200 or more on any NHP ISO product to play and win!",
-        "link": "https://www.nhpcompetitions.com.au/",
-        "external": "true",
-        "active": "no"
-    },
-    {
-        "image": "/medias/clipsal-summer.jpg?context=bWFzdGVyfGltYWdlc3w2MTMwMHxpbWFnZS9qcGVnfGg3Ni9oNTcvOTY4MDYxMzYwNTQwNi9jbGlwc2FsLXN1bW1lci5qcGd8ODc3MjQzNDY5YTFhYjJmN2JhNjFmNTEyZjQ5YWE2NzViOGQyZjg4NzcwY2EzMjljN2Y1NDVjMzJlNDUxZGUxNQ",
-        "title": "Win Summer Your Way",
-        "description": "Clipsal is giving away five $1000 gift cards every day in November. Simply purchase $300 on participating Clipsal products for your chance to win.",
-        "link": "https://www.clipsal.com/summer",
-        "external": "true",
-        "active": "no"
     },
     {
         "image": "/_ui/responsive/theme-newcnw/images/promotions/Pref-range.jpg",

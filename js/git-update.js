@@ -656,7 +656,8 @@ function doubleDipPointsSearch() {
     var data = undefined;
 
     pointSearch.addEventListener('keyup', function() {
-        if (this.value.length >= 2) {
+        let pointSearchValue = pointSearch.value;
+        if (pointSearchValue.length >= 2) {
             loadingSpin.style.display = 'block';
             if (window.XMLHttpRequest) {
                 let xhr = new XMLHttpRequest();
@@ -680,7 +681,7 @@ function doubleDipPointsSearch() {
                         }
                     }
                 };
-                xhr.open('GET', 'https://bgwgroup.com.au/rheem-avg-points/get-rheem-points.php?account=' + this.value, true);
+                xhr.open('GET', 'https://bgwgroup.com.au/rheem-avg-points/get-rheem-points.php?account=' + pointSearchValue.value, true);
                 xhr.send();
             }
         } else {

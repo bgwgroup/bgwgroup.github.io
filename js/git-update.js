@@ -644,7 +644,6 @@ $(document).ready(function() {
  * Samios Double Dip Point Search API
  */
 window.addEventListener('DOMContentLoaded', () => {
-    console.log('Double Dip Loaded');
 
     let pointSearch = document.querySelector('.dip-points-search input');
     let pointResults = document.querySelector('.dip-points-search-results');

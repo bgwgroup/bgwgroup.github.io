@@ -80,7 +80,7 @@ let NHPSwitchOnOff = {
 
         removeBrandsClassCategoryFacets();
 
-        searchAccountPoints();
+        doubleDipPointsSearch();
     });
 });
 
@@ -646,7 +646,7 @@ $(document).ready(function() {
 /**
  * Samios Double Dip Points Search
  */
-function searchAccountPoints() {
+function doubleDipPointsSearch() {
     let pointSearch = document.querySelector('.dip-points-search input');
     let pointResults = document.querySelector('.dip-points-search-results');
     let loadingSpin = document.querySelector('.dip-search-loader');
@@ -655,7 +655,7 @@ function searchAccountPoints() {
     let pointSpan = document.createElement('span');
     var data = undefined;
 
-    if (pointSearch) {
+    if (pointSearch.length > 0) {
         pointSearch.addEventListener('keyup', function() {
             if (this.value.length >= 2) {
                 loadingSpin.style.display = 'block';

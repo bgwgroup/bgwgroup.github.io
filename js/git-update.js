@@ -55,7 +55,6 @@ let NHPSwitchOnOff = {
 
         try {
             colouringCompetitionYear();
-            searchAccountPoints();
         } catch (error) {}
 
         shopByToggleFacets();
@@ -80,6 +79,8 @@ let NHPSwitchOnOff = {
         OneCategoryBanner(NHPSwitchOnOff);
 
         removeBrandsClassCategoryFacets();
+
+        searchAccountPoints();
     });
 });
 
@@ -654,41 +655,43 @@ function searchAccountPoints() {
     let pointSpan = document.createElement('span');
     var data = undefined;
 
-    pointSearch.addEventListener('keyup', function() {
-        if (this.value.length >= 2) {
-            loadingSpin.style.display = 'block';
-            if (window.XMLHttpRequest) {
-                let xhr = new XMLHttpRequest();
-                xhr.onreadystatechange = function() {
-                    if (xhr.readyState == 4 && xhr.status == 200) {
-                        loadingSpin.style.display = 'none';
-                        try {
-                            data = JSON.parse(this.responseText);
-                            for (let i = 0; i < data.length; i++) {
-                                nameSpan.innerHTML = data[i]['name'];
-                                pointSpan.innerHTML = '<strong>' + data[i]['total_points'] + '</strong> points';
+    if (pointSearch) {
+        pointSearch.addEventListener('keyup', function() {
+            if (this.value.length >= 2) {
+                loadingSpin.style.display = 'block';
+                if (window.XMLHttpRequest) {
+                    let xhr = new XMLHttpRequest();
+                    xhr.onreadystatechange = function() {
+                        if (xhr.readyState == 4 && xhr.status == 200) {
+                            loadingSpin.style.display = 'none';
+                            try {
+                                data = JSON.parse(this.responseText);
+                                for (let i = 0; i < data.length; i++) {
+                                    nameSpan.innerHTML = data[i]['name'];
+                                    pointSpan.innerHTML = '<strong>' + data[i]['total_points'] + '</strong> points';
+                                }
+                            } catch (jsonError) {}
+
+
+                            if (pointResults.children.length === 0) {
+                                setTimeout(function() {
+                                    pointResults.appendChild(nameSpan);
+                                    pointResults.appendChild(pointSpan);
+                                }, 800);
                             }
-                        } catch (jsonError) {}
-
-
-                        if (pointResults.children.length === 0) {
-                            setTimeout(function() {
-                                pointResults.appendChild(nameSpan);
-                                pointResults.appendChild(pointSpan);
-                            }, 800);
                         }
-                    }
-                };
-                xhr.open('GET', 'https://bgwgroup.com.au/rheem-avg-points/get-rheem-points.php?account=' + this.value, true);
-                xhr.send();
+                    };
+                    xhr.open('GET', 'https://bgwgroup.com.au/rheem-avg-points/get-rheem-points.php?account=' + this.value, true);
+                    xhr.send();
+                }
+            } else {
+                try {
+                    loadingSpin.style.display = 'none';
+                    pointResults.removeChild(nameSpan);
+                    pointResults.removeChild(pointSpan);
+                    pointResults.innerHTML = "";
+                } catch (err) {}
             }
-        } else {
-            try {
-                loadingSpin.style.display = 'none';
-                pointResults.removeChild(nameSpan);
-                pointResults.removeChild(pointSpan);
-                pointResults.innerHTML = "";
-            } catch (err) {}
-        }
-    });
+        });
+    }
 }

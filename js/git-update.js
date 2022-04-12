@@ -664,7 +664,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
                         for (let i = 0; i < points.length; i++) {
                             nameSpan.innerHTML = points[i]['name'];
-                            pointSpan.innerHTML = '<strong>' + points[i]['total_points'] + '</strong> points';
+                            pointSpan.innerHTML = '<strong>' + points[i]['remaining_points'] + '</strong> points';
                         }
 
                         if (pointResults.children.length === 0) {

@@ -81,7 +81,7 @@
         "title": "Link4 Integration",
         "description": "Seamless invoice delivery",
         "link": "/sherriff-link4",
-        "active": "yes"
+        "active": "no"
     },
     {
         "image": "/_ui/responsive/theme-newshe/images/news-promotions/supplier-audit.png",

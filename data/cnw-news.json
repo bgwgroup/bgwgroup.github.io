@@ -52,7 +52,7 @@
         "title": "Link4",
         "description": "Introducing Seemless Invoice Delivery at CNW. You can now receive your CNW Electrical Invoices directly into your accounting software, at no additional cost!",
         "link": "/cnw-link4/",
-        "active": "yes"
+        "active": "no"
     },
     {
         "image": "/_ui/responsive/theme-newcnw/images/promotions/supplier-price-notifications.png",

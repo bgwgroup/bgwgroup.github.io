@@ -686,3 +686,19 @@ window.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+/**
+ * CNW Clipsal Iconic Outdoor padding top 
+ */
+['load', 'resize'].forEach((event) => {
+    window.addEventListener(event, () => {
+        let header = document.querySelector('#cnwBody .headerContent');
+        let headerBounds = header.getBoundingClientRect();
+
+        let newIconicOutdoorRangeImage = document.querySelector('.page-clipsaliconicoutdoorpage .hero .container .hero-left img:nth-child(1)');
+        let outdoorLikeNeverSeenBeforeImage = document.querySelector('.page-clipsaliconicoutdoorpage .hero .container .hero-right img:first-of-type');
+
+        newIconicOutdoorRangeImage.style.paddingTop = Math.ceil(bounds.height) + 'px';
+        outdoorLikeNeverSeenBeforeImage.style.paddingTop = Math.ceil(bounds.height) + 'px';
+    });
+});

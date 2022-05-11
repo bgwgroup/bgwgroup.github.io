@@ -699,6 +699,6 @@ window.addEventListener('DOMContentLoaded', () => {
         let outdoorLikeNeverSeenBeforeImage = document.querySelector('.page-clipsaliconicoutdoorpage .hero .container .hero-right img:first-of-type');
 
         newIconicOutdoorRangeImage.style.paddingTop = Math.ceil(bounds.height) + 'px';
-        outdoorLikeNeverSeenBeforeImage.style.paddingTop = Math.ceil(bounds.height) + 'px';
+        outdoorLikeNeverSeenBeforeImage.style.top = Math.ceil(bounds.height) + 'px';
     });
 });

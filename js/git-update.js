@@ -698,7 +698,7 @@ window.addEventListener('DOMContentLoaded', () => {
         let newIconicOutdoorRangeImage = document.querySelector('.page-clipsaliconicoutdoorpage .hero .container .hero-left img:nth-child(1)');
         let outdoorLikeNeverSeenBeforeImage = document.querySelector('.page-clipsaliconicoutdoorpage .hero .container .hero-right img:first-of-type');
 
-        newIconicOutdoorRangeImage.style.paddingTop = Math.ceil(bounds.height) + 'px';
-        outdoorLikeNeverSeenBeforeImage.style.top = Math.ceil(bounds.height) + 'px';
+        newIconicOutdoorRangeImage.style.paddingTop = Math.ceil(headerBounds.height) + 'px';
+        outdoorLikeNeverSeenBeforeImage.style.top = Math.ceil(headerBounds.height) + 'px';
     });
 });

@@ -710,7 +710,7 @@ window.addEventListener('DOMContentLoaded', () => {
  */
 ['load', 'resize'].forEach((event) => {
     window.addEventListener(event, () => {
-        let header = document.querySelector('#cnwBody .headerContent');
+        let header = document.querySelector('#sheBody .headerContent');
         let headerBounds = header.getBoundingClientRect();
 
         let newIconicOutdoorRangeImage = document.querySelector('.page-sheclipsaliconicoutdoorpage .hero .container .hero-left img:nth-child(1)');

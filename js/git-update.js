@@ -704,3 +704,21 @@ window.addEventListener('DOMContentLoaded', () => {
         } catch (err) {}
     });
 });
+
+/**
+ * Sherriff Clipsal Iconic Outdoor padding top 
+ */
+['load', 'resize'].forEach((event) => {
+    window.addEventListener(event, () => {
+        let header = document.querySelector('#cnwBody .headerContent');
+        let headerBounds = header.getBoundingClientRect();
+
+        let newIconicOutdoorRangeImage = document.querySelector('.page-sheclipsaliconicoutdoorpage .hero .container .hero-left img:nth-child(1)');
+        let outdoorLikeNeverSeenBeforeImage = document.querySelector('.page-sheclipsaliconicoutdoorpage .hero .container .hero-right img:first-of-type');
+
+        try {
+            newIconicOutdoorRangeImage.style.top = Math.ceil(headerBounds.height) + 'px';
+            outdoorLikeNeverSeenBeforeImage.style.top = Math.ceil(headerBounds.height) + 'px';
+        } catch (err) {}
+    });
+});

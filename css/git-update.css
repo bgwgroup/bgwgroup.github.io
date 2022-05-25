@@ -288,6 +288,7 @@ ul.pagination {
   .my-favourites-container #listSelect .table-body {
     position: relative;
     max-height: 700px;
+    padding-bottom: 3rem;
     overflow: hidden;
     overflow-y: scroll; }
     .my-favourites-container #listSelect .table-body::-webkit-scrollbar {

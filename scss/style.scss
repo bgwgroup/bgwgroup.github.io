@@ -2901,3 +2901,50 @@ html {
     background: url('https://shop.samios.net.au/medias/great-double-dip-2.svg?context=bWFzdGVyfGltYWdlc3wxNDI3NDh8aW1hZ2Uvc3ZnK3htbHxoNmUvaDg4Lzk4MjgwMzExNjg1NDIvZ3JlYXQtZG91YmxlLWRpcC0yLnN2Z3w1N2U3YmMwMjVjNGYzNzU0NDVkNzI0YWI1ZWE0MDA3ZTMyNWJjNTNmM2E1N2Y2MDU4YzFiNDE2MDU3MzMxMmIy') no-repeat center;
     background-size: contain;
 }
+
+
+/*==== Hide Order Status from Order History ====*/
+
+.order-history-container {
+    .table-orders {
+        table {
+            thead {
+                tr {
+                    th:last-child {
+                        display: none;
+                    }
+                }
+            }
+            tbody {
+                tr {
+                    td:nth-child(5),
+                    td:last-child {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/*==== Hide Order Status from Dashboard ====*/
+
+.my-account-container {
+    .table-recent-orders {
+        table {
+            thead {
+                th:last-child {
+                    display: none;
+                }
+            }
+            tbody {
+                tr {
+                    td[data-column='Status'] {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

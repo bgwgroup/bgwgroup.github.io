@@ -77,6 +77,9 @@
 .slide-in-nav {
   padding-bottom: 200px !important; }
 
+.template-pages-account-accountLayoutPage .allCategoriesGrid {
+  display: none !important; }
+
 .pagination-account {
   display: -ms-flex;
   display: flex;

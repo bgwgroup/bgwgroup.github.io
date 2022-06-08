@@ -74,6 +74,9 @@
   .account-container #breadcrumb ul li:first-child a {
     padding-left: 0 !important; }
 
+.slide-in-nav {
+  padding-bottom: 200px !important; }
+
 .pagination-account {
   display: -ms-flex;
   display: flex;

@@ -2252,35 +2252,6 @@ html {
   background-position: center; }
 
 /*==== Login Page CSS Format Fix ====*/
-#bgwtBody .cust-login {
-  flex-wrap: wrap; }
-  #bgwtBody .cust-login > div {
-    -ms-flex: 1 0 auto;
-    flex: 1 0 auto;
-    width: 100%; }
-  #bgwtBody .cust-login div:nth-of-type(3),
-  #bgwtBody .cust-login div:nth-of-type(4) {
-    max-width: 50%; }
-  #bgwtBody .cust-login input#Remember {
-    width: auto;
-    height: auto;
-    min-height: unset;
-    margin-right: 0.55rem;
-    position: relative;
-    bottom: -0.02rem; }
-  #bgwtBody .cust-login .forgotten-password {
-    margin-top: 0.95rem; }
-
-#bgwtBody .cust-login.logged-in-user div:nth-of-type(3),
-#bgwtBody .cust-login.logged-in-user div:nth-of-type(4) {
-  max-width: 100%; }
-
-#bgwtBody .cust-login.logged-in-user div:nth-of-type(4) {
-  display: none; }
-
-#bgwtBody.page-login .main__container .main__inner-wrapper {
-  flex-grow: unset !important; }
-
 .thumb .double-dip {
   position: absolute;
   top: 0;

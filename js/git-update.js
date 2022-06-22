@@ -721,3 +721,343 @@ window.addEventListener('DOMContentLoaded', () => {
         } catch (err) {}
     });
 });
+
+
+/**
+ * Nick START temp fix
+ */
+let getBreadcrumbs = document.querySelectorAll(".breadcrumb li");
+let countBreadcrumbs = getBreadcrumbs.length;
+
+let pageBody = document.querySelector("body");
+let currentPage = document.querySelector(".breadcrumb li:nth-last-child(2) a");
+
+let currentPageNoLink = document.querySelector(".breadcrumb li:last-child a");
+
+if (typeof currentPage != "undefined" && currentPage != null) {
+  if (countBreadcrumbs > 2) {
+    // page contains more than 2 breadcrumbs
+    currentPage = currentPage.innerText
+      .replace(/[^a-zA-Z0-9]/g, "")
+      .replace(/[0-9]/g, "")
+      .toLowerCase();
+    pageBody.classList.add(`pageLabel-${currentPage}`);
+  } else {
+    // page contains less than 3 breadcrumbs
+    currentPageNoLink = currentPageNoLink.innerText
+      .replace(/[^a-zA-Z0-9]/g, "")
+      .replace(/[0-9]/g, "")
+      .toLowerCase();
+    pageBody.classList.add(`pageLabel-${currentPageNoLink}`);
+  }
+}
+
+$(function () {
+    var Accordion = function (el, multiple) {
+      this.el = el || {};
+      this.multiple = multiple || false;
+  
+      var links = this.el.find(".link");
+      links.on("click", { el: this.el, multiple: this.multiple }, this.dropdown);
+    };
+  
+    Accordion.prototype.dropdown = function (e) {
+      var $el = e.data.el;
+      ($this = $(this)), ($next = $this.next());
+  
+      $next.slideToggle();
+      $this.parent().toggleClass("open");
+  
+      if (!e.data.multiple) {
+        $el.find(".submenu").not($next).slideUp().parent().removeClass("open");
+      }
+    };
+  
+    var accordion = new Accordion($("#sidenav-accordion"), false);
+  });
+
+  $(".addNewPaymentMethod").click(function () {
+    $("#savePaymentCardForm").stop().slideToggle("slow");
+  });
+
+  try {
+    const checkoutCartTotalItems = document.querySelector(
+      ".checkoutCartTotalItems"
+    );
+    document.querySelectorAll("#cartProducts table tbody tr").forEach((item) => {
+      if (item.innerHTML.trim().length == 0) {
+        item.remove();
+      }
+    });
+    const checkoutTotalCartItems = document.querySelectorAll(
+      "#cartProducts table tbody tr"
+    );
+  
+    checkoutCartTotalItems.innerHTML = `${checkoutTotalCartItems.length} Items`; //make sure to update after remove or update cart qty
+  } catch (error) {}
+
+  try {
+    const scaffoldFrontModal = document.querySelectorAll(".scaffoldFrontModal");
+    const scaffoldFrontModalClose = document.querySelectorAll(
+      ".scaffoldFrontModalClose"
+    );
+    const scaffoldFrontModalOverlay = document.querySelectorAll(
+      ".scaffoldFrontModalOverlay"
+    );
+  
+    // Modal Request Quote
+    try {
+      const scaffoldOpenModalRequestQuote = document.querySelector(
+        "#scaffoldOpenModalRequestQuote"
+      );
+      const scaffoldModalRequestQuote = document.querySelector(
+        "#scaffoldModalRequestQuote"
+      );
+      scaffoldOpenModalRequestQuote.addEventListener("click", () => {
+        scaffoldModalRequestQuote.classList.add("scaffoldFrontModalOpen");
+      });
+    } catch (error) {}
+  
+    // Modal Add Non Cat Item
+    try {
+      const scaffoldOpenModalAddNonCat = document.querySelector(
+        "#scaffoldOpenModalAddNonCat"
+      );
+      const scaffoldModalAddNonCat = document.querySelector(
+        "#scaffoldModalAddNonCat"
+      );
+      scaffoldOpenModalAddNonCat.addEventListener("click", () => {
+        scaffoldModalAddNonCat.classList.add("scaffoldFrontModalOpen");
+      });
+    } catch (error) {}
+  
+    //Overlay Close
+    scaffoldFrontModalOverlay.forEach((item) => {
+      item.addEventListener("click", (e) => {
+        e.preventDefault();
+        for (var i = 0; i < scaffoldFrontModal.length; i++) {
+          scaffoldFrontModal[i].classList.remove("scaffoldFrontModalOpen");
+        }
+      });
+    });
+  
+    //Modal Close
+    scaffoldFrontModalClose.forEach((item) => {
+      item.addEventListener("click", (e) => {
+        e.preventDefault();
+        for (var i = 0; i < scaffoldFrontModal.length; i++) {
+          scaffoldFrontModal[i].classList.remove("scaffoldFrontModalOpen");
+        }
+      });
+    });
+  } catch (error) {}
+
+  
+// Expand/Collapse Show Items Button in Cart Page
+try {
+    const cartItemsShowBtn = document.querySelector("#checkoutShowProducts");
+    const cartItemsTable = document.querySelector("#cartProducts");
+  
+    if (localStorage.getItem("cartItemsShow") === null) {
+      cartItemsShowBtn.innerText = "Show Items";
+      cartItemsTable.classList.remove("visible");
+    } else {
+      cartItemsShowBtn.innerText = "Hide Items";
+      cartItemsTable.classList.add("visible");
+    }
+  
+    cartItemsShowBtn.addEventListener("click", () => {
+      if (localStorage.getItem("cartItemsShow") === null) {
+        localStorage.setItem("cartItemsShow", "true");
+      } else {
+        localStorage.removeItem("cartItemsShow", "true");
+      }
+    });
+  } catch (error) {}
+  
+  //Show Products Btn
+  try {
+    const checkoutShowProducts = document.querySelector("#checkoutShowProducts");
+    const cartProducts = document.querySelector("#cartProducts");
+  
+    checkoutShowProducts.addEventListener("click", () => {
+      if (cartProducts.classList.contains("visible")) {
+        cartProducts.classList.remove("visible");
+        checkoutShowProducts.innerText = "Show Items";
+      } else {
+        cartProducts.classList.add("visible");
+        checkoutShowProducts.innerText = "Hide Items";
+      }
+    });
+  } catch (error) {}
+  
+  //Validation
+  
+  // Validate Summary Cost Center
+  function validateSummaryCostCenter() {
+    try {
+      const summaryCostCenter = document.querySelector(".summaryCostCenter");
+      const CostCenter = document.querySelector("#CostCenter");
+      const alertCostCenter = document.querySelector(".alertCostCenter");
+      const getSummaryDeliveryMode = document.querySelector(
+        ".summaryDeliveryMode"
+      );
+  
+      let validateCostCenterSelect = false;
+  
+      // Validate if Cost Center Selected
+      if (CostCenter.value != "") {
+        validateCostCenterSelect = true;
+        PurchaseOrderNumber.parentNode.classList.remove("hidden");
+        getSummaryDeliveryMode.classList.remove("hidden");
+      } else {
+        validateCostCenterSelect = false;
+        PurchaseOrderNumber.parentNode.classList.add("hidden");
+        summaryCostCenter.classList.remove("validated");
+      }
+  
+      // Validate if both true
+      if (validateCostCenterSelect) {
+        summaryCostCenter.classList.add("validated");
+        PurchaseOrderNumber.classList.remove("highlight-error");
+        alertCostCenter.innerHTML = "";
+      }
+    } catch (error) {}
+  }
+  validateSummaryCostCenter();
+  
+  // Validate Summary Delivery Date
+  function validateOrderInfo() {
+    try {
+      const shipDate = document.querySelector("#shipDate");
+      const cartDeliveryContainerOrder = document.querySelector(
+        ".cartDeliveryContainerOrder"
+      );
+      const alertDateDelivery = document.querySelector(".alertDateDelivery");
+      const PurchaseOrderNumber = document.querySelector("#PurchaseOrderNumber");
+  
+      let validateOrderInfo = false;
+      let validatePurchaseNumber = false;
+  
+      // Validate if Purchase Order No. was entered
+      if (PurchaseOrderNumber.value != "") {
+        validatePurchaseNumber = true;
+      } else {
+        cartDeliveryContainerOrder.classList.remove("validated");
+        validatePurchaseNumber = false;
+      }
+  
+      // Validate if Cost Center Selected
+      if (shipDate.value != "") {
+        validateOrderInfo = true;
+      } else {
+        validateOrderInfo = false;
+        cartDeliveryContainerOrder.classList.remove("validated");
+      }
+  
+      // Validate if true
+      if (validateOrderInfo && validatePurchaseNumber) {
+        cartDeliveryContainerOrder.classList.add("validated");
+        shipDate.classList.remove("highlight-error");
+        alertDateDelivery.innerHTML = "";
+      }
+    } catch (error) {}
+  }
+  validateOrderInfo();
+  
+  // Validate Summary Delivery Date
+  function validatePaymentType() {
+    setTimeout(function () {
+      const SecurityCodePayment = document.querySelector("#SecurityCodePayment");
+      const summaryPayment = document.querySelector(".summaryPayment");
+      const alertPaymentCVV = document.querySelector(".alertPaymentCVV");
+  
+      let validateDeliveryDate = false;
+  
+      try {
+        if (
+          SecurityCodePayment.value != "" &&
+          SecurityCodePayment.value != null &&
+          SecurityCodePayment.value.length > 2
+        ) {
+          validateDeliveryDate = true;
+        } else {
+          validateDeliveryDate = false;
+          summaryPayment.classList.remove("validated");
+          SecurityCodePayment.classList.remove("validated");
+        }
+      } catch (error) {}
+  
+      if (validateDeliveryDate) {
+        summaryPayment.classList.add("validated");
+        SecurityCodePayment.classList.add("validated");
+        SecurityCodePayment.classList.remove("highlight-error");
+        alertPaymentCVV.innerHTML = "";
+      }
+    }, 500);
+  }
+  validatePaymentType();
+  
+  setTimeout(function () {
+    try {
+      var getHeaderHeight = $("#headerContent").height();
+      getHeaderHeight += 29;
+  
+      var sidebar = new StickySidebar(".checkoutSidebar", {
+        topSpacing: getHeaderHeight,
+        bottomSpacing: getHeaderHeight,
+        containerSelector: ".checkoutWrapper",
+        innerWrapperSelector: ".checkoutSidebarInner",
+      });
+    } catch (error) {}
+  }, 1000);
+
+  
+if (document.readyState !== "loading") {
+    console.log("ready!");
+    ready();
+  } else {
+    document.addEventListener("DOMContentLoaded", ready);
+  }
+  
+  function ready() {
+    var accordion = document.getElementsByTagName("dt");
+  
+    for (var i = 0; i < accordion.length; i++) {
+      accordion[i].addEventListener("click", function () {
+        accordionClick(event);
+      });
+    }
+  }
+  
+  var accordionClick = (event) => {
+    var targetClicked = event.target;
+    var classClicked = targetClicked.classList;
+    while (classClicked[0] != "a-title") {
+      targetClicked = targetClicked.parentElement;
+      classClicked = targetClicked.classList;
+    }
+    var description = targetClicked.nextElementSibling;
+    var expander = targetClicked.children[0];
+    if (description.style.maxHeight) {
+      description.style.maxHeight = null;
+      expander.innerHTML = "<i class='expand'></i>";
+    } else {
+      var allDescriptions = document.getElementsByTagName("dd");
+      for (var i = 0; i < allDescriptions.length; i++) {
+        if (allDescriptions[i].style.maxHeight) {
+          allDescriptions[i].style.maxHeight = null;
+          allDescriptions[i].previousElementSibling.children[0].innerHTML =
+            "<i class='expand'></i>";
+        }
+      }
+      description.style.maxHeight = description.scrollHeight + "px";
+      expander.innerHTML = "<i class='collapse'></i>";
+    }
+  };
+  
+
+/**
+ * Nick END temp fix
+ */
+

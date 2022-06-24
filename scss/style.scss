@@ -3100,3 +3100,18 @@ html {
         }
     }
 }
+
+
+/*=== Samios Mobile Site Update Price On Change ===*/
+
+#samBody {
+    .scaffoldAddToFavouritesToggleWrapper {
+        .scaffoldAddToFavouritesToggle {
+            white-space: unset !important;
+        }
+    }
+}
+
+.price.updated {
+    display: inline-block !important;
+}

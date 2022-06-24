@@ -2251,3 +2251,10 @@ html {
     display: inline-block;
     width: 100%;
     padding: 0.75rem; }
+
+/*=== Samios Mobile Site Update Price On Change ===*/
+#samBody .scaffoldAddToFavouritesToggleWrapper .scaffoldAddToFavouritesToggle {
+  white-space: unset !important; }
+
+.price.updated {
+  display: inline-block !important; }

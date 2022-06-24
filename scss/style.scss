@@ -3115,3 +3115,9 @@ html {
 .price.updated {
     display: inline-block !important;
 }
+
+.product_quantity {
+    input[type="number"] {
+        height: 35px;
+    }
+}

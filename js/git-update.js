@@ -721,3 +721,10 @@ window.addEventListener('DOMContentLoaded', () => {
         } catch (err) {}
     });
 });
+
+/**
+ * Temp Add Card from My Account
+ */
+$(".addNewPaymentMethod").click(function () {
+  $("#savePaymentCardForm").stop().slideToggle("slow");
+});

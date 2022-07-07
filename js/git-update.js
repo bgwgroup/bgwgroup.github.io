@@ -158,6 +158,10 @@ function renderBgImage(selector) {
 }
 
 /**
+ * ================================================================================================================================================================
+ */
+
+/**
  * News and Promotion Landing Page 
  */
 let NewsData = {
@@ -241,6 +245,10 @@ NewsAndPromotions.prototype.renderData = (data, container) => {
 };
 
 /**
+ * ================================================================================================================================================================
+ */
+
+/**
  * News and Promotions section on CNW Homepage
  */
 function cnwHomepageNews() {
@@ -283,6 +291,10 @@ function cnwHomepageNews() {
 }
 
 /**
+ * ================================================================================================================================================================
+ */
+
+/**
  * News and Promotions section on Sherriff Homepage
  */
 function sherriffHomepageNews() {
@@ -319,6 +331,10 @@ function sherriffHomepageNews() {
             .catch((error) => {});
     }
 }
+
+/**
+ * ================================================================================================================================================================
+ */
 
 /**
  * Sherriff Careers Page
@@ -361,6 +377,10 @@ SherriffCareers.prototype.animateImages = () => {
 };
 
 /**
+ * ================================================================================================================================================================
+ */
+
+/**
  * Dynamically load external JS Scripts into HTML
  */
 function loadExternalScripts() {
@@ -374,6 +394,10 @@ function loadExternalScripts() {
         widgetSection.insertBefore(snapWidgetJS, widgetSectionHeader);
     }
 }
+
+/**
+ * ================================================================================================================================================================
+ */
 
 /**
  * Samios PCN Data
@@ -557,6 +581,10 @@ ElectricalPCN.prototype.collapsePCNContent = () => {
     }
 };
 
+/**
+ * ================================================================================================================================================================
+ */
+
 
 /**
  * Pagination clone - temp hack
@@ -604,6 +632,10 @@ function isElementInViewOnScroll(selector) {
 }
 
 /**
+ * ================================================================================================================================================================
+ */
+
+/**
  * JS hack that will delete the random BrandsClassCategory on page load
  */
 function removeBrandsClassCategoryFacets() {
@@ -616,6 +648,10 @@ function removeBrandsClassCategoryFacets() {
         }
     }
 }
+
+/**
+ * ================================================================================================================================================================
+ */
 
 /**
  * Search filter for wishlists
@@ -639,6 +675,10 @@ $(document).ready(function() {
     });
 
 });
+
+/**
+ * ================================================================================================================================================================
+ */
 
 /**
  * Samios Double Dip Point Search API
@@ -688,6 +728,10 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 /**
+ * ================================================================================================================================================================
+ */
+
+/**
  * CNW Clipsal Iconic Outdoor padding top 
  */
 ['load', 'resize'].forEach((event) => {
@@ -725,6 +769,145 @@ window.addEventListener('DOMContentLoaded', () => {
 /**
  * Temp Add Card from My Account
  */
-$(".addNewPaymentMethod").click(function () {
-  $("#savePaymentCardForm").stop().slideToggle("slow");
+$(".addNewPaymentMethod").click(function() {
+    $("#savePaymentCardForm").stop().slideToggle("slow");
 });
+
+/**
+ * ================================================================================================================================================================
+ */
+
+/**
+ * CNW Super Big One Functionality
+ */
+window.addEventListener('load', () => {
+    new SBO();
+});
+
+function SBO() {
+    SBO.prototype.init();
+}
+/**
+ * init method anchors and invokes all other methods of the SBO object
+ */
+SBO.prototype.init = () => {
+    SBO.prototype.pageIndex();
+    SBO.prototype.clearPageIndex();
+    SBO.prototype.toggleMonthlyPack();
+    SBO.prototype.defaultMonthlyPack();
+};
+/**
+ * pageIndex method controls the top menu buttons clicked/selected
+ */
+SBO.prototype.pageIndex = () => {
+
+    let sboIndices = document.querySelectorAll('.sbo-index > button');
+    let activeIndex = 'active-sbo-index';
+
+    if (sboIndices != undefined) {
+
+        for (let i = 0; i < sboIndices.length; i++) {
+
+            sboIndices[i].addEventListener('click', () => {
+                SBO.prototype.clearPageIndex(sboIndices[i], activeIndex);
+                SBO.prototype.scrollToSection(sboIndices[i]);
+                sboIndices[i].classList.add(activeIndex);
+            });
+        }
+    }
+};
+/**
+ * clearPageindex clears the index of clicked/selected top menub buttons
+ * @param {*} currentNode 
+ * @param {*} selector 
+ */
+SBO.prototype.clearPageIndex = (currentNode, selector) => {
+    try {
+        let siblings = currentNode.parentNode.children;
+        if (siblings.length > 0) {
+            for (let j = 0; j < siblings.length; j++) {
+                siblings[j].classList.remove(selector);
+            }
+        }
+    } catch (error) {}
+};
+/**
+ * scrolToSection method scrolls to the section of the clicked/selected top menu buttons
+ * @param {*} currentNode 
+ */
+SBO.prototype.scrollToSection = (currentNode) => {
+
+    let sboSection = document.querySelectorAll('.sbo section');
+
+    if (sboSection != undefined) {
+
+        let id = currentNode.getAttribute('id');
+
+        for (let i = 0; i < sboSection.length; i++) {
+            if (sboSection[i].getAttribute('id') === id) {
+                window.scrollTo({
+                    top: sboSection[i].offsetTop,
+                    left: 0,
+                    behavior: 'smooth'
+                });
+            }
+        }
+    }
+};
+/**
+ * toggleMonthlyPack displays the content based on the button clicked
+ */
+SBO.prototype.toggleMonthlyPack = () => {
+
+    let monthlyPackButton = document.querySelectorAll('.monthly-pack-button > button');
+    let activeMonthlyButton = 'active-monthly-button';
+    let activeMonthlyContent = 'active-monthly-content';
+
+    if (monthlyPackButton != undefined) {
+
+        let monthlyPackContent = document.querySelectorAll('.monthly-pack-content > article');
+
+        for (let i = 0; i < monthlyPackButton.length; i++) {
+            monthlyPackButton[i].addEventListener('click', () => {
+                let currentButton = monthlyPackButton[i];
+                let currentContent = monthlyPackContent[i];
+                if (currentButton.getAttribute('class') === currentContent.getAttribute('class')) {
+                    SBO.prototype.clearToggleMonthIndex(currentButton, activeMonthlyButton, currentContent, activeMonthlyContent);
+                    currentButton.classList.add(activeMonthlyButton);
+                    currentContent.classList.add(activeMonthlyContent);
+                }
+            });
+        }
+    }
+};
+/**
+ * clearToggleMonthlyIndex clears the content index of the buttons clicked
+ * @param {*} button 
+ * @param {*} buttonSelector 
+ * @param {*} content 
+ * @param {*} contentSelector 
+ */
+SBO.prototype.clearToggleMonthIndex = (button, buttonSelector, content, contentSelector) => {
+    try {
+        let buttonSiblings = button.parentNode.children;
+        let contentSiblings = content.parentNode.children;
+        if (buttonSiblings.length > 0) {
+            for (let i = 0; i < buttonSiblings.length; i++) {
+                buttonSiblings[i].classList.remove(buttonSelector);
+                contentSiblings[i].classList.remove(contentSelector);
+            }
+        }
+    } catch (error) {}
+};
+SBO.prototype.defaultMonthlyPack = () => {
+    let monthlyPackButton = document.querySelectorAll('.monthly-pack-button > button');
+    let monthlyPackContent = document.querySelectorAll('.monthly-pack-content > article');
+
+    let activeMonthlyButton = 'active-monthly-button';
+    let activeMonthlyContent = 'active-monthly-content';
+
+    if (monthlyPackButton != undefined && monthlyPackContent != undefined) {
+        monthlyPackButton[0].classList.add(activeMonthlyButton);
+        monthlyPackContent[0].classList.add(activeMonthlyContent);
+    }
+};

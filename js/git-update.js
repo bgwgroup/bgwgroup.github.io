@@ -906,8 +906,11 @@ SBO.prototype.defaultMonthlyPack = () => {
     let activeMonthlyButton = 'active-monthly-button';
     let activeMonthlyContent = 'active-monthly-content';
 
-    if (monthlyPackButton != undefined && monthlyPackContent != undefined) {
-        monthlyPackButton[0].classList.add(activeMonthlyButton);
-        monthlyPackContent[0].classList.add(activeMonthlyContent);
-    }
+    try {
+        if (monthlyPackButton != undefined && monthlyPackContent != undefined) {
+            monthlyPackButton[0].classList.add(activeMonthlyButton);
+            monthlyPackContent[0].classList.add(activeMonthlyContent);
+        }
+    } catch (error) {}
+
 };

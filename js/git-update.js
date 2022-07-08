@@ -795,6 +795,7 @@ SBO.prototype.init = () => {
     SBO.prototype.clearPageIndex();
     SBO.prototype.toggleMonthlyPack();
     SBO.prototype.defaultMonthlyPack();
+    SBO.prototype.stickyIndex();
 };
 /**
  * pageIndex method controls the top menu buttons clicked/selected
@@ -913,4 +914,17 @@ SBO.prototype.defaultMonthlyPack = () => {
         }
     } catch (error) {}
 
+};
+/**
+ * handles the top position of the sticky menu index
+ */
+SBO.prototype.stickyIndex = () => {
+    let sboIndexContainer = document.querySelector('.sbo-index-container');
+    if (sboIndexContainer != undefined) {
+        let cnwHeader = document.querySelector('#cnwBody .headerContent');
+        window.addEventListener('resize', () => {
+            let headerBounds = cnwHeader.getBoundingClientRect();
+            sboIndexContainer.style.top = `${headerBounds.height} px`;
+        });
+    }
 };

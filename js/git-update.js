@@ -964,6 +964,8 @@ CountDownTimer.prototype.start = (year, month, day) => {
     let clockMinute = document.querySelectorAll('[data-clock-minute="true"]');
     let clockSecond = document.querySelectorAll('[data-clock-second="true"]');
 
+    console.log(clockDay, clockHour, clockMinute, clockSecond);
+
     if (clockDay != undefined) {
         for (let i = 0; i < clockDay.length; i++) {
             CountDownTimer.prototype.HTMLElement(clockDay[i], day);

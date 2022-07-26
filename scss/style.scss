@@ -3143,6 +3143,11 @@ $sboBlack: #222222;
         background: transparent;
         background-color: transparent;
     }
+    img {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+    }
     .sbo-index-container {
         margin: 0.75rem auto;
         .sbo-index {
@@ -3177,6 +3182,50 @@ $sboBlack: #222222;
                     border-top-right-radius: 2rem;
                     border-bottom-right-radius: 2rem;
                 }
+            }
+        }
+    }
+    .sbo-logo {
+        display: -ms-flex;
+        display: flex;
+        justify-content: center;
+        img {
+            margin: 2rem auto;
+            max-width: 250px;
+        }
+    }
+    .sbo-header-images {
+        display: -ms-flex;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+        max-width: 800px;
+        >img {
+            -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
+            width: 40%;
+            margin: 5%;
+        }
+    }
+    .sbo-header-tagline {
+        display: -ms-flex;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        >span {
+            padding: 1rem;
+            position: relative;
+            &::before {
+                content: attr(data-tag-number);
+                font-size: 3rem;
+                font-weight: 600;
+                display: inline-block;
+                vertical-align: middle;
+                margin: 0 0.5rem;
+                color: $sboRed;
             }
         }
     }

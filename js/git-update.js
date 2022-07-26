@@ -928,3 +928,66 @@ SBO.prototype.stickyIndex = () => {
         });
     }
 };
+
+/**
+ * 
+ */
+
+function CountDownTimer(year, month, day) {
+    CountDownTimer.prototype.start(year, month, day);
+}
+CountDownTimer.prototype.start = (year, month, day) => {
+    let now = new Date();
+    let date = (year === null || year === '') ? new Date(now.getFullYear(), month, day) : new Date(year, month, day);
+    let currentTime = now.getTime();
+    let downTime = date.getTime();
+    let remainingTime = downTime - currentTime; // get remaining time
+    let second = Math.floor(remainingTime / 1000);
+    let minute = Math.floor(second / 60);
+    let hour = Math.floor(remainingTime / 60);
+    let day = Math.floor(remainingTime / 24);
+
+    hour %= 24;
+    minute %= 60;
+    second %= 60;
+
+    hour = (hour < 10) ? "0" + hour.toString() : hour;
+    minute = (minute < 10) ? "0" + minute.toString() : minute;
+    second = (second < 10) ? "0" + second.toString() : second;
+
+    let clockDay = document.querySelectorAll('[data-clock-day="true"]');
+    let clockHour = document.querySelectorAll('[data-clock-hour="true"]');
+    let clockMinute = document.querySelectorAll('[data-clock-minute="true"]');
+    let clockSecond = document.querySelectorAll('[data-clock-second="true"]');
+
+    if (clockDay != undefined) {
+        for (let i = 0; i < clockDay.length; i++) {
+            CountDownTimer.prototype.HTMLElement(clockDay[i], day);
+        }
+    }
+    if (clockHour != undefined) {
+        for (let i = 0; i < clockHour.length; i++) {
+            CountDownTimer.prototype.HTMLElement(clockHour[i], hour);
+        }
+    }
+    if (clockMinute != undefined) {
+        for (let i = 0; i < clockMinute.length; i++) {
+            CountDownTimer.prototype.HTMLElement(clockMinute[i], minute);
+        }
+    }
+    if (clockSecond != undefined) {
+        for (let i = 0; i < clockSecond.length; i++) {
+            CountDownTimer.prototype.HTMLElement(clockSecond[i], hour);
+        }
+    }
+
+    setTimeout(CountDownTimer.prototype.start.bind(this), 1000);
+
+};
+CountDownTimer.prototype.HTMLElement = (selector, string) => {
+    let elem = document.querySelector(selector);
+    if (elem != undefined) {
+        elem.innerHTML = string;
+    }
+    return elem;
+};

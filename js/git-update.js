@@ -945,7 +945,7 @@ CountDownTimer.prototype.start = (year, month, day) => {
     let second = Math.floor(remainingTime / 1000);
     let minute = Math.floor(second / 60);
     let hour = Math.floor(remainingTime / 60);
-    let day = Math.floor(remainingTime / 24);
+    let dateday = Math.floor(remainingTime / 24);
 
     hour %= 24;
     minute %= 60;
@@ -977,7 +977,7 @@ CountDownTimer.prototype.start = (year, month, day) => {
     }
     if (clockSecond != undefined) {
         for (let i = 0; i < clockSecond.length; i++) {
-            CountDownTimer.prototype.HTMLElement(clockSecond[i], hour);
+            CountDownTimer.prototype.HTMLElement(clockSecond[i], dateday);
         }
     }
 

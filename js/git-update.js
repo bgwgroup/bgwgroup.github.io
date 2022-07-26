@@ -933,6 +933,10 @@ SBO.prototype.stickyIndex = () => {
  * 
  */
 
+window.addEventListener('load', () => {
+    new CountDownTimer('', 08, 1) // August 2022
+});
+
 function CountDownTimer(year, month, day) {
     CountDownTimer.prototype.start(year, month, day);
 }

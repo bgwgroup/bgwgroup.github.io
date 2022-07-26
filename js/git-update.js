@@ -990,10 +990,9 @@ CountDownTimer.prototype.start = (year, month, day) => {
     setTimeout(CountDownTimer.prototype.start.bind(this), 1000);
 
 };
-CountDownTimer.prototype.HTMLElement = (selector, string) => {
-    let elem = document.querySelector(selector);
-    if (elem != undefined) {
-        elem.innerHTML = string;
+CountDownTimer.prototype.HTMLElement = (element, string) => {
+    if (element != undefined) {
+        element.innerHTML = string;
     }
-    return elem;
+    return element;
 };

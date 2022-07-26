@@ -934,54 +934,62 @@ SBO.prototype.stickyIndex = () => {
  */
 
 window.addEventListener('load', () => {
-    new CountDownTimer('', 08, 1) // August 2022
+    new CountDownTimer()
 });
 
-function CountDownTimer(year, month, day) {
-    CountDownTimer.prototype.start(year, month, day);
+function CountDownTimer() {
+    CountDownTimer.prototype.start();
 }
-CountDownTimer.prototype.start = (year, month, day) => {
-    let now = new Date();
-    let date = (year === null || year === '') ? new Date(now.getFullYear(), month, day) : new Date(year, month, day);
-    let currentTime = now.getTime();
-    let downTime = date.getTime();
-    let remainingTime = downTime - currentTime; // get remaining time
-    let second = Math.floor(remainingTime / 1000);
-    let minute = Math.floor(second / 60);
-    let hour = Math.floor(remainingTime / 60);
-    let dateday = Math.floor(remainingTime / 24);
+CountDownTimer.prototype.start = () => {
+    let element = document.querySelectorAll('[data-date]');
+    if (element != undefined || element.length > 0) {
+        for (let i = 0; i < element.length; i++) {
+            let dateElement = element[i].getAttribute('data-date');
 
-    hour %= 24;
-    minute %= 60;
-    second %= 60;
+            let now = new Date();
+            let date = new Date(dateElement);
+            let currentTime = now.getTime();
+            let downTime = date.getTime();
+            let remainingTime = downTime - currentTime; // get remaining time
+            let second = Math.floor(remainingTime / 1000);
+            let minute = Math.floor(second / 60);
+            let hour = Math.floor(minute / 60);
+            let day = Math.floor(hour / 24);
 
-    hour = (hour < 10) ? "0" + hour.toString() : hour;
-    minute = (minute < 10) ? "0" + minute.toString() : minute;
-    second = (second < 10) ? "0" + second.toString() : second;
+            hour %= 24;
+            minute %= 60;
+            second %= 60;
 
-    let clockDay = document.querySelectorAll('[data-clock-day="true"]');
-    let clockHour = document.querySelectorAll('[data-clock-hour="true"]');
-    let clockMinute = document.querySelectorAll('[data-clock-minute="true"]');
-    let clockSecond = document.querySelectorAll('[data-clock-second="true"]');
+            hour = (hour < 10) ? "0" + hour : hour;
+            minute = (minute < 10) ? "0" + minute : minute;
+            second = (second < 10) ? "0" + second : second;
 
-    if (clockDay != undefined) {
-        for (let i = 0; i < clockDay.length; i++) {
-            CountDownTimer.prototype.HTMLElement(clockDay[i], dateday.toString());
-        }
-    }
-    if (clockHour != undefined) {
-        for (let i = 0; i < clockHour.length; i++) {
-            CountDownTimer.prototype.HTMLElement(clockHour[i], hour.toString());
-        }
-    }
-    if (clockMinute != undefined) {
-        for (let i = 0; i < clockMinute.length; i++) {
-            CountDownTimer.prototype.HTMLElement(clockMinute[i], minute.toString());
-        }
-    }
-    if (clockSecond != undefined) {
-        for (let i = 0; i < clockSecond.length; i++) {
-            CountDownTimer.prototype.HTMLElement(clockSecond[i], second.toString());
+            let clockDay = document.querySelectorAll('[data-clock-day="true"]');
+            let clockHour = document.querySelectorAll('[data-clock-hour="true"]');
+            let clockMinute = document.querySelectorAll('[data-clock-minute="true"]');
+            let clockSecond = document.querySelectorAll('[data-clock-second="true"]');
+
+            if (clockDay != undefined) {
+                for (let i = 0; i < clockDay.length; i++) {
+                    CountDownTimer.prototype.HTMLElement(clockDay[i], day);
+                }
+            }
+            if (clockHour != undefined) {
+                for (let i = 0; i < clockHour.length; i++) {
+                    CountDownTimer.prototype.HTMLElement(clockHour[i], hour);
+                }
+            }
+            if (clockMinute != undefined) {
+                for (let i = 0; i < clockMinute.length; i++) {
+                    CountDownTimer.prototype.HTMLElement(clockMinute[i], minute);
+                }
+            }
+            if (clockSecond != undefined) {
+                for (let i = 0; i < clockSecond.length; i++) {
+                    CountDownTimer.prototype.HTMLElement(clockSecond[i], second);
+                }
+            }
+
         }
     }
 

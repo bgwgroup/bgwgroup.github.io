@@ -924,10 +924,8 @@ SBO.prototype.stickyIndex = () => {
     let sboIndexContainer = document.querySelector('.sbo-index-container');
     if (sboIndexContainer != undefined) {
         let cnwHeader = document.querySelector('#cnwBody .headerContent');
-        window.addEventListener('resize', () => {
-            let headerBounds = cnwHeader.getBoundingClientRect();
-            sboIndexContainer.style.top = `${headerBounds.height} px`;
-        });
+        let headerBounds = cnwHeader.getBoundingClientRect();
+        sboIndexContainer.style.top = `${headerBounds.height} px`;
     }
 };
 

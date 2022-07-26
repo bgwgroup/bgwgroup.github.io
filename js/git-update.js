@@ -944,10 +944,10 @@ CountDownTimer.prototype.start = () => {
     let element = document.querySelectorAll('[data-date]');
     if (element != undefined || element.length > 0) {
         for (let i = 0; i < element.length; i++) {
-            let dateElement = element[i].getAttribute('data-date');
+            let dateElement = element[i].getAttribute('data-date').split(','); 
 
             let now = new Date();
-            let date = new Date(dateElement);
+            let date = new Date( parseInt(dateElement[0]), parseInt(dateElement[1]) - 1 , parseInt(dateElement[2]) );
             let currentTime = now.getTime();
             let downTime = date.getTime();
             let remainingTime = downTime - currentTime; // get remaining time

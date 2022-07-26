@@ -964,26 +964,24 @@ CountDownTimer.prototype.start = (year, month, day) => {
     let clockMinute = document.querySelectorAll('[data-clock-minute="true"]');
     let clockSecond = document.querySelectorAll('[data-clock-second="true"]');
 
-    console.log(clockDay, clockHour, clockMinute, clockSecond);
-
     if (clockDay != undefined) {
         for (let i = 0; i < clockDay.length; i++) {
-            CountDownTimer.prototype.HTMLElement(clockDay[i], day);
+            CountDownTimer.prototype.HTMLElement(clockDay[i], dateday.toString());
         }
     }
     if (clockHour != undefined) {
         for (let i = 0; i < clockHour.length; i++) {
-            CountDownTimer.prototype.HTMLElement(clockHour[i], hour);
+            CountDownTimer.prototype.HTMLElement(clockHour[i], hour.toString());
         }
     }
     if (clockMinute != undefined) {
         for (let i = 0; i < clockMinute.length; i++) {
-            CountDownTimer.prototype.HTMLElement(clockMinute[i], minute);
+            CountDownTimer.prototype.HTMLElement(clockMinute[i], minute.toString());
         }
     }
     if (clockSecond != undefined) {
         for (let i = 0; i < clockSecond.length; i++) {
-            CountDownTimer.prototype.HTMLElement(clockSecond[i], dateday);
+            CountDownTimer.prototype.HTMLElement(clockSecond[i], second.toString());
         }
     }
 

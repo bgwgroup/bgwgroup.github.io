@@ -564,7 +564,7 @@ ElectricalPCN.prototype.getCurrentYear = () => {
 };
 ElectricalPCN.prototype.collapsePCNContent = () => {
     let pcnTitle = document.querySelectorAll('.pcn .pcn-content-wrapper .pcn-data > div > span');
-    if (pcnTitle != null) {
+    if (pcnTitle != undefined) {
         for (let i = 0; i < pcnTitle.length; i++) {
             pcnTitle[i].addEventListener('click', () => {
 
@@ -574,7 +574,9 @@ ElectricalPCN.prototype.collapsePCNContent = () => {
                 if (pcnContent.style.maxHeight) {
                     pcnContent.style.maxHeight = null;
                 } else {
-                    pcnContent.style.maxHeight = panel.scrollHeight + "px";
+                    try {
+                        pcnContent.style.maxHeight = panel.scrollHeight + "px";
+                    } catch (e) {}
                 }
             });
         }

@@ -783,6 +783,9 @@ $(".addNewPaymentMethod").click(function() {
 window.addEventListener('load', () => {
     new SBO();
 });
+window.addEventListener('resize', () => {
+    new SBO().stickyIndex();
+});
 
 function SBO() {
     SBO.prototype.init();
@@ -795,9 +798,6 @@ SBO.prototype.init = () => {
     SBO.prototype.clearPageIndex();
     SBO.prototype.toggleMonthlyPack();
     SBO.prototype.defaultMonthlyPack();
-    window.addEventListener('resize', () => {
-        SBO.prototype.stickyIndex();
-    });
 };
 /**
  * pageIndex method controls the top menu buttons clicked/selected

@@ -849,7 +849,7 @@ SBO.prototype.scrollToSection = (currentNode) => {
         for (let i = 0; i < sboSection.length; i++) {
             if (sboSection[i].getAttribute('id') === id) {
                 window.scrollTo({
-                    top: sboSection[i].offsetTop,
+                    top: (sboSection[i].offsetTop) - 50,
                     left: 0,
                     behavior: 'smooth'
                 });

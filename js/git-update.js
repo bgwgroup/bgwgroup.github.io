@@ -794,6 +794,7 @@ SBO.prototype.init = () => {
     SBO.prototype.pageIndex();
     SBO.prototype.clearPageIndex();
     SBO.prototype.toggleMonthlyPack();
+    SBO.prototype.defaultMonthlyPack();
 };
 /**
  * pageIndex method controls the top menu buttons clicked/selected
@@ -897,6 +898,21 @@ SBO.prototype.clearToggleMonthIndex = (button, buttonSelector, content, contentS
             }
         }
     } catch (error) {}
+};
+SBO.prototype.defaultMonthlyPack = () => {
+    let monthlyPackButton = document.querySelectorAll('.monthly-pack-button > button');
+    let monthlyPackContent = document.querySelectorAll('.monthly-pack-content > article');
+
+    let activeMonthlyButton = 'active-monthly-button';
+    let activeMonthlyContent = 'active-monthly-content';
+
+    try {
+        if (monthlyPackButton != undefined && monthlyPackContent != undefined) {
+            monthlyPackButton[0].classList.add(activeMonthlyButton);
+            monthlyPackContent[0].classList.add(activeMonthlyContent);
+        }
+    } catch (error) {}
+
 };
 
 /**

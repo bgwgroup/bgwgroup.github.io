@@ -1013,7 +1013,7 @@ SamAnnivesary.prototype.buttonCurrentSelector = () => {
 SamAnnivesary.prototype.prizePoolToggle = () => {
     let prizeButtons = SamAnnivesary.prototype.buttonNodeList();
 
-    if (prizeButtons.length > 0 && prizButtons != undefined) {
+    if (prizeButtons.length > 0 && prizeButtons != undefined) {
 
         prizeButtons[0].classList.add(SamAnnivesary.prototype.currentButtonSelector());
 

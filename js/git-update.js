@@ -996,6 +996,9 @@ CountDownTimer.prototype.HTMLElement = (element, string) => {
  */
 window.addEventListener('load', () => {
     new SamAnnivesary();
+    if (location.origin.match(/shop.samios.net.au/gi)) {
+        new ParallaxEffect('.sfy-section-content .sfy-content .sfy-brand');
+    }
 });
 
 function SamAnnivesary() {

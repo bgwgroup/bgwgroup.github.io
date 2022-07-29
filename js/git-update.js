@@ -1008,6 +1008,7 @@ function SamAnnivesary() {
 }
 SamAnnivesary.prototype.main = () => {
     SamAnnivesary.prototype.prizePoolToggle();
+    SamAnnivesary.prototype.backgroundImageParallax();
 };
 SamAnnivesary.prototype.buttonNodeList = () => {
     return document.querySelectorAll('.sfy-prize-buttons button');
@@ -1060,4 +1061,41 @@ SamAnnivesary.prototype.clearArticleNodeListSelector = () => {
             articles[i].classList.remove(SamAnnivesary.prototype.articleCurrentSelector());
         }
     }
+};
+SamAnnivesary.prototype.backgroundImageParallax = () => {
+    window.addEventListener('scroll', () => {
+
+        let winScroll = window.pageYOffset || document.documentElement.scrollTop;
+        let bgImages = document.querySelectorAll('[data-bg-parallax]');
+
+        if (bgImages.length > 0 || bgImages != undefined) {
+            for (let i = 0; i < bgImages.length; i++) {
+                let currentbgImage = bgImages[i];
+
+                let speed = currentbgImage.getAttribute('data-bg-speed');
+                let scrollSpeed = (winScroll * parseFloat(speed)) / 40;
+
+                let bounds = currentbgImage.getBoundingClientRect();
+                let elemTop = bounds.top;
+                let elemBottom = bounds.bottom;
+
+                let pageTop = elemTop + (window.innerHeight * (50 / 100));
+
+                let inView = (pageTop >= 0 && (elemBottom <= window.innerHeight)) ? true : false;
+
+                if (inView) {
+                    currentbgImage.setAttribute('style', 'background-position: 0' + scrollSpeed + 'vh');
+                } else {
+                    scrollSpeed = 0;
+                    setInterval(() => {
+                        scrollSpeed--;
+                        if (scrollSpeed <= 0) {
+                            scrollSpeed = 0;
+                        }
+                    }, 100);
+                    currentbgImage.setAttribute('style', 'background-position: 0' + scrollSpeed + 'vh');
+                }
+            }
+        }
+    });
 };

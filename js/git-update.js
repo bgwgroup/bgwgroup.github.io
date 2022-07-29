@@ -990,3 +990,47 @@ CountDownTimer.prototype.HTMLElement = (element, string) => {
     }
     return element;
 };
+
+/**
+ * Samios 75 Years Anniversary functionality
+ */
+window.addEventListener('load', () => {
+    new SamAnnivesary();
+});
+
+function SamAnnivesary() {
+    SamAnnivesary.prototype.main();
+}
+SamAnnivesary.prototype.main = () => {
+    SamAnnivesary.prototype.prizePoolToggle();
+};
+SamAnnivesary.prototype.buttonNodeList = () => {
+    return document.querySelectorAll('.sfy-prize-buttons button');
+};
+SamAnnivesary.prototype.buttonCurrentSelector = () => {
+    return 'current-button';
+};
+SamAnnivesary.prototype.prizePoolToggle = () => {
+    let prizeButtons = SamAnnivesary.prototype.buttonNodeList();
+
+    if (prizeButtons.length > 0 && prizButtons != undefined) {
+
+        prizeButtons[0].classList.add(SamAnnivesary.prototype.currentButtonSelector());
+
+        for (let i = 0; i < prizeButtons.length; i++) {
+            let currentButton = prizeButtons[i];
+            currentButton.addEventListener('click', () => {
+                SamAnnivesary.prototype.clearButtonNodeListSelector();
+                currentButton.classList.add(SamAnnivesary.prototype.currentButtonSelector());
+            });
+        }
+    }
+};
+SamAnnivesary.prototype.clearButtonNodeListSelector = () => {
+    let prizeButtons = SamAnnivesary.prototype.buttonNodeList();
+    if (prizeButtons.length > 0 && prizeButtons != undefined) {
+        for (let j = 0; j < prizeButtons.length; j++) {
+            prizeButtons[j].classList.remove(SamAnnivesary.prototype.currentButtonSelector());
+        }
+    }
+};

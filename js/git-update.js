@@ -1031,8 +1031,9 @@ SamAnnivesary.prototype.prizePoolToggle = () => {
             currentButton.addEventListener('click', () => {
                 SamAnnivesary.prototype.clearButtonNodeListSelector();
                 SamAnnivesary.prototype.clearArticleNodeListSelector();
-                currentButton.parentElement.classList.add(currentButton.innerHTML.toLowerCase());
+                currentButton.parentElement.parentElement.classList.add(currentButton.innerHTML.toLowerCase());
                 currentButton.classList.add(SamAnnivesary.prototype.buttonCurrentSelector());
+                articles[i].classList.add(SamAnnivesary.prototype.articleCurrentSelector());
             });
         }
     }
@@ -1041,7 +1042,7 @@ SamAnnivesary.prototype.clearButtonNodeListSelector = () => {
     let prizeButtons = SamAnnivesary.prototype.buttonNodeList();
     if (prizeButtons.length > 0 && prizeButtons != undefined) {
         for (let j = 0; j < prizeButtons.length; j++) {
-            prizeButtons[j].parentElement.classList.remove(prizeButtons[j].innerHTML.toLowerCase());
+            prizeButtons[j].parentElement.parentElement.classList.remove(prizeButtons[j].innerHTML.toLowerCase());
             prizeButtons[j].classList.remove(SamAnnivesary.prototype.buttonCurrentSelector());
         }
     }

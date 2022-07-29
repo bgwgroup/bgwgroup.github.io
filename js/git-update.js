@@ -1015,13 +1015,13 @@ SamAnnivesary.prototype.prizePoolToggle = () => {
 
     if (prizeButtons.length > 0 && prizeButtons != undefined) {
 
-        prizeButtons[0].classList.add(SamAnnivesary.prototype.currentButtonSelector());
+        prizeButtons[0].classList.add(SamAnnivesary.prototype.buttonCurrentSelector());
 
         for (let i = 0; i < prizeButtons.length; i++) {
             let currentButton = prizeButtons[i];
             currentButton.addEventListener('click', () => {
                 SamAnnivesary.prototype.clearButtonNodeListSelector();
-                currentButton.classList.add(SamAnnivesary.prototype.currentButtonSelector());
+                currentButton.classList.add(SamAnnivesary.prototype.buttonCurrentSelector());
             });
         }
     }
@@ -1030,7 +1030,7 @@ SamAnnivesary.prototype.clearButtonNodeListSelector = () => {
     let prizeButtons = SamAnnivesary.prototype.buttonNodeList();
     if (prizeButtons.length > 0 && prizeButtons != undefined) {
         for (let j = 0; j < prizeButtons.length; j++) {
-            prizeButtons[j].classList.remove(SamAnnivesary.prototype.currentButtonSelector());
+            prizeButtons[j].classList.remove(SamAnnivesary.prototype.buttonCurrentSelector());
         }
     }
 };

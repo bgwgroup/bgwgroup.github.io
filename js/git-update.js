@@ -1014,7 +1014,7 @@ SamAnnivesary.prototype.articleNodeList = () => {
     return document.querySelectorAll('.sfy-prize-content article');
 };
 SamAnnivesary.prototype.articleCurrentSelector = () => {
-    return 'current-selector';
+    return 'current-article';
 };
 SamAnnivesary.prototype.prizePoolToggle = () => {
     let prizeButtons = SamAnnivesary.prototype.buttonNodeList();

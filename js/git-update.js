@@ -1010,17 +1010,28 @@ SamAnnivesary.prototype.buttonNodeList = () => {
 SamAnnivesary.prototype.buttonCurrentSelector = () => {
     return 'current-button';
 };
+SamAnnivesary.prototype.articleNodeList = () => {
+    return document.querySelectorAll('.sfy-prize-content article');
+};
+SamAnnivesary.prototype.articleCurrentSelector = () => {
+    return 'current-selector';
+};
 SamAnnivesary.prototype.prizePoolToggle = () => {
     let prizeButtons = SamAnnivesary.prototype.buttonNodeList();
 
     if (prizeButtons.length > 0 && prizeButtons != undefined) {
 
+        let articles = SamAnnivesary.prototype.articleNodeList();
+
         prizeButtons[0].classList.add(SamAnnivesary.prototype.buttonCurrentSelector());
+        articles[0].classList.add(SamAnnivesary.prototype.articleCurrentSelector());
 
         for (let i = 0; i < prizeButtons.length; i++) {
             let currentButton = prizeButtons[i];
             currentButton.addEventListener('click', () => {
                 SamAnnivesary.prototype.clearButtonNodeListSelector();
+                SamAnnivesary.prototype.clearArticleNodeListSelector();
+                currentButton.parentElement.classList.add(currentButton.innerHTML.toLowerCase());
                 currentButton.classList.add(SamAnnivesary.prototype.buttonCurrentSelector());
             });
         }
@@ -1030,7 +1041,16 @@ SamAnnivesary.prototype.clearButtonNodeListSelector = () => {
     let prizeButtons = SamAnnivesary.prototype.buttonNodeList();
     if (prizeButtons.length > 0 && prizeButtons != undefined) {
         for (let j = 0; j < prizeButtons.length; j++) {
+            prizeButtons[j].parentElement.classList.remove(prizeButtons[j].innerHTML.toLowerCase());
             prizeButtons[j].classList.remove(SamAnnivesary.prototype.buttonCurrentSelector());
+        }
+    }
+};
+SamAnnivesary.prototype.clearArticleNodeListSelector = () => {
+    let articles = SamAnnivesary.prototype.articleNodeList();
+    if (articles.length > 0 && articles != undefined) {
+        for (let i = 0; i < articles.length; i++) {
+            articles[i].classList.remove(SamAnnivesary.prototype.articleCurrentSelector());
         }
     }
 };

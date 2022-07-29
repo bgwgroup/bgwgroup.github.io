@@ -1023,6 +1023,7 @@ SamAnnivesary.prototype.prizePoolToggle = () => {
 
         let articles = SamAnnivesary.prototype.articleNodeList();
 
+        prizeButtons[0].parentElement.parentElement.classList.add(currentButton.innerHTML.toLowerCase());
         prizeButtons[0].classList.add(SamAnnivesary.prototype.buttonCurrentSelector());
         articles[0].classList.add(SamAnnivesary.prototype.articleCurrentSelector());
 

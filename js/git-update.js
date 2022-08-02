@@ -698,37 +698,33 @@ window.addEventListener('DOMContentLoaded', () => {
         pointSearch.addEventListener('keyup', () => {
             let accountNumber = pointSearch.value;
             if (accountNumber.length >= 2) {
-                fetch('https://bgwgroup.com.au/rheem-avg-points/get-rheem-points.php?account=' + accountNumber)
-                    .then((response) => {
-                        return response.json();
-                    })
-                    .then((points) => {
+                console.log('More than 2');
+                setTimeout(function() {
+                    fetch('https://bgwgroup.com.au/rheem-avg-points/get-rheem-points.php?account=' + accountNumber)
+                        .then((response) => {
+                            return response.json();
+                        })
+                        .then((points) => {
 
-                        for (let i = 0; i < points.length; i++) {
-                            nameSpan.innerHTML = points[i]['name'];
-                            pointSpan.innerHTML = '<strong>' + points[i]['remaining_points'] + '</strong> points';
-                        }
+                            for (let i = 0; i < points.length; i++) {
+                                nameSpan.innerHTML = points[i]['name'] || "No redemption points associated with account number";
+                                pointSpan.innerHTML = (points[i]['name']) ? '<strong>' + points[i]['remaining_points'] + '</strong> points' : accountNumber;
+                            }
 
-                        if (pointResults.children.length === 0) {
-                            setTimeout(function() {
+                            if (pointResults.children.length === 0) {
                                 pointResults.innerHTML = "";
                                 pointResults.appendChild(nameSpan);
                                 pointResults.appendChild(pointSpan);
-                            }, 800);
-                        } else {
-                            setTimeout(function() {
-                                pointResults.removeChild(nameSpan);
-                                pointResults.removeChild(pointSpan);
-                            });
-                        }
-                    })
-                    .catch((error) => {});
+                            }
+                        })
+                        .catch((error) => {});
+                }, 800);
             } else {
                 try {
                     loadingSpin.style.display = 'none';
                     pointResults.removeChild(nameSpan);
                     pointResults.removeChild(pointSpan);
-                    pointResults.innerHTML = "This account has no points";
+                    pointResults.innerHTML = "";
                 } catch (err) {}
             }
         });

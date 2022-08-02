@@ -716,7 +716,6 @@ window.addEventListener('DOMContentLoaded', () => {
                             setTimeout(function() {
                                 pointResults.appendChild(nameSpan);
                                 pointResults.appendChild(pointSpan);
-                                pointResults.removeChild(noPoints);
                             }, 800);
                         } else {
                             setTimeout(function() {

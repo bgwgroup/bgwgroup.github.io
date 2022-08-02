@@ -694,9 +694,6 @@ window.addEventListener('DOMContentLoaded', () => {
     let nameSpan = document.createElement('span');
     let pointSpan = document.createElement('span');
 
-    let noPoints = document.createElement('span');
-    noPoints.innerHTML = "No customer points for this account";
-
     if (pointSearch != undefined) {
         pointSearch.addEventListener('keyup', () => {
             let accountNumber = pointSearch.value;
@@ -714,6 +711,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
                         if (pointResults.children.length === 0) {
                             setTimeout(function() {
+                                pointResults.innerHTML = "";
                                 pointResults.appendChild(nameSpan);
                                 pointResults.appendChild(pointSpan);
                             }, 800);
@@ -721,7 +719,6 @@ window.addEventListener('DOMContentLoaded', () => {
                             setTimeout(function() {
                                 pointResults.removeChild(nameSpan);
                                 pointResults.removeChild(pointSpan);
-                                pointResults.appendChild(noPoints);
                             });
                         }
                     })
@@ -731,7 +728,7 @@ window.addEventListener('DOMContentLoaded', () => {
                     loadingSpin.style.display = 'none';
                     pointResults.removeChild(nameSpan);
                     pointResults.removeChild(pointSpan);
-                    pointResults.innerHTML = "";
+                    pointResults.innerHTML = "This account has no points";
                 } catch (err) {}
             }
         });

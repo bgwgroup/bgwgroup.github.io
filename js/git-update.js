@@ -1114,7 +1114,7 @@ window.addEventListener('load', () => {
 function flutterGetSamiosLoginFormDetails() {
     let jUsername = document.querySelector('input#j_username');
     let jPassword = document.querySelector('input#j_password');
-    let loginButton = document.querySelector('.userLogin button[type="submit"]') || document.querySelector('.scaffoldLogin button[type="submit"]');
+    let loginButton = document.querySelector('button.cust-loginregbtn');
 
     if (jUsername != undefined && jPassword != undefined && loginButton != undefined) {
         console.log(jUsername, jPassword, loginButton);

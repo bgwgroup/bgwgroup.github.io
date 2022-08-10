@@ -1133,5 +1133,10 @@ FlutterJS.prototype.getSamiosLoginFormDetails = () => {
 };
 FlutterJS.prototype.checkLogInStatus = () => {
     let samBody = document.querySelector('#samBody.notLoggedIn');
-    return (samBody) ? true : false;
+    if (samBody != undefined || samBody != null) {
+        if (window.checkLogIn) {
+            let status = (samBody) ? true : false;
+            return window.status.postMessage(status);
+        }
+    }
 };

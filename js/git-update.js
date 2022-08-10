@@ -1133,7 +1133,7 @@ FlutterJS.prototype.getSamiosLoginFormDetails = () => {
 };
 FlutterJS.prototype.checkLogInStatus = () => {
     if (window.checkLogin) {
-        let loggedIn = (document.querySelector('body.notLoggedIn') === undefined) ? true : false;
-        return window.checkLogin.postMessage(loggedIn);
+        let notLoggedIn = (document.querySelector('body.notLoggedIn') != undefined) ? true : false;
+        return window.checkLogin.postMessage(notLoggedIn);
     }
 };

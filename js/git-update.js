@@ -1108,20 +1108,25 @@ SamAnnivesary.prototype.backgroundImageParallax = () => {
  * Javascript channels code for the WebView Apps
  */
 window.addEventListener('load', () => {
-    flutterGetSamiosLoginFormDetails();
+    new FlutterJS();
 });
 
-function flutterGetSamiosLoginFormDetails() {
+function FlutterJS() {
+    FlutterJS.prototype.main();
+}
+FlutterJS.prototype.main = () => {
+    FlutterJS.prototype.getSamiosLoginFormDetails();
+};
+FlutterJS.prototype.getSamiosLoginFormDetails = () => {
     let jUsername = document.querySelector('input#j_username');
     let jPassword = document.querySelector('input#j_password');
     let loginButton = document.querySelector('button.cust-loginregbtn');
 
     if (jUsername != undefined && jPassword != undefined && loginButton != undefined) {
-        console.log(jUsername, jPassword, loginButton);
         loginButton.addEventListener('click', () => {
             if (window.initialLogin) {
                 return window.initialLogin.postMessage(`${jUsername.value}, ${jPassword.value}`);
             }
         });
     }
-}
+};

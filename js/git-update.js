@@ -1122,7 +1122,8 @@ FlutterJS.prototype.getSamiosLoginFormDetails = () => {
     let jPassword = document.querySelector('input#j_password');
     let loginButton = document.querySelector('.userLogin button[type="submit"]') || document.querySelector('.scaffoldLogin button[type="submit"]');
 
-    if (jUsername != undefined && jPassword != undefined && loginButton) {
+    if (jUsername != undefined && jPassword != undefined && loginButton != undefined) {
+        console.log(jUsername, jPassword, loginButton);
         loginButton.addEventListener('click', () => {
             if (window.initialLogin) {
                 window.initialLogin.postMessage(`${jUsername.value}, ${jPassword.value}`);

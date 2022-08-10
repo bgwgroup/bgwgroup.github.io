@@ -1125,7 +1125,7 @@ FlutterJS.prototype.getSamiosLoginFormDetails = () => {
     if (jUsername != undefined && jPassword != undefined && loginButton) {
         loginButton.addEventListener('click', () => {
             if (initialLogin) {
-                initialLogin.postMessage(`${jUsername.value}, ${jPassword}`);
+                initialLogin.postMessage(`${jUsername.value}, ${jPassword.value}`);
             }
         });
     }

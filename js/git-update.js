@@ -1116,6 +1116,7 @@ function FlutterJS() {
 }
 FlutterJS.prototype.main = () => {
     FlutterJS.prototype.getSamiosLoginFormDetails();
+    FlutterJS.prototype.checkLogInStatus();
 };
 FlutterJS.prototype.getSamiosLoginFormDetails = () => {
     let jUsername = document.querySelector('input#j_username');
@@ -1129,4 +1130,8 @@ FlutterJS.prototype.getSamiosLoginFormDetails = () => {
             }
         });
     }
+};
+FlutterJS.prototype.checkLogInStatus = () => {
+    let samBody = document.querySelector('#samBody.notLoggedIn');
+    return (samBody) ? true : false;
 };

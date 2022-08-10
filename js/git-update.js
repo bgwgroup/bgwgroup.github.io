@@ -1107,7 +1107,7 @@ SamAnnivesary.prototype.backgroundImageParallax = () => {
 /**
  * Javascript channels code for the WebView Apps
  */
-window.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('load', () => {
     new FlutterJS();
 });
 

@@ -1136,7 +1136,7 @@ FlutterJS.prototype.checkLogInStatus = () => {
     if (samBody != undefined || samBody != null) {
         if (window.checkLogIn) {
             let status = (samBody) ? true : false;
-            return window.status.postMessage(status);
+            return window.checkLogin.postMessage(status);
         }
     }
 };

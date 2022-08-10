@@ -87,22 +87,24 @@ let NHPSwitchOnOff = {
 
         isElementInViewOnScroll('.animate-in-view');
 
+        try {
+            new ParallaxEffect('.scratch-and-win .horizontal-line');
+
+            // Sherriff News and Promotion
+            new ParallaxEffect('.news-promotions .top__news__content');
+            new ParallaxEffect('.news-promotions .other__news__row .news__card');
+
+            // Sherriff SIP
+            new ParallaxEffect('.sip__container .vertical-line');
+            new ParallaxEffect('.sip__container .horizontal-line');
+
+            // Sherriff iQ Lighting
+            new ParallaxEffect('.iq__lighting .horizontal-line');
+
+            // Footy Tipping
+            new ParallaxEffect('.footy-parallax');
+        } catch (e) {}
         // scratch and win
-        new ParallaxEffect('.scratch-and-win .horizontal-line');
-
-        // Sherriff News and Promotion
-        new ParallaxEffect('.news-promotions .top__news__content');
-        new ParallaxEffect('.news-promotions .other__news__row .news__card');
-
-        // Sherriff SIP
-        new ParallaxEffect('.sip__container .vertical-line');
-        new ParallaxEffect('.sip__container .horizontal-line');
-
-        // Sherriff iQ Lighting
-        new ParallaxEffect('.iq__lighting .horizontal-line');
-
-        // Footy Tipping
-        new ParallaxEffect('.footy-parallax');
 
     });
 });

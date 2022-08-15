@@ -1117,6 +1117,7 @@ function FlutterJS() {
 FlutterJS.prototype.main = () => {
     FlutterJS.prototype.getSamiosLoginFormDetails();
     FlutterJS.prototype.checkLogInStatus();
+    FlutterJS.prototype.getCartCount();
 };
 FlutterJS.prototype.getSamiosLoginFormDetails = () => {
     let jUsername = document.querySelector('input#j_username');

@@ -1137,3 +1137,10 @@ FlutterJS.prototype.checkLogInStatus = () => {
         return window.checkLogin.postMessage(notLoggedIn);
     }
 };
+FlutterJS.prototype.getCartCount = () => {
+    if (window.cartCount) {
+        let cartCountElement = document.querySelector('.mini-cart-count > .nav-items');
+        let count = (cartCountElement != undefined) ? count.innerHTML : '';
+        return window.cartCount.postMessage(count);
+    }
+};

@@ -1139,7 +1139,7 @@ FlutterJS.prototype.checkLogInStatus = () => {
 };
 FlutterJS.prototype.getCartCount = () => {
     if (window.cartCount) {
-        let cartCountElement = document.querySelector('.miniCart > .nav-items');
+        let cartCountElement = document.querySelector('.miniCart .nav-items');
         let count = (cartCountElement != undefined) ? count.innerHTML : '';
         return window.cartCount.postMessage(count);
     }

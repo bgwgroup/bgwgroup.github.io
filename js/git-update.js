@@ -1148,7 +1148,7 @@ FlutterJS.prototype.getCartCount = () => {
 };
 FlutterJS.prototype.checkErrorLogin = () => {
     if(window.checkErrorLogin){
-        let errorLoginElement = document.querySelector(".alert.error.getAccAlert.danger-alert");
+        let errorLoginElement = document.querySelector(".alert.error.getAccAlert.danger-alert > div");
         if(errorLoginElement != undefined){
             return window.checkErrorLogin.postMessage(errorLoginElement.innerHTML);
         }

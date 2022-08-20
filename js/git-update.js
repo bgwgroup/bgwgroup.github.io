@@ -1118,6 +1118,7 @@ FlutterJS.prototype.main = () => {
     FlutterJS.prototype.getSamiosLoginFormDetails();
     FlutterJS.prototype.checkLogInStatus();
     FlutterJS.prototype.getCartCount();
+    FlutterJS.prototype.checkErrorLogin();
 };
 FlutterJS.prototype.getSamiosLoginFormDetails = () => {
     let jUsername = document.querySelector('input#j_username');
@@ -1143,5 +1144,13 @@ FlutterJS.prototype.getCartCount = () => {
         let cartCountElement = document.querySelector('.miniCart .nav-items');
         let count = (cartCountElement != undefined) ? count.innerHTML : '';
         return window.cartCount.postMessage(count);
+    }
+};
+FlutterJS.prototype.checkErrorLogin = () => {
+    if(window.checkErrorLogin){
+        let errorLoginElement = document.querySelector(".alert.error.getAccAlert.danger-alert");
+        if(errorLoginElement != undefined){
+            return window.checkErrorLogin.postMessage(errorLoginElement.value);
+        }
     }
 };

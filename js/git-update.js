@@ -1150,7 +1150,7 @@ FlutterJS.prototype.checkErrorLogin = () => {
     if(window.checkErrorLogin){
         let errorLoginElement = document.querySelector(".alert.error.getAccAlert.danger-alert");
         if(errorLoginElement != undefined){
-            return window.checkErrorLogin.postMessage(errorLoginElement.value);
+            return window.checkErrorLogin.postMessage(errorLoginElement.innerHTML);
         }
     }
 };

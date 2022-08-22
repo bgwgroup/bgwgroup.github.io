@@ -1121,6 +1121,7 @@ FlutterJS.prototype.main = () => {
     FlutterJS.prototype.checkLogInStatus();
     FlutterJS.prototype.getCartCount();
     FlutterJS.prototype.checkErrorLogin();
+    FlutterJS.prototype.orderNumber();
 };
 FlutterJS.prototype.getSamiosLoginFormDetails = () => {
     let jUsername = document.querySelector('input#j_username');
@@ -1157,6 +1158,16 @@ FlutterJS.prototype.checkErrorLogin = () => {
         if (errorLoginElement != undefined) {
             if (errorLoginElement.innerHTML.length > 0) {
                 return window.checkErrorLogin.postMessage(errorLoginElement.innerHTML);
+            }
+        }
+    }
+};
+FlutterJS.prototype.orderNumber = () => {
+    if (window.orderNumber) {
+        let checkoutConfirmationNumber = document.querySelector(".checkoutOrderConfirmationNumber");
+        if (checkoutConfirmationNumber != undefined) {
+            if (checkoutConfirmationNumber.innerHTML.length > 0) {
+                return window.orderNumber.postMessage(checkoutConfirmationNumber.innerHTML);
             }
         }
     }

@@ -1174,19 +1174,20 @@ FlutterJS.prototype.orderNumber = () => {
     }
 };
 FlutterJS.prototype.getHrefLink = () => {
-    if(window.hrefLink){
-        let hrefLinks = document.getElementsByTagName('a');
-        if(hrefLinks != undefined){
-            for(let i = 0; i < hrefLinks.length; i++){
-                let anchor = hrefLinks[i];
-                ['/medias','.pdf','.gif','.jpeg','.jpg','.png','.svg','.csv','.xlxs','.doc','.docx','.txt'].forEach((mediaType) => {
-                    if(/\${mediaType}/gi.test(anchor)){
-                        anchor.addEventListener('click', () => {
-                            return window.hrefLink.postMessage(anchor);
-                        });
-                    }
-                });
-            }
-        }
+  if(window.hrefLink){
+    let hrefLinks = document.getElementsByName('a');
+    if(hrefLinks != undefined){
+      for(let i = 0; i < hrefLinks.length; i++){
+        let anchor = hrefLinks[i].toString();
+        ['/medias','.pdf','.gif','.jpeg','.jpg','.png','.svg','.csv','.xlxs','.doc','.docx','.txt'].forEach((mediaType) => {
+          let regex = new RegExp(mediaType);
+          if(anchor.match(regex)){
+            anchor.addEventListener('click', () => {
+              return window.hrefLink.postMessage(anchor);
+            });
+          }
+        });
+      }
     }
+  }
 };

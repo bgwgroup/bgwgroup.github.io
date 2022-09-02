@@ -1122,7 +1122,7 @@ FlutterJS.prototype.main = () => {
     FlutterJS.prototype.getCartCount();
     FlutterJS.prototype.checkErrorLogin();
     FlutterJS.prototype.orderNumber();
-    FlutterJS.prototype.getHrefLink();
+    //FlutterJS.prototype.getHrefLink();
 };
 FlutterJS.prototype.getSamiosLoginFormDetails = () => {
     let jUsername = document.querySelector('input#j_username');
@@ -1173,6 +1173,7 @@ FlutterJS.prototype.orderNumber = () => {
         }
     }
 };
+/*
 FlutterJS.prototype.getHrefLink = () => {
   if(window.hrefLink){
     let hrefLinks = document.getElementsByName('a');
@@ -1190,4 +1191,4 @@ FlutterJS.prototype.getHrefLink = () => {
       }
     }
   }
-};
+};*/

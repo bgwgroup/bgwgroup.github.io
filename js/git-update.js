@@ -1179,11 +1179,10 @@ FlutterJS.prototype.getHrefLink = () => {
         if (hrefLinks != undefined) {
             for (let i = 0; i < hrefLinks.length; i++) {
                 let anchor = hrefLinks[i].toString();
-                ['/medias', '.pdf', '.gif', '.jpeg', '.jpg', '.png', '.svg', '.csv', '.xlxs', '.doc', '.docx', '.txt'].forEach((mediaType) => {
+                ['.pdf', '.gif', '.jpeg', '.jpg', '.png', '.svg', '.csv', '.xlxs', '.doc', '.docx', '.txt'].forEach((mediaType) => {
                     let regex = new RegExp(mediaType);
                     if (anchor.match(regex)) {
                         hrefLinks[i].addEventListener('click', () => {
-                            window.open(anchor);
                             return window.hrefLink.postMessage(anchor);
                         });
                     }

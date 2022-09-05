@@ -1183,6 +1183,7 @@ FlutterJS.prototype.getHrefLink = () => {
                     let regex = new RegExp(mediaType);
                     if (anchor.match(regex)) {
                         hrefLinks[i].addEventListener('click', () => {
+                            window.open(anchor);
                             return window.hrefLink.postMessage(anchor);
                         });
                     }

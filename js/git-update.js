@@ -1182,9 +1182,10 @@ FlutterJS.prototype.getHrefLink = () => {
                 ['/medias', '.pdf', '.gif', '.jpeg', '.jpg', '.png', '.svg', '.csv', '.xlxs', '.doc', '.docx', '.txt'].forEach((mediaType) => {
                     let regex = new RegExp(mediaType);
                     if (anchor.match(regex)) {
-                        anchor.addEventListener('click', () => {
-                            return window.hrefLink.postMessage(anchor);
-                        });
+                        return window.hrefLink.postMessage(anchor);
+                        // anchor.addEventListener('click', () => {
+                        //     return window.hrefLink.postMessage(anchor);
+                        // });
                     }
                 });
             }

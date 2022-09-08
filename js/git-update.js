@@ -1194,15 +1194,17 @@ FlutterJS.prototype.getHrefLink = () => {
 /**
  * Clipsal Iconic Outdoor Floating Text
  */
-window.addEventListener('resize', () => {
-    if (location.origin.match(/shop.sherriff.com.au/gi) || location.origin.match(/shop.cnw.com.au/gi)) {
-        let nav = document.querySelector('#sheBody .headerContent nav') || document.querySelector('.headerContent .cnw-header-navigation');
-        if (nav != undefined) {
-            let bounds = nav.getBoundingClientRect();
-            let cioStickyInfo = document.querySelector('.sticky-info');
-            if (cioStickyInfo != undefined) {
-                cioStickyInfo.style.top = `${bounds.bottom}px`;
+['load', 'resize'].forEach((event) => {
+    window.addEventListener(event, () => {
+        if (location.origin.match(/shop.sherriff.com.au/gi) || location.origin.match(/shop.cnw.com.au/gi)) {
+            let nav = document.querySelector('#sheBody .headerContent nav') || document.querySelector('.headerContent .cnw-header-navigation');
+            if (nav != undefined) {
+                let bounds = nav.getBoundingClientRect();
+                let cioStickyInfo = document.querySelector('.sticky-info');
+                if (cioStickyInfo != undefined) {
+                    cioStickyInfo.style.top = `${bounds.bottom}px`;
+                }
             }
         }
-    }
+    });
 });

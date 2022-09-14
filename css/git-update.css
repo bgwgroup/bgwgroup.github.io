@@ -2261,6 +2261,3 @@ html {
 
 .product_quantity input[type="number"] {
   height: 35px; }
-
-html::before {
-  content: "Apologies, our website is currently down for scheduled maintenance from 7:30pm - 1:00am AEST. For any urgent enquiries please contact your local branch or email online.support@bgwgroup.com.au" !important; }

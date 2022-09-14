@@ -3121,3 +3121,11 @@ html {
         height: 35px;
     }
 }
+
+#samBody {
+    html {
+        &::before {
+            content: "Apologies, our website is currently down for scheduled maintenance from 4:30pm - 5:30pm AEST. For any urgent enquiries please contact your local branch or email online.support@bgwgroup.com.au" !important;
+        }
+    }
+}

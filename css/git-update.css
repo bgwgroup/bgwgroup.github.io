@@ -2261,3 +2261,29 @@ html {
 
 .product_quantity input[type="number"] {
   height: 35px; }
+
+#cnwBody table#prodDetails td a {
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  justify-content: start;
+  margin: 0.5rem 0; }
+  #cnwBody table#prodDetails td a .pdf-icon-container,
+  #cnwBody table#prodDetails td a small {
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+    width: 100%; }
+  #cnwBody table#prodDetails td a .pdf-icon-container {
+    max-width: 20%; }
+    #cnwBody table#prodDetails td a .pdf-icon-container img {
+      display: block;
+      width: 100%;
+      max-width: 50px;
+      max-height: 50px;
+      object-fit: contain;
+      object-position: center; }
+  #cnwBody table#prodDetails td a small {
+    max-width: 80%;
+    font-size: 0.9rem; }

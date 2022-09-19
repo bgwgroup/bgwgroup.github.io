@@ -2285,5 +2285,7 @@ table#prodDetails td a {
       object-fit: contain;
       object-position: center; }
   table#prodDetails td a small {
+    color: #000;
     max-width: 80%;
-    font-size: 0.9rem; }
+    font-size: 0.9rem;
+    text-align: left; }

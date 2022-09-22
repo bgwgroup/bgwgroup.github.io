@@ -2338,7 +2338,8 @@ table#prodDetails td a {
     display: -ms-flex;
     display: flex;
     -ms-flex-wrap: wrap;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    max-width: 300px; }
     #cboxWrapper .account-address-removal-popup .modal-actions .row > div {
       -ms-flex: 1 0 auto;
       flex: 1 0 auto;
@@ -2346,7 +2347,7 @@ table#prodDetails td a {
       max-width: 50%; }
 
 .page-payment-details #cboxWrapper #cboxTitle {
-  display: none; }
+  display: none !important; }
 
 /* Checkout */
 .checkoutPaymentDetails {

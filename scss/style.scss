@@ -3235,6 +3235,7 @@ table#prodDetails {
                 display: flex;
                 -ms-flex-wrap: wrap;
                 flex-wrap: wrap;
+                max-width: 300px;
                 >div {
                     -ms-flex: 1 0 auto;
                     flex: 1 0 auto;
@@ -3249,7 +3250,7 @@ table#prodDetails {
 .page-payment-details {
     #cboxWrapper {
         #cboxTitle {
-            display: none;
+            display: none !important;
         }
     }
 }

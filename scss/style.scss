@@ -3164,3 +3164,165 @@ table#prodDetails {
         }
     }
 }
+
+
+/**
+** Credit Card Styles 
+**/
+
+
+/* Modal Popup Box */
+
+#cboxWrapper {
+    width: 100% !important;
+    height: auto !important;
+    >div+div {
+        clear: unset !important;
+        width: 100%;
+    }
+    #cboxMiddleLeft,
+    #cboxContent {
+        float: unset !important;
+        width: 100% !important;
+        height: auto !important;
+    }
+    #cboxLoadedContent {
+        width: 100% !important;
+    }
+    #summaryPaymentOverlayContainer {
+        width: 100%;
+        >div {
+            width: inherit;
+        }
+    }
+    .paymentMethodsCards {
+        display: -ms-flex;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        >div {
+            -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
+            width: 100%;
+            margin: 2%;
+        }
+        @media (min-width: 768px) {
+            >div {
+                max-width: 46%;
+            }
+        }
+        @media (min-width: 1024px) {
+            >div {
+                max-width: 29.33%;
+            }
+        }
+    }
+    .cardType {
+        >svg {
+            width: 100%;
+            height: 100%;
+            max-width: 300px;
+            max-height: 300px;
+        }
+    }
+    .account-address-removal-popup {
+        .address {
+            margin: 0.5rem 0;
+        }
+        .modal-actions {
+            .row {
+                display: -ms-flex;
+                display: flex;
+                -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+                >div {
+                    -ms-flex: 1 0 auto;
+                    flex: 1 0 auto;
+                    width: 100%;
+                    max-width: 50%;
+                }
+            }
+        }
+    }
+}
+
+.page-payment-details {
+    #cboxWrapper {
+        #cboxTitle {
+            display: none;
+        }
+    }
+}
+
+
+/* Checkout */
+
+.checkoutPaymentDetails {
+    width: 100%;
+    padding: 1.2rem;
+    background-color: #eff4f8;
+    border-radius: 0.5rem;
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        list-style-type: none;
+        display: -ms-flex;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        >li {
+            -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
+            width: 100%;
+        }
+    }
+    li {
+        font-size: 15px;
+        &:first-child {
+            margin-bottom: 0.5rem;
+        }
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(5),
+        &:nth-child(6) {
+            -ms-flex: unset;
+            flex: unset;
+            width: auto;
+            margin-right: 0.5rem;
+        }
+    }
+}
+
+
+/* My Account Manage Payment */
+
+.payment-details-container {
+    .paymentMethodsCard {
+        margin-bottom: unset !important;
+    }
+    .card-information {
+        padding: 0;
+        margin: 0;
+        margin-bottom: 0.85rem;
+        padding: 1.24rem;
+        border: 1px solid #CCC;
+        border-radius: 0.5rem;
+        background-color: #eff4f8;
+    }
+    .card-billing {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        list-style-type: none;
+        display: -ms-flex;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        >li {
+            -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
+            width: 100%;
+        }
+    }
+}

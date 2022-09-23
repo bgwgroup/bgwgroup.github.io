@@ -3165,7 +3165,7 @@ table#prodDetails {
 ** Maintenance Banners
 **/
 
-.page-homepage {
+body {
     &::before {
         content: "";
         position: fixed;
@@ -3196,19 +3196,19 @@ table#prodDetails {
     }
 }
 
-#cnwBody.page-homepage {
+#cnwBody {
     &::after {
         content: "The CNW website will be unavailable from 7:30pm AEST until 1:00am AEST this evening for scheduled maintenance and upgrades. \A Any further questions you have regarding the above, please be sure to reach out to online.support@bgwgroup.com.au.";
     }
 }
 
-#samBody.page-homepage {
+#samBody {
     &::after {
         content: "The Samios website will be unavailable from 7:30pm AEST until 1:00am AEST this evening for scheduled maintenance and upgrades. \A Any further questions you have regarding the above, please be sure to reach out to online.support@bgwgroup.com.au.";
     }
 }
 
-#sheBody.page-homepage {
+#sheBody {
     &::after {
         content: "The Sherriff website will be unavailable from 7:30pm AEST until 1:00am AEST this evening for scheduled maintenance and upgrades. \A Any further questions you have regarding the above, please be sure to reach out to online.support@bgwgroup.com.au.";
     }

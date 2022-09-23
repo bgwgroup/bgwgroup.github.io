@@ -1133,5 +1133,10 @@ try {
     if (getHeaderApplicationLink.getAttribute("href") === "/signup?") {
         getHeaderApplicationLink.setAttribute("href", "/sam/en/AUD/login/signup?");
     }
+    
+    let getFooterApplicationLink = document.querySelector(".scaffoldFooterSectionWrapper .IconTiles .Tile:nth-child(3) a");
+    if (getFooterApplicationLink.getAttribute("href") === "/signup?") {
+        getFooterApplicationLink.setAttribute("href", "/sam/en/AUD/login/signup?");
+    }
 
 } catch (error) {}

@@ -1113,15 +1113,25 @@ window.addEventListener('DOMContentLoaded', () => {
 /**
  * Nickelodean Search Hax (updated)
  */
-if (window.location.href.indexOf("?text=") == -1) {
-    const btnSearchOpenCategories = document.querySelector("#searchEmptyOpenCategories");
-    const btnSearchOpenBrands = document.querySelector("#searchEmptyOpenBrands");
 
-    btnSearchOpenCategories.addEventListener("click", function() {
-        document.querySelector("#navOpenCategories").click();
-    })
+try {
 
-    btnSearchOpenBrands.addEventListener("click", function() {
-        document.querySelector("#navOpenBrands").click();
-    })
-}
+    if (window.location.href.indexOf("?text=") == -1) {
+        const btnSearchOpenCategories = document.querySelector("#searchEmptyOpenCategories");
+        const btnSearchOpenBrands = document.querySelector("#searchEmptyOpenBrands");
+
+        btnSearchOpenCategories.addEventListener("click", function() {
+            document.querySelector("#navOpenCategories").click();
+        })
+
+        btnSearchOpenBrands.addEventListener("click", function() {
+            document.querySelector("#navOpenBrands").click();
+        })
+    }
+
+    let getHeaderApplicationLink = document.querySelector(".scaffoldHeaderTopRight a:nth-child(2)");
+    if (getHeaderApplicationLink.getAttribute("href") === "/signup?") {
+        getHeaderApplicationLink.setAttribute("href", "/sam/en/AUD/login/signup?");
+    }
+
+} catch (error) {}

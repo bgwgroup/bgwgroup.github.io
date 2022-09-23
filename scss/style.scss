@@ -3122,11 +3122,6 @@ html {
     }
 }
 
-// html {
-//     &::before {
-//         content: "Apologies, our website is currently down for scheduled maintenance from 7:30pm - 1:00am AEST. For any urgent enquiries please contact your local branch or email online.support@bgwgroup.com.au" !important;
-//     }
-// }
 // PDP page CSS styles for PDF + Titles
 table#prodDetails {
     td {
@@ -3162,6 +3157,60 @@ table#prodDetails {
                 text-align: left;
             }
         }
+    }
+}
+
+
+/**
+** Maintenance Banners
+**/
+
+.page-homepage {
+    &::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: #EEE;
+        width: 100%;
+        height: 100%;
+        z-index: 9999999999999999;
+    }
+    &::after {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        color: #222;
+        max-width: 1300px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        font-size: 16px;
+        line-height: 30px;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        z-index: 99999999999;
+        white-space: pre-wrap;
+    }
+}
+
+#cnwBody.page-homepage {
+    &::after {
+        content: "The CNW website will be unavailable from 7:30pm AEST until 1:00am AEST this evening for scheduled maintenance and upgrades. \A Any further questions you have regarding the above, please be sure to reach out to online.support@bgwgroup.com.au.";
+    }
+}
+
+#samBody.page-homepage {
+    &::after {
+        content: "The Samios website will be unavailable from 7:30pm AEST until 1:00am AEST this evening for scheduled maintenance and upgrades. \A Any further questions you have regarding the above, please be sure to reach out to online.support@bgwgroup.com.au.";
+    }
+}
+
+#sheBody.page-homepage {
+    &::after {
+        content: "The Sherriff website will be unavailable from 7:30pm AEST until 1:00am AEST this evening for scheduled maintenance and upgrades. \A Any further questions you have regarding the above, please be sure to reach out to online.support@bgwgroup.com.au.";
     }
 }
 

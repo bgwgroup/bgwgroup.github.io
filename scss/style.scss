@@ -3379,3 +3379,10 @@ body {
         }
     }
 }
+
+
+/* Temporary ASM z-index. Nic to purge after */
+
+#_asm {
+    z-index: 99999999;
+}

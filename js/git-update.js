@@ -1109,3 +1109,19 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     }
 });
+
+/**
+ * Nickelodean Search Hax
+ */
+if (window.location.href.indexOf("?text=") == -1) {
+    const btnSearchOpenCategories = document.querySelector("#searchEmptyOpenCategories");
+    const btnSearchOpenBrands = document.querySelector("#searchEmptyOpenBrands");
+
+    btnSearchOpenCategories.addEventListener("click", function() {
+        document.querySelector("#navOpenCategories").click();
+    })
+
+    btnSearchOpenBrands.addEventListener("click", function() {
+        document.querySelector("#navOpenBrands").click();
+    })
+}

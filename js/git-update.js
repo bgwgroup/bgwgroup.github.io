@@ -1111,7 +1111,7 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 /**
- * Nickelodean Search Hax
+ * Nickelodean Search Hax (updated)
  */
 if (window.location.href.indexOf("?text=") == -1) {
     const btnSearchOpenCategories = document.querySelector("#searchEmptyOpenCategories");

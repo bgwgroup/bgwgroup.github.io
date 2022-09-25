@@ -1133,10 +1133,20 @@ try {
     if (getHeaderApplicationLink.getAttribute("href") === "/signup?") {
         getHeaderApplicationLink.setAttribute("href", "/sam/en/AUD/login/signup?");
     }
-    
+
     let getFooterApplicationLink = document.querySelector(".scaffoldFooterSectionWrapper .IconTiles .Tile:nth-child(3) a");
     if (getFooterApplicationLink.getAttribute("href") === "/signup?") {
         getFooterApplicationLink.setAttribute("href", "/sam/en/AUD/login/signup?");
     }
 
 } catch (error) {}
+
+/**
+ * Adding removed selectors to hide app icons
+ */
+window.addEventListener('DOMContentLoaded', () => {
+    let scaffolDownloadApp = document.querySelector('.scaffoldFooterDownloadApp');
+    if (scaffolDownloadApp != undefined) {
+        scaffolDownloadApp.classList.add('app-icons-container');
+    }
+});

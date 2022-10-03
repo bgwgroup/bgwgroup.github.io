@@ -1186,3 +1186,18 @@ window.addEventListener('DOMContentLoaded', () => {
         appIconsContainer.style.display = 'none';
     }
 });
+
+/**
+ * SBO Search Page Banner
+ */
+window.addEventListener('DOMContentLoaded', () => {
+    if (location.href.match(/cnw.com.au/)) {
+        let breadCrumb = document.querySelector('.breadcrumbScaffold');
+        if (breadCrumb != undefined) {
+            let bannerContainer = document.createElement('div');
+            bannerContainer.className = 'promotion-banner';
+            bannerContainer.innerHTML = `<img src="/medias/sbo-promotion-banner.jpg?context=bWFzdGVyfGltYWdlc3w4MTQyOXxpbWFnZS9qcGVnfGhhNS9oMDMvOTk3MTA4ODAzMTc3NC9zYm8tcHJvbW90aW9uLWJhbm5lci5qcGd8NzVkYzAyN2Q2Njc3Zjg2ZTNjNDNhN2QzMmQxMDI3ODgwOThlODA4OWE5YTlmODA2MWM0YThkMDM1NWZjYzk2Yw">`;
+            breadCrumb.parentNode.insertBefore(bannerContainer, breadCrumb);
+        }
+    }
+});

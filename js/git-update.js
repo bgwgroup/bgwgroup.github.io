@@ -1009,6 +1009,7 @@ function FlutterJS() {
 }
 FlutterJS.prototype.main = () => {
     FlutterJS.prototype.getSamiosLoginFormDetails();
+    FlutterJS.prototype.getCNWSherriffLoginFormDetails();
     FlutterJS.prototype.checkLogInStatus();
     FlutterJS.prototype.getCartCount();
     FlutterJS.prototype.checkErrorLogin();
@@ -1024,6 +1025,31 @@ FlutterJS.prototype.getSamiosLoginFormDetails = () => {
         loginButton.addEventListener('click', () => {
             if (window.initialLogin) {
                 return window.initialLogin.postMessage(`${jUsername.value}, ${jPassword.value}`);
+            }
+        });
+    }
+};
+FlutterJS.prototype.getCNWSherriffLoginFormDetails = () => {
+    let loginFormUsername = document.querySelector('form#loginForm input#j_username');
+    let loginFormPassword = document.querySelector('form#loginForm input#j_password');
+    let loginFormButton = document.querySelector('form#loginForm button[type="submit"]');
+
+    if (loginFormUsername != undefined && loginFormPassword != undefined && loginFormButton != undefined) {
+        loginFormButton.addEventListener('click', () => {
+            if (window.loginFormPage) {
+                return window.loginFormPage.postMessage(`${loginFormUsername.value}, ${loginFormPassword.value}`);
+            }
+        });
+    }
+
+    let loginHeaderFormUsername = document.querySelector('form[modelAttribute="loginForm"] input#j_username');
+    let loginHeaderFormPassword = document.querySelector('form[modelAttribute="loginForm"] input#j_password');
+    let loginHeaderFormButton = document.querySelector('form[modelAttribute="loginForm"] button[type="submit"]');
+
+    if (loginHeaderFormUsername != undefined && loginHeaderFormPassword != undefined && loginHeaderFormButton != undefined) {
+        loginHeaderFormButton.addEventListener('click', () => {
+            if (window.loginFormPage) {
+                return window.loginFormPage.postMessage(`${loginHeaderFormUsername.value},${loginHeaderFormPassword.value}`);
             }
         });
     }

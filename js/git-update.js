@@ -1176,3 +1176,13 @@ window.addEventListener('DOMContentLoaded', () => {
         scaffolDownloadApp.classList.add('app-icons-container');
     }
 });
+
+/**
+ * Hide Samios Google Play Store Link (Temporary)
+ */
+window.addEventListener('DOMContentLoaded', () => {
+    let appIconsContainer = document.querySelector('.app-icons-container > a:nth-child(2)');
+    if (appIconsContainer != undefined) {
+        appIconsContainer.style.display = 'none';
+    }
+});

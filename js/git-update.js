@@ -1178,16 +1178,6 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 /**
- * Hide Samios Google Play Store Link (Temporary)
- */
-window.addEventListener('DOMContentLoaded', () => {
-    let appIconsContainer = document.querySelector('.app-icons-container > a:nth-child(2)');
-    if (appIconsContainer != undefined) {
-        appIconsContainer.style.display = 'none';
-    }
-});
-
-/**
  * SBO Search Page Banner
  */
 window.addEventListener('DOMContentLoaded', () => {

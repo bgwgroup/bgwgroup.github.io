@@ -1191,3 +1191,17 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     }
 });
+
+/**
+ * Hide Find Stores Near Me for Android and iOS (Temporary)
+ */
+window.addEventListener('DOMContentLoaded', () => {
+    let platform = ['Android', 'iOS'];
+    for (let i = 0; i < platform.length; i++) {
+        if (navigator.platform.indexOf(platform[i]) > -1) {
+            if (document.querySelector('a#findStoresNearMe') != undefined) {
+                document.querySelector('a#findStoresNearMe').style.display = 'none';
+            }
+        }
+    }
+});

@@ -1015,6 +1015,7 @@ FlutterJS.prototype.main = () => {
     FlutterJS.prototype.checkErrorLogin();
     FlutterJS.prototype.orderNumber();
     FlutterJS.prototype.getHrefLink();
+    FlutterJS.prototype.enableGeoLocation();
 };
 FlutterJS.prototype.getSamiosLoginFormDetails = () => {
     let jUsername = document.querySelector('input#j_username');
@@ -1108,6 +1109,17 @@ FlutterJS.prototype.getHrefLink = () => {
         }
     }
 };
+FlutterJS.prototype.enableGeoLocation = () => {
+    if (window.locationPermission) {
+        let findStoresNearMe = document.querySelector('#findStoresNearMe');
+        if (findStoresNearMe != undefined) {
+            findStoresNearMe.addEventListener('click', () => {
+                return window.locationPermission.postMessage('Find Stores Near Me');
+            });
+        }
+    }
+};
+
 /**
  * Clipsal Iconic Outdoor Floating Text
  */

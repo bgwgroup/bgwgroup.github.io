@@ -1,16 +1,8 @@
-[
-    {
+[{
         "image": "/medias/CNW-679x679.png?context=bWFzdGVyfGltYWdlc3wyMzAyMDl8aW1hZ2UvcG5nfGhiMy9oMWUvOTgxNzYyMjk3MDM5OC9DTlcgNjc5eDY3OS5wbmd8NDMzNjgyMWJiMWQ0NGEwNmMwYTIyNzZhYjQ4ODVhYjlkNTgyMzU3MzFkZTAxMGY1MTA0ZGQ1ODAzNzk0YzEwNg",
         "title": "ERP Integration",
         "description": "Never worry about outdated invoices or price files again",
         "link": "/erp-integration",
-        "active": "yes"
-    },
-    {
-        "image": "/medias/WHPH-2022-Banner-Website-N-P.jpg?context=bWFzdGVyfGltYWdlc3wxNTg0MjZ8aW1hZ2UvanBlZ3xoZGQvaGEyLzk4MDU4MDYwMTAzOTgvV0hQSCAyMDIyIEJhbm5lcl9XZWJzaXRlX04mUC5qcGd8NjM2NDYxODY2YWE3ODM4NWViMTY5YWJmNTczNGVkMzkwZTEyOTUxMWFlYzE4Mzg5YjdlNDI3MDc0ZjdlZjgzZA",
-        "title": "Work Hard Play Hard",
-        "description": "50 cool prizes for choose from!",
-        "link": "/hager-work-hard-play-hard",
         "active": "yes"
     },
     {

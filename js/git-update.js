@@ -1101,7 +1101,6 @@ FlutterJS.prototype.getHrefLink = () => {
                     let regex = new RegExp(mediaType);
                     if (anchor.match(regex)) {
                         hrefLinks[i].addEventListener('click', () => {
-                            hrefLinks[i].setAttribute('download', '');
                             return window.hrefLink.postMessage(anchor);
                         });
                     }

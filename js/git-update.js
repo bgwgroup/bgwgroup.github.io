@@ -1199,11 +1199,11 @@ window.addEventListener('DOMContentLoaded', () => {
             let bannerContainer = document.createElement('div');
             bannerContainer.className = 'promotion-banner';
             bannerContainer.innerHTML = `<img src="/medias/sbo-promotion-banner.jpg?context=bWFzdGVyfGltYWdlc3w4MTQyOXxpbWFnZS9qcGVnfGhhNS9oMDMvOTk3MTA4ODAzMTc3NC9zYm8tcHJvbW90aW9uLWJhbm5lci5qcGd8NzVkYzAyN2Q2Njc3Zjg2ZTNjNDNhN2QzMmQxMDI3ODgwOThlODA4OWE5YTlmODA2MWM0YThkMDM1NWZjYzk2Yw">`;
-            try{
-                if(breadCrumb.parentNode != document.querySelector('#breadcrumb-account')){
+            try {
+                if (breadCrumb.parentNode != document.querySelector('#breadcrumb-account')) {
                     breadCrumb.parentNode.insertBefore(bannerContainer, breadCrumb);
                 }
-            }catch(e){}
+            } catch (e) {}
         }
     }
 });
@@ -1216,6 +1216,22 @@ window.addEventListener('DOMContentLoaded', () => {
     if (isMobile) {
         if (document.querySelector('a#findStoresNearMe') != undefined) {
             document.querySelector('a#findStoresNearMe').style.display = 'none';
+        }
+    }
+});
+
+/**
+ * Stop CNW Footer Links from executing
+ */
+window.addEventListener('DOMContentLoaded', () => {
+    if (location.href.match(/cnw.com.au/)) {
+        let cnwFooterLinks = document.querySelector('#footerLinks-Top-Suppliers a');
+        if (cnwFooterLinks != undefined) {
+            for (let i = 0; i < cnwFooterLinks.length; i++) {
+                cnwFooterLinks[i].addEventListener('click', (event) => {
+                    event.preventDefault();
+                });
+            }
         }
     }
 });

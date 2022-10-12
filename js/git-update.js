@@ -1225,7 +1225,7 @@ window.addEventListener('DOMContentLoaded', () => {
  */
 window.addEventListener('DOMContentLoaded', () => {
     if (location.href.match(/cnw.com.au/)) {
-        let cnwFooterLinks = document.querySelector('#footerLinks-Top-Suppliers a');
+        let cnwFooterLinks = document.All('#footerLinks-Top-Suppliers a');
         if (cnwFooterLinks != undefined) {
             for (let i = 0; i < cnwFooterLinks.length; i++) {
                 cnwFooterLinks[i].addEventListener('click', (event) => {

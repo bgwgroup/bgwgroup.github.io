@@ -2496,15 +2496,19 @@ CNW SBO Search Page Promotion Banner
 * CSS styles to stop CNW Footer Links from acting like anchor tags
 */
 #cnwBody #footerLinks-Top-Suppliers a {
+  outline: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
   text-indent: none;
   text-decoration: none !important; }
+  #cnwBody #footerLinks-Top-Suppliers a:active {
+    outline: inherit; }
   #cnwBody #footerLinks-Top-Suppliers a:hover {
     cursor: auto;
     text-decoration: inherit;
     text-indent: unset !important; }
   #cnwBody #footerLinks-Top-Suppliers a::before, #cnwBody #footerLinks-Top-Suppliers a::after {
-    content: unset; }
+    content: unset;
+    outline: inherit; }

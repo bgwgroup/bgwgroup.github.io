@@ -3432,12 +3432,16 @@ CNW SBO Search Page Promotion Banner
 #cnwBody {
     #footerLinks-Top-Suppliers {
         a {
+            outline: none;
             -webkit-user-select: none;
             -moz-user-select: none;
             -ms-user-select: none;
             user-select: none;
             text-indent: none;
             text-decoration: none !important;
+            &:active {
+                outline: inherit;
+            }
             &:hover {
                 cursor: auto;
                 text-decoration: inherit;
@@ -3446,6 +3450,7 @@ CNW SBO Search Page Promotion Banner
             &::before,
             &::after {
                 content: unset;
+                outline: inherit;
             }
         }
     }

@@ -1113,9 +1113,7 @@ FlutterJS.prototype.enableGeoLocation = () => {
     if (window.locationPermission) {
         let findStoresNearMe = document.querySelector('#findStoresNearMe');
         if (findStoresNearMe != undefined) {
-            findStoresNearMe.addEventListener('click', () => {
-                return window.locationPermission.postMessage('Find Stores Near Me');
-            });
+            findStoresNearMe.setAttribute('style', 'display: block !important');
         }
     }
 };

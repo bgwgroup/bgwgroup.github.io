@@ -1,9 +1,15 @@
-[
-    {
+[{
         "image": "/medias/fl-slider.jpg?context=bWFzdGVyfGltYWdlc3w4ODU0MTR8aW1hZ2UvanBlZ3xoYmQvaDI4Lzk5NDIyMDcyMDEzMTAvZmwtc2xpZGVyLmpwZ3wxNjNjZGUyZjNlNzBmMmQwMzkwMjJhYTYzOGY1YTYyNWJhNWRiNDkyNjRjNzYyNjdiYmZjMDFhZDA3OGFiZmVh",
         "title": "Fully Loaded Getaway",
         "description": "Spend and earn a chance for a Getaway",
         "link": "/fully-loaded-getaway",
+        "active": "yes"
+    },
+    {
+        "image": "/medias/mhi-she-slider.png?context=bWFzdGVyfGltYWdlc3wxMDA1MDQ4fGltYWdlL3BuZ3xoZjkvaDIzLzk5ODA0MDA1MDA3NjYvbWhpLXNoZS1zbGlkZXIucG5nfDhmMWRkODg3NzFkOTg4YTI2NThmMzljYzNjNGMxMjEyMmY3OWM0NGNkNzZjNTA4MmUxYTc3ZmU2NDRjMDUxODE",
+        "title": "MHI 12 Weeks Giveaway",
+        "description": "Win a prize every week",
+        "link": "/mhi-12weeks-giveaway",
         "active": "yes"
     },
     {

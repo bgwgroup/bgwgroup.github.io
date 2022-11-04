@@ -2512,3 +2512,7 @@ CNW SBO Search Page Promotion Banner
   #cnwBody #footerLinks-Top-Suppliers a::before, #cnwBody #footerLinks-Top-Suppliers a::after {
     content: unset;
     outline: inherit; }
+
+/** CSS Temp Fix for Samios About Us **/
+.landingPageAbout .content-split-right {
+  text-align: left !important; }

@@ -1098,10 +1098,17 @@ FlutterJS.prototype.getCartCount = () => {
 };
 FlutterJS.prototype.checkErrorLogin = () => {
     if (window.checkErrorLogin) {
-        let errorLoginElement = document.querySelector(".alert.error.getAccAlert.danger-alert > div");
-        if (errorLoginElement != undefined) {
-            if (errorLoginElement.innerHTML.length > 0) {
-                return window.checkErrorLogin.postMessage(errorLoginElement.innerHTML);
+        let globalAlertError = document.querySelector(".global-alerts .error > div");
+        if (globalAlertError != undefined) {
+            if (globalAlertError.innerHTML.length > 0) {
+                return window.checkErrorLogin.postMessage("true");
+            }
+        }
+
+        let loginErrorMsg = document.querySelector(".login-form-container .loginErrorMsg");
+        if (loginErrorMsg != undefined) {
+            if (loginErrorMsg.innerHTML.length > 0) {
+                return window.checkErrorLogin.postMessage("true");
             }
         }
     }

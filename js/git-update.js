@@ -1102,7 +1102,7 @@ FlutterJS.prototype.checkErrorLogin = () => {
         if (globalAlertError != undefined) {
             if (globalAlertError.innerHTML.length > 0) {
                 return window.checkErrorLogin.postMessage("true");
-            } else if (globalAlertError.innerHTML.length <= 0) {
+            } else {
                 return window.checkErrorLogin.postMessage("false");
             }
         }

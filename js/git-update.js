@@ -1293,7 +1293,6 @@ window.addEventListener('DOMContentLoaded', () => {
             for (let i = 0; i < acStoreButtons.length; i++) {
 
                 acStoreButtons[i].addEventListener('click', () => {
-                    console.log(acStoreButtons[i]);
                     clearAsStoreButtonSelector(acStoreButtons, activeAcStoreButton);
                     clearAcStoreinformationSelector(acStoreInformation, activeAcStoreInformation);
                     acStoreInformation[i].setAttribute('style', 'display: -ms-flex; display: flex');

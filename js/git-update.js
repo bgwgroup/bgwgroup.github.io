@@ -1102,18 +1102,18 @@ FlutterJS.prototype.checkErrorLogin = () => {
         if (globalAlertError != undefined) {
             if (globalAlertError.innerHTML.length > 0) {
                 return window.checkErrorLogin.postMessage("true");
-            } else {
-                return window.checkErrorLogin.postMessage("false");
             }
+        } else {
+            return window.checkErrorLogin.postMessage("false");
         }
 
         let loginErrorMsg = document.querySelector(".login-form-container .loginErrorMsg");
         if (loginErrorMsg != undefined) {
             if (loginErrorMsg.innerHTML.length > 0) {
                 return window.checkErrorLogin.postMessage("true");
-            } else {
-                return window.checkErrorLogin.postMessage("false");
             }
+        } else {
+            return window.checkErrorLogin.postMessage("false");
         }
     }
 };

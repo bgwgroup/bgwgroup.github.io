@@ -1286,9 +1286,7 @@ window.addEventListener('DOMContentLoaded', () => {
             let activeAcStoreInformation = 'active-ac-store-information';
 
             if (acStoreInformation != undefined) {
-                try {
-                    acStoreInformation[0].setAttribute('style', 'display: -ms-flex; display: flex');
-                } catch (error) {}
+                acStoreInformation[0].setAttribute('style', 'display: -ms-flex; display: flex');
             }
             for (let i = 0; i < acStoreButtons.length; i++) {
 

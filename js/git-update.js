@@ -1275,7 +1275,7 @@ window.addEventListener('DOMContentLoaded', () => {
  */
 window.addEventListener('DOMContentLoaded', () => {
 
-    if (location.href.match(/cnw.com.au\/specialist/)) {
+    if (location.href.match(/cnw.com.au\/aircon-specialist/)) {
 
         let acStoreButtons = document.querySelectorAll('.ac-stores-button button');
         let activeAcStoreButton = 'active-ac-store-button';
@@ -1286,7 +1286,9 @@ window.addEventListener('DOMContentLoaded', () => {
             let activeAcStoreInformation = 'active-ac-store-information';
 
             if (acStoreInformation != undefined) {
-                acStoreInformation[0].setAttribute('style', 'display: -ms-flex; display: flex');
+                try {
+                    acStoreInformation[0].setAttribute('style', 'display: -ms-flex; display: flex');
+                } catch (error) {}
             }
             for (let i = 0; i < acStoreButtons.length; i++) {
 

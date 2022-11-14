@@ -1,4 +1,11 @@
 [{
+        "image": "/medias/cnw-70-years-slider-small-v2.jpg?context=bWFzdGVyfGltYWdlc3w2NzQxNnxpbWFnZS9qcGVnfGhlYi9oZGYvOTk4NzQ4NzQ2NTUwMi9jbnctNzAteWVhcnMtc2xpZGVyLXNtYWxsLXYyLmpwZ3w3M2NiNDM4YThjMDFhYTYxNTU5Njk0ZWY0ZWQ1ZDliOGNmYTFkZjljNmRhYTQ4YzQ0Mzc4NmYyNTljMDgyZTM5",
+        "title": "Celebrating 70 Years",
+        "description": "Industry's leading independent and the electrician's most trusted wholesaler",
+        "link": "/about-us",
+        "active": "yes"
+    },
+    {
         "image": "/medias/CNW-679x679.png?context=bWFzdGVyfGltYWdlc3wyMzAyMDl8aW1hZ2UvcG5nfGhiMy9oMWUvOTgxNzYyMjk3MDM5OC9DTlcgNjc5eDY3OS5wbmd8NDMzNjgyMWJiMWQ0NGEwNmMwYTIyNzZhYjQ4ODVhYjlkNTgyMzU3MzFkZTAxMGY1MTA0ZGQ1ODAzNzk0YzEwNg",
         "title": "ERP Integration",
         "description": "Never worry about outdated invoices or price files again",

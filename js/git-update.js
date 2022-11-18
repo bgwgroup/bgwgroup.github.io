@@ -1226,6 +1226,7 @@ window.addEventListener('DOMContentLoaded', () => {
 /**
  * SBO Search Page Banner
  */
+/*
 window.addEventListener('DOMContentLoaded', () => {
     if (location.href.match(/cnw.com.au/)) {
         let breadCrumb = document.querySelector('.breadcrumbScaffold');
@@ -1240,7 +1241,7 @@ window.addEventListener('DOMContentLoaded', () => {
             } catch (e) {}
         }
     }
-});
+}); */
 
 /**
  * Hide Find Stores Near Me for Android and iOS (Temporary)

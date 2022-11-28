@@ -3,77 +3,6 @@
 .cust-inner-wrapper .container .row > div {
   width: 100%; }
 
-#breadcrumb {
-  width: 100% !important;
-  border-radius: 0 !important;
-  position: relative !important;
-  top: 0 !important;
-  left: 0 !important; }
-  #breadcrumb ul {
-    border-radius: 0 !important;
-    display: flex !important;
-    flex-wrap: wrap !important;
-    align-items: center !important;
-    padding: 1rem !important;
-    line-height: normal !important; }
-    #breadcrumb ul li {
-      width: fit-content !important;
-      max-width: fit-content !important;
-      min-width: fit-content !important;
-      margin: 0 !important;
-      padding: 0 !important;
-      float: none !important;
-      font-size: inherit !important;
-      line-height: normal !important; }
-      #breadcrumb ul li a {
-        display: inline-block !important;
-        border-radius: 0 !important;
-        color: #444 !important;
-        text-shadow: none !important;
-        font-size: inherit !important;
-        font-weight: inherit !important;
-        font-family: inherit !important;
-        background: transparent !important;
-        padding: 0.5rem !important;
-        float: none !important;
-        text-decoration: none !important;
-        position: relative !important; }
-        #breadcrumb ul li a::before {
-          display: none !important; }
-        #breadcrumb ul li a::after {
-          display: none !important; }
-        #breadcrumb ul li a:hover {
-          text-decoration: underline !important; }
-          #breadcrumb ul li a:hover::after {
-            text-decoration: none !important; }
-      #breadcrumb ul li:first-child {
-        margin-left: 0 !important; }
-        #breadcrumb ul li:first-child a::before {
-          display: none !important; }
-      #breadcrumb ul li:last-child {
-        margin-right: 0 !important; }
-        #breadcrumb ul li:last-child::after {
-          display: none !important; }
-      #breadcrumb ul li::before {
-        display: none !important; }
-      #breadcrumb ul li:not(:last-child)::after {
-        background: transparent !important;
-        content: "►" !important;
-        position: relative !important;
-        top: -2px !important;
-        margin-top: 0 !important;
-        border: 0 !important;
-        right: 0 !important;
-        left: 0 !important;
-        font-size: 7px !important;
-        color: #444 !important;
-        margin-left: 0 !important; }
-
-.account-container #breadcrumb ul {
-  padding: 0 !important; }
-  .account-container #breadcrumb ul li:first-child a {
-    padding-left: 0 !important; }
-
 .slide-in-nav {
   padding-bottom: 200px !important; }
 
@@ -1981,11 +1910,6 @@ html {
       content: unset; }
   #cnwBody .pdp-product-quantity input {
     max-width: 53% !important; }
-
-#cnwBody.page-productDetails .plpwrapper #breadcrumb {
-  position: relative; }
-  #cnwBody.page-productDetails .plpwrapper #breadcrumb .breadcrumb li a {
-    padding: 14px 1.2rem; }
 
 /*=== PLP Promo Banner Properties ===*/
 .plp-promo-banner-container {

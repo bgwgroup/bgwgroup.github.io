@@ -3,6 +3,10 @@
 .cust-inner-wrapper .container .row > div {
   width: 100%; }
 
+.main__inner-wrapper .breadcrumbScaffold{
+  padding:1rem;
+}
+
 .slide-in-nav {
   padding-bottom: 200px !important; }
 

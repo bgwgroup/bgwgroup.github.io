@@ -1317,3 +1317,41 @@ function clearAcStoreinformationSelector(nodeList, selector) {
         nodeList[j].setAttribute('style', 'display: none');
     }
 }
+
+/**
+ * Maintenance Banner 15 December 2022
+ */
+window.addEventListener('DOMContentLoaded', () => {
+    if (location.href.match(/cnw.com.au/) || location.href.match(/sherriff.com.au/) || location.href.match(/samios.net.au/)) {
+        try {
+            new MaintenanceBanner();
+        } catch (e) {}
+    }
+});
+
+function MaintenanceBanner() {
+    MaintenanceBanner.prototype.init();
+}
+MaintenanceBanner.prototype.init = () => {
+    let checkIfUserHasSeenBanner = localStorage.getItem('bannerClicked');
+    if (checkIfUserHasSeenBanner == null) {
+        MaintenanceBanner.prototype.renderBanner();
+    }
+
+    MaintenanceBanner.prototype.closeBanner();
+};
+MaintenanceBanner.prototype.renderBanner = () => {
+    let sapMaintenanceBanner = document.createElement('div');
+    sapMaintenanceBanner.className = 'sap-maintenance-banner';
+    sapMaintenanceBanner.innerHTML = `
+        <span>The website is currently undergoing maintenance on the <strong>15<sup>th</sup> of December 2022 between 8:00pm - 10:00pm AEST</strong>. Pricing and other functionality may be affected during this period. We apologise for any inconveniences caused. For any urgent assistance, please contact the support team on <a href="mailto:online.support@bgwgroup.com.au">online.support@bgwgroup.com.au</a>.</span>
+    `;
+    document.body.appendChild(sapMaintenanceBanner);
+};
+MaintenanceBanner.prototype.closeBanner = () => {
+    let maintenanceBanner = document.querySelector('.sap-maintenance-banner');
+    maintenanceBanner.addEventListener('click', () => {
+        maintenanceBanner.style.display = 'block';
+        localStorage.setItem('bannerClicked', 'true');
+    });
+};

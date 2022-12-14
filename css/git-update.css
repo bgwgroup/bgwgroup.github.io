@@ -3389,7 +3389,7 @@ CNW SBO Search Page Promotion Banner
 
 /* Maintenance banner */
 
-.sap-maintanance-banner {
+.sap-maintenance-banner {
     position: fixed;
     bottom: 0;
     left: 0;
@@ -3403,16 +3403,16 @@ CNW SBO Search Page Promotion Banner
     text-align: center;
 }
 
-.sap-maintanance-banner strong {
+.sap-maintenance-banner strong {
     font-weight: bold;
 }
 
-.sap-maintanance-banner a {
+.sap-maintenance-banner a {
     color: #C00;
     font-weight: 600;
 }
 
-.sap-maintanance-banner::after {
+.sap-maintenance-banner::after {
     content: '\02715';
     position: absolute;
     top: 0;

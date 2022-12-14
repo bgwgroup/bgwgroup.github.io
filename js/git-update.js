@@ -1349,7 +1349,7 @@ MaintenanceBanner.prototype.renderBanner = () => {
 MaintenanceBanner.prototype.closeBanner = () => {
     let maintenanceBanner = document.querySelector('.sap-maintenance-banner');
     maintenanceBanner.addEventListener('click', () => {
-        maintenanceBanner.style.display = 'block';
+        maintenanceBanner.style.display = 'none';
         localStorage.setItem('bannerClicked', 'true');
     });
 };

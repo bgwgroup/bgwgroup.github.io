@@ -1323,7 +1323,9 @@ function clearAcStoreinformationSelector(nodeList, selector) {
  */
 window.addEventListener('DOMContentLoaded', () => {
     if (location.href.match(/cnw.com.au/) || location.href.match(/sherriff.com.au/) || location.href.match(/samios.net.au/)) {
-        new MaintenanceBanner();
+        try {
+            new MaintenanceBanner();
+        } catch (e) {}
     }
 });
 
@@ -1348,8 +1350,10 @@ MaintenanceBanner.prototype.renderBanner = () => {
 };
 MaintenanceBanner.prototype.closeBanner = () => {
     let maintenanceBanner = document.querySelector('.sap-maintenance-banner');
-    maintenanceBanner.addEventListener('click', () => {
-        maintenanceBanner.style.display = 'none';
-        localStorage.setItem('bannerClicked', 'true');
-    });
+    if (maintenanceBanner != undefined || maintenanceBanner != null) {
+        maintenanceBanner.addEventListener('click', () => {
+            maintenanceBanner.style.display = 'none';
+            localStorage.setItem('bannerClicked', 'true');
+        });
+    }
 };

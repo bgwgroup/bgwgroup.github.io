@@ -3403,6 +3403,12 @@ CNW SBO Search Page Promotion Banner
     text-align: center;
 }
 
+@media (max-width: 767px) {
+    .sap-maintenance-banner {
+        padding-bottom: 7rem;
+    }
+}
+
 .sap-maintenance-banner strong {
     font-weight: bold;
 }

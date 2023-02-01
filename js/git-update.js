@@ -1357,12 +1357,3 @@ MaintenanceBanner.prototype.closeBanner = () => {
         });
     }
 };
-
-// hide samios broken DOM
-window.addEventListener('DOMContentLoaded', () => {
-    if (location.href.match(/samios.net.au/)) {
-        try {
-            document.querySelector('.scaffoldBrandsTicker').style.display = 'none';
-        } catch (error) {}
-    }
-});

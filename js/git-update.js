@@ -1276,7 +1276,7 @@ window.addEventListener('DOMContentLoaded', () => {
  */
 window.addEventListener('DOMContentLoaded', () => {
 
-    if (location.href.match(/cnw.com.au\/aircon-specialist/)) {
+    if (location.href.match(/cnw.com.au\/aircon-specialist-qld/)) {
 
         let acStoreButtons = document.querySelectorAll('.ac-stores-button button');
         let activeAcStoreButton = 'active-ac-store-button';

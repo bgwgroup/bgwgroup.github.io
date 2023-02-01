@@ -519,7 +519,7 @@ ElectricalPCN.prototype.init = () => {
 };
 ElectricalPCN.prototype.fetchData = () => {
 
-    fetch('https://bgwgroup.com.au/notifications/get-file-data.php')
+    fetch('http://bgwgroup.com.au/notifications/get-file-data.php')
         .then((response) => { return response.json(); })
         .then((pcn) => {
             for (let i = 0; i < pcn.length; i++) {

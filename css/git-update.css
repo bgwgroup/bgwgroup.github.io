@@ -1,5 +1,15 @@
 @charset "UTF-8";
 
+/*=== Temp hide PDP Dimensions ===*/
+
+.scaffoldProductDisplaySpecsDimensions{
+    display:none;
+}
+
+.scaffoldProductDisplaySpecsSupplierSpecs{
+    background-color: var(--color-gray-lighter);    
+}
+
 /*=== Global Page Template Fixes ===*/
 
 .cust-inner-wrapper .container .row>div {

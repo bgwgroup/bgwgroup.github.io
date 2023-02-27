@@ -3,7 +3,7 @@
 /*=== Temp hide PDP Dimensions ===*/
 
 .scaffoldProductDisplaySpecsDimensions{
-    display:none;
+    display:none !important;
 }
 
 .scaffoldProductDisplaySpecsSupplierSpecs{

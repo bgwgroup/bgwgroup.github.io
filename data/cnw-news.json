@@ -6,6 +6,13 @@
         "active": "yes"
     },
     {
+        "image": "/medias/Website-400x400px-Clipsal-Prezee-Promotion-2023.jpg?context=bWFzdGVyfGltYWdlc3wxNTk0OTJ8aW1hZ2UvanBlZ3xoNDcvaDRhLzEwMDMzMTcyOTM4NzgyL1dlYnNpdGVfNDAweDQwMHB4X0NsaXBzYWwgUHJlemVlIFByb21vdGlvbiAyMDIzLmpwZ3xmM2VkODU5MGM0NzdmMDhlNzgwNTUzOTFiNjg3YzIxMTJkYjE2NTk5MjcyZjExMGM4OWUzNzQ3OTg5NTI3MTE3",
+        "title": " Clipsal Prezzee Promotion",
+        "description": "Spend and get a Prezzee",
+        "link": "/clipsal-prezzee-promotion",
+        "active": "no"
+    },
+    {
         "image": "/medias/CNW-679x679.png?context=bWFzdGVyfGltYWdlc3wyMzAyMDl8aW1hZ2UvcG5nfGhiMy9oMWUvOTgxNzYyMjk3MDM5OC9DTlcgNjc5eDY3OS5wbmd8NDMzNjgyMWJiMWQ0NGEwNmMwYTIyNzZhYjQ4ODVhYjlkNTgyMzU3MzFkZTAxMGY1MTA0ZGQ1ODAzNzk0YzEwNg",
         "title": "ERP Integration",
         "description": "Never worry about outdated invoices or price files again",

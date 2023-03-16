@@ -1324,7 +1324,7 @@ function clearAcStoreinformationSelector(nodeList, selector) {
 window.addEventListener('DOMContentLoaded', () => {
     if (location.href.match(/cnw.com.au/) || location.href.match(/sherriff.com.au/) || location.href.match(/samios.net.au/)) {
         try {
-            //new MaintenanceBanner();
+            new MaintenanceBanner();
         } catch (e) {}
     }
 });
@@ -1344,7 +1344,7 @@ MaintenanceBanner.prototype.renderBanner = () => {
     let sapMaintenanceBanner = document.createElement('div');
     sapMaintenanceBanner.className = 'sap-maintenance-banner';
     sapMaintenanceBanner.innerHTML = `
-        <span>The website will be undergoing maintenance on the <strong>1<sup>st</sup> of February between 7:00pm - 12:00am AEST</strong>. Pricing and other functionality may be affected during this period. We apologise for any inconveniences caused. For any urgent assistance, please contact the support team on <a href="mailto:online.support@bgwgroup.com.au">online.support@bgwgroup.com.au</a>.</span>
+        <span>The website will be undergoing maintenance between 7:00pm AEST the 17th of March and 7:00am AEST the 19th of March. Pricing and account access will be unavailable during this period, we apologise for any inconveniences caused. For any urgent assistance, please contact the support team via <a href="mailto:online.support@bgwgroup.com.au">online.support@bgwgroup.com.au</a></span>
     `;
     document.body.appendChild(sapMaintenanceBanner);
 };

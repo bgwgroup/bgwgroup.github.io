@@ -1357,17 +1357,24 @@ MaintenanceBanner.prototype.closeBanner = () => {
         });
     }
 };
+MaintenanceBanner.prototype.fullScreenBanner = () => {
+    let fullScreenBanner = document.createElement('div');
+    fullScreenBanner.className = 'full-screen-banner';
+    fullScreenBanner.innerHTML = `
+        <span>The website will be undergoing maintenance between 7:00pm AEST the 17th of March and 7:00am AEST the 19th of March</span>
+    `;
+    document.body.appendChild(sapMaintenanceBanner);
+}
 
 // Temp hide b2c frontend elements
 
 try {
-  let getB2CLoginPopupBtns = document.querySelectorAll(".scaffoldOpenModalRegisterGuestUser");
+    let getB2CLoginPopupBtns = document.querySelectorAll(".scaffoldOpenModalRegisterGuestUser");
     for (const button of getB2CLoginPopupBtns) {
-      button.addEventListener('click', () => {
-        window.location.href = "/login";
-      });
+        button.addEventListener('click', () => {
+            window.location.href = "/login";
+        });
     }
-}
-catch(err) {
-  console.log(err);
+} catch (err) {
+    console.log(err);
 }

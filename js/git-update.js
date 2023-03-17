@@ -1369,11 +1369,13 @@ MaintenanceBanner.prototype.fullScreenBanner = () => {
 // Temp hide b2c frontend elements
 
 try {
-    let getB2CLoginPopupBtns = document.querySelectorAll(".scaffoldOpenModalRegisterGuestUser");
-    for (const button of getB2CLoginPopupBtns) {
-        button.addEventListener('click', () => {
-            window.location.href = "/login";
-        });
+    if (location.href.match(/cnw.com.au/) || location.href.match(/sherriff.com.au/) || location.href.match(/samios.net.au/)) {
+        let getB2CLoginPopupBtns = document.querySelectorAll(".scaffoldOpenModalRegisterGuestUser");
+        for (const button of getB2CLoginPopupBtns) {
+            button.addEventListener('click', () => {
+                window.location.href = "/login";
+            });
+        }
     }
 } catch (err) {
     console.log(err);

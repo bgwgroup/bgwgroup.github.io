@@ -3752,3 +3752,6 @@ CNW SBO Search Page Promotion Banner
 #scaffoldModalRegisterGuestUser{
     display:none !important;
 }
+.summaryDeliveryMode.hidden{
+    display: flex !important;
+}

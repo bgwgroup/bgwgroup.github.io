@@ -1357,3 +1357,17 @@ MaintenanceBanner.prototype.closeBanner = () => {
         });
     }
 };
+
+// Temp hide b2c frontend elements
+
+try {
+  let getB2CLoginPopupBtns = document.querySelectorAll(".scaffoldOpenModalRegisterGuestUser");
+    for (const button of getB2CLoginPopupBtns) {
+      button.addEventListener('click', () => {
+        window.location.href = "/login";
+      });
+    }
+}
+catch(err) {
+  console.log(err);
+}

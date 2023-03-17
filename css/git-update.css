@@ -3749,3 +3749,6 @@ CNW SBO Search Page Promotion Banner
 .scaffoldOpenModalRegisterGuestUser{
     outline 5px aqua !important;
 }
+#scaffoldModalRegisterGuestUser{
+    display:none !important;
+}

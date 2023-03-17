@@ -1363,7 +1363,7 @@ MaintenanceBanner.prototype.fullScreenBanner = () => {
     fullScreenBanner.innerHTML = `
         <span>The website will be undergoing maintenance between 7:00pm AEST the 17th of March and 7:00am AEST the 19th of March</span>
     `;
-    document.body.appendChild(sapMaintenanceBanner);
+    document.body.appendChild(fullScreenBanner);
 }
 
 // Temp hide b2c frontend elements

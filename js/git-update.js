@@ -1361,7 +1361,7 @@ MaintenanceBanner.prototype.fullScreenBanner = () => {
     let fullScreenBanner = document.createElement('div');
     fullScreenBanner.className = 'full-screen-banner';
     fullScreenBanner.innerHTML = `
-        <span>The website will be undergoing maintenance between 7:00pm AEST the 17th of March and 7:00am AEST the 19th of March</span>
+    <span>The website will be undergoing maintenance between 7:00pm AEST the 17th of March and 7:00am AEST the 19th of March. Pricing and account access will be unavailable during this period, we apologise for any inconveniences caused. For any urgent assistance, please contact the support team via <a href="mailto:online.support@bgwgroup.com.au">online.support@bgwgroup.com.au</a></span>
     `;
     document.body.appendChild(fullScreenBanner);
 }

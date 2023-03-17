@@ -3745,3 +3745,7 @@ CNW SBO Search Page Promotion Banner
   }
 }
 
+// Temp hide b2c frontend elements
+.scaffoldOpenModalRegisterGuestUser{
+    outline 5px aqua !important;
+}

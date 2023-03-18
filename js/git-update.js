@@ -1339,7 +1339,7 @@ MaintenanceBanner.prototype.init = () => {
     }
 
     MaintenanceBanner.prototype.closeBanner();
-    MaintenanceBanner.prototype.fullScreenBanner();
+    // MaintenanceBanner.prototype.fullScreenBanner();
 };
 MaintenanceBanner.prototype.renderBanner = () => {
     let sapMaintenanceBanner = document.createElement('div');

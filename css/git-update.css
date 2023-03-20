@@ -3798,9 +3798,11 @@ CNW SBO Search Page Promotion Banner
 
 /* Sean wants this */
 
-#updateDeliveryAddress .form-group,
-#addressForm .form-group,
-#paymentDetailsForm .form-group {
-    -ms-flex-direction: column;
-    flex-direction: column;
+@media (max-width: 767px) {
+    #updateDeliveryAddress .form-group,
+    #addressForm .form-group,
+    #paymentDetailsForm .form-group {
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
 }

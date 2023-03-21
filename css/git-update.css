@@ -3358,6 +3358,8 @@ CNW SBO Search Page Promotion Banner
 
 /** CSS Temp Fix for Checkout Form Styling **/
 
+#cnwBody #updatePaymentDetails .form-actions button,
+#cnwBody #updatePaymentDetails .form-actions a,
 #cnwBody #updateDeliveryAddress .form-actions button,
 #cnwBody #updateDeliveryAddress .form-actions a,
 #cnwBody #addressForm .form-actions button,
@@ -3369,6 +3371,12 @@ CNW SBO Search Page Promotion Banner
     color: white !important;
 }
 
+#cnwBody #updatePaymentDetails .form-actions button:hover,
+#cnwBody #updatePaymentDetails .form-actions button:focus,
+#cnwBody #updatePaymentDetails .form-actions button:active,
+#cnwBody #updatePaymentDetails .form-actions a:hover,
+#cnwBody #updatePaymentDetails .form-actions a:focus,
+#cnwBody #updatePaymentDetails .form-actions a:active,
 #cnwBody #updateDeliveryAddress .form-actions button:hover,
 #cnwBody #updateDeliveryAddress .form-actions button:focus,
 #cnwBody #updateDeliveryAddress .form-actions button:active,
@@ -3393,6 +3401,8 @@ CNW SBO Search Page Promotion Banner
     opacity: 0.7 !important;
 }
 
+#samBody #updatePaymentDetails .form-actions button,
+#samBody #updatePaymentDetails .form-actions a,
 #samBody #updateDeliveryAddress .form-actions button,
 #samBody #updateDeliveryAddress .form-actions a,
 #samBody #addressForm .form-actions button,
@@ -3404,6 +3414,12 @@ CNW SBO Search Page Promotion Banner
     color: white !important;
 }
 
+#samBody #updatePaymentDetails .form-actions button:hover,
+#samBody #updatePaymentDetails .form-actions button:focus,
+#samBody #updatePaymentDetails .form-actions button:active,
+#samBody #updatePaymentDetails .form-actions a:hover,
+#samBody #updatePaymentDetails .form-actions a:focus,
+#samBody #updatePaymentDetails .form-actions a:active,
 #samBody #updateDeliveryAddress .form-actions button:hover,
 #samBody #updateDeliveryAddress .form-actions button:focus,
 #samBody #updateDeliveryAddress .form-actions button:active,
@@ -3428,6 +3444,8 @@ CNW SBO Search Page Promotion Banner
     opacity: 0.7 !important;
 }
 
+#bgwtBody #updatePaymentDetails .form-actions button,
+#bgwtBody #updatePaymentDetails .form-actions a,
 #bgwtBody #updateDeliveryAddress .form-actions button,
 #bgwtBody #updateDeliveryAddress .form-actions a,
 #bgwtBody #addressForm .form-actions button,
@@ -3439,6 +3457,12 @@ CNW SBO Search Page Promotion Banner
     color: white !important;
 }
 
+#bgwtBody #updatePaymentDetails .form-actions button:hover,
+#bgwtBody #updatePaymentDetails .form-actions button:focus,
+#bgwtBody #updatePaymentDetails .form-actions button:active,
+#bgwtBody #updatePaymentDetails .form-actions a:hover,
+#bgwtBody #updatePaymentDetails .form-actions a:focus,
+#bgwtBody #updatePaymentDetails .form-actions a:active,
 #bgwtBody #updateDeliveryAddress .form-actions button:hover,
 #bgwtBody #updateDeliveryAddress .form-actions button:focus,
 #bgwtBody #updateDeliveryAddress .form-actions button:active,
@@ -3463,6 +3487,8 @@ CNW SBO Search Page Promotion Banner
     opacity: 0.7 !important;
 }
 
+#sheBody #updatePaymentDetails .form-actions button,
+#sheBody #updatePaymentDetails .form-actions a,
 #sheBody #updateDeliveryAddress .form-actions button,
 #sheBody #updateDeliveryAddress .form-actions a,
 #sheBody #addressForm .form-actions button,
@@ -3474,6 +3500,12 @@ CNW SBO Search Page Promotion Banner
     color: black !important;
 }
 
+#sheBody #updatePaymentDetails .form-actions button:hover,
+#sheBody #updatePaymentDetails .form-actions button:focus,
+#sheBody #updatePaymentDetails .form-actions button:active,
+#sheBody #updatePaymentDetails .form-actions a:hover,
+#sheBody #updatePaymentDetails .form-actions a:focus,
+#sheBody #updatePaymentDetails .form-actions a:active,
 #sheBody #updateDeliveryAddress .form-actions button:hover,
 #sheBody #updateDeliveryAddress .form-actions button:focus,
 #sheBody #updateDeliveryAddress .form-actions button:active,
@@ -3502,6 +3534,15 @@ CNW SBO Search Page Promotion Banner
     outline: none !important;
 }
 
+#updatePaymentDetails::before{
+    content: "Update Payment Details";
+    display: block;
+    min-width: 100%;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
 #updateDeliveryAddress::before,
 #addressForm::before {
     content: "Add Address";
@@ -3525,15 +3566,17 @@ CNW SBO Search Page Promotion Banner
     display: none;
 }
 
+#updatePaymentDetails,
 #updateDeliveryAddress,
 #addressForm,
 #paymentDetailsForm {
-    margin-top: 2rem;
+    margin-top: 1rem;
     padding: 1rem;
     border: solid 1px #aaa;
     position: relative;
 }
 
+#updatePaymentDetails .form-group,
 #updateDeliveryAddress .form-group,
 #addressForm .form-group,
 #paymentDetailsForm .form-group {
@@ -3543,6 +3586,7 @@ CNW SBO Search Page Promotion Banner
     margin-bottom: 12px;
 }
 
+#updatePaymentDetails .form-group>label,
 #updateDeliveryAddress .form-group>label,
 #addressForm .form-group>label,
 #paymentDetailsForm .form-group>label {
@@ -3551,6 +3595,7 @@ CNW SBO Search Page Promotion Banner
     padding: 4px;
 }
 
+#updatePaymentDetails .form-group .control-label,
 #updateDeliveryAddress .form-group .control-label,
 #addressForm .form-group .control-label,
 #paymentDetailsForm .form-group .control-label {
@@ -3562,6 +3607,7 @@ CNW SBO Search Page Promotion Banner
 }
 
 @media (max-width: 992px) {
+    #updatePaymentDetails .form-group .control-label,
     #updateDeliveryAddress .form-group .control-label,
     #addressForm .form-group .control-label,
     #paymentDetailsForm .form-group .control-label {
@@ -3569,12 +3615,14 @@ CNW SBO Search Page Promotion Banner
     }
 }
 
+#updatePaymentDetails .form-group .control-label label,
 #updateDeliveryAddress .form-group .control-label label,
 #addressForm .form-group .control-label label,
 #paymentDetailsForm .form-group .control-label label {
     white-space: nowrap;
 }
 
+#updatePaymentDetails .form-group .control,
 #updateDeliveryAddress .form-group .control,
 #addressForm .form-group .control,
 #paymentDetailsForm .form-group .control {
@@ -3583,12 +3631,14 @@ CNW SBO Search Page Promotion Banner
     flex: 1;
 }
 
+#updatePaymentDetails .form-group .control select,
 #updateDeliveryAddress .form-group .control select,
 #addressForm .form-group .control select,
 #paymentDetailsForm .form-group .control select {
     background-color: white !important;
 }
 
+#updatePaymentDetails .form-group .control input,
 #updateDeliveryAddress .form-group .control input,
 #addressForm .form-group .control input,
 #paymentDetailsForm .form-group .control input {
@@ -3598,6 +3648,7 @@ CNW SBO Search Page Promotion Banner
     width: 100%;
 }
 
+#updatePaymentDetails .form-group-split,
 #updateDeliveryAddress .form-group-split,
 #addressForm .form-group-split,
 #paymentDetailsForm .form-group-split {
@@ -3607,6 +3658,7 @@ CNW SBO Search Page Promotion Banner
 }
 
 @media (min-width: 992px) {
+    #updatePaymentDetails .form-group-split,
     #updateDeliveryAddress .form-group-split,
     #addressForm .form-group-split,
     #paymentDetailsForm .form-group-split {
@@ -3614,6 +3666,7 @@ CNW SBO Search Page Promotion Banner
     }
 }
 
+#updatePaymentDetails .form-group-split .form-group,
 #updateDeliveryAddress .form-group-split .form-group,
 #addressForm .form-group-split .form-group,
 #paymentDetailsForm .form-group-split .form-group {
@@ -3623,6 +3676,7 @@ CNW SBO Search Page Promotion Banner
 }
 
 @media (max-width: 992px) {
+    #updatePaymentDetails .form-group-split .form-group,
     #updateDeliveryAddress .form-group-split .form-group,
     #addressForm .form-group-split .form-group,
     #paymentDetailsForm .form-group-split .form-group {
@@ -3630,6 +3684,7 @@ CNW SBO Search Page Promotion Banner
     }
 }
 
+#updatePaymentDetails .form-group-split .form-group:nth-child(2),
 #updateDeliveryAddress .form-group-split .form-group:nth-child(2),
 #addressForm .form-group-split .form-group:nth-child(2),
 #paymentDetailsForm .form-group-split .form-group:nth-child(2) {
@@ -3637,6 +3692,7 @@ CNW SBO Search Page Promotion Banner
 }
 
 @media (max-width: 992px) {
+    #updatePaymentDetails .form-group-split .form-group:nth-child(2),
     #updateDeliveryAddress .form-group-split .form-group:nth-child(2),
     #addressForm .form-group-split .form-group:nth-child(2),
     #paymentDetailsForm .form-group-split .form-group:nth-child(2) {
@@ -3645,6 +3701,7 @@ CNW SBO Search Page Promotion Banner
     }
 }
 
+#updatePaymentDetails .right,
 #updateDeliveryAddress .right,
 #addressForm .right,
 #paymentDetailsForm .right {
@@ -3652,6 +3709,7 @@ CNW SBO Search Page Promotion Banner
     margin-bottom: 12px;
 }
 
+#updatePaymentDetails .form-actions,
 #updateDeliveryAddress .form-actions,
 #addressForm .form-actions,
 #paymentDetailsForm .form-actions {
@@ -3659,6 +3717,7 @@ CNW SBO Search Page Promotion Banner
 }
 
 @media (max-width: 992px) {
+    #updatePaymentDetails .form-actions,
     #updateDeliveryAddress .form-actions,
     #addressForm .form-actions,
     #paymentDetailsForm .form-actions {
@@ -3666,6 +3725,8 @@ CNW SBO Search Page Promotion Banner
     }
 }
 
+#updatePaymentDetails .form-actions button,
+#updatePaymentDetails .form-actions a,
 #updateDeliveryAddress .form-actions button,
 #updateDeliveryAddress .form-actions a,
 #addressForm .form-actions button,
@@ -3681,6 +3742,8 @@ CNW SBO Search Page Promotion Banner
 }
 
 @media (max-width: 992px) {
+    #updatePaymentDetails .form-actions button,
+    #updatePaymentDetails .form-actions a,
     #updateDeliveryAddress .form-actions button,
     #updateDeliveryAddress .form-actions a,
     #addressForm .form-actions button,
@@ -3693,6 +3756,7 @@ CNW SBO Search Page Promotion Banner
 }
 
 @media (max-width: 767px) {
+    #updatePaymentDetails .form-group,
     #updateDeliveryAddress .form-group,
     #addressForm .form-group,
     #paymentDetailsForm .form-group {

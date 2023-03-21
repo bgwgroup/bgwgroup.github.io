@@ -1381,8 +1381,8 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
     
-    //if store pickup auto select new billing address
-    setTimeout(() => {
+        //if store pickup auto select new billing address
+        setTimeout(() => {
         let checkIfStorePickup = document.querySelector(".deliveryStore");
         if(checkIfStorePickup.classList.contains("selected")){
             console.log("YAY");
@@ -1390,10 +1390,11 @@ document.addEventListener("DOMContentLoaded", function() {
           } else {
             console.log(":(");
           }
-        } catch (err) {
-            console.log(err);
-        }
-    }, 1000);
+       
+        }, 1000);
+  } catch (err) {
+        console.log(err);
+    }
 });
 
 

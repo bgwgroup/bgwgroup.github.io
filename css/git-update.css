@@ -3770,7 +3770,12 @@ CNW SBO Search Page Promotion Banner
     #addressForm .form-group .control-label,
     #paymentDetailsForm .form-group .control-label{
         margin-bottom: 6px;
+        margin-right: 0 !important;
     }
+}
+
+#cardType{
+max-width:150px;
 }
 
 #storePickupBillingAddressNotification:not(:empty){

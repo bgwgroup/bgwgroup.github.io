@@ -1382,3 +1382,149 @@ try {
 } catch (err) {
     console.log(err);
 }
+
+
+//Test Sammy-mas promotion 2023 
+
+//create prizeList
+fetch("prizeList.json")
+    .then((response) => response.json())
+    .then((json) => {
+        const itemList = json.map(function (item) {
+                
+            return '<div class="s3-prize-item">'
+                + '<div class="s3-prize-img-ctn">' 
+                +   `<img src= ${item.imgURL} >`                    
+                + '</div>'
+                +   '<div class="s3-prize-description">' 
+                +      '<div class="s3-prize-name">' + item.name + '</div>' 
+                +      '<div class="s3-rrp-point-ctn">'
+                +           '<div class="s3-rrp">' + 'RRP<br> $' + item.rrp + '</div>' 
+                +           '<div class="s3-point">' + 'Point: ' + item.point + '</div>' 
+                +      '</div>'        
+                +   '</div>'
+                +'</div>'
+
+    }).join('');
+        document.querySelector(".s3-prize-card-ctn").innerHTML = itemList;
+    });
+
+function expandHeight() {
+    const prizeCtn = document.querySelector('.s3-prize-card-ctn');
+    prizeCtn.style.maxHeight = "100%";
+}
+
+
+const url = "http://webmisc.int.bgwgroup.com.au/sammymas2023/get-product-list-json.php";
+    
+fetch(url)
+.then((response) => {
+    return response.json();
+})
+.then((data) => {
+    console.log(data)
+    // aquamax table
+    const aquamaxModelBody = data.map(function(aquamaxItem) {
+        if (aquamaxItem.product_brand === 'aquamax') {
+            return '<ul>'
+            + '<li>' 
+                + aquamaxItem.product_description
+                + '<div class="s4-product-code-point-ctn">'
+                + '<span>'+aquamaxItem.product_code +'</span>'
+                + '<span>'+aquamaxItem.points +'</span>'
+                + '</div>'
+            + '</li>'
+            '</ul>'
+        }
+    }).join('')
+
+    // avg table
+    const avgModelBody = data.map(function(aquamaxItem) {
+        if (aquamaxItem.product_brand === 'avg') {
+            return '<ul>'
+            + '<li>' 
+                + aquamaxItem.product_description
+                + '<div class="s4-product-code-point-ctn">'
+                + '<span>'+aquamaxItem.product_code +'</span>'
+                + '<span>'+aquamaxItem.points +'</span>'
+                + '</div>'
+            + '</li>'
+            '</ul>'
+        }
+    }).join('')
+
+    // rheem table
+    const rheemModelBody = data.map(function(aquamaxItem) {
+        if (aquamaxItem.product_brand === 'rheem') {
+            return '<ul>'
+            + '<li>' 
+                + aquamaxItem.product_description
+                + '<div class="s4-product-code-point-ctn">'
+                + '<span>'+aquamaxItem.product_code +'</span>'
+                + '<span>'+aquamaxItem.points +'</span>'
+                + '</div>'
+            + '</li>'
+            '</ul>'
+        }
+    }).join('')
+
+    // vulcan table
+    const vulcanModelBody = data.map(function(aquamaxItem) {
+        if (aquamaxItem.product_brand === 'vulcan') {
+            return '<ul>'
+            + '<li>' 
+                + aquamaxItem.product_description
+                + '<div class="s4-product-code-point-ctn">'
+                + '<span>'+aquamaxItem.product_code +'</span>'
+                + '<span>'+aquamaxItem.points +'</span>'
+                + '</div>'
+            + '</li>'
+            '</ul>'
+        }
+    }).join('')
+
+      // rinnai table
+      const rinnaiModelBody = data.map(function(aquamaxItem) {
+        if (aquamaxItem.product_brand === 'rinnai') {
+            return '<ul>'
+            + '<li>' 
+                + aquamaxItem.product_description
+                + '<div class="s4-product-code-point-ctn">'
+                + '<span>'+aquamaxItem.product_code +'</span>'
+                + '<span>'+aquamaxItem.points +'</span>'
+                + '</div>'
+            + '</li>'
+            '</ul>'
+        }
+    }).join('')
+
+    document.querySelector(".aquamax-table").innerHTML = aquamaxModelBody;
+    document.querySelector(".avg-table").innerHTML = avgModelBody;
+    document.querySelector(".rinnai-table").innerHTML = rinnaiModelBody;
+    document.querySelector(".rheem-table").innerHTML = rheemModelBody;
+    document.querySelector(".vulcan-table").innerHTML = vulcanModelBody;
+})
+.catch((error) =>{
+    console.log(error)
+});
+
+
+function accordion(){
+    let tableModelHeader = document.querySelectorAll('.model-table-header'); // get nodeList of table headers
+    console.log(tableModelHeader)
+    tableModelHeader.forEach(element => {
+        // get the current table header that is clicked
+        element.addEventListener('click', () => {
+
+            let elementSibling = element.nextElementSibling; // get the next element after the current table header
+
+            if(elementSibling.style.maxHeight){ // check if maxHeight is set to a value greater than zero/null(0)
+                elementSibling.style.maxHeight = null; // return it back to null state
+            }else{
+                elementSibling.style.maxHeight = `${elementSibling.scrollHeight}px`; // if max-height is null/zero, expand the table body using the elements scrollHeight based on window position
+            }
+        });
+    });
+}
+
+accordion()

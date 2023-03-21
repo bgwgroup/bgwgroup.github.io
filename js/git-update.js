@@ -1387,7 +1387,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 } else {
                     console.log(":(");
               }
-            }, 1000);
+            }, 3000);
     } catch (err) {
         console.log(err);
     }

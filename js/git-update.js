@@ -1370,7 +1370,8 @@ MaintenanceBanner.prototype.fullScreenBanner = () => {
 
 // Temp hide b2c frontend elements
 
-try {
+document.addEventListener("DOMContentLoaded", function() {
+ try {
     if (location.href.match(/cnw.com.au/) || location.href.match(/sherriff.com.au/) || location.href.match(/samios.net.au/)) {
         let getB2CLoginPopupBtns = document.querySelectorAll(".scaffoldOpenModalRegisterGuestUser");
         for (const button of getB2CLoginPopupBtns) {
@@ -1383,11 +1384,17 @@ try {
     //if store pickup auto select new billing address
     let checkIfStorePickup = document.querySelector(".deliveryStore");
     if(checkIfStorePickup.classList.contains("selected")){
+        console.log("YAY");
         document.querySelector("#newBillingAddressCheck").click();
+      } else {
+        console.log(":(");
       }
-} catch (err) {
-    console.log(err);
-}
+    } catch (err) {
+        console.log(err);
+    }
+});
+
+
 
 
 //Test Sammy-mas promotion 2023 

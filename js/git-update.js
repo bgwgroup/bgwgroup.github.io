@@ -1382,11 +1382,8 @@ document.addEventListener("DOMContentLoaded", function() {
         setTimeout(() => {
                let checkIfStorePickup = document.querySelector(".deliveryStore");
                 if(checkIfStorePickup.classList.contains("selected")){
-                    console.log("YAY");
                     document.querySelector("#newBillingAddressCheck").click();
-                } else {
-                    console.log(":(");
-              }
+                }
             }, 3000);
     } catch (err) {
         console.log(err);

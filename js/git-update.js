@@ -1382,16 +1382,18 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     
     //if store pickup auto select new billing address
-    let checkIfStorePickup = document.querySelector(".deliveryStore");
-    if(checkIfStorePickup.classList.contains("selected")){
-        console.log("YAY");
-        document.querySelector("#newBillingAddressCheck").click();
-      } else {
-        console.log(":(");
-      }
-    } catch (err) {
-        console.log(err);
-    }
+    setTimeout(() => {
+        let checkIfStorePickup = document.querySelector(".deliveryStore");
+        if(checkIfStorePickup.classList.contains("selected")){
+            console.log("YAY");
+            document.querySelector("#newBillingAddressCheck").click();
+          } else {
+            console.log(":(");
+          }
+        } catch (err) {
+            console.log(err);
+        }
+    }, 1000);
 });
 
 

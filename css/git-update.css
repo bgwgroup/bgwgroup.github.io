@@ -3701,7 +3701,7 @@ CNW SBO Search Page Promotion Banner
     }
 }
 
-#storePickupBillingAddressNotification{
+#storePickupBillingAddressNotification:not(:empty){
     background: var(--color-alert-warning);
     color: #222;
     padding: 12px 24px;

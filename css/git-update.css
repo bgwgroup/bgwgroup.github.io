@@ -3692,6 +3692,23 @@ CNW SBO Search Page Promotion Banner
     }
 }
 
+@media (max-width: 767px) {
+    #updateDeliveryAddress .form-group,
+    #addressForm .form-group,
+    #paymentDetailsForm .form-group {
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+}
+
+#storePickupBillingAddressNotification{
+    background: var(--color-alert-warning);
+    color: #222;
+    padding: 12px 24px;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+}
+
 
 /* Temp hide b2c frontend elements */
 
@@ -3704,13 +3721,3 @@ CNW SBO Search Page Promotion Banner
 }
 
 
-/* Sean wants this */
-
-@media (max-width: 767px) {
-    #updateDeliveryAddress .form-group,
-    #addressForm .form-group,
-    #paymentDetailsForm .form-group {
-        -ms-flex-direction: column;
-        flex-direction: column;
-    }
-}

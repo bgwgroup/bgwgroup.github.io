@@ -1379,6 +1379,12 @@ try {
             });
         }
     }
+    
+    //if store pickup auto select new billing address
+    let checkIfStorePickup = document.querySelector(".deliveryStore");
+    if(checkIfStorePickup.classList.contains("selected")){
+        document.querySelector("#newBillingAddressCheck").click();
+      }
 } catch (err) {
     console.log(err);
 }

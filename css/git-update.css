@@ -3358,7 +3358,7 @@ CNW SBO Search Page Promotion Banner
 
 /** CSS Temp Fix for Checkout Form Styling **/
 
-#cnwBody #updateDeliveryAddress .form-actions button,
+/* #cnwBody #updateDeliveryAddress .form-actions button,
 #cnwBody #updateDeliveryAddress .form-actions a,
 #cnwBody #addressForm .form-actions button,
 #cnwBody #addressForm .form-actions a,
@@ -3690,7 +3690,7 @@ CNW SBO Search Page Promotion Banner
         margin-right: 0 !important;
         margin-bottom: 12px !important;
     }
-}
+} */
 
 
 /* Temp hide b2c frontend elements */

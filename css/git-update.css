@@ -3562,6 +3562,7 @@ CNW SBO Search Page Promotion Banner
     text-transform: uppercase;
 }
 
+#paymentDetailsForm .headline,
 #paymentDetailsForm .headline {
     display: none;
 }

@@ -1378,7 +1378,8 @@ document.addEventListener("DOMContentLoaded", function() {
                     window.location.href = "/login";
                     });
                 }
-            setTimeout(() => {
+        }
+        setTimeout(() => {
                let checkIfStorePickup = document.querySelector(".deliveryStore");
                 if(checkIfStorePickup.classList.contains("selected")){
                     console.log("YAY");
@@ -1387,7 +1388,6 @@ document.addEventListener("DOMContentLoaded", function() {
                     console.log(":(");
               }
             }, 1000);
-        }
     } catch (err) {
         console.log(err);
     }

@@ -51,7 +51,7 @@
         "rrp": "129.00",
         "point": "20",
         "name": "Wonderboom Bluetooth Speaker",
-        "imgURL": "https://firebasestorage.googleapis.com/v0/b/bgw-asset-library.appspot.com/o/Samios%2FSammy-mas%2F20%20Ultimate%20Ears%20Wonderboom%202%20Portable%20Bluetooth%20Speaker.png?alt=media&token=414f875b-ebd5-491b-b89b-88eb16c0bb71"
+        "imgURL": "/medias/2-boom-speaker.png?context=bWFzdGVyfGltYWdlc3wxNTM0MTA4fGltYWdlL3BuZ3xoMDkvaDAyLzEwMDQ1MTQ1NDE1NzEwLzItYm9vbS1zcGVha2VyLnBuZ3wwM2Q5ZmY2M2VhMTNiOTc4YjBiNGYwMTgzODRhZDQwODZiOThiNGFjMzAwMjJkZDFhMDY0YjdiZjRlZTEwMzdl"
     },
     {
         "rrp": "100.00",
@@ -189,6 +189,6 @@
         "rrp": "2000.00",
         "point": "150",
         "name": "$2000 Travel Voucher",
-        "imgURL": "https://firebasestorage.googleapis.com/v0/b/bgw-asset-library.appspot.com/o/Samios%2FSammy-mas%2F%242000%20Travel%20Voucher.png?alt=media&token=17530e76-a265-4ed4-923d-2d06ab605c89"
+        "imgURL": "/medias/1-travel-voucher.png?context=bWFzdGVyfGltYWdlc3w5NDYzNTV8aW1hZ2UvcG5nfGhiNy9oZDkvMTAwNDUxNDc1NzgzOTgvMS10cmF2ZWwtdm91Y2hlci5wbmd8N2E5YTZmNGU1NWMzOGE5MTJhOTFhMDA1MmRjNTY5Nzc0ZjI4YTdjN2IwNjliNjgzNzhlODMwNzJlNGE3ZmIzYg"
     }
 ]

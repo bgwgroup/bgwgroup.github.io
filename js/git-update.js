@@ -1396,35 +1396,38 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-//Test Sammy-mas promotion 2023 
+// Test Sammy-mas promotion 2023 
 
-//create prizeList
-// fetch("prizeList.json")
-//     .then((response) => response.json())
-//     .then((json) => {
-//         const itemList = json.map(function (item) {
+// create prizeList
+https://bgwgroup.github.io/data/sammy-mas-promo/prizeList.json
 
-//             return '<div class="s3-prize-item">'
-//                 + '<div class="s3-prize-img-ctn">' 
-//                 +   `<img src= ${item.imgURL} >`                    
-//                 + '</div>'
-//                 +   '<div class="s3-prize-description">' 
-//                 +      '<div class="s3-prize-name">' + item.name + '</div>' 
-//                 +      '<div class="s3-rrp-point-ctn">'
-//                 +           '<div class="s3-rrp">' + 'RRP<br> $' + item.rrp + '</div>' 
-//                 +           '<div class="s3-point">' + 'Point: ' + item.point + '</div>' 
-//                 +      '</div>'        
-//                 +   '</div>'
-//                 +'</div>'
+fetch("https://bgwgroup.github.io/data/sammy-mas-promo/prizeList.json")
+    .then((response) => response.json())
+    .then((json) => {
+        console.log(json)
+    //     const itemList = json.map(function (item) {
 
-//     }).join('');
-//         document.querySelector(".s3-prize-card-ctn").innerHTML = itemList;
-//     });
+    //         return '<div class="s3-prize-item">'
+    //             + '<div class="s3-prize-img-ctn">' 
+    //             +   `<img src= ${item.imgURL} >`                    
+    //             + '</div>'
+    //             +   '<div class="s3-prize-description">' 
+    //             +      '<div class="s3-prize-name">' + item.name + '</div>' 
+    //             +      '<div class="s3-rrp-point-ctn">'
+    //             +           '<div class="s3-rrp">' + 'RRP<br> $' + item.rrp + '</div>' 
+    //             +           '<div class="s3-point">' + 'Point: ' + item.point + '</div>' 
+    //             +      '</div>'        
+    //             +   '</div>'
+    //             +'</div>'
 
-// function expandHeight() {
-//     const prizeCtn = document.querySelector('.s3-prize-card-ctn');
-//     prizeCtn.style.maxHeight = "100%";
-// }
+    // }).join('');
+    //     document.querySelector(".s3-prize-card-ctn").innerHTML = itemList;
+    });
+
+function expandHeight() {
+    const prizeCtn = document.querySelector('.s3-prize-card-ctn');
+    prizeCtn.style.maxHeight = "100%";
+}
 
 
 // const url = "https://webmisc.int.bgwgroup.com.au/sammymas2023/get-product-list-json.php";
@@ -1540,3 +1543,4 @@ document.addEventListener("DOMContentLoaded", function() {
 // }
 
 // accordion()
+

@@ -1376,15 +1376,17 @@ document.addEventListener("DOMContentLoaded", function() {
             for (const button of getB2CLoginPopupBtns) {
                 button.addEventListener('click', () => {
                     window.location.href = "/login";
-                    });
-                }
+                });
+            }
         }
         setTimeout(() => {
-               let checkIfStorePickup = document.querySelector(".deliveryStore");
-                if(checkIfStorePickup.classList.contains("selected")){
+            let checkIfStorePickup = document.querySelector(".deliveryStore");
+            if (checkIfStorePickup != undefined) {
+                if (checkIfStorePickup.classList.contains("selected")) {
                     document.querySelector("#newBillingAddressCheck").click();
                 }
-            }, 3000);
+            }
+        }, 3000);
     } catch (err) {
         console.log(err);
     }
@@ -1401,7 +1403,7 @@ document.addEventListener("DOMContentLoaded", function() {
 //     .then((response) => response.json())
 //     .then((json) => {
 //         const itemList = json.map(function (item) {
-                
+
 //             return '<div class="s3-prize-item">'
 //                 + '<div class="s3-prize-img-ctn">' 
 //                 +   `<img src= ${item.imgURL} >`                    
@@ -1426,7 +1428,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 // const url = "https://webmisc.int.bgwgroup.com.au/sammymas2023/get-product-list-json.php";
-    
+
 // fetch(url)
 // .then((response) => {
 //     return response.json();

@@ -1378,6 +1378,12 @@ document.addEventListener("DOMContentLoaded", function() {
                     window.location.href = "/login";
                 });
             }
+            let getPDPLoginBtn = document.querySelectorAll(".scaffoldOpenModalRegisterGuestUserProduct");
+            for (const button of getPDPLoginBtn) {
+                button.addEventListener('click', () => {
+                    window.location.href = "/login";
+                });
+            }
         }
         setTimeout(() => {
             let checkIfStorePickup = document.querySelector(".deliveryStore");

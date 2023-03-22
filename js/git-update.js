@@ -1400,28 +1400,28 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // create prizeList
 https://bgwgroup.github.io/data/sammy-mas-promo/prizeList.json
-
+console.log('test')
 fetch("https://bgwgroup.github.io/data/sammy-mas-promo/prizeList.json")
     .then((response) => response.json())
     .then((json) => {
         console.log(json)
-    //     const itemList = json.map(function (item) {
+        const itemList = json.map(function (item) {
 
-    //         return '<div class="s3-prize-item">'
-    //             + '<div class="s3-prize-img-ctn">' 
-    //             +   `<img src= ${item.imgURL} >`                    
-    //             + '</div>'
-    //             +   '<div class="s3-prize-description">' 
-    //             +      '<div class="s3-prize-name">' + item.name + '</div>' 
-    //             +      '<div class="s3-rrp-point-ctn">'
-    //             +           '<div class="s3-rrp">' + 'RRP<br> $' + item.rrp + '</div>' 
-    //             +           '<div class="s3-point">' + 'Point: ' + item.point + '</div>' 
-    //             +      '</div>'        
-    //             +   '</div>'
-    //             +'</div>'
+            return '<div class="s3-prize-item">'
+                + '<div class="s3-prize-img-ctn">' 
+                +   `<img src= ${item.imgURL} >`                    
+                + '</div>'
+                +   '<div class="s3-prize-description">' 
+                +      '<div class="s3-prize-name">' + item.name + '</div>' 
+                +      '<div class="s3-rrp-point-ctn">'
+                +           '<div class="s3-rrp">' + 'RRP<br> $' + item.rrp + '</div>' 
+                +           '<div class="s3-point">' + 'Point: ' + item.point + '</div>' 
+                +      '</div>'        
+                +   '</div>'
+                +'</div>'
 
-    // }).join('');
-    //     document.querySelector(".s3-prize-card-ctn").innerHTML = itemList;
+    }).join('');
+        document.querySelector(".s3-prize-card-ctn").innerHTML = itemList;
     });
 
 function expandHeight() {

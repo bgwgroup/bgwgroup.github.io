@@ -1400,11 +1400,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // create prizeList
 https://bgwgroup.github.io/data/sammy-mas-promo/prizeList.json
-console.log('test')
 fetch("https://bgwgroup.github.io/data/sammy-mas-promo/prizeList.json")
     .then((response) => response.json())
     .then((json) => {
-        console.log(json)
         const itemList = json.map(function (item) {
 
             return '<div class="s3-prize-item">'

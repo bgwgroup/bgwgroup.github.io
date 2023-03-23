@@ -1574,17 +1574,14 @@ let ground = document.getElementById('para-ground');
 let logoCtn = document.getElementById('para-logo-ctn');
 let getStartedbtn = document.getElementById('s1-get-started-btn')
 
-console.log('test1')
-
 window.addEventListener('scroll', () => {
-    console.log('test2')
     let value = window.scrollY;
     getStartedbtn.style.transform = `translateY(${value * 1.5}`+'px';
     moon.style.marginTop = value * -1.5 + 'px';
     sammy.style.left = value * -1.5 + 300 +'px';
     sammytext1.style.top = value * 1.5 + 230 +'px';
     sammytext2.style.top = value * 1.5 + 350+ 'px';
-    logoCtn.style.top = value * -1.5 + 50 + 'px';
+    logoCtn.style.top = value * -1.5 + 10 + 'px';
     ground.style.transform = `perspective(1500px) translate3d(0px, 0px, ${value/3}px)`;
 })
 

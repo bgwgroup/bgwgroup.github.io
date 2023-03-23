@@ -1399,12 +1399,11 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 // Test Sammy-mas promotion 2023 
-console.log('test')
+
 // create prizeList https://bgwgroup.github.io/data/sammy-mas-promo/prizeList.json
 fetch("https://bgwgroup.github.io/data/sammy-mas-promo/prizeList.json")
     .then((response) => response.json())
     .then((json) => {
-        console.log(json, "data1")
         const sammySlide1 = json.slice(0,8);
         const sammySlide2 = json.slice(8,16);
         const sammySlide3 = json.slice(16,24);
@@ -1596,3 +1595,11 @@ window.addEventListener('scroll', () => {
     ground.style.transform = `perspective(1500px) translate3d(0px, 0px, ${value/3}px)`;
 })
 
+let sammySlideCounter = 2;
+setInterval(function() {
+    document.getElementById('s3-radio' + sammySlideCounter).checked = true;
+    sammySlideCounter++;
+    if (sammySlideCounter>4) {
+        sammySlideCounter = 1;
+    }
+}, 6500)

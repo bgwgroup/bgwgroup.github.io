@@ -1410,28 +1410,44 @@ fetch("https://bgwgroup.github.io/data/sammy-mas-promo/prizeList.json")
         const sammySlide4 = json.slice(24,32);
  
         const sammyCarouselSlide1 = sammySlide1.map(function (item) {
-        return `<div class="s3-prize-img-ctn">
-            <img src="${item.imgURL}" alt="prize item" >
-        </div>`
-        }).join('');
-
-        const sammyCarouselSlide2 = sammySlide2.map(function (item) {
             return `<div class="s3-prize-img-ctn">
-            <img src="${item.imgURL}" alt="prize item" >
-        </div>`
-        }).join('');
-
-        const sammyCarouselSlide3 = sammySlide3.map(function (item) {
-            return `<div class="s3-prize-img-ctn">
-            <img src="${item.imgURL}" alt="prize item" >
-        </div>`
-        }).join('');
-
-        const sammyCarouselSlide4 = sammySlide4.map(function (item) {
-            return `<div class="s3-prize-img-ctn">
-            <img src="${item.imgURL}" alt="prize item" >
-        </div>`
-        }).join('');
+                <img src="${item.imgURL}" alt="prize item">
+                <div class="s3-prize-details">
+                    <div class="s3-prize-name">${item.name}</div>
+                    <div class="s3-prize-point">${item.point} Points</div>
+                </div>
+            </div>`
+            }).join('');
+    
+            const sammyCarouselSlide2 = sammySlide2.map(function (item) {
+                return `<div class="s3-prize-img-ctn">
+                <img src="${item.imgURL}" alt="prize item">
+                <div class="s3-prize-details">
+                    <div class="s3-prize-name">${item.name}</div>
+                    <div class="s3-prize-point">${item.point} Points</div>
+                </div>
+            </div>`
+            }).join('');
+    
+            const sammyCarouselSlide3 = sammySlide3.map(function (item) {
+                return `<div class="s3-prize-img-ctn">
+                <img src="${item.imgURL}" alt="prize item" >
+                <div class="s3-prize-details">
+                    <div class="s3-prize-name">${item.name}</div>
+                    <div class="s3-prize-point">${item.point} Points</div>
+                </div>
+            </div>`
+            }).join('');
+    
+            const sammyCarouselSlide4 = sammySlide4.map(function (item) {
+                return `<div class="s3-prize-img-ctn">
+                <img src="${item.imgURL}" alt="prize item" >
+                <div class="s3-prize-details">
+                    <div class="s3-prize-name">${item.name}</div>
+                    <div class="s3-prize-point">${item.point} Points</div>
+                </div>
+            </div>`
+            }).join('');
 
         document.querySelector(".s3-first").innerHTML = sammyCarouselSlide1;
         document.querySelector(".s3-second").innerHTML = sammyCarouselSlide2;

@@ -1398,9 +1398,9 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
-// Sammy-mas promotion 2023 
+// Test Sammy-mas promotion 2023 
 
-// Create prizeList
+// create prizeList https://bgwgroup.github.io/data/sammy-mas-promo/prizeList.json
 fetch("https://bgwgroup.github.io/data/sammy-mas-promo/prizeList.json")
     .then((response) => response.json())
     .then((json) => {
@@ -1438,7 +1438,9 @@ fetch("https://bgwgroup.github.io/data/sammy-mas-promo/prizeList.json")
         document.querySelector(".s3-third").innerHTML = sammyCarouselSlide3;
         document.querySelector(".s3-forth").innerHTML = sammyCarouselSlide4;
     });
-// Create product list 
+
+// create productList https://bgwgroup.github.io/data/sammy-mas-promo/productList.json
+
 fetch("https://bgwgroup.github.io/data/sammy-mas-promo/productList.json")
 .then((response) => {
     return response.json();
@@ -1535,8 +1537,6 @@ function accordion(){
 
 accordion()
 
-
-// Search per model
 let searchInput = document.querySelector('.dip-codes-search input[type="text"]');
 let tableBody = document.querySelectorAll('.model-table-body')
 let tableBodyList = document.querySelectorAll('.model-table-body ul');
@@ -1594,15 +1594,4 @@ window.addEventListener('scroll', () => {
     logoCtn.style.top = value * -1.5 + 10 + 'px';
     ground.style.transform = `perspective(1500px) translate3d(0px, 0px, ${value/3}px)`;
 })
-
-
-// Sammy Carousel Animation
-let sammySlideCounter = 2;
-setInterval(function() {
-    document.getElementById('s3-radio' + sammySlideCounter).checked = true;
-    sammySlideCounter++;
-    if (sammySlideCounter>4) {
-        sammySlideCounter = 1;
-    }
-}, 6500)
 

@@ -1399,11 +1399,12 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 // Test Sammy-mas promotion 2023 
-
+console.log('test')
 // create prizeList https://bgwgroup.github.io/data/sammy-mas-promo/prizeList.json
 fetch("https://bgwgroup.github.io/data/sammy-mas-promo/prizeList.json")
     .then((response) => response.json())
     .then((json) => {
+        console.log(json, "data1")
         const sammySlide1 = json.slice(0,8);
         const sammySlide2 = json.slice(8,16);
         const sammySlide3 = json.slice(16,24);

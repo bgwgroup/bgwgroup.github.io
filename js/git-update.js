@@ -1439,83 +1439,71 @@ fetch("https://bgwgroup.github.io/data/sammy-mas-promo/productList.json")
     // aquamax table
     const aquamaxModelBody = data.map(function(aquamaxItem) {
         if (aquamaxItem.product_brand === 'aquamax') {
-            return '<ul>'
-            + '<li>' 
+            return '<li>' 
                 + aquamaxItem.product_description
                 + '<div class="s4-product-code-point-ctn">'
-                + '<span>'+aquamaxItem.product_code +'</span>'
+                + '<span>' +`<a href="sam/en/AUD/search/?text=${aquamaxItem.product_code}">` + aquamaxItem.product_code + '</a>'+'</span>'
                 + '<span>'+aquamaxItem.points +'</span>'
-                + '</div>'
-            + '</li>'
-            '</ul>'
+                + '</div>'+'</li>'
         }
     }).join('')
 
     // avg table
     const avgModelBody = data.map(function(aquamaxItem) {
         if (aquamaxItem.product_brand === 'avg') {
-            return '<ul>'
-            + '<li>' 
+            return '<li>' 
                 + aquamaxItem.product_description
                 + '<div class="s4-product-code-point-ctn">'
-                + '<span>'+aquamaxItem.product_code +'</span>'
+                + '<span>' +`<a href="sam/en/AUD/search/?text=${aquamaxItem.product_code}">` + aquamaxItem.product_code + '</a>'+'</span>'
                 + '<span>'+aquamaxItem.points +'</span>'
-                + '</div>'
-            + '</li>'
-            '</ul>'
+                + '</div>' + '</li>'
         }
     }).join('')
 
     // rheem table
     const rheemModelBody = data.map(function(aquamaxItem) {
         if (aquamaxItem.product_brand === 'rheem') {
-            return '<ul>'
-            + '<li>' 
+            return '<li>' 
                 + aquamaxItem.product_description
                 + '<div class="s4-product-code-point-ctn">'
-                + '<span>'+aquamaxItem.product_code +'</span>'
+                + '<span>' +`<a href="sam/en/AUD/search/?text=${aquamaxItem.product_code}">` + aquamaxItem.product_code + '</a>'+'</span>'
                 + '<span>'+aquamaxItem.points +'</span>'
-                + '</div>'
-            + '</li>'
-            '</ul>'
+                + '</div>' + '</li>'
+
         }
     }).join('')
 
     // vulcan table
     const vulcanModelBody = data.map(function(aquamaxItem) {
         if (aquamaxItem.product_brand === 'vulcan') {
-            return '<ul>'
-            + '<li>' 
+            return '<li>' 
                 + aquamaxItem.product_description
                 + '<div class="s4-product-code-point-ctn">'
-                + '<span>'+aquamaxItem.product_code +'</span>'
+                + '<span>' +`<a href="sam/en/AUD/search/?text=${aquamaxItem.product_code}">` + aquamaxItem.product_code + '</a>'+'</span>'
                 + '<span>'+aquamaxItem.points +'</span>'
                 + '</div>'
             + '</li>'
-            '</ul>'
         }
     }).join('')
 
       // rinnai table
       const rinnaiModelBody = data.map(function(aquamaxItem) {
         if (aquamaxItem.product_brand === 'rinnai') {
-            return '<ul>'
-            + '<li>' 
+            return '<li>' 
                 + aquamaxItem.product_description
                 + '<div class="s4-product-code-point-ctn">'
-                + '<span>'+aquamaxItem.product_code +'</span>'
+                + '<span>' +`<a href="sam/en/AUD/search/?text=${aquamaxItem.product_code}">` + aquamaxItem.product_code + '</a>'+'</span>'
                 + '<span>'+aquamaxItem.points +'</span>'
                 + '</div>'
             + '</li>'
-            '</ul>'
         }
     }).join('')
 
-    document.querySelector(".aquamax-table").innerHTML = aquamaxModelBody;
-    document.querySelector(".avg-table").innerHTML = avgModelBody;
-    document.querySelector(".rinnai-table").innerHTML = rinnaiModelBody;
-    document.querySelector(".rheem-table").innerHTML = rheemModelBody;
-    document.querySelector(".vulcan-table").innerHTML = vulcanModelBody;
+    document.querySelector(".aquamax-table ul").innerHTML = aquamaxModelBody;
+    document.querySelector(".avg-table ul").innerHTML = avgModelBody;
+    document.querySelector(".rinnai-table ul").innerHTML = rinnaiModelBody;
+    document.querySelector(".rheem-table ul").innerHTML = rheemModelBody;
+    document.querySelector(".vulcan-table ul").innerHTML = vulcanModelBody;
 })
 .catch((error) =>{
     console.log(error)
@@ -1527,9 +1515,7 @@ function accordion(){
     tableModelHeader.forEach(element => {
         // get the current table header that is clicked
         element.addEventListener('click', () => {
-
             let elementSibling = element.nextElementSibling; // get the next element after the current table header
-
             if(elementSibling.style.maxHeight){ // check if maxHeight is set to a value greater than zero/null(0)
                 elementSibling.style.maxHeight = null; // return it back to null state
             }else{
@@ -1540,4 +1526,48 @@ function accordion(){
 }
 
 accordion()
+
+let searchInput = document.querySelector('.dip-codes-search input[type="text"]');
+let tableBody = document.querySelectorAll('.model-table-body')
+let tableBodyList = document.querySelectorAll('.model-table-body ul');
+
+console.log(tableBodyList)
+
+function pointsPerModelFiterSearch() {
+    searchInput.addEventListener('keyup', () => {
+        let filterValue = searchInput.value.toUpperCase();
+        let totalListNumber = tableBodyList.length;
+
+        if (filterValue.length >= 3) {
+            for(let i=0; i < totalListNumber; i++) {
+                let currentList = tableBodyList[i];
+                console.log(currentList)
+                let currentListValue = currentList.innerText || currentListValue.textContent;
+                let tableBodyElement = currentList.parentElement;
+
+                console.log(currentList.children)
+                
+                if (currentListValue.toUpperCase().indexOf(filterValue) > -1) {
+                    tableBodyElement.style.maxHeight = `${tableBodyElement.scrollHeight}px`;
+                    currentList.style.display = "flex";
+                    currentList.style.flexDirection = "column"
+                    const liCollection = currentList.children;
+                    for (let i = 0; i < liCollection.length; i++) {
+                        liCollection[i].style.padding = "4px 0";
+                      }
+                    filterValue= ""
+                } else {
+                    tableBodyElement.style.maxHeight = null;
+                }
+            }
+        } else if (filterValue.length < 3 ) {
+            for (let i=0; i< tableBody.length; i++) {
+                tableBody[i].style.maxHeight = "0px"
+            }
+        }
+    })
+}
+
+pointsPerModelFiterSearch()
+
 

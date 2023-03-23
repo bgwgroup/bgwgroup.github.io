@@ -1576,6 +1576,7 @@ let getStartedbtn = document.getElementById('s1-get-started-btn')
 
 
 window.addEventListener('scroll', () => {
+    console.log('test')
     let value = window.scrollY;
     getStartedbtn.style.transform = `translateY(${value * 1.5}`+'px';
     moon.style.marginTop = value * -1.5 + 'px';

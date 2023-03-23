@@ -1400,38 +1400,46 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // Test Sammy-mas promotion 2023 
 
-// create prizeList https://bgwgroup.github.io/data/sammy-mas-promo/prizeList.json
-fetch("https://bgwgroup.github.io/data/sammy-mas-promo/prizeList.json")
+//create prizeList
+fetch("prizeList.json")
     .then((response) => response.json())
     .then((json) => {
-        const itemList = json.map(function (item) {
+        const sammySlide1 = json.slice(0,8);
+        const sammySlide2 = json.slice(8,16);
+        const sammySlide3 = json.slice(16,24);
+        const sammySlide4 = json.slice(24,32);
+ 
+        const sammyCarouselSlide1 = sammySlide1.map(function (item) {
+        return `<div class="s3-prize-img-ctn">
+            <img src="${item.imgURL}" alt="prize item" >
+        </div>`
+        }).join('');
 
-            return '<div class="s3-prize-item">'
-                + '<div class="s3-prize-img-ctn">' 
-                +   `<img src= ${item.imgURL} >`                    
-                + '</div>'
-                +   '<div class="s3-prize-description">' 
-                +      '<div class="s3-prize-name">' + item.name + '</div>' 
-                +      '<div class="s3-rrp-point-ctn">'
-                +           '<div class="s3-rrp">' + 'RRP<br> $' + item.rrp + '</div>' 
-                +           '<div class="s3-point">' + 'Point: ' + item.point + '</div>' 
-                +      '</div>'        
-                +   '</div>'
-                +'</div>'
+        const sammyCarouselSlide2 = sammySlide2.map(function (item) {
+            return `<div class="s3-prize-img-ctn">
+            <img src="${item.imgURL}" alt="prize item" >
+        </div>`
+        }).join('');
 
-    }).join('');
-        document.querySelector(".s3-prize-card-ctn").innerHTML = itemList;
+        const sammyCarouselSlide3 = sammySlide3.map(function (item) {
+            return `<div class="s3-prize-img-ctn">
+            <img src="${item.imgURL}" alt="prize item" >
+        </div>`
+        }).join('');
+
+        const sammyCarouselSlide4 = sammySlide4.map(function (item) {
+            return `<div class="s3-prize-img-ctn">
+            <img src="${item.imgURL}" alt="prize item" >
+        </div>`
+        }).join('');
+
+        document.querySelector(".s3-first").innerHTML = sammyCarouselSlide1;
+        document.querySelector(".s3-second").innerHTML = sammyCarouselSlide2;
+        document.querySelector(".s3-third").innerHTML = sammyCarouselSlide3;
+        document.querySelector(".s3-forth").innerHTML = sammyCarouselSlide4;
     });
 
-function expandHeight() {
-    const prizeCtn = document.querySelector('.s3-prize-card-ctn');
-    prizeCtn.style.maxHeight = "100%";
-}
-
-
-// create productList https://bgwgroup.github.io/data/sammy-mas-promo/productList.json
-
-fetch("https://bgwgroup.github.io/data/sammy-mas-promo/productList.json")
+fetch("productList.json")
 .then((response) => {
     return response.json();
 })
@@ -1584,4 +1592,15 @@ window.addEventListener('scroll', () => {
     logoCtn.style.top = value * -1.5 + 10 + 'px';
     ground.style.transform = `perspective(1500px) translate3d(0px, 0px, ${value/3}px)`;
 })
+
+
+
+let sammySlideCounter = 2;
+setInterval(function() {
+    document.getElementById('s3-radio' + sammySlideCounter).checked = true;
+    sammySlideCounter++;
+    if (sammySlideCounter>4) {
+        sammySlideCounter = 1;
+    }
+}, 6500)
 

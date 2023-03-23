@@ -1588,12 +1588,3 @@ window.addEventListener('scroll', () => {
     ground.style.transform = `perspective(1500px) translate3d(0px, 0px, ${value/3}px)`;
 })
 
-
-// let counter = 2;
-// setInterval(function() {
-//     document.getElementById('s3-radio' + counter).checked = true;
-//     counter++;
-//     if (counter>4) {
-//         counter = 1;
-//     }
-// }, 3500)

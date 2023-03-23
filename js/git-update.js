@@ -1398,10 +1398,10 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
-// Test Sammy-mas promotion 2023 
+// Sammy-mas promotion 2023 
 
-//create prizeList
-fetch("prizeList.json")
+// Create prizeList
+fetch("https://bgwgroup.github.io/data/sammy-mas-promo/prizeList.json")
     .then((response) => response.json())
     .then((json) => {
         const sammySlide1 = json.slice(0,8);
@@ -1438,8 +1438,8 @@ fetch("prizeList.json")
         document.querySelector(".s3-third").innerHTML = sammyCarouselSlide3;
         document.querySelector(".s3-forth").innerHTML = sammyCarouselSlide4;
     });
-
-fetch("productList.json")
+// Create product list 
+fetch("https://bgwgroup.github.io/data/sammy-mas-promo/productList.json")
 .then((response) => {
     return response.json();
 })
@@ -1535,6 +1535,8 @@ function accordion(){
 
 accordion()
 
+
+// Search per model
 let searchInput = document.querySelector('.dip-codes-search input[type="text"]');
 let tableBody = document.querySelectorAll('.model-table-body')
 let tableBodyList = document.querySelectorAll('.model-table-body ul');
@@ -1594,7 +1596,7 @@ window.addEventListener('scroll', () => {
 })
 
 
-
+// Sammy Carousel Animation
 let sammySlideCounter = 2;
 setInterval(function() {
     document.getElementById('s3-radio' + sammySlideCounter).checked = true;

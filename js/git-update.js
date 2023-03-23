@@ -1574,9 +1574,10 @@ let ground = document.getElementById('para-ground');
 let logoCtn = document.getElementById('para-logo-ctn');
 let getStartedbtn = document.getElementById('s1-get-started-btn')
 
+console.log('test1')
 
 window.addEventListener('scroll', () => {
-    console.log('test')
+    console.log('test2')
     let value = window.scrollY;
     getStartedbtn.style.transform = `translateY(${value * 1.5}`+'px';
     moon.style.marginTop = value * -1.5 + 'px';
@@ -1588,11 +1589,11 @@ window.addEventListener('scroll', () => {
 })
 
 
-let counter = 2;
-setInterval(function() {
-    document.getElementById('s3-radio' + counter).checked = true;
-    counter++;
-    if (counter>4) {
-        counter = 1;
-    }
-}, 3500)
+// let counter = 2;
+// setInterval(function() {
+//     document.getElementById('s3-radio' + counter).checked = true;
+//     counter++;
+//     if (counter>4) {
+//         counter = 1;
+//     }
+// }, 3500)

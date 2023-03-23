@@ -1531,8 +1531,6 @@ let searchInput = document.querySelector('.dip-codes-search input[type="text"]')
 let tableBody = document.querySelectorAll('.model-table-body')
 let tableBodyList = document.querySelectorAll('.model-table-body ul');
 
-console.log(tableBodyList)
-
 function pointsPerModelFiterSearch() {
     searchInput.addEventListener('keyup', () => {
         let filterValue = searchInput.value.toUpperCase();
@@ -1541,11 +1539,8 @@ function pointsPerModelFiterSearch() {
         if (filterValue.length >= 3) {
             for(let i=0; i < totalListNumber; i++) {
                 let currentList = tableBodyList[i];
-                console.log(currentList)
                 let currentListValue = currentList.innerText || currentListValue.textContent;
                 let tableBodyElement = currentList.parentElement;
-
-                console.log(currentList.children)
                 
                 if (currentListValue.toUpperCase().indexOf(filterValue) > -1) {
                     tableBodyElement.style.maxHeight = `${tableBodyElement.scrollHeight}px`;
@@ -1570,4 +1565,33 @@ function pointsPerModelFiterSearch() {
 
 pointsPerModelFiterSearch()
 
+// Sammymas Hero animation 
+let moon = document.getElementById('para-moon')
+let sammy = document.getElementById('para-sammy')
+let sammytext1 = document.getElementById('para-sammy-text1')
+let sammytext2 = document.getElementById('para-sammy-text2')
+let ground = document.getElementById('para-ground');
+let logoCtn = document.getElementById('para-logo-ctn');
+let getStartedbtn = document.getElementById('s1-get-started-btn')
 
+
+window.addEventListener('scroll', () => {
+    let value = window.scrollY;
+    getStartedbtn.style.transform = `translateY(${value * 1.5}`+'px';
+    moon.style.marginTop = value * -1.5 + 'px';
+    sammy.style.left = value * -1.5 + 300 +'px';
+    sammytext1.style.top = value * 1.5 + 230 +'px';
+    sammytext2.style.top = value * 1.5 + 350+ 'px';
+    logoCtn.style.top = value * -1.5 + 50 + 'px';
+    ground.style.transform = `perspective(1500px) translate3d(0px, 0px, ${value/3}px)`;
+})
+
+
+let counter = 2;
+setInterval(function() {
+    document.getElementById('s3-radio' + counter).checked = true;
+    counter++;
+    if (counter>4) {
+        counter = 1;
+    }
+}, 3500)

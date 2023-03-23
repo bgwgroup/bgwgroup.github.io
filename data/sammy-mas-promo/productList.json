@@ -1,0 +1,2368 @@
+[
+    {
+        "id": "338",
+        "product_code": "SOL302SP24W",
+        "product_description": "HWS SOLAHART 302J COMPLETE",
+        "points": "2",
+        "product_brand": "solahart"
+    },
+    {
+        "id": "337",
+        "product_code": "SOL181L24W",
+        "product_description": "HWS SOLARHART 181L COMPLETE",
+        "points": "2",
+        "product_brand": "solahart"
+    },
+    {
+        "id": "336",
+        "product_code": "SOL302L24W",
+        "product_description": "HWS SOLARHART 302L COMPLETE",
+        "points": "2",
+        "product_brand": "solahart"
+    },
+    {
+        "id": "335",
+        "product_code": "SOL181SP24W",
+        "product_description": "HWS SOLARHART 181J COMPLETE",
+        "points": "2",
+        "product_brand": "solahart"
+    },
+    {
+        "id": "334",
+        "product_code": "AVGPRV15F",
+        "product_description": "VALVE PRV ADJ 150-600KPA F&F 15MM",
+        "points": "0.5",
+        "product_brand": "avg"
+    },
+    {
+        "id": "333",
+        "product_code": "AVGPRV20F",
+        "product_description": "VALVE PRV ADJ 150-600KPA F&F 20MM",
+        "points": "0.5",
+        "product_brand": "avg"
+    },
+    {
+      "id": "332",
+      "product_code": "AVGQIK15-NLP ",
+      "product_description": "SAMIOS QUICKIE KIT QIK15-NLP",
+      "points": "1",
+      "product_brand": "avg"
+    },
+    {
+      "id": "331",
+      "product_code": "AVGQIKP-4",
+      "product_description": "QIK U PRESS C/F KIT G15 W15 OUT15",
+      "points": "1",
+      "product_brand": "avg"
+    },
+    {
+      "id": "330",
+      "product_code": "AVGQIKP-3",
+      "product_description": "QIK U PRESS C/F KIT G20 W15 OUT15",
+      "points": "1",
+      "product_brand": "avg"
+    },
+    {
+      "id": "329",
+      "product_code": "AVGQIKP-2",
+      "product_description": "QIK U PRESS C/F KIT G20 W20-15 OUT20-15",
+      "points": "1",
+      "product_brand": "avg"
+    },
+    {
+      "id": "328",
+      "product_code": "AVGQIKP-1",
+      "product_description": "QIK U PRESS C/F KIT G20 W20 OUT20",
+      "points": "1",
+      "product_brand": "avg"
+    },
+    {
+      "id": "327",
+      "product_code": "AVGQIK-U",
+      "product_description": "QUICKIE KIT - QIK-U",
+      "points": "1",
+      "product_brand": "avg"
+    },
+    {
+      "id": "326",
+      "product_code": "AVGQIK506",
+      "product_description": "QUICKIE KIT - QIK506",
+      "points": "1",
+      "product_brand": "avg"
+    },
+    {
+      "id": "325",
+      "product_code": "AVGQIK505",
+      "product_description": "QUICKIE KIT - QIK505",
+      "points": "1",
+      "product_brand": "avg"
+    },
+    {
+      "id": "324",
+      "product_code": "AVGQIK501F",
+      "product_description": "QUICKIE KIT - QIK501F",
+      "points": "1",
+      "product_brand": "avg"
+    },
+    {
+      "id": "323",
+      "product_code": "AVGQIK20-850",
+      "product_description": "QUICKIE KIT - QIK20-850",
+      "points": "1",
+      "product_brand": "avg"
+    },
+    {
+      "id": "322",
+      "product_code": "AVGQIK20-1200",
+      "product_description": "QUICKIE KIT - QIK20-1200",
+      "points": "1",
+      "product_brand": "avg"
+    },
+    {
+      "id": "321",
+      "product_code": "AVGQIK20",
+      "product_description": "QUICKIE KIT - QIK20",
+      "points": "1",
+      "product_brand": "avg"
+    },
+    {
+      "id": "320",
+      "product_code": "AVGQIK15RHP",
+      "product_description": "QUICKIE KIT - QIK15RHP SOLAR",
+      "points": "1",
+      "product_brand": "avg"
+    },
+    {
+      "id": "319",
+      "product_code": "AVGQIK15RCVHP",
+      "product_description": "QUICKIE KIT - QIK15RCVHP SOLAR",
+      "points": "1",
+      "product_brand": "avg"
+    },
+    {
+      "id": "318",
+      "product_code": "AVGQIK15RCV",
+      "product_description": "QUICKIE KIT - QIK15RCV",
+      "points": "1",
+      "product_brand": "avg"
+    },
+    {
+      "id": "317",
+      "product_code": "AVGQIK15R",
+      "product_description": "QUICKIE KIT - QIK15R",
+      "points": "1",
+      "product_brand": "avg"
+    },
+    {
+      "id": "316",
+      "product_code": "AVGQIK15-850",
+      "product_description": "QUICKIE KIT - QIK15-850",
+      "points": "1",
+      "product_brand": "avg"
+    },
+    {
+      "id": "315",
+      "product_code": "AVGQIK15-1200",
+      "product_description": "QUICKIE KIT - QIK15-1200",
+      "points": "1",
+      "product_brand": "avg"
+    },
+    {
+      "id": "314",
+      "product_code": "AVGQIK15",
+      "product_description": "QUICKIE KIT - QIK15",
+      "points": "1",
+      "product_brand": "avg"
+    },
+    {
+      "id": "313",
+      "product_code": "AVGTVA20C-I",
+      "product_description": "TEMPERING VALVE INSULATED 20MM",
+      "points": "1",
+      "product_brand": "avg"
+    },
+    {
+      "id": "312",
+      "product_code": "AVGTVA20CHP-I",
+      "product_description": "TEMPERING VALVE HP 20MM",
+      "points": "1",
+      "product_brand": "avg"
+    },
+    {
+      "id": "311",
+      "product_code": "AVGTVA15C-I",
+      "product_description": "TEMPERING VALVE 15MM",
+      "points": "1",
+      "product_brand": "avg"
+    },
+    {
+      "id": "310",
+      "product_code": "AVGTVA15CHP-I",
+      "product_description": "TEMPERING VALVE 15MM HP",
+      "points": "1",
+      "product_brand": "avg"
+    },
+    {
+      "id": "309",
+      "product_code": "AVGPLV20F-TRISET",
+      "product_description": "PLV TRISET F&F 350-500-600KPA 20MM",
+      "points": "1",
+      "product_brand": "avg"
+    },
+    {
+      "id": "308",
+      "product_code": "AVGPLV20C-TRISET",
+      "product_description": "PLV TRISET COMP 350-500-600KPA 20MM",
+      "points": "1",
+      "product_brand": "avg"
+    },
+    {
+      "id": "307",
+      "product_code": "AVGPLV15F-TRISET",
+      "product_description": "PLV TRISET F&F 300 500-600KPA 15MM",
+      "points": "1",
+      "product_brand": "avg"
+    },
+    {
+      "id": "306",
+      "product_code": "AVGPLV15C-TRISET",
+      "product_description": "PLV TRISET COMP 350-500-600KPA 15MM",
+      "points": "1",
+      "product_brand": "avg"
+    },
+    {
+      "id": "305",
+      "product_code": "AVGNRI-PRV-20C",
+      "product_description": "NRI/PRV COMBO 150-600KPA COMP 20MM",
+      "points": "1",
+      "product_brand": "avg"
+    },
+    {
+      "id": "304",
+      "product_code": "AVGNRI-PRV-15C",
+      "product_description": "NRI/PRV COMBO 150-600KPA COMP 15MM",
+      "points": "1",
+      "product_brand": "avg"
+    },
+    {
+      "id": "303",
+      "product_code": "AVGNRIBVS-20F",
+      "product_description": "NON-RET ISOLAT VALVE W-FILTER F&F 20MM",
+      "points": "1",
+      "product_brand": "avg"
+    },
+    {
+      "id": "302",
+      "product_code": "AVGNRIBVS-20C",
+      "product_description": "VALVE NRI75 W-FILTER COMP 20MM",
+      "points": "1",
+      "product_brand": "avg"
+    },
+    {
+      "id": "301",
+      "product_code": "AVGNRIBVS-15F",
+      "product_description": "VALVE NRI50 W-FILTER FL-FL 15MM",
+      "points": "1",
+      "product_brand": "avg"
+    },
+    {
+      "id": "300",
+      "product_code": "AVGNRIBVS-15C",
+      "product_description": "VALVE NRI50 W-FILTER COMP 15MM",
+      "points": "1",
+      "product_brand": "avg"
+    },
+    {
+      "id": "299",
+      "product_code": "AVGNRIBV-20F",
+      "product_description": "NON-RETURN ISOLATING VALVE F&F 20MM",
+      "points": "1",
+      "product_brand": "avg"
+    },
+    {
+      "id": "298",
+      "product_code": "AVGNRIBV-20C",
+      "product_description": "VALVE NRI75 COMP 20MM",
+      "points": "1",
+      "product_brand": "avg"
+    },
+    {
+      "id": "297",
+      "product_code": "AVGNRIBV-15INV",
+      "product_description": "VALVE NRI50 FL-FL 15MM",
+      "points": "1",
+      "product_brand": "avg"
+    },
+    {
+      "id": "296",
+      "product_code": "AVGNRIBV-15F",
+      "product_description": "VALVE NRI50 F&F 15MM",
+      "points": "1",
+      "product_brand": "avg"
+    },
+    {
+      "id": "295",
+      "product_code": "AVGNRIBV-15C",
+      "product_description": "VALVE NRI50 COMP 15MM",
+      "points": "1",
+      "product_brand": "avg"
+    },
+    {
+      "id": "294",
+      "product_code": "AVGHTCV-15F-15C",
+      "product_description": "NON RETURN VALVE HT 15MM FI",
+      "points": "1",
+      "product_brand": "avg"
+    },
+    {
+      "id": "293",
+      "product_code": "AVGECV15/850-I",
+      "product_description": "VALVE H50-850KPA 15MM",
+      "points": "1",
+      "product_brand": "avg"
+    },
+    {
+      "id": "292",
+      "product_code": "AVGECV15/700-I",
+      "product_description": "VALVE H50-700KPA 15MM",
+      "points": "1",
+      "product_brand": "avg"
+    },
+    {
+      "id": "291",
+      "product_code": "AVGECV15/600",
+      "product_description": "VALVE H50-600KPA 15MM",
+      "points": "1",
+      "product_brand": "avg"
+    },
+    {
+      "id": "290",
+      "product_code": "AVGECV15/1200-I",
+      "product_description": "VALVE H50-1200KPA 15MM",
+      "points": "1",
+      "product_brand": "avg"
+    },
+    {
+      "id": "289",
+      "product_code": "VUL691050G7",
+      "product_description": "HWS VULCAN ELECT 50LTR 3.6KW S/E",
+      "points": "1",
+      "product_brand": "vulcan"
+    },
+    {
+      "id": "288",
+      "product_code": "VUL671160G7",
+      "product_description": "HWS VULCAN ELECT 160LTR 3.6KW S/E",
+      "points": "2",
+      "product_brand": "vulcan"
+    },
+    {
+      "id": "287",
+      "product_code": "VUL671160G5",
+      "product_description": "HWS VULCAN ELECT 160LTR 2.4KW S/E",
+      "points": "2",
+      "product_brand": "vulcan"
+    },
+    {
+      "id": "286",
+      "product_code": "VUL671160G4",
+      "product_description": "HWS VULCAN ELEC 160L 1X1.8KW",
+      "points": "2",
+      "product_brand": "vulcan"
+    },
+    {
+      "id": "285",
+      "product_code": "VUL662400G8",
+      "product_description": "HWS VULCAN ELEC TE NS 400L 4.8/4.8KW",
+      "points": "2",
+      "product_brand": "vulcan"
+    },
+    {
+      "id": "284",
+      "product_code": "VUL662315G8",
+      "product_description": "HWS VULCAN ELECT T/E 315L 4.8KW",
+      "points": "2",
+      "product_brand": "vulcan"
+    },
+    {
+      "id": "283",
+      "product_code": "VUL662315G7",
+      "product_description": "HWS VULCAN ELECT 315LTR 3.6KW T/E",
+      "points": "2",
+      "product_brand": "vulcan"
+    },
+    {
+      "id": "282",
+      "product_code": "VUL661400G8",
+      "product_description": "HWS VULCAN ELEC 400L 1X4.8KW",
+      "points": "2",
+      "product_brand": "vulcan"
+    },
+    {
+      "id": "281",
+      "product_code": "VUL661400G7",
+      "product_description": "HWS VULCAN ELEC 400L 1X3.6KW",
+      "points": "2",
+      "product_brand": "vulcan"
+    },
+    {
+      "id": "280",
+      "product_code": "VUL661315G8",
+      "product_description": "HWS VULCAN ELEC 315L 1X4.8KW",
+      "points": "2",
+      "product_brand": "vulcan"
+    },
+    {
+      "id": "279",
+      "product_code": "VUL661315G7",
+      "product_description": "HWS VULCAN ELECT 315LTR 3.6KW S/E",
+      "points": "2",
+      "product_brand": "vulcan"
+    },
+    {
+      "id": "278",
+      "product_code": "VUL661250G8",
+      "product_description": "HWS VULCAN ELEC 250L 1X4.8KW",
+      "points": "2",
+      "product_brand": "vulcan"
+    },
+    {
+      "id": "277",
+      "product_code": "VUL661250G7/BL",
+      "product_description": "HWS VULCAN ELECT 250LTR 3.6KW B/ANODE",
+      "points": "2",
+      "product_brand": "vulcan"
+    },
+    {
+      "id": "276",
+      "product_code": "VUL661250G7",
+      "product_description": "HWS VULCAN ELECT 250LTR 3.6KW S/E",
+      "points": "2",
+      "product_brand": "vulcan"
+    },
+    {
+      "id": "275",
+      "product_code": "VUL648170N0/C",
+      "product_description": "HWS VULCAN GAS EXT 4 STAR 170L NG",
+      "points": "2",
+      "product_brand": "vulcan"
+    },
+    {
+      "id": "274",
+      "product_code": "VUL648135P0/C",
+      "product_description": "HWS VULCAN GAS EXT 4 STAR 135L LPG",
+      "points": "2",
+      "product_brand": "vulcan"
+    },
+    {
+      "id": "273",
+      "product_code": "VUL648135N0/C",
+      "product_description": "HWS VULCAN GAS EXT 4 STAR 135L NG",
+      "points": "2",
+      "product_brand": "vulcan"
+    },
+    {
+      "id": "272",
+      "product_code": "VUL648135N0/B",
+      "product_description": "VULCAN GAS EXT 4 STAR 135L BLUE ANODE",
+      "points": "2",
+      "product_brand": "vulcan"
+    },
+    {
+      "id": "271",
+      "product_code": "VUL601125G7",
+      "product_description": "HWS VULCAN ELECT 125LT 3.6KW",
+      "points": "1",
+      "product_brand": "vulcan"
+    },
+    {
+      "id": "270",
+      "product_code": "VUL601125G4",
+      "product_description": "HWS VULCAN ELECT 125LTR 1.8KW S/E",
+      "points": "1",
+      "product_brand": "vulcan"
+    },
+    {
+      "id": "269",
+      "product_code": "VUL601080G7",
+      "product_description": "HWS VULCAN ELEC 80L 1X3.6KW",
+      "points": "1",
+      "product_brand": "vulcan"
+    },
+    {
+      "id": "268",
+      "product_code": "RHE55127005/BL",
+      "product_description": "Rheem HDc270 HP 2.4Kw Blue Anode",
+      "points": "4",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "267",
+      "product_code": "RHE55127005",
+      "product_description": "RHEEM AMBIHEAT SIDEVENT HDc270 2.4Kw",
+      "points": "4",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "266",
+      "product_code": "RHE55132507",
+      "product_description": "RHEEM MPi HP SYS 325L 1x3.6kW",
+      "points": "4",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "265",
+      "product_code": "RHE51132507/3NPT",
+      "product_description": "RHEEM 325 SOLAR LOLINE 3-NPT 3.6KW BOOST",
+      "points": "4",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "264",
+      "product_code": "RHE51132507/2NPT",
+      "product_description": "RHEEM 325 SOLAR LOLINE 2-NPT 3.6KW BOOST",
+      "points": "4",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "263",
+      "product_code": "RHE51132507/2LCS",
+      "product_description": "RHEEM 325L LOLINE 2-LCS 3.6KW BOOST",
+      "points": "4",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "262",
+      "product_code": "RHE51132507/2CS07",
+      "product_description": "Rheem 325L Loline 2-CSA2007 3.6kW Boost",
+      "points": "4",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "261",
+      "product_code": "RHE51132507",
+      "product_description": "RHEEM SOLAR LOLINE ELEC 325L 1x3.6kW",
+      "points": "4",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "260",
+      "product_code": "RHE511325/3NPT-26PG",
+      "product_description": "Rheem 325L Loline 3-NPT 26L Prop",
+      "points": "4",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "259",
+      "product_code": "RHE511325/3NPT-26NG",
+      "product_description": "Rheem 325L Loline 3-NPT 26L Nat",
+      "points": "4",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "258",
+      "product_code": "RHE511325/2NPT-26PG",
+      "product_description": "Rheem 325L Loline 2-NPT 26L Prop",
+      "points": "4",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "257",
+      "product_code": "RHE511325/2NPT-26NG",
+      "product_description": "Rheem 325L Loline 2-NPT 26L Nat",
+      "points": "4",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "256",
+      "product_code": "RHE511325/2LCS-26PG",
+      "product_description": "Rheem 325L Loline 2-LCS 26L Prop",
+      "points": "4",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "255",
+      "product_code": "RHE511325/2LCS-26NG",
+      "product_description": "Rheem 325L Loline 2-LCS 26L Nat",
+      "points": "4",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "254",
+      "product_code": "RHE51127107/3NPT",
+      "product_description": "RHEEM 270 SOLAR LOLINE 3-NPT 3.6KW BOOST",
+      "points": "4",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "253",
+      "product_code": "RHE51127107/2NPT",
+      "product_description": "RHEEM 270 SOLAR LOLINE 2-NPT 3.6KW BOOST",
+      "points": "4",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "252",
+      "product_code": "RHE51127107/2LCS",
+      "product_description": "RHEEM 270L LOLINE 2-LCS 3.6KW BOOST",
+      "points": "4",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "251",
+      "product_code": "RHE51127107/2CS07",
+      "product_description": "Rheem 270L Loline 2-CSA2007 3.6kW Boost",
+      "points": "4",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "250",
+      "product_code": "RHE51127107",
+      "product_description": "RHEEM SOLAR LOLINE ELEC 270L 1x3.6kW",
+      "points": "4",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "249",
+      "product_code": "RHE511271/3NPT-26PG",
+      "product_description": "Rheem 270L Loline 3-NPT 26L Prop",
+      "points": "4",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "248",
+      "product_code": "RHE511271/3NPT-26NG",
+      "product_description": "Rheem 270L Loline 3-NPT 26L Nat",
+      "points": "4",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "247",
+      "product_code": "RHE511271/2NPT-26PGTM",
+      "product_description": "Rheem 270L Loline 2-NPT 26L Prop Tank Mt",
+      "points": "4",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "246",
+      "product_code": "RHE511271/2NPT-26PG",
+      "product_description": "Rheem 270L Loline 2-NPT 26L Prop",
+      "points": "4",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "245",
+      "product_code": "RHE511271/2NPT-26NGTM",
+      "product_description": "Rheem 270L Loline 2-NPT 26L Nat Tank Mtg",
+      "points": "4",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "244",
+      "product_code": "RHE511271/2NPT-26NG",
+      "product_description": "Rheem 270L Loline 2-NPT 26L Nat",
+      "points": "4",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "243",
+      "product_code": "RHE511271/2LCS-26PGTM",
+      "product_description": "Rheem 270L Loline 2-LCS 26L Prop Tank Mt",
+      "points": "4",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "242",
+      "product_code": "RHE511271/2LCS-26PG",
+      "product_description": "Rheem 270L Loline 2-LCS 26L Prop",
+      "points": "4",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "241",
+      "product_code": "RHE511271/2LCS-26NGTM",
+      "product_description": "Rheem 270L Loline 2-LCS 26L Nat Tank Mtg",
+      "points": "4",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "240",
+      "product_code": "RHE511271/2LCS-26NG",
+      "product_description": "Rheem 270L Loline 2-LCS 26L Nat",
+      "points": "4",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "239",
+      "product_code": "RHE8A0340N0",
+      "product_description": "HWS RHEEM GAS 5-STAR S/S 340LT NG",
+      "points": "4",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "238",
+      "product_code": "RHE876T26PF",
+      "product_description": "HWS RHEEM METRO MAX 26L 50 DEG LPG",
+      "points": "2",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "237",
+      "product_code": "RHE876T26NF",
+      "product_description": "HWS RHEEM METRO MAX 26L 50DEG NG",
+      "points": "2",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "236",
+      "product_code": "RHE876T16PF",
+      "product_description": "HWS RHEEM METRO C/F 6* EXT 16L-50C LPG",
+      "points": "2",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "235",
+      "product_code": "RHE876T16NF",
+      "product_description": "HWS RHEEM METRO C/F 6* EXT 16L-50C NG",
+      "points": "2",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "234",
+      "product_code": "RHE876820PF",
+      "product_description": "HWS RHEEM C/F 6* EXT 20L-50C F/F LPG",
+      "points": "2",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "233",
+      "product_code": "RHE876820NF",
+      "product_description": "HWS RHEEM C/F 6* EXT 20L-50C F/F NG",
+      "points": "2",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "232",
+      "product_code": "RHE876812PF",
+      "product_description": "HWS RHEEM C/F 6* EXT 12L-50C F/F LPG",
+      "points": "2",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "231",
+      "product_code": "RHE876812NF",
+      "product_description": "HWS RHEEM C/F 6* EXT 12L-50C F/F NG",
+      "points": "2",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "230",
+      "product_code": "RHE876627PF",
+      "product_description": "HWS RHEEM C/F 27L-50DEG LPG",
+      "points": "2",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "229",
+      "product_code": "RHE876627NF",
+      "product_description": "HWS RHEEM C/F 27L-50DEG NG",
+      "points": "2",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "228",
+      "product_code": "RHE874T26PF",
+      "product_description": "HWS RHEEM METRO MAX 26L LPG",
+      "points": "2",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "227",
+      "product_code": "RHE874T26NF",
+      "product_description": "HWS RHEEM METRO MAX 26L 60DEG NG",
+      "points": "2",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "226",
+      "product_code": "RHE874T16PF",
+      "product_description": "HWS RHEEM METRO C/F 16L 60C LPG",
+      "points": "2",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "225",
+      "product_code": "RHE874T16NF",
+      "product_description": "HWS RHEEM METRO C/F 16L 60C N/G",
+      "points": "2",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "224",
+      "product_code": "RHE874820PF",
+      "product_description": "HWS RHEEM C/F 6* EXT 20L-60C F/F LPG",
+      "points": "2",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "223",
+      "product_code": "RHE874820NF",
+      "product_description": "HWS RHEEM C/F 6* EXT 20L-60C F/F NG",
+      "points": "2",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "222",
+      "product_code": "RHE874812PF",
+      "product_description": "HWS RHEEM C/F 6* EXT 12L-60C F/F LPG",
+      "points": "2",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "221",
+      "product_code": "RHE874812NF",
+      "product_description": "HWS RHEEM C/F 6* EXT 12L-60C F/F NG",
+      "points": "2",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "220",
+      "product_code": "RHE874627PF",
+      "product_description": "RHEEM GAS CF 60DEG 27L/M PROP EXT 6*",
+      "points": "2",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "219",
+      "product_code": "RHE874627NF",
+      "product_description": "RHEEM GAS CF 60DEG 27L/M NAT EXT 6*",
+      "points": "2",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "218",
+      "product_code": "RHE866627NF",
+      "product_description": "RHEEM GAS CF 50DEG 27L/M NAT INT 6*",
+      "points": "2",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "217",
+      "product_code": "RHE864627NF",
+      "product_description": "RHEEM GAS CF 60DEG 27L/M NAT INT 6*",
+      "points": "2",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "216",
+      "product_code": "RHE850360N0",
+      "product_description": "HWS RHEEM GAS STELLAR EXT 360LT NG",
+      "points": "4",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "215",
+      "product_code": "RHE850330N0/B",
+      "product_description": "RHEEM GAS EXT HE/QR 10YR 330 NAT B/ANODE",
+      "points": "4",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "214",
+      "product_code": "RHE850330N0",
+      "product_description": "HWS RHEEM GAS STELLAR EXT 330LT NG",
+      "points": "4",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "213",
+      "product_code": "RHE850295N0",
+      "product_description": "HWS RHEEM GAS EXT HE/QR 295L NG",
+      "points": "4",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "212",
+      "product_code": "RHE850265N0",
+      "product_description": "HWS RHEEM GAS 5 STAR 265LTR NG",
+      "points": "4",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "211",
+      "product_code": "RHE834016P0",
+      "product_description": "HWS RHEEM PRONTO C/F 16L 60C LPG",
+      "points": "2",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "210",
+      "product_code": "RHE834016N0",
+      "product_description": "HWS RHEEM PRONTO C/F 16L 60C NG",
+      "points": "2",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "209",
+      "product_code": "RHE834012P0",
+      "product_description": "HWS RHEEM PRONTO C/F 12L 60C LPG",
+      "points": "2",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "208",
+      "product_code": "RHE834012N0",
+      "product_description": "HWS RHEEM PRONTO C/F 12L 60C NG",
+      "points": "2",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "207",
+      "product_code": "RHE800170N0",
+      "product_description": "HWS RHEEM GAS INT QR 170L NG",
+      "points": "2",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "206",
+      "product_code": "RHE800135P0",
+      "product_description": "HWS RHEEM GAS INT QR 135L LPG",
+      "points": "2",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "205",
+      "product_code": "RHE800135N0",
+      "product_description": "HWS RHEEM GAS INT QR 135L NG",
+      "points": "2",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "204",
+      "product_code": "RHE4A2315G7",
+      "product_description": "RHEEM ELEC WH SS 315L TWIN 3.6KW",
+      "points": "4",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "203",
+      "product_code": "RHE4A2250G7",
+      "product_description": "RHEEM ELEC WH SS 250L TWIN 3.6KW",
+      "points": "4",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "202",
+      "product_code": "RHE4A1315G8",
+      "product_description": "RHEEM ELECTRIC WH SS 315L SINGLE 4.8KW",
+      "points": "4",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "201",
+      "product_code": "RHE4A1315G7",
+      "product_description": "HWS RHEEM ELEC STELLAR S/S 315LT 3.6KW",
+      "points": "4",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "200",
+      "product_code": "RHE4A1250G8",
+      "product_description": "RHEEM ELECTRIC WH SS 250L SINGLE 4.8KW",
+      "points": "4",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "199",
+      "product_code": "RHE4A1250G7",
+      "product_description": "HWS RHEEM ELEC STELLAR S/S 250LT 3.6KW",
+      "points": "4",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "198",
+      "product_code": "RHE4A1160G7",
+      "product_description": "HWS RHEEM ELEC STELLAR S/S 160LT 3.6KW",
+      "points": "4",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "197",
+      "product_code": "RHE4A1160G5",
+      "product_description": "RHEEM ELECTRIC WH SS 160L SINGLE 2.4KW",
+      "points": "4",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "196",
+      "product_code": "RHE4A1125G7",
+      "product_description": "RHEEM ELECTRIC WH SS 125L SINGLE 3.6KW",
+      "points": "4",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "195",
+      "product_code": "RHE4A1125G4",
+      "product_description": "RHEEM ELECTRIC WH SS 125L SINGLE 1.8KW",
+      "points": "4",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "194",
+      "product_code": "RHE4A1080G7",
+      "product_description": "HWS RHEEM ELEC STELLAR S/S 80LT 3.6KW",
+      "points": "2",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "193",
+      "product_code": "RHE4A1050G7",
+      "product_description": "RHEEM ELEC WH SS 50L SINGLE 3.6KW",
+      "points": "1",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "192",
+      "product_code": "RHE4A1050G5/P",
+      "product_description": "RHEEM ELEC WH SS 50L 2.4KW (PLUG)",
+      "points": "1",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "191",
+      "product_code": "RHE4A1050G4",
+      "product_description": "ELEC WATER HEATER 50L SINGLE 1800W",
+      "points": "1",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "190",
+      "product_code": "RHE492400G8",
+      "product_description": "HWS RHEEM ELECT T/E 400LT 4.8KW",
+      "points": "4",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "189",
+      "product_code": "RHE492400G7",
+      "product_description": "RHEEM ELEC TE 400L 2X3.6KW",
+      "points": "4",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "188",
+      "product_code": "RHE492315G8",
+      "product_description": "RHEEM ELEC TE 315L 2X4.8KW",
+      "points": "4",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "187",
+      "product_code": "RHE492315G7",
+      "product_description": "HWS RHEEM ELECT T/E 315LT 3.6KW",
+      "points": "4",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "186",
+      "product_code": "RHE492250G8",
+      "product_description": "RHEEM ELEC TE 250L 2 X 4.8KW",
+      "points": "4",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "185",
+      "product_code": "RHE492250G7",
+      "product_description": "RHEEM ELEC TE 250L 2X3.6KW",
+      "points": "4",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "184",
+      "product_code": "RHE492160G6",
+      "product_description": "HWS RHEEM ELECT T/E 160L 3.6/3.0KW",
+      "points": "4",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "183",
+      "product_code": "RHE491400G8",
+      "product_description": "HWS RHEEM ELECT 400LT 4.8KW",
+      "points": "4",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "182",
+      "product_code": "RHE491400G7",
+      "product_description": "HWS RHEEM ELECT 400LT 3.6KW",
+      "points": "4",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "181",
+      "product_code": "RHE491315G8",
+      "product_description": "HWS RHEEM ELEC 315L 1X4.8KW",
+      "points": "4",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "180",
+      "product_code": "RHE491315G7/BL",
+      "product_description": "HWS RHEEM ELECT 315LT 3.6KW B/ANODE",
+      "points": "4",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "179",
+      "product_code": "RHE491315G7",
+      "product_description": "HWS RHEEM ELECT 315LT 3.6KW",
+      "points": "4",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "178",
+      "product_code": "RHE491250G8",
+      "product_description": "HWS RHEEM ELEC 250L 1X4.8KW",
+      "points": "4",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "177",
+      "product_code": "RHE491250G7/BL",
+      "product_description": "HWS RHEEM ELECT 250LT 3.6KW B/ANODE",
+      "points": "4",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "176",
+      "product_code": "RHE491250G7",
+      "product_description": "HWS RHEEM ELECT 250LT 3.6KW S/E",
+      "points": "4",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "175",
+      "product_code": "RHE491250G4",
+      "product_description": "RHEEM ELEC 250L 1X1.8KW",
+      "points": "4",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "174",
+      "product_code": "RHE491160G7/BL",
+      "product_description": "HWS RHEEM ELEC 160L 1X3.6KW B/ANODE",
+      "points": "4",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "173",
+      "product_code": "RHE491160G7",
+      "product_description": "HWS RHEEM ELEC 160L 1X3.6KW",
+      "points": "4",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "172",
+      "product_code": "RHE491160G5",
+      "product_description": "HWS RHEEM ELECT 160LT 2.4KW",
+      "points": "4",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "171",
+      "product_code": "RHE491160G4",
+      "product_description": "HWS RHEEM ELECT 160L 1.8KW",
+      "points": "4",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "170",
+      "product_code": "RHE491125G7/BL",
+      "product_description": "HWS RHEEM ELECT 125LT 3.6KW B/ANODE",
+      "points": "2",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "169",
+      "product_code": "RHE491125G7",
+      "product_description": "HWS RHEEM ELECT 125LT 3.6KW",
+      "points": "2",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "168",
+      "product_code": "RHE491125G4",
+      "product_description": "HWS RHEEM ELECT 125LTR 1.8KW S/E",
+      "points": "2",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "167",
+      "product_code": "RHE491080G7/BL",
+      "product_description": "HWS RHEEM ELEC 80L 1X3.6KW B/ANODE",
+      "points": "2",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "166",
+      "product_code": "RHE491080G7",
+      "product_description": "HWS RHEEM ELEC 80L 1X3.6KW",
+      "points": "2",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "165",
+      "product_code": "RHE491080G4",
+      "product_description": "HWS RHEEM ELECT 80LT 1.8KW",
+      "points": "2",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "164",
+      "product_code": "RHE421315G7",
+      "product_description": "HWS RHEEM PLUS 315L 1X3.6KW",
+      "points": "4",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "163",
+      "product_code": "RHE421250G7",
+      "product_description": "HWS RHEEM PLUS 250L 3.6KW",
+      "points": "4",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "162",
+      "product_code": "RHE421160G7",
+      "product_description": "HWS RHEEM ELECT PLUS 160L3.6KW",
+      "points": "4",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "161",
+      "product_code": "RHE421125G7",
+      "product_description": "HWS RHEEM PLUS 125L 3.6KW",
+      "points": "2",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "160",
+      "product_code": "RHE421125G4",
+      "product_description": "HWS RHEEM PLUS 125L 1.8KW BUILT IN TEMP",
+      "points": "2",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "159",
+      "product_code": "RHE347170P0",
+      "product_description": "RHEEM GAS EXT 4 STAR SQ 7YR 170 PROP",
+      "points": "2",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "158",
+      "product_code": "RHE347170N0",
+      "product_description": "HWS RHEEM GAS EXT QR 170 NG",
+      "points": "2",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "157",
+      "product_code": "RHE347135P0",
+      "product_description": "HWS RHEEM GAS EXT 4 STAR 135L LPG",
+      "points": "2",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "156",
+      "product_code": "RHE347135N0",
+      "product_description": "HWS RHEEM GAS EXT 4 STAR 135L NG",
+      "points": "2",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "155",
+      "product_code": "RHE191050G7/BL",
+      "product_description": "HWS RHEEM ELECT DH 50L 3.6KW B/ANODE",
+      "points": "1",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "154",
+      "product_code": "RHE191050G7",
+      "product_description": "HWS RHEEM ELECT DH 50L 3.6KW",
+      "points": "1",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "153",
+      "product_code": "RHE191050G5/P",
+      "product_description": "HWS RHEEM ELECT 50L 2.4KW W-CORD",
+      "points": "1",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "152",
+      "product_code": "RHE191050G5",
+      "product_description": "RHEEM ELEC DH 50L 1X2.4KW",
+      "points": "1",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "151",
+      "product_code": "RHE191050G4",
+      "product_description": "HWS RHEEM ELECT 50LT 1.8KW DUAL",
+      "points": "1",
+      "product_brand": "rheem"
+    },
+    {
+      "id": "150",
+      "product_code": "AQUG390SS-NG",
+      "product_description": "HWS AQUAMAX GAS 155LT NG S/S",
+      "points": "2",
+      "product_brand": "aquamax"
+    },
+    {
+      "id": "149",
+      "product_code": "AQUG340SS-NG",
+      "product_description": "HWS AQUAMAX GAS 155LT NG S/S",
+      "points": "2",
+      "product_brand": "aquamax"
+    },
+    {
+      "id": "148",
+      "product_code": "AQUG270SS-NG",
+      "product_description": "HWS AQUAMAX GAS 135LT NG S/S",
+      "points": "2",
+      "product_brand": "aquamax"
+    },
+    {
+      "id": "147",
+      "product_code": "AQU9W1160G5",
+      "product_description": "HWS AQUAMAX ELECT SQUAT 160LT 2.4KW",
+      "points": "2",
+      "product_brand": "aquamax"
+    },
+    {
+      "id": "146",
+      "product_code": "AQU9W1160G4",
+      "product_description": "HWS AQUAMAX ELECT 160LTR SQUAT 1.8KW",
+      "points": "2",
+      "product_brand": "aquamax"
+    },
+    {
+      "id": "145",
+      "product_code": "AQU992400G8",
+      "product_description": "HWS AQUAMAX ELECT 400LT 2X4.8KW",
+      "points": "2",
+      "product_brand": "aquamax"
+    },
+    {
+      "id": "144",
+      "product_code": "AQU992315G8",
+      "product_description": "HWS AQUAMAX ELECT 315LT 2X4.8KW",
+      "points": "2",
+      "product_brand": "aquamax"
+    },
+    {
+      "id": "143",
+      "product_code": "AQU992315G7",
+      "product_description": "HWS AQUAMAX ELECT 315LT 3.6KW T/E",
+      "points": "2",
+      "product_brand": "aquamax"
+    },
+    {
+      "id": "142",
+      "product_code": "AQU992250G7",
+      "product_description": "HWS AQUAMAX ELECT 250LT 3.6KW T/E",
+      "points": "2",
+      "product_brand": "aquamax"
+    },
+    {
+      "id": "141",
+      "product_code": "AQU991400G8",
+      "product_description": "HWS AQUAMAX ELECT 400LT 4.8KW",
+      "points": "2",
+      "product_brand": "aquamax"
+    },
+    {
+      "id": "140",
+      "product_code": "AQU991400G7",
+      "product_description": "HWS AQUAMAX ELECT 400LT 3.6KW",
+      "points": "2",
+      "product_brand": "aquamax"
+    },
+    {
+      "id": "139",
+      "product_code": "AQU991315G8",
+      "product_description": "HWS AQUAMAX ELECT 315LT 4.8KW",
+      "points": "2",
+      "product_brand": "aquamax"
+    },
+    {
+      "id": "138",
+      "product_code": "AQU991315G7",
+      "product_description": "HWS AQUAMAX ELECT 315LT 3.6KW",
+      "points": "2",
+      "product_brand": "aquamax"
+    },
+    {
+      "id": "137",
+      "product_code": "AQU991250G8",
+      "product_description": "HWS AQUAMAX ELECT 250LT 4.8KW",
+      "points": "2",
+      "product_brand": "aquamax"
+    },
+    {
+      "id": "136",
+      "product_code": "AQU991250G7/BL",
+      "product_description": "HWS AQUAMAX ELECT 250LT 3.6KW B/ANODE",
+      "points": "2",
+      "product_brand": "aquamax"
+    },
+    {
+      "id": "135",
+      "product_code": "AQU991250G7",
+      "product_description": "HWS AQUAMAX ELECT 250LT 3.6KW",
+      "points": "2",
+      "product_brand": "aquamax"
+    },
+    {
+      "id": "134",
+      "product_code": "AQU991050G7",
+      "product_description": "HWS AQUAMAX ELECT 50LT 3.6KW",
+      "points": "1",
+      "product_brand": "aquamax"
+    },
+    {
+      "id": "133",
+      "product_code": "AQU981125G7",
+      "product_description": "HWS AQUAMAX ELECT 125LT 3.6KW",
+      "points": "1",
+      "product_brand": "aquamax"
+    },
+    {
+      "id": "132",
+      "product_code": "AQU981125G4/BL",
+      "product_description": "HWS AQUAMAX ELECT 125LT 1.8KW B/ANODE",
+      "points": "1",
+      "product_brand": "aquamax"
+    },
+    {
+      "id": "131",
+      "product_code": "AQU981125G4",
+      "product_description": "HWS AQUAMAX ELECT 125LT 1.8KW",
+      "points": "1",
+      "product_brand": "aquamax"
+    },
+    {
+      "id": "130",
+      "product_code": "AQU981080G7",
+      "product_description": "HWS AQUAMAX ELECT 80LTR 3.6KW",
+      "points": "1",
+      "product_brand": "aquamax"
+    },
+    {
+      "id": "129",
+      "product_code": "AQU971160G7",
+      "product_description": "HWS AQUAMAX ELECT 160LT 3.6KW",
+      "points": "2",
+      "product_brand": "aquamax"
+    },
+    {
+      "id": "128",
+      "product_code": "AQU971160G5",
+      "product_description": "HWS AQUAMAX ELECT 160LT 2.4KW",
+      "points": "2",
+      "product_brand": "aquamax"
+    },
+    {
+      "id": "127",
+      "product_code": "AQU971160G4",
+      "product_description": "HWS AQUAMAX ELECT 160LT 1.8KW",
+      "points": "2",
+      "product_brand": "aquamax"
+    },
+    {
+      "id": "126",
+      "product_code": "RINSS330H2B-24-CY",
+      "product_description": "HWS RINNAI SOLAR PRESTIGE CC 2P 330L",
+      "points": "4",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "125",
+      "product_code": "RINEHPS215VM",
+      "product_description": "ELEC HEAT PUMP S 215L VE MID",
+      "points": "4",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "124",
+      "product_code": "RINEHPT180VM",
+      "product_description": "ELEC HEAT PUMP T 180L VE MID",
+      "points": "4",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "123",
+      "product_code": "RINEHPA315VMAWH",
+      "product_description": "ELEC HEAT PUMP 315L VE WIFI HW",
+      "points": "4",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "122",
+      "product_code": "RINEHPA315VMAW",
+      "product_description": "ELEC HEAT PUMP 315L VE WIFI",
+      "points": "4",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "121",
+      "product_code": "RINEHPA250VMAWH",
+      "product_description": "ELEC HEAT PUMP 250L VE WIFI",
+      "points": "4",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "120",
+      "product_code": "RINEHPA250VMAW",
+      "product_description": "ELEC HEAT PUMP 250L VE WIFI",
+      "points": "4",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "119",
+      "product_code": "RINEHPA315VMAH",
+      "product_description": "ELEC HEAT PUMP 315L VE MID HW",
+      "points": "4",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "118",
+      "product_code": "RINEHPA315VMA",
+      "product_description": "HEAT PUMP RINNAI ENVIROFLO 315L",
+      "points": "4",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "117",
+      "product_code": "RINEHPA250VMAH",
+      "product_description": "ELEC HEAT PUMP 250L VE MID HW",
+      "points": "4",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "116",
+      "product_code": "RINEHPA250VMA",
+      "product_description": "HEAT PUMP RINNAI ENVIROFLO 250L",
+      "points": "4",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "115",
+      "product_code": "RINGHF4170LH",
+      "product_description": "HWS RINNAI GAS STORAGE 170L LPG HARD",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "114",
+      "product_code": "RINGHF4170NH",
+      "product_description": "HWS RINNAI GAS STORAGE 170L NG HARD",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "113",
+      "product_code": "RINGHF4170L",
+      "product_description": "HWS RINNAI GAS STORAGE 170L LPG",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "112",
+      "product_code": "RINGHF4170N",
+      "product_description": "HWS RINNAI GAS STORAGE 170L NG",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "111",
+      "product_code": "RINGHF4135LH",
+      "product_description": "HWS RINNAI GAS STORAGE 135L LPG HARD",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "110",
+      "product_code": "RINGHF4135NH",
+      "product_description": "HWS RINNAI GAS STORAGE 135L NG HARD",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "109",
+      "product_code": "RINGHF4135L",
+      "product_description": "RINNAI HOTFLO 135 LPG",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "108",
+      "product_code": "RINGHF4135N",
+      "product_description": "HWS RINNAI GAS STORAGE 135L NG",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "107",
+      "product_code": "RINEHF400T48H",
+      "product_description": "HWS RINNAI ELECT 400LTR 4.8KW HARD",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "106",
+      "product_code": "RINEHF400T48",
+      "product_description": "HWS RINNAI ELECT 400L 4.8KW T/E",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "105",
+      "product_code": "RINEHF400T36H",
+      "product_description": "HOTFLO - VITREOUS ENAMEL 3.6KW",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "104",
+      "product_code": "RINEHF400T36",
+      "product_description": "HWS RINNAI ELECT 400LT 3.6KW T/E",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "103",
+      "product_code": "RINEHF400S48H",
+      "product_description": "HWS RINNAI ELECT 400LTR 4.8KW HARD",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "102",
+      "product_code": "RINEHF400S48",
+      "product_description": "HWS RINNAI ELECT 400LTR 4.8KW",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "101",
+      "product_code": "RINEHF400S36H",
+      "product_description": "HWS RINNAI ELECT 400LTR 3.6KW HARD",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "100",
+      "product_code": "RINEHF400S36",
+      "product_description": "HWS RINNAI ELECT 400L 3.6KW",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "99",
+      "product_code": "RINEHFA315T48H",
+      "product_description": "HWS RINNAI ELECT 315L 4.8KW T/E HARD",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "98",
+      "product_code": "RINEHFA315T48",
+      "product_description": "HWS RINNAI ELECT 315L 4.8KW T/E",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "97",
+      "product_code": "RINEHFA315T36H",
+      "product_description": "HWS RINNAI ELECT 315L 3.6KW T/E HARD",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "96",
+      "product_code": "RINEHFA315T36",
+      "product_description": "HWS RINNAI ELECT 315L 3.6KW T/E",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "95",
+      "product_code": "RINEHFA315S48H",
+      "product_description": "HWS RINNAI ELECT 315L 4.8KW HARD",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "94",
+      "product_code": "RINEHFA315S48",
+      "product_description": "HWS RINNAI ELECT 315L 4.8KW",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "93",
+      "product_code": "RINEHFA315S36H",
+      "product_description": "HWS RINNAI ELECT 315L 3.6KW HARD",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "92",
+      "product_code": "RINEHFA315S36",
+      "product_description": "HWS RINNAI ELECT 315L 3.6KW",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "91",
+      "product_code": "RINEHFA315S24H",
+      "product_description": "HWS RINNAI ELECT 315L 2.4KW HARD",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "90",
+      "product_code": "RINEHFA315S24",
+      "product_description": "HWS RINNAI ELECT 315L 2.4KW",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "89",
+      "product_code": "RINEHFA250T48H",
+      "product_description": "HWS RINNAI ELECT 250L 4.8KW T/E HARD",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "88",
+      "product_code": "RINEHFA250T48",
+      "product_description": "HWS RINNAI ELECT 250L 4.8KW T/E",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "87",
+      "product_code": "RINEHFA250T36H",
+      "product_description": "HWS RINNAI ELECT 250L 3.6KW T/E HARD",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "86",
+      "product_code": "RINEHFA250T36",
+      "product_description": "HWS RINNAI ELECT 250L 3.6KW T/E",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "85",
+      "product_code": "RINEHFA250S48H",
+      "product_description": "HWS RINNAI ELECT 250L 4.8KW HARD",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "84",
+      "product_code": "RINEHFA250S48",
+      "product_description": "HWS RINNAI ELECT 250L 4.8KW",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "83",
+      "product_code": "RINEHFA250S36H",
+      "product_description": "HWS RINNAI ELECT 250L 3.6KW HARD",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "82",
+      "product_code": "RINEHFA250S36",
+      "product_description": "HWS RINNAI ELECT 250L 3.6KW",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "81",
+      "product_code": "RINEHFA250S24H",
+      "product_description": "HWS RINNAI ELECT 250L 2.4KW HARD",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "80",
+      "product_code": "RINEHFA250S24",
+      "product_description": "HWS RINNAI ELECT 250L 2.4KW",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "79",
+      "product_code": "RINEHFD160S36H",
+      "product_description": "HWS RINNAI ELECT 160L 3 6KW HARD",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "78",
+      "product_code": "RINEHFD160S36",
+      "product_description": "HWS RINNAI ELECT 160L 3 6KW",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "77",
+      "product_code": "RINEHFD160S24H",
+      "product_description": "HWS RINNAI ELECT 160L 2 4KW HARD",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "76",
+      "product_code": "RINEHFD160S24",
+      "product_description": "HWS RINNAI H/F ELECTRIC SQUAT 160L 2.4KW",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "75",
+      "product_code": "RINEHFA160T36H",
+      "product_description": "HWS RINNAI ELECT 160L 3.6KW T/E HARD",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "74",
+      "product_code": "RINEHFA160T36",
+      "product_description": "HWS RINNAI ELECT 160L 3.6KW T/E",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "73",
+      "product_code": "RINEHFA160S36H",
+      "product_description": "HWS RINNAI ELECT 160L 3.6KW HARD",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "72",
+      "product_code": "RINEHFA160S36",
+      "product_description": "HWS RINNAI ELECT 160L 3.6KW",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "71",
+      "product_code": "RINEHFA160S24H",
+      "product_description": "HWS RINNAI ELECT 160L 2.4KW HARD",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "70",
+      "product_code": "RINEHFA160S24",
+      "product_description": "HWS RINNAI ELECT 160L 2.4KW",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "69",
+      "product_code": "RINEHFA160S18H",
+      "product_description": "TANK ELEC AU HFLO 160L 1.8 HW",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "68",
+      "product_code": "RINEHFA160S18",
+      "product_description": "HWS RINNAI ELECT 160L 1.8KW",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "67",
+      "product_code": "RINEHF125S36H",
+      "product_description": "HWS RINNAI ELECT 125L 3.6KW HARD",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "66",
+      "product_code": "RINEHF125S36",
+      "product_description": "HWS RINNAI ELECT 125L 3.6KW",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "65",
+      "product_code": "RINEHF125S24H",
+      "product_description": "HWS RINNAI ELECT 125L 2.4KW HARD",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "64",
+      "product_code": "RINEHF125S24",
+      "product_description": "HWS RINNAI ELECT 125L 2.4KW",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "63",
+      "product_code": "RINEHF125S18",
+      "product_description": "HWS RINNAI ELECT 125L 1.8KW",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "62",
+      "product_code": "RINEHF80S36H",
+      "product_description": "HWS RINNAI ELECT 80L 3.6KW HARD",
+      "points": "1",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "61",
+      "product_code": "RINEHF80S36",
+      "product_description": "HWS RINNAI ELECT 80L 3.6KW",
+      "points": "1",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "60",
+      "product_code": "RINEHF80S24H",
+      "product_description": "HWS RINNAI ELECT 80L 2.4KW HARD",
+      "points": "1",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "59",
+      "product_code": "RINEHF80S24",
+      "product_description": "HWS RINNAI ELECT 80L 2.4KW",
+      "points": "1",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "58",
+      "product_code": "RINEHF80S18",
+      "product_description": "HWS RINNAI ELECT 80L 1.8KW",
+      "points": "1",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "57",
+      "product_code": "RINEHF50S36H",
+      "product_description": "HWS RINNAI ELECT 50L 3.6KW HARD",
+      "points": "1",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "56",
+      "product_code": "RINEHF50S36",
+      "product_description": "HWS RINNAI ELECT 50L 3.6KW",
+      "points": "1",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "55",
+      "product_code": "RINEHF50S24HP",
+      "product_description": "HWS RINNAI ELECT 50L 2.4KW PLUG HARD",
+      "points": "1",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "54",
+      "product_code": "RINEHF50S24P",
+      "product_description": "HWS RINNAI ELECT 50L 2.4KW PLUG",
+      "points": "1",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "53",
+      "product_code": "RINEHF50S18P",
+      "product_description": "HWS RINNAI ELECT 50L 1.8KW PLUG",
+      "points": "1",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "52",
+      "product_code": "RINB26N60A",
+      "product_description": "HWS RINNAI B26 EXT N/G PRESET 60D",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "51",
+      "product_code": "RINB26L60A",
+      "product_description": "HWS RINNAI B26 EXT LPG PRESET 60C",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "50",
+      "product_code": "RINB26N50A",
+      "product_description": "HWS RINNAI B26 EXT NAT P/S 50C 26L",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "49",
+      "product_code": "RINB26L50A",
+      "product_description": "HWS RINNAI B26 EXT LPG P/S 50C 26L",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "48",
+      "product_code": "RINB20N60A",
+      "product_description": "HWS RINNAI B20 EXT 60 DEG NG",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "47",
+      "product_code": "RINB20L60A",
+      "product_description": "HWS RINNAI B20 EXT 60 DEG LPG",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "46",
+      "product_code": "RINB20N50A",
+      "product_description": "HWS RINNAI B20 EXT 50 DEG NG",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "45",
+      "product_code": "RINB20L50A",
+      "product_description": "HWS RINNAI B20 EXT 50 DEG LPG",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "44",
+      "product_code": "RINB16N60A",
+      "product_description": "HWS RINNAI B16 EXT 60 DEG NG",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "43",
+      "product_code": "RINB16L60A",
+      "product_description": "HWS RINNAI B16 EXT LPG P/S 60C",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "42",
+      "product_code": "RINB16N50A",
+      "product_description": "HWS RINNAI B16 NG 50C",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "41",
+      "product_code": "RINB16L50A",
+      "product_description": "HWS RINNAI B16 EXT 50 DEG LPG",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "40",
+      "product_code": "RININF32N60MA",
+      "product_description": "C'FLOW INFINITY 32 (60) NG",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "39",
+      "product_code": "RININF32L60MA",
+      "product_description": "C'FLOW INFINITY 32 (60) LP",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "38",
+      "product_code": "RININF32N50MA",
+      "product_description": "C'FLOW INFINITY 32 (50) NG",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "37",
+      "product_code": "RININF32L50MA",
+      "product_description": "C'FLOW INFINITY 32 (50) LP",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "36",
+      "product_code": "RININF28IN60",
+      "product_description": "INFINITY 28IINTERNAL MODEL - REQUIRES SE",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "35",
+      "product_code": "RININF28IL60",
+      "product_description": "INFINITY 28IINTERNAL MODEL - REQUIRES SE",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "34",
+      "product_code": "RININF28IN50",
+      "product_description": "INFINITY 28IINTERNAL MODEL - REQUIRES SE",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "33",
+      "product_code": "RININF28IL50",
+      "product_description": "INFINITY 28IINTERNAL MODEL - REQUIRES SE",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "32",
+      "product_code": "RININF26N42MA",
+      "product_description": "HWS RINNAI INFINITY 26 NG 42C",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "31",
+      "product_code": "RININF26L42MA",
+      "product_description": "HWS RINNAI INFINITY 26 LPG 42C",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "30",
+      "product_code": "RININF26N60MA",
+      "product_description": "HWS RINNAI INFINITY 26 NG 60C",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "29",
+      "product_code": "RININF26L60MA",
+      "product_description": "HWS RINNAI INFINITY 26 LPG 60C",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "28",
+      "product_code": "RININF26N50MA",
+      "product_description": "HWS RINNAI INFINITY 26 NG 50C",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "27",
+      "product_code": "RININF26L50MA",
+      "product_description": "HWS RINNAI INFINITY 26 LPG 50C",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "26",
+      "product_code": "RININF26TN60MA",
+      "product_description": "HWS RINNAI INFINITY 26 TOUCH NG 60C",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "25",
+      "product_code": "RININF26TL60MA",
+      "product_description": "HWS RINNAI INFINITY 26 TOUCH LPG 60C",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "24",
+      "product_code": "RININF26TN50MA",
+      "product_description": "HWS RINNAI INFINITY 26 TOUCH NG 50C",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "23",
+      "product_code": "RININF26TL50MA",
+      "product_description": "HWS RINNAI INFINITY 26 TOUCH LPG 50C",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "22",
+      "product_code": "RININF20N60MA",
+      "product_description": "HWS RINNAI INFINITY 20 NG 60C",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "21",
+      "product_code": "RININF20L60MA",
+      "product_description": "HWS RINNAI INFINITY 20 LPG 60C",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "20",
+      "product_code": "RININF20N50MA",
+      "product_description": "HWS RINNAI INFINITY 20 NG 50C",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "19",
+      "product_code": "RININF20L50MA",
+      "product_description": "HWS RINNAI INFINITY 20 LPG 50C",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "18",
+      "product_code": "RININF16N60MA",
+      "product_description": "HWS RINNAI INFINITY 16 NG 60C",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "17",
+      "product_code": "RININF16L60MA",
+      "product_description": "HWS RINNAI INFINITY 16 LPG 60C",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "16",
+      "product_code": "RININF16N50MA",
+      "product_description": "HWS RINNAI INFINITY 16 NG 50C",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "15",
+      "product_code": "RININF16L50MA",
+      "product_description": "HWS RINNAI INFINITY 16 LPG 50C",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "14",
+      "product_code": "RININF12N60MA",
+      "product_description": "HWA RINNAI INFINTY 12 NG 60C",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "13",
+      "product_code": "RININF12L60MA",
+      "product_description": "HWS RINNAI INFINITY 12 LP 60C",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "12",
+      "product_code": "RININF12N50MA",
+      "product_description": "HWS RINNAI INFINITY 12 NG 50C",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "11",
+      "product_code": "RININF12L50MA",
+      "product_description": "CFLOW INFINITY 12 50 LP",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "10",
+      "product_code": "RININF32EN60A",
+      "product_description": "HWS RINNAI INFINITY ENVIRO 32 NG 60C",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "9",
+      "product_code": "RININF32EL60A",
+      "product_description": "HWS RINNAI INFINITY ENVIRO 32 LPG 60C",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "8",
+      "product_code": "RININF26EN60A",
+      "product_description": "HWS RINNAI INFINITY ENVIRO 26 NG 60C",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "7",
+      "product_code": "RININF26EL60A",
+      "product_description": "HWS RINNAI INFINITY ENVIRO 26 LPG 60C",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "6",
+      "product_code": "RININF26EN50A",
+      "product_description": "HWS RINNAI INFINITY ENVIRO 26 NG 50C",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "5",
+      "product_code": "RININF26EL50A",
+      "product_description": "HWS RINNAI INFINITY ENVIRO 26 LPG 50C",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "4",
+      "product_code": "RININF16EN60A",
+      "product_description": "HWS RINNAI INFINITY ENVIRO 16 NG 60C",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "3",
+      "product_code": "RININF16EL60A",
+      "product_description": "HWS RINNAI INFINITY ENVIRO 16 LPG 60C",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "2",
+      "product_code": "RININF16EN50A",
+      "product_description": "HWS RINNAI INFINITY ENVIRO 16 NG 50C",
+      "points": "2",
+      "product_brand": "rinnai"
+    },
+    {
+      "id": "1",
+      "product_code": "RININF16EL50A",
+      "product_description": "HWS RINNAI INFINITY ENVIRO 16 LPG 50C",
+      "points": "2",
+      "product_brand": "rinnai"
+    }
+  ]

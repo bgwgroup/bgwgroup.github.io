@@ -1462,14 +1462,14 @@ fetch("https://bgwgroup.github.io/data/sammy-mas-promo/productList.json")
     return response.json();
 })
 .then((data) => {
-    // aquamax table
-    const aquamaxModelBody = data.map(function(aquamaxItem) {
+      // aquamax table
+      const aquamaxModelBody = data.map(function(aquamaxItem) {
         if (aquamaxItem.product_brand === 'aquamax') {
             return '<li>' 
                 + aquamaxItem.product_description
                 + '<div class="s4-product-code-point-ctn">'
                 + '<span class="s4-product-code">' +`<a href="sam/en/AUD/search/?text=${aquamaxItem.product_code}">` + aquamaxItem.product_code + '</a>'+'</span>'
-                + '<span>'+aquamaxItem.points +'</span>'
+                + '<span class="s4-product-point">'+aquamaxItem.points +'</span>'
                 + '</div>'+'</li>'
         }
     }).join('')
@@ -1481,7 +1481,7 @@ fetch("https://bgwgroup.github.io/data/sammy-mas-promo/productList.json")
                 + aquamaxItem.product_description
                 + '<div class="s4-product-code-point-ctn">'
                 + '<span class="s4-product-code">' +`<a href="sam/en/AUD/search/?text=${aquamaxItem.product_code}">` + aquamaxItem.product_code + '</a>'+'</span>'
-                + '<span>'+aquamaxItem.points +'</span>'
+                + '<span class="s4-product-point">'+aquamaxItem.points +'</span>'
                 + '</div>' + '</li>'
         }
     }).join('')
@@ -1493,7 +1493,7 @@ fetch("https://bgwgroup.github.io/data/sammy-mas-promo/productList.json")
                 + aquamaxItem.product_description
                 + '<div class="s4-product-code-point-ctn">'
                 + '<span class="s4-product-code">' +`<a href="sam/en/AUD/search/?text=${aquamaxItem.product_code}">` + aquamaxItem.product_code + '</a>'+'</span>'
-                + '<span>'+aquamaxItem.points +'</span>'
+                + '<span class="s4-product-point">'+aquamaxItem.points +'</span>'
                 + '</div>' + '</li>'
 
         }
@@ -1506,7 +1506,7 @@ fetch("https://bgwgroup.github.io/data/sammy-mas-promo/productList.json")
                 + aquamaxItem.product_description
                 + '<div class="s4-product-code-point-ctn">'
                 + '<span class="s4-product-code">' +`<a href="sam/en/AUD/search/?text=${aquamaxItem.product_code}">` + aquamaxItem.product_code + '</a>'+'</span>'
-                + '<span>'+aquamaxItem.points +'</span>'
+                + '<span class="s4-product-point">'+aquamaxItem.points +'</span>'
                 + '</div>'
             + '</li>'
         }
@@ -1519,7 +1519,7 @@ fetch("https://bgwgroup.github.io/data/sammy-mas-promo/productList.json")
                 + aquamaxItem.product_description
                 + '<div class="s4-product-code-point-ctn">'
                 + '<span class="s4-product-code">' +`<a href="sam/en/AUD/search/?text=${aquamaxItem.product_code}">` + aquamaxItem.product_code + '</a>'+'</span>'
-                + '<span>'+aquamaxItem.points +'</span>'
+                + '<span class="s4-product-point">'+aquamaxItem.points +'</span>'
                 + '</div>'
             + '</li>'
         }

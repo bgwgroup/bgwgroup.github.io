@@ -1618,4 +1618,4 @@ setInterval(function() {
     if (sammySlideCounter>4) {
         sammySlideCounter = 1;
     }
-}, 6500)
+}, 10000)

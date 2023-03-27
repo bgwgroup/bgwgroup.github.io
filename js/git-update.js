@@ -1398,198 +1398,219 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
-// Test Sammy-mas promotion 2023 
+/**
+ * ========== SAMMY MAS STUFF =============
+ */
 
-// create prizeList https://bgwgroup.github.io/data/sammy-mas-promo/prizeList.json
-fetch("https://bgwgroup.github.io/data/sammy-mas-promo/prizeList.json")
-    .then((response) => response.json())
-    .then((json) => {
-        const sammySlide1 = json.slice(0,8);
-        const sammySlide2 = json.slice(8,16);
-        const sammySlide3 = json.slice(16,24);
-        const sammySlide4 = json.slice(24,32);
- 
-        const sammyCarouselSlide1 = sammySlide1.map(function (item) {
-            return `<div class="s3-prize-img-ctn">
-                <img src="${item.imgURL}" alt="prize item">
-                <div class="s3-prize-details">
-                    <div class="s3-prize-name">${item.name}</div>
-                    <div class="s3-prize-point">${item.point} Points</div>
-                </div>
-            </div>`
-            }).join('');
-    
-            const sammyCarouselSlide2 = sammySlide2.map(function (item) {
-                return `<div class="s3-prize-img-ctn">
-                <img src="${item.imgURL}" alt="prize item">
-                <div class="s3-prize-details">
-                    <div class="s3-prize-name">${item.name}</div>
-                    <div class="s3-prize-point">${item.point} Points</div>
-                </div>
-            </div>`
-            }).join('');
-    
-            const sammyCarouselSlide3 = sammySlide3.map(function (item) {
-                return `<div class="s3-prize-img-ctn">
-                <img src="${item.imgURL}" alt="prize item" >
-                <div class="s3-prize-details">
-                    <div class="s3-prize-name">${item.name}</div>
-                    <div class="s3-prize-point">${item.point} Points</div>
-                </div>
-            </div>`
-            }).join('');
-    
-            const sammyCarouselSlide4 = sammySlide4.map(function (item) {
-                return `<div class="s3-prize-img-ctn">
-                <img src="${item.imgURL}" alt="prize item" >
-                <div class="s3-prize-details">
-                    <div class="s3-prize-name">${item.name}</div>
-                    <div class="s3-prize-point">${item.point} Points</div>
-                </div>
-            </div>`
-            }).join('');
-
-        document.querySelector(".s3-first").innerHTML = sammyCarouselSlide1;
-        document.querySelector(".s3-second").innerHTML = sammyCarouselSlide2;
-        document.querySelector(".s3-third").innerHTML = sammyCarouselSlide3;
-        document.querySelector(".s3-forth").innerHTML = sammyCarouselSlide4;
-    });
-
-// create productList https://bgwgroup.github.io/data/sammy-mas-promo/productList.json
-
-fetch("https://bgwgroup.github.io/data/sammy-mas-promo/productList.json")
-.then((response) => {
-    return response.json();
-})
-.then((data) => {
-      // aquamax table
-      const aquamaxModelBody = data.map(function(aquamaxItem) {
-        if (aquamaxItem.product_brand === 'aquamax') {
-            return '<li>' 
-                + aquamaxItem.product_description
-                + '<div class="s4-product-code-point-ctn">'
-                + '<span class="s4-product-code">' +`<a href="sam/en/AUD/search/?text=${aquamaxItem.product_code}">` + aquamaxItem.product_code + '</a>'+'</span>'
-                + '<span class="s4-product-point">'+aquamaxItem.points +'</span>'
-                + '</div>'+'</li>'
-        }
-    }).join('')
-
-    // avg table
-    const avgModelBody = data.map(function(aquamaxItem) {
-        if (aquamaxItem.product_brand === 'avg') {
-            return '<li>' 
-                + aquamaxItem.product_description
-                + '<div class="s4-product-code-point-ctn">'
-                + '<span class="s4-product-code">' +`<a href="sam/en/AUD/search/?text=${aquamaxItem.product_code}">` + aquamaxItem.product_code + '</a>'+'</span>'
-                + '<span class="s4-product-point">'+aquamaxItem.points +'</span>'
-                + '</div>' + '</li>'
-        }
-    }).join('')
-
-    // rheem table
-    const rheemModelBody = data.map(function(aquamaxItem) {
-        if (aquamaxItem.product_brand === 'rheem') {
-            return '<li>' 
-                + aquamaxItem.product_description
-                + '<div class="s4-product-code-point-ctn">'
-                + '<span class="s4-product-code">' +`<a href="sam/en/AUD/search/?text=${aquamaxItem.product_code}">` + aquamaxItem.product_code + '</a>'+'</span>'
-                + '<span class="s4-product-point">'+aquamaxItem.points +'</span>'
-                + '</div>' + '</li>'
-
-        }
-    }).join('')
-
-    // vulcan table
-    const vulcanModelBody = data.map(function(aquamaxItem) {
-        if (aquamaxItem.product_brand === 'vulcan') {
-            return '<li>' 
-                + aquamaxItem.product_description
-                + '<div class="s4-product-code-point-ctn">'
-                + '<span class="s4-product-code">' +`<a href="sam/en/AUD/search/?text=${aquamaxItem.product_code}">` + aquamaxItem.product_code + '</a>'+'</span>'
-                + '<span class="s4-product-point">'+aquamaxItem.points +'</span>'
-                + '</div>'
-            + '</li>'
-        }
-    }).join('')
-
-      // rinnai table
-      const rinnaiModelBody = data.map(function(aquamaxItem) {
-        if (aquamaxItem.product_brand === 'rinnai') {
-            return '<li>' 
-                + aquamaxItem.product_description
-                + '<div class="s4-product-code-point-ctn">'
-                + '<span class="s4-product-code">' +`<a href="sam/en/AUD/search/?text=${aquamaxItem.product_code}">` + aquamaxItem.product_code + '</a>'+'</span>'
-                + '<span class="s4-product-point">'+aquamaxItem.points +'</span>'
-                + '</div>'
-            + '</li>'
-        }
-    }).join('')
-
-    document.querySelector(".aquamax-table ul").innerHTML = aquamaxModelBody;
-    document.querySelector(".avg-table ul").innerHTML = avgModelBody;
-    document.querySelector(".rinnai-table ul").innerHTML = rinnaiModelBody;
-    document.querySelector(".rheem-table ul").innerHTML = rheemModelBody;
-    document.querySelector(".vulcan-table ul").innerHTML = vulcanModelBody;
-})
-.catch((error) =>{
-    console.log(error)
+window.addEventListener('load', () => {
+    pointsPerModelFiterSearch();
+    getPrizeList();
+    accordion();
+    getProductList();
 });
 
+function getPrizeList() {
+    // Test Sammy-mas promotion 2023 
 
-function accordion(){
-    let tableModelHeader = document.querySelectorAll('.model-table-header'); // get nodeList of table headers
-    tableModelHeader.forEach(element => {
-        // get the current table header that is clicked
-        element.addEventListener('click', () => {
-            let elementSibling = element.nextElementSibling; // get the next element after the current table header
-            if(elementSibling.style.maxHeight){ // check if maxHeight is set to a value greater than zero/null(0)
-                elementSibling.style.maxHeight = null; // return it back to null state
-            }else{
-                elementSibling.style.maxHeight = `${elementSibling.scrollHeight}px`; // if max-height is null/zero, expand the table body using the elements scrollHeight based on window position
+    // create prizeList https://bgwgroup.github.io/data/sammy-mas-promo/prizeList.json
+    fetch("https://bgwgroup.github.io/data/sammy-mas-promo/prizeList.json")
+        .then((response) => response.json())
+        .then((json) => {
+            const sammySlide1 = json.slice(0, 8);
+            const sammySlide2 = json.slice(8, 16);
+            const sammySlide3 = json.slice(16, 24);
+            const sammySlide4 = json.slice(24, 32);
+
+            const sammyCarouselSlide1 = sammySlide1.map(function(item) {
+                return `<div class="s3-prize-img-ctn">
+            <img src="${item.imgURL}" alt="prize item">
+            <div class="s3-prize-details">
+                <div class="s3-prize-name">${item.name}</div>
+                <div class="s3-prize-point">${item.point} Points</div>
+            </div>
+        </div>`
+            }).join('');
+
+            const sammyCarouselSlide2 = sammySlide2.map(function(item) {
+                return `<div class="s3-prize-img-ctn">
+            <img src="${item.imgURL}" alt="prize item">
+            <div class="s3-prize-details">
+                <div class="s3-prize-name">${item.name}</div>
+                <div class="s3-prize-point">${item.point} Points</div>
+            </div>
+        </div>`
+            }).join('');
+
+            const sammyCarouselSlide3 = sammySlide3.map(function(item) {
+                return `<div class="s3-prize-img-ctn">
+            <img src="${item.imgURL}" alt="prize item" >
+            <div class="s3-prize-details">
+                <div class="s3-prize-name">${item.name}</div>
+                <div class="s3-prize-point">${item.point} Points</div>
+            </div>
+        </div>`
+            }).join('');
+
+            const sammyCarouselSlide4 = sammySlide4.map(function(item) {
+                return `<div class="s3-prize-img-ctn">
+            <img src="${item.imgURL}" alt="prize item" >
+            <div class="s3-prize-details">
+                <div class="s3-prize-name">${item.name}</div>
+                <div class="s3-prize-point">${item.point} Points</div>
+            </div>
+        </div>`
+            }).join('');
+
+            try {
+
+            } catch (error) {
+                document.querySelector(".s3-first").innerHTML = sammyCarouselSlide1;
+                document.querySelector(".s3-second").innerHTML = sammyCarouselSlide2;
+                document.querySelector(".s3-third").innerHTML = sammyCarouselSlide3;
+                document.querySelector(".s3-forth").innerHTML = sammyCarouselSlide4;
             }
         });
-    });
 }
 
-accordion()
+function getProductList() {
+    // create productList https://bgwgroup.github.io/data/sammy-mas-promo/productList.json
 
-let searchInput = document.querySelector('.dip-codes-search input[type="text"]');
-let tableBody = document.querySelectorAll('.model-table-body')
-let tableBodyList = document.querySelectorAll('.model-table-body ul');
+    fetch("https://bgwgroup.github.io/data/sammy-mas-promo/productList.json")
+        .then((response) => {
+            return response.json();
+        })
+        .then((data) => {
+            // aquamax table
+            const aquamaxModelBody = data.map(function(aquamaxItem) {
+                if (aquamaxItem.product_brand === 'aquamax') {
+                    return '<li>' +
+                        aquamaxItem.product_description +
+                        '<div class="s4-product-code-point-ctn">' +
+                        '<span class="s4-product-code">' + `<a href="sam/en/AUD/search/?text=${aquamaxItem.product_code}">` + aquamaxItem.product_code + '</a>' + '</span>' +
+                        '<span class="s4-product-point">' + aquamaxItem.points + '</span>' +
+                        '</div>' + '</li>'
+                }
+            }).join('')
+
+            // avg table
+            const avgModelBody = data.map(function(aquamaxItem) {
+                if (aquamaxItem.product_brand === 'avg') {
+                    return '<li>' +
+                        aquamaxItem.product_description +
+                        '<div class="s4-product-code-point-ctn">' +
+                        '<span class="s4-product-code">' + `<a href="sam/en/AUD/search/?text=${aquamaxItem.product_code}">` + aquamaxItem.product_code + '</a>' + '</span>' +
+                        '<span class="s4-product-point">' + aquamaxItem.points + '</span>' +
+                        '</div>' + '</li>'
+                }
+            }).join('')
+
+            // rheem table
+            const rheemModelBody = data.map(function(aquamaxItem) {
+                if (aquamaxItem.product_brand === 'rheem') {
+                    return '<li>' +
+                        aquamaxItem.product_description +
+                        '<div class="s4-product-code-point-ctn">' +
+                        '<span class="s4-product-code">' + `<a href="sam/en/AUD/search/?text=${aquamaxItem.product_code}">` + aquamaxItem.product_code + '</a>' + '</span>' +
+                        '<span class="s4-product-point">' + aquamaxItem.points + '</span>' +
+                        '</div>' + '</li>'
+
+                }
+            }).join('')
+
+            // vulcan table
+            const vulcanModelBody = data.map(function(aquamaxItem) {
+                if (aquamaxItem.product_brand === 'vulcan') {
+                    return '<li>' +
+                        aquamaxItem.product_description +
+                        '<div class="s4-product-code-point-ctn">' +
+                        '<span class="s4-product-code">' + `<a href="sam/en/AUD/search/?text=${aquamaxItem.product_code}">` + aquamaxItem.product_code + '</a>' + '</span>' +
+                        '<span class="s4-product-point">' + aquamaxItem.points + '</span>' +
+                        '</div>' +
+                        '</li>'
+                }
+            }).join('')
+
+            // rinnai table
+            const rinnaiModelBody = data.map(function(aquamaxItem) {
+                if (aquamaxItem.product_brand === 'rinnai') {
+                    return '<li>' +
+                        aquamaxItem.product_description +
+                        '<div class="s4-product-code-point-ctn">' +
+                        '<span class="s4-product-code">' + `<a href="sam/en/AUD/search/?text=${aquamaxItem.product_code}">` + aquamaxItem.product_code + '</a>' + '</span>' +
+                        '<span class="s4-product-point">' + aquamaxItem.points + '</span>' +
+                        '</div>' +
+                        '</li>'
+                }
+            }).join('')
+
+            try {
+                document.querySelector(".aquamax-table ul").innerHTML = aquamaxModelBody;
+                document.querySelector(".avg-table ul").innerHTML = avgModelBody;
+                document.querySelector(".rinnai-table ul").innerHTML = rinnaiModelBody;
+                document.querySelector(".rheem-table ul").innerHTML = rheemModelBody;
+                document.querySelector(".vulcan-table ul").innerHTML = vulcanModelBody;
+            } catch (error) {}
+        })
+        .catch((error) => {
+            //console.log(error)
+        });
+}
+
+function accordion() {
+    let tableModelHeader = document.querySelectorAll('.model-table-header'); // get nodeList of table headers
+    if (tableModelHeader != undefined) {
+        tableModelHeader.forEach(element => {
+            // get the current table header that is clicked
+            element.addEventListener('click', () => {
+                let elementSibling = element.nextElementSibling; // get the next element after the current table header
+                if (elementSibling.style.maxHeight) { // check if maxHeight is set to a value greater than zero/null(0)
+                    elementSibling.style.maxHeight = null; // return it back to null state
+                } else {
+                    elementSibling.style.maxHeight = `${elementSibling.scrollHeight}px`; // if max-height is null/zero, expand the table body using the elements scrollHeight based on window position
+                }
+            });
+        });
+    }
+}
 
 function pointsPerModelFiterSearch() {
-    searchInput.addEventListener('keyup', () => {
-        let filterValue = searchInput.value.toUpperCase();
-        let totalListNumber = tableBodyList.length;
+    let searchInput = document.querySelector('.dip-codes-search input[type="text"]');
 
-        if (filterValue.length >= 3) {
-            for(let i=0; i < totalListNumber; i++) {
-                let currentList = tableBodyList[i];
-                let currentListValue = currentList.innerText || currentListValue.textContent;
-                let tableBodyElement = currentList.parentElement;
-                
-                if (currentListValue.toUpperCase().indexOf(filterValue) > -1) {
-                    tableBodyElement.style.maxHeight = `${tableBodyElement.scrollHeight}px`;
-                    currentList.style.display = "flex";
-                    currentList.style.flexDirection = "column"
-                    const liCollection = currentList.children;
-                    for (let i = 0; i < liCollection.length; i++) {
-                        liCollection[i].style.padding = "4px 0";
-                      }
-                    filterValue= ""
-                } else {
-                    tableBodyElement.style.maxHeight = null;
+    if (searchInput != undefined) {
+        let tableBody = document.querySelectorAll('.model-table-body')
+        let tableBodyList = document.querySelectorAll('.model-table-body ul');
+
+        searchInput.addEventListener('keyup', () => {
+            let filterValue = searchInput.value.toUpperCase();
+            let totalListNumber = tableBodyList.length;
+
+            if (filterValue.length >= 3) {
+                for (let i = 0; i < totalListNumber; i++) {
+                    let currentList = tableBodyList[i];
+                    let currentListValue = currentList.innerText || currentListValue.textContent;
+                    let tableBodyElement = currentList.parentElement;
+
+                    if (currentListValue.toUpperCase().indexOf(filterValue) > -1) {
+                        tableBodyElement.style.maxHeight = `${tableBodyElement.scrollHeight}px`;
+                        currentList.style.display = "flex";
+                        currentList.style.flexDirection = "column"
+                        const liCollection = currentList.children;
+                        for (let i = 0; i < liCollection.length; i++) {
+                            liCollection[i].style.padding = "4px 0";
+                        }
+                        filterValue = ""
+                    } else {
+                        tableBodyElement.style.maxHeight = null;
+                    }
+                }
+            } else if (filterValue.length < 3) {
+                for (let i = 0; i < tableBody.length; i++) {
+                    tableBody[i].style.maxHeight = "0px"
                 }
             }
-        } else if (filterValue.length < 3 ) {
-            for (let i=0; i< tableBody.length; i++) {
-                tableBody[i].style.maxHeight = "0px"
-            }
-        }
-    })
+        })
+    }
 }
-
-pointsPerModelFiterSearch()
 
 // Sammymas Hero animation 
 let moon = document.getElementById('para-moon')
@@ -1604,9 +1625,9 @@ window.addEventListener('scroll', () => {
     let value = window.scrollY;
     // getStartedbtn.style.transform = `translateY(${value * 1.5}`+'px';
     moon.style.marginTop = value * -1.5 + 'px';
-    sammy.style.left = value * -1.5 + 300 +'px';
-    sammytext1.style.top = value * 1.5 + 230 +'px';
-    sammytext2.style.top = value * 1.5 + 350+ 'px';
+    sammy.style.left = value * -1.5 + 300 + 'px';
+    sammytext1.style.top = value * 1.5 + 230 + 'px';
+    sammytext2.style.top = value * 1.5 + 350 + 'px';
     logoCtn.style.top = value * -1.5 + 10 + 'px';
     ground.style.transform = `perspective(1500px) translate3d(0px, 0px, ${value/3}px)`;
 })
@@ -1615,7 +1636,7 @@ let sammySlideCounter = 2;
 setInterval(function() {
     document.getElementById('s3-radio' + sammySlideCounter).checked = true;
     sammySlideCounter++;
-    if (sammySlideCounter>4) {
+    if (sammySlideCounter > 4) {
         sammySlideCounter = 1;
     }
 }, 10000)
@@ -1624,6 +1645,12 @@ setInterval(function() {
 
 window.addEventListener('DOMContentLoaded', () => {
 
+    getCustomerPointsOnSearch();
+    getAccountDetails();
+
+});
+
+function getCustomerPointsOnSearch() {
     let pointSearch = document.querySelector('.dip-points-search input');
     let pointResults = document.querySelector('.dip-points-search-results');
     let loadingSpin = document.querySelector('.dip-search-loader');
@@ -1667,113 +1694,106 @@ window.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
-});
+}
 
-// POST redeemption point
-// window.addEventListener('DOMContentLoaded', () => {
-//     getAccountDetails();
-// });
+function getAccountDetails() {
 
-// function getAccountDetails(){
+    let URL = "https://bgwgroup.com.au/sammymas2023/get-total-customer-points.php";
+    let eligibleURL = 'https://bgwgroup.com.au/sammymas2023/get-prize-list-json.php';
 
-//     let URL = "https://bgwgroup.com.au/sammymas2023/get-total-customer-points.php";
-//     let eligibleURL = 'https://bgwgroup.com.au/sammymas2023/get-prize-list-json.php';
+    let redeemFormHidden = document.querySelector('#redeemForm .form-hidden');
+    let redeemAccount = document.querySelector('#redeemForm input#redeemAccount');
+    let redeemPoints = document.querySelector('#redeemForm #redeemPoints');
+    let redeemAccountDetails = document.querySelector('#redeemForm .account-details');
+    let redeemAccountName = document.querySelector('#redeemForm #redeemAccountName');
+    let redeemList = document.querySelector('#redeemForm select#redeemList');
+    let redeemError = document.querySelector('#redeemForm #redeemError span');
 
-//     let redeemFormHidden = document.querySelector('#redeemForm .form-hidden');
-//     let redeemAccount = document.querySelector('#redeemForm input#redeemAccount');
-//     let redeemPoints = document.querySelector('#redeemForm #redeemPoints');
-//     let redeemAccountDetails = document.querySelector('#redeemForm .account-details');
-//     let redeemAccountName = document.querySelector('#redeemForm #redeemAccountName');
-//     let redeemList = document.querySelector('#redeemForm select#redeemList');
-//     let redeemError = document.querySelector('#redeemForm #redeemError span');
+    let accountPoints = undefined;
 
-//     let accountPoints = undefined;
+    redeemAccount.addEventListener('keyup', () => {
+        if (redeemAccount.value.length >= 2) {
+            fetch(URL + `?accountNumber=${redeemAccount.value}`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                    body: '?accountNumber=' + redeemAccount.value
+                })
+                // fetch(URL + `?accountNumber=${redeemAccount.value}`)
+                .then((response) => {
+                    return response.json();
+                })
+                .then((data) => {
+                    console.log(data)
+                    for (let i = 0; i < data.length; i++) {
+                        accountPoints = data[i]['total_points'];
 
-//     redeemAccount.addEventListener('keyup', () => {
-//         if(redeemAccount.value.length >= 2){
-//             fetch(URL+`?accountNumber=${redeemAccount.value}`,{
-//                 method: 'POST',
-//                 headers: {'Content-Type':'application/x-www-form-urlencoded'},
-//                 body: '?accountNumber='+redeemAccount.value
-//             })
-//             // fetch(URL + `?accountNumber=${redeemAccount.value}`)
-//             .then((response) => {
-//                 return response.json();
-//             })
-//             .then((data) => {
-//                 console.log(data)
-//                 for(let i = 0; i < data.length; i++){
-//                     accountPoints = data[i]['total_points'];
 
-           
-//                     if (accountPoints < 10) {
-//                         redeemError.innerHTML = '';
-//                         redeemError.innerHTML = 'Sorry but you do not have enough points';
-//                     }
+                        if (accountPoints < 10) {
+                            redeemError.innerHTML = '';
+                            redeemError.innerHTML = 'Sorry but you do not have enough points';
+                        }
 
-//                     // clear hidden elements
-//                     redeemFormHidden.innerHTML = '';
+                        // clear hidden elements
+                        redeemFormHidden.innerHTML = '';
 
-//                     let accountID = document.createElement('input');
-//                     accountID.type = 'hidden';
-//                     accountID.id = 'redeemID';
-//                     accountID.setAttribute('name','redeemID');
-//                     accountID.value = data[i]['id'];
+                        let accountID = document.createElement('input');
+                        accountID.type = 'hidden';
+                        accountID.id = 'redeemID';
+                        accountID.setAttribute('name', 'redeemID');
+                        accountID.value = data[i]['id'];
 
-//                     let accountNumber = document.createElement('input');
-//                     accountNumber.type = 'hidden';
-//                     accountNumber.id = 'redeemAccountNumber';
-//                     accountNumber.setAttribute('name','redeemAccountNumber');
-//                     accountNumber.value = data[i]['account_number'];
+                        let accountNumber = document.createElement('input');
+                        accountNumber.type = 'hidden';
+                        accountNumber.id = 'redeemAccountNumber';
+                        accountNumber.setAttribute('name', 'redeemAccountNumber');
+                        accountNumber.value = data[i]['account_number'];
 
-//                     let accountHomeBranch = document.createElement('input');
-//                     accountHomeBranch.type = 'hidden';
-//                     accountHomeBranch.id = 'redeemHomeBranch';
-//                     accountHomeBranch.setAttribute('name','redeemHomeBranch');
-//                     accountHomeBranch.value = data[i]['home_branch'];
+                        let accountHomeBranch = document.createElement('input');
+                        accountHomeBranch.type = 'hidden';
+                        accountHomeBranch.id = 'redeemHomeBranch';
+                        accountHomeBranch.setAttribute('name', 'redeemHomeBranch');
+                        accountHomeBranch.value = data[i]['home_branch'];
 
-//                     redeemFormHidden.appendChild(accountID);
-//                     redeemFormHidden.appendChild(accountNumber);
-//                     redeemFormHidden.appendChild(accountHomeBranch);
+                        redeemFormHidden.appendChild(accountID);
+                        redeemFormHidden.appendChild(accountNumber);
+                        redeemFormHidden.appendChild(accountHomeBranch);
 
-//                     // add account name to field
-//                     redeemAccountName.value = data[i]['account_name'];
+                        // add account name to field
+                        redeemAccountName.value = data[i]['account_name'];
 
-//                     // add customer points
-//                     let redeemedPoints = data[i]['redeemed_points'] || 0;
-//                     redeemPoints.value = accountPoints - redeemedPoints;  
+                        // add customer points
+                        let redeemedPoints = data[i]['redeemed_points'] || 0;
+                        redeemPoints.value = accountPoints - redeemedPoints;
 
-//                 }
-//                 // search for list of eligible products
-//                 fetch(eligibleURL)
-//                 .then((response) => {
-//                     return response.json();
-//                 })
-//                 .then((products) => {
-//                     // clear select element 
-//                     redeemList.innerHTML = '';
-//                     for(let p = 0; p < products.length; p++){
-//                         // get eligible products based on points less than account points
-//                         if( parseInt(products[p]['points']) <= Math.ceil(parseInt(redeemPoints.value)) ){
-//                             redeemAccountDetails.classList.remove('form-list-hidden');
-//                             redeemList.options[redeemList.options.length] = new Option(products[p]['description'] + ' - ' + products[p]['points'] + ' points',products[p]['id']);
-//                         }
-//                     }
+                    }
+                    // search for list of eligible products
+                    fetch(eligibleURL)
+                        .then((response) => {
+                            return response.json();
+                        })
+                        .then((products) => {
+                            // clear select element 
+                            redeemList.innerHTML = '';
+                            for (let p = 0; p < products.length; p++) {
+                                // get eligible products based on points less than account points
+                                if (parseInt(products[p]['points']) <= Math.ceil(parseInt(redeemPoints.value))) {
+                                    redeemAccountDetails.classList.remove('form-list-hidden');
+                                    redeemList.options[redeemList.options.length] = new Option(products[p]['description'] + ' - ' + products[p]['points'] + ' points', products[p]['id']);
+                                }
+                            }
 
-//                 })
-//                 .catch((error) => {});
+                        })
+                        .catch((error) => {});
 
-//             })
-//             .catch((error) => {});
+                })
+                .catch((error) => {});
 
-//         }else{
-//             // if account number input field if empty, clear form values
-//             redeemAccountDetails.classList.add('form-list-hidden');
-//             redeemList.innerHTML = '';
-//             redeemAccountName.value = '';
-//             redeemError.innerHTML = '';
-//         }
-//     });
-// }
-
-// getAccountDetails();
+        } else {
+            // if account number input field if empty, clear form values
+            redeemAccountDetails.classList.add('form-list-hidden');
+            redeemList.innerHTML = '';
+            redeemAccountName.value = '';
+            redeemError.innerHTML = '';
+        }
+    });
+}

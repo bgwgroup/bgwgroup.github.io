@@ -1460,11 +1460,12 @@ function getPrizeList() {
             </div>
         </div>`
             }).join('');
-
-            document.querySelector(".s3-first").innerHTML = sammyCarouselSlide1;
-            document.querySelector(".s3-second").innerHTML = sammyCarouselSlide2;
-            document.querySelector(".s3-third").innerHTML = sammyCarouselSlide3;
-            document.querySelector(".s3-forth").innerHTML = sammyCarouselSlide4;
+            if (!!document.querySelector(".s3-first")) {
+                document.querySelector(".s3-first").innerHTML = sammyCarouselSlide1;
+                document.querySelector(".s3-second").innerHTML = sammyCarouselSlide2;
+                document.querySelector(".s3-third").innerHTML = sammyCarouselSlide3;
+                document.querySelector(".s3-forth").innerHTML = sammyCarouselSlide4;
+            }
         });
 }
 
@@ -1628,13 +1629,13 @@ window.addEventListener('scroll', () => {
 })
 
 let sammySlideCounter = 2;
-setInterval(function() {
+if (!!document.getElementById('s3-radio1')) {setInterval(function() {
     document.getElementById('s3-radio' + sammySlideCounter).checked = true;
     sammySlideCounter++;
     if (sammySlideCounter > 4) {
         sammySlideCounter = 1;
     }
-}, 10000)
+}, 10000)}
 
 //Sammy-mas-cutomers point
 
@@ -1792,7 +1793,7 @@ function getAccountDetails() {
 
 document.addEventListener('DOMContentLoaded', function () {
     const redemptionForm = document.getElementById("redeemForm");
-    redemptionForm.addEventListener('submit', async (event) => {
+    if (!!redemptionForm) {redemptionForm.addEventListener('submit', async (event) => {
         event.preventDefault();
         const url = 'https://bgwgroup.com.au/sammymas2023/post-redeem-send-email.php';
         const formData = new FormData(redemptionForm)
@@ -1822,5 +1823,5 @@ document.addEventListener('DOMContentLoaded', function () {
           } catch (error) {
             console.error('Network error:', error);
           }
-    });
+    })};
 })

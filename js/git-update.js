@@ -1461,14 +1461,10 @@ function getPrizeList() {
         </div>`
             }).join('');
 
-            try {
-
-            } catch (error) {
-                document.querySelector(".s3-first").innerHTML = sammyCarouselSlide1;
-                document.querySelector(".s3-second").innerHTML = sammyCarouselSlide2;
-                document.querySelector(".s3-third").innerHTML = sammyCarouselSlide3;
-                document.querySelector(".s3-forth").innerHTML = sammyCarouselSlide4;
-            }
+            document.querySelector(".s3-first").innerHTML = sammyCarouselSlide1;
+            document.querySelector(".s3-second").innerHTML = sammyCarouselSlide2;
+            document.querySelector(".s3-third").innerHTML = sammyCarouselSlide3;
+            document.querySelector(".s3-forth").innerHTML = sammyCarouselSlide4;
         });
 }
 

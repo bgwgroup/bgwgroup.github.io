@@ -1670,9 +1670,9 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 // POST redeemption point
-window.addEventListener('DOMContentLoaded', () => {
-    getAccountDetails();
-});
+// window.addEventListener('DOMContentLoaded', () => {
+//     getAccountDetails();
+// });
 
 function getAccountDetails(){
 
@@ -1775,3 +1775,5 @@ function getAccountDetails(){
         }
     });
 }
+
+getAccountDetails();

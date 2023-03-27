@@ -1671,48 +1671,107 @@ window.addEventListener('DOMContentLoaded', () => {
 
 // POST redeemption point
 window.addEventListener('DOMContentLoaded', () => {
-
-    let pointSearch = document.querySelector('.dip-points-search input');
-    let pointResults = document.querySelector('.dip-points-search-results');
-    let loadingSpin = document.querySelector('.dip-search-loader');
-
-    let nameSpan = document.createElement('span');
-    let pointSpan = document.createElement('span');
-
-    if (pointSearch != undefined) {
-        pointSearch.addEventListener('keyup', () => {
-            let accountNumber = pointSearch.value;
-            if (accountNumber.length >= 2) {
-                console.log('More than 2');
-                setTimeout(function() {
-                    fetch('https://bgwgroup.com.au/sammymas2023/get-total-customer-points.php?accountNumber=' + accountNumber)
-                        .then((response) => {
-                            return response.json();
-                        })
-                        .then((points) => {
-                            for (let i = 0; i < points.length; i++) {
-                                let redeemedPoints = points[i].redeemed_points || 0;
-                                nameSpan.innerHTML = points[i]['account_name'] || "No redemption points associated with account number";
-                                pointSpan.innerHTML = (points[i]['account_name']) ? '<strong>' + (points[i]['total_points'] - redeemedPoints) + '</strong> points' : accountNumber;
-                            }
-
-                            if (pointResults.children.length === 0) {
-                                pointResults.innerHTML = "";
-                                pointResults.appendChild(nameSpan);
-                                pointResults.appendChild(pointSpan);
-                            }
-
-                        })
-                        .catch((error) => {});
-                }, 800);
-            } else {
-                try {
-                    loadingSpin.style.display = 'none';
-                    pointResults.removeChild(nameSpan);
-                    pointResults.removeChild(pointSpan);
-                    pointResults.innerHTML = "";
-                } catch (err) {}
-            }
-        });
-    }
+    getAccountDetails();
 });
+
+function getAccountDetails(){
+
+    let URL = "https://bgwgroup.com.au/sammymas2023/get-total-customer-points.php";
+    let eligibleURL = 'https://bgwgroup.com.au/sammymas2023/get-prize-list-json.php';
+
+    let redeemFormHidden = document.querySelector('#redeemForm .form-hidden');
+    let redeemAccount = document.querySelector('#redeemForm input#redeemAccount');
+    let redeemPoints = document.querySelector('#redeemForm #redeemPoints');
+    let redeemAccountDetails = document.querySelector('#redeemForm .account-details');
+    let redeemAccountName = document.querySelector('#redeemForm #redeemAccountName');
+    let redeemList = document.querySelector('#redeemForm select#redeemList');
+    let redeemError = document.querySelector('#redeemForm #redeemError span');
+
+    let accountPoints = undefined;
+
+    redeemAccount.addEventListener('keyup', () => {
+        if(redeemAccount.value.length >= 2){
+            fetch(URL+`?accountNumber=${redeemAccount.value}`,{
+                method: 'POST',
+                headers: {'Content-Type':'application/x-www-form-urlencoded'},
+                body: '?accountNumber='+redeemAccount.value
+            })
+            // fetch(URL + `?accountNumber=${redeemAccount.value}`)
+            .then((response) => {
+                return response.json();
+            })
+            .then((data) => {
+                console.log(data)
+                for(let i = 0; i < data.length; i++){
+                    accountPoints = data[i]['total_points'];
+
+           
+                    if (accountPoints < 10) {
+                        redeemError.innerHTML = '';
+                        redeemError.innerHTML = 'Sorry but you do not have enough points';
+                    }
+
+                    // clear hidden elements
+                    redeemFormHidden.innerHTML = '';
+
+                    let accountID = document.createElement('input');
+                    accountID.type = 'hidden';
+                    accountID.id = 'redeemID';
+                    accountID.setAttribute('name','redeemID');
+                    accountID.value = data[i]['id'];
+
+                    let accountNumber = document.createElement('input');
+                    accountNumber.type = 'hidden';
+                    accountNumber.id = 'redeemAccountNumber';
+                    accountNumber.setAttribute('name','redeemAccountNumber');
+                    accountNumber.value = data[i]['account_number'];
+
+                    let accountHomeBranch = document.createElement('input');
+                    accountHomeBranch.type = 'hidden';
+                    accountHomeBranch.id = 'redeemHomeBranch';
+                    accountHomeBranch.setAttribute('name','redeemHomeBranch');
+                    accountHomeBranch.value = data[i]['home_branch'];
+
+                    redeemFormHidden.appendChild(accountID);
+                    redeemFormHidden.appendChild(accountNumber);
+                    redeemFormHidden.appendChild(accountHomeBranch);
+
+                    // add account name to field
+                    redeemAccountName.value = data[i]['account_name'];
+
+                    // add customer points
+                    let redeemedPoints = data[i]['redeemed_points'] || 0;
+                    redeemPoints.value = accountPoints - redeemedPoints;  
+
+                }
+                // search for list of eligible products
+                fetch(eligibleURL)
+                .then((response) => {
+                    return response.json();
+                })
+                .then((products) => {
+                    // clear select element 
+                    redeemList.innerHTML = '';
+                    for(let p = 0; p < products.length; p++){
+                        // get eligible products based on points less than account points
+                        if( parseInt(products[p]['points']) <= Math.ceil(parseInt(redeemPoints.value)) ){
+                            redeemAccountDetails.classList.remove('form-list-hidden');
+                            redeemList.options[redeemList.options.length] = new Option(products[p]['description'] + ' - ' + products[p]['points'] + ' points',products[p]['id']);
+                        }
+                    }
+
+                })
+                .catch((error) => {});
+
+            })
+            .catch((error) => {});
+
+        }else{
+            // if account number input field if empty, clear form values
+            redeemAccountDetails.classList.add('form-list-hidden');
+            redeemList.innerHTML = '';
+            redeemAccountName.value = '';
+            redeemError.innerHTML = '';
+        }
+    });
+}

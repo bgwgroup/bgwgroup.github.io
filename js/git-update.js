@@ -1670,7 +1670,7 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 // POST redeemption point
-document.querySelector('.sammy-redemption-form-ctn').addEventListener('DOMContentLoaded', () => {
+window.addEventListener('DOMContentLoaded', () => {
     getAccountDetails();
 });
 

@@ -712,51 +712,51 @@ $(document).ready(function() {
 /**
  * Samios Double Dip Point Search API
  */
-window.addEventListener('DOMContentLoaded', () => {
+// window.addEventListener('DOMContentLoaded', () => {
 
-    let pointSearch = document.querySelector('.dip-points-search input');
-    let pointResults = document.querySelector('.dip-points-search-results');
-    let loadingSpin = document.querySelector('.dip-search-loader');
+//     let pointSearch = document.querySelector('.dip-points-search input');
+//     let pointResults = document.querySelector('.dip-points-search-results');
+//     let loadingSpin = document.querySelector('.dip-search-loader');
 
-    let nameSpan = document.createElement('span');
-    let pointSpan = document.createElement('span');
+//     let nameSpan = document.createElement('span');
+//     let pointSpan = document.createElement('span');
 
-    if (pointSearch != undefined) {
-        pointSearch.addEventListener('keyup', () => {
-            let accountNumber = pointSearch.value;
-            if (accountNumber.length >= 2) {
-                console.log('More than 2');
-                setTimeout(function() {
-                    fetch('https://bgwgroup.com.au/rheem-avg-points/get-rheem-points.php?account=' + accountNumber)
-                        .then((response) => {
-                            return response.json();
-                        })
-                        .then((points) => {
+//     if (pointSearch != undefined) {
+//         pointSearch.addEventListener('keyup', () => {
+//             let accountNumber = pointSearch.value;
+//             if (accountNumber.length >= 2) {
+//                 console.log('More than 2');
+//                 setTimeout(function() {
+//                     fetch('https://bgwgroup.com.au/rheem-avg-points/get-rheem-points.php?account=' + accountNumber)
+//                         .then((response) => {
+//                             return response.json();
+//                         })
+//                         .then((points) => {
 
-                            for (let i = 0; i < points.length; i++) {
-                                nameSpan.innerHTML = points[i]['name'] || "No redemption points associated with account number";
-                                pointSpan.innerHTML = (points[i]['name']) ? '<strong>' + points[i]['remaining_points'] + '</strong> points' : accountNumber;
-                            }
+//                             for (let i = 0; i < points.length; i++) {
+//                                 nameSpan.innerHTML = points[i]['name'] || "No redemption points associated with account number";
+//                                 pointSpan.innerHTML = (points[i]['name']) ? '<strong>' + points[i]['remaining_points'] + '</strong> points' : accountNumber;
+//                             }
 
-                            if (pointResults.children.length === 0) {
-                                pointResults.innerHTML = "";
-                                pointResults.appendChild(nameSpan);
-                                pointResults.appendChild(pointSpan);
-                            }
-                        })
-                        .catch((error) => {});
-                }, 800);
-            } else {
-                try {
-                    loadingSpin.style.display = 'none';
-                    pointResults.removeChild(nameSpan);
-                    pointResults.removeChild(pointSpan);
-                    pointResults.innerHTML = "";
-                } catch (err) {}
-            }
-        });
-    }
-});
+//                             if (pointResults.children.length === 0) {
+//                                 pointResults.innerHTML = "";
+//                                 pointResults.appendChild(nameSpan);
+//                                 pointResults.appendChild(pointSpan);
+//                             }
+//                         })
+//                         .catch((error) => {});
+//                 }, 800);
+//             } else {
+//                 try {
+//                     loadingSpin.style.display = 'none';
+//                     pointResults.removeChild(nameSpan);
+//                     pointResults.removeChild(pointSpan);
+//                     pointResults.innerHTML = "";
+//                 } catch (err) {}
+//             }
+//         });
+//     }
+// });
 
 /**
  * ================================================================================================================================================================
@@ -1619,3 +1619,51 @@ setInterval(function() {
         sammySlideCounter = 1;
     }
 }, 10000)
+
+//Sammy-mas-cutomers point
+window.addEventListener('DOMContentLoaded', () => {
+
+    let pointSearch = document.querySelector('.dip-points-search input');
+    let pointResults = document.querySelector('.dip-points-search-results');
+    let loadingSpin = document.querySelector('.dip-search-loader');
+
+    let nameSpan = document.createElement('span');
+    let pointSpan = document.createElement('span');
+
+    if (pointSearch != undefined) {
+        pointSearch.addEventListener('keyup', () => {
+            let accountNumber = pointSearch.value;
+            if (accountNumber.length >= 2) {
+                console.log('More than 2');
+                setTimeout(function() {
+                    fetch('https://bgwgroup.com.au/sammymas2023/get-total-customer-points.php?accountNumber=' + accountNumber)
+                        .then((response) => {
+                            return response.json();
+                        })
+                        .then((points) => {
+                            console.log(points)
+                            for (let i = 0; i < points.length; i++) {
+                                let redeemedPoints = points[i].redeemed_points || 0;
+                                nameSpan.innerHTML = points[i]['account_name'] || "No redemption points associated with account number";
+                                pointSpan.innerHTML = (points[i]['total_points']) ? '<strong>' + (points[i]['total_points'] - redeemedPoints) + '</strong> points' : accountNumber;
+                            }
+
+                            if (pointResults.children.length === 0) {
+                                pointResults.innerHTML = "";
+                                pointResults.appendChild(nameSpan);
+                                pointResults.appendChild(pointSpan);
+                            }
+                        })
+                        .catch((error) => {});
+                }, 800);
+            } else {
+                try {
+                    loadingSpin.style.display = 'none';
+                    pointResults.removeChild(nameSpan);
+                    pointResults.removeChild(pointSpan);
+                    pointResults.innerHTML = "";
+                } catch (err) {}
+            }
+        });
+    }
+});

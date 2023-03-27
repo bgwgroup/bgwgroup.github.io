@@ -1619,12 +1619,12 @@ let getStartedbtn = document.getElementById('s1-get-started-btn')
 
 window.addEventListener('scroll', () => {
     let value = window.scrollY;
-    moon.style.marginTop = value * -1.5 + 'px';
-    sammy.style.left = value * -1.5 + 300 + 'px';
-    sammytext1.style.top = value * 1.5 + 210 +'px';
-    sammytext2.style.top = value * 1.5 + 320+ 'px';
-    logoCtn.style.top = value * -1.5 + 10 + 'px';
-    ground.style.transform = `perspective(1500px) translate3d(0px, 0px, ${value/3}px)`;
+    if (!!moon) {moon.style.marginTop = value * -1.5 + 'px'};
+    if (!!sammy) {sammy.style.left = value * -1.5 + 300 + 'px'};
+    if (!!sammytext1) {sammytext1.style.top = value * 1.5 + 210 +'px'};
+    if (!!sammytext2) {sammytext2.style.top = value * 1.5 + 320+ 'px'};
+    if (!!logoCtn) {logoCtn.style.top = value * -1.5 + 10 + 'px'};
+    if (!!ground) {ground.style.transform = `perspective(1500px) translate3d(0px, 0px, ${value/3}px)`};
 })
 
 let sammySlideCounter = 2;

@@ -1641,6 +1641,7 @@ window.addEventListener('DOMContentLoaded', () => {
                             return response.json();
                         })
                         .then((points) => {
+                            console.log(points)
                             for (let i = 0; i < points.length; i++) {
                                 let redeemedPoints = points[i].redeemed_points || 0;
                                 nameSpan.innerHTML = points[i]['account_name'] || "No redemption points associated with account number";
@@ -1652,11 +1653,8 @@ window.addEventListener('DOMContentLoaded', () => {
                                 pointResults.appendChild(nameSpan);
                                 pointResults.appendChild(pointSpan);
                             }
-
                         })
-                        .catch((error) => {
-                            pointResults.innerHTML = "No data found!";
-                        });
+                        .catch((error) => {});
                 }, 800);
             } else {
                 try {

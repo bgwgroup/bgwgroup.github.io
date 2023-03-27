@@ -1829,3 +1829,5 @@ redemptionForm.addEventListener('submit', async (event) => {
         console.error('Network error:', error);
       }
 });
+
+console.log(redemptionForm)

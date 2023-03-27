@@ -1799,7 +1799,6 @@ function getAccountDetails() {
 const redemptionForm = document.getElementById("redeemForm");
 redemptionForm.addEventListener('submit', async (event) => {
     event.preventDefault();
-
     const url = 'https://bgwgroup.com.au/sammymas2023/post-redeem-send-email.php';
     const formData = new FormData(redemptionForm)
     const data = {}

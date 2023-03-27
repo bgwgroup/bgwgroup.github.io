@@ -1710,12 +1710,12 @@ function getAccountDetails() {
     if (redeemAccount != undefined) {
         redeemAccount.addEventListener('keyup', () => {
             if (redeemAccount.value.length >= 2) {
-                fetch(URL + `?accountNumber=${redeemAccount.value}`, {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                        body: '?accountNumber=' + redeemAccount.value
-                    })
-                    // fetch(URL + `?accountNumber=${redeemAccount.value}`)
+                // fetch(URL + `?accountNumber=${redeemAccount.value}`, {
+                //         method: 'POST',
+                //         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                //         body: '?accountNumber=' + redeemAccount.value
+                //     })
+                    fetch(URL + `?accountNumber=${redeemAccount.value}`)
                     .then((response) => {
                         return response.json();
                     })
@@ -1735,21 +1735,21 @@ function getAccountDetails() {
 
                             let accountID = document.createElement('input');
                             accountID.type = 'hidden';
-                            accountID.id = 'redeemID';
-                            accountID.setAttribute('name', 'redeemID');
+                            accountID.id = 'prize_id';
+                            accountID.setAttribute('name', 'prize_id');
                             accountID.value = data[i]['id'];
 
                             let accountNumber = document.createElement('input');
                             accountNumber.type = 'hidden';
-                            accountNumber.id = 'redeemAccountNumber';
-                            accountNumber.setAttribute('name', 'redeemAccountNumber');
+                            accountNumber.id = 'account_number';
+                            accountNumber.setAttribute('name', 'account_number');
                             accountNumber.value = data[i]['account_number'];
 
                             let accountHomeBranch = document.createElement('input');
                             accountHomeBranch.type = 'hidden';
-                            accountHomeBranch.id = 'redeemHomeBranch';
-                            accountHomeBranch.setAttribute('name', 'redeemHomeBranch');
-                            accountHomeBranch.value = data[i]['home_branch'];
+                            accountHomeBranch.id = 'home_branch';
+                            accountHomeBranch.setAttribute('name', 'home_branch');
+                            accountHomeBranch.value = data[i]['branch'];
 
                             redeemFormHidden.appendChild(accountID);
                             redeemFormHidden.appendChild(accountNumber);

@@ -1805,6 +1805,9 @@ function submitRedemptionForm() {
 
             let formData = new FormData();
             formData.append('prize_id', document.querySelector('#prize_id').value)
+            formData.append('account_number', document.querySelector('#account_number').value)
+            formData.append('account_name', document.querySelector('#redeemAccountName').value)
+            formData.append('account_email', document.querySelector('name["customer_email"]').value)
 
             fetch(url, {
                     method: 'POST',

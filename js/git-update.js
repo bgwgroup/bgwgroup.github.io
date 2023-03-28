@@ -1814,7 +1814,8 @@ function submitRedemptionForm() {
                     headers: {
                         'Content-Type': 'application/json',
                     },
-                    body: JSON.stringify(data),
+                    // body: JSON.stringify(data),
+                    body: data,
                 });
 
                 // Check if the request was successful

@@ -1795,36 +1795,43 @@ function getAccountDetails() {
 }
 
 function submitRedemptionForm() {
-    let url = 'https://bgwgroup.com.au/sammymas2023/post-redeem-send-email.php';
-    let submitButton = document.querySelector('#redeemSubmit');
-    if (submitButton != undefined) {
-        submitButton.addEventListener('click', (event) => {
+    const redemptionForm = document.getElementById("redeemForm");
+    if (!!redemptionForm) {
+        redemptionForm.addEventListener('submit', async(event) => {
             event.preventDefault();
-
-            const redemptionForm = document.getElementById("redeemForm");
+            const url = 'https://bgwgroup.com.au/sammymas2023/post-redeem-send-email.php';
             const formData = new FormData(redemptionForm)
             const data = {}
             for (const [key, value] of formData.entries()) {
                 data[key] = value;
             }
+            console.log(data)
 
-            fetch(url, {
+            try {
+                // Send the POST request using Fetch API
+                const response = await fetch(url, {
                     method: 'POST',
-                    //headers: { 'Content-Type': 'application/json' },
-                    body: data,
-                })
-                .then((response) => {
-                    return response.json();
-                })
-                .then((submittedData) => {
-                    console.log(submittedData);
-                })
-                .catch(error => {});
-        });
-    }
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data),
+                });
+
+                // Check if the request was successful
+                if (response.ok) {
+                    const jsonResponse = await response.json();
+                    console.log('Form data submitted successfully:', jsonResponse);
+                } else {
+                    console.error('Error submitting form data:', response.statusText);
+                }
+            } catch (error) {
+                console.error('Network error:', error);
+            }
+        })
+    };
 }
 
-/*
+
 document.addEventListener('DOMContentLoaded', function() {
     const redemptionForm = document.getElementById("redeemForm");
     if (!!redemptionForm) {
@@ -1860,4 +1867,4 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         })
     };
-})*/
+})

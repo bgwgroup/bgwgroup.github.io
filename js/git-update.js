@@ -1723,12 +1723,6 @@ function getAccountDetails() {
                         for (let i = 0; i < data.length; i++) {
                             accountPoints = data[i]['total_points'];
 
-
-                            if (accountPoints < 10) {
-                                redeemError.innerHTML = '';
-                                redeemError.innerHTML = 'Sorry but you do not have enough points';
-                            }
-
                             // clear hidden elements
                             redeemFormHidden.innerHTML = '';
 
@@ -1760,6 +1754,11 @@ function getAccountDetails() {
                             // add customer points
                             let redeemedPoints = data[i]['redeemed_points'] || 0;
                             redeemPoints.value = accountPoints - redeemedPoints;
+
+                            if ( redeemPoints.value < 10) {
+                                redeemError.innerHTML = '';
+                                redeemError.innerHTML = 'Sorry but you do not have enough points';
+                            }
 
                         }
                         // search for list of eligible products
@@ -1837,40 +1836,3 @@ function submitRedemptionForm() {
     }
 }
 
-/*
-document.addEventListener('DOMContentLoaded', function() {
-    const redemptionForm = document.getElementById("redeemForm");
-    if (!!redemptionForm) {
-        redemptionForm.addEventListener('submit', async(event) => {
-            event.preventDefault();
-            const url = 'https://bgwgroup.com.au/sammymas2023/post-redeem-send-email.php';
-            const formData = new FormData(redemptionForm)
-            const data = {}
-            for (const [key, value] of formData.entries()) {
-                data[key] = value;
-            }
-            console.log(data)
-
-            try {
-                // Send the POST request using Fetch API
-                const response = await fetch(url, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(data),
-                });
-
-                // Check if the request was successful
-                if (response.ok) {
-                    const jsonResponse = await response.json();
-                    console.log('Form data submitted successfully:', jsonResponse);
-                } else {
-                    console.error('Error submitting form data:', response.statusText);
-                }
-            } catch (error) {
-                console.error('Network error:', error);
-            }
-        })
-    };
-})*/

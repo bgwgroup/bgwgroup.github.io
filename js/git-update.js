@@ -1771,14 +1771,6 @@ function getAccountDetails() {
                                 // clear select element 
                                 redeemList.innerHTML = '';
 
-                                let prizeID = document.createElement('input');
-                                prizeID.type = 'hidden';
-                                prizeID.id = 'prize_id';
-                                prizeID.setAttribute('name', 'prize_id');
-                                prizeID.value = products[i]['id'];
-
-                                redeemFormHidden.appendChild(prizeID);
-
                                 for (let p = 0; p < products.length; p++) {
                                     // get eligible products based on points less than account points
                                     if (parseInt(products[p]['points']) <= Math.ceil(parseInt(redeemPoints.value))) {
@@ -1815,7 +1807,7 @@ function submitRedemptionForm() {
             //redeemSubmit.setAttribute('disabled', 'disabled');
 
             let formData = new FormData();
-            formData.append('prize_id', document.querySelector('#prize_id').value)
+            formData.append('prize_id', document.querySelector('#redeemList').value)
             formData.append('account_number', document.querySelector('#account_number').value)
             formData.append('account_name', document.querySelector('#redeemAccountName').value)
             formData.append('account_email', document.querySelector('#redeemAccountEmail').value)

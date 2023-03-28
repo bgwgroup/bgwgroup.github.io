@@ -1831,7 +1831,7 @@ function submitRedemptionForm() {
     };
 }
 
-
+/*
 document.addEventListener('DOMContentLoaded', function() {
     const redemptionForm = document.getElementById("redeemForm");
     if (!!redemptionForm) {
@@ -1867,4 +1867,4 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         })
     };
-})
+})*/

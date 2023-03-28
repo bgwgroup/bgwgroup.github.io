@@ -1810,7 +1810,7 @@ function submitRedemptionForm() {
 
             fetch(url, {
                     method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
+                    //headers: { 'Content-Type': 'application/json' },
                     body: data,
                 })
                 .then((response) => {

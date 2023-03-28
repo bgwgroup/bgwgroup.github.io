@@ -1732,6 +1732,12 @@ function getAccountDetails() {
                             // clear hidden elements
                             redeemFormHidden.innerHTML = '';
 
+                            let accountID = document.createElement('input');
+                            accountID.type = 'hidden';
+                            accountID.id = 'misc_id';
+                            accountID.setAttribute('name', 'misc_id');
+                            accountID.value = data[i]['id'];
+
                             let accountNumber = document.createElement('input');
                             accountNumber.type = 'hidden';
                             accountNumber.id = 'account_number';
@@ -1744,6 +1750,7 @@ function getAccountDetails() {
                             accountHomeBranch.setAttribute('name', 'home_branch');
                             accountHomeBranch.value = data[i]['branch'];
 
+                            redeemFormHidden.appendChild(accountID);
                             redeemFormHidden.appendChild(accountNumber);
                             redeemFormHidden.appendChild(accountHomeBranch);
 

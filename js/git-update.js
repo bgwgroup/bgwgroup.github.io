@@ -1744,7 +1744,6 @@ function getAccountDetails() {
                             accountHomeBranch.setAttribute('name', 'home_branch');
                             accountHomeBranch.value = data[i]['branch'];
 
-                            redeemFormHidden.appendChild(accountID);
                             redeemFormHidden.appendChild(accountNumber);
                             redeemFormHidden.appendChild(accountHomeBranch);
 

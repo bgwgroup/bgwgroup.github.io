@@ -1795,41 +1795,30 @@ function getAccountDetails() {
 }
 
 function submitRedemptionForm() {
-    const redemptionForm = document.getElementById("redeemForm");
-    if (!!redemptionForm) {
-        redemptionForm.addEventListener('submit', async(event) => {
+
+    const url = 'https://bgwgroup.com.au/sammymas2023/post-redeem-send-email.php';
+    let redeemSubmit = document.querySelector('#redeemSubmit');
+
+    if (redeemSubmit != undefined) {
+        redeemSubmit.addEventListener('click', (event) => {
             event.preventDefault();
-            const url = 'https://bgwgroup.com.au/sammymas2023/post-redeem-send-email.php';
-            const formData = new FormData(redemptionForm)
-            const data = {}
-            for (const [key, value] of formData.entries()) {
-                data[key] = value;
-            }
-            console.log(data)
 
-            try {
-                // Send the POST request using Fetch API
-                const response = await fetch(url, {
+            let formData = new FormData();
+            formData.append('prize_id', document.querySelector('#prize_id').value)
+
+            fetch(url, {
                     method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    // body: JSON.stringify(data),
-                    body: data,
-                });
-
-                // Check if the request was successful
-                if (response.ok) {
-                    const jsonResponse = await response.json();
-                    console.log('Form data submitted successfully:', jsonResponse);
-                } else {
-                    console.error('Error submitting form data:', response.statusText);
-                }
-            } catch (error) {
-                console.error('Network error:', error);
-            }
-        })
-    };
+                    body: formData
+                })
+                .then((response) => {
+                    return response.json();
+                })
+                .then((formResponse) => {
+                    console.log(formResponse);
+                })
+                .catch(error => {});
+        });
+    }
 }
 
 /*

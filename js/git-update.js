@@ -1772,9 +1772,12 @@ function getAccountDetails() {
 
                                 for (let p = 0; p < products.length; p++) {
                                     // get eligible products based on points less than account points
-                                    if (parseInt(products[p]['points']) <= Math.ceil(parseInt(redeemPoints.value))) {
+                                    if( parseInt(products[p]['points']) <= Math.ceil(parseInt(redeemPoints.value)) ){
+                                        if (p === 0){
+                                            redeemList.options[redeemList.options.length] = new Option('Select Prize...');
+                                        }
                                         redeemAccountDetails.classList.remove('form-list-hidden');
-                                        redeemList.options[redeemList.options.length] = new Option(products[p]['description'] + ' - ' + products[p]['points'] + ' points', products[p]['id']);
+                                        redeemList.options[redeemList.options.length] = new Option(products[p]['description'] + ' - ' + products[p]['points'] + ' points',products[p]['id']);
                                     }
                                 }
 

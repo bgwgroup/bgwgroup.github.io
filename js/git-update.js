@@ -1775,7 +1775,7 @@ function getAccountDetails() {
                                 prizeID.type = 'hidden';
                                 prizeID.id = 'prize_id';
                                 prizeID.setAttribute('name', 'prize_id');
-                                prizeID.value = data[i]['id'];
+                                prizeID.value = products[i]['id'];
 
                                 redeemFormHidden.appendChild(prizeID);
 

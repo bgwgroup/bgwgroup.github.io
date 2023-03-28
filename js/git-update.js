@@ -1620,22 +1620,24 @@ let getStartedbtn = document.getElementById('s1-get-started-btn')
 
 window.addEventListener('scroll', () => {
     let value = window.scrollY;
-    if (!!moon) {moon.style.marginTop = value * -1.5 + 'px'};
-    if (!!sammy) {sammy.style.left = value * -1.5 + 300 + 'px'};
-    if (!!sammytext1) {sammytext1.style.top = value * 1.5 + 210 +'px'};
-    if (!!sammytext2) {sammytext2.style.top = value * 1.5 + 320+ 'px'};
-    if (!!logoCtn) {logoCtn.style.top = value * -1.5 + 10 + 'px'};
-    if (!!ground) {ground.style.transform = `perspective(1500px) translate3d(0px, 0px, ${value/3}px)`};
+    if (!!moon) { moon.style.marginTop = value * -1.5 + 'px' };
+    if (!!sammy) { sammy.style.left = value * -1.5 + 300 + 'px' };
+    if (!!sammytext1) { sammytext1.style.top = value * 1.5 + 210 + 'px' };
+    if (!!sammytext2) { sammytext2.style.top = value * 1.5 + 320 + 'px' };
+    if (!!logoCtn) { logoCtn.style.top = value * -1.5 + 10 + 'px' };
+    if (!!ground) { ground.style.transform = `perspective(1500px) translate3d(0px, 0px, ${value/3}px)` };
 })
 
 let sammySlideCounter = 2;
-if (!!document.getElementById('s3-radio1')) {setInterval(function() {
-    document.getElementById('s3-radio' + sammySlideCounter).checked = true;
-    sammySlideCounter++;
-    if (sammySlideCounter > 4) {
-        sammySlideCounter = 1;
-    }
-}, 10000)}
+if (!!document.getElementById('s3-radio1')) {
+    setInterval(function() {
+        document.getElementById('s3-radio' + sammySlideCounter).checked = true;
+        sammySlideCounter++;
+        if (sammySlideCounter > 4) {
+            sammySlideCounter = 1;
+        }
+    }, 10000)
+}
 
 //Sammy-mas-cutomers point
 
@@ -1643,6 +1645,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     getCustomerPointsOnSearch();
     getAccountDetails();
+    submitRedemptionForm();
 
 });
 
@@ -1710,7 +1713,7 @@ function getAccountDetails() {
     if (redeemAccount != undefined) {
         redeemAccount.addEventListener('keyup', () => {
             if (redeemAccount.value.length >= 2) {
-                    fetch(URL + `?accountNumber=${redeemAccount.value}`)
+                fetch(URL + `?accountNumber=${redeemAccount.value}`)
                     .then((response) => {
                         return response.json();
                     })
@@ -1791,37 +1794,69 @@ function getAccountDetails() {
     }
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-    const redemptionForm = document.getElementById("redeemForm");
-    if (!!redemptionForm) {redemptionForm.addEventListener('submit', async (event) => {
-        event.preventDefault();
-        const url = 'https://bgwgroup.com.au/sammymas2023/post-redeem-send-email.php';
-        const formData = new FormData(redemptionForm)
-        const data = {}
-        for (const [key, value] of formData.entries()) {
-            data[key] = value;
-          }
-        console.log(data)
-        
-        try {
-            // Send the POST request using Fetch API
-            const response = await fetch(url, {
-              method: 'POST',
-              headers: {
-                'Content-Type': 'application/json',
-              },
-              body: JSON.stringify(data),
-            });
-        
-            // Check if the request was successful
-            if (response.ok) {
-              const jsonResponse = await response.json();
-              console.log('Form data submitted successfully:', jsonResponse);
-            } else {
-              console.error('Error submitting form data:', response.statusText);
+function submitRedemptionForm() {
+    let url = 'https://bgwgroup.com.au/sammymas2023/post-redeem-send-email.php';
+    let submitButton = document.querySelector('#redeemSubmit');
+    if (submitButton != undefined) {
+        submitButton.addEventListener('click', (event) => {
+            event.preventDefault();
+
+            const redemptionForm = document.getElementById("redeemForm");
+            const formData = new FormData(redemptionForm)
+            const data = {}
+            for (const [key, value] of formData.entries()) {
+                data[key] = value;
             }
-          } catch (error) {
-            console.error('Network error:', error);
-          }
-    })};
-})
+
+            fetch(url, {
+                    method: 'POST',
+                    body: data
+                })
+                .then((response) => {
+                    return response.json();
+                })
+                .then((submittedData) => {
+                    console.log(submittedData);
+                })
+                .catch(error => {});
+        });
+    }
+}
+
+/*
+document.addEventListener('DOMContentLoaded', function() {
+    const redemptionForm = document.getElementById("redeemForm");
+    if (!!redemptionForm) {
+        redemptionForm.addEventListener('submit', async(event) => {
+            event.preventDefault();
+            const url = 'https://bgwgroup.com.au/sammymas2023/post-redeem-send-email.php';
+            const formData = new FormData(redemptionForm)
+            const data = {}
+            for (const [key, value] of formData.entries()) {
+                data[key] = value;
+            }
+            console.log(data)
+
+            try {
+                // Send the POST request using Fetch API
+                const response = await fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data),
+                });
+
+                // Check if the request was successful
+                if (response.ok) {
+                    const jsonResponse = await response.json();
+                    console.log('Form data submitted successfully:', jsonResponse);
+                } else {
+                    console.error('Error submitting form data:', response.statusText);
+                }
+            } catch (error) {
+                console.error('Network error:', error);
+            }
+        })
+    };
+})*/

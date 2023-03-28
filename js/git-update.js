@@ -1802,7 +1802,7 @@ function submitRedemptionForm() {
     if (redeemSubmit != undefined) {
         redeemSubmit.addEventListener('click', (event) => {
             event.preventDefault();
-            redeemSubmit.setAttribute('disabled', 'disabled');
+            //redeemSubmit.setAttribute('disabled', 'disabled');
 
             let formData = new FormData();
             formData.append('prize_id', document.querySelector('#prize_id').value)
@@ -1818,7 +1818,7 @@ function submitRedemptionForm() {
                     return response.json();
                 })
                 .then((formResponse) => {
-                    redeemSubmit.removeAttribute('disabled', 'disabled');
+                    //redeemSubmit.removeAttribute('disabled', 'disabled');
                     console.log(formResponse);
                 })
                 .catch(error => {});

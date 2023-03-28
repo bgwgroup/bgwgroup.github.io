@@ -1801,16 +1801,25 @@ function submitRedemptionForm() {
     const url = 'https://bgwgroup.com.au/sammymas2023/post-redeem-send-email.php';
     let redeemSubmit = document.querySelector('#redeemSubmit');
 
+    let prizeID = undefined;
+
+    let redeemList = document.querySelector('#redeemList');
+    if (redeemList != undefined) {
+        redeemList.addEventListener('change', () => {
+            prizeID = redeemList.value;
+        });
+    }
+
     if (redeemSubmit != undefined) {
         redeemSubmit.addEventListener('click', (event) => {
             event.preventDefault();
             //redeemSubmit.setAttribute('disabled', 'disabled');
 
             let formData = new FormData();
-            formData.append('prize_id', document.querySelector('#redeemList').value)
-            formData.append('account_number', document.querySelector('#account_number').value)
-            formData.append('account_name', document.querySelector('#redeemAccountName').value)
-            formData.append('account_email', document.querySelector('#redeemAccountEmail').value)
+            formData.append('prize_id', prizeID);
+            formData.append('account_number', document.querySelector('#account_number').value);
+            formData.append('account_name', document.querySelector('#redeemAccountName').value);
+            formData.append('account_email', document.querySelector('#redeemAccountEmail').value);
 
             fetch(url, {
                     method: 'POST',

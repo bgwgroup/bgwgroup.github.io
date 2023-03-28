@@ -1413,7 +1413,8 @@ function getPrizeList() {
     // Test Sammy-mas promotion 2023 
 
     // create prizeList https://bgwgroup.github.io/data/sammy-mas-promo/prizeList.json
-    fetch("https://bgwgroup.github.io/data/sammy-mas-promo/prizeList.json")
+    let prizeListJSON = 'https://bgwgroup.github.io/data/sammy-mas-promo/prizeList.json';
+    fetch(prizeListJSON)
         .then((response) => response.json())
         .then((json) => {
             const sammySlide1 = json.slice(0, 8);
@@ -1731,12 +1732,6 @@ function getAccountDetails() {
                             // clear hidden elements
                             redeemFormHidden.innerHTML = '';
 
-                            let accountID = document.createElement('input');
-                            accountID.type = 'hidden';
-                            accountID.id = 'prize_id';
-                            accountID.setAttribute('name', 'prize_id');
-                            accountID.value = data[i]['id'];
-
                             let accountNumber = document.createElement('input');
                             accountNumber.type = 'hidden';
                             accountNumber.id = 'account_number';
@@ -1769,6 +1764,15 @@ function getAccountDetails() {
                             .then((products) => {
                                 // clear select element 
                                 redeemList.innerHTML = '';
+
+                                let prizeID = document.createElement('input');
+                                prizeID.type = 'hidden';
+                                prizeID.id = 'prize_id';
+                                prizeID.setAttribute('name', 'prize_id');
+                                prizeID.value = data[i]['id'];
+
+                                redeemFormHidden.appendChild(prizeID);
+
                                 for (let p = 0; p < products.length; p++) {
                                     // get eligible products based on points less than account points
                                     if (parseInt(products[p]['points']) <= Math.ceil(parseInt(redeemPoints.value))) {

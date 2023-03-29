@@ -1678,7 +1678,6 @@ function getCustomerPointsOnSearch() {
     if (pointSearch != undefined) {
         pointSearch.addEventListener('keyup', () => {
             let accountNumber = pointSearch.value;
-            console.log(accountNumber.length)
             if (accountNumber.length >= 2) {
                 setTimeout(function() {
                     fetch('https://bgwgroup.com.au/sammymas2023/get-total-customer-points.php?accountNumber=' + accountNumber)

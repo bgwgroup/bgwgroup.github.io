@@ -1704,6 +1704,8 @@ function getCustomerPointsOnSearch() {
     }
 }
 
+let redeemablePoints = undefined;
+
 function getAccountDetails() {
 
     let URL = "https://bgwgroup.com.au/sammymas2023/get-total-customer-points.php";
@@ -1735,44 +1737,38 @@ function getAccountDetails() {
 
                             let accountID = document.createElement('input');
                             accountID.type = 'hidden';
-                            accountID.id = 'misc_id';
-                            accountID.setAttribute('name', 'misc_id');
+                            accountID.id = 'prize_id';
+                            accountID.setAttribute('name','prize_id');
                             accountID.value = data[i]['id'];
-
+        
                             let accountNumber = document.createElement('input');
                             accountNumber.type = 'hidden';
                             accountNumber.id = 'account_number';
-                            accountNumber.setAttribute('name', 'account_number');
+                            accountNumber.setAttribute('name','account_number');
                             accountNumber.value = data[i]['account_number'];
-
+        
                             let accountHomeBranch = document.createElement('input');
                             accountHomeBranch.type = 'hidden';
                             accountHomeBranch.id = 'home_branch';
-                            accountHomeBranch.setAttribute('name', 'home_branch');
+                            accountHomeBranch.setAttribute('name','home_branch');
                             accountHomeBranch.value = data[i]['branch'];
-
-
-                            let redeemablePoints = document.createElement('input');
-                            redeemablePoints.type = 'hidden';
-                            redeemablePoints.id = 'redeemable_points';
-                            redeemablePoints.setAttribute('name', 'redeemable_points');
-                            let redeemedPoints = data[i]['redeemed_points'] || 0;
-                            redeemablePoints.value = accountPoints - redeemedPoints;
-
+        
                             redeemFormHidden.appendChild(accountID);
                             redeemFormHidden.appendChild(accountNumber);
                             redeemFormHidden.appendChild(accountHomeBranch);
-                            redeemFormHidden.appendChild(redeemablePoints);
-
+        
                             // add account name to field
                             redeemAccountName.value = data[i]['account_name'];
-
+        
                             // add customer points
-
+                            let redeemedPoints = data[i]['redeemed_points'] || 0;
+                            redeemPoints.value = accountPoints - redeemedPoints;
+                            redeemablePoints = accountPoints - redeemedPoints;
                             if ( redeemPoints.value < 10) {
                                 redeemError.innerHTML = '';
                                 redeemError.innerHTML = 'Sorry but you do not have enough points';
-                            }
+                            }  
+        
 
                         }
                         // search for list of eligible products
@@ -1836,7 +1832,7 @@ function submitRedemptionForm() {
             formData.append('account_number', document.querySelector('#account_number').value);
             formData.append('account_name', document.querySelector('#redeemAccountName').value);
             formData.append('account_email', document.querySelector('#redeemAccountEmail').value);
-
+            formData.append('redeemable_points', redeemablePoints);
             fetch(url, {
                     method: 'POST',
                     body: formData

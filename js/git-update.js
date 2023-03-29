@@ -1661,14 +1661,21 @@ function getCustomerPointsOnSearch() {
     if (pointSearch != undefined) {
         pointSearch.addEventListener('keyup', () => {
             let accountNumber = pointSearch.value;
+            console.log(accountNumber.length)
             if (accountNumber.length >= 2) {
-                console.log('More than 2');
                 setTimeout(function() {
                     fetch('https://bgwgroup.com.au/sammymas2023/get-total-customer-points.php?accountNumber=' + accountNumber)
                         .then((response) => {
                             return response.json();
                         })
                         .then((points) => {
+                            if (points.no_data == true) {
+                                nameSpan.innerHTML = `<span style='color: #C20;'>Sorry! Account number is not found!</span>`
+                                pointSpan.innerHTML = ""
+                            } else {
+                                nameSpan.innerHTML = ""
+                                pointSpan.innerHTML = ""
+                            }
 
                             for (let i = 0; i < points.length; i++) {
                                 let redeemedPoints = points[i].redeemed_points || 0;
@@ -1684,7 +1691,8 @@ function getCustomerPointsOnSearch() {
                         })
                         .catch((error) => {});
                 }, 800);
-            } else {
+            } 
+            else {
                 try {
                     loadingSpin.style.display = 'none';
                     pointResults.removeChild(nameSpan);
@@ -1719,7 +1727,6 @@ function getAccountDetails() {
                         return response.json();
                     })
                     .then((data) => {
-                        console.log(data)
                         for (let i = 0; i < data.length; i++) {
                             accountPoints = data[i]['total_points'];
 
@@ -1832,7 +1839,9 @@ function submitRedemptionForm() {
                 })
                 .then((formResponse) => {
                     //redeemSubmit.removeAttribute('disabled', 'disabled');
-                    console.log(formResponse);
+                    if (formResponse.email_sent === true ) {
+                        document.querySelector('#redeemForm').reset();
+                    }
                 })
                 .catch(error => {});
         });

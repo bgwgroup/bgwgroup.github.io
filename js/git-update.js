@@ -1629,16 +1629,30 @@ window.addEventListener('scroll', () => {
     if (!!ground) { ground.style.transform = `perspective(1500px) translate3d(0px, 0px, ${value/3}px)` };
 })
 
-let sammySlideCounter = 2;
-if (!!document.getElementById('s3-radio1')) {
-    setInterval(function() {
-        document.getElementById('s3-radio' + sammySlideCounter).checked = true;
-        sammySlideCounter++;
-        if (sammySlideCounter > 4) {
-            sammySlideCounter = 1;
-        }
-    }, 10000)
-}
+let incrementButton = document.querySelector(".carouselArrowRight");
+let decrementButton = document.querySelector(".carouselArrowLeft");
+let slideCount = 1;
+let carousleSlidercounter = 0;
+let SliderCount;
+incrementButton.addEventListener('click', () => {
+    carousleSlidercounter++;
+    SliderCount = slideCount + carousleSlidercounter
+    if ( carousleSlidercounter > 3) {
+        SliderCount = 1;
+        carousleSlidercounter = 0
+    }
+    document.getElementById('s3-radio' + SliderCount).checked = true;
+})
+
+decrementButton.addEventListener('click', () => {
+    carousleSlidercounter--;
+    SliderCount = slideCount + carousleSlidercounter
+    if ( carousleSlidercounter < 1) {
+        SliderCount = 1;
+        carousleSlidercounter = 4
+    }
+    document.getElementById('s3-radio' + SliderCount).checked = true;
+})
 
 //Sammy-mas-cutomers point
 

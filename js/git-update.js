@@ -1751,16 +1751,23 @@ function getAccountDetails() {
                             accountHomeBranch.setAttribute('name', 'home_branch');
                             accountHomeBranch.value = data[i]['branch'];
 
+
+                            let redeemablePoints = document.createElement('input');
+                            redeemablePoints.type = 'hidden';
+                            redeemablePoints.id = 'redeemable_points';
+                            redeemablePoints.setAttribute('name', 'redeemable_points');
+                            redeemPoints.value = accountPoints - redeemedPoints;
+
                             redeemFormHidden.appendChild(accountID);
                             redeemFormHidden.appendChild(accountNumber);
                             redeemFormHidden.appendChild(accountHomeBranch);
+                            redeemFormHidden.appendChild(redeemablePoints);
 
                             // add account name to field
                             redeemAccountName.value = data[i]['account_name'];
 
                             // add customer points
                             let redeemedPoints = data[i]['redeemed_points'] || 0;
-                            redeemPoints.value = accountPoints - redeemedPoints;
 
                             if ( redeemPoints.value < 10) {
                                 redeemError.innerHTML = '';
@@ -1822,7 +1829,7 @@ function submitRedemptionForm() {
     if (redeemSubmit != undefined) {
         redeemSubmit.addEventListener('click', (event) => {
             event.preventDefault();
-            //redeemSubmit.setAttribute('disabled', 'disabled');
+            redeemSubmit.setAttribute('disabled', 'disabled');
 
             let formData = new FormData();
             formData.append('prize_id', prizeID);
@@ -1838,10 +1845,11 @@ function submitRedemptionForm() {
                     return response.json();
                 })
                 .then((formResponse) => {
-                    //redeemSubmit.removeAttribute('disabled', 'disabled');
+                    redeemSubmit.classList.remove('spinnerLoading');
                     if (formResponse.email_sent === true ) {
                         document.querySelector('#redeemForm').reset();
                     }
+                    redeemError.innerHTML = "<span style='color: green'>Successfully redeemed! A confirmation email has been sent to you!</span>";
                 })
                 .catch(error => {});
         });

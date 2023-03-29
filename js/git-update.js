@@ -1757,7 +1757,7 @@ function getAccountDetails() {
                             redeemablePoints.id = 'redeemable_points';
                             redeemablePoints.setAttribute('name', 'redeemable_points');
                             let redeemedPoints = data[i]['redeemed_points'] || 0;
-                            redeemPoints.value = accountPoints - redeemedPoints;
+                            redeemablePoints.value = accountPoints - redeemedPoints;
 
                             redeemFormHidden.appendChild(accountID);
                             redeemFormHidden.appendChild(accountNumber);

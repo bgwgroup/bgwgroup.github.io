@@ -1634,26 +1634,29 @@ let decrementButton = document.querySelector(".carouselArrowLeft");
 let slideCount = 1;
 let carousleSlidercounter = 0;
 let SliderCount;
-incrementButton.addEventListener('click', () => {
-    carousleSlidercounter++;
-    SliderCount = slideCount + carousleSlidercounter
-    if ( carousleSlidercounter > 3) {
-        SliderCount = 1;
-        carousleSlidercounter = 0
-    }
-    document.getElementById('s3-radio' + SliderCount).checked = true;
-})
 
-decrementButton.addEventListener('click', () => {
-    carousleSlidercounter--;
-    SliderCount = slideCount + carousleSlidercounter
-    if ( carousleSlidercounter < 1) {
-        SliderCount = 1;
-        carousleSlidercounter = 4
-    }
-    document.getElementById('s3-radio' + SliderCount).checked = true;
-})
-
+if(!!incrementButton) {
+    incrementButton.addEventListener('click', () => {
+        carousleSlidercounter++;
+        SliderCount = slideCount + carousleSlidercounter
+        if ( carousleSlidercounter > 3) {
+            SliderCount = 1;
+            carousleSlidercounter = 0
+        }
+        document.getElementById('s3-radio' + SliderCount).checked = true;
+    })
+}
+if(!!decrementButton) {
+    decrementButton.addEventListener('click', () => {
+        carousleSlidercounter--;
+        SliderCount = slideCount + carousleSlidercounter
+        if ( carousleSlidercounter < 1) {
+            SliderCount = 1;
+            carousleSlidercounter = 4
+        }
+        document.getElementById('s3-radio' + SliderCount).checked = true;
+    })
+}
 //Sammy-mas-cutomers point
 
 window.addEventListener('DOMContentLoaded', () => {

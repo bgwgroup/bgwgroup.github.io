@@ -1857,6 +1857,7 @@ function submitRedemptionForm() {
                 .then((formResponse) => {
                     // redeemSubmit.removeAttribute('disabled', 'disabled');
                     redeemSubmit.classList.remove('spinnerLoading');
+                    redeemSubmit.classList.add('redeem-disabled');
                     if (formResponse.email_sent === true ) {
                         document.querySelector('#redeemForm').reset();
                     }

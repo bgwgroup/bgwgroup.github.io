@@ -1572,7 +1572,7 @@ function accordion() {
 }
 
 function pointsPerModelFiterSearch() {
-    let searchInput = document.querySelector('.dip-codes-search input[type="text"]');
+    let searchInput = document.querySelector('.dip-codes-search input');
 
     if (searchInput != undefined) {
         let tableBody = document.querySelectorAll('.model-table-body')

@@ -1871,10 +1871,9 @@ function submitRedemptionForm() {
 // Sherriff Victoria landing page 2023
 
 let sec5FAQaccordion = document.getElementsByClassName("sec-5-FAQs-accordion");
-let i;
 
 if (!!sec5FAQaccordion) {
-    for (i = 0; i < sec5FAQaccordion.length; i++) {
+    for (let i = 0; i < sec5FAQaccordion.length; i++) {
             sec5FAQaccordion[i].addEventListener("click", function() {
         this.classList.toggle("sec-5-FAQs-active");
         let s5FAQpanel = this.nextElementSibling;

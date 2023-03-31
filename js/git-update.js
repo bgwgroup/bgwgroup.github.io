@@ -1578,7 +1578,7 @@ function pointsPerModelFiterSearch() {
         let tableBody = document.querySelectorAll('.model-table-body')
         let tableBodyList = document.querySelectorAll('.model-table-body ul');
 
-        searchInput.addEventListener('keyup', () => {
+        searchInput.addEventListener('keyup touchend', () => {
             let filterValue = searchInput.value.toUpperCase();
             let totalListNumber = tableBodyList.length;
 

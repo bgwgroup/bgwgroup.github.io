@@ -3821,6 +3821,7 @@ max-width:150px;
 @media only screen and (max-width: 992px) {
  	#samBody.productSearchList .scaffoldProductSearchItemWrapperTop{
 		flex-direction: column;
+		margin-bottom: 1rem;
 	}
 	#samBody.productSearchList .scaffoldProductSearchItemWrapperImage{
 		flex: 1;

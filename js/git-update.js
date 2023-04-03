@@ -1868,7 +1868,7 @@ function submitRedemptionForm() {
     }
 }
 
-// Sherriff Victoria landing page 2023
+// ============================== Sherriff Victoria landing page 2023 =============================================
 
 let sec5FAQaccordion = document.getElementsByClassName("sec-5-FAQs-accordion");
 
@@ -1883,5 +1883,64 @@ if (!!sec5FAQaccordion) {
             s5FAQpanel.style.maxHeight = s5FAQpanel.scrollHeight + "px";
         }
         });
+    }
+}
+
+let TestimonySlideIndex = 1;
+let testimonyS3Slides = document.getElementsByClassName("sec-3-testimony-slides");
+if (!!testimonyS3Slides) {
+showSlides(TestimonySlideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(TestimonySlideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(TestimonySlideIndex = n);
+}
+
+    function showSlides(n) {
+        let i;
+        let s3TestimonyDots = document.getElementsByClassName("s3-testimony-dot");
+        if (n > testimonyS3Slides.length) {TestimonySlideIndex = 1}
+        if (n < 1) {TestimonySlideIndex = testimonyS3Slides.length}
+        for (i = 0; i < testimonyS3Slides.length; i++) {
+            testimonyS3Slides[i].style.display = "none";
+        }
+        for (i = 0; i < s3TestimonyDots.length; i++) {
+            s3TestimonyDots[i].className = s3TestimonyDots[i].className.replace(" active", "");
+        }
+        testimonyS3Slides[TestimonySlideIndex-1].style.display = "flex";
+        testimonyS3Slides[TestimonySlideIndex-1].style.justifyContent = "space-evenly";
+        s3TestimonyDots[TestimonySlideIndex-1].className += " active";
+    }
+}
+
+
+
+let modalImageContainer = document.getElementById("modalImageContainer");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+let testimonyImages = document.querySelectorAll(".testimony-img");
+
+if (!!testimonyImages) {
+    for (let i = 0; i < testimonyImages.length; i++ ) {
+        let modalTestimonyImg = document.getElementById("modal-testimony-img");
+        testimonyImages[i].onclick = function(){
+        modalImageContainer.style.display = "block";
+        modalTestimonyImg.src = this.src;
+        }
+    }
+}
+
+// Get the <span> element that closes the modal
+let closeTestimonyBtn = document.getElementsByClassName("close-testimony-img")[0];
+
+// When the user clicks on <span> (x), close the modal
+if (!!closeTestimonyBtn) {
+    closeTestimonyBtn.onclick = function() {
+        modalImageContainer.style.display = "none";
     }
 }

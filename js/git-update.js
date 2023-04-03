@@ -1893,7 +1893,8 @@ function showSlides(n) {
     if (n > testimonyS3Slides.length) {TestimonySlideIndex = 1}
     if (n < 1) {TestimonySlideIndex = testimonyS3Slides.length}
     for (let i = 0; i < testimonyS3Slides.length; i++) {
-        testimonyS3Slides[i].style.display = "none";
+        console.log(testimonyS3Slides.length)
+        testimonyS3Slides[i].style.display = "flex";
     }
     for (let i = 0; i < s3TestimonyDots.length; i++) {
         s3TestimonyDots[i].className = s3TestimonyDots[i].className.replace(" active", "");

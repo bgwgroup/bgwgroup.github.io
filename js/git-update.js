@@ -1888,7 +1888,6 @@ if (!!sec5FAQaccordion) {
 
 let TestimonySlideIndex = 1;
 let testimonyS3Slides = document.getElementsByClassName("sec-3-testimony-slides");
-if (!!testimonyS3Slides) {
 showSlides(TestimonySlideIndex);
 
 // Next/previous controls
@@ -1901,24 +1900,21 @@ function currentSlide(n) {
   showSlides(TestimonySlideIndex = n);
 }
 
-    function showSlides(n) {
-        let i;
-        let s3TestimonyDots = document.getElementsByClassName("s3-testimony-dot");
-        if (n > testimonyS3Slides.length) {TestimonySlideIndex = 1}
-        if (n < 1) {TestimonySlideIndex = testimonyS3Slides.length}
-        for (i = 0; i < testimonyS3Slides.length; i++) {
-            testimonyS3Slides[i].style.display = "none";
-        }
-        for (i = 0; i < s3TestimonyDots.length; i++) {
-            s3TestimonyDots[i].className = s3TestimonyDots[i].className.replace(" active", "");
-        }
-        testimonyS3Slides[TestimonySlideIndex-1].style.display = "flex";
-        testimonyS3Slides[TestimonySlideIndex-1].style.justifyContent = "space-evenly";
-        s3TestimonyDots[TestimonySlideIndex-1].className += " active";
+function showSlides(n) {
+    let i;
+    let s3TestimonyDots = document.getElementsByClassName("s3-testimony-dot");
+    if (n > testimonyS3Slides.length) {TestimonySlideIndex = 1}
+    if (n < 1) {TestimonySlideIndex = testimonyS3Slides.length}
+    for (i = 0; i < testimonyS3Slides.length; i++) {
+        testimonyS3Slides[i].style.display = "none";
     }
+    for (i = 0; i < s3TestimonyDots.length; i++) {
+        s3TestimonyDots[i].className = s3TestimonyDots[i].className.replace(" active", "");
+    }
+    testimonyS3Slides[TestimonySlideIndex-1].style.display = "flex";
+    testimonyS3Slides[TestimonySlideIndex-1].style.justifyContent = "space-evenly";
+    s3TestimonyDots[TestimonySlideIndex-1].className += " active";
 }
-
-
 
 let modalImageContainer = document.getElementById("modalImageContainer");
 

@@ -1886,30 +1886,29 @@ if (!!sec5FAQaccordion) {
     }
 }
 
-// let TestimonySlideIndex = 1;
-// function showSlides(n) {
-//     let testimonyS3Slides = document.getElementsByClassName("sec-3-testimony-slides");
-//     let s3TestimonyDots = document.getElementsByClassName("s3-testimony-dot");
-//     if (n > testimonyS3Slides.length) {TestimonySlideIndex = 1}
-//     if (n < 1) {TestimonySlideIndex = testimonyS3Slides.length}
-//     for (let i = 0; i < testimonyS3Slides.length; i++) {
-//         console.log(testimonyS3Slides.length)
-//         testimonyS3Slides[i].style.display = "flex";
-//     }
-//     for (let i = 0; i < s3TestimonyDots.length; i++) {
-//         s3TestimonyDots[i].className = s3TestimonyDots[i].className.replace(" active", "");
-//     }
-//     testimonyS3Slides[TestimonySlideIndex-1].style.display = "flex";
-//     testimonyS3Slides[TestimonySlideIndex-1].style.justifyContent = "space-evenly";
-//     s3TestimonyDots[TestimonySlideIndex-1].className += " active";
-// }
+let TestimonySlideIndex = 1;
+function showSlides(n) {
+    let testimonyS3Slides = document.getElementsByClassName("sec-3-testimony-slides");
+    let s3TestimonyDots = document.getElementsByClassName("s3-testimony-dot");
+    if (n > testimonyS3Slides.length) {TestimonySlideIndex = 1}
+    if (n < 1) {TestimonySlideIndex = testimonyS3Slides.length}
+    for (let i = 0; i < testimonyS3Slides.length; i++) {
+        testimonyS3Slides[i].style.display = "none";
+    }
+    for (let i = 0; i < s3TestimonyDots.length; i++) {
+        s3TestimonyDots[i].className = s3TestimonyDots[i].className.replace(" active", "");
+    }
+    testimonyS3Slides[TestimonySlideIndex-1].style.display = "flex";
+    testimonyS3Slides[TestimonySlideIndex-1].style.justifyContent = "space-evenly";
+    s3TestimonyDots[TestimonySlideIndex-1].className += " active";
+}
 
-// showSlides(TestimonySlideIndex);
+showSlides(TestimonySlideIndex);
 
-// // Next/previous controls
-// function plusSlides(n) {
-//     showSlides(TestimonySlideIndex += n);
-// }
+// Next/previous controls
+function plusSlides(n) {
+    showSlides(TestimonySlideIndex += n);
+}
 
 let modalImageContainer = document.getElementById("modalImageContainer");
 

@@ -1887,13 +1887,9 @@ if (!!sec5FAQaccordion) {
 }
 
 let TestimonySlideIndex = 1;
-let testimonyS3Slides = document.getElementsByClassName("sec-3-testimony-slides");
-let s3TestimonyDots = document.getElementsByClassName("s3-testimony-dot");
-
-
-// Next/previous controls
-
 function showSlides(n) {
+    let testimonyS3Slides = document.getElementsByClassName("sec-3-testimony-slides");
+    let s3TestimonyDots = document.getElementsByClassName("s3-testimony-dot");
     if (n > testimonyS3Slides.length) {TestimonySlideIndex = 1}
     if (n < 1) {TestimonySlideIndex = testimonyS3Slides.length}
     for (let i = 0; i < testimonyS3Slides.length; i++) {
@@ -1906,10 +1902,13 @@ function showSlides(n) {
     testimonyS3Slides[TestimonySlideIndex-1].style.justifyContent = "space-evenly";
     s3TestimonyDots[TestimonySlideIndex-1].className += " active";
 }
+
+showSlides(TestimonySlideIndex);
+
+// Next/previous controls
 function plusSlides(n) {
     showSlides(TestimonySlideIndex += n);
 }
-showSlides(TestimonySlideIndex);
 
 let modalImageContainer = document.getElementById("modalImageContainer");
 

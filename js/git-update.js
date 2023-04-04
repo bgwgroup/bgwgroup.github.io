@@ -1905,8 +1905,8 @@ function showS3TestimonySlides(n) {
         s3TestimonyDots[i].className = s3TestimonyDots[i].className.replace(" active", "");
     }
     if(!!testimonyS3Slides) {
-        Array.from(testimonyS3Slides)[TestimonySlideIndex-1].style.display = "flex";
-        Array.from(testimonyS3Slides)[TestimonySlideIndex-1].style.justifyContent = "space-evenly";
+        if(!!Array.from(testimonyS3Slides)[TestimonySlideIndex-1]) {Array.from(testimonyS3Slides)[TestimonySlideIndex-1].style.display = "flex";}
+        if(!!Array.from(testimonyS3Slides)[TestimonySlideIndex-1]) {Array.from(testimonyS3Slides)[TestimonySlideIndex-1].style.justifyContent = "space-evenly";}
         s3TestimonyDots[TestimonySlideIndex-1].className += " active";
     }
 }

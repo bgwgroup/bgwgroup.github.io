@@ -1907,7 +1907,7 @@ function showS3TestimonySlides(n) {
     if(!!testimonyS3Slides) {
         if(!!Array.from(testimonyS3Slides)[TestimonySlideIndex-1]) {Array.from(testimonyS3Slides)[TestimonySlideIndex-1].style.display = "flex";}
         if(!!Array.from(testimonyS3Slides)[TestimonySlideIndex-1]) {Array.from(testimonyS3Slides)[TestimonySlideIndex-1].style.justifyContent = "space-evenly";}
-        s3TestimonyDots[TestimonySlideIndex-1].className += " active";
+        if(!!s3TestimonyDots[TestimonySlideIndex-1]) {s3TestimonyDots[TestimonySlideIndex-1].className += " active";}
     }
 }
 

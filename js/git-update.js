@@ -1887,6 +1887,12 @@ if (!!sec5FAQaccordion) {
 }
 
 let TestimonySlideIndex = 1;
+showSlides(TestimonySlideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+    showSlides(TestimonySlideIndex += n);
+}
 function showSlides(n) {
     let testimonyS3Slides = document.getElementsByClassName("sec-3-testimony-slides");
     let s3TestimonyDots = document.getElementsByClassName("s3-testimony-dot");
@@ -1899,17 +1905,10 @@ function showSlides(n) {
         s3TestimonyDots[i].className = s3TestimonyDots[i].className.replace(" active", "");
     }
     if(!!testimonyS3Slides) {
-        testimonyS3Slides[TestimonySlideIndex-1]?.style.display = "flex";
-        testimonyS3Slides[TestimonySlideIndex-1]?.style.justifyContent = "space-evenly";
+        Array.from(testimonyS3Slides)[TestimonySlideIndex-1].style.display = "flex";
+        Array.from(testimonyS3Slides)[TestimonySlideIndex-1].style.justifyContent = "space-evenly";
         s3TestimonyDots[TestimonySlideIndex-1].className += " active";
     }
-}
-
-showSlides(TestimonySlideIndex);
-
-// Next/previous controls
-function plusSlides(n) {
-    showSlides(TestimonySlideIndex += n);
 }
 
 let modalImageContainer = document.getElementById("modalImageContainer");

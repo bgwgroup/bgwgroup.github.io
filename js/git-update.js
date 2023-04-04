@@ -1898,9 +1898,11 @@ function showSlides(n) {
     for (let i = 0; i < s3TestimonyDots.length; i++) {
         s3TestimonyDots[i].className = s3TestimonyDots[i].className.replace(" active", "");
     }
-    testimonyS3Slides[TestimonySlideIndex-1].style.display = "flex";
-    testimonyS3Slides[TestimonySlideIndex-1].style.justifyContent = "space-evenly";
-    s3TestimonyDots[TestimonySlideIndex-1].className += " active";
+    if(!!testimonyS3Slides) {
+        testimonyS3Slides[TestimonySlideIndex-1].style.display = "flex";
+        testimonyS3Slides[TestimonySlideIndex-1].style.justifyContent = "space-evenly";
+        s3TestimonyDots[TestimonySlideIndex-1].className += " active";
+    }
 }
 
 showSlides(TestimonySlideIndex);

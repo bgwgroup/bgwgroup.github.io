@@ -1899,8 +1899,8 @@ function showSlides(n) {
         s3TestimonyDots[i].className = s3TestimonyDots[i].className.replace(" active", "");
     }
     if(!!testimonyS3Slides) {
-        testimonyS3Slides[TestimonySlideIndex-1].style.display = "flex";
-        testimonyS3Slides[TestimonySlideIndex-1].style.justifyContent = "space-evenly";
+        testimonyS3Slides[TestimonySlideIndex-1]?.style.display = "flex";
+        testimonyS3Slides[TestimonySlideIndex-1]?.style.justifyContent = "space-evenly";
         s3TestimonyDots[TestimonySlideIndex-1].className += " active";
     }
 }

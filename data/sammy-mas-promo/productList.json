@@ -169,7 +169,7 @@
     },
     {
       "id": "314",
-      "product_code": "AVGQIK15",
+      "proAVGTVA20CHP-Iode": "AVGQIK15",
       "product_description": "QUICKIE KIT - QIK15",
       "points": "1",
       "product_brand": "avg"
@@ -178,140 +178,140 @@
       "id": "313",
       "product_code": "AVGTVA20C-I",
       "product_description": "TEMPERING VALVE INSULATED 20MM",
-      "points": "1",
+      "points": "0.5",
       "product_brand": "avg"
     },
     {
       "id": "312",
       "product_code": "AVGTVA20CHP-I",
       "product_description": "TEMPERING VALVE HP 20MM",
-      "points": "1",
+      "points": "0.5",
       "product_brand": "avg"
     },
     {
       "id": "311",
       "product_code": "AVGTVA15C-I",
       "product_description": "TEMPERING VALVE 15MM",
-      "points": "1",
+      "points": "0.5",
       "product_brand": "avg"
     },
     {
       "id": "310",
       "product_code": "AVGTVA15CHP-I",
       "product_description": "TEMPERING VALVE 15MM HP",
-      "points": "1",
+      "points": "0.5",
       "product_brand": "avg"
     },
     {
       "id": "309",
       "product_code": "AVGPLV20F-TRISET",
       "product_description": "PLV TRISET F&F 350-500-600KPA 20MM",
-      "points": "1",
+      "points": "0.5",
       "product_brand": "avg"
     },
     {
       "id": "308",
       "product_code": "AVGPLV20C-TRISET",
       "product_description": "PLV TRISET COMP 350-500-600KPA 20MM",
-      "points": "1",
+      "points": "0.5",
       "product_brand": "avg"
     },
     {
       "id": "307",
       "product_code": "AVGPLV15F-TRISET",
       "product_description": "PLV TRISET F&F 300 500-600KPA 15MM",
-      "points": "1",
+      "points": "0.5",
       "product_brand": "avg"
     },
     {
       "id": "306",
       "product_code": "AVGPLV15C-TRISET",
       "product_description": "PLV TRISET COMP 350-500-600KPA 15MM",
-      "points": "1",
+      "points": "0.5",
       "product_brand": "avg"
     },
     {
       "id": "305",
       "product_code": "AVGNRI-PRV-20C",
       "product_description": "NRI/PRV COMBO 150-600KPA COMP 20MM",
-      "points": "1",
+      "points": "0.5",
       "product_brand": "avg"
     },
     {
       "id": "304",
       "product_code": "AVGNRI-PRV-15C",
       "product_description": "NRI/PRV COMBO 150-600KPA COMP 15MM",
-      "points": "1",
+      "points": "0.5",
       "product_brand": "avg"
     },
     {
       "id": "303",
       "product_code": "AVGNRIBVS-20F",
       "product_description": "NON-RET ISOLAT VALVE W-FILTER F&F 20MM",
-      "points": "1",
+      "points": "0.5",
       "product_brand": "avg"
     },
     {
       "id": "302",
       "product_code": "AVGNRIBVS-20C",
       "product_description": "VALVE NRI75 W-FILTER COMP 20MM",
-      "points": "1",
+      "points": "0.5",
       "product_brand": "avg"
     },
     {
       "id": "301",
       "product_code": "AVGNRIBVS-15F",
       "product_description": "VALVE NRI50 W-FILTER FL-FL 15MM",
-      "points": "1",
+      "points": "0.5",
       "product_brand": "avg"
     },
     {
       "id": "300",
       "product_code": "AVGNRIBVS-15C",
       "product_description": "VALVE NRI50 W-FILTER COMP 15MM",
-      "points": "1",
+      "points": "0.5",
       "product_brand": "avg"
     },
     {
       "id": "299",
       "product_code": "AVGNRIBV-20F",
       "product_description": "NON-RETURN ISOLATING VALVE F&F 20MM",
-      "points": "1",
+      "points": "0.5",
       "product_brand": "avg"
     },
     {
       "id": "298",
       "product_code": "AVGNRIBV-20C",
       "product_description": "VALVE NRI75 COMP 20MM",
-      "points": "1",
+      "points": "0.5",
       "product_brand": "avg"
     },
     {
       "id": "297",
       "product_code": "AVGNRIBV-15INV",
       "product_description": "VALVE NRI50 FL-FL 15MM",
-      "points": "1",
+      "points": "0.5",
       "product_brand": "avg"
     },
     {
       "id": "296",
       "product_code": "AVGNRIBV-15F",
       "product_description": "VALVE NRI50 F&F 15MM",
-      "points": "1",
+      "points": "0.5",
       "product_brand": "avg"
     },
     {
       "id": "295",
       "product_code": "AVGNRIBV-15C",
       "product_description": "VALVE NRI50 COMP 15MM",
-      "points": "1",
+      "points": "0.5",
       "product_brand": "avg"
     },
     {
       "id": "294",
       "product_code": "AVGHTCV-15F-15C",
       "product_description": "NON RETURN VALVE HT 15MM FI",
-      "points": "1",
+      "points": "0.5",
       "product_brand": "avg"
     },
     {

@@ -1976,7 +1976,6 @@ document.addEventListener("DOMContentLoaded", function () {
   let getQtyPredefinedPDP = document.querySelector(
     ".scaffoldProductDisplayDataQuantity .qty"
   );
-  console.log(getQtyPredefinedPDP);
 
   if (
     typeof getQtyPredefinedPDP != "undefined" &&

@@ -2021,7 +2021,7 @@ document.addEventListener("DOMContentLoaded", function () {
           "td:nth-child(6)"
         );
 
-      if (test.innerText == "METRE") {
+      if (test.innerText == "METRE" || test.innerText == "PER METRE") {
         input.disabled = "true";
         input.style.cursor = "not-allowed";
       }

@@ -1939,6 +1939,7 @@ if (!!closeTestimonyBtn) {
 /* Temp functionality to handle per length qty cases */
 document.addEventListener("DOMContentLoaded", function () {
   let getQtyPredefined = document.querySelectorAll(".productSearchQty");
+    console.log(getQtyPredefined);
 
   if (typeof getQtyPredefined != "undefined" && getQtyPredefined != null) {
     for (const input of getQtyPredefined) {
@@ -1976,6 +1977,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let getQtyPredefinedPDP = document.querySelector(
     ".scaffoldProductDisplayDataQuantity .qty"
   );
+    console.log(getQtyPredefinedPDP);
 
   if (
     typeof getQtyPredefinedPDP != "undefined" &&
@@ -2010,6 +2012,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   let getQtyPredefinedCart = document.querySelectorAll(".cart-qty");
+  console.log(getQtyPredefinedCart);
 
   if (
     typeof getQtyPredefinedCart != "undefined" &&

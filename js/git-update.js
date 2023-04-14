@@ -2027,6 +2027,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (test.innerText == "METRE" || test.innerText == "PER METRE") {
         input.disabled = "true";
         input.style.cursor = "not-allowed";
+          console.log(input, "<<<<");
       }
     }
   }

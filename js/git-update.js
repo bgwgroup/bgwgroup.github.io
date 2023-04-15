@@ -2024,10 +2024,37 @@ document.addEventListener("DOMContentLoaded", function () {
           "td:nth-child(6)"
         );
 
-      if (test.innerText == "METRE" || test.innerText == "PER METRE") {
+      if (test.innerText == "METRE" || test.innerText == "PER METRE" || test.innerText == "metre" || test.innerText == "per metre") {
+
+
+        let getInitValue = parseInt(input.value);
+        let getInputInc = input.parentElement.querySelector(
+          ".productSearchQtyInc"
+        );
+        let getInputDec = input.parentElement.querySelector(
+          ".productSearchQtyDec"
+        );
+
         input.disabled = "true";
         input.style.cursor = "not-allowed";
-          console.log(input, "<<<<");
+
+        getInputInc.addEventListener("click", () => {
+          input.value--;
+          x = parseInt(input.value) + getInitValue;
+          input.value = x;
+        });
+
+        getInputDec.addEventListener("click", () => {
+          input.value++;
+          if (input.value == getInitValue) {
+            input.value = getInitValue;
+          } else if (input.value >= getInitValue) {
+            x = parseInt(input.value) - getInitValue;
+            input.value = x;
+          }
+        });
+          
+          
       }
     }
   }

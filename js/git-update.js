@@ -1937,121 +1937,121 @@ if (!!closeTestimonyBtn) {
 }
 
 /* Temp functionality to handle per length qty cases */
-document.addEventListener("DOMContentLoaded", function () {
-  let getQtyPredefined = document.querySelectorAll(".productSearchQty");
+// document.addEventListener("DOMContentLoaded", function () {
+//   let getQtyPredefined = document.querySelectorAll(".productSearchQty");
 
-  if (typeof getQtyPredefined != "undefined" && getQtyPredefined != null) {
-    for (const input of getQtyPredefined) {
-      if (input.value > 1) {
-        let getInitValue = parseInt(input.value);
-        let getInputInc = input.parentElement.querySelector(
-          ".productSearchQtyInc"
-        );
-        let getInputDec = input.parentElement.querySelector(
-          ".productSearchQtyDec"
-        );
+//   if (typeof getQtyPredefined != "undefined" && getQtyPredefined != null) {
+//     for (const input of getQtyPredefined) {
+//       if (input.value > 1) {
+//         let getInitValue = parseInt(input.value);
+//         let getInputInc = input.parentElement.querySelector(
+//           ".productSearchQtyInc"
+//         );
+//         let getInputDec = input.parentElement.querySelector(
+//           ".productSearchQtyDec"
+//         );
 
-        input.disabled = "true";
-        input.style.cursor = "not-allowed";
+//         input.disabled = "true";
+//         input.style.cursor = "not-allowed";
 
-        getInputInc.addEventListener("click", () => {
-          input.value--;
-          x = parseInt(input.value) + getInitValue;
-          input.value = x;
-        });
+//         getInputInc.addEventListener("click", () => {
+//           input.value--;
+//           x = parseInt(input.value) + getInitValue;
+//           input.value = x;
+//         });
 
-        getInputDec.addEventListener("click", () => {
-          input.value++;
-          if (input.value == getInitValue) {
-            input.value = getInitValue;
-          } else if (input.value >= getInitValue) {
-            x = parseInt(input.value) - getInitValue;
-            input.value = x;
-          }
-        });
-      }
-    }
-  }
+//         getInputDec.addEventListener("click", () => {
+//           input.value++;
+//           if (input.value == getInitValue) {
+//             input.value = getInitValue;
+//           } else if (input.value >= getInitValue) {
+//             x = parseInt(input.value) - getInitValue;
+//             input.value = x;
+//           }
+//         });
+//       }
+//     }
+//   }
 
-  let getQtyPredefinedPDP = document.querySelector(
-    ".scaffoldProductDisplayDataQuantity .qty"
-  );
+//   let getQtyPredefinedPDP = document.querySelector(
+//     ".scaffoldProductDisplayDataQuantity .qty"
+//   );
 
-  if (
-    typeof getQtyPredefinedPDP != "undefined" &&
-    getQtyPredefinedPDP != null
-  ) {
-    if (getQtyPredefinedPDP.value > 1) {
-      let getInitValue = parseInt(getQtyPredefinedPDP.value);
-      let getInputInc =
-        getQtyPredefinedPDP.parentElement.querySelector(".qtyInputInc");
-      let getInputDec =
-        getQtyPredefinedPDP.parentElement.querySelector(".qtyInputDec");
+//   if (
+//     typeof getQtyPredefinedPDP != "undefined" &&
+//     getQtyPredefinedPDP != null
+//   ) {
+//     if (getQtyPredefinedPDP.value > 1) {
+//       let getInitValue = parseInt(getQtyPredefinedPDP.value);
+//       let getInputInc =
+//         getQtyPredefinedPDP.parentElement.querySelector(".qtyInputInc");
+//       let getInputDec =
+//         getQtyPredefinedPDP.parentElement.querySelector(".qtyInputDec");
 
-      getQtyPredefinedPDP.disabled = "true";
-      getQtyPredefinedPDP.style.cursor = "not-allowed";
+//       getQtyPredefinedPDP.disabled = "true";
+//       getQtyPredefinedPDP.style.cursor = "not-allowed";
 
-      getInputInc.addEventListener("click", () => {
-        getQtyPredefinedPDP.value--;
-        x = parseInt(getQtyPredefinedPDP.value) + getInitValue;
-        getQtyPredefinedPDP.value = x;
-      });
+//       getInputInc.addEventListener("click", () => {
+//         getQtyPredefinedPDP.value--;
+//         x = parseInt(getQtyPredefinedPDP.value) + getInitValue;
+//         getQtyPredefinedPDP.value = x;
+//       });
 
-      getInputDec.addEventListener("click", () => {
-        getQtyPredefinedPDP.value++;
-        if (getQtyPredefinedPDP.value == getInitValue) {
-          getQtyPredefinedPDP.value = getInitValue;
-        } else if (getQtyPredefinedPDP.value >= getInitValue) {
-          x = parseInt(getQtyPredefinedPDP.value) - getInitValue;
-          getQtyPredefinedPDP.value = x;
-        }
-      });
-    }
-  }
+//       getInputDec.addEventListener("click", () => {
+//         getQtyPredefinedPDP.value++;
+//         if (getQtyPredefinedPDP.value == getInitValue) {
+//           getQtyPredefinedPDP.value = getInitValue;
+//         } else if (getQtyPredefinedPDP.value >= getInitValue) {
+//           x = parseInt(getQtyPredefinedPDP.value) - getInitValue;
+//           getQtyPredefinedPDP.value = x;
+//         }
+//       });
+//     }
+//   }
 
   
-  let getQtyPredefinedCart = document.querySelectorAll(".cart-qty");
+//   let getQtyPredefinedCart = document.querySelectorAll(".cart-qty");
 
-  if (
-    typeof getQtyPredefinedCart != "undefined" &&
-    getQtyPredefinedCart != null
-  ) {
-    for (const input of getQtyPredefinedCart) {
-      let test =
-        input.parentElement.parentElement.parentElement.querySelector(".item-baseprice span");
+//   if (
+//     typeof getQtyPredefinedCart != "undefined" &&
+//     getQtyPredefinedCart != null
+//   ) {
+//     for (const input of getQtyPredefinedCart) {
+//       let test =
+//         input.parentElement.parentElement.parentElement.querySelector(".item-baseprice span");
         
-      if (test.innerText == "(METRE)" || test.innerText == "(PER METRE)" || test.innerText == "(metre)" || test.innerText == "(per metre)" || test.innerText == "(METER)" || test.innerText == "(PER METER)" || test.innerText == "(meter)" || test.innerText == "(per meter)") {
+//       if (test.innerText == "(METRE)" || test.innerText == "(PER METRE)" || test.innerText == "(metre)" || test.innerText == "(per metre)" || test.innerText == "(METER)" || test.innerText == "(PER METER)" || test.innerText == "(meter)" || test.innerText == "(per meter)") {
 
 
-        let getInitValue = parseInt(input.value);
-        let getInputInc = input.parentElement.querySelector(
-          ".productSearchQtyInc"
-        );
-        let getInputDec = input.parentElement.querySelector(
-          ".productSearchQtyDec"
-        );
+//         let getInitValue = parseInt(input.value);
+//         let getInputInc = input.parentElement.querySelector(
+//           ".productSearchQtyInc"
+//         );
+//         let getInputDec = input.parentElement.querySelector(
+//           ".productSearchQtyDec"
+//         );
 
-        input.disabled = "true";
-        input.style.cursor = "not-allowed";
+//         input.disabled = "true";
+//         input.style.cursor = "not-allowed";
 
-        getInputInc.addEventListener("click", () => {
-          input.value--;
-          x = parseInt(input.value) + getInitValue;
-          input.value = x;
-        });
+//         getInputInc.addEventListener("click", () => {
+//           input.value--;
+//           x = parseInt(input.value) + getInitValue;
+//           input.value = x;
+//         });
 
-        getInputDec.addEventListener("click", () => {
-          input.value++;
-          if (input.value == getInitValue) {
-            input.value = getInitValue;
-          } else if (input.value >= getInitValue) {
-            x = parseInt(input.value) - getInitValue;
-            input.value = x;
-          }
-        });
+//         getInputDec.addEventListener("click", () => {
+//           input.value++;
+//           if (input.value == getInitValue) {
+//             input.value = getInitValue;
+//           } else if (input.value >= getInitValue) {
+//             x = parseInt(input.value) - getInitValue;
+//             input.value = x;
+//           }
+//         });
           
           
-      }
-    }
-  }
-});
+//       }
+//     }
+//   }
+// });

@@ -2057,4 +2057,59 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
 
+
+
+
+
+    let getQtyPredefinedCheckout = document.querySelectorAll(".item-form .cart-qty");
+
+    if (
+      typeof getQtyPredefinedCheckout != "undefined" &&
+      getQtyPredefinedCheckout != null
+    ) {
+      for (const input of getQtyPredefinedCheckout) {
+        let test = input.parentElement.parentElement.parentElement.querySelector(
+          ".item-baseprice span"
+        );
+
+        if (
+          test.innerText == "(METRE)" ||
+          test.innerText == "(PER METRE)" ||
+          test.innerText == "(metre)" ||
+          test.innerText == "(per metre)" ||
+          test.innerText == "(METER)" ||
+          test.innerText == "(PER METER)" ||
+          test.innerText == "(meter)" ||
+          test.innerText == "(per meter)"
+        ) {
+          let getInitValue = parseInt(input.getAttribute("min"));
+          let getInputInc = input.parentElement.querySelector(
+            ".productSearchQtyInc"
+          );
+          let getInputDec = input.parentElement.querySelector(
+            ".productSearchQtyDec"
+          );
+
+          input.style.cursor = "not-allowed";
+          input.style.pointerEvents = "none";
+
+          getInputInc.addEventListener("click", () => {
+            input.value--;
+            x = parseInt(input.value) + getInitValue;
+            input.value = x;
+          });
+
+          getInputDec.addEventListener("click", () => {
+            input.value++;
+            if (input.value == getInitValue) {
+              input.value = getInitValue;
+            } else if (input.value >= getInitValue) {
+              x = parseInt(input.value) - getInitValue;
+              input.value = x;
+            }
+          });
+        }
+      }
+    }
+
 });

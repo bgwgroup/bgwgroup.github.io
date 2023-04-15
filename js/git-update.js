@@ -1939,7 +1939,6 @@ if (!!closeTestimonyBtn) {
 /* Temp functionality to handle per length qty cases */
 document.addEventListener("DOMContentLoaded", function () {
   let getQtyPredefined = document.querySelectorAll(".productSearchQty");
-    console.log(getQtyPredefined);
 
   if (typeof getQtyPredefined != "undefined" && getQtyPredefined != null) {
     for (const input of getQtyPredefined) {
@@ -1977,7 +1976,6 @@ document.addEventListener("DOMContentLoaded", function () {
   let getQtyPredefinedPDP = document.querySelector(
     ".scaffoldProductDisplayDataQuantity .qty"
   );
-    console.log(getQtyPredefinedPDP);
 
   if (
     typeof getQtyPredefinedPDP != "undefined" &&
@@ -2013,7 +2011,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   
   let getQtyPredefinedCart = document.querySelectorAll(".cart-qty");
-  console.log(getQtyPredefinedCart);
 
   if (
     typeof getQtyPredefinedCart != "undefined" &&
@@ -2022,7 +2019,6 @@ document.addEventListener("DOMContentLoaded", function () {
     for (const input of getQtyPredefinedCart) {
       let test =
         input.parentElement.parentElement.parentElement.querySelector(".item-baseprice span");
-        console.log(test);
         
       if (test.innerText == "(METRE)" || test.innerText == "(PER METRE)" || test.innerText == "(metre)" || test.innerText == "(per metre)" || test.innerText == "(METER)" || test.innerText == "(PER METER)" || test.innerText == "(meter)" || test.innerText == "(per meter)") {
 

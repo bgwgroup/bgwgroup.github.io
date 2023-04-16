@@ -3831,4 +3831,4 @@ max-width:150px;
 
 
 /* Temp bgwt styling fixes */
-.checkoutPlaceOrder p{color:black !important}
+#bgwtBody .checkoutPlaceOrder p{color:black !important}

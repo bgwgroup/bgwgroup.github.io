@@ -1478,6 +1478,41 @@ function getProductList() {
             return response.json();
         })
         .then((data) => {
+            // Point search my product code or product description
+
+            let searchInput = document.querySelector('.dip-codes-search input[type="text"]');
+            let modelSearchTable = document.querySelector(".result-search-model-table")
+            
+            function pointsPerModelFiterSearch() {
+                if (searchInput != undefined) {
+                searchInput.addEventListener('keyup', () => {
+                    let filterValue = searchInput.value.toUpperCase();
+                    const resultPointPerModelTable = data.map((item, index) => {
+                        if (item.product_code?.includes(filterValue) || item.product_description?.includes(filterValue))  {
+                            modelSearchTable.style.display = "flex";
+               
+                            return `
+                            <li key=${index}>
+                                ${item.product_description}
+                                <div class="s4-product-code-point-ctn">
+                                    <span class="s4-product-code">
+                                        <a href="sam/en/AUD/search/?text=${item.product_code}">
+                                            ${item.product_code}
+                                        </a>
+                                    </span>
+                                    <span class="s4-product-point">${item.points}</span>
+                                </div>
+                            </li>`
+                    }
+                    }).join('')
+                    document.querySelector(".result-search-model-table ul").innerHTML = resultPointPerModelTable;
+                    if (filterValue.length <= 2) {
+                        modelSearchTable.style.display = "none";
+                    }
+            })}} 
+        
+            pointsPerModelFiterSearch()
+
             // aquamax table
             const aquamaxModelBody = data.map(function(aquamaxItem) {
                 if (aquamaxItem.product_brand === 'aquamax') {
@@ -1571,44 +1606,44 @@ function accordion() {
     }
 }
 
-function pointsPerModelFiterSearch() {
-    let searchInput = document.querySelector('.dip-codes-search input');
+// function pointsPerModelFiterSearch() {
+//     let searchInput = document.querySelector('.dip-codes-search input');
 
-    if (searchInput != undefined) {
-        let tableBody = document.querySelectorAll('.model-table-body')
-        let tableBodyList = document.querySelectorAll('.model-table-body ul');
+//     if (searchInput != undefined) {
+//         let tableBody = document.querySelectorAll('.model-table-body')
+//         let tableBodyList = document.querySelectorAll('.model-table-body ul');
 
-        searchInput.addEventListener('keyup', () => {
-            let filterValue = searchInput.value.toUpperCase();
-            let totalListNumber = tableBodyList.length;
+//         searchInput.addEventListener('keyup', () => {
+//             let filterValue = searchInput.value.toUpperCase();
+//             let totalListNumber = tableBodyList.length;
 
-            if (filterValue.length >= 3) {
-                for (let i = 0; i < totalListNumber; i++) {
-                    let currentList = tableBodyList[i];
-                    let currentListValue = currentList.innerText || currentListValue.textContent;
-                    let tableBodyElement = currentList.parentElement;
+//             if (filterValue.length >= 3) {
+//                 for (let i = 0; i < totalListNumber; i++) {
+//                     let currentList = tableBodyList[i];
+//                     let currentListValue = currentList.innerText || currentListValue.textContent;
+//                     let tableBodyElement = currentList.parentElement;
 
-                    if (currentListValue.toUpperCase().indexOf(filterValue) > -1) {
-                        tableBodyElement.style.maxHeight = `${tableBodyElement.scrollHeight}px`;
-                        currentList.style.display = "flex";
-                        currentList.style.flexDirection = "column"
-                        const liCollection = currentList.children;
-                        for (let i = 0; i < liCollection.length; i++) {
-                            liCollection[i].style.padding = "4px 0";
-                        }
-                        filterValue = ""
-                    } else {
-                        tableBodyElement.style.maxHeight = null;
-                    }
-                }
-            } else if (filterValue.length < 3) {
-                for (let i = 0; i < tableBody.length; i++) {
-                    tableBody[i].style.maxHeight = "0px"
-                }
-            }
-        })
-    }
-}
+//                     if (currentListValue.toUpperCase().indexOf(filterValue) > -1) {
+//                         tableBodyElement.style.maxHeight = `${tableBodyElement.scrollHeight}px`;
+//                         currentList.style.display = "flex";
+//                         currentList.style.flexDirection = "column"
+//                         const liCollection = currentList.children;
+//                         for (let i = 0; i < liCollection.length; i++) {
+//                             liCollection[i].style.padding = "4px 0";
+//                         }
+//                         filterValue = ""
+//                     } else {
+//                         tableBodyElement.style.maxHeight = null;
+//                     }
+//                 }
+//             } else if (filterValue.length < 3) {
+//                 for (let i = 0; i < tableBody.length; i++) {
+//                     tableBody[i].style.maxHeight = "0px"
+//                 }
+//             }
+//         })
+//     }
+// }
 
 // Sammymas Hero animation 
 let moon = document.getElementById('para-moon')

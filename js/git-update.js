@@ -1403,7 +1403,7 @@ document.addEventListener("DOMContentLoaded", function() {
  */
 
 window.addEventListener('load', () => {
-    pointsPerModelFiterSearch();
+    // pointsPerModelFiterSearch();
     getPrizeList();
     accordion();
     getProductList();

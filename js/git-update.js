@@ -1865,22 +1865,6 @@ function submitRedemptionForm() {
 
 // ============================== Sherriff Victoria landing page 2023 =============================================
 
-// let sec5FAQaccordion = document.getElementsByClassName("sec-5-FAQs-accordion");
-
-// if (!!sec5FAQaccordion) {
-//     for (let i = 0; i < sec5FAQaccordion.length; i++) {
-//             sec5FAQaccordion[i].addEventListener("click", function() {
-//         this.classList.toggle("sec-5-FAQs-active");
-//         let s5FAQpanel = this.nextElementSibling;
-//         if (s5FAQpanel.style.maxHeight) {
-//             s5FAQpanel.style.maxHeight = null;
-//         } else {
-//             s5FAQpanel.style.maxHeight = s5FAQpanel.scrollHeight + "px";
-//         }
-//         });
-//     }
-// }
-
 let sec5FAQaccordion = document.querySelectorAll(".sec-5-FAQs-accordion");
 if (!!sec5FAQaccordion) {
     sec5FAQaccordion.forEach(element => {

@@ -1929,4 +1929,22 @@ if (!!closeTestimonyBtn) {
     }
 }
 
+// Rinnai LP Cash promo
+
+const modalRinnai = document.getElementById("rinnai-promo-modal");
+const imgVideoRinnai = document.getElementById("rinnai-cash-promo-img");
+const cashSplashVideoRinnai = document.getElementById("cash-video");
+const rinnaiSpanCloseBtn = document.getElementsByClassName("rinnai-promo-close")[0];
+
+if (!!imgVideoRinnai) {imgVideoRinnai.onclick = function(){
+  modalRinnai.style.display = "block";
+  cashSplashVideoRinnai.play()
+}}
+
+if (!!rinnaiSpanCloseBtn) {
+  rinnaiSpanCloseBtn.onclick = function() {
+    modalRinnai.style.display = "none";
+  }
+}
+
 

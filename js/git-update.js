@@ -1935,7 +1935,6 @@ const modalRinnai = document.getElementById("rinnai-promo-modal");
 const imgVideoRinnai = document.getElementById("rinnai-cash-promo-img");
 const cashSplashVideoRinnai = document.getElementById("cash-video");
 const rinnaiSpanCloseBtn = document.getElementsByClassName("rinnai-promo-close")[0];
-
 const rinnaiViewportWidth = window.innerWidth;
 
 if (!!imgVideoRinnai) {imgVideoRinnai.onclick = function(){
@@ -1943,7 +1942,9 @@ if (!!imgVideoRinnai) {imgVideoRinnai.onclick = function(){
   if(rinnaiViewportWidth < 769) {
     cashSplashVideoRinnai.style.display = "none"
   }
-  cashSplashVideoRinnai.play();
+  if(rinnaiViewportWidth > 769) {
+    cashSplashVideoRinnai.play();
+  }
 }}
 
 if (!!rinnaiSpanCloseBtn) {

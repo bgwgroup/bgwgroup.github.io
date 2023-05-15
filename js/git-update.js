@@ -1865,20 +1865,18 @@ function submitRedemptionForm() {
 
 // ============================== Sherriff Victoria landing page 2023 =============================================
 
-let sec5FAQaccordion = document.getElementsByClassName("sec-5-FAQs-accordion");
-
+let sec5FAQaccordion = document.querySelectorAll(".sec-5-FAQs-accordion");
 if (!!sec5FAQaccordion) {
-    for (let i = 0; i < sec5FAQaccordion.length; i++) {
-            sec5FAQaccordion[i].addEventListener("click", function() {
-        this.classList.toggle("sec-5-FAQs-active");
-        let s5FAQpanel = this.nextElementSibling;
-        if (s5FAQpanel.style.maxHeight) {
-            s5FAQpanel.style.maxHeight = null;
-        } else {
-            s5FAQpanel.style.maxHeight = s5FAQpanel.scrollHeight + "px";
-        }
-        });
-    }
+    sec5FAQaccordion.forEach(element => {
+        element.addEventListener('click', () => {
+            let elementSibling = element.nextElementSibling; // get the next element after the current table header
+            if (elementSibling.style.maxHeight) { // check if maxHeight is set to a value greater than zero/null(0)
+                elementSibling.style.maxHeight = null; // return it back to null state
+            } else {
+                elementSibling.style.maxHeight = `${elementSibling.scrollHeight}px`; // if max-height is null/zero, expand the table body using the elements scrollHeight based on window position
+            }
+        })
+    })
 }
 
 let TestimonySlideIndex = 1;
@@ -1929,6 +1927,30 @@ if (!!closeTestimonyBtn) {
     closeTestimonyBtn.onclick = function() {
         modalImageContainer.style.display = "none";
     }
+}
+
+// Rinnai LP Cash promo
+
+const modalRinnai = document.getElementById("rinnai-promo-modal");
+const imgVideoRinnai = document.getElementById("rinnai-cash-promo-img");
+const cashSplashVideoRinnai = document.getElementById("cash-video");
+const rinnaiSpanCloseBtn = document.getElementsByClassName("rinnai-promo-close")[0];
+const rinnaiViewportWidth = window.innerWidth;
+
+if (!!imgVideoRinnai) {imgVideoRinnai.onclick = function(){
+  modalRinnai.style.display = "block";
+  if(rinnaiViewportWidth < 769) {
+    cashSplashVideoRinnai.style.display = "none"
+  }
+  if(rinnaiViewportWidth > 769) {
+    cashSplashVideoRinnai.play();
+  }
+}}
+
+if (!!rinnaiSpanCloseBtn) {
+  rinnaiSpanCloseBtn.onclick = function() {
+    modalRinnai.style.display = "none";
+  }
 }
 
 

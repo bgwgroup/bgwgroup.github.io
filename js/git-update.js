@@ -1953,4 +1953,42 @@ if (!!rinnaiSpanCloseBtn) {
   }
 }
 
+// Hager Promo LP
+
+const hagerStepElements = Array.from(document.querySelectorAll('.sec2-hager-step'));
+function animateElements() {
+    hagerStepElements.forEach((element, index) => {
+        // Calculate the delay for each element
+        const delay = index * 1000; // Adjust the delay as needed
+        // Apply animation to move elements from right to left
+        setTimeout(() => {
+        element.style.transform = 'translateX(0%)';
+        element.style.opacity = "1";
+        }, delay);
+    });
+}
+
+// Call the animateElements function after a delay
+if(!!hagerStepElements) {
+setTimeout(animateElements, 1200); // Adjust the delay as needed
+}
+
+function zoomOut() {
+const zoomOutHagerElement = document.querySelector('.sec1-hager-hero-slider img');
+
+// Set initial zoom scale
+zoomOutHagerElement.style.transform = 'scale(2)';
+
+// Delay the animation to allow the initial layout to render
+setTimeout(() => {
+    // Apply animation to zoom out the element
+    zoomOutHagerElement.style.transform = 'scale(1)';
+    }, 0); // Adjust the delay as needed
+}
+
+if (!!zoomOutHagerElement) {
+    window.addEventListener('load', zoomOut)
+}
+
+
 

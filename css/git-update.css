@@ -3830,7 +3830,7 @@ max-width:150px;
 }
 
 /* Temp cnw termsConditions styling fixes */
-.cnw-terms-conditions-container ul li::before{
+.page-cmsitem-00045000 ul li::before{
 	display:none !important;
 }
 

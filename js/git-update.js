@@ -1376,6 +1376,11 @@ document.addEventListener("DOMContentLoaded", function() {
             getUserRegisterBtn.setAttribute("type", "button");
         }
         
+        if (location.href.match(/samios.net.au/)) {
+            let getLoginPageRegisterLink = document.querySelector("[href='login/signup?']");
+            getLoginPageRegisterLink.href = "/login/signup?";
+        }
+        
         
         if (location.href.match(/cnw.com.au/) || location.href.match(/sherriff.com.au/) || location.href.match(/samios.net.au/)) {
             let getB2CLoginPopupBtns = document.querySelectorAll(".scaffoldOpenModalRegisterGuestUser");
@@ -1396,10 +1401,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 button.addEventListener('click', () => {
                     window.location.href = "/login";
                 });
-            }
-            
-            if (document.querySelector('.scaffoldOpenModalRegisterGuestUser').innerHTML.indexOf("Create Account") != -1) {
-                console.log(true)
             }
         }
         setTimeout(() => {

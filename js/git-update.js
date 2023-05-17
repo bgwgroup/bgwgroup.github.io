@@ -1371,18 +1371,35 @@ MaintenanceBanner.prototype.fullScreenBanner = () => {
 // Temp hide b2c frontend elements
 document.addEventListener("DOMContentLoaded", function() {
     try {
+        if (location.href.match(/sherriff.com.au/)) {
+            let getUserRegisterBtn = document.querySelector("#btnUserRegister button");
+            getUserRegisterBtn.setAttribute("type", "button");
+        }
+        
+        
         if (location.href.match(/cnw.com.au/) || location.href.match(/sherriff.com.au/) || location.href.match(/samios.net.au/)) {
             let getB2CLoginPopupBtns = document.querySelectorAll(".scaffoldOpenModalRegisterGuestUser");
             for (const button of getB2CLoginPopupBtns) {
-                button.addEventListener('click', () => {
-                    window.location.href = "/login";
-                });
+                
+                if(button.innerHTML.indexOf("Create Account") != -1) {
+                    button.addEventListener('click', () => {
+                        window.location.href = "/login/signup?";
+                    });
+                } else {
+                    button.addEventListener('click', () => {
+                        window.location.href = "/login";
+                    });
+                }
             }
             let getPDPLoginBtn = document.querySelectorAll(".scaffoldOpenModalRegisterGuestUserProduct");
             for (const button of getPDPLoginBtn) {
                 button.addEventListener('click', () => {
                     window.location.href = "/login";
                 });
+            }
+            
+            if (document.querySelector('.scaffoldOpenModalRegisterGuestUser').innerHTML.indexOf("Create Account") != -1) {
+                console.log(true)
             }
         }
         setTimeout(() => {

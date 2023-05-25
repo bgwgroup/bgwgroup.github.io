@@ -1371,12 +1371,30 @@ MaintenanceBanner.prototype.fullScreenBanner = () => {
 // Temp hide b2c frontend elements
 document.addEventListener("DOMContentLoaded", function() {
     try {
+        if (location.href.match(/sherriff.com.au/)) {
+            let getUserRegisterBtn = document.querySelector("#btnUserRegister button");
+            getUserRegisterBtn.setAttribute("type", "button");
+        }
+        
+        if (location.href.match(/samios.net.au/)) {
+            let getLoginPageRegisterLink = document.querySelector("[href='login/signup?']");
+            getLoginPageRegisterLink.href = "/login/signup?";
+        }
+        
+        
         if (location.href.match(/cnw.com.au/) || location.href.match(/sherriff.com.au/) || location.href.match(/samios.net.au/)) {
             let getB2CLoginPopupBtns = document.querySelectorAll(".scaffoldOpenModalRegisterGuestUser");
             for (const button of getB2CLoginPopupBtns) {
-                button.addEventListener('click', () => {
-                    window.location.href = "/login";
-                });
+                
+                if(button.innerHTML.indexOf("Create Account") != -1) {
+                    button.addEventListener('click', () => {
+                        window.location.href = "/login/signup?";
+                    });
+                } else {
+                    button.addEventListener('click', () => {
+                        window.location.href = "/login";
+                    });
+                }
             }
             let getPDPLoginBtn = document.querySelectorAll(".scaffoldOpenModalRegisterGuestUserProduct");
             for (const button of getPDPLoginBtn) {
@@ -1952,5 +1970,66 @@ if (!!rinnaiSpanCloseBtn) {
     modalRinnai.style.display = "none";
   }
 }
+
+// Hager Promo LP
+
+const hagerStepElements = Array.from(document.querySelectorAll('.sec2-hager-step'));
+function animateElements() {
+    hagerStepElements.forEach((element, index) => {
+        // Calculate the delay for each element
+        const delay = index * 1000; // Adjust the delay as needed
+        // Apply animation to move elements from right to left
+        setTimeout(() => {
+        element.style.transform = 'translateX(0%)';
+        element.style.opacity = "1";
+        }, delay);
+    });
+}
+
+// Call the animateElements function after a delay
+if(!!hagerStepElements) {
+setTimeout(animateElements, 1200); // Adjust the delay as needed
+}
+
+const zoomOutHagerElement = document.querySelector('.sec1-hager-hero-slider img');
+function zoomOut() {
+// Set initial zoom scale
+zoomOutHagerElement.style.transform = 'scale(2)';
+
+// Delay the animation to allow the initial layout to render
+setTimeout(() => {
+    // Apply animation to zoom out the element
+    zoomOutHagerElement.style.transform = 'scale(1)';
+    }, 0); // Adjust the delay as needed
+}
+
+if (!!zoomOutHagerElement) {
+    window.addEventListener('load', zoomOut)
+}
+
+const displayPackage = (packageClass) => {
+    document.querySelector('.package1').style.display = 'none';
+    document.querySelector('.package2').style.display = 'none';
+    document.querySelector('.package3').style.display = 'none';
+    document.querySelector('.package4').style.display = 'none';
+    document.querySelector('.package5').style.display = 'none';
+    document.querySelector(`.${packageClass}`).style.display = 'flex';
+    document.querySelector(`.${packageClass}`).style.opacity = '1';
+  };
+  
+  const updateDefaultPackageValue = (packValue) => {
+    defaultPackageValue = packValue.replace('pack', "package");
+  };
+  
+  const showEachHagerPack = (pack) => {
+    const packageCtn = document.querySelector('.sec4-hager-products-ctn');
+    packageCtn.style.gridTemplateColumns  = 'repeat(1, 50%)'
+    let packName = pack.className;
+    updateDefaultPackageValue(packName);
+    displayPackage(pack.className.replace('pack', "package"));
+  };
+  
+  let defaultPackageValue = "package1";
+
 
 

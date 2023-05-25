@@ -1991,7 +1991,7 @@ if(!!hagerStepElements) {
 setTimeout(animateElements, 1200); // Adjust the delay as needed
 }
 
-const zoomOutHagerElement = document.querySelector('.sec1-hager-hero-slider img');
+const zoomOutHagerElement = document.querySelector('.sec1-hager-hero-slider');
 function zoomOut() {
 // Set initial zoom scale
 zoomOutHagerElement.style.transform = 'scale(2)';

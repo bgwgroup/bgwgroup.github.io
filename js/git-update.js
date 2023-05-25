@@ -2033,7 +2033,6 @@ const mapLinkToCategory = (name, link) => {
         menus.forEach(menu => {
             if(menu.innerHTML == name){
                 menu.parentElement.setAttribute('href',link);
-                console.log(menu.parentElement, menu.innerHTML);
             }
         });
     }

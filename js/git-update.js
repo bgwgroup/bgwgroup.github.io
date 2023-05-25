@@ -2023,7 +2023,19 @@ const displayPackage = (packageClass) => {
   
   const showEachHagerPack = (pack) => {
     const packageCtn = document.querySelector('.sec4-hager-products-ctn');
-    packageCtn.style.gridTemplateColumns  = 'repeat(1, 50%)'
+    const packageIndividuals = document.querySelectorAll('.sec4-hager-product-pack');
+    packageCtn.style.display = 'flex';
+    packageCtn.style.width = "100%";
+    packageCtn.style.overflow = "hidden";
+    packageIndividuals.forEach((package) => {
+      const viewPort = window.innerWidth;
+      if (viewPort > 768) {
+        package.style.width = "50%";
+      }
+      if (viewPort < 768 ) {
+        package.style.width = "100%";
+      }
+    })
     let packName = pack.className;
     updateDefaultPackageValue(packName);
     displayPackage(pack.className.replace('pack', "package"));

@@ -2007,41 +2007,7 @@ if (!!zoomOutHagerElement) {
     window.addEventListener('load', zoomOut)
 }
 
-const displayPackage = (packageClass) => {
-    document.querySelector('.package1').style.display = 'none';
-    document.querySelector('.package2').style.display = 'none';
-    document.querySelector('.package3').style.display = 'none';
-    document.querySelector('.package4').style.display = 'none';
-    document.querySelector('.package5').style.display = 'none';
-    document.querySelector(`.${packageClass}`).style.display = 'flex';
-    document.querySelector(`.${packageClass}`).style.opacity = '1';
-  };
-  
-  const updateDefaultPackageValue = (packValue) => {
-    defaultPackageValue = packValue.replace('pack', "package");
-  };
-  
-  const showEachHagerPack = (pack) => {
-    const packageCtn = document.querySelector('.sec4-hager-products-ctn');
-    const packageIndividuals = document.querySelectorAll('.sec4-hager-product-pack');
-    packageCtn.style.display = 'flex';
-    packageCtn.style.width = "100%";
-    packageCtn.style.overflow = "hidden";
-    packageIndividuals.forEach((package) => {
-      const viewPort = window.innerWidth;
-      if (viewPort > 768) {
-        package.style.width = "50%";
-      }
-      if (viewPort < 768 ) {
-        package.style.width = "100%";
-      }
-    })
-    let packName = pack.className;
-    updateDefaultPackageValue(packName);
-    displayPackage(pack.className.replace('pack', "package"));
-  };
-  
-  let defaultPackageValue = "package1";
+
 
 
 

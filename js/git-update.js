@@ -2007,7 +2007,34 @@ if (!!zoomOutHagerElement) {
     window.addEventListener('load', zoomOut)
 }
 
+/**
+ * BGWT menu temporary fix - delete after P1 deploy
+ */
+window.addEventListener('DOMContentLoaded', () => {
+    mapLinkToCategory('Camera Brackets','/c/CAMERABRACKETS');
+    mapLinkToCategory('Edge Devices','/c/EDGEDEVICES');
+    mapLinkToCategory('Networking','/c/NETWORKING');
+    mapLinkToCategory('Transmission','/c/TRANSMISSION');
+    mapLinkToCategory('Desktop & Workstations','/c/DESKTOPANDWORKSTATIONS');
+    mapLinkToCategory('Server','/c/SERVER');
+    mapLinkToCategory('Cable','/c/CICABLE');
+    mapLinkToCategory('Copper','/c/CICOPPER');
+    mapLinkToCategory('DSC Impassa','/c/DSCIMPASSA');
+    mapLinkToCategory('Intrusion Qolsys','/c/INTRUSIONQOLYSYS');
+    mapLinkToCategory('Panel Platform (Kantech)','/c/PANELPLATFORMKANTECH');
+    mapLinkToCategory('Panel Platform (S2)','/c/PANELPLATFORMS2');
+    mapLinkToCategory('Home Automation ZWave','/c/HOMEAUTOMATIONZWAVE');
+    mapLinkToCategory('Platforms','/c/PLATFORMS');
+});
 
-
-
-
+const mapLinkToCategory = (name, link) => {
+    let menus = document.querySelectorAll('.text');
+    if(menus != undefined){
+        menus.forEach(menu => {
+            if(menu.innerHTML == name){
+                menu.parentElement.setAttribute('href',link);
+                console.log(menu.parentElement, menu.innerHTML);
+            }
+        });
+    }
+};

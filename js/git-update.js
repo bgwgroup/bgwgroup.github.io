@@ -1377,14 +1377,16 @@ document.addEventListener("DOMContentLoaded", function() {
         }
         
         if (location.href.match(/samios.net.au/)) {
-            let getLoginPageRegisterLink = document.querySelector("[href='login/signup?']");
-            getLoginPageRegisterLink.href = "/login/signup?";
             
             setTimeout(() => {
                 document.querySelector(".scaffoldHeaderTopRight .scaffoldOpenModalRegisterGuestUser").href = "/login/signup?";
             }, 500);
             
-            
+            let getLoginPageRegisterLink = document.querySelector("[href='login/signup?']");
+            if(getLoginPageRegisterLink){
+                getLoginPageRegisterLink.href = "/login/signup?";
+            }
+       
         }
         
         

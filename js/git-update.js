@@ -1380,7 +1380,11 @@ document.addEventListener("DOMContentLoaded", function() {
             let getLoginPageRegisterLink = document.querySelector("[href='login/signup?']");
             getLoginPageRegisterLink.href = "/login/signup?";
             
-            document.querySelector(".scaffoldHeaderTopRight .scaffoldOpenModalRegisterGuestUser").href = "/login/signup?";
+            setTimeout(() => {
+                document.querySelector(".scaffoldHeaderTopRight .scaffoldOpenModalRegisterGuestUser").href = "/login/signup?";
+            }, 500);
+            
+            
         }
         
         

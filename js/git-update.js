@@ -1379,6 +1379,8 @@ document.addEventListener("DOMContentLoaded", function() {
         if (location.href.match(/samios.net.au/)) {
             let getLoginPageRegisterLink = document.querySelector("[href='login/signup?']");
             getLoginPageRegisterLink.href = "/login/signup?";
+            
+            document.querySelector(".scaffoldHeaderTopRight .scaffoldOpenModalRegisterGuestUser").href = "/login/signup?";
         }
         
         

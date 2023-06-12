@@ -2045,3 +2045,12 @@ const mapLinkToCategory = (name, link) => {
         });
     }
 };
+
+// temp fix samios appliances link
+if (window.location.href.indexOf("samios.net.au") != -1){
+    const getApplianceLink = document.querySelector('[title="Applicances"]');
+    if(getApplianceLink){
+        getApplianceLink.querySelector("span").innerText = "Appliances";
+        getApplianceLink.setAttribute("title", "Appliances");
+    }
+}

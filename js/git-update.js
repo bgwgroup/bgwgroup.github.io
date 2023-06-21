@@ -2053,4 +2053,8 @@ if (window.location.href.indexOf("samios.net.au") != -1){
         getApplianceLink.querySelector("span").innerText = "Appliances";
         getApplianceLink.setAttribute("title", "Appliances");
     }
+    const getMarkingabellingLink = document.querySelector('[title="Marking & Labeling"]');
+    if(getMarkingabellingLink){
+        getMarkingabellingLink.href = "/sam/en/AUD/All-Categories/Hardware-%26-Consumables/Marking-%26-Labeling/c/MARKINGLABELLING";
+    }
 }

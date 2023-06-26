@@ -2024,13 +2024,13 @@ const bigSuppporterSec2 = document.querySelector(".big-supporter-sec2-maincontai
 function hideBigbanner() {
     setTimeout(() => {
         bigSupporterBanner.style.transform = "scale(0)"
-    }, 1900)
+    }, 2000)
     setTimeout(() => {
         bigSupporterPreloader.style.display = "none";
         bigSuppporterSec2.style.display = "block";
         bigSuppporterSec2.style.transform = "scale(1)";
         bigSuppporterSec2.style.height = "100%";
-    }, 3200)
+    }, 3000)
 }
 
 if (!!bigSupporterPreloader) {

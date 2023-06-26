@@ -2030,7 +2030,7 @@ function hideBigbanner() {
         bigSuppporterSec2.style.display = "block";
         bigSuppporterSec2.style.transform = "scale(1)";
         bigSuppporterSec2.style.height = "100%";
-    }, 3000)
+    }, 2300)
 }
 
 if (!!bigSupporterPreloader) {

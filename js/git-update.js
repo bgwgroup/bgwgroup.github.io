@@ -2015,6 +2015,28 @@ if (!!zoomOutHagerElement) {
     window.addEventListener('load', zoomOut)
 }
 
+
+// ------ Big Local Supporter Landing page ----
+
+const bigSupporterBanner = document.querySelector('.big-supporter-sec1-ctn img');
+const bigSupporterPreloader = document.querySelector('.big-supporter-sec1-preloader')
+const bigSuppporterSec2 = document.querySelector(".big-supporter-sec2-maincontain-ctn")
+function hideBigbanner() {
+    setTimeout(() => {
+        bigSupporterBanner.style.transform = "scale(0)"
+    }, 1900)
+    setTimeout(() => {
+        bigSupporterPreloader.style.display = "none";
+        bigSuppporterSec2.style.display = "block";
+        bigSuppporterSec2.style.transform = "scale(1)";
+        bigSuppporterSec2.style.height = "100%";
+    }, 3200)
+}
+
+if (!!bigSupporterPreloader) {
+    window.addEventListener('load', hideBigbanner)
+}
+
 /**
  * BGWT menu temporary fix - delete after P1 deploy
  */

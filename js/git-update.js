@@ -2083,7 +2083,7 @@ if (window.location.href.indexOf("samios.net.au") != -1){
     }
 
     const getEverHardLogo = document.querySelectorAll('.scaffoldSearchList .scaffoldSearchListResults .item .content .img img')
-    if (getEverHardLogo.length != 0) {
+    if (Array.from(getEverHardLogo).length !== 0) {
         getEverHardLogo[14].src = "https://www.forzaglobal.com.au/wp-content/uploads/2021/10/Untitled-1.png";
         getEverHardLogo[13].src = "https://www.everhard.com.au/wp-content/themes/everhard/dist/img/logo.svg";
     }

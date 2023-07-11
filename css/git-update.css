@@ -3834,6 +3834,9 @@ max-width:150px;
 	display:none !important;
 }
 
+/* Temp hide Due for payment now in dashboard -> statements */
+.page-account-Statements .stats .stats-block:first-child{display:none;}
+
 
 /* Temp bgwt styling fixes */
 #bgwtBody .checkoutPlaceOrder p, #bgwtBody .checkoutConfirmTempWrapper p{color:black !important}

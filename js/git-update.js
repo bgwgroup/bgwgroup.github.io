@@ -2084,7 +2084,7 @@ window.addEventListener('scroll', () => {
 
         leftBlind.style.left = value * -1.5 +'px';
         rightBlind.style.right = value * -1.5 +'px';
-        sammyTextCtn.style.top = value * -0.8 + 370+ 'px';
+        sammyTextCtn.style.top = value * -0.8 + 410 + 'px';
         Array.from(bubbles).map((bubble, index) => {
             bubble.style.top = value * -0.8 + 'px';
         })

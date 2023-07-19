@@ -1,4 +1,12 @@
-[{
+[
+    {
+        "image": "/medias/Sherriff-QLD-Promo-1080x1080.png?context=bWFzdGVyfGltYWdlc3wzMzUyNTF8aW1hZ2UvcG5nfGgzZS9oZWUvMTAxMDkxNDAwNDE3NTgvU2hlcnJpZmZfUUxEX1Byb21vXzEwODB4MTA4MC5wbmd8ODgzMmVjN2U2MzU5MzVlYjRiNDE5MDhjZjVlNWRjZDYyMzRjOWVhNGM5ZTYxNTg4MTdlNTNlZTEyYmRiMGExMA",
+        "title": "Switch to Daikin",
+        "description": "Switch to Daikin",
+        "link": "/Daikin-NHP-promo",
+        "active": "yes"
+    },
+    {
         "image": "/medias/mhi-2023-slider.jpg?context=bWFzdGVyfGltYWdlc3wyOTMyMDh8aW1hZ2UvanBlZ3xoNDUvaDRiLzEwMDI1Nzc4MzQ4MDYyL21oaS0yMDIzLXNsaWRlci5qcGd8MzgyZmY3ODY3NDBhZGE1Yjg5MTM4ZjY3ZTdkMGUwOTE5ZjM0ZTIwOGFiODhiNjJkZjQxOTI2ODg5OWUzMGM2Mg",
         "title": "MHI 2023",
         "description": "Get up to $250 cash bonus",

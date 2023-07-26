@@ -1845,7 +1845,7 @@ function getAccountDetails(){
 
 function submitRedemptionForm() {
 
-    const url = 'https://bgwgroup.com.au/sammymas2023/post-redeem-send-email.php';
+    const url = 'https://bgwt.com.au/sammymas2023/post-redeem-send-email.php';
     let redeemSubmit = document.querySelector('#redeemSubmit');
 
     let prizeID = undefined;

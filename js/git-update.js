@@ -1887,7 +1887,7 @@ function submitRedemptionForm() {
                     if (formResponse.email_sent === true ) {
                         document.querySelector('#redeemForm').reset();
                     }
-                    redeemError.innerHTML = "<span style='color: green'>Successfully redeemed! A confirmation email has been sent to you!<br>The prizes will be ordered and dispatched once the promotion has ended </span>";
+                    redeemError.innerHTML = "<span style='color: green; line-height: 1.5;'>Successfully redeemed! A confirmation email has been sent to you!<br>The prizes will be ordered and dispatched once the promotion has ended. </span>";
                 })
                 .catch(error => {});
         });

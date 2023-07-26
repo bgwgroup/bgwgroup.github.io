@@ -1804,6 +1804,11 @@ function getAccountDetails(){
                         if ( redeemPoints.value < 10) {
                             redeemError.innerHTML = '';
                             redeemError.innerHTML = 'Sorry but you do not have enough points';
+                        }
+                        if ( redeemedPoints > 300) {
+                            redeemError.innerHTML = '';
+                            redeemError.innerHTML = `Total redeemed points: ${redeemedPoints} points <br> You have exceeded maximum redeemable points (300 points) <br>Please see T&C's for more information`;
+                            redeemSubmit.classList.add('redeem-disabled');
                         }  
 
                     }
@@ -1882,7 +1887,7 @@ function submitRedemptionForm() {
                     if (formResponse.email_sent === true ) {
                         document.querySelector('#redeemForm').reset();
                     }
-                    redeemError.innerHTML = "<span style='color: green'>Successfully redeemed! A confirmation email has been sent to you!</span>";
+                    redeemError.innerHTML = "<span style='color: green'>Successfully redeemed! A confirmation email has been sent to you!<br>The prizes will be ordered and dispatched once the promotion has ended </span>";
                 })
                 .catch(error => {});
         });

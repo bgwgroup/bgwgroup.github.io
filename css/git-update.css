@@ -3840,3 +3840,8 @@ max-width:150px;
 
 /* Temp bgwt styling fixes */
 #bgwtBody .checkoutPlaceOrder p, #bgwtBody .checkoutConfirmTempWrapper p{color:black !important}
+
+/* temp fix for pdp gallery thumbnails issue not showing on firefox */
+.scaffoldGalleryThumbs {
+	overflow: hidden !important;
+}

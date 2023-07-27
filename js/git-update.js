@@ -1809,6 +1809,7 @@ function getAccountDetails(){
                             redeemError.innerHTML = '';
                             redeemError.innerHTML = `Total redeemed points: ${redeemedPoints} points <br> You have exceeded maximum redeemable points (300 points) <br>Please see T&C's for more information`;
                             redeemSubmit.classList.add('redeem-disabled');
+                            redeemList.options[0]
                         }  
 
                     }

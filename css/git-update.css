@@ -3843,5 +3843,5 @@ max-width:150px;
 
 /* temp fix for pdp gallery thumbnails issue not showing on firefox */
 .swiper.scaffoldGalleryProducts {
-	color:red;
+	overflow: hidden;
 }

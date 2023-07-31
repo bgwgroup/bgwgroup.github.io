@@ -1,5 +1,12 @@
 [
     {
+        "image": "/medias/Website-News-Promotion-The-BIG-Local-Supporter.jpg?context=bWFzdGVyfGltYWdlc3wyOTE0NDJ8aW1hZ2UvanBlZ3xoYzIvaDc3LzEwMTE2Mjg0MzgzMjYyL1dlYnNpdGUgTmV3cyAmIFByb21vdGlvbiBUaGUgQklHIExvY2FsIFN1cHBvcnRlci5qcGd8OTdmYTIyZWJiMjZhYjc0ZDJhOTRkMTI0OTZlZGFkYjc0Y2M1MGMyZjFhODU0ZGUyMjUxYTI0YmM4YjUwMWIzNw",
+        "title": "The Big Local Supporter",
+        "description": "Join us in our BIG Local Supporter promotion and get a chance to win incredible prizes while making a positive impact!",
+        "link": "/cnw-big-support",
+        "active": "yes"
+    },
+    {
         "image": "/medias/Social-Media-haier679x679.png?context=bWFzdGVyfGltYWdlc3w1OTU0MDB8aW1hZ2UvcG5nfGhiZS9oY2IvMTAwOTY1Mzg0NTE5OTgvU29jaWFsX01lZGlhX2hhaWVyNjc5eDY3OS5wbmd8MDRmOGE3NmJiZjg0ZDMxYzA4Nzc2ODQ2NGMyOTc1NjQyYmE1NDMxNGUyNmMxNjRmOTVhMTAxYmI5OTYzOGYxNA",
         "title": "Grab a Prezzee voucher when you purchase any Haier Split System",
         "description": "Purchase any Haier Split System between July 1st and August 31st to receive a Prezzee gift card. Click here to learn more!",
@@ -46,7 +53,7 @@
         "title": "Preferred Range",
         "description": "Choosing the Preferred Range at CNW guarantees we can deliver trusted brands straight to you at a consistent price no matter where you are in Australia",
         "link": "/preferred-range",
-        "active": "yes"
+        "active": "no"
     },
     {
         "image": "/_ui/responsive/theme-newcnw/images/promotions/Simpro.jpg",

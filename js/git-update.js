@@ -2116,3 +2116,19 @@ if (window.location.href.indexOf("samios.net.au") != -1){
         getEverHardLogo[13].src = "https://www.everhard.com.au/wp-content/themes/everhard/dist/img/logo.svg";
     }
 }
+
+// temp fix for dashboard amount decimal
+if (typeof(document.querySelector("#valueAccountBalance")) != 'undefined' && document.querySelector("#valueAccountBalance") != null){
+    let getValueAccBalanceDiv = document.querySelector("#valueAccountBalance");
+    let getConvertedAccBalance = getValueAccBalanceDiv.innerText.split("$")[1];
+    let convertAccBalanceNo = parseFloat(getConvertedAccBalance, 10);
+    getValueAccBalanceDiv.textContent = "$" + convertAccBalanceNo.toFixed(2);
+}
+if (typeof(document.querySelector("#valueAccountRemaining")) != 'undefined' && document.querySelector("#valueAccountRemaining") != null){
+    let getValueAccRemainingDiv = document.querySelector("#valueAccountRemaining");
+    let getConvertedAccRemainingDiv = getValueAccRemainingDiv.innerText.split("$")[1];
+    let convertAccRemainingNo = parseFloat(getConvertedAccRemainingDiv, 10);
+    getValueAccRemainingDiv.textContent = "$" + convertAccRemainingNo.toFixed(2);
+}
+
+

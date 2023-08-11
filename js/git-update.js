@@ -2131,13 +2131,12 @@ if (typeof(document.querySelector("#valueAccountRemaining")) != 'undefined' && d
     getValueAccRemainingDiv.textContent = "$" + convertAccRemainingNo.toFixed(2);
 }
 
-console.log("test1")
 
 if (window.location.href.indexOf("cnw.com.au") != -1){
-    console.log("test2")
     const footerLink = document.getElementById("footerLinks-Customer-Support")
     const footerLinkChildren = Array.from(footerLink.children);
     const helpCenter = footerLinkChildren[0]
     const anchorEle = helpCenter.querySelector('a')
     anchorEle.href="https://help.cnw.com.au/"
+    console.log(helpCenter)
 }

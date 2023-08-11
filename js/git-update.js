@@ -2137,3 +2137,9 @@ if (window.location.href.indexOf("cnw.com.au") != -1){
     const footerLinkChildren = Array.from(footerLink)
     footerLinkChildren[1].querySelector('a').href = "https://help.cnw.com.au/"
 }
+
+if (window.location.href.indexOf("sherriff.com.au") != -1){
+    const footerLink = document.querySelectorAll("#footerLinks-CUSTOMER-SUPPORT")
+    const footerLinkChildren = Array.from(footerLink)
+    footerLinkChildren[1].querySelector('a').href = "https://help.sherriff.com.au/"
+}

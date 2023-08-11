@@ -2133,11 +2133,7 @@ if (typeof(document.querySelector("#valueAccountRemaining")) != 'undefined' && d
 
 
 if (window.location.href.indexOf("cnw.com.au") != -1){
-    const footerLink = document.getElementById("footerLinks-Customer-Support")
-    console.log(footerLink, "1")
-    const footerLinkChildren = Array.from(footerLink.children);
-    const helpCenter = footerLinkChildren[0]
-    const anchorEle = helpCenter.querySelector('a')
-    anchorEle.href="https://help.cnw.com.au/"
-    console.log(helpCenter)
+    const footerLink = document.getElementsByClassName("FAQ/HelpFooterLink")
+    const footerLinkChildren = Array.from(footerLink)
+    footerLinkChildren[1].querySelector('a').href = "https://help.cnw.com.au/"
 }

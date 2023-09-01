@@ -2143,3 +2143,51 @@ if (window.location.href.indexOf("sherriff.com.au") != -1){
     const footerLinkChildren = Array.from(footerLink)
     footerLinkChildren[1].querySelector('a').href = "https://help.sherriff.com.au/"
 }
+
+//Sherriff Only Frezny Banner Inject
+if (window.location.href.indexOf("sherriff.com.au") != -1){
+  if (typeof(document.querySelector(".scaffoldProductSearchGridWrapper")) != 'undefined' && document.querySelector(".scaffoldProductSearchGridWrapper") != null){
+    let searchContainer = document.querySelector(".scaffoldProductSearchGridWrapper");
+
+    let createLink = document.createElement("a");
+    createLink.href = "https://shop.sherriff.com.au/clipsal-click-frenzy";
+    createLink.style.width = "100%";
+    createLink.style.display = "flex";
+    createLink.style.justifyContent = "center";
+
+    let createImage = document.createElement("img");
+
+    if (window.matchMedia("(max-width: 768px)").matches) {
+      createImage.src = "https://i.ibb.co/C0nPcc2/Banner-for-PSP-Clipsal-Click-Frenzy-Mobile.jpg";
+    } else {
+      createImage.src = "https://i.ibb.co/6PdLc6d/Banner-for-PSP-Clipsal-Click-Frenzy-Desktop.png";
+    }
+
+    createLink.appendChild(createImage);
+    searchContainer.prepend(createLink);
+  }
+}
+
+//Cnw Only Big One Banner Inject
+if (window.location.href.indexOf("cnw.com.au") != -1){
+  if (typeof(document.querySelector(".scaffoldProductSearchGridWrapper")) != 'undefined' && document.querySelector(".scaffoldProductSearchGridWrapper") != null){
+    let searchContainer = document.querySelector(".scaffoldProductSearchGridWrapper");
+
+    let createLink = document.createElement("a");
+    createLink.href = "https://shop.cnw.com.au/cnw-big-support";
+    createLink.style.width = "100%";
+    createLink.style.display = "flex";
+    createLink.style.justifyContent = "center";
+
+    let createImage = document.createElement("img");
+
+    if (window.matchMedia("(max-width: 768px)").matches) {
+      createImage.src = "https://i.ibb.co/v10y9WN/2023-Bo4-CNW-Online-Focus-Mobile-Tile-v1.jpg";
+    } else {
+      createImage.src = "https://i.ibb.co/6YN174F/2023-Bo4-CNW-Online-Focus-Desktop-Tile-v1.jpg";
+    }
+
+    createLink.appendChild(createImage);
+    searchContainer.prepend(createLink);
+  }
+}

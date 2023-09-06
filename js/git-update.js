@@ -1319,7 +1319,7 @@ function clearAcStoreinformationSelector(nodeList, selector) {
 }
 
 /**
- * Maintenance Banner 15 December 2022
+ * Maintenance Banner 06 September 2023
  */
 window.addEventListener('DOMContentLoaded', () => {
     if (location.href.match(/cnw.com.au/) || location.href.match(/sherriff.com.au/) || location.href.match(/samios.net.au/)) {
@@ -1338,14 +1338,14 @@ MaintenanceBanner.prototype.init = () => {
         //MaintenanceBanner.prototype.renderBanner();
     }
 
-    MaintenanceBanner.prototype.closeBanner();
-    // MaintenanceBanner.prototype.fullScreenBanner();
+     MaintenanceBanner.prototype.closeBanner();
+     //MaintenanceBanner.prototype.fullScreenBanner();
 };
 MaintenanceBanner.prototype.renderBanner = () => {
     let sapMaintenanceBanner = document.createElement('div');
     sapMaintenanceBanner.className = 'sap-maintenance-banner';
     sapMaintenanceBanner.innerHTML = `
-        <span>The website will be undergoing maintenance between 7:00pm AEST the 17th of March and 7:00am AEST the 19th of March. Pricing and account access will be unavailable during this period, we apologise for any inconveniences caused. For any urgent assistance, please contact the support team via <a href="mailto:online.support@bgwgroup.com.au">online.support@bgwgroup.com.au</a></span>
+        <span>Our website will be undergoing maintenance from 8:00pm until 11:00pm AEST on the 6th of September 2023. Your live pricing will therefore be unavailable during this period, we apologise for any inconveniences caused. For any urgent assistance, please contact the support team via <a href="mailto:online.support@bgwgroup.com.au">online.support@bgwgroup.com.au</a></span>
     `;
     document.body.appendChild(sapMaintenanceBanner);
 };
@@ -1362,7 +1362,7 @@ MaintenanceBanner.prototype.fullScreenBanner = () => {
     let fullScreenBanner = document.createElement('div');
     fullScreenBanner.className = 'full-screen-banner';
     fullScreenBanner.innerHTML = `
-    <span style="position: absolute;top: 50%;left: 0;right: 0;width: 100%;padding: 2rem;transform: translateY(-50%);line-height: 1.5rem;">The website will be undergoing maintenance between 7:00pm AEST the 17th of March and 7:00am AEST the 19th of March. Pricing and account access will be unavailable during this period, we apologise for any inconveniences caused. For any urgent assistance, please contact the support team via <a href="mailto:online.support@bgwgroup.com.au" style="color: #C00;">online.support@bgwgroup.com.au</a></span>
+    <span style="position: absolute;top: 50%;left: 0;right: 0;width: 100%;padding: 2rem;transform: translateY(-50%);line-height: 1.5rem;">Our website will be undergoing maintenance from 8:00pm until 11:00pm AEST on the 6th of September 2023. Your live pricing will therefore be unavailable during this period, we apologise for any inconveniences caused. For any urgent assistance, please contact the support team via <a href="mailto:online.support@bgwgroup.com.au">online.support@bgwgroup.com.au</a></span>
     `;
     fullScreenBanner.setAttribute('style', `position: fixed;top: 0;left: 0;width: 100dvw;height: 100dvh;background: #FFF;z-index: 100000000001;`);
     document.body.appendChild(fullScreenBanner);
@@ -2142,4 +2142,52 @@ if (window.location.href.indexOf("sherriff.com.au") != -1){
     const footerLink = document.querySelectorAll("#footerLinks-CUSTOMER-SUPPORT")
     const footerLinkChildren = Array.from(footerLink)
     footerLinkChildren[1].querySelector('a').href = "https://help.sherriff.com.au/"
+}
+
+//Sherriff Only Frezny Banner Inject
+if (window.location.href.indexOf("sherriff.com.au") != -1){
+  if (typeof(document.querySelector(".scaffoldProductSearchGridWrapper")) != 'undefined' && document.querySelector(".scaffoldProductSearchGridWrapper") != null){
+    let searchContainer = document.querySelector(".scaffoldProductSearchGridWrapper");
+
+    let createLink = document.createElement("a");
+    createLink.href = "https://shop.sherriff.com.au/clipsal-click-frenzy";
+    createLink.style.width = "100%";
+    createLink.style.display = "flex";
+    createLink.style.justifyContent = "center";
+
+    let createImage = document.createElement("img");
+
+    if (window.matchMedia("(max-width: 768px)").matches) {
+      createImage.src = "https://i.ibb.co/C0nPcc2/Banner-for-PSP-Clipsal-Click-Frenzy-Mobile.jpg";
+    } else {
+      createImage.src = "https://i.ibb.co/6PdLc6d/Banner-for-PSP-Clipsal-Click-Frenzy-Desktop.png";
+    }
+
+    createLink.appendChild(createImage);
+    searchContainer.prepend(createLink);
+  }
+}
+
+//Cnw Only Big One Banner Inject
+if (window.location.href.indexOf("cnw.com.au") != -1){
+  if (typeof(document.querySelector(".scaffoldProductSearchGridWrapper")) != 'undefined' && document.querySelector(".scaffoldProductSearchGridWrapper") != null){
+    let searchContainer = document.querySelector(".scaffoldProductSearchGridWrapper");
+
+    let createLink = document.createElement("a");
+    createLink.href = "https://shop.cnw.com.au/cnw-big-support";
+    createLink.style.width = "100%";
+    createLink.style.display = "flex";
+    createLink.style.justifyContent = "center";
+
+    let createImage = document.createElement("img");
+
+    if (window.matchMedia("(max-width: 768px)").matches) {
+      createImage.src = "https://i.ibb.co/v10y9WN/2023-Bo4-CNW-Online-Focus-Mobile-Tile-v1.jpg";
+    } else {
+      createImage.src = "https://i.ibb.co/6YN174F/2023-Bo4-CNW-Online-Focus-Desktop-Tile-v1.jpg";
+    }
+
+    createLink.appendChild(createImage);
+    searchContainer.prepend(createLink);
+  }
 }

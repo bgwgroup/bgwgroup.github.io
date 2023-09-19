@@ -3911,7 +3911,7 @@ html, body {
     padding: 1.25rem;
 }
 
-input[type="text"] {
+.ccf-customer-form input[type="text"] {
     outline: none;
     border: 1px solid var(--ccf-dark-grey);
     padding: 12px 25px;
@@ -3922,15 +3922,15 @@ input[type="text"] {
     background: var(--ccf-white);
 }
 
-input[type="text"]:focus {
+.ccf-customer-form input[type="text"]:focus {
     background: var(--ccf-grey);
 }
 
-.hide-buttons {
+.ccf-customer-form .hide-buttons {
     display: none !important;
 }
 
-.customer-name {
+.ccf-customer-form .customer-name {
     position: sticky;
     top: 0;
 }
@@ -3998,23 +3998,23 @@ input[type="text"]:focus {
     line-height: 1.5;
 }
 
-.customer-monthly-entries div small {
+.ccf-customer-form .customer-monthly-entries div small {
     color: var(--ccf-red);
 }
 
-.customer-monthly-entries div small sup {
+.ccf-customer-form .customer-monthly-entries div small sup {
     position: relative;
     top: calc(var(--default-padding) * 0.3);
 }
 
-.form-buttons {
+.ccf-customer-form .form-buttons {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin: calc(var(--default-padding) * 0.4) 0;
 }
 
-.form-buttons button {
+.ccf-customer-form .form-buttons button {
     user-select: none;
     width: 100%;
     cursor: pointer;
@@ -4034,18 +4034,18 @@ input[type="text"]:focus {
     }
 }
 
-.form-buttons button:hover {
+.ccf-customer-form .form-buttons button:hover {
     color: var(--ccf-yellow);
     background: var(--ccf-black);
 }
 
-.hide-ccf-form {
+.ccf-customer-form .hide-ccf-form {
     max-height: 0;
     overflow: hidden;
     transition: var(--transition-fast);
 }
 
-.hide-ccf-form+div {
+.ccf-customer-form .hide-ccf-form+div {
     display: none;
 }
 

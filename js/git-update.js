@@ -2197,7 +2197,9 @@ if (window.location.href.indexOf("cnw.com.au") != -1){
  * SHERRIFF CLIPSAL CLICK FRENZY
  */
 window.addEventListener('DOMContentLoaded', () => {
-    new ClipsalClickFrenzy();
+    if(location.href.match(/clipsal-click-frenzy/gi)){
+        new ClipsalClickFrenzy();
+    }
 });
 class ClipsalClickFrenzy{
     constructor(){

@@ -2191,3 +2191,322 @@ if (window.location.href.indexOf("cnw.com.au") != -1){
     searchContainer.prepend(createLink);
   }
 }
+
+
+/**
+ * SHERRIFF CLIPSAL CLICK FRENZY
+ */
+window.addEventListener('DOMContentLoaded', () => {
+    new ClipsalClickFrenzy();
+});
+class ClipsalClickFrenzy{
+    constructor(){
+        this.ccfWrapper = document.querySelector('.ccf-wrapper');
+        this.form = document.querySelector('#ccfForm');
+
+        this.customerName = document.querySelector('.customer-name');
+        this.customerMonthlyEntries = document.querySelector('.customer-monthly-entries');
+        this.customerData = document.querySelector('.customer-data');
+        this.customerNumber = document.querySelector('[name="customer_number"]');
+
+        this.hiddenAccount = document.querySelector(['[name="hidden_account"]']);
+        this.hiddenAccountName = document.querySelector(['[name="hidden_account_name"]']);
+        this.hiddenMonth = document.querySelector(['[name="hidden_month"]']);
+        this.hiddenEntries = document.querySelector(['[name="hidden_entries"]']);
+        this.hiddenEmail = document.querySelector(['[name="hidden_email"]']);
+
+        this.formButtons = document.querySelector('.form-buttons');
+        this.redeemButton = document.querySelector('#customerRedeem');
+        this.downloadButton = document.querySelector('#customerData');
+
+        this.ccfRedeemFormContainer = document.querySelector('.ccf-redeem-form-container');
+
+        this.ccfAlert =  document.querySelector('.ccf-alert');
+
+        this.currentMonth = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+        this.entryNumbers = [];
+
+        this.date = new Date();
+        this.dateYear = this.date.getFullYear();
+        this.dateMonth = this.date.getMonth() + 1;
+
+        this.datetime = this.getDateObject();
+
+        this.dev = false;
+        this.host = (this.dev) ? 'http://localhost' : 'https://archived-forms.bgwgroup.com.au';
+
+        this.postURL = `${this.host}/ccf/customer_data.php`;
+        this.getCustomerEntriesURL = `${this.host}/ccf/get_customer_entries.php`;
+        this.insertCustomerEntriesURL = `${this.host}/ccf/insert_customer_entries.php`;
+
+        this.INTERVAL = 1000;
+
+        this.init();
+    }
+    init(){
+        this.fetchData();
+        this.generateRedemptionForm();
+        this.submitRedemptionForm();
+    }
+    getDateObject(){
+        return (this.dateMonth < 10) ? `${this.dateYear}-0${this.dateMonth}` : `${this.dateYear}-${this.dateMonth}`;
+    }
+    getCurrentMonth(){
+        return this.currentMonth[this.dateMonth - 1];
+    }
+    fetchData(){
+        // stop form from submitting
+        this.form.addEventListener('submit', (event) => {
+            event.preventDefault();
+        });
+
+        // handle customer data search when customer number is entered
+        this.customerNumber.addEventListener('keyup', () => {
+
+            // clear existing DOM
+            this.hideButtons();
+            this.hideMonthlyEntries();
+            this.removeAccountName();
+            this.removeCustomerData();
+
+            let typedCustomerNumber = this.customerNumber.value;
+
+            let formData = new FormData();
+            formData.append('account_number', typedCustomerNumber);
+            formData.append('datetime', this.datetime);
+
+            if (typedCustomerNumber >= 3) {
+                fetch(this.postURL, {
+                    method: 'post',
+                    body: formData
+                })
+                .then((response) => { return response.json(); })
+                .then((customerRecords) => {
+
+                    if(customerRecords.length > 0){
+                        
+                        this.setAccountName(customerRecords[0]['account_name']);
+
+                        for(const element of customerRecords){
+                            if ( element['entries'] !== "0" || element['invoice'].match(/Total/g)) {
+
+                                this.entryNumbers.length = 0;
+                                this.entryNumbers.push(parseInt(element['entries']));
+
+                                const formattedDate = new Date(element['date']).toLocaleDateString();
+                                const formattedInvoice = element['invoice'].match(/Total/g);
+                                
+                                if(formattedInvoice === 'Total'){
+                                    this.setCustomerData(formattedDate, formattedInvoice, element['total_spend'], element['entries']);
+                                }
+
+                                this.setHiddenValues(typedCustomerNumber, customerRecords[0]['account_name'], this.getCurrentMonth(), this.entryNumbers[0], element['email']);
+                            }
+                            if(this.entryNumbers[0] > 0){
+                                this.showButtons();
+                            }else{
+                                this.hideButtons();
+                            }
+                        }
+
+                        this.showMonthlyEntries(this.entryNumbers[0]);
+                        //this.setHiddenValues(typedCustomerNumber, customerRecords[0]['account_name'], this.getCurrentMonth(), this.entryNumbers[0]);
+                    }
+                })
+                .catch(err => {
+                    console.log(err);
+                });
+            }
+
+        });
+    }
+    setHiddenValues(account, name, month, entries, email){
+        if(this.hiddenAccount != undefined && this.hiddenAccountName != undefined){
+            this.hiddenAccount.value = account;
+            this.hiddenAccountName.value = name;
+            this.hiddenMonth.value = month;
+            this.hiddenEntries.value = entries;
+            this.hiddenEmail.value = email;
+        }
+    }
+    showButtons(){
+        this.formButtons.classList.remove('hide-buttons');
+    }
+    hideButtons(){
+        this.formButtons.classList.add('hide-buttons');
+    }
+    setAccountName(name){
+        let div = document.createElement('div');
+        div.className = 'data-name';
+        div.innerHTML = `
+            <p>${name}</p>
+        `;
+        this.customerName.appendChild(div);
+    }
+    removeAccountName(){
+        this.customerName.innerHTML = ``;
+    }
+    setCustomerData(date, invoice, totalSpend, entries){
+        let div = document.createElement('div');
+        div.className = 'data-line';
+        div.innerHTML = `
+            <div class="data-row"><strong>Date</strong><span>${date}</span></div>
+            <div class="data-row"><strong>Invoice</strong><span>${invoice}</span></div>
+            <div class="data-row"><strong>Total Spend</strong><span>${totalSpend}</span></div>
+            <div class="data-row"><strong>Entries</strong><span class="entry">${entries}</span></div>
+        `;
+        this.customerData.appendChild(div);
+    }
+    removeCustomerData(){
+        this.customerData.innerHTML = ``;
+    }
+    showMonthlyEntries(entries){
+        this.customerMonthlyEntries.innerHTML = ``;
+
+        if(entries === 0){
+            this.customerMonthlyEntries.innerHTML = `
+            <div>
+                <p>You currently have <strong>${entries}</strong> entries for the month of ${this.getCurrentMonth()}</p>
+            </div>
+        `;
+        }else{
+            this.customerMonthlyEntries.innerHTML = `
+            <div>
+                <p>You currently have <strong>${entries}</strong> entries for the month of ${this.getCurrentMonth()}</p>
+                <small><sup>*</sup> You are only eligible for a max of <strong>4</strong> entries for the month of ${this.getCurrentMonth()}</small>
+            </div>
+        `;
+        }
+    }
+    hideMonthlyEntries(){
+        this.customerMonthlyEntries.innerHTML  = ``;
+    }
+    generateRedemptionForm(){
+        if(this.redeemButton != undefined){
+            this.redeemButton.addEventListener('click', () => {
+
+                this.getExistingEntries();
+
+                this.form.classList.add('hide-ccf-form');
+                setTimeout(() => {
+                    this.ccfRedeemFormContainer.innerHTML = `
+                    <div class="ccf-redeem-form">
+                        <div class="form-row">
+                            <label>Account Number</label>
+                            <input type="text" name="account" maxlength="5" value="${this.hiddenAccount.value}" readonly>
+                        </div>
+                        <div class="form-row">
+                            <label>Account Name</label>
+                            <input type="text" name="account_name" value="${this.hiddenAccountName.value}" readonly>
+                        </div>
+                        <div class="form-row form-select" style="${(this.hiddenEntries.value != "0") ? '' : 'display: none;'}">
+                            <label>Voucher</label>
+                            <select name="voucher">
+                                <option value="lksd">LKSD</option>
+                                <option value="prezzee">Prezzee</option>
+                            </select>
+                        </div>
+                        <div class="form-row form-number" style="${(this.hiddenEntries.value != "0") ? '' : 'display: none;'}">
+                            <label>Voucher Entries (1 to 4)</label>
+                            <input type="number" name="entry_number" min="1" max="${this.hiddenEntries.value}" value="${this.hiddenEntries.value}">
+                        </div>
+                        <div class="form-buttons">
+                            <button style="${(this.hiddenEntries.value != "0") ? '' : 'display: none;'}" id="redeemVouchers" title="Redeem Vouchers">Redeem Vouchers</button>
+                        </div>
+                    </div>                
+                `;
+                }, this.INTERVAL / 2); 
+            });
+        }
+    }
+    getExistingEntries(){
+        let existingFormData = new FormData();
+        existingFormData.append('account', this.hiddenAccount.value);
+        existingFormData.append('month', this.hiddenMonth.value);
+
+        let totalEntriesSum = 0;
+        let entriesMonth = '';
+        let currentMonth = this.getCurrentMonth();
+
+        fetch(this.getCustomerEntriesURL,{
+            method: 'post',
+            body: existingFormData
+        })
+        .then((response) => { return response.json(); })
+        .then((entries) => {
+
+            if(entries.length > 0){
+
+                for(const element of entries){
+                    totalEntriesSum += parseInt(element['entries']);
+                    entriesMonth += element['entry_month'];
+                }
+                this.hiddenEntries.value = (parseInt(this.hiddenEntries.value) - totalEntriesSum);
+
+                if(this.hiddenEntries.value == 0 && RegExp(`\\b${this.getCurrentMonth()}\\b`).exec(entriesMonth)){
+                    this.ccfAlert.innerHTML = `You have exceeded the number of times you can redeem in ${currentMonth} or you run out of entries`;
+                }
+                
+
+                if(this.hiddenEntries.value > 0 && RegExp(`\\b${this.getCurrentMonth()}\\b`).exec(entriesMonth)){
+                    this.ccfAlert.innerHTML = `You have (${this.hiddenEntries.value}) voucher redemptions left for the month of ${currentMonth}`;
+                }
+            }
+        })
+        .catch((error) => {});
+    }
+    submitRedemptionForm(){
+        let countdown  = 5;
+
+        ['click', 'keypress'].forEach(event => {
+            this.ccfRedeemFormContainer.addEventListener(event, (e) => {
+
+                let account = e.currentTarget.querySelector('[name="account"]');
+                let accountName = e.currentTarget.querySelector('[name="account_name"]');
+                let voucher = e.currentTarget.querySelector('[name="voucher"]');
+                let entryNumber = e.currentTarget.querySelector('[name="entry_number"]');
+                let redeemVouchers = e.currentTarget.querySelector('#redeemVouchers');
+
+                try{
+                    if(e.target === entryNumber){
+                        entryNumber.addEventListener('keypress', (e) => {
+                            e.preventDefault();
+                        });
+                    }
+    
+                    if( e.target === redeemVouchers && this.hiddenEntries.value != 0 ){
+    
+                        let postData = new FormData();
+                        postData.append('account', account.value);
+                        postData.append('account_name', accountName.value);
+                        postData.append('voucher', voucher.value);
+                        postData.append('entry_number', entryNumber.value);
+                        postData.append('month', this.hiddenMonth.value);
+                        postData.append('email', this.hiddenEmail.value);
+    
+                        fetch(this.insertCustomerEntriesURL, {
+                            method: 'post',
+                            body: postData
+                        })
+                        .then((response) => { return response.json(); })
+                        .then((redeem) => {
+                            console.log(redeem);
+                            if(redeem.status){
+                                setInterval(() => {
+                                    countdown = countdown - 1;
+                                    this.ccfAlert.innerHTML = `<p>Your entry has been saved. Refreshing in...<span>${countdown}</span></p>`;
+
+                                    if(countdown == 0){
+                                        window.location.reload();
+                                    }
+                                }, this.INTERVAL);
+                            }
+                        })
+                        .catch((error) => {});
+                    }
+                }catch(e){}
+
+            });
+        });
+    }
+}

@@ -2580,6 +2580,8 @@ class BigSupporter{
                 if(customerAccount.length >= 3){
 
                     this.createLoader();
+                    this.clearEntriesDisplay();
+                    this.clearCustomerName();
 
                     setTimeout(() => {
                         fetch(this.getCustomerDataURL, {
@@ -2590,7 +2592,7 @@ class BigSupporter{
                         .then((customerEntries) => {
                             if(customerEntries.length > 0){
 
-                                this.destroyLoader();
+                                this.clearLoader();
                             
                                 this.drawEntriesDisplay(customerEntries, 'Aug');    
                                 this.drawEntriesDisplay(customerEntries, 'Sep');    
@@ -2603,6 +2605,7 @@ class BigSupporter{
                         });
                     }, this.INTERVAL);
                 }else{
+                    this.clearLoader();
                     this.clearEntriesDisplay();
                     this.clearCustomerName();
                 }
@@ -2695,7 +2698,7 @@ class BigSupporter{
             <div></div>
         `;
     }
-    destroyLoader(){
+    clearLoader(){
         this.entriesLoader.innerHTML = ``;
     }
 }

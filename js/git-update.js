@@ -2747,6 +2747,7 @@ class SammyShowcaseEntries {
 
                     this.clearEntries();
                     this.renderLoader();
+                    this.removeBGToEntriesDisplay();
 
                     setTimeout(() => {
 
@@ -2761,6 +2762,8 @@ class SammyShowcaseEntries {
                             .then((entries) => {
                                 if (entries.length > 0) {
 
+                                    this.addBGToEntriesDisplay();
+
                                     this.renderEntries(entries);
                                     this.clearLoader();
                                 }
@@ -2770,6 +2773,7 @@ class SammyShowcaseEntries {
                 } else {
                     this.clearEntries();
                     this.clearLoader();
+                    this.removeBGToEntriesDisplay();
                 }
             });
         }
@@ -2806,5 +2810,11 @@ class SammyShowcaseEntries {
     }
     clearLoader() {
         this.showcaseEntriesLoader.innerHTML = ``;
+    }
+    addBGToEntriesDisplay(){
+        this.showcaseEntriesDisplay.classList.add('bg-white');
+    }
+    removeBGToEntriesDisplay(){
+        this.showcaseEntriesDisplay.classList.remove('bg-white');
     }
 }

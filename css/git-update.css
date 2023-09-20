@@ -3872,7 +3872,12 @@ CNW SBO Search Page Promotion Banner
 }
 
 /* SHERRIFF CLIPSAL CLICK FRENZY STYLES */
-:root {
+.ccf-wrapper {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 1.25rem;
     --ccf-grey: #EEE;
     --ccf-dark-grey: #CCC;
     --ccf-red: #C00;
@@ -3889,26 +3894,6 @@ CNW SBO Search Page Promotion Banner
     --transition-slow: 1s;
 
     --button-padding: 12px 25px;
-}
-
-html, body {
-    font-family: 'Helvetica', sans-serif;
-}
-
-::-webkit-scrollbar {
-    width: 5px;
-}
-
-::-webkit-scrollbar-thumb {
-    background: var(--ccf-red);
-}
-
-.ccf-wrapper {
-    display: block;
-    width: 100%;
-    margin: 0 auto;
-    max-width: 600px;
-    padding: 1.25rem;
 }
 
 .ccf-customer-form input[type="text"] {

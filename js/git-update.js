@@ -2702,3 +2702,109 @@ class BigSupporter{
         this.entriesLoader.innerHTML = ``;
     }
 }
+/**
+ * SAMIOS SAMMY SHOWCASE 2023
+ */
+window.addEventListener('DOMContentLoaded', () => {
+    if(location.href.match(/cnw-big-support/gi)){
+        new SammyShowcaseEntries();
+    }
+});
+class SammyShowcaseEntries {
+    constructor() {
+        this.development = false;
+        this.host = (this.development) ? `http://localhost/sammy-showcase` : `https://archived-forms.bgwgroup.com.au/sammy-showcase`;
+
+        this.entriesURL = `${this.host}/get_entries.php`;
+
+        this.showcaseButton = document.querySelector('.s-showcase-button button');
+        this.showcaseEntriesContent = document.querySelector('.s-showcase-entries-content');
+        this.showcaseEntriesSearch = document.querySelector('[name="showcaseEntries"]');
+        this.showcaseEntriesDisplay = document.querySelector('.s-showcase-entries-display');
+        this.showcaseEntriesLoader = document.querySelector('.s-showcase-entries-loader')
+
+        this.INTERVAL = 1000;
+
+        this.init();
+    }
+    init() {
+        this.getEntries();
+        this.toggleEntries();
+    }
+    toggleEntries() {
+        if (this.showcaseButton != undefined) {
+            this.showcaseButton.addEventListener('click', () => {
+                this.showcaseEntriesContent.classList.toggle('show-content');
+            });
+        }
+    }
+    getEntries() {
+        if (this.showcaseEntriesSearch != undefined) {
+            this.showcaseEntriesSearch.addEventListener('keyup', () => {
+                let searchValue = this.showcaseEntriesSearch.value;
+
+                if (searchValue >= 2) {
+
+                    this.clearEntries();
+                    this.renderLoader();
+
+                    setTimeout(() => {
+
+                        let postData = new FormData();
+                        postData.append('customer_account', searchValue);
+
+                        fetch(this.entriesURL, {
+                            method: 'post',
+                            body: postData
+                        })
+                            .then((response) => { return response.json(); })
+                            .then((entries) => {
+                                if (entries.length > 0) {
+
+                                    this.renderEntries(entries);
+                                    this.clearLoader();
+                                }
+                            })
+                            .catch((error) => { console.log(error) });
+                    }, this.INTERVAL);
+                } else {
+                    this.clearEntries();
+                    this.clearLoader();
+                }
+            });
+        }
+    }
+    renderEntries(entries) {
+        for (const entry of entries) {
+
+            this.showcaseEntriesDisplay.innerHTML = `
+                <div class="s-showcase-customer-name">
+                    <strong>Name</strong>
+                    <span>${entry['customer_name']}</span>
+                </div>
+                <div class="s-showcase-customer-entries">
+                    <strong>Entries</strong>
+                    <span>${entry['entries']}</span>
+                </div>
+                <div class="s-showcase-qual-periods">
+                    <strong>Qualifying Periods</strong>
+                    <span>${entry['qualifying_periods']}</span>
+                </div>
+            `;
+        }
+    }
+    clearEntries() {
+        this.showcaseEntriesDisplay.innerHTML = ``;
+    }
+    renderLoader() {
+        this.showcaseEntriesLoader.innerHTML = `
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        `;
+    }
+    clearLoader() {
+        this.showcaseEntriesLoader.innerHTML = ``;
+    }
+}

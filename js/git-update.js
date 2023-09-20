@@ -2512,3 +2512,190 @@ class ClipsalClickFrenzy{
         });
     }
 }
+/**
+ * CNW BIG SUPPORTER (BO4)
+ */
+window.addEventListener('DOMContentLoaded', () => {
+    if(location.href.match(/cnw-big-support/gi)){
+        new BigSupporter();
+    }
+});
+class BigSupporter{
+    constructor(){
+        this.dev = false;
+        this.host = (this.dev) ? `http://localhost` : `https://archived-forms.bgwgroup.com.au/big-supporter`;
+
+        this.getCustomerDataURL = `${this.host}/big-supporter/get_customer_data.php`;
+
+        this.date = new Date();
+        this.month = this.date.getMonth() + 1;
+
+        this.months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+
+        this.INTERVAL = 1000;
+        this.entries = 0;
+        this.bonusEntries = 0;
+        this.onlineRewards = 0;
+
+        this.customerNameFromData = [];
+
+        this.bigSupportButton = document.querySelector('.big-support-button button');
+        this.bigSupportForm = document.querySelector('#bigSupportForm');
+        this.customerAccountSearch = document.querySelector('[name="customerAccountSearch"]');
+        this.entriesLoader = document.querySelector('.entries-loader');
+        this.entriesCustomerName = document.querySelector('.entries-customer-name');
+        this.entriesDisplay = document.querySelector('.entries-display');
+
+        this.init();
+    }
+    init(){
+        this.getCustomerData();
+        this.toggleForm();
+    }
+    toggleForm(){
+        if(this.bigSupportButton != undefined){
+            this.bigSupportButton.addEventListener('click', () => {
+                this.bigSupportButton.parentElement.nextElementSibling.classList.toggle('big-support-show-form');
+            });
+        }
+    }
+    getCurrentMonth(){
+        return this.months[this.month - 1];
+    }
+    getCustomerData(){
+        
+        if(this.bigSupportForm != undefined && this.customerAccountSearch != undefined){
+            this.bigSupportForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                return false;
+            });
+
+            this.customerAccountSearch.addEventListener('keyup', () => {
+
+                let customerAccount = this.customerAccountSearch.value;
+
+                let postData = new FormData();
+                postData.append('customer_account', customerAccount);
+
+                if(customerAccount.length >= 3){
+
+                    this.createLoader();
+
+                    setTimeout(() => {
+                        fetch(this.getCustomerDataURL, {
+                            method: 'post',
+                            body: postData
+                        })
+                        .then((response) => { return response.json(); })
+                        .then((customerEntries) => {
+                            if(customerEntries.length > 0){
+
+                                this.destroyLoader();
+                            
+                                this.drawEntriesDisplay(customerEntries, 'Aug');    
+                                this.drawEntriesDisplay(customerEntries, 'Sep');    
+                                this.drawEntriesDisplay(customerEntries, 'Oct');    
+                                this.setCustomerName(this.customerNameFromData[0]);
+                            }
+                        })
+                        .catch((error) => {
+                            console.log(`Exception: ${error}`);
+                        });
+                    }, this.INTERVAL);
+                }else{
+                    this.clearEntriesDisplay();
+                    this.clearCustomerName();
+                }
+            });
+        }
+    }
+    drawEntriesDisplay(customerEntries, month){
+        for(let i = 0 ; i < customerEntries.length; i++){
+
+            if(customerEntries[i]['customer_name']){
+                this.clearCustomerFromDataArray();
+                this.customerNameFromData.push(customerEntries[i]['customer_name']);
+            }
+
+            if ( RegExp(`\\b${month}\\b`,"gi").exec(customerEntries[i]['month']) ) {
+
+                this.entries = parseInt(customerEntries[i]['entries_spend']);
+                this.bonusEntries = parseInt(customerEntries[i]['entries_product']);                                        
+
+                let entriesDiv = document.createElement('div');
+                entriesDiv.className = 'entries-data';
+
+                let entriesDivMonth = document.createElement('div');
+                entriesDivMonth.className = 'entries-month';
+                if(month === 'Aug'){
+                    entriesDivMonth.innerHTML = `August`;
+                }else if (month === 'Sep'){
+                    entriesDivMonth.innerHTML = `September`;
+                }else if (month === 'Oct'){
+                    entriesDivMonth.innerHTML = `October`;
+                }
+
+                entriesDiv.appendChild(entriesDivMonth);
+                
+                if(customerEntries[i]['entries_spend']){
+                    let entriesSpendDiv = document.createElement('div');
+                    entriesSpendDiv.className = 'entries-spend';
+                    entriesSpendDiv.innerHTML = `
+                        <strong>Entries</strong>
+                        <span>${customerEntries[i]['entries_spend']}</span>
+                    `;
+                    entriesDiv.appendChild(entriesSpendDiv);
+                }
+
+                if(customerEntries[i]['entries_product']){
+                    let entriesBonusDiv = document.createElement('div');
+                    entriesBonusDiv.className = 'entries-product';
+                    entriesBonusDiv.innerHTML = `
+                        <strong>Bonus Entries</strong>
+                        <span>${customerEntries[i]['entries_product']}</span>
+                    `;
+                    entriesDiv.appendChild(entriesBonusDiv);
+                }
+
+                if ( RegExp(/Total/gi).exec(customerEntries[i+1]['month']) ){
+
+                    let entriesOnlineRewardsDiv = document.createElement('div');
+                    entriesOnlineRewardsDiv.className = 'entries-online-rewards';
+                    entriesOnlineRewardsDiv.innerHTML = `
+                        <strong>Online Rewards</strong>
+                        <span>${customerEntries[i+1]['total_entries']}</span>
+                    `;
+                    entriesDiv.appendChild(entriesOnlineRewardsDiv);
+
+                    this.onlineRewards = parseInt(customerEntries[i+1]['total_entries']);
+                }
+
+                this.entriesDisplay.appendChild(entriesDiv);
+            }
+
+        }  
+    }
+    clearCustomerFromDataArray(){
+        this.customerNameFromData.length = 0;
+    }
+    clearEntriesDisplay(){
+        this.entriesDisplay.innerHTML = ``;
+    }
+    setCustomerName(name){
+        this.entriesCustomerName.innerHTML = `<span>${name}</span>`;
+    }
+    clearCustomerName(){
+        this.entriesCustomerName.innerHTML = ``;
+    }
+    createLoader(){
+        this.entriesLoader.innerHTML = `
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        `;
+    }
+    destroyLoader(){
+        this.entriesLoader.innerHTML = ``;
+    }
+}

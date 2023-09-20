@@ -2523,9 +2523,9 @@ window.addEventListener('DOMContentLoaded', () => {
 class BigSupporter{
     constructor(){
         this.dev = false;
-        this.host = (this.dev) ? `http://localhost` : `https://archived-forms.bgwgroup.com.au/big-supporter`;
+        this.host = (this.dev) ? `http://localhost/big-supporter` : `https://archived-forms.bgwgroup.com.au/big-supporter`;
 
-        this.getCustomerDataURL = `${this.host}/big-supporter/get_customer_data.php`;
+        this.getCustomerDataURL = `${this.host}/get_customer_data.php`;
 
         this.date = new Date();
         this.month = this.date.getMonth() + 1;

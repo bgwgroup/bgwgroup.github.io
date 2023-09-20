@@ -2706,7 +2706,7 @@ class BigSupporter{
  * SAMIOS SAMMY SHOWCASE 2023
  */
 window.addEventListener('DOMContentLoaded', () => {
-    if(location.href.match(/cnw-big-support/gi)){
+    if(location.href.match(/sammy-showcase-2023/gi)){
         new SammyShowcaseEntries();
     }
 });

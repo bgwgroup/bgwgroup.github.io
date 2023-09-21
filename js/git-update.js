@@ -2718,7 +2718,7 @@ class SammyShowcaseEntries {
 
         this.entriesURL = `${this.host}/get_entries.php`;
 
-        this.showcaseButton = document.querySelector('.s-showcase-button button');
+        this.showcaseButton = document.querySelectorAll('.s-showcase-button button');
         this.showcaseEntriesContent = document.querySelector('.s-showcase-entries-content');
         this.showcaseEntriesSearch = document.querySelector('[name="showcaseEntries"]');
         this.showcaseEntriesDisplay = document.querySelector('.s-showcase-entries-display');
@@ -2734,8 +2734,10 @@ class SammyShowcaseEntries {
     }
     toggleEntries() {
         if (this.showcaseButton != undefined) {
-            this.showcaseButton.addEventListener('click', () => {
-                this.showcaseEntriesContent.classList.toggle('show-content');
+            this.showcaseButton.forEach(button => {
+                button.addEventListener('click', () => {
+                    this.showcaseEntriesContent.classList.toggle('show-content');
+                });
             });
         }
     }

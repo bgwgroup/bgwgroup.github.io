@@ -2718,7 +2718,7 @@ class SammyShowcaseEntries {
 
         this.entriesURL = `${this.host}/get_entries.php`;
 
-        this.showcaseWrapper = document.querySelector('.s-showcase-wrapper');
+        this.showcaseWrapper = document.querySelectorAll('.s-showcase-wrapper');
         this.showcaseButton = document.querySelector('.s-showcase-button button');
         this.showcaseEntriesContent = document.querySelector('.s-showcase-entries-content');
         this.showcaseEntriesSearch = document.querySelector('[name="showcaseEntries"]');

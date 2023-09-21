@@ -2791,10 +2791,11 @@ class SammyShowcaseEntries {
                     <strong>Entries</strong>
                     <span>${entry['entries']}</span>
                 </div>
+                <!--
                 <div class="s-showcase-qual-periods">
                     <strong>Qualifying Periods</strong>
                     <span>${entry['qualifying_periods']}</span>
-                </div>
+                </div> -->
             `;
         }
     }

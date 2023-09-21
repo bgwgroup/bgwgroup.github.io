@@ -2718,6 +2718,7 @@ class SammyShowcaseEntries {
 
         this.entriesURL = `${this.host}/get_entries.php`;
 
+        this.showcaseWrapper = document.querySelectorAll('.s-showcase-wrapper');
         this.showcaseButton = document.querySelectorAll('.s-showcase-button button');
         this.showcaseEntriesContent = document.querySelector('.s-showcase-entries-content');
         this.showcaseEntriesSearch = document.querySelector('[name="showcaseEntries"]');
@@ -2731,13 +2732,12 @@ class SammyShowcaseEntries {
     init() {
         this.getEntries();
         this.toggleEntries();
+        this.miscFix();
     }
     toggleEntries() {
         if (this.showcaseButton != undefined) {
-            this.showcaseButton.forEach(button => {
-                button.addEventListener('click', () => {
-                    this.showcaseEntriesContent.classList.toggle('show-content');
-                });
+            this.showcaseButton.addEventListener('click', () => {
+                this.showcaseEntriesContent.classList.toggle('show-content');
             });
         }
     }
@@ -2820,5 +2820,18 @@ class SammyShowcaseEntries {
     }
     removeBGToEntriesDisplay(){
         this.showcaseEntriesDisplay.classList.remove('bg-white');
+    }
+    miscFix(){
+        ['DOMContentLoaded','resize'].forEach(event => {
+            window.addEventListener(event, () => {
+                if(window.innerWidth <= 768){
+                    this.showcaseWrapper.forEach(wrapper => {
+                        if(wrapper.classList.contains('s-showcase-desktop')){
+                            document.body.removeChild(wrapper);
+                        }
+                    });
+                }
+            });
+        });
     }
 }

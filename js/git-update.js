@@ -2827,7 +2827,7 @@ class SammyShowcaseEntries {
                 if(window.innerWidth <= 768){
                     this.showcaseWrapper.forEach(wrapper => {
                         if(wrapper.classList.contains('s-showcase-desktop')){
-                            document.body.removeChild(wrapper);
+                            wrapper.remove(); // delete that element
                         }
                     });
                 }

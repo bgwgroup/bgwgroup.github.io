@@ -2718,7 +2718,6 @@ class SammyShowcaseEntries {
 
         this.entriesURL = `${this.host}/get_entries.php`;
 
-        this.showcaseWrapper = document.querySelectorAll('.s-showcase-wrapper');
         this.showcaseButton = document.querySelector('.s-showcase-button button');
         this.showcaseEntriesContent = document.querySelector('.s-showcase-entries-content');
         this.showcaseEntriesSearch = document.querySelector('[name="showcaseEntries"]');
@@ -2732,7 +2731,6 @@ class SammyShowcaseEntries {
     init() {
         this.getEntries();
         this.toggleEntries();
-        this.miscFix();
     }
     toggleEntries() {
         if (this.showcaseButton != undefined) {
@@ -2820,18 +2818,5 @@ class SammyShowcaseEntries {
     }
     removeBGToEntriesDisplay(){
         this.showcaseEntriesDisplay.classList.remove('bg-white');
-    }
-    miscFix(){
-        ['DOMContentLoaded','resize'].forEach(event => {
-            window.addEventListener(event, () => {
-                if(window.innerWidth <= 768){
-                    this.showcaseWrapper.forEach(wrapper => {
-                        if(wrapper.classList.contains('s-showcase-desktop')){
-                            wrapper.remove(); // delete that element
-                        }
-                    });
-                }
-            });
-        });
     }
 }

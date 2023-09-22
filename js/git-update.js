@@ -2598,6 +2598,8 @@ class BigSupporter{
                                 this.drawEntriesDisplay(customerEntries, 'Sep');    
                                 this.drawEntriesDisplay(customerEntries, 'Oct');    
                                 this.setCustomerName(this.customerNameFromData[0]);
+                            }else{
+                                alert('No entries found');
                             }
                         })
                         .catch((error) => {

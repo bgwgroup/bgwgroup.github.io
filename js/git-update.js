@@ -2599,7 +2599,7 @@ class BigSupporter{
                                 this.drawEntriesDisplay(customerEntries, 'Oct');    
                                 this.setCustomerName(this.customerNameFromData[0]);
                             }else{
-                                alert('No entries found');
+                                this.entriesCustomerName.innerHTML = `No entries found`;
                             }
                         })
                         .catch((error) => {
@@ -2770,7 +2770,7 @@ class SammyShowcaseEntries {
                                     this.renderEntries(entries);
                                     this.clearLoader();
                                 }else{
-                                    alert('No entries found');
+                                    this.showcaseEntriesContent.innerHTML = `No entries found`;
                                 }
                             })
                             .catch((error) => { console.log(error) });

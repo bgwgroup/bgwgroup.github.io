@@ -2270,6 +2270,11 @@ class ClipsalClickFrenzy{
             this.removeCustomerData();
         });
     }
+    getCurrentSelectedMonth(dateObj){
+        let selectedMonth = parseInt(dateObj.split('-')[1]);
+        console.log(this.currentMonth[selectedMonth - 1]);
+        return this.currentMonth[selectedMonth - 1];
+    }
     fetchData(){
         // stop form from submitting
         this.form.addEventListener('submit', (event) => {

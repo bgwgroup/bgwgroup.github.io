@@ -2210,6 +2210,7 @@ class ClipsalClickFrenzy{
         this.customerMonthlyEntries = document.querySelector('.customer-monthly-entries');
         this.customerData = document.querySelector('.customer-data');
         this.customerNumber = document.querySelector('[name="customer_number"]');
+        this.customerCurrentMonth = document.querySelector('[name="customer_current_month"]');
 
         this.hiddenAccount = document.querySelector(['[name="hidden_account"]']);
         this.hiddenAccountName = document.querySelector(['[name="hidden_account_name"]']);

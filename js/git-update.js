@@ -2599,7 +2599,7 @@ class BigSupporter{
                                 this.drawEntriesDisplay(customerEntries, 'Oct');    
                                 this.setCustomerName(this.customerNameFromData[0]);
                             }else{
-                                this.entriesCustomerName.innerHTML = `No entries found`;
+                                this.entriesCustomerName.innerHTML = `<span>No entries found</span>`;
                             }
                         })
                         .catch((error) => {

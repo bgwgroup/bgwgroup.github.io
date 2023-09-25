@@ -2771,6 +2771,7 @@ class SammyShowcaseEntries {
                                     this.clearLoader();
                                 } else{
                                     this.renderNoEntries();
+                                    this.clearLoader();
                                 }
                             })
                             .catch((error) => { console.log(error) });
@@ -2804,9 +2805,11 @@ class SammyShowcaseEntries {
         }
     }
     clearEntries() {
+        this.showcaseEntriesDisplay.classList.remove('bg-white');
         this.showcaseEntriesDisplay.innerHTML = ``;
     }
     renderNoEntries(){
+        this.showcaseEntriesDisplay.classList.add('bg-white');
         this.showcaseEntriesDisplay.innerHTML = `
             <div class="s-showcase-customer-name">
                 <strong>Error</strong>

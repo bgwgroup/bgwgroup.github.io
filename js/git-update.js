@@ -2769,9 +2769,9 @@ class SammyShowcaseEntries {
 
                                     this.renderEntries(entries);
                                     this.clearLoader();
-                                }else{
+                                }/* else{
                                     this.showcaseEntriesContent.innerHTML = `No entries found`;
-                                }
+                                }*/
                             })
                             .catch((error) => { console.log(error) });
                     }, this.INTERVAL);

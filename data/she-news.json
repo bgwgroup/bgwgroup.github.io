@@ -7,11 +7,11 @@
         "active": "yes"
     },
     {
-        "image": "/medias/mhi-2023-slider.jpg?context=bWFzdGVyfGltYWdlc3wyOTMyMDh8aW1hZ2UvanBlZ3xoNDUvaDRiLzEwMDI1Nzc4MzQ4MDYyL21oaS0yMDIzLXNsaWRlci5qcGd8MzgyZmY3ODY3NDBhZGE1Yjg5MTM4ZjY3ZTdkMGUwOTE5ZjM0ZTIwOGFiODhiNjJkZjQxOTI2ODg5OWUzMGM2Mg",
-        "title": "MHI 2023",
-        "description": "Get up to $250 cash bonus",
-        "link": "/mhiaa-2023-summer-cash-bonus",
-        "active": "no"
+        "image": "/medias/Sherriff-900x810.png.jpg?context=bWFzdGVyfGltYWdlc3w1MDYzMTZ8aW1hZ2UvanBlZ3xoNmUvaDZjLzk4MTc2MjMxMDE0NzAvU2hlcnJpZmYgOTAweDgxMC5wbmcuanBnfGJmZDRmMmE5M2RiODNjYmMxZjI4N2E1YjE2NzE2ZDUxMzc3YTI4ZWY2YzgyMzBjMGNmYTM2MTg3MTQ5ZTQ0Zjg",
+        "title": "ERP Integration",
+        "description": "Never get outdated",
+        "link": "/erp-integration",
+        "active": "yes"
     },
     {
         "image": "/medias/sherriff-clipsal-frenzy-promo.jpg?context=bWFzdGVyfGltYWdlc3w0NDUyMjJ8aW1hZ2UvanBlZ3xoNGUvaDBlLzEwMTMxNDY0MzU1ODcwL3NoZXJyaWZmLWNsaXBzYWwtZnJlbnp5LXByb21vLmpwZ3wwZGY1Y2VkMmRmYWRlNTU3Mzg5MzNiM2JlOWI4ODk4ZGE1ZDU0MDQyZmFjZWNjZDI3MDRlOTdkMzk5Nzk2ZTJh",
@@ -25,34 +25,6 @@
         "title": "Clever Life",
         "description": "Ceiling Fans & Lighting Experts",
         "link": "/clever-life",
-        "active": "yes"
-    },
-    {
-        "image": "/medias/fl-slider.jpg?context=bWFzdGVyfGltYWdlc3w4ODU0MTR8aW1hZ2UvanBlZ3xoYmQvaDI4Lzk5NDIyMDcyMDEzMTAvZmwtc2xpZGVyLmpwZ3wxNjNjZGUyZjNlNzBmMmQwMzkwMjJhYTYzOGY1YTYyNWJhNWRiNDkyNjRjNzYyNjdiYmZjMDFhZDA3OGFiZmVh",
-        "title": "Fully Loaded Getaway",
-        "description": "Spend and earn a chance for a Getaway",
-        "link": "/fully-loaded-getaway",
-        "active": "no"
-    },
-    {
-        "image": "/medias/she-whph-slider.jpg?context=bWFzdGVyfGltYWdlc3w1NTU2NzF8aW1hZ2UvanBlZ3xoM2EvaGViLzEwMDIxMTE4OTAyMzAyL3NoZS13aHBoLXNsaWRlci5qcGd8ZmFlZjVhMjkzMjI3MDliNzJmZTdiNDQxNzU5ZjZjODkzOGVmODczMGQzMzFjNzMxZGIzZDYzY2RhOTRkMTliNg",
-        "title": "Work Hard Play Hard",
-        "description": "10 Years of WHPH",
-        "link": "/hager-work-hard-play-hard",
-        "active": "no"
-    },
-    {
-        "image": "/medias/she-haier-slider.jpg?context=bWFzdGVyfGltYWdlc3wxODMwNjh8aW1hZ2UvanBlZ3xoZGMvaGYzLzEwMDIwNjA2MDgzMTAyL3NoZS1oYWllci1zbGlkZXIuanBnfDIxM2VjZWFmMGY5YzBkNzgxZmUyNzQxOThmZmY0MjFmYWVhNWYxZjQzYjVhYWI5ODU4NGUyNWJkM2U0ODg1ODc",
-        "title": "Bonus Gift Card",
-        "description": "When you purchase Haier",
-        "link": "/haier-bonus-gift-card",
-        "active": "no"
-    },
-    {
-        "image": "/medias/Sherriff-900x810.png.jpg?context=bWFzdGVyfGltYWdlc3w1MDYzMTZ8aW1hZ2UvanBlZ3xoNmUvaDZjLzk4MTc2MjMxMDE0NzAvU2hlcnJpZmYgOTAweDgxMC5wbmcuanBnfGJmZDRmMmE5M2RiODNjYmMxZjI4N2E1YjE2NzE2ZDUxMzc3YTI4ZWY2YzgyMzBjMGNmYTM2MTg3MTQ5ZTQ0Zjg",
-        "title": "ERP Integration",
-        "description": "Never get outdated",
-        "link": "/erp-integration",
         "active": "yes"
     },
     {

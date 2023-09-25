@@ -2770,7 +2770,7 @@ class SammyShowcaseEntries {
                                     this.renderEntries(entries);
                                     this.clearLoader();
                                 } else{
-                                    this.showcaseEntriesContent.innerHTML = `<strong>Error</strong><span>No entries found</span>`;
+                                    this.showcaseEntriesContent.innerHTML = `<div class="s-showcase-customer-name"><strong>Error</strong><span>No entries found</span></div>`;
                                 }
                             })
                             .catch((error) => { console.log(error) });

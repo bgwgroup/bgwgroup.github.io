@@ -2216,6 +2216,7 @@ class ClipsalClickFrenzy{
         this.hiddenMonth = document.querySelector(['[name="hidden_month"]']);
         this.hiddenEntries = document.querySelector(['[name="hidden_entries"]']);
         this.hiddenEmail = document.querySelector(['[name="hidden_email"]']);
+        this.hiddenSelectedMonth = document.querySelector(['[name="hidden_selected_month"]']);
 
         this.formButtons = document.querySelector('.form-buttons');
         this.redeemButton = document.querySelector('#customerRedeem');
@@ -2249,12 +2250,25 @@ class ClipsalClickFrenzy{
         this.fetchData();
         this.generateRedemptionForm();
         this.submitRedemptionForm();
+        this.getSelectedMonth();
     }
     getDateObject(){
         return (this.dateMonth < 10) ? `${this.dateYear}-0${this.dateMonth}` : `${this.dateYear}-${this.dateMonth}`;
     }
     getCurrentMonth(){
         return this.currentMonth[this.dateMonth - 1];
+    }
+    getSelectedMonth(){
+        this.hiddenSelectedMonth.value = this.customerCurrentMonth.value;
+        this.customerCurrentMonth.addEventListener('change', () => {
+            this.hiddenSelectedMonth.value = this.customerCurrentMonth.value;
+            this.hiddenMonth.value = this.getCurrentSelectedMonth(this.hiddenSelectedMonth.value);
+            this.customerNumber.value = ``;
+            this.hideButtons();
+            this.hideMonthlyEntries();
+            this.removeAccountName();
+            this.removeCustomerData();
+        });
     }
     fetchData(){
         // stop form from submitting
@@ -2275,7 +2289,8 @@ class ClipsalClickFrenzy{
 
             let formData = new FormData();
             formData.append('account_number', typedCustomerNumber);
-            formData.append('datetime', this.datetime);
+            formData.append('datetime', this.hiddenSelectedMonth.value);
+            // formData.append('datetime', this.datetime);
 
             if (typedCustomerNumber >= 3) {
                 fetch(this.postURL, {
@@ -2302,7 +2317,8 @@ class ClipsalClickFrenzy{
                                     this.setCustomerData(formattedDate, formattedInvoice, element['total_spend'], element['entries']);
                                 }
 
-                                this.setHiddenValues(typedCustomerNumber, customerRecords[0]['account_name'], this.getCurrentMonth(), this.entryNumbers[0], element['email']);
+                                // this.setHiddenValues(typedCustomerNumber, customerRecords[0]['account_name'], this.getCurrentMonth(), this.entryNumbers[0], element['email']);
+                                this.setHiddenValues(typedCustomerNumber, customerRecords[0]['account_name'], this.getCurrentSelectedMonth(this.hiddenSelectedMonth.value), this.entryNumbers[0], element['email']);
                             }
                             if(this.entryNumbers[0] > 0){
                                 this.showButtons();
@@ -2313,6 +2329,8 @@ class ClipsalClickFrenzy{
 
                         this.showMonthlyEntries(this.entryNumbers[0]);
                         //this.setHiddenValues(typedCustomerNumber, customerRecords[0]['account_name'], this.getCurrentMonth(), this.entryNumbers[0]);
+                    } else {
+                        this.setAccountName(`No entries for the month of ${this.getCurrentSelectedMonth(this.hiddenSelectedMonth.value)}`);
                     }
                 })
                 .catch(err => {

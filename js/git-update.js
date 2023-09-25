@@ -2770,7 +2770,7 @@ class SammyShowcaseEntries {
                                     this.renderEntries(entries);
                                     this.clearLoader();
                                 } else{
-                                    this.showcaseEntriesContent.innerHTML = `<div class="s-showcase-customer-name"><strong>Error</strong><span>No entries found</span></div>`;
+                                    this.renderNoEntries();
                                 }
                             })
                             .catch((error) => { console.log(error) });
@@ -2805,6 +2805,13 @@ class SammyShowcaseEntries {
     }
     clearEntries() {
         this.showcaseEntriesDisplay.innerHTML = ``;
+    }
+    renderNoEntries(){
+        this.showcaseEntriesDisplay.innerHTML = `
+            <div class="s-showcase-customer-name">
+                <strong>Error</strong>
+                <span>No entries found</span>
+            </div>`;
     }
     renderLoader() {
         this.showcaseEntriesLoader.innerHTML = `

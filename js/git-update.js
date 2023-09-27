@@ -2427,7 +2427,7 @@ class ClipsalClickFrenzy{
                         <div class="form-row form-select" style="${(this.hiddenEntries.value != "0") ? '' : 'display: none;'}">
                             <label>Voucher</label>
                             <select name="voucher">
-                                <option value="lksd">LKSD</option>
+                                <option value="lskd">LSKD</option>
                                 <option value="prezzee">Prezzee</option>
                             </select>
                         </div>

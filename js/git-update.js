@@ -2406,6 +2406,10 @@ class ClipsalClickFrenzy{
     hideMonthlyEntries(){
         this.customerMonthlyEntries.innerHTML  = ``;
     }
+    getHiddenMonthString(value){
+        let month = value.split("-")[1];
+        return this.currentMonth(parseInt(month));
+    }
     generateRedemptionForm(){
         if(this.redeemButton != undefined){
             this.redeemButton.addEventListener('click', () => {
@@ -2417,7 +2421,7 @@ class ClipsalClickFrenzy{
                     this.ccfRedeemFormContainer.innerHTML = `
                     <div class="ccf-redeem-form">
                         ${this.hiddenEntries.value == "0" ? 
-                        '<div class="form-row"><label>You have 0 entries for the month of '+ this.hiddenSelectedMonth.value +'</label></div>' : ''}
+                        '<div class="form-row"><label>You have 0 entries for the month of '+ this.getHiddenMonthString(this.hiddenSelectedMonth.value) +'</label></div>' : ''}
                         <div class="form-row">
                             <label>Account Number</label>
                             <input type="text" name="account" maxlength="5" value="${this.hiddenAccount.value}" readonly>

@@ -2416,6 +2416,8 @@ class ClipsalClickFrenzy{
                 setTimeout(() => {
                     this.ccfRedeemFormContainer.innerHTML = `
                     <div class="ccf-redeem-form">
+                        ${this.hiddenEntries.value == "0" ? 
+                        '<div class="form-row"><label>You have 0 entries for the month of '+ this.hiddenSelectedMonth.value +'</label></div>' : ''}
                         <div class="form-row">
                             <label>Account Number</label>
                             <input type="text" name="account" maxlength="5" value="${this.hiddenAccount.value}" readonly>

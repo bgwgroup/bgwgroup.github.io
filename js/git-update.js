@@ -2408,6 +2408,9 @@ class ClipsalClickFrenzy{
     }
     getHiddenMonthString(value){
         let month = value.split("-")[1];
+        if(month == "09"){
+            month = "9";
+        }
         return this.currentMonth(parseInt(month));
     }
     generateRedemptionForm(){

@@ -2411,7 +2411,7 @@ class ClipsalClickFrenzy{
         if(month == "09"){
             month = "9";
         }
-        return this.currentMonth(parseInt(month));
+        return this.currentMonth[parseInt(month)];
     }
     generateRedemptionForm(){
         if(this.redeemButton != undefined){

@@ -2871,7 +2871,8 @@ class SammyShowcaseEntries {
  * TEMP hide invoices data on dashboard home
  */
 window.addEventListener('DOMContentLoaded', () => {
-    if(location.href.match(/my-account)){
+
+     if (window.location.href.indexOf("/my-account") > -1) {
         let getInvoiceChartBlock = document.querySelector(".dashboard-stats-chart-invoices");
         getInvoiceChartBlock.querySelector(".stats-block-left").style.display = "none";
         getInvoiceChartBlock.querySelector(".stats-block-inner-split").style.display = "none";
@@ -2882,5 +2883,5 @@ window.addEventListener('DOMContentLoaded', () => {
         getInvoiceChartBlock.querySelector(".stats-block-split").style.display = "flex";
         getInvoiceChartBlock.querySelector(".stats-block-split").style.justifyContent = "center";
         getInvoiceChartBlock.querySelector(".stats-block-split").style.alignItems = "center";
-    }
+     }
 });

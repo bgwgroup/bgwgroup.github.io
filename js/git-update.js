@@ -2553,8 +2553,6 @@ class ClipsalClickFrenzy{
                 let entryNumber = e.currentTarget.querySelector('[name="entry_number"]');
                 let redeemVouchers = e.currentTarget.querySelector('#redeemVouchers');
 
-                console.log('bonusEntry', bonusEntry);
-
                 try{
                     if(e.target === entryNumber){
                         entryNumber.addEventListener('keypress', (e) => {
@@ -2572,8 +2570,8 @@ class ClipsalClickFrenzy{
                         postData.append('entry_number', entryNumber.value);
                         postData.append('month', this.hiddenMonth.value);
                         postData.append('email', this.hiddenEmail.value);
-                        if(bonusEntry == undefined){
-                            postData.append('bonus_entry', '');
+                        if(bonusEntry == undefined || bonusEntry == null){
+                            postData.append('bonus_entry', 'No Bonus Entry');
                         }else{
                             postData.append('bonus_entry', bonusEntry.value);
                         }

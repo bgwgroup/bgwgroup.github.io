@@ -2653,7 +2653,6 @@ class BigSupporter{
 
     getSearchDetails(branch, account, accountName, phoneNumber, email){
         if(branch != '' && account != '' && accountName != '' && phoneNumber != '' && email != ''){
-            console.log(email);
             let postData = new FormData();
             postData.append('branch', branch);
             postData.append('account', account);
@@ -2667,7 +2666,7 @@ class BigSupporter{
             })
             .then((response) => { return response.json(); })
             .then((search) => { console.log(search); })
-            .catch((err) => {});
+            .catch((err) => { console.log(err); });
         }
     }
     drawEntriesDisplay(customerEntries, month){

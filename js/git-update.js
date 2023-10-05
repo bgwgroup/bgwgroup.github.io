@@ -2855,7 +2855,7 @@ class SammyShowcaseEntries {
 
                 fetch(this.sammyEntriesSearchURL, {
                     method: 'post',
-                    body: postData
+                    body: searchPostData
                 })
                 .then((search) => { })
                 .catch((err) => { });

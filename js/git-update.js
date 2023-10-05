@@ -2579,7 +2579,7 @@ class ClipsalClickFrenzy{
                         })
                         .then((response) => { return response.json(); })
                         .then((redeem) => {
-                            console.log(redeem);
+                            // console.log(redeem);
                             if(redeem.status){
                                 setInterval(() => {
                                     countdown = countdown - 1;

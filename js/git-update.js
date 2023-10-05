@@ -2653,6 +2653,7 @@ class BigSupporter{
 
     getSearchDetails(branch, account, accountName, phoneNumber, email){
         if(branch != '' && account != '' && accountName != '' && phoneNumber != '' && email != ''){
+            console.log(email);
             let postData = new FormData();
             postData.append('branch', branch);
             postData.append('account', account);

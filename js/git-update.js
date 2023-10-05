@@ -2553,6 +2553,8 @@ class ClipsalClickFrenzy{
                 let entryNumber = e.currentTarget.querySelector('[name="entry_number"]');
                 let redeemVouchers = e.currentTarget.querySelector('#redeemVouchers');
 
+                console.log('bonusEntry', bonusEntry);
+
                 try{
                     if(e.target === entryNumber){
                         entryNumber.addEventListener('keypress', (e) => {

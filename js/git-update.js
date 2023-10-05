@@ -2482,12 +2482,12 @@ class ClipsalClickFrenzy{
                             <label>Contact Number</label>
                             <input type="text" name="account_contact_number" placeholder="Enter contact number">
                         </div>
-                        ${this.getHiddenMonthString(this.hiddenSelectedMonth.value) == 'October' ? '<div class="form-row form-select"><label>Bonus Entry(October)</label><select name="bonus_entry"><option value="no">No</option><option value="yes/LSKD">Yes/LSKD</option><option value="yes/PREEZZEE">Yes/PREZZEE</option></select></div>' : ''}
+                        ${this.getHiddenMonthString(this.hiddenSelectedMonth.value) == 'October' ? '<div class="form-row form-select"><label>Bonus Entry(October)</label><select name="bonus_entry"><option value="no">No</option><option value="LSKD">Yes - LSKD</option><option value="PREEZZEE">Yes - PREZZEE</option></select></div>' : ''}
                         <div class="form-row form-select" style="${(this.hiddenEntries.value != "0") ? '' : 'display: none;'}">
                             <label>Voucher</label>
                             <select name="voucher">
-                                <option value="lskd">LSKD</option>
-                                <option value="prezzee">Prezzee</option>
+                                <option value="LSKD">LSKD</option>
+                                <option value="PREZZEE">Prezzee</option>
                             </select>
                         </div>
                         <div class="form-row form-number" style="${(this.hiddenEntries.value != "0") ? '' : 'display: none;'}">

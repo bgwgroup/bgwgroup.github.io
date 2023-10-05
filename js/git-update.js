@@ -2853,7 +2853,7 @@ class SammyShowcaseEntries {
                 searchPostData.append('phoneNumber', entries[i]['main_phone']);
                 searchPostData.append('email', entries[i]['main_email']);
 
-                fetch(this.getCustomerSearchDataURL, {
+                fetch(this.sammyEntriesSearchURL, {
                     method: 'post',
                     body: postData
                 })

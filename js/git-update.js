@@ -2242,6 +2242,7 @@ class ClipsalClickFrenzy{
         this.postURL = `${this.host}/ccf/customer_data.php`;
         this.getCustomerEntriesURL = `${this.host}/ccf/get_customer_entries.php`;
         this.insertCustomerEntriesURL = `${this.host}/ccf/insert_customer_entries.php`;
+        this.insertCustomerEntriesSearchURL = `${this.host}/ccf/insert_customer_search_entries.php`;
 
         this.INTERVAL = 1000;
 
@@ -2332,6 +2333,10 @@ class ClipsalClickFrenzy{
                             }
                         }
 
+                        setTimeout(() => {
+                            this.setCustomerEntriesSearch(customerRecords);
+                        }, this.INTERVAL);
+
                         this.showMonthlyEntries(this.entryNumbers[0]);
                         //this.setHiddenValues(typedCustomerNumber, customerRecords[0]['account_name'], this.getCurrentMonth(), this.entryNumbers[0]);
                     } else {
@@ -2344,6 +2349,42 @@ class ClipsalClickFrenzy{
             }
 
         });
+    }
+    setCustomerEntriesSearch(customerRecords){
+
+        let branch, account, accountName, phoneNumber, email = '';
+
+        for(const element of customerRecords){
+            if(element['home_branch'] != ''){
+                branch = element['home_branch'];
+            }
+            if(element['account_number'] != ''){
+                account = element['account_number'];
+            }
+            if(element['account_name'] != ''){
+                accountName = element['account_name'];
+            }
+            if(element['main_phone'] != ''){
+                phoneNumber = element['main_phone'] || 'No Number';
+            }
+            if(element['email'] != ''){
+                email = element['email'];
+            }
+        }
+
+        let postData = new FormData();
+        postData.append('branch', branch);
+        postData.append('account', account);
+        postData.append('accountName', accountName);
+        postData.append('phoneNumber', phoneNumber);
+        postData.append('email', email);
+
+        fetch(this.insertCustomerEntriesSearchURL, {
+            method: 'post',
+            body: postData
+        })
+        .then((search) => { })
+        .catch((err) => { });
     }
     setHiddenValues(account, name, month, entries, email){
         if(this.hiddenAccount != undefined && this.hiddenAccountName != undefined){

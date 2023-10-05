@@ -4097,6 +4097,10 @@ CNW SBO Search Page Promotion Banner
     background: var(--ccf-grey);
 }
 
+.ccf-redeem-form input[name="account_contact_number"] {
+    background: #FFF !important;
+}
+
 .ccf-alert p {
     padding: 24px;
     border: 1px solid var(--ccf-grey);

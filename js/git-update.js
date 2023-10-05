@@ -2482,6 +2482,7 @@ class ClipsalClickFrenzy{
                             <label>Contact Number</label>
                             <input type="text" name="account_contact_number">
                         </div>
+                        ${this.getHiddenMonthString(this.hiddenSelectedMonth.value) == 'October' ? '<div class="form-row"><label>Bonus Entry(October)</label><select name="bonus_entry"><option value="no">No</option><option value="yes/LSKD">Yes/LSKD</option><option value="yes/PREEZZEE">Yes/PREZZEE</option></select></div>' : ''}
                         <div class="form-row form-select" style="${(this.hiddenEntries.value != "0") ? '' : 'display: none;'}">
                             <label>Voucher</label>
                             <select name="voucher">
@@ -2547,6 +2548,7 @@ class ClipsalClickFrenzy{
                 let account = e.currentTarget.querySelector('[name="account"]');
                 let accountName = e.currentTarget.querySelector('[name="account_name"]');
                 let accountContactNumber = e.currentTarget.querySelector('[name="account_contact_number"]');
+                let bonusEntry = e.currentTarget.querySelector('[name="bonus_entry"]');
                 let voucher = e.currentTarget.querySelector('[name="voucher"]');
                 let entryNumber = e.currentTarget.querySelector('[name="entry_number"]');
                 let redeemVouchers = e.currentTarget.querySelector('#redeemVouchers');
@@ -2568,6 +2570,7 @@ class ClipsalClickFrenzy{
                         postData.append('entry_number', entryNumber.value);
                         postData.append('month', this.hiddenMonth.value);
                         postData.append('email', this.hiddenEmail.value);
+                        postData.append('bonus_entry', bonusEntry.value);
     
                         fetch(this.insertCustomerEntriesURL, {
                             method: 'post',

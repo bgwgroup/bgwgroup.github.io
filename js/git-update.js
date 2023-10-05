@@ -2474,6 +2474,14 @@ class ClipsalClickFrenzy{
                             <label>Account Name</label>
                             <input type="text" name="account_name" value="${this.hiddenAccountName.value}" readonly>
                         </div>
+                        <div class="form-row">
+                            <label>Account Email</label>
+                            <input type="text" name="account_email" value="${this.hiddenEmail.value}" readonly>
+                        </div>
+                        <div class="form-row">
+                            <label>Contact Number</label>
+                            <input type="text" name="account_contact_number">
+                        </div>
                         <div class="form-row form-select" style="${(this.hiddenEntries.value != "0") ? '' : 'display: none;'}">
                             <label>Voucher</label>
                             <select name="voucher">
@@ -2538,6 +2546,7 @@ class ClipsalClickFrenzy{
 
                 let account = e.currentTarget.querySelector('[name="account"]');
                 let accountName = e.currentTarget.querySelector('[name="account_name"]');
+                let accountContactNumber = e.currentTarget.querySelector('[name="account_contact_number"]');
                 let voucher = e.currentTarget.querySelector('[name="voucher"]');
                 let entryNumber = e.currentTarget.querySelector('[name="entry_number"]');
                 let redeemVouchers = e.currentTarget.querySelector('#redeemVouchers');
@@ -2554,6 +2563,7 @@ class ClipsalClickFrenzy{
                         let postData = new FormData();
                         postData.append('account', account.value);
                         postData.append('account_name', accountName.value);
+                        postData.append('contact_number', accountContactNumber.value);
                         postData.append('voucher', voucher.value);
                         postData.append('entry_number', entryNumber.value);
                         postData.append('month', this.hiddenMonth.value);

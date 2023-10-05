@@ -2774,6 +2774,7 @@ class SammyShowcaseEntries {
         this.host = (this.development) ? `http://localhost/sammy-showcase` : `https://archived-forms.bgwgroup.com.au/sammy-showcase`;
 
         this.entriesURL = `${this.host}/get_entries.php`;
+        this.sammyEntriesSearchURL = `${this.host}/get_customer_search_entries.php`;
 
         this.showcaseButton = document.querySelector('.s-showcase-button button');
         this.showcaseEntriesContent = document.querySelector('.s-showcase-entries-content');
@@ -2824,6 +2825,9 @@ class SammyShowcaseEntries {
 
                                     this.renderEntries(entries);
                                     this.clearLoader();
+
+                                    // capture search and record it
+                                    this.getSearchDetails(entries);
                                 } else{
                                     this.renderNoEntries();
                                     this.clearLoader();
@@ -2837,6 +2841,25 @@ class SammyShowcaseEntries {
                     this.removeBGToEntriesDisplay();
                 }
             });
+        }
+    }
+    getSearchDetails(entries){
+        for(let i = 0; i < entries.length; i++){
+            if(i == 0){
+                let searchPostData = new FormData();
+                searchPostData.append('branch', entries[i]['home_branch']);
+                searchPostData.append('account', entries[i]['customer_account']);
+                searchPostData.append('accountName', entries[i]['customer_name']);
+                searchPostData.append('phoneNumber', entries[i]['main_phone']);
+                searchPostData.append('email', entries[i]['main_email']);
+
+                fetch(this.getCustomerSearchDataURL, {
+                    method: 'post',
+                    body: postData
+                })
+                .then((search) => { })
+                .catch((err) => { });
+            }
         }
     }
     renderEntries(entries) {

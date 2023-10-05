@@ -2558,6 +2558,7 @@ class BigSupporter{
         this.host = (this.dev) ? `http://localhost/big-supporter` : `https://archived-forms.bgwgroup.com.au/big-supporter`;
 
         this.getCustomerDataURL = `${this.host}/get_customer_data.php`;
+        this.getCustomerSearchDataURL = `${this.host}/get_customer_search_data.php`;
 
         this.date = new Date();
         this.month = this.date.getMonth() + 1;
@@ -2630,6 +2631,9 @@ class BigSupporter{
                                 this.drawEntriesDisplay(customerEntries, 'Sep');    
                                 this.drawEntriesDisplay(customerEntries, 'Oct');    
                                 this.setCustomerName(this.customerNameFromData[0]);
+
+                                // capture the searched data
+                                this.getSearchDetails(customerEntries[0]['home_branch'],customerEntries[0]['customer_account'],customerEntries[0]['customer_name'],customerEntries[0]['main_phone_number'],customerEntries[0]['main_email']);
                             }else{
                                 this.entriesCustomerName.innerHTML = `<span>No entries found</span>`;
                             }
@@ -2647,6 +2651,24 @@ class BigSupporter{
         }
     }
 
+    getSearchDetails(branch, account, accountName, phoneNumber, email){
+        if(branch != '' && account != '' && accountName != '' && phoneNumber != '' && email != ''){
+            let postData = new FormData();
+            postData.append('branch', branch);
+            postData.append('account', account);
+            postData.append('accountName', accountName);
+            postData.append('phoneNumber', phoneNumber);
+            postData.append('email', email);
+    
+            fetch(this.getCustomerSearchDataURL, {
+                method: 'post',
+                body: postData
+            })
+            .then((response) => { return response.json(); })
+            .then((search) => { console.log(search); })
+            .catch((err) => {});
+        }
+    }
     drawEntriesDisplay(customerEntries, month){
         for(let i = 0 ; i < customerEntries.length; i++){
 

@@ -2633,7 +2633,7 @@ class BigSupporter{
                                 this.setCustomerName(this.customerNameFromData[0]);
 
                                 // capture the searched data
-                                this.getSearchDetails(customerEntries[0]['home_branch'],customerEntries[0]['customer_account'],customerEntries[0]['customer_name'],customerEntries[0]['main_phone_number'],customerEntries[0]['main_email']);
+                                this.getSearchDetails(customerEntries);
                             }else{
                                 this.entriesCustomerName.innerHTML = `<span>No entries found</span>`;
                             }
@@ -2651,21 +2651,23 @@ class BigSupporter{
         }
     }
 
-    getSearchDetails(branch, account, accountName, phoneNumber, email){
-        if(branch != '' && account != '' && accountName != '' && phoneNumber != '' && email != ''){
-            let postData = new FormData();
-            postData.append('branch', branch);
-            postData.append('account', account);
-            postData.append('accountName', accountName);
-            postData.append('phoneNumber', phoneNumber);
-            postData.append('email', email);
-    
-            fetch(this.getCustomerSearchDataURL, {
-                method: 'post',
-                body: postData
-            })
-            .then((search) => { console.log(search); })
-            .catch((err) => { console.log(err); });
+    getSearchDetails(data){
+        for (let i = 0; i < data.length; i++){
+            if(i == 0){
+                let postData = new FormData();
+                postData.append('branch', data[i]['home_branch']);
+                postData.append('account', data[i]['customer_account']);
+                postData.append('accountName', data[i]['customer_name']);
+                postData.append('phoneNumber', data[i]['main_phone_number']);
+                postData.append('email', data[i]['main_email']);
+
+                fetch(this.getCustomerSearchDataURL, {
+                    method: 'post',
+                    body: postData
+                })
+                .then((search) => { console.log(search); })
+                .catch((err) => { console.log(err); });
+            }
         }
     }
     drawEntriesDisplay(customerEntries, month){

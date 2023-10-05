@@ -2633,7 +2633,9 @@ class BigSupporter{
                                 this.setCustomerName(this.customerNameFromData[0]);
 
                                 // capture the searched data
-                                this.getSearchDetails(customerEntries);
+                                setTimeout(() => {
+                                    this.getSearchDetails(customerEntries);
+                                }, this.INTERVAL);
                             }else{
                                 this.entriesCustomerName.innerHTML = `<span>No entries found</span>`;
                             }
@@ -2827,7 +2829,9 @@ class SammyShowcaseEntries {
                                     this.clearLoader();
 
                                     // capture search and record it
-                                    this.getSearchDetails(entries);
+                                    setTimeout(() => {
+                                        this.getSearchDetails(entries);
+                                    }, this.INTERVAL);
                                 } else{
                                     this.renderNoEntries();
                                     this.clearLoader();

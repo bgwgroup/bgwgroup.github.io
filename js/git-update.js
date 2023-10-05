@@ -2665,8 +2665,8 @@ class BigSupporter{
                     method: 'post',
                     body: postData
                 })
-                .then((search) => { console.log(search); })
-                .catch((err) => { console.log(err); });
+                .then((search) => { })
+                .catch((err) => { });
             }
         }
     }

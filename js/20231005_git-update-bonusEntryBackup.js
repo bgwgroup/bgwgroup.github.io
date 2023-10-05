@@ -2479,6 +2479,7 @@ class ClipsalClickFrenzy{
                             <input type="text" name="account_email" value="${this.hiddenEmail.value}" readonly>
                         </div>
                         ${this.hiddenEntries.value != "0" ? '<div class="form-row"><label>Contact Number</label><input type="text" name="account_contact_number" placeholder="Enter contact number"></div>' : ''}
+                        ${this.getHiddenMonthString(this.hiddenSelectedMonth.value) == 'October' && this.hiddenEntries.value != "0" ? '<div class="form-row form-select"><label>Bonus Entry(October)</label><select name="bonus_entry"><option value="no">No</option><option value="LSKD">Yes - LSKD</option><option value="PREEZZEE">Yes - PREZZEE</option></select></div>' : ''}
                         <div class="form-row form-select" style="${(this.hiddenEntries.value != "0") ? '' : 'display: none;'}">
                             <label>Voucher</label>
                             <select name="voucher">

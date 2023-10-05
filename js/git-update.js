@@ -2570,7 +2570,11 @@ class ClipsalClickFrenzy{
                         postData.append('entry_number', entryNumber.value);
                         postData.append('month', this.hiddenMonth.value);
                         postData.append('email', this.hiddenEmail.value);
-                        postData.append('bonus_entry', bonusEntry.value);
+                        if(bonusEntry == undefined){
+                            postData.append('bonus_entry', '');
+                        }else{
+                            postData.append('bonus_entry', bonusEntry.value);
+                        }
     
                         fetch(this.insertCustomerEntriesURL, {
                             method: 'post',

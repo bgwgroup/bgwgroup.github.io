@@ -2438,8 +2438,8 @@ class ClipsalClickFrenzy{
         }else{
             this.customerMonthlyEntries.innerHTML = `
             <div>
-                <p>You currently have <strong>${entries}</strong> entries for the month of ${this.getCurrentMonth()}</p>
-                <small><sup>*</sup> You are only eligible for a max of <strong>4</strong> entries for the month of ${this.getCurrentMonth()}</small>
+                <p>You currently have <strong>${entries}</strong> entries for the month of ${this.getHiddenMonthString(this.hiddenSelectedMonth.value)}</p>
+                <small><sup>*</sup> You are only eligible for a max of <strong>4</strong> entries for the month of ${this.getHiddenMonthString(this.hiddenSelectedMonth.value)}</small>
             </div>
         `;
         }

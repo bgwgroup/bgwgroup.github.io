@@ -416,7 +416,7 @@ PlumbingPCN.prototype.fetchData = () => {
     let priceTableBody = document.querySelector('.price-table-body');
 
     if (priceTableBody != null) {
-        fetch('https://bgwgroup.com.au/samios_notifications/get-supplier-data.php')
+        fetch('https://archived-forms.bgwgroup.com.au/samios_notifications/get-supplier-data.php')
             .then((response) => { return response.json(); })
             .then((pcn) => {
 

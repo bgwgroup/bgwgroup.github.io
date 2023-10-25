@@ -470,6 +470,19 @@ PlumbingPCN.prototype.searchFilterData = () => {
  * CNW | Sherriff PCN Data
  */
 let ElectricalPCNWrappers = {
+    december2024: document.querySelector('.pcn-december2024'),
+    november2024: document.querySelector('.pcn-november2024'),
+    october2024: document.querySelector('.pcn-october2024'),
+    september2024: document.querySelector('.pcn-september2024'),
+    august2024: document.querySelector('.pcn-august2024'),
+    july2024: document.querySelector('.pcn-july2024'),
+    june2024: document.querySelector('.pcn-june2024'),
+    may2024: document.querySelector('.pcn-may2024'),
+    april2024: document.querySelector('.pcn-april2024'),
+    march2024: document.querySelector('.pcn-march2024'),
+    february2024: document.querySelector('.pcn-february2024'),
+    january2024: document.querySelector('.pcn-january2024'),
+
     december2023: document.querySelector('.pcn-december2023'),
     november2023: document.querySelector('.pcn-november2023'),
     october2023: document.querySelector('.pcn-october2023'),
@@ -482,6 +495,7 @@ let ElectricalPCNWrappers = {
     march2023: document.querySelector('.pcn-march2023'),
     february2023: document.querySelector('.pcn-february2023'),
     january2023: document.querySelector('.pcn-january2023'),
+
     december2022: document.querySelector('.pcn-december2022'),
     november2022: document.querySelector('.pcn-november2022'),
     october2022: document.querySelector('.pcn-october2022'),
@@ -494,6 +508,7 @@ let ElectricalPCNWrappers = {
     march2022: document.querySelector('.pcn-march2022'),
     february2022: document.querySelector('.pcn-february2022'),
     january2022: document.querySelector('.pcn-january2022'),
+    
     december2021: document.querySelector('.pcn-december2021'),
     november2021: document.querySelector('.pcn-november2021'),
     october2021: document.querySelector('.pcn-october2021'),
@@ -519,11 +534,24 @@ ElectricalPCN.prototype.init = () => {
 };
 ElectricalPCN.prototype.fetchData = () => {
 
-    fetch('https://bgwgroup.com.au/notifications/get-file-data.php')
+    fetch('https://archived-forms.bgwgroup.com.au/notifications/get-file-data.php')
         .then((response) => { return response.json(); })
         .then((pcn) => {
             for (let i = 0; i < pcn.length; i++) {
                 if (pcn[i]['status'] == 'visible') {
+                    ElectricalPCN.prototype.renderData(pcn[i], ElectricalPCNWrappers.december2024, "December-2024");
+                    ElectricalPCN.prototype.renderData(pcn[i], ElectricalPCNWrappers.november2024, "November-2024");
+                    ElectricalPCN.prototype.renderData(pcn[i], ElectricalPCNWrappers.october2024, "October-2024");
+                    ElectricalPCN.prototype.renderData(pcn[i], ElectricalPCNWrappers.september2024, "September-2024");
+                    ElectricalPCN.prototype.renderData(pcn[i], ElectricalPCNWrappers.august2024, "August-2024");
+                    ElectricalPCN.prototype.renderData(pcn[i], ElectricalPCNWrappers.july2024, "July-2024");
+                    ElectricalPCN.prototype.renderData(pcn[i], ElectricalPCNWrappers.june2024, "June-2024");
+                    ElectricalPCN.prototype.renderData(pcn[i], ElectricalPCNWrappers.may2024, "May-2024");
+                    ElectricalPCN.prototype.renderData(pcn[i], ElectricalPCNWrappers.april2024, "April-2024");
+                    ElectricalPCN.prototype.renderData(pcn[i], ElectricalPCNWrappers.march2024, "March-2024");
+                    ElectricalPCN.prototype.renderData(pcn[i], ElectricalPCNWrappers.february2024, "February-2024");
+                    ElectricalPCN.prototype.renderData(pcn[i], ElectricalPCNWrappers.january2024, "January-2024");
+
                     ElectricalPCN.prototype.renderData(pcn[i], ElectricalPCNWrappers.december2023, "December-2023");
                     ElectricalPCN.prototype.renderData(pcn[i], ElectricalPCNWrappers.november2023, "November-2023");
                     ElectricalPCN.prototype.renderData(pcn[i], ElectricalPCNWrappers.october2023, "October-2023");

@@ -2197,28 +2197,28 @@ if (window.location.href.indexOf("sherriff.com.au") != -1){
 }
 
 //Cnw Only Big One Banner Inject
-if (window.location.href.indexOf("cnw.com.au") != -1){
-  if (typeof(document.querySelector(".scaffoldProductSearchGridWrapper")) != 'undefined' && document.querySelector(".scaffoldProductSearchGridWrapper") != null){
-    let searchContainer = document.querySelector(".scaffoldProductSearchGridWrapper");
+// if (window.location.href.indexOf("cnw.com.au") != -1){
+//   if (typeof(document.querySelector(".scaffoldProductSearchGridWrapper")) != 'undefined' && document.querySelector(".scaffoldProductSearchGridWrapper") != null){
+//     let searchContainer = document.querySelector(".scaffoldProductSearchGridWrapper");
 
-    let createLink = document.createElement("a");
-    createLink.href = "https://shop.cnw.com.au/cnw-big-support";
-    createLink.style.width = "100%";
-    createLink.style.display = "flex";
-    createLink.style.justifyContent = "center";
+//     let createLink = document.createElement("a");
+//     createLink.href = "https://shop.cnw.com.au/cnw-big-support";
+//     createLink.style.width = "100%";
+//     createLink.style.display = "flex";
+//     createLink.style.justifyContent = "center";
 
-    let createImage = document.createElement("img");
+//     let createImage = document.createElement("img");
 
-    if (window.matchMedia("(max-width: 768px)").matches) {
-      createImage.src = "https://i.ibb.co/v10y9WN/2023-Bo4-CNW-Online-Focus-Mobile-Tile-v1.jpg";
-    } else {
-      createImage.src = "https://i.ibb.co/6YN174F/2023-Bo4-CNW-Online-Focus-Desktop-Tile-v1.jpg";
-    }
+//     if (window.matchMedia("(max-width: 768px)").matches) {
+//       createImage.src = "https://i.ibb.co/v10y9WN/2023-Bo4-CNW-Online-Focus-Mobile-Tile-v1.jpg";
+//     } else {
+//       createImage.src = "https://i.ibb.co/6YN174F/2023-Bo4-CNW-Online-Focus-Desktop-Tile-v1.jpg";
+//     }
 
-    createLink.appendChild(createImage);
-    searchContainer.prepend(createLink);
-  }
-}
+//     createLink.appendChild(createImage);
+//     searchContainer.prepend(createLink);
+//   }
+// }
 
 
 /**

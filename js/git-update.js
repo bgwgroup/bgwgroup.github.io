@@ -2260,6 +2260,7 @@ class ClipsalClickFrenzy{
         this.currentMonth = ['January','February','March','April','May','June','July','August','September','October','November','December'];
         this.entryNumbers = [];
         this.bonusEntry = '';
+        this.bonusEntryRedeemedValue = '';
 
         this.date = new Date();
         this.dateYear = this.date.getFullYear();
@@ -2562,10 +2563,16 @@ class ClipsalClickFrenzy{
                 if(this.hiddenEntries.value == 0 && RegExp(`\\b${this.getCurrentMonth()}\\b`).exec(entriesMonth)){
                     this.ccfAlert.innerHTML = `You have exceeded the number of times you can redeem in ${currentMonth} or you run out of entries`;
                 }
-                
 
                 if(this.hiddenEntries.value > 0 && RegExp(`\\b${this.getCurrentMonth()}\\b`).exec(entriesMonth)){
                     this.ccfAlert.innerHTML = `You have (${this.hiddenEntries.value}) voucher redemptions left for the month of ${currentMonth}`;
+                }
+
+                if(element['bonus_100_voucher'] != ''){
+                    console.log('User can redeem bonus 100 voucher');
+                    //this.bonusEntryRedeemedValue
+                }else{
+                    console.log(element['bonus_100_voucher']);
                 }
             }
         })

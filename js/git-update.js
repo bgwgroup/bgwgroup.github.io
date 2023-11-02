@@ -2292,7 +2292,7 @@ class ClipsalClickFrenzy{
         return this.currentMonth[this.dateMonth - 1];
     }
     getSelectedMonth(){
-        // this.hiddenSelectedMonth.value = this.customerCurrentMonth.value;
+        this.hiddenSelectedMonth.value = this.customerCurrentMonth.value;
         this.customerCurrentMonth.addEventListener('change', () => {
             this.hiddenSelectedMonth.value = this.customerCurrentMonth.value;
             this.hiddenMonth.value = this.getCurrentSelectedMonth(this.hiddenSelectedMonth.value);

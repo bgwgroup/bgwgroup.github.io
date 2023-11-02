@@ -2355,8 +2355,8 @@ class ClipsalClickFrenzy{
                                     this.setCustomerData(formattedDate, formattedInvoice, element['total_spend'], element['entries']);
                                 }
 
-                                if (element['bonus_100_voucher'] !== ''){
-                                    this.bonusEntry = element['bonus_100_voucher'];
+                                if (element['bonus_100_voucher'] != ''){
+                                    this.bonusEntry += element['bonus_100_voucher'];
                                 }
 
                                 // this.setHiddenValues(typedCustomerNumber, customerRecords[0]['account_name'], this.getCurrentMonth(), this.entryNumbers[0], element['email']);

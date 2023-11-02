@@ -2356,7 +2356,7 @@ class ClipsalClickFrenzy{
                                 }
 
                                 if (element['bonus_100_voucher'] != ''){
-                                    this.bonusEntry += element['bonus_100_voucher'];
+                                    this.bonusEntry = element['bonus_100_voucher'];
                                 }
 
                                 // this.setHiddenValues(typedCustomerNumber, customerRecords[0]['account_name'], this.getCurrentMonth(), this.entryNumbers[0], element['email']);
@@ -2430,7 +2430,6 @@ class ClipsalClickFrenzy{
             this.hiddenEntries.value = entries;
             this.hiddenEmail.value = email;
             this.hiddenBonusEntryMonth.value = (bonusEntry != '' || bonusEntry != null) ? 'Yes' : 'No';
-            this.hiddenDisplayBonusHundredMonth.value = (bonusEntry != '' || bonusEntry != null) ? 'true' : 'false';
         }
     }
     showButtons(){

@@ -2629,7 +2629,7 @@ class ClipsalClickFrenzy{
                         if(bonusVoucherEntry == undefined || bonusVoucherEntry == null){
                             postData.append('bonus_100_voucher', '');
                         }else{
-                            postData.append('bonus_100_voucher', bonusVoucherEntry);
+                            postData.append('bonus_100_voucher', bonusVoucherEntry.value);
                         }
     
                         fetch(this.insertCustomerEntriesURL, {

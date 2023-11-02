@@ -2527,7 +2527,7 @@ class ClipsalClickFrenzy{
                             <label>Voucher Entries (1 to 4)</label>
                             <input type="number" name="entry_number" min="1" max="${this.hiddenEntries.value}" value="${this.hiddenEntries.value}">
                         </div>
-                        ${this.hiddenDisplayBonusHundredMonth.value == "true" && this.hiddenBonusEntryMonth.value == "Yes" ? `                        
+                        ${this.hiddenDisplayBonusHundredMonth.value == "true" ? `                        
                         <div class="form-row" style="padding: 2rem; text-align: center;">
                             <label>You are eligible for a BONUS voucher (1 per customer)</label>
                         </div>
@@ -2554,7 +2554,6 @@ class ClipsalClickFrenzy{
 
         let totalEntriesSum = 0;
         let entriesMonth = '';
-        let bonushundredvoucher = '';
         let currentMonth = this.getCurrentMonth();
 
         fetch(this.getCustomerEntriesURL,{
@@ -2569,7 +2568,7 @@ class ClipsalClickFrenzy{
                 for(const element of entries){
                     totalEntriesSum += parseInt(element['entries']);
                     entriesMonth += element['entry_month'];
-                    bonushundredvoucher += element['bonus_100_voucher'];
+                    this.hiddenDisplayBonusHundredMonth.value = (element['bonus_100_voucher'] == '') ? "true" : "false";
                 }
                 this.hiddenEntries.value = (parseInt(this.hiddenEntries.value) - totalEntriesSum);
 
@@ -2579,12 +2578,6 @@ class ClipsalClickFrenzy{
 
                 if(this.hiddenEntries.value > 0 && RegExp(`\\b${this.getCurrentMonth()}\\b`).exec(entriesMonth)){
                     this.ccfAlert.innerHTML = `You have (${this.hiddenEntries.value}) voucher redemptions left for the month of ${currentMonth}`;
-                }
-
-                if(bonushundredvoucher != "" || bonushundredvoucher.length > 0){
-                    this.hiddenDisplayBonusHundredMonth.value = "false";
-                }else{
-                    this.hiddenDisplayBonusHundredMonth.value = "true";
                 }
             }
         })

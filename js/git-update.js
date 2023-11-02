@@ -2260,7 +2260,7 @@ class ClipsalClickFrenzy{
         this.currentMonth = ['January','February','March','April','May','June','July','August','September','October','November','December'];
         this.entryNumbers = [];
         this.bonusEntry = '';
-        this.canUserRedeem100Voucher = false;
+        this.canUserRedeem100Voucher = true;
 
         this.date = new Date();
         this.dateYear = this.date.getFullYear();

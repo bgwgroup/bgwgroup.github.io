@@ -2528,7 +2528,7 @@ class ClipsalClickFrenzy{
                             <input type="number" name="entry_number" min="1" max="${this.hiddenEntries.value}" value="${this.hiddenEntries.value}">
                         </div>
                         ${this.canUserRedeem100Voucher ? `                        
-                        <div class="form-row">
+                        <div class="form-row" style="padding: 2rem; text-align: center;">
                             <label>You are eligible for a BONUS voucher (1 per customer)</label>
                         </div>
                         <div class="form-row form-select">

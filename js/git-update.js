@@ -2517,7 +2517,7 @@ class ClipsalClickFrenzy{
                         </div>
                         ${this.hiddenEntries.value != "0" ? '<div class="form-row"><label>Contact Number</label><input type="text" name="account_contact_number" placeholder="Enter contact number"></div>' : ''}
                         <div class="form-row form-select" style="${(this.hiddenEntries.value != "0") ? '' : 'display: none;'}">
-                            <label>Voucher</label>
+                            <label>Claim $50 Voucher</label>
                             <select name="voucher">
                                 <option value="LSKD">LSKD</option>
                                 <option value="PREZZEE">Prezzee</option>

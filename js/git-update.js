@@ -2260,7 +2260,7 @@ class ClipsalClickFrenzy{
         this.currentMonth = ['January','February','March','April','May','June','July','August','September','October','November','December'];
         this.entryNumbers = [];
         this.bonusEntry = '';
-        this.bonusEntryRedeemedValue = '';
+        this.canUserRedeem100Voucher = false;
 
         this.date = new Date();
         this.dateYear = this.date.getFullYear();
@@ -2527,6 +2527,7 @@ class ClipsalClickFrenzy{
                             <label>Voucher Entries (1 to 4)</label>
                             <input type="number" name="entry_number" min="1" max="${this.hiddenEntries.value}" value="${this.hiddenEntries.value}">
                         </div>
+                        ${this.canUserRedeem100Voucher ? 'User can redeem their bonus 100 voucher' : ''}
                         <div class="form-buttons">
                             <button style="${(this.hiddenEntries.value != "0") ? '' : 'display: none;'}" id="redeemVouchers" title="Redeem Vouchers">Redeem Vouchers</button>
                         </div>
@@ -2568,11 +2569,11 @@ class ClipsalClickFrenzy{
                     this.ccfAlert.innerHTML = `You have (${this.hiddenEntries.value}) voucher redemptions left for the month of ${currentMonth}`;
                 }
 
-                if(element['bonus_100_voucher'] != ''){
-                    console.log('User can redeem bonus 100 voucher');
+                if(element['bonus_100_voucher'] == ''){
+                    this.canUserRedeem100Voucher = true;
                     //this.bonusEntryRedeemedValue
                 }else{
-                    console.log(element['bonus_100_voucher']);
+                    this.canUserRedeem100Voucher = false;
                 }
             }
         })

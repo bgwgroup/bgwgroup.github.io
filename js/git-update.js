@@ -2579,7 +2579,7 @@ class ClipsalClickFrenzy{
                     this.ccfAlert.innerHTML = `You have (${this.hiddenEntries.value}) voucher redemptions left for the month of ${currentMonth}`;
                 }
 
-                if(element['bonus_100_voucher'] != ''){
+                if(element['bonus_100_voucher'].length > 0){
                     this.canUserRedeem100Voucher = false;
                 }
             }

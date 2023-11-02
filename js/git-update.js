@@ -2528,7 +2528,7 @@ class ClipsalClickFrenzy{
                             <label>Voucher Entries (1 to 4)</label>
                             <input type="number" name="entry_number" min="1" max="${this.hiddenEntries.value}" value="${this.hiddenEntries.value}">
                         </div>
-                        ${this.hiddenDisplayBonusHundredMonth == "true" && this.hiddenBonusEntryMonth == "yes" ? `                        
+                        ${this.hiddenDisplayBonusHundredMonth.value == "true" && this.hiddenBonusEntryMonth.value == "yes" ? `                        
                         <div class="form-row" style="padding: 2rem; text-align: center;">
                             <label>You are eligible for a BONUS voucher (1 per customer)</label>
                         </div>

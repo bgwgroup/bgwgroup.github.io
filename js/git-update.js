@@ -2527,7 +2527,17 @@ class ClipsalClickFrenzy{
                             <label>Voucher Entries (1 to 4)</label>
                             <input type="number" name="entry_number" min="1" max="${this.hiddenEntries.value}" value="${this.hiddenEntries.value}">
                         </div>
-                        ${this.canUserRedeem100Voucher ? 'User can redeem their bonus 100 voucher' : ''}
+                        ${this.canUserRedeem100Voucher ? `                        
+                        <div class="form-row">
+                            <label>You are eligible for a BONUS voucher (1 per customer)</label>
+                        </div>
+                        <div class="form-row form-select">
+                            <label>Claim $100 Voucher</label>
+                            <select name="bonus_100_voucher">
+                                <option value="LSKD">LSKD</option>
+                                <option value="PREZZEE">Prezzee</option>
+                            </select>
+                        </div>` : ''}
                         <div class="form-buttons">
                             <button style="${(this.hiddenEntries.value != "0") ? '' : 'display: none;'}" id="redeemVouchers" title="Redeem Vouchers">Redeem Vouchers</button>
                         </div>
@@ -2589,6 +2599,7 @@ class ClipsalClickFrenzy{
                 let accountName = e.currentTarget.querySelector('[name="account_name"]');
                 let accountContactNumber = e.currentTarget.querySelector('[name="account_contact_number"]');
                 let bonusEntry = e.currentTarget.querySelector('[name="bonus_entry"]');
+                let bonusVoucherEntry = e.currentTarget.querySelector('[name="bonus_100_entry"]');
                 let voucher = e.currentTarget.querySelector('[name="voucher"]');
                 let entryNumber = e.currentTarget.querySelector('[name="entry_number"]');
                 let redeemVouchers = e.currentTarget.querySelector('#redeemVouchers');
@@ -2614,6 +2625,11 @@ class ClipsalClickFrenzy{
                             postData.append('bonus_entry', 'No Bonus Entry');
                         }else{
                             postData.append('bonus_entry', bonusEntry.value);
+                        }
+                        if(bonusVoucherEntry == undefined || bonusVoucherEntry == null){
+                            postData.append('bonus_100_voucher', '');
+                        }else{
+                            postData.append('bonus_100_voucher', bonusVoucherEntry);
                         }
     
                         fetch(this.insertCustomerEntriesURL, {

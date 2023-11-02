@@ -2241,13 +2241,13 @@ class ClipsalClickFrenzy{
         this.customerNumber = document.querySelector('[name="customer_number"]');
         this.customerCurrentMonth = document.querySelector('[name="customer_current_month"]');
 
-        this.hiddenAccount = document.querySelector(['[name="hidden_account"]']);
-        this.hiddenAccountName = document.querySelector(['[name="hidden_account_name"]']);
-        this.hiddenMonth = document.querySelector(['[name="hidden_month"]']);
-        this.hiddenEntries = document.querySelector(['[name="hidden_entries"]']);
-        this.hiddenEmail = document.querySelector(['[name="hidden_email"]']);
-        this.hiddenSelectedMonth = document.querySelector(['[name="hidden_selected_month"]']);
-        this.hiddenBonusEntryMonth = document.querySelector(['[name="hidden_bonus_entry_month"]']);
+        this.hiddenAccount = document.querySelector('[name="hidden_account"]');
+        this.hiddenAccountName = document.querySelector('[name="hidden_account_name"]');
+        this.hiddenMonth = document.querySelector('[name="hidden_month"]');
+        this.hiddenEntries = document.querySelector('[name="hidden_entries"]');
+        this.hiddenEmail = document.querySelector('[name="hidden_email"]');
+        this.hiddenSelectedMonth = document.querySelector('[name="hidden_selected_month"]');
+        this.hiddenBonusEntryMonth = document.querySelector('[name="hidden_bonus_entry_month"]');
 
         this.formButtons = document.querySelector('.form-buttons');
         this.redeemButton = document.querySelector('#customerRedeem');

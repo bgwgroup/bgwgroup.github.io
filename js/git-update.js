@@ -2554,6 +2554,7 @@ class ClipsalClickFrenzy{
 
         let totalEntriesSum = 0;
         let entriesMonth = '';
+        let bonushundredvoucher = '';
         let currentMonth = this.getCurrentMonth();
 
         fetch(this.getCustomerEntriesURL,{
@@ -2568,6 +2569,7 @@ class ClipsalClickFrenzy{
                 for(const element of entries){
                     totalEntriesSum += parseInt(element['entries']);
                     entriesMonth += element['entry_month'];
+                    bonushundredvoucher += element['bonus_100_voucher'];
                 }
                 this.hiddenEntries.value = (parseInt(this.hiddenEntries.value) - totalEntriesSum);
 
@@ -2579,7 +2581,7 @@ class ClipsalClickFrenzy{
                     this.ccfAlert.innerHTML = `You have (${this.hiddenEntries.value}) voucher redemptions left for the month of ${currentMonth}`;
                 }
 
-                if(element['bonus_100_voucher'].length > 0){
+                if(bonushundredvoucher != "" || bonushundredvoucher.length > 0){
                     this.canUserRedeem100Voucher = false;
                 }
             }

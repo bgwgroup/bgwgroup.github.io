@@ -2429,7 +2429,7 @@ class ClipsalClickFrenzy{
             this.hiddenMonth.value = month;
             this.hiddenEntries.value = entries;
             this.hiddenEmail.value = email;
-            this.hiddenBonusEntryMonth.value = bonusEntry;
+            this.hiddenBonusEntryMonth.value = (bonusEntry != '' || bonusEntry != null) ? bonusEntry : 'No';
         }
     }
     showButtons(){
@@ -2527,7 +2527,7 @@ class ClipsalClickFrenzy{
                             <label>Voucher Entries (1 to 4)</label>
                             <input type="number" name="entry_number" min="1" max="${this.hiddenEntries.value}" value="${this.hiddenEntries.value}">
                         </div>
-                        ${this.hiddenDisplayBonusHundredMonth == "true" ? `                        
+                        ${this.hiddenDisplayBonusHundredMonth == "true" && this.hiddenBonusEntryMonth == "yes" ? `                        
                         <div class="form-row" style="padding: 2rem; text-align: center;">
                             <label>You are eligible for a BONUS voucher (1 per customer)</label>
                         </div>

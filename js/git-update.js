@@ -2248,6 +2248,7 @@ class ClipsalClickFrenzy{
         this.hiddenEmail = document.querySelector('[name="hidden_email"]');
         this.hiddenSelectedMonth = document.querySelector('[name="hidden_selected_month"]');
         this.hiddenBonusEntryMonth = document.querySelector('[name="hidden_bonus_entry_month"]');
+        this.hiddenDisplayBonusHundredMonth = document.querySelector('[name="hidden_show_bonus_100_month"]');
 
         this.formButtons = document.querySelector('.form-buttons');
         this.redeemButton = document.querySelector('#customerRedeem');
@@ -2260,7 +2261,6 @@ class ClipsalClickFrenzy{
         this.currentMonth = ['January','February','March','April','May','June','July','August','September','October','November','December'];
         this.entryNumbers = [];
         this.bonusEntry = '';
-        this.canUserRedeem100Voucher = true;
 
         this.date = new Date();
         this.dateYear = this.date.getFullYear();
@@ -2494,8 +2494,7 @@ class ClipsalClickFrenzy{
     generateRedemptionForm(){
         if(this.redeemButton != undefined){
             this.redeemButton.addEventListener('click', () => {
-
-                console.log(`this.canUserRedeem100Voucher - ${this.canUserRedeem100Voucher}`);
+                
                 this.getExistingEntries();
 
                 this.form.classList.add('hide-ccf-form');
@@ -2528,7 +2527,7 @@ class ClipsalClickFrenzy{
                             <label>Voucher Entries (1 to 4)</label>
                             <input type="number" name="entry_number" min="1" max="${this.hiddenEntries.value}" value="${this.hiddenEntries.value}">
                         </div>
-                        ${this.canUserRedeem100Voucher ? `                        
+                        ${this.hiddenDisplayBonusHundredMonth == "true" ? `                        
                         <div class="form-row" style="padding: 2rem; text-align: center;">
                             <label>You are eligible for a BONUS voucher (1 per customer)</label>
                         </div>
@@ -2583,7 +2582,9 @@ class ClipsalClickFrenzy{
                 }
 
                 if(bonushundredvoucher != "" || bonushundredvoucher.length > 0){
-                    this.canUserRedeem100Voucher = false;
+                    this.hiddenDisplayBonusHundredMonth.value = "false";
+                }else{
+                    this.hiddenDisplayBonusHundredMonth.value = "true";
                 }
             }
         })

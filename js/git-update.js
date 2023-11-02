@@ -2599,7 +2599,7 @@ class ClipsalClickFrenzy{
                 let accountName = e.currentTarget.querySelector('[name="account_name"]');
                 let accountContactNumber = e.currentTarget.querySelector('[name="account_contact_number"]');
                 let bonusEntry = e.currentTarget.querySelector('[name="bonus_entry"]');
-                let bonusVoucherEntry = e.currentTarget.querySelector('[name="bonus_100_entry"]');
+                let bonusVoucherEntry = e.currentTarget.querySelector('[name="bonus_100_voucher"]');
                 let voucher = e.currentTarget.querySelector('[name="voucher"]');
                 let entryNumber = e.currentTarget.querySelector('[name="entry_number"]');
                 let redeemVouchers = e.currentTarget.querySelector('#redeemVouchers');

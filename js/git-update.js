@@ -2495,6 +2495,7 @@ class ClipsalClickFrenzy{
         if(this.redeemButton != undefined){
             this.redeemButton.addEventListener('click', () => {
 
+                console.log(`this.canUserRedeem100Voucher - ${this.canUserRedeem100Voucher}`);
                 this.getExistingEntries();
 
                 this.form.classList.add('hide-ccf-form');

@@ -2429,7 +2429,8 @@ class ClipsalClickFrenzy{
             this.hiddenMonth.value = month;
             this.hiddenEntries.value = entries;
             this.hiddenEmail.value = email;
-            this.hiddenBonusEntryMonth.value = (bonusEntry != '' || bonusEntry != null) ? bonusEntry : 'No';
+            this.hiddenBonusEntryMonth.value = (bonusEntry != '' || bonusEntry != null) ? 'Yes' : 'No';
+            this.hiddenDisplayBonusHundredMonth.value = (bonusEntry != '' || bonusEntry != null) ? 'true' : 'false';
         }
     }
     showButtons(){

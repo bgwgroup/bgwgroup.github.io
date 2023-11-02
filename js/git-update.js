@@ -2247,6 +2247,7 @@ class ClipsalClickFrenzy{
         this.hiddenEntries = document.querySelector(['[name="hidden_entries"]']);
         this.hiddenEmail = document.querySelector(['[name="hidden_email"]']);
         this.hiddenSelectedMonth = document.querySelector(['[name="hidden_selected_month"]']);
+        this.hiddenBonusEntryMonth = document.querySelector(['[name="hidden_bonus_entry_month"]']);
 
         this.formButtons = document.querySelector('.form-buttons');
         this.redeemButton = document.querySelector('#customerRedeem');
@@ -2258,6 +2259,7 @@ class ClipsalClickFrenzy{
 
         this.currentMonth = ['January','February','March','April','May','June','July','August','September','October','November','December'];
         this.entryNumbers = [];
+        this.bonusEntry = '';
 
         this.date = new Date();
         this.dateYear = this.date.getFullYear();
@@ -2352,8 +2354,12 @@ class ClipsalClickFrenzy{
                                     this.setCustomerData(formattedDate, formattedInvoice, element['total_spend'], element['entries']);
                                 }
 
+                                if (element['bonus_100_voucher'] !== ''){
+                                    this.bonusEntry = element['bonus_100_voucher'];
+                                }
+
                                 // this.setHiddenValues(typedCustomerNumber, customerRecords[0]['account_name'], this.getCurrentMonth(), this.entryNumbers[0], element['email']);
-                                this.setHiddenValues(typedCustomerNumber, customerRecords[0]['account_name'], this.getCurrentSelectedMonth(this.hiddenSelectedMonth.value), this.entryNumbers[0], element['email']);
+                                this.setHiddenValues(typedCustomerNumber, customerRecords[0]['account_name'], this.getCurrentSelectedMonth(this.hiddenSelectedMonth.value), this.entryNumbers[0], element['email'], this.bonusEntry);
                             }
                             if(this.entryNumbers[0] > 0){
                                 this.showButtons();
@@ -2415,13 +2421,14 @@ class ClipsalClickFrenzy{
         .then((search) => { })
         .catch((err) => { });
     }
-    setHiddenValues(account, name, month, entries, email){
+    setHiddenValues(account, name, month, entries, email, bonusEntry){
         if(this.hiddenAccount != undefined && this.hiddenAccountName != undefined){
             this.hiddenAccount.value = account;
             this.hiddenAccountName.value = name;
             this.hiddenMonth.value = month;
             this.hiddenEntries.value = entries;
             this.hiddenEmail.value = email;
+            this.hiddenBonusEntryMonth.value = bonusEntry;
         }
     }
     showButtons(){

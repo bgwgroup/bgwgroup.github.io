@@ -1350,7 +1350,7 @@ function clearAcStoreinformationSelector(nodeList, selector) {
  * Maintenance Banner 06 September 2023
  */
 window.addEventListener('DOMContentLoaded', () => {
-    if (location.href.match(/cnw.com.au/) || location.href.match(/sherriff.com.au/) || location.href.match(/samios.net.au/)) {
+    if (location.href.match(/cnw.com.au/) || location.href.match(/sherriff.com.au/) || location.href.match(/samios.net.au/) || location.href.match(/bgwt.com.au/)) {
         try {
             new MaintenanceBanner();
         } catch (e) {}
@@ -1363,17 +1363,17 @@ function MaintenanceBanner() {
 MaintenanceBanner.prototype.init = () => {
     let checkIfUserHasSeenBanner = localStorage.getItem('bannerClicked');
     if (checkIfUserHasSeenBanner == null) {
-        //MaintenanceBanner.prototype.renderBanner();
+        MaintenanceBanner.prototype.renderBanner();
     }
 
      MaintenanceBanner.prototype.closeBanner();
-     //MaintenanceBanner.prototype.fullScreenBanner();
+     MaintenanceBanner.prototype.fullScreenBanner();
 };
 MaintenanceBanner.prototype.renderBanner = () => {
     let sapMaintenanceBanner = document.createElement('div');
     sapMaintenanceBanner.className = 'sap-maintenance-banner';
     sapMaintenanceBanner.innerHTML = `
-        <span>Our website will be undergoing maintenance from 8:00pm until 11:00pm AEST on the 6th of September 2023. Your live pricing will therefore be unavailable during this period, we apologise for any inconveniences caused. For any urgent assistance, please contact the support team via <a href="mailto:online.support@bgwgroup.com.au">online.support@bgwgroup.com.au</a></span>
+        <span>Hello, our website is currently undergoing scheduled maintenance and all online services will be unavailable until 12:00am AEST Monday. For any urgent matters please contact <a href="mailto:online.support@bgwgroup.com.au">online.support@bgwgroup.com.au</a> or your local branch.</span>
     `;
     document.body.appendChild(sapMaintenanceBanner);
 };

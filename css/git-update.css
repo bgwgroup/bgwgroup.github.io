@@ -4114,12 +4114,12 @@ CNW SBO Search Page Promotion Banner
 
 /* LAUNCH PAGE CSS */
 .pageLabel-new-experience #breadcrumb,
-.page-newexperience #breadcrumb {
+.page-newexperiencepage #breadcrumb {
     display: none;
 }
 
 .pageLabel-new-experience .main__inner-wrapper,
-.page-newexperience .main__inner-wrapper {
+.page-newexperiencepage .main__inner-wrapper {
     padding: unset;
 }
 

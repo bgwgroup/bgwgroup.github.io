@@ -1363,7 +1363,7 @@ function MaintenanceBanner() {
 MaintenanceBanner.prototype.init = () => {
     let checkIfUserHasSeenBanner = localStorage.getItem('bannerClicked');
     if (checkIfUserHasSeenBanner == null) {
-        MaintenanceBanner.prototype.renderBanner();
+        //MaintenanceBanner.prototype.renderBanner();
     }
 
      MaintenanceBanner.prototype.closeBanner();

@@ -4118,6 +4118,11 @@ CNW SBO Search Page Promotion Banner
     display: none;
 }
 
+.pageLabel-new-experience .main__inner-wrapper,
+.pageLabel-newexperience .main__inner-wrapper {
+    padding: unset;
+}
+
 .landingPageLaunch .scaffoldLandingPageWrapper .scaffoldLandingPageRow {
     padding: 5rem 1.2rem;
 }

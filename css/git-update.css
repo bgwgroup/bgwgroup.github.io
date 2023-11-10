@@ -4111,3 +4111,300 @@ CNW SBO Search Page Promotion Banner
 .ccf-alert span {
     font-weight: bold;
 }
+
+/* LAUNCH PAGE CSS */
+.pageLabel-new-experience #breadcrumb {
+    display: none;
+}
+
+.landingPageLaunch .scaffoldLandingPageWrapper .scaffoldLandingPageRow {
+    padding: 5rem 1.2rem;
+}
+
+.landingPageLaunch .scaffoldLandingPageWrapper .scaffoldLandingPageRow:first-child {
+    padding: 0;
+}
+
+.landingPageLaunch .scaffoldLandingPageWrapper .scaffoldLandingPageRow:nth-child(2) {
+    padding-bottom: 1.2rem !important;
+}
+
+.scaffoldLandingPage {
+    background-color: #333;
+    color: #fff;
+}
+
+.scaffoldLandingPageWrapper {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1600px;
+    display: flex;
+    flex-direction: column;
+}
+
+.scaffoldLandingPageRow {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    width: 100%;
+}
+
+.scaffoldLandingPage .integrationTitle {
+    font-size: 36px;
+    line-height: 32px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+}
+
+.scaffoldLandingPage .integrationTitle span {
+    color: #c41230;
+}
+
+@media only screen and (min-width: 768px) {
+    .scaffoldLandingPage .integrationTitle {
+        font-size: 44px;
+        line-height: 44px;
+        letter-spacing: -1px;
+    }
+}
+
+.scaffoldLandingPage .integrationText {
+    font-size: 18px;
+    line-height: 26px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 300;
+    text-transform: uppercase;
+    gap: calc(clamp(6rem, 1rem + 25vmin, 25rem) / 14);
+    color: rgb(189, 189, 189);
+    margin-bottom: 4rem;
+    letter-spacing: 1px;
+}
+
+.scaffoldLandingPage .integrationText strong {
+    font-weight: 600;
+    color: #c41230;
+    color: #eee;
+}
+
+@media only screen and (min-width: 768px) {
+    .scaffoldLandingPage .integrationText {
+        max-width: 60%;
+    }
+}
+
+.scaffoldLandingPage .integrationHeroText {
+    display: flex;
+    flex-direction: column;
+    gap: calc(clamp(6rem, 1rem + 25vmin, 25rem) / 14);
+    margin: auto;
+    max-width: 100vw;
+    text-align: center;
+}
+
+.scaffoldLandingPage .integrationHeroText .integrationCarousel .swiper {
+    padding-right: 1px;
+}
+
+.scaffoldLandingPage .integrationHeroText .integrationCarousel .swiper .swiper-slide {
+    min-height: 30vh;
+    border-radius: 1.2rem;
+    border: solid 1px #aaa !important;
+    background-color: transparent !important;
+    display: flex;
+    overflow: hidden;
+}
+
+.scaffoldLandingPage .integrationHeroText .integrationCarousel .swiper .swiper-slide .swiper-launch-block {
+    display: flex;
+    flex-direction: column-reverse;
+    flex: 1;
+}
+
+.scaffoldLandingPage .integrationHeroText .integrationCarousel .swiper .swiper-slide .swiper-launch-block .swiper-launch-block-text {
+    flex: 1;
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.scaffoldLandingPage .integrationHeroText .integrationCarousel .swiper .swiper-slide .swiper-launch-block .swiper-launch-block-text .title {
+    margin-bottom: 1.2rem;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.scaffoldLandingPage .integrationHeroText .integrationCarousel .swiper .swiper-slide .swiper-launch-block .swiper-launch-block-text .description {
+    font-weight: 200;
+}
+
+.scaffoldLandingPage .integrationHeroText .integrationCarousel .swiper .swiper-slide .swiper-launch-block .swiper-launch-block-img {
+    flex: 1;
+}
+
+.scaffoldLandingPage .integrationHeroText .integrationCarousel .swiper .swiper-slide .swiper-launch-block .swiper-launch-block-img img {
+    max-width: 100%;
+    min-width: 100%;
+    -o-object-fit: contain;
+    object-fit: contain;
+}
+
+.scaffoldLandingPage .integrationActions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.scaffoldLandingPage .integrationActions a:not(:last-child) {
+    margin-bottom: 6px;
+}
+
+.scaffoldLandingPage .integrationActions a::after {
+    display: none !important;
+}
+
+@media only screen and (min-width: 768px) {
+    .scaffoldLandingPage .integrationActions {
+        flex-direction: row;
+    }
+
+    .scaffoldLandingPage .integrationActions a:not(:last-child) {
+        margin-right: 1.2rem;
+        margin-bottom: 0;
+    }
+}
+
+.scaffoldLandingPage .integrationFooter {
+    display: flex;
+    flex-direction: column;
+    gap: calc(clamp(6rem, 1rem + 25vmin, 25rem) / 14);
+    margin: auto;
+    max-width: 100vw;
+    text-align: center;
+}
+
+.scaffoldLandingPage .integrationFooter .integrationText {
+    margin-bottom: 1rem;
+}
+
+.scaffoldLandingPage .integrationBanner img,
+.scaffoldLandingPage .integrationBanner video {
+    max-width: 100%;
+    width: 100%;
+    -o-object-fit: contain;
+    object-fit: contain;
+}
+
+.scaffoldLandingPage .integrationBanner img.desktop,
+.scaffoldLandingPage .integrationBanner video.desktop {
+    display: none;
+}
+
+@media only screen and (min-width: 768px) {
+
+    .scaffoldLandingPage .integrationBanner img.desktop,
+    .scaffoldLandingPage .integrationBanner video.desktop {
+        display: block;
+    }
+}
+
+.scaffoldLandingPage .integrationBanner img.mobile,
+.scaffoldLandingPage .integrationBanner video.mobile {
+    display: block;
+}
+
+@media only screen and (min-width: 768px) {
+
+    .scaffoldLandingPage .integrationBanner img.mobile,
+    .scaffoldLandingPage .integrationBanner video.mobile {
+        display: none;
+    }
+}
+
+.scaffoldLandingPage .integrationLogos {
+    display: flex;
+    flex-direction: column;
+    gap: calc(clamp(6rem, 1rem + 25vmin, 25rem) / 14);
+    margin: auto;
+    max-width: 100vw;
+    text-align: center;
+    padding-bottom: 2rem;
+    position: relative;
+}
+
+.scaffoldLandingPage .integrationLogos .marquee {
+    display: flex;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    gap: calc(clamp(6rem, 1rem + 25vmin, 25rem) / 14);
+    -webkit-mask-image: linear-gradient(var(--mask-direction, to right),
+            hsla(0deg, 0%, 0%, 0),
+            hsl(0deg, 0%, 0%) 20%,
+            hsl(0deg, 0%, 0%) 80%,
+            hsla(0deg, 0%, 0%, 0));
+    mask-image: linear-gradient(var(--mask-direction, to right),
+            hsla(0deg, 0%, 0%, 0),
+            hsl(0deg, 0%, 0%) 20%,
+            hsl(0deg, 0%, 0%) 80%,
+            hsla(0deg, 0%, 0%, 0));
+}
+
+.scaffoldLandingPage .integrationLogos .marquee img {
+    display: grid;
+    place-items: center;
+    width: clamp(6rem, 1rem + 25vmin, 25rem);
+    background: #eee;
+    aspect-ratio: 16/9;
+    -o-object-fit: contain;
+    object-fit: contain;
+    padding: calc(clamp(6rem, 1rem + 25vmin, 25rem) / 10);
+    border-radius: 1.2rem;
+    pointer-events: none;
+}
+
+.scaffoldLandingPage .integrationLogos .marquee__group {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: calc(clamp(6rem, 1rem + 25vmin, 25rem) / 14);
+    min-width: 100%;
+    -webkit-animation: scroll-x 60s linear infinite;
+    animation: scroll-x 60s linear infinite;
+}
+
+.scaffoldLandingPage .integrationLogos .integrationCTA {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+}
+
+@-webkit-keyframes scroll-x {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-100% - clamp(6rem, 1rem + 25vmin, 25rem) / 14));
+    }
+}
+
+@keyframes scroll-x {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-100% - clamp(6rem, 1rem + 25vmin, 25rem) / 14));
+    }
+}
+
+/*# sourceMappingURL=style.css.map */

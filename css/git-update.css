@@ -4113,7 +4113,8 @@ CNW SBO Search Page Promotion Banner
 }
 
 /* LAUNCH PAGE CSS */
-.pageLabel-new-experience #breadcrumb {
+.pageLabel-new-experience #breadcrumb,
+.pageLabel-newexperience #breadcrumb {
     display: none;
 }
 

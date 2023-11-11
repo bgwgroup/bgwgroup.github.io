@@ -2159,19 +2159,6 @@ if (typeof(document.querySelector("#valueAccountRemaining")) != 'undefined' && d
     getValueAccRemainingDiv.textContent = "$" + convertAccRemainingNo.toFixed(2);
 }
 
-
-if (window.location.href.indexOf("cnw.com.au") != -1){
-    const footerLink = document.getElementsByClassName("FAQ/HelpFooterLink")
-    const footerLinkChildren = Array.from(footerLink)
-    footerLinkChildren[1].querySelector('a').href = "https://help.cnw.com.au/"
-}
-
-if (window.location.href.indexOf("sherriff.com.au") != -1){
-    const footerLink = document.querySelectorAll("#footerLinks-CUSTOMER-SUPPORT")
-    const footerLinkChildren = Array.from(footerLink)
-    footerLinkChildren[1].querySelector('a').href = "https://help.sherriff.com.au/"
-}
-
 //Sherriff Only Frezny Banner Inject
 if (window.location.href.indexOf("sherriff.com.au") != -1){
   if (typeof(document.querySelector(".scaffoldProductSearchGridWrapper")) != 'undefined' && document.querySelector(".scaffoldProductSearchGridWrapper") != null){

@@ -1397,7 +1397,7 @@ MaintenanceBanner.prototype.fullScreenBanner = () => {
 }
 
 // Temp hide b2c frontend elements
-document.addEventListener("DOMContentLoaded", function() {
+/*document.addEventListener("DOMContentLoaded", function() {
     try {
         if (location.href.match(/sherriff.com.au/)) {
             let getUserRegisterBtn = document.querySelector("#btnUserRegister button");
@@ -1450,7 +1450,7 @@ document.addEventListener("DOMContentLoaded", function() {
     } catch (err) {
         console.log(err);
     }
-});
+});*/
 
 /**
  * ========== SAMMY MAS STUFF =============

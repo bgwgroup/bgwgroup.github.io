@@ -4112,7 +4112,7 @@ CNW SBO Search Page Promotion Banner
     font-weight: bold;
 }
 
-/* LAUNCH PAGE CSS */
+/* NEW EXPERIENCE LAUNCH PAGE CSS */
 .pageLabel-new-experience #breadcrumb,
 .page-newexperiencepage #breadcrumb {
     display: none;
@@ -4121,6 +4121,22 @@ CNW SBO Search Page Promotion Banner
 .pageLabel-new-experience .main__inner-wrapper,
 .page-newexperiencepage .main__inner-wrapper {
     padding: unset;
+    max-width: 100%;
+}
+
+.page-newexperiencepage .mySwiperLaunchPage {
+    user-select: none;
+}
+
+.page-newexperiencepage .mySwiperLaunchPage img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover !important;
+    object-position: bottom left;
+}
+
+.page-newexperiencepage .mySwiperLaunchPage .swiper-launch-block-text {
+    min-height: 150px;
 }
 
 .landingPageLaunch .scaffoldLandingPageWrapper .scaffoldLandingPageRow {

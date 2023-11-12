@@ -164,225 +164,6 @@ function renderBgImage(selector) {
  */
 
 /**
- * News and Promotion Landing Page 
- */
-let NewsData = {
-    cnwNews: 'https://bgwgroup.github.io/data/cnw-news.json',
-    samiosNews: 'https://bgwgroup.github.io/data/sam-news.json',
-    sherriffNews: 'https://bgwgroup.github.io/data/she-news.json'
-};
-
-function NewsAndPromotions() {
-    NewsAndPromotions.prototype.init();
-}
-NewsAndPromotions.prototype.init = () => {
-    NewsAndPromotions.prototype.cnwNews();
-    NewsAndPromotions.prototype.samiosNews();
-    NewsAndPromotions.prototype.sherriffNews();
-};
-NewsAndPromotions.prototype.cnwNews = () => {
-    let newsPromo = document.querySelector('.cnw-news-promo');
-
-    fetch(NewsData.cnwNews)
-        .then((response) => {
-            return response.json();
-        })
-        .then((news) => {
-            NewsAndPromotions.prototype.renderData(news, newsPromo);
-        })
-        .catch((error) => {})
-};
-NewsAndPromotions.prototype.samiosNews = () => {
-    let newsPromo = document.querySelector('.samios-news-promo');
-
-    fetch(NewsData.samiosNews)
-        .then((response) => {
-            return response.json();
-        })
-        .then((news) => {
-            NewsAndPromotions.prototype.renderData(news, newsPromo);
-        })
-        .catch((error) => {})
-};
-NewsAndPromotions.prototype.sherriffNews = () => {
-    let newsPromo = document.querySelector('.sherriff-news-promo');
-
-    fetch(NewsData.sherriffNews)
-        .then((response) => {
-            return response.json();
-        })
-        .then((news) => {
-            NewsAndPromotions.prototype.renderData(news, newsPromo);
-        })
-        .catch((error) => {})
-};
-NewsAndPromotions.prototype.renderData = (data, container) => {
-    let targetBlank = '';
-
-    for (let i = 0; i < data.length; i++) {
-        if (data[i]['active'] == 'yes') {
-
-            if (data[i]['external'] == 'true') {
-                targetBlank = 'target="_blank"';
-            } else {
-                targetBlank = '';
-            }
-
-            let newsCard = document.createElement('div');
-            newsCard.className = 'news-card';
-
-            newsCard.innerHTML =
-                `
-                <img alt="${data[i]['title']}" src="${data[i]['image']}" title="${data[i]['title']}">
-                <div class="news-card-content">
-                    <span>${data[i]['title']}</span>
-                    <p>${data[i]['description']}</p>
-                    <a href="${data[i]['link']}" ${targetBlank}>Learn More</a>
-                </div>
-            `;
-
-            container.appendChild(newsCard);
-        }
-    }
-};
-
-/**
- * ================================================================================================================================================================
- */
-
-/**
- * News and Promotions section on CNW Homepage
- */
-function cnwHomepageNews() {
-    let rightGridContent = document.querySelector('#news-promotion .right-grid-content');
-    let targetBlank = '';
-
-    if (typeof(rightGridContent) != undefined && rightGridContent != null) {
-        fetch(NewsData.cnwNews)
-            .then((response) => { return response.json(); })
-            .then((cnwNews) => {
-                for (let i = 0; i < cnwNews.length; i++) {
-                    if (cnwNews[i]['active'] == 'yes') {
-                        if (cnwNews[i]['external'] == 'true') {
-                            targetBlank = 'target="_blank"';
-                        } else {
-                            targetBlank = '';
-                        }
-
-                        let gridItem = document.createElement("li");
-                        gridItem.className = "grid-item";
-                        gridItem.innerHTML =
-                            `
-                        <a class="grid-item-link" href="${cnwNews[i]['link']}">
-                            <img class="grid-item-img" src="${cnwNews[i]['image']}">
-                        </a>
-                        <div class="grid-item-content">
-                            <h3 class="grid-item-title">
-                                <a href="${cnwNews[i]['link']}" ${targetBlank}>${cnwNews[i]['title']}</a>
-                            </h3>
-                            <p class="grid-item-paragraph">${cnwNews[i]['description']}</p>
-                        </div>
-                    `;
-
-                        rightGridContent.appendChild(gridItem);
-                    }
-                }
-            })
-            .catch((error) => {});
-    }
-}
-
-/**
- * ================================================================================================================================================================
- */
-
-/**
- * News and Promotions section on Sherriff Homepage
- */
-function sherriffHomepageNews() {
-    let newsCardInnerWrapper = document.querySelector('.news__cards__inner__wrapper');
-    let targetBlank = '';
-
-    if (typeof(newsCardInnerWrapper) != undefined && newsCardInnerWrapper != null) {
-        fetch(NewsData.sherriffNews)
-            .then((response) => { return response.json(); })
-            .then((sheNews) => {
-                for (let i = 0; i < sheNews.length; i++) {
-
-                    if (sheNews[i]['active'] == 'yes') {
-                        if (sheNews[i]['external'] == 'true') {
-                            targetBlank = 'target="_blank"';
-                        } else {
-                            targetBlank = '';
-                        }
-
-                        let newsCard = document.createElement("div");
-                        newsCard.className = "news__card";
-                        newsCard.innerHTML =
-                            `
-                        <a href="${sheNews[i]['link']}" ${targetBlank}>
-                            <img alt="Promo" src="${sheNews[i]['image']}">
-                            <span>${sheNews[i]['title']}</span>
-                        </a>
-                    `;
-
-                        newsCardInnerWrapper.appendChild(newsCard);
-                    }
-                }
-            })
-            .catch((error) => {});
-    }
-}
-
-/**
- * ================================================================================================================================================================
- */
-
-/**
- * Sherriff Careers Page
- */
-let index = 0;
-
-function SherriffCareers() {
-    this.init();
-}
-SherriffCareers.prototype.init = () => {
-    SherriffCareers.prototype.renderBgImage('.careers-container .careers-bg-image');
-    setInterval(SherriffCareers.prototype.animateImages.bind(this), 5000);
-};
-SherriffCareers.prototype.renderBgImage = (selector) => {
-    let elem = document.querySelectorAll(selector);
-    if (typeof(elem) != undefined || elem != null) {
-        for (let i = 0; i < elem.length; i++) {
-            let src = elem[i].getAttribute('data-image-src');
-            elem[i].style.backgroundImage = `url("${src}")`;
-        }
-    }
-};
-SherriffCareers.prototype.animateImages = () => {
-    let elem = document.querySelectorAll('.careers-container .slideshow .careers-bg-image');
-    if (typeof(elem) != undefined || elem != null) {
-        let elemAnimate = 'animate-bg-image';
-        try {
-            elem[0].classList.add(elemAnimate);
-
-            if (index >= elem.length || index <= -1) {
-                index = 0;
-            }
-            for (var i = 0; i < elem.length; i++) {
-                elem[i].classList.remove(elemAnimate);
-            }
-            index += 1;
-            elem[index - 1].classList.add(elemAnimate);
-        } catch (err) {}
-    }
-};
-
-/**
- * ================================================================================================================================================================
- */
-
-/**
  * Dynamically load external JS Scripts into HTML
  */
 function loadExternalScripts() {
@@ -1284,22 +1065,6 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 /**
- * Stop CNW Footer Links from executing
- */
-window.addEventListener('DOMContentLoaded', () => {
-    if (location.href.match(/cnw.com.au/)) {
-        let cnwFooterLinks = document.querySelectorAll('#footerLinks-Top-Suppliers a');
-        if (cnwFooterLinks != undefined) {
-            for (let i = 0; i < cnwFooterLinks.length; i++) {
-                cnwFooterLinks[i].addEventListener('click', (event) => {
-                    event.preventDefault();
-                });
-            }
-        }
-    }
-});
-
-/**
  * Store Locator on MHI Air Condition Landing Page on CNW
  */
 window.addEventListener('DOMContentLoaded', () => {
@@ -2127,7 +1892,7 @@ window.addEventListener('scroll', () => {
 })
 
 // temp fix samios appliances link
-if (window.location.href.indexOf("samios.net.au") != -1){
+/*if (window.location.href.indexOf("samios.net.au") != -1){
     const getApplianceLink = document.querySelector('[title="Applicances"]');
     if(getApplianceLink){
         getApplianceLink.querySelector("span").innerText = "Appliances";
@@ -2143,7 +1908,7 @@ if (window.location.href.indexOf("samios.net.au") != -1){
         getEverHardLogo[14].src = "https://www.forzaglobal.com.au/wp-content/uploads/2021/10/Untitled-1.png";
         getEverHardLogo[13].src = "https://www.everhard.com.au/wp-content/themes/everhard/dist/img/logo.svg";
     }
-}
+}*/
 
 // temp fix for dashboard amount decimal
 if (typeof(document.querySelector("#valueAccountBalance")) != 'undefined' && document.querySelector("#valueAccountBalance") != null){

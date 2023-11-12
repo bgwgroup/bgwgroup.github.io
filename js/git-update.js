@@ -2076,7 +2076,7 @@ if (!!bigSupporterPreloader) {
 
 /**
  * BGWT menu temporary fix - delete after P1 deploy
- */
+ 
 window.addEventListener('DOMContentLoaded', () => {
     mapLinkToCategory('Camera Brackets','/c/CAMERABRACKETS');
     mapLinkToCategory('Edge Devices','/c/EDGEDEVICES');
@@ -2103,7 +2103,7 @@ const mapLinkToCategory = (name, link) => {
             }
         });
     }
-};
+};*/
 
 
 // SammyShowcase 2023

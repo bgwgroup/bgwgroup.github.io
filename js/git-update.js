@@ -147,19 +147,6 @@ function shopByToggleFacets() {
 }
 
 /**
- * Sherriff News and Promotions
- */
-function renderBgImage(selector) {
-    let elem = document.querySelectorAll(selector);
-    if (elem) {
-        for (let i = 0; i < elem.length; i++) {
-            let src = elem[i].getAttribute('data-image-src');
-            elem[i].style.backgroundImage = "url('" + src + "')";
-        }
-    }
-}
-
-/**
  * ================================================================================================================================================================
  */
 

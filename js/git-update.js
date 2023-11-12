@@ -2777,3 +2777,27 @@ window.addEventListener('DOMContentLoaded', () => {
 
      }
 });
+
+/**
+ * NEW EXPERIENCE LANDING PAGE SWIPER
+ */
+//Landing Pages
+
+if (window.location.href.indexOf("/new-experience") != -1) {
+    var swiper = new Swiper(".mySwiperLaunchPage", {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+        },
+        992: {
+          slidesPerView: 3,
+        },
+      },
+    });
+  }

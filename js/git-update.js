@@ -1091,7 +1091,14 @@ function clearAcStoreinformationSelector(nodeList, selector) {
  * Maintenance Banner 06 September 2023
  */
 window.addEventListener('DOMContentLoaded', () => {
+    /*
     if (location.href.match(/cnw.com.au/) || location.href.match(/sherriff.com.au/) || location.href.match(/samios.net.au/) || location.href.match(/bgwt.com.au/)) {
+        try {
+            new MaintenanceBanner();
+        } catch (e) {}
+    }*/
+
+    if (location.href.match(/bgwt.com.au/)) {
         try {
             new MaintenanceBanner();
         } catch (e) {}

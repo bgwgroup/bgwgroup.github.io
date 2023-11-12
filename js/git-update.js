@@ -58,17 +58,6 @@ let NHPSwitchOnOff = {
         } catch (error) {}
 
         shopByToggleFacets();
-
-        renderBgImage('.news-promotions .top__news');
-        renderBgImage('.news-promotions .other__news .news__card');
-
-        new NewsAndPromotions();
-
-        cnwHomepageNews();
-        sherriffHomepageNews();
-
-        new SherriffCareers();
-
         loadExternalScripts();
 
         new PlumbingPCN();

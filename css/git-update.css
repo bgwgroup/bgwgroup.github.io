@@ -4430,3 +4430,10 @@ CNW SBO Search Page Promotion Banner
 }
 
 /*# sourceMappingURL=style.css.map */
+
+/* Scroll to top position on larger screens (min-width: 1000px) */
+@media (min-width: 1000px) {
+    #samBody .scroll-to-top {
+        bottom: calc(var(--gutter) * 4.5) !important;
+    }
+}

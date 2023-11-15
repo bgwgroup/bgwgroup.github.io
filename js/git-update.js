@@ -1900,29 +1900,6 @@ if (typeof(document.querySelector("#valueAccountRemaining")) != 'undefined' && d
     getValueAccRemainingDiv.textContent = "$" + convertAccRemainingNo.toFixed(2);
 }
 
-//Sherriff Only Frezny Banner Inject
-if (window.location.href.indexOf("sherriff.com.au") != -1){
-  if (typeof(document.querySelector(".scaffoldProductSearchGridWrapper")) != 'undefined' && document.querySelector(".scaffoldProductSearchGridWrapper") != null){
-    let searchContainer = document.querySelector(".scaffoldProductSearchGridWrapper");
-
-    let createLink = document.createElement("a");
-    createLink.href = "https://shop.sherriff.com.au/clipsal-click-frenzy";
-    createLink.style.width = "100%";
-    createLink.style.display = "flex";
-        createLink.style.justifyContent = "center";
-
-    let createImage = document.createElement("img");
-
-    if (window.matchMedia("(max-width: 768px)").matches) {
-      createImage.src = "https://static-files.bgwgroup.com.au/theme-she/img/promo-tiles/click-frenzy-november-mobile.jpg";
-    } else {
-      createImage.src = "https://static-files.bgwgroup.com.au/theme-she/img/promo-tiles/click-frenzy-november-desktop.png";
-    }
-
-    createLink.appendChild(createImage);
-    searchContainer.prepend(createLink);
-  }
-}
 
 //Cnw Only Big One Banner Inject
 /*

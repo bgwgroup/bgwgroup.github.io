@@ -2157,7 +2157,7 @@ class ClipsalClickFrenzyTwo{
                     ${this.hiddenFrenzyMonthName.value === 'October' ? 
                     `<div class="form-row form-select">
                     ${this.hiddenFrenzyBonusVoucher.value == '' ?
-                        `<span>You can only claim 1x Bonus $100 voucher for the month of ${this.hiddenFrenzyMonthName.value}</span>
+                        `<span>You can claim ONLY 1 x Bonus $100 voucher for the month of ${this.hiddenFrenzyMonthName.value}</span>
                         <label>Claim 1x Bonus $100 Voucher</label>
                         <select name="redeem_bonus_voucher">
                             <option value="LKSD">LKSD</option>

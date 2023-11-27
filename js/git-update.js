@@ -2076,7 +2076,9 @@ class ClipsalClickFrenzyTwo{
             .then(response => response.json())
             .then(currentEntries => {
 
-               if(currentEntries.length > 0){
+                if( currentEntries.length == 0 ) {
+                    this.hiddenFrenzyMonthRemainderPoints.value = this.hiddenFrenzyMonthPoints.value;
+                }else if(currentEntries.length > 0){
                     
                     for(let data of currentEntries){
 

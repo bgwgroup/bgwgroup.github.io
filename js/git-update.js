@@ -1093,7 +1093,7 @@ function clearAcStoreinformationSelector(nodeList, selector) {
 window.addEventListener('DOMContentLoaded', () => {
     if (location.href.match(/cnw.com.au/) || location.href.match(/sherriff.com.au/) || location.href.match(/samios.net.au/) || location.href.match(/bgwt.com.au/)) {
         try {
-            //new MaintenanceBanner();
+            new MaintenanceBanner();
         } catch (e) {}
     }
 });
@@ -1131,7 +1131,7 @@ MaintenanceBanner.prototype.fullScreenBanner = () => {
     let fullScreenBanner = document.createElement('div');
     fullScreenBanner.className = 'full-screen-banner';
     fullScreenBanner.innerHTML = `
-    <span style="position: absolute;top: 50%;left: 0;right: 0;width: 100%;padding: 2rem;transform: translateY(-50%);line-height: 1.5rem; text-align: center;">Hello, our website is currently undergoing scheduled maintenance and all online services will be unavailable until 12:00am AEST Monday. For any urgent matters please contact <a href="mailto:online.support@bgwgroup.com.au">online.support@bgwgroup.com.au</a> or your local branch.</span>
+    <span style="position: absolute;top: 50%;left: 0;right: 0;width: 100%;padding: 2rem;transform: translateY(-50%);line-height: 1.5rem; text-align: center;">Our website is currently down due to technical issues affecting pricing. We are investigating and will have this rectified as soon as possible. Please check back soon. We apologise for any inconvenience caused and for any urgent matters please contact <a href="mailto:online.support@bgwgroup.com.au">online.support@bgwgroup.com.au</a> or your local branch.</span>
     `;
     fullScreenBanner.setAttribute('style', `position: fixed;top: 0;left: 0;width: 100dvw;height: 100dvh;background: #FFF;z-index: 100000000001;`);
     document.body.appendChild(fullScreenBanner);

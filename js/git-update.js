@@ -1931,434 +1931,407 @@ if (window.location.href.indexOf("cnw.com.au") != -1){
  * SHERRIFF CLIPSAL CLICK FRENZY
  */
 window.addEventListener('DOMContentLoaded', () => {
-    if(location.href.match(/clipsal-click-frenzy/gi)){
-        new ClipsalClickFrenzy();
-    }
+    try{
+        new ClipsalClickFrenzyTwo();
+    }catch(e){}
 });
-class ClipsalClickFrenzy{
+class ClipsalClickFrenzyTwo{
     constructor(){
-        this.ccfWrapper = document.querySelector('.ccf-wrapper');
-        this.form = document.querySelector('#ccfForm');
 
-        this.customerName = document.querySelector('.customer-name');
-        this.customerMonthlyEntries = document.querySelector('.customer-monthly-entries');
-        this.customerData = document.querySelector('.customer-data');
-        this.customerNumber = document.querySelector('[name="customer_number"]');
-        this.customerCurrentMonth = document.querySelector('[name="customer_current_month"]');
+        this.frenzyForm = document.querySelector('.frenzy-form');
 
-        this.hiddenAccount = document.querySelector('[name="hidden_account"]');
-        this.hiddenAccountName = document.querySelector('[name="hidden_account_name"]');
-        this.hiddenMonth = document.querySelector('[name="hidden_month"]');
-        this.hiddenEntries = document.querySelector('[name="hidden_entries"]');
-        this.hiddenEmail = document.querySelector('[name="hidden_email"]');
-        this.hiddenSelectedMonth = document.querySelector('[name="hidden_selected_month"]');
-        this.hiddenBonusEntryMonth = document.querySelector('[name="hidden_bonus_entry_month"]');
-        this.hiddenDisplayBonusHundredMonth = document.querySelector('[name="hidden_show_bonus_100_month"]');
+        this.hiddenFrenzyCompany = document.querySelector('[name="hidden_frenzy_company"]');        
+        this.hiddenFrenzyAccount = document.querySelector('[name="hidden_frenzy_account"]');        
+        this.hiddenFrenzyEmail = document.querySelector('[name="hidden_frenzy_email"]');        
+        this.hiddenFrenzyPhone = document.querySelector('[name="hidden_frenzy_phone"]');        
+        this.hiddenFrenzyMonth = document.querySelector('[name="hidden_frenzy_month"]');   
+        this.hiddenFrenzyMonthName = document.querySelector('[name="hidden_frenzy_month_name"]');   
+        this.hiddenFrenzyMonthPoints = document.querySelector('[name="hidden_frenzy_month_points"]'); 
+        this.hiddenFrenzyMonthRemainderPoints = document.querySelector('[name="hidden_frenzy_month_remainder_points"]'); 
+        this.hiddenFrenzyBonusVoucher = document.querySelector('[name="hidden_frenzy_bonus_voucher"]'); 
 
-        this.formButtons = document.querySelector('.form-buttons');
-        this.redeemButton = document.querySelector('#customerRedeem');
-        this.downloadButton = document.querySelector('#customerData');
+        this.frenzySearchContainer = document.querySelector('.frenzy-search');
+        this.frenzyCustomerRedemptionFormContainer = document.querySelector('.frenzy-customer-redemption-form');
+        this.frenzyCustomerLoader = document.querySelector('.frenzy-customer-loader');
 
-        this.ccfRedeemFormContainer = document.querySelector('.ccf-redeem-form-container');
+        this.selectFrenzySearch = document.querySelector('[name="select_frenzy_search"]');
+        this.inputFrenzySearch = document.querySelector('[name="input_frenzy_search"]');
 
-        this.ccfAlert =  document.querySelector('.ccf-alert');
+        this.frenzySearchCustomerData = document.querySelector('.frenzy-search-customer-data');
+        this.frenzyCustomerRedemptionForm = document.querySelector('.frenzy-customer-redemption-form');
 
-        this.currentMonth = ['January','February','March','April','May','June','July','August','September','October','November','December'];
-        this.entryNumbers = [];
-        this.bonusEntry = '';
+        this.frenzySearchButton = document.querySelector('.frenzy-search-buttons .search');
+        this.frenzyRedeemButton = document.querySelector('.frenzy-search-buttons .redeem');
 
-        this.date = new Date();
-        this.dateYear = this.date.getFullYear();
-        this.dateMonth = this.date.getMonth() + 1;
+        this.monthsMap = new Map([
+            ['2023-11','November'],
+            ['2023-10','October'],
+            ['2023-09','September']
+        ]);
 
-        this.datetime = this.getDateObject();
+        this.hiddenFrenzyMonth.value = this.selectFrenzySearch.value;
+        this.hiddenFrenzyMonthName.value = this.monthsMap.get(this.selectFrenzySearch.value);
 
-        this.dev = false;
-        this.host = (this.dev) ? 'http://localhost' : 'https://archived-forms.bgwgroup.com.au';
+        this.monthRegex = new RegExp(this.hiddenFrenzyMonth.value,'g');
 
-        this.postURL = `${this.host}/ccf/customer_data.php`;
-        this.getCustomerEntriesURL = `${this.host}/ccf/get_customer_entries.php`;
-        this.insertCustomerEntriesURL = `${this.host}/ccf/insert_customer_entries.php`;
-        this.insertCustomerEntriesSearchURL = `${this.host}/ccf/insert_customer_search_entries.php`;
+        this.searchCustomerDataURL = 'https://archived-forms.bgwgroup.com.au/clipsal-click-frenzy/search-customer-data.php';
+        this.customerEntries = 'https://archived-forms.bgwgroup.com.au/clipsal-click-frenzy/search-customer-entries.php';
+        this.postCustomerEntries = 'https://archived-forms.bgwgroup.com.au/clipsal-click-frenzy/post-customer-entries.php';
 
         this.INTERVAL = 1000;
 
         this.init();
     }
     init(){
-        this.fetchData();
-        this.generateRedemptionForm();
-        this.submitRedemptionForm();
-        this.getSelectedMonth();
+        this.clearSearchOnSelectChange();
+        this.getCurrentMonthData();
+        this.handleInputBoxBackspace();
+        this.disableEnterAndSpacebarKeys();
+        this.getRedeemedData();
     }
-    getDateObject(){
-        return (this.dateMonth < 10) ? `${this.dateYear}-0${this.dateMonth}` : `${this.dateYear}-${this.dateMonth}`;
-    }
-    getCurrentMonth(){
-        return this.currentMonth[this.dateMonth - 1];
-    }
-    getSelectedMonth(){
-        this.hiddenSelectedMonth.value = this.customerCurrentMonth.value;
-        this.customerCurrentMonth.addEventListener('change', () => {
-            this.hiddenSelectedMonth.value = this.customerCurrentMonth.value;
-            this.hiddenMonth.value = this.getCurrentSelectedMonth(this.hiddenSelectedMonth.value);
-            this.customerNumber.value = ``;
-            this.hideButtons();
-            this.hideMonthlyEntries();
-            this.removeAccountName();
-            this.removeCustomerData();
+    clearSearchOnSelectChange(){
+        this.selectFrenzySearch.addEventListener('change', () => {
+            this.inputFrenzySearch.value = '';
+            this.hiddenFrenzyMonth.value = this.selectFrenzySearch.value;
+            this.hiddenFrenzyMonthName.value = this.monthsMap.get(this.selectFrenzySearch.value);
+            this.monthRegex = new RegExp(this.hiddenFrenzyMonth.value,'g');
+            this.clearFrenzySearchCustomerData();
+            this.disableRedeemButton();
         });
     }
-    getCurrentSelectedMonth(dateObj){
-        let selectedMonth = parseInt(dateObj.split('-')[1]);
-        return this.currentMonth[selectedMonth - 1];
-    }
-    fetchData(){
-        // stop form from submitting
-        this.form.addEventListener('submit', (event) => {
-            event.preventDefault();
-        });
+    getCurrentMonthData(){
+        let formData = new FormData();
+        let currentCompanyName = '';
+        let currentAccount = '';
+        let currentEmail = '';
+        let currentPhone = '';
+        let currentEntries = [];
+        let currentMonth = '';
+        let currentTotalRedeemableEntries = [];
 
-        // handle customer data search when customer number is entered
-        this.customerNumber.addEventListener('keyup', () => {
-
-            // clear existing DOM
-            this.hideButtons();
-            this.hideMonthlyEntries();
-            this.removeAccountName();
-            this.removeCustomerData();
-
-            let typedCustomerNumber = this.customerNumber.value;
-
-            let formData = new FormData();
-            formData.append('account_number', typedCustomerNumber);
-            formData.append('datetime', this.hiddenSelectedMonth.value);
-            // formData.append('datetime', this.datetime);
-
-            if (typedCustomerNumber >= 3) {
-                fetch(this.postURL, {
-                    method: 'post',
+        if(this.frenzySearchButton != undefined){
+            this.frenzySearchButton.onclick = () => {
+            
+                this.clearCurrentCompany(currentCompanyName);
+                this.clearCurrentAccount(currentAccount);
+                this.clearCurrentEntriesArray(currentEntries);
+                this.clearCurrentMonth(currentMonth);
+                this.clearCurrentTotalRedeemableEntries(currentTotalRedeemableEntries);
+                this.disableRedeemButton();
+    
+                formData.append('account', this.inputFrenzySearch.value);
+                fetch(this.searchCustomerDataURL, {
+                    method: 'POST',
                     body: formData
                 })
-                .then((response) => { return response.json(); })
-                .then((customerRecords) => {
-
-                    if(customerRecords.length > 0){
-                        
-                        this.setAccountName(customerRecords[0]['account_name']);
-
-                        for(const element of customerRecords){
-                            if ( element['entries'] !== "0" || element['invoice'].match(/Total/g)) {
-
-                                this.entryNumbers.length = 0;
-                                this.entryNumbers.push(parseInt(element['entries']));
-
-                                const formattedDate = new Date(element['date']).toLocaleDateString();
-                                const formattedInvoice = element['invoice'].match(/Total/g);
-                                
-                                if(formattedInvoice === 'Total'){
-                                    this.setCustomerData(formattedDate, formattedInvoice, element['total_spend'], element['entries']);
-                                }
-
-                                if (element['bonus_100_voucher'] != ''){
-                                    this.bonusEntry = element['bonus_100_voucher'];
-                                }
-
-                                // this.setHiddenValues(typedCustomerNumber, customerRecords[0]['account_name'], this.getCurrentMonth(), this.entryNumbers[0], element['email']);
-                                this.setHiddenValues(typedCustomerNumber, customerRecords[0]['account_name'], this.getCurrentSelectedMonth(this.hiddenSelectedMonth.value), this.entryNumbers[0], element['email'], this.bonusEntry);
-                            }
-                            if(this.entryNumbers[0] > 0){
-                                this.showButtons();
+                .then(response => response.json())
+                .then(customerdata => {
+                    if(customerdata.length > 0 && this.inputFrenzySearch.value >= 3){
+    
+                        for(const data of customerdata){
+    
+                            if ( data['entry_date'].includes(this.hiddenFrenzyMonth.value) ){
+                                currentCompanyName = data['account_name'];
+                                currentAccount = data['account'];
+                                currentEntries.push(parseInt(data['entries']));
+                                currentMonth = this.monthsMap.get(this.hiddenFrenzyMonth.value);
                             }else{
-                                this.hideButtons();
+                                this.renderNoDataFromSearch();
                             }
+    
+                            if ( data['account'].includes('Total') ) {
+                                currentEmail = data['email'];
+                                currentPhone = data['phone'];
+                                currentTotalRedeemableEntries.push(parseInt(data['entries']));
+                            }
+
+    
                         }
 
-                        setTimeout(() => {
-                            this.setCustomerEntriesSearch(customerRecords);
-                        }, this.INTERVAL);
-
-                        this.showMonthlyEntries(this.entryNumbers[0]);
-                        //this.setHiddenValues(typedCustomerNumber, customerRecords[0]['account_name'], this.getCurrentMonth(), this.entryNumbers[0]);
-                    } else {
-                        this.setAccountName(`No entries for the month of ${this.getCurrentSelectedMonth(this.hiddenSelectedMonth.value)}`);
+                        this.renderDataFromSearch(currentCompanyName, currentAccount, currentEmail, currentPhone, currentMonth, currentEntries, currentTotalRedeemableEntries);
+    
                     }
                 })
-                .catch(err => {
-                    console.log(err);
-                });
-            }
+                .catch(err => console.log(err));
+            }            
+        }
+    }
+    getRedeemedData(){
 
+        let entriesData = new FormData();
+        let entriesSet = new Set();
+        let entriesMonth = [];
+        let entriesTotal = [];
+        let entriesBonusVoucher = [];
+        let currentEntriesTotal = 0;
+
+        this.frenzyRedeemButton.addEventListener('click', () => {
+            entriesData.append('account', this.hiddenFrenzyAccount.value);
+            entriesData.append('entry_month', this.hiddenFrenzyMonthName.value);
+
+            fetch(this.customerEntries,{
+                method: 'POST',
+                body: entriesData
+            })
+            .then(response => response.json())
+            .then(currentEntries => {
+
+               if(currentEntries.length > 0){
+                    
+                    for(let data of currentEntries){
+
+                        entriesMonth.push(...entriesSet.add(data['entry_month']));
+                        entriesTotal.push(parseInt(data['entries'])); 
+                        entriesBonusVoucher.push(data['bonus_100_voucher']);
+
+                        currentEntriesTotal = this.getTotalSumOfArray(entriesTotal);
+                                             
+                    }
+
+                    this.hiddenFrenzyMonthRemainderPoints.value = parseInt(this.hiddenFrenzyMonthPoints.value) - currentEntriesTotal;
+                    this.hiddenFrenzyBonusVoucher.value = (entriesBonusVoucher[0] === null) ? 'eligible' : entriesBonusVoucher[0];
+                }
+            
+            })
+            .catch(err => console.log(err));
+
+            // generate the redeem form data
+            this.generateRedemptionForm();
         });
-    }
-    setCustomerEntriesSearch(customerRecords){
 
-        let branch, account, accountName, phoneNumber, email = '';
-
-        for(const element of customerRecords){
-            if(element['home_branch'] != ''){
-                branch = element['home_branch'];
-            }
-            if(element['account_number'] != ''){
-                account = element['account_number'];
-            }
-            if(element['account_name'] != ''){
-                accountName = element['account_name'];
-            }
-            if(element['main_phone'] != ''){
-                phoneNumber = element['main_phone'] || 'No Number';
-            }
-            if(element['email'] != ''){
-                email = element['email'];
-            }
-        }
-
-        let postData = new FormData();
-        postData.append('branch', branch);
-        postData.append('account', account);
-        postData.append('accountName', accountName);
-        postData.append('phoneNumber', phoneNumber);
-        postData.append('email', email);
-
-        fetch(this.insertCustomerEntriesSearchURL, {
-            method: 'post',
-            body: postData
-        })
-        .then((search) => { })
-        .catch((err) => { });
-    }
-    setHiddenValues(account, name, month, entries, email, bonusEntry){
-        if(this.hiddenAccount != undefined && this.hiddenAccountName != undefined){
-            this.hiddenAccount.value = account;
-            this.hiddenAccountName.value = name;
-            this.hiddenMonth.value = month;
-            this.hiddenEntries.value = entries;
-            this.hiddenEmail.value = email;
-            this.hiddenBonusEntryMonth.value = (bonusEntry != '' || bonusEntry != null) ? 'Yes' : 'No';
-        }
-    }
-    showButtons(){
-        this.formButtons.classList.remove('hide-buttons');
-    }
-    hideButtons(){
-        this.formButtons.classList.add('hide-buttons');
-    }
-    setAccountName(name){
-        let div = document.createElement('div');
-        div.className = 'data-name';
-        div.innerHTML = `
-            <p>${name}</p>
-        `;
-        this.customerName.appendChild(div);
-    }
-    removeAccountName(){
-        this.customerName.innerHTML = ``;
-    }
-    setCustomerData(date, invoice, totalSpend, entries){
-        let div = document.createElement('div');
-        div.className = 'data-line';
-        div.innerHTML = `
-            <div class="data-row"><strong>Date</strong><span>${date}</span></div>
-            <div class="data-row"><strong>Invoice</strong><span>${invoice}</span></div>
-            <div class="data-row"><strong>Total Spend</strong><span>${totalSpend}</span></div>
-            <div class="data-row"><strong>Entries</strong><span class="entry">${entries}</span></div>
-        `;
-        this.customerData.appendChild(div);
-    }
-    removeCustomerData(){
-        this.customerData.innerHTML = ``;
-    }
-    showMonthlyEntries(entries){
-        this.customerMonthlyEntries.innerHTML = ``;
-
-        if(entries === 0){
-            this.customerMonthlyEntries.innerHTML = `
-            <div>
-                <p>You currently have <strong>${entries}</strong> entries for the month of ${this.getCurrentMonth()}</p>
-            </div>
-        `;
-        }else{
-            this.customerMonthlyEntries.innerHTML = `
-            <div>
-                <p>You currently have <strong>${entries}</strong> entries for the month of ${this.getHiddenMonthString(this.hiddenSelectedMonth.value)}</p>
-                <small><sup>*</sup> You are only eligible for a max of <strong>4</strong> entries for the month of ${this.getHiddenMonthString(this.hiddenSelectedMonth.value)}</small>
-            </div>
-        `;
-        }
-    }
-    hideMonthlyEntries(){
-        this.customerMonthlyEntries.innerHTML  = ``;
-    }
-    getHiddenMonthString(value){
-        let month = value.split("-")[1];
-        if(month == "09"){
-            month = "9";
-        }
-        return this.currentMonth[parseInt(month) - 1];
     }
     generateRedemptionForm(){
-        if(this.redeemButton != undefined){
-            this.redeemButton.addEventListener('click', () => {
-                
-                this.getExistingEntries();
 
-                this.form.classList.add('hide-ccf-form');
-                setTimeout(() => {
-                    this.ccfRedeemFormContainer.innerHTML = `
-                    <div class="ccf-redeem-form">
-                        ${this.hiddenEntries.value == "0" ? 
-                        '<div class="form-row"><label>You have 0 entries for the month of '+ this.getHiddenMonthString(this.hiddenSelectedMonth.value) +'</label></div>' : ''}
-                        <div class="form-row">
-                            <label>Account Number</label>
-                            <input type="text" name="account" maxlength="5" value="${this.hiddenAccount.value}" readonly>
-                        </div>
-                        <div class="form-row">
-                            <label>Account Name</label>
-                            <input type="text" name="account_name" value="${this.hiddenAccountName.value}" readonly>
-                        </div>
-                        <div class="form-row">
-                            <label>Account Email</label>
-                            <input type="text" name="account_email" value="${this.hiddenEmail.value}" readonly>
-                        </div>
-                        ${this.hiddenEntries.value != "0" ? '<div class="form-row"><label>Contact Number</label><input type="text" name="account_contact_number" placeholder="Enter contact number"></div>' : ''}
-                        <div class="form-row form-select" style="${(this.hiddenEntries.value != "0") ? '' : 'display: none;'}">
-                            <label>Claim $50 Voucher</label>
-                            <select name="voucher">
-                                <option value="LSKD">LSKD</option>
-                                <option value="PREZZEE">Prezzee</option>
-                            </select>
-                        </div>
-                        <div class="form-row form-number" style="${(this.hiddenEntries.value != "0") ? '' : 'display: none;'}">
-                            <label>Voucher Entries (1 to 4)</label>
-                            <input type="number" name="entry_number" min="1" max="${this.hiddenEntries.value}" value="${this.hiddenEntries.value}">
-                        </div>
-                        ${this.hiddenDisplayBonusHundredMonth.value == "true" ? `                        
-                        <div class="form-row" style="padding: 2rem; text-align: center;">
-                            <label>You are eligible for a BONUS voucher (1 per customer)</label>
-                        </div>
-                        <div class="form-row form-select">
-                            <label>Claim $100 Voucher</label>
-                            <select name="bonus_100_voucher">
-                                <option value="LSKD">LSKD</option>
-                                <option value="PREZZEE">Prezzee</option>
-                            </select>
-                        </div>` : ''}
-                        <div class="form-buttons">
-                            <button style="${(this.hiddenEntries.value != "0") ? '' : 'display: none;'}" id="redeemVouchers" title="Redeem Vouchers">Redeem Vouchers</button>
-                        </div>
-                    </div>                
+        this.hideFrenzySearchContainer();
+        this.showLoader();
+        let redeemRefreshCountdown = 5;
+
+        setTimeout(() => {
+            this.hideLoader();
+            if(this.hiddenFrenzyMonthRemainderPoints.value === "0"){
+                this.frenzyCustomerRedemptionFormContainer.innerHTML = `
+                    <div class="back-btn-container">
+                        <button class="back-button">Back</button>
+                        <p><strong>You have already exceeded the max number of entries for the month of ${this.hiddenFrenzyMonthName.value}</strong></p>
+                    </div>
                 `;
-                }, this.INTERVAL / 2); 
-            });
-        }
-    }
-    getExistingEntries(){
-        let existingFormData = new FormData();
-        existingFormData.append('account', this.hiddenAccount.value);
-        existingFormData.append('month', this.hiddenMonth.value);
-
-        let totalEntriesSum = 0;
-        let entriesMonth = '';
-        let currentMonth = this.getCurrentMonth();
-
-        fetch(this.getCustomerEntriesURL,{
-            method: 'post',
-            body: existingFormData
-        })
-        .then((response) => { return response.json(); })
-        .then((entries) => {
-
-            if(entries.length > 0){
-
-                for(const element of entries){
-                    totalEntriesSum += parseInt(element['entries']);
-                    entriesMonth += element['entry_month'];
-                    this.hiddenDisplayBonusHundredMonth.value = (element['bonus_100_voucher'] != '') ? "false" : "true";
-                }
-                this.hiddenEntries.value = (parseInt(this.hiddenEntries.value) - totalEntriesSum);
-
-                if(this.hiddenEntries.value == 0 && RegExp(`\\b${this.getCurrentMonth()}\\b`).exec(entriesMonth)){
-                    this.ccfAlert.innerHTML = `You have exceeded the number of times you can redeem in ${currentMonth} or you run out of entries`;
-                }
-
-                if(this.hiddenEntries.value > 0 && RegExp(`\\b${this.getCurrentMonth()}\\b`).exec(entriesMonth)){
-                    this.ccfAlert.innerHTML = `You have (${this.hiddenEntries.value}) voucher redemptions left for the month of ${currentMonth}`;
-                }
             }else{
-                this.hiddenDisplayBonusHundredMonth.value = "true";
+                this.frenzyCustomerRedemptionForm.innerHTML = `
+                    <div class="back-btn-container">
+                        <button class="back-button">Back</button>
+                        <p><strong>(${this.hiddenFrenzyMonthRemainderPoints.value})</strong> remaining entries for the month of ${this.hiddenFrenzyMonthName.value}</p>
+                    </div>
+                    <div class="form-row">
+                        <label>Account Number</label>
+                        <input type="text" name="redeem_account" value="${this.hiddenFrenzyAccount.value}" readonly disabled="disabled">
+                    </div>
+                    <div class="form-row">
+                        <label>Account Name</label>
+                        <input type="text" name="redeem_account_name" value="${this.hiddenFrenzyCompany.value}" readonly disabled="disabled">
+                    </div>
+                    <div class="form-row">
+                        <label>Entry Month</label>
+                        <input type="text" name="redeem_entry_month" value="${this.hiddenFrenzyMonthName.value}" readonly disabled="disabled">
+                    </div>
+                    <div class="form-row">
+                        <label>Email</label>
+                        <input type="text" name="redeem_email" value="${this.hiddenFrenzyEmail.value}" readonly disabled="disabled">
+                    </div>
+                    <div class="form-row">
+                        <label>Contact Number</label>
+                        <input type="text" name="redeem_contact_number" value="${this.hiddenFrenzyPhone.value}" readonly disabled="disabled">
+                    </div>
+                    <div class="form-row form-select">
+                        <label>$50 Voucher</label>
+                        <select name="redeem_voucher">
+                            <option value="LKSD">LKSD</option>
+                            <option value="PREZZEE">Prezzee</option>
+                        </select>
+                    </div>
+                    <div class="form-row form-number">
+                        <label>$50 Voucher Entries (1 to 4)</label>
+                        <input type="number" name="redeem_voucher_entries" min="1" max="${this.hiddenFrenzyMonthRemainderPoints.value}" value="${this.hiddenFrenzyMonthRemainderPoints.value}">
+                    </div>
+                    ${this.hiddenFrenzyMonthName.value === 'October' ? 
+                    `<div class="form-row form-select">
+                    ${this.hiddenFrenzyBonusVoucher.value == '' ?
+                        `<span>You can only claim 1x Bonus $100 voucher for the month of ${this.hiddenFrenzyMonthName.value}</span>
+                        <label>Claim 1x Bonus $100 Voucher</label>
+                        <select name="redeem_bonus_voucher">
+                            <option value="LKSD">LKSD</option>
+                            <option value="PREZZEE">Prezzee</option>
+                        </select>` : `<strong>You have already claimed your Bonus $100 voucher for ${this.hiddenFrenzyMonthName.value}</strong>`
+                    }
+                    </div>` : ``}
+                    <div class="form-buttons">
+                        <button class="redeem-entries" name="redeem_entries" title="Redeem Vouchers">Redeem Vouchers Entries</button>
+                    </div>
+                `;
             }
-        })
-        .catch((error) => {});
-    }
-    submitRedemptionForm(){
-        let countdown  = 5;
+        }, this.INTERVAL);
 
-        ['click', 'keypress'].forEach(event => {
-            this.ccfRedeemFormContainer.addEventListener(event, (e) => {
+        this.frenzyForm.addEventListener('click', (e) => {
 
-                let account = e.currentTarget.querySelector('[name="account"]');
-                let accountName = e.currentTarget.querySelector('[name="account_name"]');
-                let accountContactNumber = e.currentTarget.querySelector('[name="account_contact_number"]');
-                let bonusEntry = e.currentTarget.querySelector('[name="bonus_entry"]');
-                let bonusVoucherEntry = e.currentTarget.querySelector('[name="bonus_100_voucher"]');
-                let voucher = e.currentTarget.querySelector('[name="voucher"]');
-                let entryNumber = e.currentTarget.querySelector('[name="entry_number"]');
-                let redeemVouchers = e.currentTarget.querySelector('#redeemVouchers');
+            if(e.target.className === 'back-button'){
+                this.clearFrenzyCustomerRedemptionFormContainer();
+                this.showFrenzySearchContainer();
+                window.location.reload();
+            }
 
-                try{
-                    if(e.target === entryNumber){
-                        entryNumber.addEventListener('keypress', (e) => {
-                            e.preventDefault();
-                        });
-                    }
-    
-                    if( e.target === redeemVouchers && this.hiddenEntries.value != 0 ){
-    
-                        let postData = new FormData();
-                        postData.append('account', account.value);
-                        postData.append('account_name', accountName.value);
-                        postData.append('contact_number', accountContactNumber.value);
-                        postData.append('voucher', voucher.value);
-                        postData.append('entry_number', entryNumber.value);
-                        postData.append('month', this.hiddenMonth.value);
-                        postData.append('email', this.hiddenEmail.value);
-                        if(bonusEntry == undefined || bonusEntry == null){
-                            postData.append('bonus_entry', 'No Bonus Entry');
-                        }else{
-                            postData.append('bonus_entry', bonusEntry.value);
-                        }
-                        if(bonusVoucherEntry == undefined || bonusVoucherEntry == null){
-                            postData.append('bonus_100_voucher', '');
-                        }else{
-                            postData.append('bonus_100_voucher', bonusVoucherEntry.value);
-                        }
-    
-                        fetch(this.insertCustomerEntriesURL, {
-                            method: 'post',
-                            body: postData
-                        })
-                        .then((response) => { return response.json(); })
-                        .then((redeem) => {
-                            // console.log(redeem);
-                            if(redeem.status){
-                                setInterval(() => {
-                                    countdown = countdown - 1;
-                                    this.ccfAlert.innerHTML = `<p>Your entry has been saved. Refreshing in...<span>${countdown}</span></p>`;
+            let redeemAccount = e.currentTarget.querySelector('[name="redeem_account"]');
+            let redeemAccountName = e.currentTarget.querySelector('[name="redeem_account_name"]');
+            let redeemEmail = e.currentTarget.querySelector('[name="redeem_email"]');
+            let redeemContactNumber = e.currentTarget.querySelector('[name="redeem_contact_number"]');
+            let redeemEntryMonth = e.currentTarget.querySelector('[name="redeem_entry_month"]');
+            let redeemVoucherEntries = e.currentTarget.querySelector('[name="redeem_voucher_entries"]');
+            let redeemBonusVoucher = e.currentTarget.querySelector('[name="redeem_bonus_voucher"]');
+            let redeemVoucher = e.currentTarget.querySelector('[name="redeem_voucher"]');
 
-                                    if(countdown == 0){
-                                        window.location.reload();
-                                    }
-                                }, this.INTERVAL);
+            if (e.target.className === 'redeem-entries'){
+
+                e.target.setAttribute('disabled','disabled');
+
+                let redeemPostData = new FormData();
+
+                redeemPostData.append('account', redeemAccount.value);
+                redeemPostData.append('account_name', redeemAccountName.value);
+                redeemPostData.append('account_email', redeemEmail.value);
+                redeemPostData.append('account_contact_number', redeemContactNumber.value);
+                redeemPostData.append('entry_month', redeemEntryMonth.value);
+                redeemPostData.append('entries', redeemVoucherEntries.value);
+                if(redeemBonusVoucher != undefined || redeemBonusVoucher != null) {
+                    redeemPostData.append('bonus_entries', '1');
+                    redeemPostData.append('bonus_100_voucher', redeemBonusVoucher.value);
+                }else if (this.hiddenFrenzyBonusVoucher.value.length > 0 && this.hiddenFrenzyMonthName.value == 'October') {
+                    redeemPostData.append('bonus_entries', '0');
+                    redeemPostData.append('bonus_100_voucher', 'Bonus Entry Already Redeemed');
+                }else if (redeemBonusVoucher == undefined || redeemBonusVoucher == null) {
+                    redeemPostData.append('bonus_entries', '0');
+                    redeemPostData.append('bonus_100_voucher', 'None');
+                }
+                redeemPostData.append('voucher', redeemVoucher.value);
+
+                fetch(this.postCustomerEntries, {
+                    method: 'POST',
+                    body: redeemPostData
+                })
+                .then(response => response.json())
+                .then(redeem => {
+                    if(redeem.status){
+
+                        let redeemMessage = document.createElement('section');
+                        redeemMessage.className = 'frenzy-redeem-message';
+
+                        setInterval(() => {
+                            redeemRefreshCountdown = redeemRefreshCountdown - 1;
+
+                            redeemMessage.innerHTML = `
+                                <div class="frenzy-redeem-spinner"><span></span></div>
+                                <div class="frenzy-redeem-text"><p>Refreshing in ... ${redeemRefreshCountdown}</div>
+                            `;
+
+                            if(redeemRefreshCountdown == 0){
+                                window.location.reload();
                             }
-                        })
-                        .catch((error) => {});
-                    }
-                }catch(e){}
 
-            });
+                        }, this.INTERVAL);
+
+                        this.frenzyForm.appendChild(redeemMessage);
+                    }
+                })
+                .catch(err => console.log(err));
+            }
+
         });
     }
+    handleInputBoxBackspace(){
+
+        this.inputFrenzySearch.addEventListener('keyup', (e) => {
+
+            e.preventDefault();
+            if(this.inputFrenzySearch.value.length < 5){
+                this.disableRedeemButton();
+                this.clearFrenzySearchCustomerData();
+            }
+        });
+    
+    }
+    disableEnterAndSpacebarKeys(){
+        this.inputFrenzySearch.addEventListener('keypress', (e) => {
+            if(e.keyCode == 13 && e.keyCode == 32){
+                return false;
+            }
+        });
+    }
+    accessRedeemButton(){
+        this.frenzyRedeemButton.removeAttribute('disabled');
+    }
+    disableRedeemButton(){
+        this.frenzyRedeemButton.setAttribute('disabled','disabled');
+    }
+    clearCurrentCompany(company){
+        company = '';
+    }
+    clearCurrentAccount(account){
+        account = '';
+    }
+    clearCurrentEntriesArray(array){
+        array.length = 0;
+    }
+    clearCurrentMonth(month){
+        month = '';
+    }
+    clearCurrentTotalRedeemableEntries(entries){
+        entries.length = 0;
+    }
+    clearFrenzySearchCustomerData(){
+        this.frenzySearchCustomerData.innerHTML = ``;
+    }
+    clearFrenzyCustomerRedemptionFormContainer(){
+        this.frenzyCustomerRedemptionFormContainer.innerHTML = ``;
+    }
+    showFrenzySearchContainer(){
+        this.frenzySearchContainer.classList.remove('hide-frenzy-search');
+    }
+    hideFrenzySearchContainer(){
+        this.frenzySearchContainer.classList.add('hide-frenzy-search');
+    }
+    showLoader(){
+        this.frenzyCustomerLoader.classList.add('show-frenzy-loader');
+    }
+    hideLoader(){
+        this.frenzyCustomerLoader.classList.remove('show-frenzy-loader');
+    }
+    getTotalSumOfArray(array){
+        return array.reduce((accumulator, num) => accumulator + num);
+    }
+    renderDataFromSearch(company, account, email, phone, month, entries, totalRedeemableEntries){
+        this.frenzySearchCustomerData.innerHTML = `
+            <article class="frenzy-search-data-wrapper">
+                <section class="frenzy-search-company"><strong>${company}</strong></section>
+                <section class="frenzy-search-data">
+                    <span>Selected Month</span>
+                    <span>${month}</span>
+                    <span>${month} Points</span>
+                    <span><strong>${this.getTotalSumOfArray(entries)}</strong></span>
+                </section>
+                <section class="frenzy-search-disclaimer"><sup>*</sup>Max number of entries to redeem for ${month} is <strong>${totalRedeemableEntries}</strong></section>
+            </article>
+        `;
+        this.accessRedeemButton();
+
+        // populate hidden fields
+        this.hiddenFrenzyCompany.value = company;
+        this.hiddenFrenzyAccount.value = account;
+        this.hiddenFrenzyEmail.value = email;
+        this.hiddenFrenzyPhone.value = phone;
+        this.hiddenFrenzyMonthPoints.value = (this.getTotalSumOfArray(entries) > 4) ? 4 : this.getTotalSumOfArray(entries);
+    }
+    renderNoDataFromSearch(){
+        this.frenzySearchCustomerData.innerHTML = `<span>No Data</span>`;
+    }
 }
+
 /**
  * CNW BIG SUPPORTER (BO4)
  */

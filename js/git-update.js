@@ -2137,11 +2137,11 @@ class ClipsalClickFrenzyTwo{
                     </div>
                     <div class="form-row">
                         <label>Email</label>
-                        <input type="text" name="redeem_email" value="${this.hiddenFrenzyEmail.value}" readonly disabled="disabled">
+                        <input type="text" name="redeem_email" value="${this.hiddenFrenzyEmail.value}" ${this.hiddenFrenzyEmail.value.length > 0 ? `readonly disabled="disabled"` : `placeholder="Enter your email" required`}>
                     </div>
                     <div class="form-row">
                         <label>Contact Number</label>
-                        <input type="text" name="redeem_contact_number" value="${this.hiddenFrenzyPhone.value}" readonly disabled="disabled">
+                        <input type="text" name="redeem_contact_number" value="${this.hiddenFrenzyPhone.value}" ${this.hiddenFrenzyPhone.value.length > 0 ? `readonly disabled="disabled"` : `placeholder="Enter your phone number" required`} >
                     </div>
                     <div class="form-row form-select">
                         <label>$50 Voucher</label>

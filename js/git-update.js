@@ -1093,7 +1093,7 @@ function clearAcStoreinformationSelector(nodeList, selector) {
 window.addEventListener('DOMContentLoaded', () => {
     if (location.href.match(/cnw.com.au/) || location.href.match(/sherriff.com.au/) || location.href.match(/samios.net.au/) || location.href.match(/bgwt.com.au/)) {
         try {
-            //new MaintenanceBanner();
+            new MaintenanceBanner();
         } catch (e) {}
     }
 });
@@ -1110,6 +1110,7 @@ MaintenanceBanner.prototype.init = () => {
      MaintenanceBanner.prototype.closeBanner();
      MaintenanceBanner.prototype.fullScreenBanner();
 };
+// no need to use renderBanner
 MaintenanceBanner.prototype.renderBanner = () => {
     let sapMaintenanceBanner = document.createElement('div');
     sapMaintenanceBanner.className = 'sap-maintenance-banner';

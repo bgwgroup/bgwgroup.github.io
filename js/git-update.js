@@ -1978,6 +1978,7 @@ class ClipsalClickFrenzyTwo{
         this.searchCustomerDataURL = 'https://archived-forms.bgwgroup.com.au/clipsal-click-frenzy/search-customer-data.php';
         this.customerEntries = 'https://archived-forms.bgwgroup.com.au/clipsal-click-frenzy/search-customer-entries.php';
         this.postCustomerEntries = 'https://archived-forms.bgwgroup.com.au/clipsal-click-frenzy/post-customer-entries.php';
+        this.postCustomerEntriesSearchURL = `${this.host}/clipsal-click-frenzy/post-customer-search.php`;
 
         this.INTERVAL = 1000;
 
@@ -2049,6 +2050,9 @@ class ClipsalClickFrenzyTwo{
     
                         }
 
+                        // record customer search results
+                        this.setCustomerEntriesSearch(customerdata);
+
                         this.renderDataFromSearch(currentCompanyName, currentAccount, currentEmail, currentPhone, currentMonth, currentEntries, currentTotalRedeemableEntries);
     
                     }
@@ -2102,6 +2106,46 @@ class ClipsalClickFrenzyTwo{
             this.generateRedemptionForm();
         });
 
+    }
+    setCustomerEntriesSearch(customerRecords){
+
+        let branch, account, accountName, phoneNumber, email = '';
+
+        for(const element of customerRecords){
+            if(element['branch'] != ''){
+                branch = element['branch'] || 'No Branch';
+            }
+            if(element['account'] != ''){
+                account = element['account'];
+            }
+            if(element['account_name'] != ''){
+                accountName = element['account_name'];
+            }
+            if(element['phone'] != ''){
+                phoneNumber = element['phone'];
+            }else{
+                phoneNumber = 'No Number';
+            }
+            if(element['email'] != ''){
+                email = element['email'];
+            }else{
+                email = 'No Email';
+            }
+        }
+
+        let postData = new FormData();
+        postData.append('branch', branch);
+        postData.append('account', account.replace(' Total',''));
+        postData.append('accountName', accountName);
+        postData.append('phoneNumber', phoneNumber);
+        postData.append('email', email);
+
+        fetch(this.postCustomerEntriesSearchURL, {
+            method: 'post',
+            body: postData
+        })
+        .then((search) => { })
+        .catch((err) => { });
     }
     generateRedemptionForm(){
 

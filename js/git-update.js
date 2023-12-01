@@ -1932,9 +1932,11 @@ if (window.location.href.indexOf("cnw.com.au") != -1){
  * SHERRIFF CLIPSAL CLICK FRENZY
  */
 window.addEventListener('DOMContentLoaded', () => {
-    try{
-        new ClipsalClickFrenzyTwo();
-    }catch(e){}
+    if(location.href.match(/clipsal-click-frenzy/gi)){
+        try{
+            new ClipsalClickFrenzyTwo();
+        }catch(e){}
+    }
 });
 class ClipsalClickFrenzyTwo{
     constructor(){
@@ -1949,7 +1951,8 @@ class ClipsalClickFrenzyTwo{
         this.hiddenFrenzyMonthName = document.querySelector('[name="hidden_frenzy_month_name"]');   
         this.hiddenFrenzyMonthPoints = document.querySelector('[name="hidden_frenzy_month_points"]'); 
         this.hiddenFrenzyMonthRemainderPoints = document.querySelector('[name="hidden_frenzy_month_remainder_points"]'); 
-        this.hiddenFrenzyBonusVoucher = document.querySelector('[name="hidden_frenzy_bonus_voucher"]'); 
+        this.hiddenFrenzyBonusVoucher = document.querySelector('[name="hidden_frenzy_bonus_voucher"]');
+        this.hiddenFrenzyEligibleBonusHundredVoucher = document.querySelector('[name="hidden_frenzy_eligible_october_bonus_voucher"]');
 
         this.frenzySearchContainer = document.querySelector('.frenzy-search');
         this.frenzyCustomerRedemptionFormContainer = document.querySelector('.frenzy-customer-redemption-form');
@@ -1975,9 +1978,13 @@ class ClipsalClickFrenzyTwo{
 
         this.monthRegex = new RegExp(this.hiddenFrenzyMonth.value,'g');
 
-        this.searchCustomerDataURL = 'https://archived-forms.bgwgroup.com.au/clipsal-click-frenzy/search-customer-data.php';
-        this.customerEntries = 'https://archived-forms.bgwgroup.com.au/clipsal-click-frenzy/search-customer-entries.php';
-        this.postCustomerEntries = 'https://archived-forms.bgwgroup.com.au/clipsal-click-frenzy/post-customer-entries.php';
+        this.host = 'https://archived-forms.bgwgroup.com.au';
+
+        this.searchCustomerSeptemberDataURL = `${this.host}/clipsal-click-frenzy/search-customer-data-september.php`;
+        this.searchCustomerOctoberDataURL = `${this.host}/clipsal-click-frenzy/search-customer-data-october.php`;
+        this.searchCustomerDataURL = `${this.host}/clipsal-click-frenzy/search-customer-data.php`;
+        this.customerEntries = `${this.host}/clipsal-click-frenzy/search-customer-entries.php`;
+        this.postCustomerEntries = `${this.host}/clipsal-click-frenzy/post-customer-entries.php`;
         this.postCustomerEntriesSearchURL = `${this.host}/clipsal-click-frenzy/post-customer-search.php`;
 
         this.INTERVAL = 1000;
@@ -2010,6 +2017,7 @@ class ClipsalClickFrenzyTwo{
         let currentEntries = [];
         let currentMonth = '';
         let currentTotalRedeemableEntries = [];
+        let currentEligibleOctoberHundredVoucher = '';
 
         if(this.frenzySearchButton != undefined){
             this.frenzySearchButton.onclick = () => {
@@ -2019,45 +2027,121 @@ class ClipsalClickFrenzyTwo{
                 this.clearCurrentEntriesArray(currentEntries);
                 this.clearCurrentMonth(currentMonth);
                 this.clearCurrentTotalRedeemableEntries(currentTotalRedeemableEntries);
+                this.clearCurrentEligibleOctoberHundredVoucher(currentEligibleOctoberHundredVoucher);
                 this.disableRedeemButton();
     
                 formData.append('account', this.inputFrenzySearch.value);
-                fetch(this.searchCustomerDataURL, {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(customerdata => {
-                    if(customerdata.length > 0 && this.inputFrenzySearch.value >= 3){
-    
-                        for(const data of customerdata){
-    
-                            if ( data['entry_date'].includes(this.hiddenFrenzyMonth.value) ){
-                                currentCompanyName = data['account_name'];
-                                currentAccount = data['account'];
-                                currentEntries.push(parseInt(data['entries']));
-                                currentMonth = this.monthsMap.get(this.hiddenFrenzyMonth.value);
-                            }else{
-                                this.renderNoDataFromSearch();
-                            }
-    
-                            if ( data['account'].includes('Total') ) {
-                                currentEmail = data['email'];
-                                currentPhone = data['phone'];
-                                currentTotalRedeemableEntries.push(parseInt(data['entries']));
-                            }
 
+                if(this.selectFrenzySearch.value === '2023-11') {
+                    // search through November database table
+                    fetch(this.searchCustomerDataURL, {
+                        method: 'POST',
+                        body: formData
+                    })
+                    .then(response => response.json())
+                    .then(customerdata => {
+                        if(customerdata.length > 0 && this.inputFrenzySearch.value >= 3){
+        
+                            for(const data of customerdata){
+        
+                                if ( data['entry_date'].includes(this.hiddenFrenzyMonth.value) ){
+                                    currentCompanyName = data['account_name'];
+                                    currentAccount = data['account'];
+                                    currentEntries.push(parseInt(data['entries']));
+                                    currentMonth = this.monthsMap.get(this.hiddenFrenzyMonth.value);
+                                }else{
+                                    this.renderNoDataFromSearch();
+                                }
+        
+                                if ( data['account'].includes('Total') ) {
+                                    currentEmail = data['email'];
+                                    currentPhone = data['phone'];
+                                    currentTotalRedeemableEntries.push(parseInt(data['entries']));
+                                }
     
+        
+                            }
+    
+                            // record customer search results
+                            this.setCustomerEntriesSearch(customerdata);
+    
+                            this.renderDataFromSearch(currentCompanyName, currentAccount, currentEmail, currentPhone, currentMonth, currentEntries, currentTotalRedeemableEntries,'');
+        
                         }
-
-                        // record customer search results
-                        this.setCustomerEntriesSearch(customerdata);
-
-                        this.renderDataFromSearch(currentCompanyName, currentAccount, currentEmail, currentPhone, currentMonth, currentEntries, currentTotalRedeemableEntries);
+                    })
+                    .catch(err => console.log(err));
+                    
+                }else if (this.selectFrenzySearch.value === '2023-10') {
+                    // search through October database table
+                    fetch(this.searchCustomerOctoberDataURL, {
+                        method: 'POST',
+                        body: formData
+                    })
+                    .then(response => response.json())
+                    .then(customerdata => {
+                        if(customerdata.length > 0 && this.inputFrenzySearch.value >= 3){
+        
+                            for(const data of customerdata){
+        
+                                if ( data['date'].includes(this.hiddenFrenzyMonth.value) && data['invoice'].includes('Total:')){
+                                    currentCompanyName = data['account_name'];
+                                    currentAccount = data['account'];
+                                    currentEntries.push(parseInt(data['entries']));
+                                    currentMonth = this.monthsMap.get(this.hiddenFrenzyMonth.value);
+                                    currentEmail = data['email'];
+                                    currentPhone = data['main_phone'];
+                                    currentTotalRedeemableEntries.push(parseInt(data['entries']));
+                                    currentEligibleOctoberHundredVoucher = data['bonus_100_voucher'];
+                                }else{
+                                    this.renderNoDataFromSearch();
+                                }
+        
+                            }
     
-                    }
-                })
-                .catch(err => console.log(err));
+                            // record customer search results
+                            this.setCustomerEntriesSearch(customerdata);
+    
+                            this.renderDataFromSearch(currentCompanyName, currentAccount, currentEmail, currentPhone, currentMonth, currentEntries, currentTotalRedeemableEntries, currentEligibleOctoberHundredVoucher);
+        
+                        }
+                    })
+                    .catch(err => console.log(err));
+                    // search through September database table
+                }else if (this.selectFrenzySearch.value === '2023-09') {
+                    // search through September database table
+                    fetch(this.searchCustomerSeptemberDataURL, {
+                        method: 'POST',
+                        body: formData
+                    })
+                    .then(response => response.json())
+                    .then(customerdata => {
+                        if(customerdata.length > 0 && this.inputFrenzySearch.value >= 3){
+        
+                            for(const data of customerdata){
+        
+                                if ( data['date'].includes(this.hiddenFrenzyMonth.value) && data['invoice'].includes('Total:') ){
+                                    currentCompanyName = data['account_name'];
+                                    currentAccount = data['account'];
+                                    currentEntries.push(parseInt(data['entries']));
+                                    currentMonth = this.monthsMap.get(this.hiddenFrenzyMonth.value);
+                                    currentEmail = data['email'];
+                                    currentPhone = data['main_phone'];
+                                    currentTotalRedeemableEntries.push(parseInt(data['entries']));
+                                }else{
+                                    this.renderNoDataFromSearch();
+                                }
+
+                            }
+    
+                            // record customer search results
+                            this.setCustomerEntriesSearch(customerdata);
+    
+                            this.renderDataFromSearch(currentCompanyName, currentAccount, currentEmail, currentPhone, currentMonth, currentEntries, currentTotalRedeemableEntries, '');
+        
+                        }
+                    })
+                    .catch(err => console.log(err));
+                }
             }            
         }
     }
@@ -2199,7 +2283,7 @@ class ClipsalClickFrenzyTwo{
                         <label>$50 Voucher Entries (1 to 4)</label>
                         <input type="number" name="redeem_voucher_entries" min="1" max="${this.hiddenFrenzyMonthRemainderPoints.value}" value="${this.hiddenFrenzyMonthRemainderPoints.value}">
                     </div>
-                    ${this.hiddenFrenzyMonthName.value === 'October' ? 
+                    ${this.hiddenFrenzyMonthName.value == 'October' && this.hiddenFrenzyEligibleBonusHundredVoucher.value == 'Yes' ? 
                     `<div class="form-row form-select">
                     ${this.hiddenFrenzyBonusVoucher.value == '' ?
                         `<span>You can claim ONLY 1 x Bonus $100 voucher for the month of ${this.hiddenFrenzyMonthName.value}</span>
@@ -2330,6 +2414,9 @@ class ClipsalClickFrenzyTwo{
     }
     clearCurrentTotalRedeemableEntries(entries){
         entries.length = 0;
+    }
+    clearCurrentEligibleOctoberHundredVoucher(eligible){
+        eligible = '';
     }
     clearFrenzySearchCustomerData(){
         this.frenzySearchCustomerData.innerHTML = ``;

@@ -2439,7 +2439,7 @@ class ClipsalClickFrenzyTwo{
     getTotalSumOfArray(array){
         return array.reduce((accumulator, num) => accumulator + num);
     }
-    renderDataFromSearch(company, account, email, phone, month, entries, totalRedeemableEntries){
+    renderDataFromSearch(company, account, email, phone, month, entries, totalRedeemableEntries, eliglibleOctoberVoucher){
         this.frenzySearchCustomerData.innerHTML = `
             <article class="frenzy-search-data-wrapper">
                 <section class="frenzy-search-company"><strong>${company}</strong></section>
@@ -2460,6 +2460,7 @@ class ClipsalClickFrenzyTwo{
         this.hiddenFrenzyEmail.value = email;
         this.hiddenFrenzyPhone.value = phone;
         this.hiddenFrenzyMonthPoints.value = (this.getTotalSumOfArray(entries) > 4) ? 4 : this.getTotalSumOfArray(entries);
+        this.hiddenFrenzyEligibleBonusHundredVoucher.value = eliglibleOctoberVoucher;
     }
     renderNoDataFromSearch(){
         this.frenzySearchCustomerData.innerHTML = `<span>No Data</span>`;

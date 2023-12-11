@@ -1093,7 +1093,7 @@ function clearAcStoreinformationSelector(nodeList, selector) {
 window.addEventListener('DOMContentLoaded', () => {
     if (location.href.match(/cnw.com.au/) || location.href.match(/sherriff.com.au/) || location.href.match(/samios.net.au/) || location.href.match(/bgwt.com.au/)) {
         try {
-            // new MaintenanceBanner();
+            new MaintenanceBanner();
         } catch (e) {}
     }
 });
@@ -1104,7 +1104,7 @@ function MaintenanceBanner() {
 MaintenanceBanner.prototype.init = () => {
     let checkIfUserHasSeenBanner = localStorage.getItem('bannerClicked');
     if (checkIfUserHasSeenBanner == null) {
-        MaintenanceBanner.prototype.renderBanner();
+        // MaintenanceBanner.prototype.renderBanner();
     }
 
      MaintenanceBanner.prototype.closeBanner();

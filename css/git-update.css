@@ -4437,3 +4437,12 @@ CNW SBO Search Page Promotion Banner
         bottom: calc(var(--gutter) * 4.5) !important;
     }
 }
+
+
+/* temp mycompany hide items */
+.module-company-blocks .IconTiles .Tile:nth-child(1),
+.module-company-blocks .IconTiles .Tile:nth-child(2),
+.module-company-blocks .IconTiles .Tile:nth-child(3),
+.module-company-blocks .IconTiles .Tile:nth-child(6){
+    display:none;
+}

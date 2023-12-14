@@ -89,7 +89,6 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: unset !important;
-  outline: solid 2px fuchsia;
 }
 
 .pagination-bar-results {

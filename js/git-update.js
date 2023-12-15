@@ -1,3 +1,14 @@
+/**
+ * Redirects
+ */
+if (window.location.href.indexOf("/whats-new") != -1){
+    window.location.replace("https://shop.cnw.com.au/newsAndPromotions");
+}
+if (window.location.href.indexOf("/faqOrHelp") != -1){
+    window.location.replace("https://help.cnw.com.au/");
+}
+
+
 if ($('form#command .cust-loginregbtn').length > 0) {
     $("form#command .cust-loginregbtn").removeClass("cust-loginregbtn");
 }

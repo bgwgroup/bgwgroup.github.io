@@ -9,6 +9,22 @@ if (window.location.href.indexOf("shop.cnw.com.au") != -1){
         window.location.replace("https://help.cnw.com.au/");
     }
 }
+if (window.location.href.indexOf("shop.sherriff.com.au") != -1){
+    if (window.location.href.indexOf("/whats-new") != -1){
+        window.location.replace("https://shop.sherriff.com.au/newsAndPromotions");
+    }
+    if (window.location.href.indexOf("/faqOrHelp") != -1){
+        window.location.replace("https://help.sherriff.com.au/");
+    }
+}
+if (window.location.href.indexOf("shop.samios.net.au") != -1){
+    if (window.location.href.indexOf("/whats-new") != -1){
+        window.location.replace("https://shop.samios.net.au/newsAndPromotions");
+    }
+    if (window.location.href.indexOf("/faqOrHelp") != -1){
+        window.location.replace("https://help.samios.net.au/");
+    }
+}
 
 
 if ($('form#command .cust-loginregbtn').length > 0) {

@@ -2,7 +2,19 @@
 if (window.location.href.indexOf("cart/customer-quote-generator") != -1){
     document.querySelector(".openAddPrice").addEventListener("click", ()=>{
         document.querySelector('[dialog-id="dialogOpenAdditionalPrices"]').showModal();
-    })
+    });
+
+    let getTempTotals = document.querySelectorAll('.align-right');
+    if(getTempTotals.length > 4){
+        for(const total of getTempTotals){
+            if(total.classList.contains("filled")){
+                if(total.textContent != "Sub Total" && total.textContent != "Total"){
+                    let blankTd = document.createElement("td");
+                    total.parentNode.prepend(blankTd)
+                }
+            }
+        }
+    }
 };
 
 /**

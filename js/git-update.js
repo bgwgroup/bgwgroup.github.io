@@ -6,7 +6,7 @@ if (window.location.href.indexOf("cart/customer-quote-generator") != -1){
     })
             
     } catch (error) {}
-});
+};
 
 /**
  * Redirects

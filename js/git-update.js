@@ -1,7 +1,7 @@
 // temp delete after p1 deploy 10/01/24
 if (window.location.href.indexOf("cart/customer-quote-generator") != -1){
-    document.querySelector(".openAddPrice").removeEventListener("click", ()=>{
-        document.querySelector("#plus-price").click();
+    document.querySelector(".openAddPrice").addEventListener("click", ()=>{
+        document.querySelector('[dialog-id="dialogOpenAdditionalPrices"]').showModal();
     })
 };
 

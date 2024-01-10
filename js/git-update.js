@@ -1,3 +1,8 @@
+// temp redirect BGWT store finder to contact us page
+if (window.location.href.indexOf("shop.bgwt.com.au") != -1){
+    document.querySelector(".scaffoldHeaderActionsStore").href = "/contact";
+}
+
 // temp delete after p1 deploy 10/01/24
 if (window.location.href.indexOf("cart/customer-quote-generator") != -1){
     document.querySelector(".openAddPrice").addEventListener("click", ()=>{

@@ -326,150 +326,6 @@ CountDownTimer.prototype.HTMLElement = (element, string) => {
 };
 
 /**
- * Javascript channels code for the WebView Apps
- */
-['load', 'change'].forEach((event) => {
-    window.addEventListener(event, () => {
-        new FlutterJS();
-    });
-});
-
-function FlutterJS() {
-    FlutterJS.prototype.main();
-}
-FlutterJS.prototype.main = () => {
-    FlutterJS.prototype.getSamiosLoginFormDetails();
-    FlutterJS.prototype.getCNWSherriffLoginFormDetails();
-    FlutterJS.prototype.checkLogInStatus();
-    FlutterJS.prototype.getCartCount();
-    FlutterJS.prototype.checkErrorLogin();
-    FlutterJS.prototype.orderNumber();
-    FlutterJS.prototype.getHrefLink();
-    FlutterJS.prototype.enableGeoLocation();
-};
-FlutterJS.prototype.getSamiosLoginFormDetails = () => {
-    let jUsername = document.querySelector('input#j_username');
-    let jPassword = document.querySelector('input#j_password');
-    let loginButton = document.querySelector('button.cust-loginregbtn');
-
-    if (jUsername != undefined && jPassword != undefined && loginButton != undefined) {
-        loginButton.addEventListener('click', () => {
-            if (window.initialLogin) {
-                return window.initialLogin.postMessage(`${jUsername.value}, ${jPassword.value}`);
-            }
-        });
-    }
-};
-FlutterJS.prototype.getCNWSherriffLoginFormDetails = () => {
-    let loginFormUsername = document.querySelector('form#loginForm input#j_username');
-    let loginFormPassword = document.querySelector('form#loginForm input#j_password');
-    let loginFormButton = document.querySelector('form#loginForm button[type="submit"]');
-
-    if (loginFormUsername != undefined && loginFormPassword != undefined && loginFormButton != undefined) {
-        loginFormButton.addEventListener('click', () => {
-            if (window.loginFormPage) {
-                return window.loginFormPage.postMessage(`${loginFormUsername.value}, ${loginFormPassword.value}`);
-            }
-        });
-    }
-
-    let loginHeaderFormUsername = document.querySelector('form[modelAttribute="loginForm"] input#j_username');
-    let loginHeaderFormPassword = document.querySelector('form[modelAttribute="loginForm"] input#j_password');
-    let loginHeaderFormButton = document.querySelector('form[modelAttribute="loginForm"] button[type="submit"]');
-
-    if (loginHeaderFormUsername != undefined && loginHeaderFormPassword != undefined && loginHeaderFormButton != undefined) {
-        loginHeaderFormButton.addEventListener('click', () => {
-            if (window.loginFormPage) {
-                return window.loginFormPage.postMessage(`${loginHeaderFormUsername.value},${loginHeaderFormPassword.value}`);
-            }
-        });
-    }
-};
-FlutterJS.prototype.checkLogInStatus = () => {
-    if (window.checkLogin) {
-        let notLoggedIn = (document.querySelector('body.notLoggedIn') != undefined) ? true : false;
-        return window.checkLogin.postMessage(notLoggedIn);
-    }
-};
-FlutterJS.prototype.getCartCount = () => {
-    if (window.cartCount) {
-        let cartCountElement = document.querySelector('.miniCart .nav-items');
-        if (cartCountElement != undefined) {
-            if (cartCountElement.innerHTML.length > 0) {
-                return window.cartCount.postMessage(cartCountElement.innerHTML);
-            }
-        }
-    }
-};
-FlutterJS.prototype.checkErrorLogin = () => {
-    if (window.checkErrorLogin) {
-        let globalAlertError = document.querySelector(".global-alerts .error > div");
-        if (globalAlertError != undefined) {
-            if (globalAlertError.innerHTML.length > 0) {
-                return window.checkErrorLogin.postMessage("true");
-            }
-        } else {
-            return window.checkErrorLogin.postMessage("false");
-        }
-
-        let loginErrorMsg = document.querySelector(".login-form-container .loginErrorMsg");
-        if (loginErrorMsg != undefined) {
-            if (loginErrorMsg.innerHTML.length > 0) {
-                return window.checkErrorLogin.postMessage("true");
-            }
-        } else {
-            return window.checkErrorLogin.postMessage("false");
-        }
-    }
-};
-FlutterJS.prototype.orderNumber = () => {
-    if (window.orderNumber) {
-        let checkoutConfirmationNumber = document.querySelector(".checkoutOrderConfirmationNumber");
-        if (checkoutConfirmationNumber != undefined) {
-            if (checkoutConfirmationNumber.innerHTML.length > 0) {
-                return window.orderNumber.postMessage(checkoutConfirmationNumber.innerHTML);
-            }
-        }
-    }
-};
-FlutterJS.prototype.getHrefLink = () => {
-    if (window.hrefLink) {
-        let hrefLinks = document.getElementsByTagName('a');
-        if (hrefLinks != undefined) {
-            for (let i = 0; i < hrefLinks.length; i++) {
-                let anchor = hrefLinks[i].toString();
-                ['.pdf', '.gif', '.jpeg', '.jpg', '.png', '.svg', '.csv', '.xlxs', '.doc', '.docx', '.txt', 'tel', 'mailto'].forEach((mediaType) => {
-                    let regex = new RegExp(mediaType);
-                    if (anchor.match(regex)) {
-                        hrefLinks[i].addEventListener('click', () => {
-                            return window.hrefLink.postMessage(anchor);
-                        });
-                    }
-                });
-            }
-        }
-    }
-};
-FlutterJS.prototype.enableGeoLocation = () => {
-    if (window.locationPermission) {
-        let findStoresNearMe = document.querySelector('#findStoresNearMe');
-        if (findStoresNearMe != undefined) {
-            findStoresNearMe.setAttribute('style', 'display: flex !important');
-        }
-    }
-};
-
-/**
- * Adding removed selectors to hide app icons
- */
-window.addEventListener('DOMContentLoaded', () => {
-    let scaffolDownloadApp = document.querySelector('.scaffoldFooterDownloadApp');
-    if (scaffolDownloadApp != undefined) {
-        scaffolDownloadApp.classList.add('app-icons-container');
-    }
-});
-
-/**
  * SBO Search Page Banner
  */
 /*
@@ -488,8 +344,6 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     }
 }); */
-
-console.log("updated");
 
 /**
  * Store Locator on MHI Air Condition Landing Page on CNW
@@ -687,21 +541,6 @@ function hideBigbanner() {
 if (!!bigSupporterPreloader) {
     window.addEventListener('load', hideBigbanner)
 }
-
-// temp fix for dashboard amount decimal
-if (typeof(document.querySelector("#valueAccountBalance")) != 'undefined' && document.querySelector("#valueAccountBalance") != null){
-    let getValueAccBalanceDiv = document.querySelector("#valueAccountBalance");
-    let getConvertedAccBalance = getValueAccBalanceDiv.innerText.split("$")[1];
-    let convertAccBalanceNo = parseFloat(getConvertedAccBalance, 10);
-    getValueAccBalanceDiv.textContent = "$" + convertAccBalanceNo.toFixed(2);
-}
-if (typeof(document.querySelector("#valueAccountRemaining")) != 'undefined' && document.querySelector("#valueAccountRemaining") != null){
-    let getValueAccRemainingDiv = document.querySelector("#valueAccountRemaining");
-    let getConvertedAccRemainingDiv = getValueAccRemainingDiv.innerText.split("$")[1];
-    let convertAccRemainingNo = parseFloat(getConvertedAccRemainingDiv, 10);
-    getValueAccRemainingDiv.textContent = "$" + convertAccRemainingNo.toFixed(2);
-}
-
 
 //Cnw Only Big One Banner Inject
 /*

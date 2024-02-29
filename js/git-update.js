@@ -489,17 +489,7 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 }); */
 
-/**
- * Hide Find Stores Near Me for Android and iOS (Temporary)
- */
-window.addEventListener('DOMContentLoaded', () => {
-    var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-    if (isMobile) {
-        if (document.querySelector('a#findStoresNearMe') != undefined) {
-            document.querySelector('a#findStoresNearMe').style.display = 'none';
-        }
-    }
-});
+console.log("updated");
 
 /**
  * Store Locator on MHI Air Condition Landing Page on CNW

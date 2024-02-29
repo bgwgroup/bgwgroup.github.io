@@ -1,24 +1,3 @@
-
-
-// temp delete after p1 deploy 10/01/24
-if (window.location.href.indexOf("cart/customer-quote-generator") != -1){
-    document.querySelector(".openAddPrice").addEventListener("click", ()=>{
-        document.querySelector('[dialog-id="dialogOpenAdditionalPrices"]').showModal();
-    });
-
-    let getTempTotals = document.querySelectorAll('.align-right');
-    if(getTempTotals.length > 4){
-        for(const total of getTempTotals){
-            if(total.classList.contains("filled")){
-                if(total.textContent != "Sub Total" && total.textContent != "Total"){
-                    let blankTd = document.createElement("td");
-                    total.parentNode.prepend(blankTd)
-                }
-            }
-        }
-    }
-};
-
 if ($('form#command .cust-loginregbtn').length > 0) {
     $("form#command .cust-loginregbtn").removeClass("cust-loginregbtn");
 }
@@ -36,7 +15,6 @@ function checkPLPPromoBannerURL(urlOne = '', urlTwo = '') {
 
 ['DOMContentLoaded'].forEach((event) => {
     window.addEventListener(event, () => {
-        addToFavouritesSelector();
         try {
             colouringCompetitionYear();
         } catch (error) {}
@@ -45,16 +23,6 @@ function checkPLPPromoBannerURL(urlOne = '', urlTwo = '') {
         removeBrandsClassCategoryFacets();
     });
 });
-
-/**
- * add favorites selector to add to favourites button before page load
- */
-function addToFavouritesSelector() {
-    let addToWishlistIcon = document.querySelector('.add-to-wishlist-icon');
-    if (addToWishlistIcon != undefined) {
-        addToWishlistIcon.classList.add('favorites');
-    }
-}
 
 /**
  * Add year object dynamically to CC

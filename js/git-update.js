@@ -33,28 +33,6 @@ function checkPLPPromoBannerURL(urlOne = '', urlTwo = '') {
     }
 }
 
-function OneCategoryBanner(args) {
-
-    let plpgridright = document.querySelector('.plp-grid-right');
-    let productGridRightResultSlot = document.querySelector('.product-grid-right-result-slot');
-
-    let oneCategory = checkPLPPromoBannerURL(args.cat, args.cat);
-
-    if (oneCategory) {
-
-        let promoBannerContainer = document.createElement('div');
-        promoBannerContainer.className = 'plp-promo-banner-container';
-
-        let promoBannerImg = document.createElement('img');
-        promoBannerImg.src = args.img;
-        promoBannerContainer.appendChild(promoBannerImg);
-
-        plpgridright.insertBefore(promoBannerContainer, productGridRightResultSlot);
-    }
-
-}
-
-
 
 ['DOMContentLoaded'].forEach((event) => {
     window.addEventListener(event, () => {
@@ -274,41 +252,6 @@ $(document).ready(function() {
 /**
  * ================================================================================================================================================================
  */
-
-/**
- * CNW Clipsal Iconic Outdoor padding top 
- */
-['load', 'resize'].forEach((event) => {
-    window.addEventListener(event, () => {
-        try {
-            let header = document.querySelector('#cnwBody .headerContent');
-            let headerBounds = header.getBoundingClientRect();
-
-            let newIconicOutdoorRangeImage = document.querySelector('.page-clipsaliconicoutdoorpage .hero .container .hero-left img:nth-child(1)');
-            let outdoorLikeNeverSeenBeforeImage = document.querySelector('.page-clipsaliconicoutdoorpage .hero .container .hero-right img:first-of-type');
-
-            newIconicOutdoorRangeImage.style.top = Math.ceil(headerBounds.height) + 'px';
-            outdoorLikeNeverSeenBeforeImage.style.top = Math.ceil(headerBounds.height) + 'px';
-        } catch (err) {}
-    });
-});
-
-/**
- * Sherriff Clipsal Iconic Outdoor padding top 
- */
-['load', 'resize'].forEach((event) => {
-    window.addEventListener(event, () => {
-        try {
-            let header = document.querySelector('#sheBody .headerContent');
-            let headerBounds = header.getBoundingClientRect();
-
-            let newIconicOutdoorRangeImage = document.querySelector('.page-sheclipsaliconicoutdoorpage .hero .container .hero-left img:nth-child(1)');
-            let outdoorLikeNeverSeenBeforeImage = document.querySelector('.page-sheclipsaliconicoutdoorpage .hero .container .hero-right img:first-of-type');
-            newIconicOutdoorRangeImage.style.top = Math.ceil(headerBounds.height) + 'px';
-            outdoorLikeNeverSeenBeforeImage.style.top = Math.ceil(headerBounds.height) + 'px';
-        } catch (err) {}
-    });
-});
 
 /**
  * Temp Add Card from My Account
@@ -815,56 +758,6 @@ function clearAcStoreinformationSelector(nodeList, selector) {
     }
 }
 
-/**
- * Maintenance Banner 06 September 2023
- */
-window.addEventListener('DOMContentLoaded', () => {
-    if (location.href.match(/cnw.com.au/) || location.href.match(/sherriff.com.au/) || location.href.match(/samios.net.au/) || location.href.match(/bgwt.com.au/)) {
-        try {
-            // new MaintenanceBanner();
-        } catch (e) {}
-    }
-});
-
-function MaintenanceBanner() {
-    MaintenanceBanner.prototype.init();
-}
-MaintenanceBanner.prototype.init = () => {
-    let checkIfUserHasSeenBanner = localStorage.getItem('bannerClicked');
-    if (checkIfUserHasSeenBanner == null) {
-        // MaintenanceBanner.prototype.renderBanner();
-    }
-
-     MaintenanceBanner.prototype.closeBanner();
-     MaintenanceBanner.prototype.fullScreenBanner();
-};
-// no need to use renderBanner
-MaintenanceBanner.prototype.renderBanner = () => {
-    let sapMaintenanceBanner = document.createElement('div');
-    sapMaintenanceBanner.className = 'sap-maintenance-banner';
-    sapMaintenanceBanner.innerHTML = `
-        <span>Hello, our website is currently undergoing scheduled maintenance and all online services will be unavailable until 05:00am AEST Tuesday. For any urgent matters please contact <a href="mailto:online.support@bgwgroup.com.au">online.support@bgwgroup.com.au</a> or your local branch.</span>
-    `;
-    document.body.appendChild(sapMaintenanceBanner);
-};
-MaintenanceBanner.prototype.closeBanner = () => {
-    let maintenanceBanner = document.querySelector('.sap-maintenance-banner');
-    if (maintenanceBanner != undefined || maintenanceBanner != null) {
-        maintenanceBanner.addEventListener('click', () => {
-            maintenanceBanner.style.display = 'none';
-            localStorage.setItem('bannerClicked', 'true');
-        });
-    }
-};
-MaintenanceBanner.prototype.fullScreenBanner = () => {
-    let fullScreenBanner = document.createElement('div');
-    fullScreenBanner.className = 'full-screen-banner';
-    fullScreenBanner.innerHTML = `
-    <span style="position: absolute;top: 50%;left: 0;right: 0;width: 100%;max-width: 800px;margin-left: auto;margin-right: auto;padding: 2rem;transform: translateY(-50%);line-height: 1.5rem; text-align: center;">Hello, our website is currently undergoing scheduled maintenance and all online services will be unavailable until 05:00am AEST Tuesday. For any urgent matters please contact <a href="mailto:online.support@bgwgroup.com.au">online.support@bgwgroup.com.au</a> or your local branch.</span>
-    `;
-    fullScreenBanner.setAttribute('style', `position: fixed;top: 0;left: 0;width: 100dvw;height: 100dvh;background: #FFF;z-index: 100000000001;`);
-    document.body.appendChild(fullScreenBanner);
-}
 
 // Temp hide b2c frontend elements
 /*document.addEventListener("DOMContentLoaded", function() {

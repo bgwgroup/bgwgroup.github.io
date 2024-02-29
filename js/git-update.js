@@ -758,64 +758,6 @@ function clearAcStoreinformationSelector(nodeList, selector) {
     }
 }
 
-
-// Temp hide b2c frontend elements
-/*document.addEventListener("DOMContentLoaded", function() {
-    try {
-        if (location.href.match(/sherriff.com.au/)) {
-            let getUserRegisterBtn = document.querySelector("#btnUserRegister button");
-            getUserRegisterBtn.setAttribute("type", "button");
-        }
-        
-        if (location.href.match(/samios.net.au/)) {
-            
-            setTimeout(() => {
-                document.querySelector(".scaffoldHeaderTopRight .scaffoldOpenModalRegisterGuestUser").href = "/login/signup?";
-            }, 500);
-            
-            let getLoginPageRegisterLink = document.querySelector("[href='login/signup?']");
-            if(getLoginPageRegisterLink){
-                getLoginPageRegisterLink.href = "/login/signup?";
-            }
-       
-        }
-        
-        
-        if (location.href.match(/cnw.com.au/) || location.href.match(/sherriff.com.au/) || location.href.match(/samios.net.au/)) {
-            let getB2CLoginPopupBtns = document.querySelectorAll(".scaffoldOpenModalRegisterGuestUser");
-            for (const button of getB2CLoginPopupBtns) {
-                
-                if(button.innerHTML.indexOf("Create Account") != -1) {
-                    button.addEventListener('click', () => {
-                        window.location.href = "/login/signup?";
-                    });
-                } else {
-                    button.addEventListener('click', () => {
-                        window.location.href = "/login";
-                    });
-                }
-            }
-            let getPDPLoginBtn = document.querySelectorAll(".scaffoldOpenModalRegisterGuestUserProduct");
-            for (const button of getPDPLoginBtn) {
-                button.addEventListener('click', () => {
-                    window.location.href = "/login";
-                });
-            }
-        }
-        setTimeout(() => {
-            let checkIfStorePickup = document.querySelector(".deliveryStore");
-            if (checkIfStorePickup != undefined) {
-                if (checkIfStorePickup.classList.contains("selected")) {
-                    document.querySelector("#newBillingAddressCheck").click();
-                }
-            }
-        }, 3000);
-    } catch (err) {
-        console.log(err);
-    }
-});*/
-
-
 // ============================== Sherriff Victoria landing page 2023 =============================================
 
 let sec5FAQaccordion = document.querySelectorAll(".sec-5-FAQs-accordion");
@@ -966,58 +908,6 @@ if (!!bigSupporterPreloader) {
     window.addEventListener('load', hideBigbanner)
 }
 
-/**
- * BGWT menu temporary fix - delete after P1 deploy
- 
-window.addEventListener('DOMContentLoaded', () => {
-    mapLinkToCategory('Camera Brackets','/c/CAMERABRACKETS');
-    mapLinkToCategory('Edge Devices','/c/EDGEDEVICES');
-    mapLinkToCategory('Networking','/c/NETWORKING');
-    mapLinkToCategory('Transmission','/c/TRANSMISSION');
-    mapLinkToCategory('Desktop & Workstations','/c/DESKTOPANDWORKSTATIONS');
-    mapLinkToCategory('Server','/c/SERVER');
-    mapLinkToCategory('Cable','/c/CICABLE');
-    mapLinkToCategory('Copper','/c/CICOPPER');
-    mapLinkToCategory('DSC Impassa','/c/DSCIMPASSA');
-    mapLinkToCategory('Intrusion Qolsys','/c/INTRUSIONQOLYSYS');
-    mapLinkToCategory('Panel Platform (Kantech)','/c/PANELPLATFORMKANTECH');
-    mapLinkToCategory('Panel Platform (S2)','/c/PANELPLATFORMS2');
-    mapLinkToCategory('Home Automation ZWave','/c/HOMEAUTOMATIONZWAVE');
-    mapLinkToCategory('Platforms','/c/PLATFORMS');
-});
-
-const mapLinkToCategory = (name, link) => {
-    let menus = document.querySelectorAll('.text');
-    if(menus != undefined){
-        menus.forEach(menu => {
-            if(menu.innerHTML == name){
-                menu.parentElement.setAttribute('href',link);
-            }
-        });
-    }
-};*/
-
-
-
-// temp fix samios appliances link
-/*if (window.location.href.indexOf("samios.net.au") != -1){
-    const getApplianceLink = document.querySelector('[title="Applicances"]');
-    if(getApplianceLink){
-        getApplianceLink.querySelector("span").innerText = "Appliances";
-        getApplianceLink.setAttribute("title", "Appliances");
-    }
-    const getMarkingabellingLink = document.querySelector('[title="Marking & Labeling"]');
-    if(getMarkingabellingLink){
-        getMarkingabellingLink.href = "/sam/en/AUD/All-Categories/Hardware-%26-Consumables/Marking-%26-Labeling/c/MARKINGLABELLING";
-    }
-
-    const getEverHardLogo = document.querySelectorAll('.scaffoldSearchList .scaffoldSearchListResults .item .content .img img')
-    if (Array.from(getEverHardLogo).length !== 0) {
-        getEverHardLogo[14].src = "https://www.forzaglobal.com.au/wp-content/uploads/2021/10/Untitled-1.png";
-        getEverHardLogo[13].src = "https://www.everhard.com.au/wp-content/themes/everhard/dist/img/logo.svg";
-    }
-}*/
-
 // temp fix for dashboard amount decimal
 if (typeof(document.querySelector("#valueAccountBalance")) != 'undefined' && document.querySelector("#valueAccountBalance") != null){
     let getValueAccBalanceDiv = document.querySelector("#valueAccountBalance");
@@ -1057,13 +947,6 @@ if (window.location.href.indexOf("cnw.com.au") != -1){
         searchContainer.prepend(createLink);
     }
 }*/
-
-
-
-
-
-
-
 
 /**
  * NEW EXPERIENCE LANDING PAGE SWIPER

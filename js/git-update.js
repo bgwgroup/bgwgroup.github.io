@@ -460,65 +460,6 @@ FlutterJS.prototype.enableGeoLocation = () => {
 };
 
 /**
- * Clipsal Iconic Outdoor Floating Text
- */
-window.addEventListener('resize', () => {
-    if (location.origin.match(/shop.sherriff.com.au/gi) || location.origin.match(/shop.cnw.com.au/gi)) {
-        let nav = document.querySelector('#sheBody .headerContent nav') || document.querySelector('.headerContent .cnw-header-navigation');
-        if (nav != undefined) {
-            let bounds = nav.getBoundingClientRect();
-            let cioStickyInfo = document.querySelector('.sticky-info');
-            if (cioStickyInfo != undefined) {
-                cioStickyInfo.style.top = `${bounds.bottom}px`;
-            }
-        }
-    }
-});
-window.addEventListener('DOMContentLoaded', () => {
-    if (location.origin.match(/shop.sherriff.com.au/gi) || location.origin.match(/shop.cnw.com.au/gi)) {
-        let nav = document.querySelector('#sheBody .headerContent nav') || document.querySelector('.headerContent .cnw-header-navigation');
-        if (nav != undefined) {
-            let bounds = nav.getBoundingClientRect();
-            let cioStickyInfo = document.querySelector('.sticky-info');
-            if (cioStickyInfo != undefined) {
-                cioStickyInfo.style.top = `${bounds.bottom}px`;
-            }
-        }
-    }
-});
-
-/**
- * Nickelodean Search Hax (updated)
- */
-
-try {
-
-    if (window.location.href.indexOf("?text=") == -1) {
-        const btnSearchOpenCategories = document.querySelector("#searchEmptyOpenCategories");
-        const btnSearchOpenBrands = document.querySelector("#searchEmptyOpenBrands");
-
-        btnSearchOpenCategories.addEventListener("click", function() {
-            document.querySelector("#navOpenCategories").click();
-        })
-
-        btnSearchOpenBrands.addEventListener("click", function() {
-            document.querySelector("#navOpenBrands").click();
-        })
-    }
-
-    let getHeaderApplicationLink = document.querySelector(".scaffoldHeaderTopRight a:nth-child(2)");
-    if (getHeaderApplicationLink.getAttribute("href") === "/signup?") {
-        getHeaderApplicationLink.setAttribute("href", "/sam/en/AUD/login/signup?");
-    }
-
-    let getFooterApplicationLink = document.querySelector(".scaffoldFooterSectionWrapper .IconTiles .Tile:nth-child(3) a");
-    if (getFooterApplicationLink.getAttribute("href") === "/signup?") {
-        getFooterApplicationLink.setAttribute("href", "/sam/en/AUD/login/signup?");
-    }
-
-} catch (error) {}
-
-/**
  * Adding removed selectors to hide app icons
  */
 window.addEventListener('DOMContentLoaded', () => {

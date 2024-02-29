@@ -7,8 +7,6 @@ if ($('form#command .cust-loginregbtn').length > 0) {
         try {
             colouringCompetitionYear();
         } catch (error) {}
-        loadExternalScripts();
-        removeBrandsClassCategoryFacets();
     });
 });
 
@@ -18,43 +16,6 @@ if ($('form#command .cust-loginregbtn').length > 0) {
 function colouringCompetitionYear() {
     let coloringCompTableSpan = document.querySelector('.coloring-competition .coloring-table-row:nth-child(1) > span:nth-child(2)');
     coloringCompTableSpan.innerHTML = coloringCompTableSpan.innerHTML + " " + new Date().getFullYear();
-}
-
-/**
- * ================================================================================================================================================================
- */
-
-/**
- * Dynamically load external JS Scripts into HTML
- */
-function loadExternalScripts() {
-    // snapWidget
-    let snapWidgetJS = document.createElement('script');
-    snapWidgetJS.src = 'https://snapwidget.com/js/snapwidget.js';
-
-    let widgetSection = document.querySelector('.home__section.widget-section');
-    let widgetSectionHeader = document.querySelector('.home__section.widget-section h2');
-    if (widgetSection != null && widgetSectionHeader != null) {
-        widgetSection.insertBefore(snapWidgetJS, widgetSectionHeader);
-    }
-}
-
-/**
- * ================================================================================================================================================================
- */
-
-/**
- * JS hack that will delete the random BrandsClassCategory on page load
- */
-function removeBrandsClassCategoryFacets() {
-    let facetWrapper = document.querySelector('#bgwtBody .facet-wrapper');
-    let facetLinks = document.querySelectorAll('#bgwtBody .facet-wrapper .facet_link');
-    for (let i = 0; i < facetLinks.length; i++) {
-        if (facetLinks[i].innerHTML === "Brands") {
-            // delete node that contains rogue BrandsClassCategory
-            facetWrapper.removeChild(facetLinks[i].parentElement.parentElement);
-        }
-    }
 }
 
 /**

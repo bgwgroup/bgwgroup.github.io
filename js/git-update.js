@@ -54,65 +54,17 @@ function OneCategoryBanner(args) {
 
 }
 
-let ThreeMCategories = {
-    cat: /%3Acnw_brands%3A3M/gi,
-    img: '/medias/plp-banner.jpg?context=bWFzdGVyfGltYWdlc3w0OTc4NDR8aW1hZ2UvanBlZ3xoYzEvaGY0Lzk4MDU4MDU3MTU0ODYvcGxwLWJhbm5lci5qcGd8NDVlZjM2M2NmYjJhOGRiNzYwYmZlMDAzOTA2NzE1ODZmYzQ5OGYyZGQ3OTU3NWQwNjVlZTc3YmY0YmE0ZmE3Mg'
-};
 
-let MajorTechCategories = {
-    cat: /major\+tech/gi,
-    img: '/medias/Major-Tech-CNW-Hero-Slider.jpg?context=bWFzdGVyfGltYWdlc3w4NzA1MDh8aW1hZ2UvanBlZ3xoOTYvaDEwLzk4MDcyMTg1MDc4MDYvTWFqb3IgVGVjaCAtIENOVyAtIEhlcm8gU2xpZGVyLmpwZ3wxYzc3NTJlNjU1OGFkNWExYzk3YWZiNDY5MjVjZDhjMTcxNjcxOTY5MmRlY2FiNjU2ZGZlZjJlMzJkYmY1NTcx'
-};
-
-let NHPSwitchOnOff = {
-    cat: /=nhp/gi,
-    img: '/medias/557330-NHP-CNW-March-Promotion-728x90-Leaderboard-FA.gif?context=bWFzdGVyfGltYWdlc3w1MjE0NHxpbWFnZS9naWZ8aGJmL2hkMS85ODEzMDY4MzQ5NDcwLzU1NzMzMCBOSFAgQ05XIE1hcmNoIFByb21vdGlvbl83Mjh4OTBfTGVhZGVyYm9hcmRfRkEuZ2lmfDM1YmJlMzYxYzIxOTJkMGI2MjRhZWNiNTM4MzEzMGFiZDRmMzlmMzFiMDU0OWFkNzg3YjY2ZWMwOWMzNWM2OTY'
-};
 
 ['DOMContentLoaded'].forEach((event) => {
     window.addEventListener(event, () => {
-
         addToFavouritesSelector();
-
         try {
             colouringCompetitionYear();
         } catch (error) {}
-
         shopByToggleFacets();
         loadExternalScripts();
-
-        OneCategoryBanner(ThreeMCategories);
-        OneCategoryBanner(MajorTechCategories);
-        OneCategoryBanner(NHPSwitchOnOff);
-
         removeBrandsClassCategoryFacets();
-    });
-});
-
-['scroll'].forEach((event) => {
-    window.addEventListener('scroll', () => {
-
-        isElementInViewOnScroll('.animate-in-view');
-
-        try {
-            new ParallaxEffect('.scratch-and-win .horizontal-line');
-
-            // Sherriff News and Promotion
-            new ParallaxEffect('.news-promotions .top__news__content');
-            new ParallaxEffect('.news-promotions .other__news__row .news__card');
-
-            // Sherriff SIP
-            new ParallaxEffect('.sip__container .vertical-line');
-            new ParallaxEffect('.sip__container .horizontal-line');
-
-            // Sherriff iQ Lighting
-            new ParallaxEffect('.iq__lighting .horizontal-line');
-
-            // Footy Tipping
-            new ParallaxEffect('.footy-parallax');
-        } catch (e) {}
-        // scratch and win
-
     });
 });
 

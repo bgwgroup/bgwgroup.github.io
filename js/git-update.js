@@ -81,9 +81,6 @@ let NHPSwitchOnOff = {
         shopByToggleFacets();
         loadExternalScripts();
 
-        new PlumbingPCN();
-        new ElectricalPCN();
-
         OneCategoryBanner(ThreeMCategories);
         OneCategoryBanner(MajorTechCategories);
         OneCategoryBanner(NHPSwitchOnOff);

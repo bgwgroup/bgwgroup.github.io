@@ -2,17 +2,6 @@ if ($('form#command .cust-loginregbtn').length > 0) {
     $("form#command .cust-loginregbtn").removeClass("cust-loginregbtn");
 }
 
-/**
- * PLP Page Slider Display
- */
-
-function checkPLPPromoBannerURL(urlOne = '', urlTwo = '') {
-    if (urlOne != undefined || urlTwo != undefined) {
-        return (location.href.match(urlOne) || location.href.match(urlTwo)) ? true : false;
-    }
-}
-
-
 ['DOMContentLoaded'].forEach((event) => {
     window.addEventListener(event, () => {
         try {

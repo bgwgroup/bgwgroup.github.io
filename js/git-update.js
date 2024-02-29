@@ -75,55 +75,6 @@ function loadExternalScripts() {
  */
 
 /**
- * Pagination clone - temp hack
- */
-
-
-
-if ($("#samBody")[0]) {
-    $('#samBody .search-grid-page-result-grid-component').addClass('pagination-account');
-} else {
-    if ($(".page-productGrid")[0]) {
-        $(".pagination-bar").clone().insertAfter("#resultsList");
-    }
-
-    if ($(".page-search")[0]) {
-        if ($(".product__grid")[0]) {
-            $(".pagination-bar").clone().insertAfter(".product__grid");
-        } else {
-            $(".pagination-bar").clone().insertAfter("#resultsList");
-        }
-    }
-}
-
-/**
- * Element in View function
- */
-function isElementInViewOnScroll(selector) {
-    let animateSelector = 'scroll-in-view';
-    let elementList = document.querySelectorAll(selector);
-    if (elementList != undefined) {
-        for (let i = 0; i < elementList.length; i++) {
-
-            let bounds = elementList[i].getBoundingClientRect();
-            let elemTop = bounds.top;
-
-            let pageTop = elemTop + (window.innerHeight * (50 / 100));
-
-            if (pageTop >= 0) {
-                elementList[i].classList.add(animateSelector);
-            } else {
-                elementList[i].classList.remove(animateSelector);
-            }
-        }
-    }
-}
-
-/**
- * ================================================================================================================================================================
- */
-
-/**
  * JS hack that will delete the random BrandsClassCategory on page load
  */
 function removeBrandsClassCategoryFacets() {

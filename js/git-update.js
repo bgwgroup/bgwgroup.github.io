@@ -7,7 +7,6 @@ if ($('form#command .cust-loginregbtn').length > 0) {
         try {
             colouringCompetitionYear();
         } catch (error) {}
-        shopByToggleFacets();
         loadExternalScripts();
         removeBrandsClassCategoryFacets();
     });
@@ -19,25 +18,6 @@ if ($('form#command .cust-loginregbtn').length > 0) {
 function colouringCompetitionYear() {
     let coloringCompTableSpan = document.querySelector('.coloring-competition .coloring-table-row:nth-child(1) > span:nth-child(2)');
     coloringCompTableSpan.innerHTML = coloringCompTableSpan.innerHTML + " " + new Date().getFullYear();
-}
-
-
-/**
- * Facet Toggle Accordion
- */
-function shopByToggleFacets() {
-
-    let shopByButton = document.querySelector('.shop-by-button');
-    if (shopByButton != null) {
-        shopByButton.addEventListener('click', () => {
-            let facetWrapper = shopByButton.nextElementSibling;
-            if (facetWrapper.style.maxHeight) {
-                facetWrapper.style.maxHeight = null;
-            } else {
-                facetWrapper.style.maxHeight = facetWrapper.scrollHeight + "px";
-            }
-        });
-    }
 }
 
 /**

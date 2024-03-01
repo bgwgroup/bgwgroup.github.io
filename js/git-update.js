@@ -1,27 +1,4 @@
-if ($('form#command .cust-loginregbtn').length > 0) {
-    $("form#command .cust-loginregbtn").removeClass("cust-loginregbtn");
-}
-
-['DOMContentLoaded'].forEach((event) => {
-    window.addEventListener(event, () => {
-        try {
-            colouringCompetitionYear();
-        } catch (error) {}
-    });
-});
-
-/**
- * Add year object dynamically to CC
- */
-function colouringCompetitionYear() {
-    let coloringCompTableSpan = document.querySelector('.coloring-competition .coloring-table-row:nth-child(1) > span:nth-child(2)');
-    coloringCompTableSpan.innerHTML = coloringCompTableSpan.innerHTML + " " + new Date().getFullYear();
-}
-
-/**
- * ================================================================================================================================================================
- */
-
+console.log("update");
 /**
  * Samios Double Dip Point Search API
  */

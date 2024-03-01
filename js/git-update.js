@@ -46,53 +46,7 @@
 //         });
 //     }
 // });
-
-/**
- * Store Locator on MHI Air Condition Landing Page on CNW
- */
-window.addEventListener('DOMContentLoaded', () => {
-
-    if (location.href.match(/cnw.com.au\/aircon-specialist-qld/)) {
-
-        let acStoreButtons = document.querySelectorAll('.ac-stores-button button');
-        let activeAcStoreButton = 'active-ac-store-button';
-
-        if (acStoreButtons != undefined) {
-
-            let acStoreInformation = document.querySelectorAll('.ac-store-information>article');
-            let activeAcStoreInformation = 'active-ac-store-information';
-
-            if (acStoreInformation != undefined) {
-                try {
-                    acStoreInformation[0].setAttribute('style', 'display: -ms-flex; display: flex');
-                } catch (error) {}
-            }
-            for (let i = 0; i < acStoreButtons.length; i++) {
-
-                acStoreButtons[i].addEventListener('click', () => {
-                    clearAsStoreButtonSelector(acStoreButtons, activeAcStoreButton);
-                    clearAcStoreinformationSelector(acStoreInformation, activeAcStoreInformation);
-                    acStoreInformation[i].setAttribute('style', 'display: -ms-flex; display: flex');
-                });
-
-            }
-        }
-    }
-
-});
-
-function clearAsStoreButtonSelector(nodeList, selector) {
-    for (let i = 0; i < nodeList.length; i++) {
-        nodeList[i].classList.remove(selector);
-    }
-}
-
-function clearAcStoreinformationSelector(nodeList, selector) {
-    for (let j = 0; j < nodeList.length; j++) {
-        nodeList[j].classList.remove(selector);
-        nodeList[j].setAttribute('style', 'display: none');
-    }
-}
+console.log("update");
 
 // ============================== Sherriff Victoria landing page 2023 =============================================
 

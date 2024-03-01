@@ -22,28 +22,7 @@ function colouringCompetitionYear() {
  * ================================================================================================================================================================
  */
 
-/**
- * Search filter for wishlists
- */
-
-$(document).ready(function() {
-    // temporary code until code change is deployed to P1
-    var favouritesSearchForm = $('.fav-list-search-filter #favListSearchFilter');
-
-    $('body').on('keyup', function() {
-        try {
-            var formValue = favouritesSearchForm.val().toLowerCase();
-
-            $('#favourite_list .fav_grid').each(function() {
-
-                $(this).filter(function() {
-                    $(this).toggle($(this).text().toLowerCase().indexOf(formValue) > -1);
-                });
-            });
-        } catch (error) {}
-    });
-
-});
+console.log("updated");
 
 /**
  * ================================================================================================================================================================

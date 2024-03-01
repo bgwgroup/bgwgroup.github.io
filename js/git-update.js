@@ -22,12 +22,6 @@ function colouringCompetitionYear() {
  * ================================================================================================================================================================
  */
 
-console.log("updated");
-
-/**
- * ================================================================================================================================================================
- */
-
 /**
  * Samios Double Dip Point Search API
  */
@@ -228,80 +222,6 @@ SBO.prototype.defaultMonthlyPack = () => {
         }
     } catch (error) {}
 
-};
-
-/**
- * 
- */
-
-window.addEventListener('load', () => {
-    new CountDownTimer()
-});
-
-function CountDownTimer() {
-    CountDownTimer.prototype.start();
-}
-CountDownTimer.prototype.start = () => {
-    let element = document.querySelectorAll('[data-date]');
-    if (element != undefined || element.length > 0) {
-        for (let i = 0; i < element.length; i++) {
-            let dateElement = element[i].getAttribute('data-date').split(',');
-
-            let now = new Date();
-            let date = new Date(parseInt(dateElement[0]), parseInt(dateElement[1]) - 1, parseInt(dateElement[2]));
-            let currentTime = now.getTime();
-            let downTime = date.getTime();
-            let remainingTime = downTime - currentTime; // get remaining time
-            let second = Math.floor(remainingTime / 1000);
-            let minute = Math.floor(second / 60);
-            let hour = Math.floor(minute / 60);
-            let day = Math.floor(hour / 24);
-
-            hour %= 24;
-            minute %= 60;
-            second %= 60;
-
-            hour = (hour < 10) ? "0" + hour : hour;
-            minute = (minute < 10) ? "0" + minute : minute;
-            second = (second < 10) ? "0" + second : second;
-
-            let clockDay = document.querySelectorAll('[data-clock-day="true"]');
-            let clockHour = document.querySelectorAll('[data-clock-hour="true"]');
-            let clockMinute = document.querySelectorAll('[data-clock-minute="true"]');
-            let clockSecond = document.querySelectorAll('[data-clock-second="true"]');
-
-            if (clockDay != undefined) {
-                for (let i = 0; i < clockDay.length; i++) {
-                    CountDownTimer.prototype.HTMLElement(clockDay[i], day);
-                }
-            }
-            if (clockHour != undefined) {
-                for (let i = 0; i < clockHour.length; i++) {
-                    CountDownTimer.prototype.HTMLElement(clockHour[i], hour);
-                }
-            }
-            if (clockMinute != undefined) {
-                for (let i = 0; i < clockMinute.length; i++) {
-                    CountDownTimer.prototype.HTMLElement(clockMinute[i], minute);
-                }
-            }
-            if (clockSecond != undefined) {
-                for (let i = 0; i < clockSecond.length; i++) {
-                    CountDownTimer.prototype.HTMLElement(clockSecond[i], second);
-                }
-            }
-
-        }
-    }
-
-    setTimeout(CountDownTimer.prototype.start.bind(this), 1000);
-
-};
-CountDownTimer.prototype.HTMLElement = (element, string) => {
-    if (element != undefined) {
-        element.innerHTML = string;
-    }
-    return element;
 };
 
 /**
@@ -545,27 +465,3 @@ if (window.location.href.indexOf("cnw.com.au") != -1){
         searchContainer.prepend(createLink);
     }
 }*/
-
-/**
- * NEW EXPERIENCE LANDING PAGE SWIPER
- */
-//Landing Pages
-
-if (window.location.href.indexOf("/new-experience") != -1) {
-    var swiper = new Swiper(".mySwiperLaunchPage", {
-      slidesPerView: 1,
-      spaceBetween: 20,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      breakpoints: {
-        768: {
-          slidesPerView: 2,
-        },
-        992: {
-          slidesPerView: 3,
-        },
-      },
-    });
-  }
